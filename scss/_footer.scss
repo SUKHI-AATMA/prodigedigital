@@ -4,6 +4,7 @@
     
 }
 .footer_widget_area{
+    display: none;
     background: url(../img/footer-bg.jpg) no-repeat scroll center center;
     background-size: cover;
     padding: 130px 0px 115px 0px;
@@ -90,16 +91,28 @@
 }
 .footer_copyright{
     overflow: hidden;
-    background: #11173b;
-    padding: 35px 0px;
+    // background: #11173b;
+    background: #000;
+    padding: 12px 0px;
     .float-sm-left{
         h5{
             font-size: 14px;
-            color: #2a2f56;
+            //color: #2a2f56;
+            color: #fff;
             font-family: $rob;
             text-transform: uppercase;
             font-weight: 500;
             line-height: 29px;
+
+            span{
+                color: #000;
+                z-index: -1000000;
+
+                i,a{
+                    color: #000;
+                    z-index: -1000000;
+                }
+            }
         }
     }    
     .float-sm-right{
@@ -109,7 +122,8 @@
                 margin-right: 32px;
                 a{
                     font-size: 14px;
-                    color: #2a2f56;
+                    //color: #2a2f56;
+                    color: #9590fe;
                     @include transition;
                 }
                 &:last-child{

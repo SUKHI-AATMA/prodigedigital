@@ -384,6 +384,29 @@ i:before {
 
 /* End Banner Area css
 ============================================================================================ */
+.svg-wrap {
+  width: 1200px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.svg-box {
+  width: 250px;
+  margin-bottom: 100px;
+}
+
+.svg-box img {
+  width: 200px;
+  height: auto;
+}
+
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /* Slider css
@@ -396,6 +419,7 @@ i:before {
 .main_slider_area .rev_slider .tp-revslider-mainul li .slider_text_box .first_text {
   font-weight: normal !important;
   color: #0b1033;
+  z-index: 2;
 }
 
 .main_slider_area .rev_slider .tp-revslider-mainul li .slider_text_box .secand_text {
@@ -564,6 +588,12 @@ i:before {
 /*----------------------------------------------------*/
 /* Feature Area css
 ============================================================================================ */
+.row.feature_inner {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 .feature_area {
   padding-top: 70px;
 }
@@ -588,6 +618,8 @@ i:before {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+  width: 100px;
+  height: auto;
 }
 
 .feature_item h4 {
@@ -611,15 +643,6 @@ i:before {
 
 .feature_item .more_btn {
   opacity: 0;
-}
-
-.feature_item:hover {
-  -webkit-box-shadow: 0px 14px 38px 0px rgba(0, 0, 0, 0.11);
-  box-shadow: 0px 14px 38px 0px rgba(0, 0, 0, 0.11);
-}
-
-.feature_item:hover .more_btn {
-  opacity: 1;
 }
 
 .service_feature {
@@ -814,6 +837,11 @@ i:before {
   box-shadow: 0px 27px 68px 0px rgba(0, 0, 0, 0.4);
 }
 
+.challange_img.abt-img .challange_img_inner {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 /* End Challange Area css
 ============================================================================================ */
 /* We Are Company Area css
@@ -889,7 +917,6 @@ i:before {
   background-image: -webkit-linear-gradient(10deg, #6ebdfe 0%, #9b8aff 100%);
   background-image: -ms-linear-gradient(10deg, #6ebdfe 0%, #9b8aff 100%);
   padding: 160px 0px 170px 0px;
-  border-bottom: 2px solid #fff;
 }
 
 .talk_text {
@@ -1178,7 +1205,7 @@ i:before {
   font-size: 15px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  line-height: 28px;
+  line-height: 24px;
   padding: 25px 0px 55px 0px;
 }
 
@@ -2282,6 +2309,7 @@ i:before {
 /* Footer Area css
 ============================================================================================ */
 .footer_widget_area {
+  display: none;
   background: url(../img/footer-bg.jpg) no-repeat scroll center center;
   background-size: cover;
   padding: 130px 0px 115px 0px;
@@ -2395,17 +2423,27 @@ i:before {
 
 .footer_copyright {
   overflow: hidden;
-  background: #11173b;
-  padding: 35px 0px;
+  background: #000;
+  padding: 12px 0px;
 }
 
 .footer_copyright .float-sm-left h5 {
   font-size: 14px;
-  color: #2a2f56;
+  color: #fff;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   line-height: 29px;
+}
+
+.footer_copyright .float-sm-left h5 span {
+  color: #000;
+  z-index: -1000000;
+}
+
+.footer_copyright .float-sm-left h5 span i, .footer_copyright .float-sm-left h5 span a {
+  color: #000;
+  z-index: -1000000;
 }
 
 .footer_copyright .float-sm-right ul li {
@@ -2415,7 +2453,7 @@ i:before {
 
 .footer_copyright .float-sm-right ul li a {
   font-size: 14px;
-  color: #2a2f56;
+  color: #9590fe;
   -webkit-transition: all 400ms linear 0s;
   -o-transition: all 400ms linear 0s;
   transition: all 400ms linear 0s;
