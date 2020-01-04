@@ -1286,6 +1286,72 @@ i:before {
 
 /* End Best 3d Area css
 ============================================================================================ */
+section.thankyou {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+section.thankyou .img-box {
+  max-width: 500px;
+  width: 100%;
+}
+
+section.thankyou .col img {
+  width: 100%;
+}
+
+section.thankyou .col img .desc {
+  text-align: center;
+  padding-top: 40%;
+}
+
+section.thankyou .col img .desc h1 {
+  padding-bottom: 20px;
+}
+
+section.thankyou .col img .desc p.link {
+  padding-top: 20px;
+  font-size: 14px;
+}
+
+section.thankyou .col img .desc p.link a {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 1024px) {
+  section.thankyou {
+    padding: 0 20px;
+  }
+  section.thankyou .img-box {
+    max-width: 320px;
+  }
+  section.thankyou .col .desc {
+    padding-top: 30%;
+  }
+  section.thankyou .col .desc p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  section.thankyou .img-box {
+    max-width: 250px;
+  }
+}
+
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /* Button Area css
