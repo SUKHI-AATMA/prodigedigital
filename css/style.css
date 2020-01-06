@@ -1301,8 +1301,19 @@ i:before {
 
 /* End Best 3d Area css
 ============================================================================================ */
+.thank-pg header a {
+  padding: 30px 15px;
+}
+
+.thank-pg .banner_inner_text {
+  padding: 210px 0;
+}
+
+.thank-pg .banner_inner_text:before {
+  display: none;
+}
+
 section.thankyou {
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1358,6 +1369,12 @@ section.thankyou .coll img .desc p.link a {
   }
   section.thankyou .coll .desc p {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .thank-pg .banner_inner_text {
+    padding: 100px 0;
   }
 }
 
