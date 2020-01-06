@@ -76,7 +76,7 @@
                 },
                 responsiveLevels:[4096,1320,1199,992,767,480],
                 gridwidth:[1170,1170,960,720,700,300],
-                gridheight:[950,950,950,700,500,500],
+                gridheight:[950,800,768,700,500,500],
                 lazyType:"smart",
                 fallbacks: {
                     simplifyAll:"off",
@@ -136,7 +136,7 @@
         if ( $('.shap_slider_inner').length ){
             $('.shap_slider_inner').owlCarousel({
                 loop:true,
-                margin: 0,
+                margin: 10,
                 items: 1,
                 nav:false,
                 autoplay: false,

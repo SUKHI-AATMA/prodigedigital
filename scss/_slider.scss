@@ -36,14 +36,17 @@
             }
         }
         .tp-leftarrow, .tp-rightarrow{
-            height: 120px;
+            //height: 120px;
+            height: 70px;
             background-image: linear-gradient(to right, #70bafe 0%, #998dff 51%, #70bafe 100%);
             background-size: 200% auto;
-            width: 138px;
+            //width: 138px;
+            width: 80px;
             border: 10px solid rgba(204, 241, 255, 0.5);
             transition: all 400ms ease-out;
             &:before{
-                line-height: 100px;
+                // line-height: 100px;
+                line-height: 50px;
             }
             &:hover{
                 background-position: right center;

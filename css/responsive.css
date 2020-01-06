@@ -20,6 +20,10 @@
     .best_3d_area {
         min-height: auto;
     }
+    .best_3d_area .right_text .right_text_inner .text_3d{
+        width: 100%;
+        padding-right: 30px;
+    }
     .shap_slider_inner {
         margin-right: 114px;
         margin-top: 226px;
@@ -29,6 +33,27 @@
         margin-right: 55px;
     }
 }
+
+@media screen and (max-width: 1366px){
+    .best_3d_area .left_3d .shap_slider_inner{
+        margin-top: 350px;
+        margin-right: 120px;
+    }
+    .best_3d_area .right_text .right_text_inner .text_3d{
+        padding-top: 200px;
+    }
+    .team_people_area .team_img_inner{
+        margin-left: 60px;
+    }
+
+    .banner_inner_text:before{
+        bottom: 40px;
+    }
+    .challange_area{
+        padding-top: 50px;
+    }
+}
+
 @media (max-width: 1300px){
     .shap_slider_inner {
         margin-right: 12px;
@@ -45,6 +70,15 @@
     .best_3d_area .left_3d::before {
 	    display: none;
     }
+    .best_3d_area .left_3d .shap_slider_inner{
+        margin-top: unset;
+        margin-right: unset;
+        margin: 40px auto 0px;
+    }
+    .best_3d_area .right_text .right_text_inner .text_3d{
+        padding-top: 100px;
+    }
+
     .shap_slider_inner .item {
         color: #0b1033;
     }
@@ -86,6 +120,8 @@
     .main_slider_area .rev_slider .tp-revslider-mainul li .slider_text_box .single_img {
         display: none;
     }
+
+
 }
 @media (max-width: 991px){
     .main_menu_area {
@@ -119,7 +155,8 @@
     }
     .main_menu_area .navbar .navbar-collapse {
         background: rgba(0, 0, 0, 1);
-        max-height: 306px;
+        /* max-height: 306px; */
+        max-height: 400px;
         overflow-y: scroll;
     }
     .main_menu_area .navbar .navbar-toggler {
@@ -202,6 +239,37 @@
         max-width: 270px;
         margin-top: 100px;
     }
+
+    /* custom */
+    .logo-font{
+        font-size: 18px;
+    }
+    .c_title h2,
+    .l_title h2{
+        font-size: 27px;
+    }
+    .best_3d_area .right_text .right_text_inner .text_3d{
+        padding-left: 30px;
+    }
+    .team_people_area .team_img_inner{
+        margin: 30px auto -20px;
+    }
+
+    .challange_img.abt-img .challange_img_inner{
+        max-width: 580px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .testimonials_area{
+        text-align: center;
+        padding: 0 50px;
+    }
+
+    .talk_text p{
+        font-size: 18px;
+        line-height: 27px;
+    }
     
 }
 @media (max-width: 767px){
@@ -250,6 +318,26 @@
     .buttons_area .more_btn{
         margin-bottom: 20px;
     }
+
+    /* custom */
+    .feature_item p{
+        padding-bottom: 0;
+    }
+    .challange_area{
+        padding-top: 100px;
+    }
+    .shap_slider_inner{
+        max-width: 100%;
+        padding: 0 50px;
+        text-align:center;
+    }
+    .banner_inner_text:before {
+        bottom: 30px;
+    }
+    .service_feature .feature_inner .feature_item{
+        margin-bottom: 0;
+    }
+
 }
 @media (max-width: 575px){
     .team_img_inner .team_img_item img {
@@ -265,7 +353,7 @@
         margin: auto;
     }
     .footer_copyright{
-        text-align: center;
+        //text-align: center;
     }
     .banner_area::before {
         max-width: 100%;
@@ -311,10 +399,12 @@
 }
 @media (max-width: 480px){
     .l_title h2 {
-        font-size: 32px;
+        /* font-size: 32px; */
+        font-size: 24px;
     }
     .c_title h2 {
-        font-size: 32px;
+        /* font-size: 32px; */
+        font-size: 24px;
     }
     .blog_text {
         padding: 40px 15px 65px 15px;
@@ -354,4 +444,34 @@
     .contact_map_area .mapBox1 {
         min-height: 575px;
     }
+
+
+    /* custom */
+    .banner_inner_text h2 {
+        font-size: 40px;
+    }    
+    .banner_inner_text:before{
+        bottom: 0;
+    }
+    .shap_slider_inner{
+        padding: 0 20px;
+    }
+    .best_3d_area .right_text .right_text_inner .text_3d,
+    .testimonials_area{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .touch_details  br{
+        display: none;
+    }
+    .touch_details h4{
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .talk_text p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
 }

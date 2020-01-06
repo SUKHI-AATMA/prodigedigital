@@ -36,6 +36,7 @@ Table of Content:
 /*Color Variables*/
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,900");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,900&display=swap");
 .col-md-offset-right-1, .col-lg-offset-right-1 {
   margin-right: 8.33333333%;
 }
@@ -450,13 +451,13 @@ i:before {
 }
 
 .main_slider_area .rev_slider .tp-leftarrow, .main_slider_area .rev_slider .tp-rightarrow {
-  height: 120px;
+  height: 70px;
   background-image: -webkit-gradient(linear, left top, right top, from(#70bafe), color-stop(51%, #998dff), to(#70bafe));
   background-image: -webkit-linear-gradient(left, #70bafe 0%, #998dff 51%, #70bafe 100%);
   background-image: -o-linear-gradient(left, #70bafe 0%, #998dff 51%, #70bafe 100%);
   background-image: linear-gradient(to right, #70bafe 0%, #998dff 51%, #70bafe 100%);
   background-size: 200% auto;
-  width: 138px;
+  width: 80px;
   border: 10px solid rgba(204, 241, 255, 0.5);
   -webkit-transition: all 400ms ease-out;
   -o-transition: all 400ms ease-out;
@@ -464,7 +465,7 @@ i:before {
 }
 
 .main_slider_area .rev_slider .tp-leftarrow:before, .main_slider_area .rev_slider .tp-rightarrow:before {
-  line-height: 100px;
+  line-height: 50px;
 }
 
 .main_slider_area .rev_slider .tp-leftarrow:hover, .main_slider_area .rev_slider .tp-rightarrow:hover {
@@ -586,6 +587,15 @@ i:before {
 ============================================================================================ */
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+.logo-font {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 0;
+  font-size: 25px;
+  cursor: pointer;
+}
+
 /* Feature Area css
 ============================================================================================ */
 .row.feature_inner {
@@ -931,9 +941,17 @@ i:before {
   padding-bottom: 26px;
 }
 
+.talk_text p {
+  font-size: 27px;
+  line-height: 37px;
+  color: #fff;
+  padding-bottom: 70px;
+}
+
 .talk_text a {
   font-size: 48px;
   color: #fff;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.4);
   font-family: "Roboto", sans-serif;
   font-weight: 600;
 }
@@ -1157,7 +1175,7 @@ i:before {
 }
 
 .best_3d_area .left_3d {
-  width: calc(50% - 160px);
+  width: calc(50% - 0px);
   float: left;
   position: relative;
 }
@@ -1175,12 +1193,12 @@ i:before {
 }
 
 .best_3d_area .right_text {
-  width: calc(50% + 160px);
+  width: calc(50% + 0px);
   float: right;
 }
 
 .shap_slider_inner {
-  max-width: 315px;
+  max-width: 400px;
   float: right;
   margin-right: 160px;
   margin-top: 300px;
@@ -1219,10 +1237,6 @@ i:before {
   align-self: center;
 }
 
-.shap_slider_inner .item .media .media-body {
-  padding-left: 18px;
-}
-
 .shap_slider_inner .item .media .media-body h5 {
   font-size: 15px;
   font-family: "Roboto", sans-serif;
@@ -1236,16 +1250,17 @@ i:before {
   font-size: 12px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
+  color: #7c8d93;
 }
 
 .shap_slider_inner .owl-dots {
-  text-align: right;
+  text-align: center;
   margin-top: 70px;
 }
 
 .shap_slider_inner .owl-dots .owl-dot {
-  height: 6px;
-  width: 6px;
+  height: 7px;
+  width: 7px;
   border-radius: 50%;
   background: #fff;
   display: inline-block;
@@ -1257,14 +1272,14 @@ i:before {
 }
 
 .shap_slider_inner .owl-dots .owl-dot.active {
-  background: #97ccfe;
+  background: #826fc3;
 }
 
 .text_3d {
   display: inline-block;
   padding-left: 80px;
   padding-top: 150px;
-  width: 54%;
+  width: 80%;
   float: left;
   padding-right: 5px;
 }
@@ -2505,6 +2520,7 @@ section.thankyou .coll img .desc p.link a {
 .footer_copyright .float-sm-left h5 span {
   color: #000;
   z-index: -1000000;
+  font-size: 0;
 }
 
 .footer_copyright .float-sm-left h5 span i, .footer_copyright .float-sm-left h5 span a {
