@@ -128,8 +128,18 @@
                 li{
                     a{
                         line-height: 70px;
+                        color: #aeaeae;
+                    }
+                    &.active{
+                        a{
+                            color: #fff;;
+                        }
                     }
                 }
+            }
+            
+            .navbar-brand{
+                color: #fff;
             }
         }
     }

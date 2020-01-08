@@ -327,6 +327,15 @@ i:before {
 
 .main_menu_area.navbar_fixed .navbar .navbar-nav li a {
   line-height: 70px;
+  color: #aeaeae;
+}
+
+.main_menu_area.navbar_fixed .navbar .navbar-nav li.active a {
+  color: #fff;
+}
+
+.main_menu_area.navbar_fixed .navbar .navbar-brand {
+  color: #fff;
 }
 
 /* End Main Menu Area css
