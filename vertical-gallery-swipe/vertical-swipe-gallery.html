@@ -73,11 +73,10 @@
     <script>
     $(function() {
     var cardWrapperLen = $(".cardWrapper").length;
+    var thresholdFigure = $("#test").height() * 0.1;
 
-    // $(".cardWrapper").each(function(){
-    //     $(this).css("z-index", cardWrapperLen);
-    //     cardWrapperLen--;
-    // });
+    console.log(thresholdFigure);
+
     //Enable swiping...
     $("#test").swipe( {
         swipeStatus:function(event, phase, direction, distance, duration, fingers, fingerData, currentDirection)
@@ -113,7 +112,7 @@
                 else
                     str +="Over maxTimeThreshold. <h3>Swipe handler will be canceled if you release at this point.</h3>"
 
-                if (distance<200)
+                if (distance<thresholdFigure)
                     str +="Not yet reached threshold.  <h3>Swipe will be canceled if you release at this point.</h3>"
                 else
                     str +="Threshold reached <h3>Swipe handler will be triggered if you release at this point.</h3>"
@@ -164,7 +163,7 @@
 
             //$("#test").html(str);
         },
-        threshold:200,
+        threshold:thresholdFigure,
         maxTimeThreshold:5000,
         fingers:'all'
     });
