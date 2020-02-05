@@ -118,10 +118,12 @@
                     str +="Threshold reached <h3>Swipe handler will be triggered if you release at this point.</h3>"
                 
                 if(direction == "up") {
-                    $(".cardWrapperActive").css({"top":"-"+distance+"px"});
+                    $(".cardWrapperActive").next(".cardWrapper").addClass("cardWrapperToBeActive");
+                    $(".cardWrapperActive").css({"top":"-"+distance+"px", "bottom": "auto"});
                 }
                 else if(direction == "down") {
-                    $(".cardWrapperActive").css({"bottom":"-"+distance+"px"});
+                    $(".cardWrapperActive").prev(".cardWrapper").addClass("cardWrapperToBeActive");
+                    $(".cardWrapperActive").css({"bottom":"-"+distance+"px", "top": "auto"});
                 }
                     
                     
@@ -129,13 +131,15 @@
 
             if (phase=="cancel") {
                 str +="<br/>Handler not triggered. <br/> One or both of the thresholds was not met";
+                
+                $(".cardWrapperActive").siblings(".cardWrapper").removeClass("cardWrapperToBeActive");
                 if(direction == "up") {
-                    //$(".cardWrapperActive").css({"top":"0px"});
-                    $(".cardWrapperActive").addClass("topZero");
+                    $(".cardWrapperActive").css({"top":"0px"});
+                    //$(".cardWrapperActive").addClass("topZero");
                 }
                 else if(direction == "down") {
-                    //$(".cardWrapperActive").css({"bottom":"0px"});
-                    $(".cardWrapperActive").addClass("bottomZero");
+                    $(".cardWrapperActive").css({"bottom":"0px"});
+                    //$(".cardWrapperActive").addClass("bottomZero");
                 }
             }
                 
@@ -143,15 +147,15 @@
                 str +="<br/>Handler was triggered.";
                 if(direction == "up") {
                     $(".cardWrapperActive").css({"top":"-100%"});
-                    $(".cardWrapper.cardWrapperActive").removeClass("cardWrapperActive").next(".cardWrapper").addClass("cardWrapperActive");
-                    //$(".cardWrapper.cardWrapperActive").prev(".cardWrapper").removeAttr("style");
-                    $(".cardWrapper.cardWrapperActive").prev(".cardWrapper").removeClass("bottomZero");
+                    $(".cardWrapper.cardWrapperActive").removeClass("cardWrapperActive").next(".cardWrapper").addClass("cardWrapperActive").removeClass("cardWrapperToBeActive");
+                    $(".cardWrapper.cardWrapperActive").prev(".cardWrapper").removeAttr("style");
+                    //$(".cardWrapper.cardWrapperActive").prev(".cardWrapper").removeClass("bottomZero");
                 }
                 else if(direction == "down") {
                     $(".cardWrapperActive").css({"bottom":"-100%"});
-                    $(".cardWrapper.cardWrapperActive").removeClass("cardWrapperActive").prev(".cardWrapper").addClass("cardWrapperActive");
-                    //$(".cardWrapper.cardWrapperActive").next(".cardWrapper").removeAttr("style");
-                    $(".cardWrapper.cardWrapperActive").prev(".cardWrapper").removeClass("topZero");
+                    $(".cardWrapper.cardWrapperActive").removeClass("cardWrapperActive").prev(".cardWrapper").addClass("cardWrapperActive").removeClass("cardWrapperToBeActive");
+                    $(".cardWrapper.cardWrapperActive").next(".cardWrapper").removeAttr("style");
+                    //$(".cardWrapper.cardWrapperActive").prev(".cardWrapper").removeClass("topZero");
                 }
                 
             }
