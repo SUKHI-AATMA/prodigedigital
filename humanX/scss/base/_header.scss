@@ -1,0 +1,149 @@
+// header
+header{
+    padding: 15px 55px;
+    z-index: 10;
+    width: 100%;
+    @include transition(.3s ease-in-out);
+
+    
+    .container{
+
+        .logo{
+            a{
+                display: block;
+
+                img{
+                    width: 108px;
+                    height: auto;
+                }
+            }
+        }
+        .menu-wrap{
+            nav{
+                ul.menu{
+                    > li{
+                        position: relative;
+                        padding-right: 30px; 
+                        width: 80px;
+                        transition: 50ms ease-out;
+                        -webkit-transition: 50ms ease-out;
+                        -moz-transition: 50ms ease-out;
+                        -ms-transition: 50ms ease-out;
+                        -o-transition: 50ms ease-out;                       
+
+                        &:last-child{
+                            padding-right: 0;
+                        }
+
+                        > a{
+                            text-transform: uppercase;
+                            color: #000000;
+                            font-family: "Open Sans";
+                            font-size: 14px;
+                            letter-spacing: 0.2px;
+                            line-height: 19px;
+                            cursor: pointer;
+                            @include transition(.3s ease-in-out);;
+                        }
+                        &.active, &:hover{
+                            transition: 50ms ease-out;
+                            -webkit-transition: 50ms ease-out;
+                            -moz-transition: 50ms ease-out;
+                            -ms-transition: 50ms ease-out;
+                            -o-transition: 50ms ease-out;
+
+                            > a{
+                                color: #004950;
+                                font-weight: bold;
+                            }
+                        }
+                        
+    
+                        &:after {
+                            content: '';
+                            display: block;
+                            width: calc(0% - 30px);
+                            position: absolute;
+                            height: 2px;
+                            background: #333;
+                            transition: width 350ms ease-out;
+                        }
+        
+                        &:hover:after {
+                            width: calc(100% - 30px);
+                            transition: width 350ms ease-out;
+                        }
+                        &.active:after {
+                            width: calc(100% - 30px);
+                        }
+
+                        &:last-child:after {
+                            width: calc(0%);
+                        }
+        
+                        &:last-child:hover:after {
+                            width: calc(100%);
+                        }
+                        &:last-child.active:after {
+                            width: calc(100%);
+                        }
+
+                        &:hover{
+                            ul.dropdown{
+                                display: block;
+                            }
+                        }
+                        
+                        ul.dropdown{
+                            padding: 20px 30px;
+                            display: none;
+                            position: absolute;
+                            top: 100%;
+                            left: -30px;
+                            border-radius: 0 0 5px 5px;
+                            background-color: #FFFFFF;
+                            box-shadow: 0 5px 10px 0 rgba(206,206,206,0.3);
+                        
+                            li{
+                                width: 120px;
+                                padding-bottom: 12px;
+
+                                &:last-child{
+                                    padding-bottom: 0px;
+                                }
+
+                                a{
+                                    color: #000000;
+                                    font-family: "Open Sans";
+                                    font-size: 14px;
+                                    line-height: 19px;
+                                    cursor: pointer;
+                                    @include transition(.3s ease-in-out);
+                                    width: 100%;
+                                    display: block;
+                                }
+
+                                &:hover{
+                                    a{
+                                        font-weight: 600;
+                                        color: #004950;
+                                        transition: 50ms ease-out; 
+                                        @include transition(.3s ease-in-out);                   
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+// media query
+@media screen and (max-width : 1024px){}
