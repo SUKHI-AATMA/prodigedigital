@@ -1,0 +1,95 @@
+footer{
+    background-color: #004950;
+    padding: 70px 0;
+
+    .container{
+        .inner-wrap{
+            .col{
+
+                &.link-wrap{
+                    max-width: 446px;
+                    width: 100%;
+
+                    ul{
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        li{
+                            width: 148px;
+                            padding-bottom: 10px;
+
+                            a{
+                                color: #FFFFFF;
+                                font-size: 14px;
+                                line-height: 19px;
+                                position: relative;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+
+                                p{
+                                    padding-left: 10px;
+                                }
+
+                                span {
+                                    display: block;
+                                    position: relative;
+                                    height: 4px;
+                                    width: 4px;
+                                    background-color:#fff;
+                                    border-radius: 50%;
+                                    
+                                    &:before {
+                                        position: absolute;
+                                        content: '';
+                                        height: calc(100% + 6px); 
+                                        width: calc(100% + 6px); 
+                                        border: 1px solid#fff;
+                                        top: -3px;
+                                        left: -3px;
+                                        border-radius: inherit;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.tech-wrap{
+                    .row{
+                        position: relative;
+                        padding-left: 30px;
+
+                        &:before{
+                            content: '';
+                            box-sizing: border-box;
+                            height: 56px;
+                            width: 1px;
+                            border: 0.5px solid #FFFFFF;
+                            // opacity: 0.8;
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            margin-top: -28px;
+                        }
+                        .coll{
+                            width: 148px;
+                            p{
+                                color: #FFFFFF;
+                                font-size: 12px;
+                                line-height: 17px;
+                                padding-right: 20px;
+                            }
+                            .img{
+                                height: 36px;
+                                width: 148px;
+                                background-color: #fff;
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
