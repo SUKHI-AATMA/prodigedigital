@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vertial Swipe Gallery</title>
+    <style>
+    #test {
+        border: 1px solid #000;
+        width: 90vw;
+        height: 90vh;
+        overflow: hidden;
+        margin: auto auto;
+    }
+    
+    .cardsStack {
+        position: relative;
+        height: 100%;
+    }
+
+    .cardWrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .cardWrapperActive {
+        z-index: 3;
+    }
+
+    .cardWrapperToBeActive {
+        z-index: 2;
+    }
+
+    .cardWrapper:nth-child(2n+1) {
+        background-color: #a0cde2;
+    }
+
+    .cardWrapper:nth-child(2n+2) {
+        background-color: #91c95a;
+    }
+
+    .topZero {
+        top: 0;
+    }
+
+    .bottomZero {
+        bottom: 0;
+    }
+    </style>
+</head>
+<body>
+    <div id="test" class="box">
+        <div class="cardsStack">
+            <div class="cardWrapper cardWrapperActive">
+                Card 1
+            </div>
+            <div class="cardWrapper">
+                Card 2
+            </div>
+            <div class="cardWrapper">
+                Card 3
+            </div>
+            <div class="cardWrapper">
+                Card 4
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="swipe.js"></script>
+    <script>
+    $(function() {
+    var cardWrapperLen = $(".cardWrapper").length;
+    var thresholdFigure = $("#test").height() * 0.1;
+
+    console.log(thresholdFigure);
+
+    //Enable swiping...
+    $("#test").swipe( {
+        swipeStatus:function(event, phase, direction, distance, duration, fingers, fingerData, currentDirection)
+        {
+            //console.log(direction);
+            if(direction == "up") {
+                if($(".cardWrapperActive").next(".cardWrapper").length <= 0) {
+                    return false;
+                }
+            }
+            else if(direction == "down") {
+                if($(".cardWrapperActive").prev(".cardWrapper").length <= 0) {
+                    return false;
+                }
+            }
+            var str = "<h4>Swipe Phase : " + phase + "<br/>";
+            str += "Current direction: " + currentDirection + "<br/>";
+            str += "Direction from inital touch: " + direction + "<br/>";
+            str += "Distance from inital touch: " + distance + "<br/>";
+            str += "Duration of swipe: " + duration + "<br/>";
+            str += "Fingers used: " + fingers + "<br/></h4>";
+
+            //Here we can check the:
+            //phase : 'start', 'move', 'end', 'cancel'
+            //direction : 'left', 'right', 'up', 'down'
+            //distance : Distance finger is from initial touch point in px
+            //duration : Length of swipe in MS
+            //fingerCount : the number of fingers used
+
+            if (phase!="cancel" && phase!="end") {
+                if (duration<5000)
+                    str +="Under maxTimeThreshold.<h3>Swipe handler will be triggered if you release at this point.</h3>"
+                else
+                    str +="Over maxTimeThreshold. <h3>Swipe handler will be canceled if you release at this point.</h3>"
+
+                if (distance<thresholdFigure)
+                    str +="Not yet reached threshold.  <h3>Swipe will be canceled if you release at this point.</h3>"
+                else
+                    str +="Threshold reached <h3>Swipe handler will be triggered if you release at this point.</h3>"
+                
+                if(direction == "up") {
+                    $(".cardWrapperActive").next(".cardWrapper").addClass("cardWrapperToBeActive");
+                    $(".cardWrapperActive").css({"top":"-"+distance+"px", "bottom": "auto"});
+                }
+                else if(direction == "down") {
+                    $(".cardWrapperActive").prev(".cardWrapper").addClass("cardWrapperToBeActive");
+                    $(".cardWrapperActive").css({"bottom":"-"+distance+"px", "top": "auto"});
+                }
+                    
+                    
+            }
+
+            if (phase=="cancel") {
+                str +="<br/>Handler not triggered. <br/> One or both of the thresholds was not met";
+                
+                $(".cardWrapperActive").siblings(".cardWrapper").removeClass("cardWrapperToBeActive");
+                if(direction == "up") {
+                    $(".cardWrapperActive").css({"top":"0px"});
+                    //$(".cardWrapperActive").addClass("topZero");
+                }
+                else if(direction == "down") {
+                    $(".cardWrapperActive").css({"bottom":"0px"});
+                    //$(".cardWrapperActive").addClass("bottomZero");
+                }
+            }
+                
+            if (phase=="end") {
+                str +="<br/>Handler was triggered.";
+                if(direction == "up") {
+                    $(".cardWrapperActive").css({"top":"-100%"});
+                    $(".cardWrapper.cardWrapperActive").removeClass("cardWrapperActive").next(".cardWrapper").addClass("cardWrapperActive").removeClass("cardWrapperToBeActive");
+                    $(".cardWrapper.cardWrapperActive").prev(".cardWrapper").removeAttr("style");
+                    //$(".cardWrapper.cardWrapperActive").prev(".cardWrapper").removeClass("bottomZero");
+                }
+                else if(direction == "down") {
+                    $(".cardWrapperActive").css({"bottom":"-100%"});
+                    $(".cardWrapper.cardWrapperActive").removeClass("cardWrapperActive").prev(".cardWrapper").addClass("cardWrapperActive").removeClass("cardWrapperToBeActive");
+                    $(".cardWrapper.cardWrapperActive").next(".cardWrapper").removeAttr("style");
+                    //$(".cardWrapper.cardWrapperActive").prev(".cardWrapper").removeClass("topZero");
+                }
+                
+            }
+                
+
+            //$("#test").html(str);
+        },
+        threshold:thresholdFigure,
+        maxTimeThreshold:5000,
+        fingers:'all'
+    });
+});
+    </script>
+</body>
+</html>
