@@ -2,6 +2,14 @@
 
 section.sec-slider{
     text-align: center;
+
+    .img-box{
+        img{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
 }
 
 
@@ -46,10 +54,12 @@ section.sec-mission{
                 }
             }
         }
-        .img-box{
-            img{
-                display: block;
-            }
+    }
+    .img-box{
+        img{
+            display: block;
+            width: 100%;
+            height: auto;
         }
     }
 }
@@ -57,10 +67,10 @@ section.sec-mission{
 
 // our core
 section.sec-core{
+    background-color: #F4F0EB;
+    padding: 120px 0;
 
     .container{
-        background-color: #F4F0EB;
-        padding: 120px 0;
 
         .title-wrap{
             text-align: center;
