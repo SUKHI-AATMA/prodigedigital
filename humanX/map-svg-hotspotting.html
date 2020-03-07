@@ -9,6 +9,30 @@
             display: flex;
             justify-content: space-between;
         }
+
+        .mapData {
+            position: absolute;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 10px;
+            transition: 0.5s all ease;
+        }
+
+        .mapData::before {
+            content: '';
+            position: absolute;
+            bottom: -11px;
+            left: 13px;
+            background-color: #fff;
+            width: 20px;
+            height: 20px;
+            transform: rotate(45deg);
+        }
+
+        polygon:hover {
+            stroke: rgb(85, 109, 111);
+            stroke-width: 2px;
+        }
     </style>
     <script>
     var jsonData = [
@@ -96,12 +120,34 @@
     ]
     
     window.onload = function() {
+        var svgHotSpotId = "";
+        document.addEventListener("click", function(e){
+            var getParentNode = e.target.nodeName;
+            if(getParentNode.indexOf("polygon") == -1) {
+                document.querySelectorAll(".mapData")[0].style.opacity = 0;
+            }
+        });
+
         document.querySelectorAll(".map-wrapper")[0].getElementsByTagName("svg")[0].addEventListener("click", function(e) {
-            console.log(e.target.id);
+            //console.log(e.target.id);
+            if(svgHotSpotId != e.target.id) {
+                svgHotSpotId = e.target.id;
+            }
+            else {
+                return false;
+            }
+            //console.log(svgHotSpotId);
+            //console.log(e.target.id);
+            //console.log(e.clientX);
             var hotspotClickData = "";
             hotspotClickData = jsonData.filter(function(i) {
                 return i.id == e.target.id;
             });
+
+            if(hotspotClickData == "") {
+                document.querySelectorAll(".mapData")[0].style.opacity = 0;
+                return false;
+            }
 
             for(var i=1; i<=document.querySelectorAll(".mapData")[0].children.length; i++) {
                 switch(i) {
@@ -119,9 +165,14 @@
                 }
                 var jsonVal = "hotspotClickData[0]." + val + "Figure";
                 var jsonText = "hotspotClickData[0]." + val + "Text";
+                
                 document.querySelectorAll(".mapData")[0].querySelectorAll("."+val)[0].getElementsByTagName("span")[0].innerHTML = eval(jsonVal);
                 document.querySelectorAll(".mapData")[0].querySelectorAll("."+val)[0].getElementsByTagName("span")[1].innerHTML = eval(jsonText);
             }
+
+            document.querySelectorAll(".mapData")[0].style.opacity = 1;
+            document.querySelectorAll(".mapData")[0].style.top = e.clientY - document.querySelectorAll(".mapData")[0].clientHeight + 5 + "px";
+            document.querySelectorAll(".mapData")[0].style.left = e.clientX - 24 + "px";
         });
     }
     </script>
