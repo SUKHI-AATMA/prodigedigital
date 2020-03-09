@@ -25,11 +25,11 @@
     text-decoration: none;
     -webkit-text-size-adjust: none;
     -webkit-appearance: none;
-    @include transition(.3s ease-in-out);
+    // @include transition(.3s ease-in-out);
 }
 
 h1,h2,h3,h4,h5,a,p,span,input,button{
-    @include transition(.3s ease-in-out);
+    // @include transition(.3s ease-in-out);
     z-index: 1;
 }
 
@@ -100,7 +100,9 @@ main{
     overflow: hidden;
     width: 100%;
     margin: 0 auto;
-    padding-top: 75px;
+    padding-top: 74px;
+    background-color: #fff;
+    margin-bottom: 213px;   
 }
 
 
@@ -134,4 +136,27 @@ main{
         font-size: 30px;
         line-height: 44px;
     }
+
+} 
+
+// media query
+@media screen and (max-width : 1199px){
+    .container{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+@media screen and (max-width : 1024px){
+
+    .title-wrap{
+        h2{
+            font-size: 24px;
+            line-height: 36px;
+        }
+    } 
+
+    main{
+        margin-bottom: 300px;
+    }
+    
 }

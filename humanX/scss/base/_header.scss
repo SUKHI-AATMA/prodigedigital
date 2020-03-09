@@ -149,6 +149,11 @@ header{
                                 top: 0;
                                 right: 0;
                             }
+                            &:last-child{
+                                &:before{
+                                    display: none;
+                                }
+                            }
                             &:hover{
                                 >a{
                                     // color: #000000;
@@ -320,4 +325,56 @@ header{
 
 
 // media query
-@media screen and (max-width : 1024px){}
+@media screen and (max-width : 1680px){
+
+}
+
+
+@media screen and (max-width : 1600px){
+    
+}
+
+@media screen and (max-width : 1440px){
+    
+}
+
+
+@media screen and (max-width : 1400px){
+    
+}
+
+
+@media screen and (max-width : 1366px){
+    
+}
+
+@media screen and (max-width : 1280px){
+    
+}
+
+@media screen and (max-width : 1199px){
+    header{
+        padding: 12px 30px;
+    }
+}
+
+@media screen and (max-width : 1024px){
+    
+}
+
+@media screen and (max-width : 991px){
+    
+}
+
+@media screen and (max-width : 768px){
+    
+}
+
+@media screen and (max-width : 480px){
+    
+}
+
+@media screen and (max-width : 360px){
+    
+}
+

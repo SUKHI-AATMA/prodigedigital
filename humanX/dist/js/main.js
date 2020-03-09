@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-$(document).ready((function(){$("#homeBanner .owl-carousel").owlCarousel({loop:!1,nav:!0,dots:!0,smartSpeed:500,slideTransition:"linear",mouseDrag:!0,autoplay:!1,items:1,video:!0,onInitialized:function(e){$(".active .owl-video-play-icon").trigger("click")}}),$("#partners .owl-carousel").owlCarousel({margin:30,loop:!1,nav:!0,dots:!1,smartSpeed:500,slideTransition:"linear",mouseDrag:!1,autoplay:!1,responsive:{0:{items:1},480:{items:2},768:{items:3},1200:{items:4}}}),$("#funders .owl-carousel").owlCarousel({margin:30,loop:!1,nav:!0,dots:!1,smartSpeed:500,slideTransition:"linear",mouseDrag:!1,autoplay:!1,responsive:{0:{items:1},480:{items:2},768:{margin:10,items:3},1200:{items:4}}}),$("#news .owl-carousel").owlCarousel({autoWidth:!0,loop:!1,nav:!0,dots:!1,smartSpeed:500,slideTransition:"linear",mouseDrag:!1,autoplay:!1,responsive:{0:{items:1,singleItem:!0,nav:!1},600:{items:2},768:{items:3}}}),$(".play-btn").magnificPopup({type:"iframe",mainClass:"mfp-fade",removalDelay:160,preloader:!1,fixedContentPos:!1}),$(window).scroll((function(){$("#Mission").offset().top,$("#Mission").outerHeight();var e=$(window).height(),t=$(this).scrollTop();t>e?(console.log("you have scrolled down!"),$("header").addClass("active"),$("header .logo").addClass("active"),$("header .menu-wrap").addClass("active"),$("header .hamburger").addClass("active")):0==t&&(console.log("you have scrolled top!"),$("header").removeClass("active"),$("header .logo").removeClass("active"),$("header .menu-wrap").removeClass("active"),$("header .hamburger").removeClass("active"))})),$(".hamburger").on("click tap",(function(){$(this).toggleClass("open"),$("header .menu-wrap.active").toggleClass("open"),$("body").toggleClass("bodyOverflowHidden")}))}));var jsonData=[{id:"Path-2",firstBlockFigure:"6.97",firstBlockText:"Million acres restored",secondBlockFigure:"13",secondBlockText:"Million lives impacted",thirdBlockFigure:"24,086",thirdBlockText:"Villages strengthened"},{id:"Path-4",firstBlockFigure:"8.97",firstBlockText:"Million acres restored",secondBlockFigure:"26",secondBlockText:"Million lives impacted",thirdBlockFigure:"30,000",thirdBlockText:"Villages strengthened"},{id:"Path-5",firstBlockFigure:"78.97",firstBlockText:"Million acres restored",secondBlockFigure:"6",secondBlockText:"Million lives impacted",thirdBlockFigure:"5,000",thirdBlockText:"Villages strengthened"},{id:"Path-6",firstBlockFigure:"68.97",firstBlockText:"Million acres restored",secondBlockFigure:"16",secondBlockText:"Million lives impacted",thirdBlockFigure:"35,000",thirdBlockText:"Villages strengthened"},{id:"Path-12",firstBlockFigure:"48.97",firstBlockText:"Million acres restored",secondBlockFigure:"6",secondBlockText:"Million lives impacted",thirdBlockFigure:"15,000",thirdBlockText:"Villages strengthened"},{id:"Path-15",firstBlockFigure:"58.97",firstBlockText:"Million acres restored",secondBlockFigure:"16",secondBlockText:"Million lives impacted",thirdBlockFigure:"25,000",thirdBlockText:"Villages strengthened"},{id:"Path-16",firstBlockFigure:"18.97",firstBlockText:"Million acres restored",secondBlockFigure:"126",secondBlockText:"Million lives impacted",thirdBlockFigure:"10,000",thirdBlockText:"Villages strengthened"},{id:"Path-17",firstBlockFigure:"38.97",firstBlockText:"Million acres restored",secondBlockFigure:"16",secondBlockText:"Million lives impacted",thirdBlockFigure:"5,000",thirdBlockText:"Villages strengthened"},{id:"Stroke-26",firstBlockFigure:"28.97",firstBlockText:"Million acres restored",secondBlockFigure:"126",secondBlockText:"Million lives impacted",thirdBlockFigure:"50,000",thirdBlockText:"Villages strengthened"}];window.onload=function(){var svgHotSpotId="";document.addEventListener("click",(function(e){-1==e.target.nodeName.indexOf("polygon")&&(document.querySelectorAll(".mapData")[0].style.opacity=0)})),document.querySelectorAll(".map-wrapper")[0].getElementsByTagName("svg")[0].addEventListener("click",(function(e){if(svgHotSpotId==e.target.id)return!1;svgHotSpotId=e.target.id;var hotspotClickData="";if(hotspotClickData=jsonData.filter((function(t){return t.id==e.target.id})),""==hotspotClickData)return document.querySelectorAll(".mapData")[0].style.opacity=0,!1;for(var i=1;i<=document.querySelectorAll(".mapData")[0].children.length;i++){switch(i){case 1:val="firstBlock";break;case 2:val="secondBlock";break;case 3:val="thirdBlock";break;default:val="unknown"}var jsonVal="hotspotClickData[0]."+val+"Figure",jsonText="hotspotClickData[0]."+val+"Text";document.querySelectorAll(".mapData")[0].querySelectorAll("."+val)[0].getElementsByTagName("span")[0].innerHTML=eval(jsonVal),document.querySelectorAll(".mapData")[0].querySelectorAll("."+val)[0].getElementsByTagName("span")[1].innerHTML=eval(jsonText)}document.querySelectorAll(".mapData")[0].style.opacity=1,document.querySelectorAll(".mapData")[0].style.top=e.clientY-document.querySelectorAll(".mapData")[0].clientHeight-15+"px",document.querySelectorAll(".mapData")[0].style.left=e.clientX-24+"px"}))};
-=======
 $(document).ready(function () {
 
     var owlHomeBanner = $('#homeBanner .owl-carousel');
@@ -45,7 +42,7 @@ $(document).ready(function () {
             768: {
                 items: 3
             },
-            1170: {
+            1200: {
                 items: 4
             }
         },
@@ -69,9 +66,10 @@ $(document).ready(function () {
                 items: 2
             },
             768: {
+                margin: 10,
                 items: 3
             },
-            1170: {
+            1200: {
                 items: 4
             }
         },
@@ -90,9 +88,11 @@ $(document).ready(function () {
         autoplay: false,
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                singleItem:true,
+                nav: false
             },
-            480: {
+            600: {
                 items: 2
             },
             768: {
@@ -115,7 +115,7 @@ $(document).ready(function () {
         hH = $('#Mission').outerHeight(),
         wH = $(window).height(),
         wS = $(this).scrollTop();
-        console.log(wS);
+        //console.log(wS);
 
         if (wS > wH){
             // alert('you have scrolled top!');
@@ -291,4 +291,3 @@ window.onload = function() {
         document.querySelectorAll(".mapData")[0].style.left = e.clientX - 24 + "px";
     });
 }
->>>>>>> d3876346ab816e00b805dd3233f33ae43aff01a0
