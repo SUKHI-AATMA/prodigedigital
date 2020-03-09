@@ -2,6 +2,12 @@ footer{
     background-color: #004950;
     padding: 70px 0;
 
+    height: 213px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+
     .container{
         .inner-wrap{
             .col{
@@ -26,6 +32,21 @@ footer{
                                 display: flex;
                                 justify-content: flex-start;
                                 align-items: center;
+                                @include transition(.3s ease-in-out);
+
+                                &:hover{
+
+                                    text-decoration: underline;
+
+                                    // span:before{
+                                    //     @include transition(.3s ease-in-out);
+                                    //     border: 1px solid#000;
+                                    //     height: calc(100% + 10px);
+                                    //     width: calc(100% + 10px);
+                                    //     top: -5px;
+                                    //     left: -5px;
+                                    // }
+                                }
 
                                 p{
                                     padding-left: 10px;
@@ -88,6 +109,57 @@ footer{
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width : 1024px){
+    footer{
+        .container{
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+    }
+}
+@media screen and (max-width : 1024px){
+
+    footer{
+        height: 300px;
+        .container{
+            .inner-wrap{
+                justify-content: flex-start;
+                flex-wrap: wrap;
+
+                .col{
+                    &.logo-wrap{
+                        order: 2;
+                        padding-right: 40px;
+                    }
+                    &.link-wrap{
+                        order: 1;
+                        max-width: 100%;
+                        margin-bottom: 52px;
+                    }
+                    &.tech-wrap{
+                        order: 3;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width : 991px){
+    footer {
+        .container{
+            .inner-wrap {
+                .col.link-wrap ul li{
+                    width: 33%;
                 }
             }
         }
