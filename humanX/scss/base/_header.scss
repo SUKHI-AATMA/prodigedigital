@@ -1,10 +1,10 @@
 // header
 header{
     // display: none;
-    padding: 12px 55px;
+    padding: 0px 55px;
     z-index: 10;
     width: 100%;
-    // @include transition(.3s ease-in-out);
+    @include transition(.3s ease-in-out);
     background-color: #fff;
 
     position: fixed;
@@ -12,10 +12,6 @@ header{
     left: 0;
     z-index: 10;
     width: 100%;
-
-    &.active{
-        padding: 0;
-    }
 
 
     .hamburger {
@@ -102,6 +98,7 @@ header{
             // position: relative;
 
             .logo{
+                padding: 12px 0;
                 &.active{
                     display: none;
                 }
@@ -115,6 +112,7 @@ header{
                 }
             }
             .menu-wrap{
+                padding: 12px 0;
                 &.active{
                     display: none;
                 }
@@ -200,6 +198,8 @@ header{
                 nav{
                     ul.menu{
                         > li{
+                            padding-top: 12px;
+                            padding-bottom: 12px;
                             position: relative;
                             padding-right: 30px; 
                             width: 80px;
@@ -221,7 +221,7 @@ header{
                                 letter-spacing: 0.2px;
                                 line-height: 19px;
                                 cursor: pointer;
-                                // @include transition(.3s ease-in-out);;
+                                @include transition(.3s ease-in-out);;
                             }
                             &.active, &:hover{
                                 transition: 50ms ease-out;
@@ -273,7 +273,7 @@ header{
                             }
                             
                             ul.dropdown{
-                                padding: 20px 30px;
+                                padding: 30px 30px;
                                 display: none;
                                 position: absolute;
                                 top: 100%;
@@ -281,7 +281,14 @@ header{
                                 border-radius: 0 0 5px 5px;
                                 background-color: #FFFFFF;
                                 box-shadow: 0 5px 10px 0 rgba(206,206,206,0.3);
-                            
+                                
+                                
+                                &:last-child{
+                                    li{
+                                        width: 180px;
+                                    }
+                                }
+
                                 li{
                                     width: 130px;
                                     padding-bottom: 12px;
@@ -296,7 +303,7 @@ header{
                                         font-size: 14px;
                                         line-height: 19px;
                                         cursor: pointer;
-                                        // @include transition(.3s ease-in-out);
+                                        @include transition(.3s ease-in-out);
                                         width: 100%;
                                         display: block;
                                     }
@@ -306,7 +313,7 @@ header{
                                             font-weight: 600;
                                             color: #004950;
                                             transition: 50ms ease-out; 
-                                            // @include transition(.3s ease-in-out);                   
+                                            @include transition(.3s ease-in-out);                   
                                         }
                                     }
                                 }
@@ -354,12 +361,69 @@ header{
 
 @media screen and (max-width : 1199px){
     header{
-        padding: 12px 30px;
+        padding: 0px 30px;
     }
 }
 
 @media screen and (max-width : 1024px){
     
+    header .container{
+        padding: 0 0;
+    }
+    header .hamburger{
+        display: block;
+        top: 0;
+        right: 30px;
+        margin-top: 12px;
+        box-shadow:none;
+
+        &:hover{
+            background: #fff;
+        }
+    }
+    
+    header .container .flex-wrap .menu-wrap{
+        display: none;
+    }
+
+    header .container .flex-wrap .menu-wrap nav ul.menu>li{
+        cursor: pointer;
+    }
+
+    header .container .flex-wrap .menu-wrap.open{
+        padding: 70px 50px 20px;
+        overflow: scroll;
+    }
+
+    header .container .flex-wrap .menu-wrap .menu.flex-wrap{
+        flex-direction: column;
+    }
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li{
+        padding: 0;
+        margin-bottom: 24px;
+        width: 100%;
+    }
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li:before{
+        display: none;
+    }
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li>a{
+        font-size: 16px;
+        line-height: 21px;
+        color: #004950;
+    }
+
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li ul.dropdown{
+        padding: 0;
+        position: relative;
+        left: auto;
+        top: auto;
+        padding-top: 12px;
+        padding-left: 16px;
+    }
+
+
+
+
 }
 
 @media screen and (max-width : 991px){
@@ -371,6 +435,9 @@ header{
 }
 
 @media screen and (max-width : 480px){
+    header .container .flex-wrap .menu-wrap.open{
+        padding: 70px 30px 20px;
+    }
     
 }
 
@@ -378,3 +445,8 @@ header{
     
 }
 
+@media screen and (max-width : 350px){
+    footer .container .inner-wrap .col.tech-wrap{
+        
+    }
+}

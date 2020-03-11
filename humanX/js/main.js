@@ -5,7 +5,7 @@ $(document).ready(function () {
         loop: false,
         nav: true,
         dots: true,
-        // dotsData: true,
+        dotsData: false,
         smartSpeed: 500,
         slideTransition: 'linear',
         mouseDrag: true,
@@ -19,6 +19,7 @@ $(document).ready(function () {
     //    alert("video video")
        $(".active .owl-video-play-icon").trigger("click")
      };
+
 
     
 
@@ -107,41 +108,43 @@ $(document).ready(function () {
         mainClass: 'mfp-fade',
         removalDelay: 160,
         preloader: false,
-        fixedContentPos: false
+        fixedContentPos: false,
+        disableOn: 700
     });
 
     $(window).scroll(function() {
-    var hT = $('#Mission').offset().top,
-        hH = $('#Mission').outerHeight(),
+        var hT = $('header').offset().top,
+        hH = $('header').outerHeight(),
         wH = $(window).height(),
         wS = $(this).scrollTop();
-        //console.log(wS);
+        console.log(hH);
 
-        if (wS > wH){
-            // alert('you have scrolled top!');
-            console.log('you have scrolled down!');
-            $('header').addClass('active');
-            $('header .logo').addClass('active');
-            $('header .menu-wrap').addClass('active');
-            $('header .hamburger').addClass('active');
-        } else if (wS == 0){
-            console.log('you have scrolled top!');
-            $('header').removeClass('active');
-            $('header .logo').removeClass('active');
-            $('header .menu-wrap').removeClass('active');
-            $('header .hamburger').removeClass('active');
+        if ($(window).width() > 1025){
+            if (hT > 80){
+                // alert('you have scrolled top!');
+                //console.log('you have scrolled down!');
+                $('header .logo').addClass('active');
+                $('header .menu-wrap').addClass('active');
+                $('header .hamburger').addClass('active');
+            } else if (hT == 0){
+                //console.log('you have scrolled top!');
+                $('header .logo').removeClass('active');
+                $('header .menu-wrap').removeClass('active');
+                $('header .hamburger').removeClass('active');
+            }
         }
 
     });
 
 
+
     $('.hamburger').on("click tap", function () {
         $(this).toggleClass('open');
-        $('header .menu-wrap.active').toggleClass('open');
+        $('header .menu-wrap').toggleClass('open');
         $('body').toggleClass('bodyOverflowHidden');
         //alert('hi');
-    
     });
+
       
       
 
@@ -160,6 +163,8 @@ var jsonData = [
         'secondBlockText': 'Million lives impacted',
         'thirdBlockFigure': '24,086',
         'thirdBlockText': 'Villages strengthened',
+        'fourthBlockFigure': 'Go to MP',
+        'fourthBlockText': 'https://www.google.com/',
     },
     {
         'id': 'Path-4',
@@ -169,6 +174,8 @@ var jsonData = [
         'secondBlockText': 'Million lives impacted',
         'thirdBlockFigure': '30,000',
         'thirdBlockText': 'Villages strengthened',
+        'fourthBlockFigure': 'Go to MP',
+        'fourthBlockText': 'https://www.google.com/',
     },
     {
         'id': 'Path-5',
@@ -178,6 +185,8 @@ var jsonData = [
         'secondBlockText': 'Million lives impacted',
         'thirdBlockFigure': '5,000',
         'thirdBlockText': 'Villages strengthened',
+        'fourthBlockFigure': 'Go to MP',
+        'fourthBlockText': 'https://www.google.com/',
     },
     {
         'id': 'Path-6',
@@ -187,6 +196,8 @@ var jsonData = [
         'secondBlockText': 'Million lives impacted',
         'thirdBlockFigure': '35,000',
         'thirdBlockText': 'Villages strengthened',
+        'fourthBlockFigure': 'Go to MP',
+        'fourthBlockText': 'https://www.google.com/',
     },
     {
         'id': 'Path-12',
@@ -196,6 +207,8 @@ var jsonData = [
         'secondBlockText': 'Million lives impacted',
         'thirdBlockFigure': '15,000',
         'thirdBlockText': 'Villages strengthened',
+        'fourthBlockFigure': 'Go to MP',
+        'fourthBlockText': 'https://www.google.com/',
     },
     {
         'id': 'Path-15',
@@ -205,6 +218,8 @@ var jsonData = [
         'secondBlockText': 'Million lives impacted',
         'thirdBlockFigure': '25,000',
         'thirdBlockText': 'Villages strengthened',
+        'fourthBlockFigure': 'Go to MP',
+        'fourthBlockText': 'https://www.google.com/',
     },
     {
         'id': 'Path-16',
@@ -214,6 +229,8 @@ var jsonData = [
         'secondBlockText': 'Million lives impacted',
         'thirdBlockFigure': '10,000',
         'thirdBlockText': 'Villages strengthened',
+        'fourthBlockFigure': 'Go to MP',
+        'fourthBlockText': 'https://www.google.com/',
     },
     {
         'id': 'Path-17',
@@ -223,6 +240,8 @@ var jsonData = [
         'secondBlockText': 'Million lives impacted',
         'thirdBlockFigure': '5,000',
         'thirdBlockText': 'Villages strengthened',
+        'fourthBlockFigure': 'Go to MP',
+        'fourthBlockText': 'https://www.google.com/',
     },
     {
         'id': 'Stroke-26',
@@ -232,6 +251,8 @@ var jsonData = [
         'secondBlockText': 'Million lives impacted',
         'thirdBlockFigure': '50,000',
         'thirdBlockText': 'Villages strengthened',
+        'fourthBlockFigure': 'Go to MP',
+        'fourthBlockText': 'https://www.google.com/',
     }
 ]
 
@@ -265,7 +286,7 @@ window.onload = function() {
             return false;
         }
 
-        for(var i=1; i<=document.querySelectorAll(".mapData")[0].children.length; i++) {
+        for(var i=1; i<=document.querySelectorAll(".mapData")[0].querySelectorAll(".flex-box")[0].children.length; i++) {
             switch(i) {
                 case 1:
                 val = "firstBlock"
@@ -276,18 +297,30 @@ window.onload = function() {
                 case 3:
                 val = "thirdBlock"
                 break;
+                case 4:
+                val = "fourthBlock"
+                break;
                 default:
                 val = "unknown"
             }
             var jsonVal = "hotspotClickData[0]." + val + "Figure";
             var jsonText = "hotspotClickData[0]." + val + "Text";
             
-            document.querySelectorAll(".mapData")[0].querySelectorAll("."+val)[0].getElementsByTagName("span")[0].innerHTML = eval(jsonVal);
-            document.querySelectorAll(".mapData")[0].querySelectorAll("."+val)[0].getElementsByTagName("span")[1].innerHTML = eval(jsonText);
+            if(val != 'fourthBlock') {
+                document.querySelectorAll(".mapData")[0].querySelectorAll("."+val)[0].getElementsByTagName("span")[0].innerHTML = eval(jsonVal);
+                document.querySelectorAll(".mapData")[0].querySelectorAll("."+val)[0].getElementsByTagName("span")[1].innerHTML = eval(jsonText);
+            }
+            else {
+                document.querySelectorAll(".mapData")[0].querySelectorAll("."+val)[0].getElementsByTagName("span")[0].innerHTML = eval(jsonVal);
+                document.querySelectorAll(".mapData")[0].querySelectorAll("."+val)[0].getElementsByTagName("a")[0].setAttribute('href', eval(jsonText));
+            }
+            
         }
 
+        console.log(e);
+
         document.querySelectorAll(".mapData")[0].style.opacity = 1;
-        document.querySelectorAll(".mapData")[0].style.top = e.clientY - document.querySelectorAll(".mapData")[0].clientHeight - 15 + "px";
-        document.querySelectorAll(".mapData")[0].style.left = e.clientX - 24 + "px";
+        document.querySelectorAll(".mapData")[0].style.top = e.offsetY - document.querySelectorAll(".mapData")[0].clientHeight - 15 + "px";
+        document.querySelectorAll(".mapData")[0].style.left = e.offsetX - 24 + "px";
     });
 }
