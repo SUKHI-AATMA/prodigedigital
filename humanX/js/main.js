@@ -1,15 +1,18 @@
 $(document).ready(function () {
 
+    
     var owlHomeBanner = $('#homeBanner .owl-carousel');
     owlHomeBanner.owlCarousel({
-        loop: false,
+        loop: true,
         nav: true,
         dots: true,
         dotsData: false,
-        smartSpeed: 500,
+        smartSpeed: 1000,
+        // autoPlaySpeed: 5000,
+        // autoPlayTimeout: 5000,
         slideTransition: 'linear',
         mouseDrag: true,
-        autoplay: false,
+        autoplay: true,
         items: 1,
         video: true,
         onInitialized:theThing, 
@@ -117,7 +120,7 @@ $(document).ready(function () {
         hH = $('header').outerHeight(),
         wH = $(window).height(),
         wS = $(this).scrollTop();
-        console.log(hH);
+        // console.log(hH);
 
         if ($(window).width() > 1025){
             if (hT > 80){
@@ -145,12 +148,12 @@ $(document).ready(function () {
         //alert('hi');
     });
 
-      
-      
+
+
 
 });
 
-
+  
 
 
 
@@ -163,7 +166,7 @@ var jsonData = [
         'secondBlockText': 'Million lives impacted',
         'thirdBlockFigure': '24,086',
         'thirdBlockText': 'Villages strengthened',
-        'fourthBlockFigure': 'Go to MP',
+        'fourthBlockFigure': 'Go to Rajasthan',
         'fourthBlockText': 'https://www.google.com/',
     },
     {
@@ -174,7 +177,7 @@ var jsonData = [
         'secondBlockText': 'Million lives impacted',
         'thirdBlockFigure': '30,000',
         'thirdBlockText': 'Villages strengthened',
-        'fourthBlockFigure': 'Go to MP',
+        'fourthBlockFigure': 'Go to Gujarat',
         'fourthBlockText': 'https://www.google.com/',
     },
     {
@@ -185,7 +188,7 @@ var jsonData = [
         'secondBlockText': 'Million lives impacted',
         'thirdBlockFigure': '5,000',
         'thirdBlockText': 'Villages strengthened',
-        'fourthBlockFigure': 'Go to MP',
+        'fourthBlockFigure': 'Go to Madhya Pradesh',
         'fourthBlockText': 'https://www.google.com/',
     },
     {
@@ -196,7 +199,7 @@ var jsonData = [
         'secondBlockText': 'Million lives impacted',
         'thirdBlockFigure': '35,000',
         'thirdBlockText': 'Villages strengthened',
-        'fourthBlockFigure': 'Go to MP',
+        'fourthBlockFigure': 'Go to Maharashtra',
         'fourthBlockText': 'https://www.google.com/',
     },
     {
@@ -207,7 +210,7 @@ var jsonData = [
         'secondBlockText': 'Million lives impacted',
         'thirdBlockFigure': '15,000',
         'thirdBlockText': 'Villages strengthened',
-        'fourthBlockFigure': 'Go to MP',
+        'fourthBlockFigure': 'Go to Andra Pradesh',
         'fourthBlockText': 'https://www.google.com/',
     },
     {
@@ -218,7 +221,7 @@ var jsonData = [
         'secondBlockText': 'Million lives impacted',
         'thirdBlockFigure': '25,000',
         'thirdBlockText': 'Villages strengthened',
-        'fourthBlockFigure': 'Go to MP',
+        'fourthBlockFigure': 'Go to Odisha',
         'fourthBlockText': 'https://www.google.com/',
     },
     {
@@ -229,7 +232,7 @@ var jsonData = [
         'secondBlockText': 'Million lives impacted',
         'thirdBlockFigure': '10,000',
         'thirdBlockText': 'Villages strengthened',
-        'fourthBlockFigure': 'Go to MP',
+        'fourthBlockFigure': 'Go to Jharkhand',
         'fourthBlockText': 'https://www.google.com/',
     },
     {
@@ -240,7 +243,7 @@ var jsonData = [
         'secondBlockText': 'Million lives impacted',
         'thirdBlockFigure': '5,000',
         'thirdBlockText': 'Villages strengthened',
-        'fourthBlockFigure': 'Go to MP',
+        'fourthBlockFigure': 'Go to Chattisgarh',
         'fourthBlockText': 'https://www.google.com/',
     },
     {
@@ -273,7 +276,7 @@ window.onload = function() {
         else {
             return false;
         }
-        //console.log(svgHotSpotId);
+        console.log(svgHotSpotId);
         //console.log(e.target.id);
         //console.log(e.clientX);
         var hotspotClickData = "";
@@ -317,10 +320,11 @@ window.onload = function() {
             
         }
 
-        console.log(e);
+        // console.log(e);
 
         document.querySelectorAll(".mapData")[0].style.opacity = 1;
         document.querySelectorAll(".mapData")[0].style.top = e.offsetY - document.querySelectorAll(".mapData")[0].clientHeight - 15 + "px";
         document.querySelectorAll(".mapData")[0].style.left = e.offsetX - 24 + "px";
     });
 }
+

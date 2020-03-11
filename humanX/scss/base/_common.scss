@@ -78,6 +78,16 @@ h1,h2,h3,h4,h5,a,p,span,input,button{
     padding: 0;
 }
 
+// .loader {
+//     position: fixed;
+//     left: 0px;
+//     top: 0px;
+//     width: 100%;
+//     height: 100%;
+//     z-index: 9999;
+//     background-color: #fff;
+// }
+
 
 body {
     position: relative;
@@ -106,6 +116,7 @@ main{
 }
 
 
+
 .bodyOverflowHidden {
     overflow: hidden;
 }
@@ -125,6 +136,22 @@ main{
     }
 }
 
+button.mfp-close{
+    background: #004950 !important;
+    width: 50px !important;
+    height: 50px !important;
+    text-align: center !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    color: #fff !important;
+    opacity: 1 !important;
+    top: -60px !important;
+    font-size: 44px !important;
+    
+    &:hover{
+        background-color: red !important;
+    }
+}
 
 
 .title-wrap{
