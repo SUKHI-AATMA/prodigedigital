@@ -154,6 +154,45 @@ $(document).ready(function () {
 });
 
   
+// // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+// let vh = window.innerHeight * 0.01;
+// // Then we set the value in the --vh custom property to the root of the document
+// document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+
+
+// Number Counter
+var a = 0;
+$(window).scroll(function () {
+
+    var oTop = $('#counter').offset().top - window.innerHeight;
+    // console.log(oTop);
+
+    if (a == 0 && $(window).scrollTop() > oTop) {
+        $('.counter-value').each(function () {
+            var $this = $(this),
+                countTo = $this.attr('data-count');
+            $({
+                countNum: $this.text()
+            }).animate({
+                countNum: countTo
+            }, {
+                    duration: 7000,
+                    easing: 'swing',
+                    step: function () {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function () {
+                        $this.text(this.countNum);
+                        //alert('finished');
+                    }
+
+                });
+        });
+        a = 1;
+    }
+
+    });
 
 
 
@@ -276,7 +315,7 @@ window.onload = function() {
         else {
             return false;
         }
-        console.log(svgHotSpotId);
+        // console.log(svgHotSpotId);
         //console.log(e.target.id);
         //console.log(e.clientX);
         var hotspotClickData = "";

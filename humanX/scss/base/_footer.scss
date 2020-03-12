@@ -1,6 +1,6 @@
 footer{
     background-color: #004950;
-    padding: 70px 0;
+    padding: 70px 55px;
 
     height: 213px;
     width: 100%;
@@ -116,6 +116,12 @@ footer{
 }
 
 
+@media screen and (max-width : 1199px){
+    footer{
+        padding: 70px 0px;
+    }
+}
+
 @media screen and (max-width : 1024px){
     footer{
         .container{
@@ -123,8 +129,6 @@ footer{
             padding-left: 30px;
         }
     }
-
-
 
 }
 
@@ -168,7 +172,9 @@ footer{
 
 @media screen and (max-width : 768px){
 
-    
+    footer{
+        height: 340px;
+    }
     footer .container .inner-wrap .col.logo-wrap{
         padding-right: 20px;
     }
@@ -179,6 +185,13 @@ footer{
     }
     footer .container .inner-wrap .col.tech-wrap .row .coll p{
         margin-bottom: 12px;
+    }
+
+    footer .container .inner-wrap .col.tech-wrap .row .coll p{
+        padding-right: 0;
+    }
+    footer .container .inner-wrap .col.tech-wrap .row .coll{
+        width: 100%;
     }
 
 }

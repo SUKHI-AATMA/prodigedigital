@@ -2,7 +2,7 @@
 header{
     // display: none;
     padding: 0px 55px;
-    z-index: 10;
+    z-index: 9999;
     width: 100%;
     @include transition(.3s ease-in-out);
     background-color: #fff;
@@ -10,15 +10,17 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 9999;
     width: 100%;
+
+    box-shadow: 0 5px 10px 0 rgba(88,88,88,0.3);
 
 
     .hamburger {
         display: none;
         position: absolute;
-        width: 48px;
-        height: 48px;
+        width: 40px;
+        height: 40px;
         top: 50%;
         right: 10%;
         -webkit-transition-duration: 0.3s;
@@ -47,7 +49,7 @@ header{
                     transform: rotateZ(45deg) scaleX(1.25) translate(5px, 5px);
                  }
                 &:after {
-                    transform: rotateZ(-45deg) scaleX(1.25) translate(5px, -5px);
+                    transform: rotateZ(-45deg) scaleX(1.25) translate(3px, -3px);
                 }
             }
         }
@@ -56,22 +58,22 @@ header{
             -webkit-transition-duration: 0.3s;
             transition-duration: 0.3s;
             position: absolute;
-            height: 3px;
-            width: 24px;
-            top: 24px;
+            height: 2px;
+            width: 22px;
+            top: 18px;
             background-color: #212121;
             border-radius: 4px;
-            left: 12px;
+            left: 9px;
 
             &:before {
                 -webkit-transition-duration: 0.3s;
                 transition-duration: 0.3s;
                 position: absolute;
-                width: 24px;
-                height: 3px;
+                width: 22px;
+                height: 2px;
                 background-color: #212121;
                 content: "";
-                top: -8px;
+                top: -6px;
                 border-radius: 4px;
               }
 
@@ -79,11 +81,11 @@ header{
                 -webkit-transition-duration: 0.3s;
                 transition-duration: 0.3s;
                 position: absolute;
-                width: 24px;
-                height: 3px;
+                width: 22px;
+                height: 2px;
                 background-color: #212121;
                 content: "";
-                top: 8px;
+                top: 6px;
                 border-radius: 4px;
               }
           }
@@ -435,9 +437,50 @@ header{
 }
 
 @media screen and (max-width : 480px){
+    header{
+        padding: 0px 20px;
+    }
+    header .container .flex-wrap .logo{
+        width: 80px;
+        a{
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
     header .container .flex-wrap .menu-wrap.open{
         padding: 70px 30px 20px;
     }
+    // header .hamburger{
+    //     right: 20px;
+    //     margin-top: 7px;
+    //     width: 40px;
+    //     height: 40px;
+
+    //     .icon{
+    //         height: 2px;
+    //         width: 22px;
+    //         top: 24px;
+
+    //         &:before{
+    //             width: 22px;
+    //             height: 2px;
+    //             top: -6px;
+    //         }
+    //         &:after{
+    //             width: 22px;
+    //             height: 2px;
+    //             top: 6px;
+    //         }
+    //     }    
+    // }
+    // header .hamburger.open .icon:after{
+    //     transform: rotateZ(-42deg) scaleX(1.10) translate(4px,-9px);
+    // }   
+    // header .hamburger.open .icon:before {
+    //     transform: rotateZ(42deg) scaleX(1.10) translate(0px,3.5px);
+    // } 
     
 }
 

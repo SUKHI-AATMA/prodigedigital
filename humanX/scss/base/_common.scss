@@ -187,3 +187,34 @@ button.mfp-close{
     }
     
 }
+
+@media screen and (max-width : 768px){
+    main{
+        margin-bottom: 340px;
+    }
+
+    // main {
+    //     height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    //     height: calc(var(--vh, 1vh) * 100);
+    // }
+}
+
+@media screen and (max-width : 480px){
+    main{
+        padding-top: 64px;
+    }
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width : 360px){
+
+    .title-wrap{
+        h2{
+            font-size: 20px;
+            line-height: 30px;
+        }
+    } 
+}
