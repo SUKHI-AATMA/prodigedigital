@@ -29,7 +29,7 @@ $(document).ready(function () {
     var owlPartners = $('#partners .owl-carousel');
     owlPartners.owlCarousel({
         margin: 30,
-        loop: false,
+        loop:true,
         nav: true,
         dots: false,
         smartSpeed: 500,
@@ -38,10 +38,28 @@ $(document).ready(function () {
         autoplay: false,
         responsive: {
             0: {
-                items: 1
+                center: true,
+                items: 1,
+                margin: 0,
+                stagePadding: 80
             },
-            480: {
-                items: 2
+            361: {
+                center: true,
+                items: 1,
+                margin: 0,
+                stagePadding: 100
+            },
+            375: {
+                center: true,
+                items: 1,
+                margin: 0,
+                stagePadding: 70
+            },
+            481: {
+                center: true,
+                items: 1,
+                margin: 0,
+                stagePadding: 90
             },
             768: {
                 items: 3
@@ -55,7 +73,7 @@ $(document).ready(function () {
     var owlFunders = $('#funders .owl-carousel');
     owlFunders.owlCarousel({
         margin: 30,
-        loop: false,
+        loop: true,
         nav: true,
         dots: false,
         smartSpeed: 500,
@@ -64,13 +82,24 @@ $(document).ready(function () {
         autoplay: false,
         responsive: {
             0: {
-                items: 1
+                center: true,
+                items: 1,
+                margin: 0,
+                stagePadding: 80
             },
-            480: {
-                items: 2
+            361: {
+                center: true,
+                items: 1,
+                margin: 0,
+                stagePadding: 100
+            },
+            481: {
+                center: true,
+                items: 1,
+                margin: 0,
+                stagePadding: 90
             },
             768: {
-                margin: 10,
                 items: 3
             },
             1200: {
@@ -123,7 +152,7 @@ $(document).ready(function () {
         // console.log(hH);
 
         if ($(window).width() > 1025){
-            if (hT > 80){
+            if (hT > 100){
                 // alert('you have scrolled top!');
                 //console.log('you have scrolled down!');
                 $('header .logo').addClass('active');
@@ -148,6 +177,10 @@ $(document).ready(function () {
         //alert('hi');
     });
 
+
+    $('section.sec-testimonials .btn-wrap').click(function() {
+        $('section.sec-testimonials .other-item').slideToggle('slow');
+    });
 
 
 
@@ -308,7 +341,6 @@ window.onload = function() {
     });
 
     document.querySelectorAll(".map-wrapper")[0].getElementsByTagName("svg")[0].addEventListener("click", function(e) {
-        //console.log(e.target.id);
         if(svgHotSpotId != e.target.id) {
             svgHotSpotId = e.target.id;
         }
