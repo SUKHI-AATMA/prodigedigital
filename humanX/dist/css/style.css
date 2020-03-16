@@ -969,6 +969,24 @@ section.sec-mission .img-box img {
 section.sec-core {
   background-color: #F4F0EB;
   padding: 120px 0 200px; }
+  section.sec-core .container .circle-wrap {
+    position: relative; }
+    section.sec-core .container .circle-wrap .Oval_1, section.sec-core .container .circle-wrap .Oval_2 {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      left: 5%; }
+      section.sec-core .container .circle-wrap .Oval_1 svg, section.sec-core .container .circle-wrap .Oval_2 svg {
+        position: absolute;
+        left: 0; }
+    section.sec-core .container .circle-wrap .Oval_1 svg:first-child {
+      -webkit-animation: circular-animate-oval-reverse 70s linear infinite;
+      animation: circular-animate-oval-reverse 70s linear infinite; }
+    section.sec-core .container .circle-wrap .Oval_2 {
+      left: 7%; }
+      section.sec-core .container .circle-wrap .Oval_2 svg:first-child {
+        -webkit-animation: circular-animate-oval 70s linear infinite;
+        animation: circular-animate-oval 70s linear infinite; }
 
 @-webkit-keyframes circular-animate-oval {
   0% {
@@ -1001,31 +1019,6 @@ section.sec-core {
   100% {
     -webkit-transform: rotateZ(-270deg);
     transform: rotateZ(-270deg); } }
-  section.sec-core .container svg {
-    position: absolute;
-    top: 57%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
-  section.sec-core .container svg:first-child {
-    left: 52%; }
-  section.sec-core .container svg:first-child path, section.sec-core .container svg path {
-    -webkit-animation: circular-animate-oval 40s infinite;
-    animation: circular-animate-oval 40s infinite;
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center; }
-  section.sec-core .container svg path {
-    -webkit-animation-name: circular-animate-oval-reverse;
-    animation-name: circular-animate-oval-reverse; }
-  section.sec-core .container path#Oval_1 {
-    -webkit-animation: circular-animate-oval 90s infinite;
-    animation: circular-animate-oval 90s infinite; }
-  section.sec-core .container path#Oval_2 {
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center; }
   section.sec-core .container .inner-wrap {
     padding-top: 60px;
     padding-bottom: 0px;

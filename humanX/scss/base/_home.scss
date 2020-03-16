@@ -237,6 +237,32 @@ section.sec-core{
             // top: 80px;
             // left: 50%;
             // transform: translateX(-50%) translateY(80px);
+            position: relative;
+
+            .Oval_1, .Oval_2 {
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                left: 5%;
+
+                svg {
+                    position: absolute;
+                    left: 0;
+                }
+            }
+
+            .Oval_1 {
+                svg:first-child {
+                    animation: circular-animate-oval-reverse 70s linear infinite;
+                }
+            }
+
+            .Oval_2 {
+                left: 7%;
+                svg:first-child {
+                    animation: circular-animate-oval 70s linear infinite;
+                }
+            }
         }
 
         @keyframes circular-animate-oval {
@@ -249,36 +275,38 @@ section.sec-core{
             100% { transform: rotateZ(-270deg); }
         }
 
-        svg {
-            position: absolute;
-            top: 57%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            // animation: circular-animate-oval 90s infinite;
-        }
 
-        svg:first-child {
-            left: 52%;
-        }
 
-        svg:first-child path, svg path {
-            animation: circular-animate-oval 40s infinite;
-            transform-origin: center;
-        }
+        // svg {
+        //     position: absolute;
+        //     top: 57%;
+        //     left: 50%;
+        //     transform: translate(-50%, -50%);
+        //     // animation: circular-animate-oval 90s infinite;
+        // }
 
-        svg path {
-            animation-name: circular-animate-oval-reverse;
-        }
+        // svg:first-child {
+        //     left: 52%;
+        // }
+
+        // svg:first-child path, svg path {
+        //     animation: circular-animate-oval 40s linear infinite;
+        //     transform-origin: center;
+        // }
+
+        // svg path {
+        //     animation-name: circular-animate-oval-reverse;
+        // }
     
-        path#Oval_1 {
-            animation: circular-animate-oval 90s infinite;
-            // transform-origin: center;
-        }
+        // path#Oval_1 {
+        //     animation: circular-animate-oval 90s linear infinite;
+        //     // transform-origin: center;
+        // }
     
-        path#Oval_2 {
-            // animation: circular-animate-oval-reverse 90s infinite;
-            transform-origin: center;
-        }
+        // path#Oval_2 {
+        //     // animation: circular-animate-oval-reverse 90s infinite;
+        //     transform-origin: center;
+        // }
 
         // #Group-11{
         //     #Oval{
