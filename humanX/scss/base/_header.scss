@@ -287,7 +287,7 @@ header{
                             &.li-resources{
                                 ul.dropdown{
                                     li{
-                                        width: 160px;
+                                        width: 164px;
                                     }
                                 }
                             }
@@ -306,7 +306,9 @@ header{
                                 li{
                                     width: 130px;
                                     padding-bottom: 12px;
-    
+                                    position: relative;
+                                    @include transition(.3s ease-in-out); 
+
                                     &:last-child{
                                         padding-bottom: 0px;
                                     }
@@ -323,8 +325,20 @@ header{
                                     }
     
                                     &:hover{
+                                        @include transition(.3s ease-in-out); 
+                                        &:before{
+                                            content: '';
+                                            background-color: #11555c;
+                                            width: 6px;
+                                            height: 6px;
+                                            border-radius: 50%;
+                                            position: absolute;
+                                            top: 8px;
+                                            left: -16px;
+                                        }
+
                                         a{
-                                            font-weight: 600;
+                                            // font-weight: 600;
                                             color: #004950;
                                             transition: 50ms ease-out; 
                                             @include transition(.3s ease-in-out);                   
