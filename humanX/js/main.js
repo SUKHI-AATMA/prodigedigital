@@ -42,24 +42,28 @@ $(document).ready(function () {
                 center: true,
                 items: 1,
                 margin: 0,
+                nav: false,
                 stagePadding: 80
             },
             361: {
                 center: true,
                 items: 1,
                 margin: 0,
+                nav: false,
                 stagePadding: 100
             },
             375: {
                 center: true,
                 items: 1,
                 margin: 0,
+                nav: false,
                 stagePadding: 70
             },
             481: {
                 center: true,
                 items: 1,
                 margin: 0,
+                nav: false,
                 stagePadding: 90
             },
             768: {
@@ -86,18 +90,28 @@ $(document).ready(function () {
                 center: true,
                 items: 1,
                 margin: 0,
+                nav: false,
                 stagePadding: 80
             },
             361: {
                 center: true,
                 items: 1,
                 margin: 0,
+                nav: false,
                 stagePadding: 100
+            },
+            375: {
+                center: true,
+                items: 1,
+                margin: 0,
+                nav: false,
+                stagePadding: 80
             },
             481: {
                 center: true,
                 items: 1,
                 margin: 0,
+                nav: false,
                 stagePadding: 90
             },
             768: {
