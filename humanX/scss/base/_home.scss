@@ -252,13 +252,15 @@ section.sec-core{
             }
 
             .Oval_1 {
+                padding-top: 1%;
                 svg:first-child {
                     animation: circular-animate-oval-reverse 70s linear infinite;
                 }
             }
 
             .Oval_2 {
-                left: 7%;
+                padding-top: 3%;
+                left: 2%;
                 svg:first-child {
                     animation: circular-animate-oval 70s linear infinite;
                 }
@@ -341,6 +343,7 @@ section.sec-core{
                 max-width: 832px;
                 width: 100%;
                 margin: 0 auto;
+                justify-content: space-evenly;
 
                 &:nth-child(2){
                     flex-direction: row-reverse;
@@ -574,11 +577,53 @@ section.sec-map{
             }
         }
 
-        polygon:hover {
-            stroke: rgb(85, 109, 111);
-            stroke-width: 2px;
-            fill: #acb8b9;
-            opacity: 1;
+        #Group-19, #Group-20, #Group-21, #Group-22, #Group-25, #Group-28, #Group-24, #Group-36, #Group-35, #Group-40 {
+            &:hover {
+                cursor: pointer;
+                polygon {
+                    &:not([fill-rule]) {
+                        stroke: rgb(85, 109, 111);
+                        fill: transparent;
+                    }
+
+                    stroke: rgb(85, 109, 111);
+                    stroke-width: 0;
+                    fill: #acb8b9;
+                    opacity: 1;
+                }
+            }
+        }
+
+        #Group-35 {
+            &:hover {
+                path {
+                    &#Stroke-72 {
+                        fill: transparent;
+                    }
+                    
+                }
+            }
+        }
+
+        #Group-36 {
+            &:hover {
+                path {
+                    &#Combined-Shape {
+                        fill: transparent;
+                    }
+                }
+            }
+        }
+
+        #Group-40 {
+            &:hover {
+                path {
+                    &#Stroke-26 {
+                        fill: transparent;
+                    }
+                    
+                }
+            }
         }
     }
 }

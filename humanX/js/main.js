@@ -232,7 +232,8 @@ $(window).scroll(function () {
 
 var jsonData = [
     {
-        'id': 'Path-2',
+        //'id': 'Path-2',
+        'id': 'Group-19',
         'firstBlockFigure': '6.97',
         'firstBlockText': 'Million acres restored',
         'secondBlockFigure': '13',
@@ -243,7 +244,8 @@ var jsonData = [
         'fourthBlockText': 'https://www.google.com/',
     },
     {
-        'id': 'Path-4',
+        'id': 'Group-20',
+        //'id': 'Path-4',
         'firstBlockFigure': '8.97',
         'firstBlockText': 'Million acres restored',
         'secondBlockFigure': '26',
@@ -254,7 +256,8 @@ var jsonData = [
         'fourthBlockText': 'https://www.google.com/',
     },
     {
-        'id': 'Path-5',
+        //'id': 'Path-5',
+        'id': 'Group-22',
         'firstBlockFigure': '78.97',
         'firstBlockText': 'Million acres restored',
         'secondBlockFigure': '6',
@@ -265,7 +268,8 @@ var jsonData = [
         'fourthBlockText': 'https://www.google.com/',
     },
     {
-        'id': 'Path-6',
+        //'id': 'Path-6',
+        'id': 'Group-21',
         'firstBlockFigure': '68.97',
         'firstBlockText': 'Million acres restored',
         'secondBlockFigure': '16',
@@ -276,7 +280,8 @@ var jsonData = [
         'fourthBlockText': 'https://www.google.com/',
     },
     {
-        'id': 'Path-12',
+        //'id': 'Path-12',
+        'id': 'Group-35',
         'firstBlockFigure': '48.97',
         'firstBlockText': 'Million acres restored',
         'secondBlockFigure': '6',
@@ -287,7 +292,8 @@ var jsonData = [
         'fourthBlockText': 'https://www.google.com/',
     },
     {
-        'id': 'Path-15',
+        //'id': 'Path-15',
+        'id': 'Group-31',
         'firstBlockFigure': '58.97',
         'firstBlockText': 'Million acres restored',
         'secondBlockFigure': '16',
@@ -298,7 +304,8 @@ var jsonData = [
         'fourthBlockText': 'https://www.google.com/',
     },
     {
-        'id': 'Path-16',
+        //'id': 'Path-16',
+        'id': 'Group-32',
         'firstBlockFigure': '18.97',
         'firstBlockText': 'Million acres restored',
         'secondBlockFigure': '126',
@@ -309,7 +316,7 @@ var jsonData = [
         'fourthBlockText': 'https://www.google.com/',
     },
     {
-        'id': 'Path-17',
+        'id': 'Group-36',
         'firstBlockFigure': '38.97',
         'firstBlockText': 'Million acres restored',
         'secondBlockFigure': '16',
@@ -320,7 +327,8 @@ var jsonData = [
         'fourthBlockText': 'https://www.google.com/',
     },
     {
-        'id': 'Stroke-26',
+        //'id': 'Stroke-26',
+        'id': 'Group-40',
         'firstBlockFigure': '28.97',
         'firstBlockText': 'Million acres restored',
         'secondBlockFigure': '126',
@@ -342,18 +350,21 @@ window.onload = function() {
     });
 
     document.querySelectorAll(".map-wrapper")[0].getElementsByTagName("svg")[0].addEventListener("click", function(e) {
-        if(svgHotSpotId != e.target.id) {
-            svgHotSpotId = e.target.id;
+        console.log(e.target.id + "|||" + e.target.parentNode.id);
+        var targetId = e.target.parentNode.id;
+        if(svgHotSpotId != targetId) 
+        {
+            svgHotSpotId = targetId;
         }
         else {
             return false;
         }
         // console.log(svgHotSpotId);
-        //console.log(e.target.id);
+        //console.log(targetId);
         //console.log(e.clientX);
         var hotspotClickData = "";
         hotspotClickData = jsonData.filter(function(i) {
-            return i.id == e.target.id;
+            return i.id == targetId;
         });
 
         if(hotspotClickData == "") {
