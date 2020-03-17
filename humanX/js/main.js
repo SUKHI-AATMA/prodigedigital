@@ -1,6 +1,4 @@
 $(document).ready(function () {
-
-    
     var owlHomeBanner = $('#homeBanner .owl-carousel');
     owlHomeBanner.owlCarousel({
         loop: true,
