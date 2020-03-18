@@ -344,6 +344,11 @@ section.sec-core{
                 width: 100%;
                 margin: 0 auto;
                 justify-content: space-evenly;
+                padding-bottom: 70px;
+                
+                &:last-child{
+                    padding-bottom: 0;
+                }
 
                 &:nth-child(2){
                     flex-direction: row-reverse;
@@ -556,6 +561,7 @@ section.sec-map{
             }
             .btn-read{
                 display: inline-block;
+                @include transition(all .3s ease);
 
                 a{
                     color: #004950;
@@ -580,6 +586,7 @@ section.sec-map{
                         display: block;
                         width: 24px;
                         height: auto;
+                        @include transition(all .3s ease);
                     }
                 }
             }
@@ -591,7 +598,7 @@ section.sec-map{
                 polygon {
                     &:not([fill-rule]) {
                         stroke: rgb(85, 109, 111);
-                        fill: transparent;
+                        fill: #afc6c8;
                     }
 
                     stroke: rgb(85, 109, 111);
@@ -606,7 +613,7 @@ section.sec-map{
             &:hover {
                 path {
                     &#Stroke-72 {
-                        fill: transparent;
+                        fill: #afc6c8;
                     }
                     
                 }
@@ -617,7 +624,7 @@ section.sec-map{
             &:hover {
                 path {
                     &#Combined-Shape {
-                        fill: transparent;
+                        fill: #afc6c8;
                     }
                 }
             }
@@ -627,7 +634,7 @@ section.sec-map{
             &:hover {
                 path {
                     &#Stroke-26 {
-                        fill: transparent;
+                        fill: #afc6c8;
                     }
                     
                 }
@@ -864,7 +871,7 @@ section.sec-news{
                                         font-size: 16px;
                                         letter-spacing: 0.2px;
                                         line-height: 22px;
-                                        padding: 16px 0 10px;
+                                        padding: 8px 0 0;
                                     }
                                     span{
                                         padding-top: 16px;
@@ -1404,16 +1411,23 @@ section.sec-timeline{
 @media screen and (max-width : 991px){
 
     section.sec-core .container .inner-wrap{
-        max-width: 80%;
+        max-width: 100%;
         margin: 0 auto;
+
+        .row{
+            padding-bottom: 40px;
+        }
     }
     section.sec-core .container .inner-wrap .row .col{
-        width: 46%;
+        width: 300px;
 
         img{
             width: 100%;
             height: auto;
         }
+    }
+    section.sec-core .container .inner-wrap .row:nth-child(2) .col.desc{
+        padding-left: 0;
     }
 
     section.sec-map .container{
@@ -1449,16 +1463,22 @@ section.sec-timeline{
     }
     
     section.sec-mission .container .inner-wrap{
-        padding: 100px 0px;
+        padding: 48px 0px;
+    }
+
+    section.sec-core{
+        padding: 48px 0 80px;
     }
 
     section.sec-core .container .inner-wrap {
         max-width: 100%;
+        padding-top: 0;
     }
     section.sec-core .container .inner-wrap .row{
         max-width: 100%;
         flex-direction: column;
         margin-bottom: 60px;
+        padding-bottom: 0;
 
         &:last-child{
             margin-bottom: 0;
@@ -1501,9 +1521,15 @@ section.sec-timeline{
         }
     }
 
+    section.sec-map{
+        padding: 48px 0;
+    }
     section.sec-map,
     section.sec-map .container{
-        height: 1280px;
+        height: 1260px;
+    }
+    section.sec-map:before{
+        height: 57%;
     }
 
     section.sec-map .container .content-wrap{
@@ -1529,7 +1555,7 @@ section.sec-timeline{
         width: 120px;
     }
     section.sec-map .container .figure-info{
-        bottom:90px;
+        bottom:70px;
         .inner-wrap{
             max-width: calc(100% - 30px);
         }
@@ -1669,6 +1695,9 @@ section.sec-timeline{
     // }
     
 
+    section.sec-timeline{
+        padding: 48px 0;
+    }
     section.sec-timeline .container .inner-wrap ul{
         flex-direction: column;
         padding-left: 24px;
@@ -1747,7 +1776,7 @@ section.sec-timeline{
         height: 1050px;
     }
     section.sec-map:before{
-        height: 70%;
+        height: 58%;
     }
     section.sec-map .container .map-block{
         width: 420px;
@@ -1937,11 +1966,11 @@ section.sec-timeline{
     
     section.sec-map,
     section.sec-map .container{
-        height: 950px;
+        height: 920px;
     }
     section.sec-map .container .figure-info .inner-wrap .coll{
-        width: 100%;
-        padding-right: 0;
+        // width: 100%;
+        padding-right: 12px;
     }
     section.sec-news .container .inner-wrap .partners-wrap .owl-carousel .owl-stage .owl-item .item .box.rect-box,
     section.sec-news .container .inner-wrap .partners-wrap .owl-carousel .owl-stage .owl-item .item .box{
@@ -1950,7 +1979,9 @@ section.sec-timeline{
             height: 200px;
         }
     }
-
+    section.sec-map .container .figure-info{
+        bottom: 90px;
+    }
     section.sec-partners .container .inner-wrap .partners-wrap .owl-carousel .owl-stage .owl-item .item{
         width: 160px;
     }
