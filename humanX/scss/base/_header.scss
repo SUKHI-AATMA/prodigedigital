@@ -436,6 +436,7 @@ header{
         padding: 0;
         margin-bottom: 24px;
         width: 100%;
+        cursor: none;
     }
     header .container .flex-wrap .menu-wrap.open nav ul.menu>li:before{
         display: none;
@@ -456,6 +457,9 @@ header{
         top: auto;
         padding-top: 12px;
         padding-left: 16px;
+    }
+    header .container .flex-wrap .menu-wrap nav ul.menu>li ul.dropdown li{
+        cursor: none;
     }
     header .container .flex-wrap .menu-wrap nav ul.menu>li.li-resources ul.dropdown li{
         width: auto;
