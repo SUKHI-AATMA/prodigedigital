@@ -359,6 +359,9 @@ section.sec-core{
                         .box{
                             margin-right: 0;
                         }
+                        img{
+                            margin-left: 0;
+                        }
                     }
                 }
                 .col{
@@ -368,6 +371,7 @@ section.sec-core{
                         height: auto;
                         @include transition(.3s ease-in-out);
                         border-radius: 50%;
+                        margin-left: 12px;
                         
                         &:hover{
                             box-shadow: 0 4px 9px 0 rgba(88,88,88,0.3);
@@ -1424,6 +1428,7 @@ section.sec-timeline{
         img{
             width: 100%;
             height: auto;
+            margin: 0;
         }
     }
     section.sec-core .container .inner-wrap .row:nth-child(2) .col.desc{
