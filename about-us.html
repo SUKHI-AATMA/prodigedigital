@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <link rel="icon" href="img/icon-72x72.png" type="image/x-icon" />
+        <link rel="icon" href="img/icon-512x512.png" type="image/x-icon" />
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>About us | Prodige Digital Pvt. Ltd.</title>
 
@@ -42,26 +42,6 @@
 
             gtag('config', 'UA-155738782-1');
         </script>
-
-
-    <script>
-    // Check compatibility for the browser we're running this in
-    if ("serviceWorker" in navigator) {
-      if (navigator.serviceWorker.controller) {
-        console.log("[PWA Builder] active service worker found, no need to register");
-      } else {
-        // Register the service worker
-        navigator.serviceWorker
-          .register("pwabuilder-sw.js", {
-            scope: "./"
-          })
-          .then(function (reg) {
-            console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
-          });
-      }
-    }
-    </script>
-    <link rel='manifest' href='/manifest.json'>
     </head>
     <body>
         
