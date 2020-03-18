@@ -1,22 +1,23 @@
 {
-    "dir": "ltr",
-    "lang": "en",
-    "name": "Prodige Digital Pvt. Ltd.Brand corporate des…",
-    "scope": "/",
-    "display": "browser",
-    "start_url": "https://prodigedigital.com/",
-    "short_name": "Prodige Digital",
-    "theme_color": "transparent",
-    "description": "",
-    "orientation": "any",
-    "background_color": "transparent",
-    "related_applications": [],
-    "prefer_related_applications": false,
-    "icons": [
+    "dir" : "ltr",
+    "lang" : "English",
+    "name" : "Prodige Digital Pvt. Ltd.",
+    "scope" : "*",
+    "display" : "fullscreen",
+    "start_url" : "https://prodigedigital.com/",
+    "short_name" : "Prodige Digital",
+    "theme_color" : "transparent",
+    "description" : "Prodige is a progressive and insightful design agency, technically and creatively skilled to translate your brand into its best digital self. Our design and development approach creates impactful, engaging brands and immersive digital experiences that bring you a return on creativity.",
+    "orientation" : "portrait",
+    "background_color" : "transparent",
+    "related_applications" : [],
+    "prefer_related_applications" : false,
+    "icons" : [
         {
-            "src": "/images/img/fav-icon.png",
-            "type": "image/png",
+            "src": "https://prodigedigital.com/img/fav-icon.png",
             "sizes": "13x16"
-        }
-    ]
+        }],
+    "url" : "https://prodigedigital.com/",
+    "screenshots" : [],
+    "generated" : "true"
 }
