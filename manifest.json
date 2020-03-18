@@ -2,7 +2,7 @@
     "dir": "ltr",
     "lang": "English",
     "name": "Prodige Digital Pvt. Ltd.",
-    "scope": "*",
+    "scope": "/",
     "display": "fullscreen",
     "start_url": "https://prodigedigital.com/",
     "short_name": "Prodige Digital",
