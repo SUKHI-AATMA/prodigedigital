@@ -1,0 +1,22 @@
+{
+    "dir": "ltr",
+    "lang": "en",
+    "name": "Prodige Digital Pvt. Ltd.Brand corporate des…",
+    "scope": "/",
+    "display": "browser",
+    "start_url": "https://prodigedigital.com/",
+    "short_name": "Prodige Digital",
+    "theme_color": "transparent",
+    "description": "",
+    "orientation": "any",
+    "background_color": "transparent",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "/images/img/fav-icon.png",
+            "type": "image/png",
+            "sizes": "13x16"
+        }
+    ]
+}
