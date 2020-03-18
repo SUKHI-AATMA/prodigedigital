@@ -585,6 +585,7 @@ section.sec-map{
 
                     span{
                         padding-right: 10px;
+                        color: #004950 !important;
                     }
                     img{
                         display: block;
@@ -1587,7 +1588,7 @@ section.sec-timeline{
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        margin-bottom: 10px;
+        margin-bottom: 2px;
     }
     section.sec-map .container .mapData .flex-box div span:first-child{
         // width: 68px;
@@ -1611,6 +1612,7 @@ section.sec-timeline{
     }
     section.sec-map .container .mapData .btn-read a span{
         width: 100% !important;
+        color: #004950 !important;
     }
 
     section.sec-partners .container .inner-wrap{
