@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <!-- Icon css link -->
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    
     <!-- Rev slider css -->
     <link href="vendors/revolution/css/settings.css" rel="stylesheet">
     <link href="vendors/revolution/css/layers.css" rel="stylesheet">
     <link href="vendors/revolution/css/navigation.css" rel="stylesheet">
-    
     <!-- Extra plugin css -->
     <link href="vendors/owl-carousel/owl.carousel.min.css" rel="stylesheet">
-    
     <link href="css/style.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-
     <title>Document</title>
-<link rel='manifest' href='/manifest.json'></head>
+    <script>
+    // Check compatibility for the browser we're running this in
+    if ("serviceWorker" in navigator) {
+        if (navigator.serviceWorker.controller) {
+            console.log("[PWA Builder] active service worker found, no need to register");
+        } else {
+            // Register the service worker
+            navigator.serviceWorker
+                .register("pwabuilder-sw.js", {
+                    scope: "./"
+                })
+                .then(function(reg) {
+                    console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+                });
+        }
+    }
+    </script>
+    <link rel='manifest' href='/manifest.json'>
+</head>
+
 <body>
-    
     <section class="svg-wrap">
         <div class="svg-box">
             <p>undraw_art_museum_8or4</p>
@@ -75,6 +89,6 @@
             <img src="images-svg/undraw_web_devices_ad58.svg" alt="">
         </div>
     </section>
-
 </body>
+
 </html>

@@ -1,23 +1,60 @@
 {
-    "dir" : "ltr",
-    "lang" : "English",
-    "name" : "Prodige Digital Pvt. Ltd.",
-    "scope" : "*",
-    "display" : "fullscreen",
-    "start_url" : "https://prodigedigital.com/",
-    "short_name" : "Prodige Digital",
-    "theme_color" : "transparent",
-    "description" : "Prodige is a progressive and insightful design agency, technically and creatively skilled to translate your brand into its best digital self. Our design and development approach creates impactful, engaging brands and immersive digital experiences that bring you a return on creativity.",
-    "orientation" : "portrait",
-    "background_color" : "transparent",
-    "related_applications" : [],
-    "prefer_related_applications" : false,
-    "icons" : [
-        {
-            "src": "https://prodigedigital.com/img/fav-icon.png",
-            "sizes": "13x16"
-        }],
-    "url" : "https://prodigedigital.com/",
-    "screenshots" : [],
-    "generated" : "true"
+    "dir": "ltr",
+    "lang": "English",
+    "name": "Prodige Digital Pvt. Ltd.",
+    "scope": "*",
+    "display": "fullscreen",
+    "start_url": "https://prodigedigital.com/",
+    "short_name": "Prodige Digital",
+    "theme_color": "transparent",
+    "description": "Prodige is a progressive and insightful design agency, technically and creatively skilled to translate your brand into its best digital self. Our design and development approach creates impactful, engaging brands and immersive digital experiences that bring you a return on creativity.",
+    "orientation": "portrait",
+    "background_color": "transparent",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [
+    {
+        "src": "images/icons/icon-72x72.png",
+        "sizes": "72x72",
+        "type": "image/png"
+    },
+    {
+        "src": "images/icons/icon-96x96.png",
+        "sizes": "96x96",
+        "type": "image/png"
+    },
+    {
+        "src": "images/icons/icon-128x128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+    },
+    {
+        "src": "images/icons/icon-144x144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+    },
+    {
+        "src": "images/icons/icon-152x152.png",
+        "sizes": "152x152",
+        "type": "image/png"
+    },
+    {
+        "src": "images/icons/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    },
+    {
+        "src": "images/icons/icon-384x384.png",
+        "sizes": "384x384",
+        "type": "image/png"
+    },
+    {
+        "src": "images/icons/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }],
+    "splash_pages": null,
+    "url": "https://prodigedigital.com/",
+    "screenshots": [],
+    "generated": "true"
 }
