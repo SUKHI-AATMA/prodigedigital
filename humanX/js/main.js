@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+
     var owlHomeBanner = $('#homeBanner .owl-carousel');
     owlHomeBanner.owlCarousel({
         loop: true,
@@ -191,19 +193,16 @@ $(document).ready(function () {
     });
 
 
-    $('section.sec-testimonials .btn-wrap').click(function() {
+    $('section.sec-testimonials .btn-wrap').on("click tap", function () {
         $('section.sec-testimonials .other-item').slideToggle('slow');
+        $('.btn-wrap .btn-read img').toggleClass('active');
     });
-
 
 
 });
 
-  
-// // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-// let vh = window.innerHeight * 0.01;
-// // Then we set the value in the --vh custom property to the root of the document
-// document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+
 
 
 
@@ -422,4 +421,18 @@ window.onload = function() {
         document.querySelectorAll(".mapData")[0].style.left = e.offsetX - 24 + "px";
     });
 }
+
+
+
+// window.onload=function() {
+// 	// Get the Object by ID
+// 	var a = document.getElementById("svgObject");
+// 	// Get the SVG document inside the Object tag
+// 	var svgDoc = a.contentDocument;
+// 	// Get one of the SVG items by ID;
+// 	var svgItem = svgDoc.getElementById("svgItem");
+// 	// Set the colour to something else
+// 	svgItem.setAttribute("fill", "lime");
+// };
+
 

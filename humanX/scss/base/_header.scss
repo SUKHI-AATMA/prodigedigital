@@ -103,21 +103,21 @@ header{
             // position: relative;
 
             .logo{
-                padding: 12px 0;
+                padding: 15px 0;
                 &.active{
                     display: none;
                 }
                 a{
                     display: block;
-    
+                    line-height: 0;
                     img{
-                        width: 108px;
+                        width: 144px;
                         height: auto;
                     }
                 }
             }
             .menu-wrap{
-                padding: 12px 0;
+                padding: 15px 0;
                 &.active{
                     display: none;
                 }
@@ -483,7 +483,7 @@ header{
         padding: 0px 20px;
     }
     header .container .flex-wrap .logo{
-        width: 80px;
+        width: 88px;
         a{
             img{
                 width: 100%;
