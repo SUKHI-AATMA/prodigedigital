@@ -1052,6 +1052,10 @@ section.sec-testimonials{
                             transform: rotate(90deg);
                             @include transition(all .3s ease);
                             margin-bottom: 4px;
+
+                            &.active{
+                                transform: rotate(-90deg);
+                            }
                         }
                     }
                 }

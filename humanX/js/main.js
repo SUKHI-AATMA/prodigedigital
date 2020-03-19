@@ -193,8 +193,9 @@ $(document).ready(function () {
     });
 
 
-    $('section.sec-testimonials .btn-wrap').click(function() {
+    $('section.sec-testimonials .btn-wrap').on("click tap", function () {
         $('section.sec-testimonials .other-item').slideToggle('slow');
+        $('.btn-wrap .btn-read img').toggleClass('active');
     });
 
 
