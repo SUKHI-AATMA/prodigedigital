@@ -1184,7 +1184,10 @@ section.sec-timeline{
                             top: -5px;
                             right: 0;
                         }
-
+                        a{
+                            display: block;
+                            line-height: 0;
+                        }
                         p{
                             color: #000102;
                             font-family: 'Noto Serif JP', serif;
