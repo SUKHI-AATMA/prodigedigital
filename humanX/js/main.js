@@ -447,9 +447,11 @@ window.onload = function() {
 
         if((winWidth - clientx) > mapdataWidth){
             document.querySelectorAll(".mapData")[0].style.left = e.offsetX - 24 + "px";
+            document.querySelectorAll(".mapData")[0].style.zIndex = "2";
             document.querySelectorAll(".mapData")[0].classList.remove("mystyle");
         } else {
             document.querySelectorAll(".mapData")[0].style.left = (e.offsetX - mapdataWidth) +24  + "px";
+            document.querySelectorAll(".mapData")[0].style.zIndex = "2";
             document.querySelectorAll(".mapData")[0].classList.add("mystyle");
         }
 
