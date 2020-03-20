@@ -514,7 +514,7 @@ section.sec-map{
             border-radius: 10px;
             padding: 10px;
             transition: 0.5s all ease;
-            z-index: 9;
+            z-index: 2;
             max-width: 400px;
             width: 100%;
             padding: 30px 30px;
@@ -597,7 +597,7 @@ section.sec-map{
             }
         }
 
-        #Group-8, #Group-19, #Group-20, #Group-21, #Group-22, #Group-25, #Group-28, #Group-24, #Group-36, #Group-35, #Group-40 {
+        #Group-8, #Group-19, #Group-28, #Group-20, #Group-21, #Group-22, #Group-24, #Group-25, #Group-41, #Group-42, #Stroke-45, #Stroke-7{
             &:hover {
                 cursor: pointer;
                 polygon {
@@ -608,7 +608,7 @@ section.sec-map{
 
                     stroke: rgb(85, 109, 111);
                     stroke-width: 0;
-                    fill: #acb8b9;
+                    fill: #afc6c8;
                     opacity: 1;
                 }
             }
@@ -625,20 +625,39 @@ section.sec-map{
             }
         }
 
-        #Group-36 {
+        #Group-42 {
             &:hover {
                 path {
-                    &#Combined-Shape {
+                    &#Stroke-26 {
                         fill: #afc6c8;
                     }
+                    
                 }
             }
         }
 
-        #Group-40 {
+        #Group-25 {
+            &:hover {
+                path {
+                    fill: #afc6c8;
+                }
+            }
+        }
+
+        #Group-41 {
             &:hover {
                 path {
                     &#Stroke-26 {
+                        fill: #afc6c8;
+                    }
+                    
+                }
+            }
+        }
+        #Stroke-45 {
+            &:hover {
+                path {
+                    &#Stroke-44 {
                         fill: #afc6c8;
                     }
                     

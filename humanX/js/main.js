@@ -258,27 +258,15 @@ var jsonData = [
         'fourthBlockText': 'https://www.google.com/',
     },
     {
-        'id': 'Group-20',
-        //'id': 'Path-4',
-        'firstBlockFigure': '8.97',
-        'firstBlockText': 'Million acres restored',
-        'secondBlockFigure': '26',
-        'secondBlockText': 'Million lives impacted',
-        'thirdBlockFigure': '30,000',
-        'thirdBlockText': 'Villages strengthened',
-        'fourthBlockFigure': 'Go to Gujarat',
-        'fourthBlockText': 'https://www.google.com/',
-    },
-    {
         //'id': 'Path-5',
-        'id': 'Group-22',
+        'id': 'Group-20',
         'firstBlockFigure': '75,489',
         'firstBlockText': 'Million acres restored',
         'secondBlockFigure': '5,44,803',
         'secondBlockText': 'Million lives impacted',
         'thirdBlockFigure': '919',
         'thirdBlockText': 'Villages strengthened',
-        'fourthBlockFigure': 'Go to Madhya Pradesh',
+        'fourthBlockFigure': 'Go to Gujarat',
         'fourthBlockText': 'https://www.google.com/',
     },
     {
@@ -295,7 +283,7 @@ var jsonData = [
     },
     {
         //'id': 'Path-12',
-        'id': 'Group-35',
+        'id': 'Group-24',
         'firstBlockFigure': '1,061,981',
         'firstBlockText': 'Million acres restored',
         'secondBlockFigure': '26,44,802',
@@ -307,7 +295,7 @@ var jsonData = [
     },
     {
         //'id': 'Path-15',
-        'id': 'Group-36',
+        'id': 'Group-25',
         'firstBlockFigure': '29,50,313',
         'firstBlockText': 'Million acres restored',
         'secondBlockFigure': '48,10,237',
@@ -319,7 +307,7 @@ var jsonData = [
     },
     {
         //'id': 'Path-16',
-        'id': 'Group-20',
+        'id': 'Group-42',
         'firstBlockFigure': '92,236',
         'firstBlockText': 'Million acres restored',
         'secondBlockFigure': '1,40,173',
@@ -330,7 +318,7 @@ var jsonData = [
         'fourthBlockText': 'https://www.google.com/',
     },
     {
-        'id': 'Stroke-44',
+        'id': 'Stroke-45',
         'firstBlockFigure': '1,92,468',
         'firstBlockText': 'Million acres restored',
         'secondBlockFigure': '7,54,390',
@@ -342,19 +330,7 @@ var jsonData = [
     },
 
     {
-        'id': 'Stroke-44',
-        'firstBlockFigure': '1,92,468',
-        'firstBlockText': 'Million acres restored',
-        'secondBlockFigure': '7,54,390',
-        'secondBlockText': 'Million lives impacted',
-        'thirdBlockFigure': '1,268',
-        'thirdBlockText': 'Villages strengthened',
-        'fourthBlockFigure': 'Go to Karnataka',
-        'fourthBlockText': 'https://www.google.com/',
-    },
-
-    {
-        'id': 'Stroke-6',
+        'id': 'Stroke-7',
         'firstBlockFigure': '29,455',
         'firstBlockText': 'Million acres restored',
         'secondBlockFigure': '25,007',
@@ -379,7 +355,7 @@ var jsonData = [
     
     {
         //'id': 'Stroke-26',
-        'id': 'Group-40',
+        'id': 'Group-41',
         'firstBlockFigure': '1,14,382',
         'firstBlockText': 'Million acres restored',
         'secondBlockFigure': '1,49,461',
