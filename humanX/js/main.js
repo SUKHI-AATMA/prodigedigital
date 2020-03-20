@@ -371,7 +371,11 @@ window.onload = function() {
     var svgHotSpotId = "";
     document.addEventListener("click", function(e){
         var getParentNode = e.target.nodeName;
+        
         if(getParentNode.indexOf("polygon") == -1) {
+            if(e.target.id == "Stroke-26" || e.target.id == "Combined-Shape") {
+                return false;
+            }
             document.querySelectorAll(".mapData")[0].style.opacity = 0;
         }
     });
@@ -393,7 +397,7 @@ window.onload = function() {
         hotspotClickData = jsonData.filter(function(i) {
             return i.id == targetId;
         });
-
+// console.log(hotspotClickData);
         if(hotspotClickData == "") {
             document.querySelectorAll(".mapData")[0].style.opacity = 0;
             return false;
@@ -431,10 +435,23 @@ window.onload = function() {
         }
 
         // console.log(e);
-
         document.querySelectorAll(".mapData")[0].style.opacity = 1;
         document.querySelectorAll(".mapData")[0].style.top = e.offsetY - document.querySelectorAll(".mapData")[0].clientHeight - 15 + "px";
-        document.querySelectorAll(".mapData")[0].style.left = e.offsetX - 24 + "px";
+        // console.log(e);
+        // console.log(window.innerWidth + "||||" + e.clientX + "|||" + document.querySelectorAll(".mapData")[0].offsetWidth);
+
+        var winWidth = window.innerWidth;
+        var clientx = e.clientX;
+        var mapdataWidth = document.querySelectorAll(".mapData")[0].offsetWidth;
+
+        if((winWidth - clientx) > mapdataWidth){
+            document.querySelectorAll(".mapData")[0].style.left = e.offsetX - 24 + "px";
+            document.querySelectorAll(".mapData")[0].classList.remove("mystyle");
+        } else {
+            document.querySelectorAll(".mapData")[0].style.left = (e.offsetX - mapdataWidth) +24  + "px";
+            document.querySelectorAll(".mapData")[0].classList.add("mystyle");
+        }
+
     });
 }
 

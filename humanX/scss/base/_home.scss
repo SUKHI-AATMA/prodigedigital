@@ -521,6 +521,13 @@ section.sec-map{
             box-shadow: 0 5px 10px 0 rgba(206,206,206,0.7);
             opacity: 0;
 
+            &.mystyle{
+                &:before{
+                    left: auto;
+                    right: 20px;
+                }
+            }
+
             &:before {
                 content: '';
                 position: absolute;
@@ -639,7 +646,9 @@ section.sec-map{
         #Group-25 {
             &:hover {
                 path {
-                    fill: #afc6c8;
+                    &#Combined-Shape{
+                        fill: #afc6c8;
+                    }
                 }
             }
         }
