@@ -376,7 +376,8 @@ window.onload = function() {
             if(e.target.id == "Stroke-26" || e.target.id == "Combined-Shape") {
                 return false;
             }
-            document.querySelectorAll(".mapData")[0].style.opacity = 0;
+            document.querySelectorAll(".mapData")[0].style.opacity = 0;            
+            document.querySelectorAll(".mapData")[0].style.zIndex = "0";
         }
     });
 
