@@ -38,6 +38,9 @@ $(document).ready(function () {
         mouseDrag: false,
         autoplay: false,
         lazyLoad: true,
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:true,
         responsive: {
             0: {
                 center: true,
@@ -87,6 +90,9 @@ $(document).ready(function () {
         mouseDrag: false,
         autoplay: false,
         lazyLoad: true,
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:true,
         responsive: {
             0: {
                 center: true,
