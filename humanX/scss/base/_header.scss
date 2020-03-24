@@ -15,6 +15,25 @@ header{
 
     box-shadow: 0 5px 10px 0 rgba(88,88,88,0.3);
 
+    .hamburger-logo{
+        &.active{
+            display: block;
+        }
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 50px;
+        margin-top: 20px;
+        a{
+            display: block;
+            line-height:0;
+            img{
+                width: 144px;
+                height: auto;
+            }
+        }
+    }
+
 
     .hamburger {
         display: none;
@@ -26,10 +45,11 @@ header{
         -webkit-transition-duration: 0.3s;
         transition-duration: 0.3s;
         background-color:#fff;
-        box-shadow: 0 5px 10px 0 rgba(206,206,206,0.3);                  
+        // box-shadow: 0 5px 10px 0 rgba(206,206,206,0.3);
+        box-shadow: 0 4px 9px 0 rgba(169, 169, 169, 0.5);                  
         border-radius: 50%;
         margin-top: 40px;
-
+        // @include transition(.3s ease-in-out);
         &:hover {
             background: #f3f3f3;
             cursor: pointer;
@@ -40,6 +60,7 @@ header{
         }
 
         &.open{
+            // right: 11%;
             .icon {
                 -webkit-transition-duration: 0.3s;
                 transition-duration: 0.3s;
@@ -126,10 +147,10 @@ header{
                     position: absolute;
                     top: 0;
                     left: 0;
-                    background: #9D9D9D;
+                    background: #004950;
                     width: 100%;
                     padding: 150px 50px;
-                    height: 100vh;
+                    height: 80vh;
                     color: #fff;
 
                     nav{
@@ -145,17 +166,12 @@ header{
                             }
                             &:before {
                                 content: '';
-                                width: 1px;
-                                height: 380px;
+                                width: 48px;
+                                height: 1px;
                                 background: #fff;
                                 position: absolute;
-                                top: 0;
-                                right: 0;
-                            }
-                            &:last-child{
-                                &:before{
-                                    display: none;
-                                }
+                                bottom: 0;
+                                left: 0;
                             }
 
                             &.li-resources{
@@ -166,36 +182,39 @@ header{
 
                             &:hover{
                                 >a{
-                                    // color: #000000;
-                                    font-weight: normal;
+                                    color: #fff;
+                                    font-weight: 600;
                                 }
                             }
                             >a {
                                 color: #fff;
                                 font-family: "Noto Serif JP";
-                                font-size: 24px;
+                                font-size: 16px;
                                 font-weight: 600;
-                                letter-spacing: 0.34px;
-                                line-height: 35px;
-
-                                // &.active, &:hover{
-                                //     color: #000000;
-                                // }
+                                letter-spacing: 0.23px;
+                                line-height: 24px;
+                                @include transition(.3s ease-in-out);
+                                &.active, &:hover{
+                                    color: #fff;
+                                }
                             }
                             ul.dropdown{
                                 display: block !important;
                                 background: no-repeat !important;
                                 box-shadow: none !important;
                                 li {
-                                    // &:hover{
-                                    //     a{
-                                    //         color: #000000;
-                                    //     }
-                                    // }
+                                    &:hover{
+                                        &:before{
+                                            background-color: #fff;
+                                        }
+                                        a{
+                                            color: #fff;
+                                        }
+                                    }
                                     a{
                                         color: #fff;
-                                        font-size: 14px;
-                                        line-height: 19px;
+                                        // font-size: 16px;
+                                        // line-height: 22px;
     
                                         // &:hover{
                                         //     color: #000000;
@@ -404,9 +423,12 @@ header{
     header .container{
         padding: 0 0;
     }
+    header .hamburger-logo{
+        left: 30px;
+    }
     header .hamburger{
         display: block;
-        top: 0;
+        top: 12px;
         right: 30px;
         margin-top: 12px;
         box-shadow:none;
@@ -425,26 +447,32 @@ header{
     }
 
     header .container .flex-wrap .menu-wrap.open{
-        padding: 70px 50px 20px;
-        overflow: scroll;
+        height: 100vh;
+        padding: 70px 30px 20px 30px;
+        margin-bottom: 24px;
+        
+        nav{
+            margin-top: 48px;
+            display: block;
+            position: relative;
+            overflow-y: scroll;
+            height: calc(100% - 50px);
+        }
     }
 
     header .container .flex-wrap .menu-wrap .menu.flex-wrap{
-        flex-direction: column;
+        // flex-direction: column;
+        align-items: flex-start;
     }
     header .container .flex-wrap .menu-wrap.open nav ul.menu>li{
         padding: 0;
-        margin-bottom: 24px;
+        margin-bottom: 30px;
         width: 100%;
         cursor: none;
     }
     header .container .flex-wrap .menu-wrap.open nav ul.menu>li:before{
-        display: none;
-    }
-    header .container .flex-wrap .menu-wrap.open nav ul.menu>li>a{
-        font-size: 16px;
-        line-height: 21px;
-        color: #004950;
+        bottom: auto;
+        top: 32px;
     }
     header .container .flex-wrap .menu-wrap.open nav ul.menu>li.li-resources ul.dropdown{
         left: auto;
@@ -455,7 +483,7 @@ header{
         position: relative;
         left: auto;
         top: auto;
-        padding-top: 12px;
+        padding-top: 20px;
         padding-left: 16px;
     }
     header .container .flex-wrap .menu-wrap nav ul.menu>li ul.dropdown li{
@@ -466,16 +494,28 @@ header{
     }
 
 
-
-
 }
 
 @media screen and (max-width : 991px){
+
+    header .container .flex-wrap .menu-wrap.open{
+        padding-right: 0;
+    }
+    header .container .flex-wrap .menu-wrap .menu.flex-wrap{
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li{
+        width: 33%;
+    }
     
 }
 
-@media screen and (max-width : 768px){
-    
+@media screen and (max-width : 600px){
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li{
+        width: 50%;
+    }
 }
 
 @media screen and (max-width : 480px){
@@ -492,7 +532,27 @@ header{
         }
     }
     header .container .flex-wrap .menu-wrap.open{
-        padding: 70px 30px 20px;
+        padding: 70px 0px 20px 20px;
+    }
+    header .container .flex-wrap .menu-wrap.open nav{
+        margin-top: 20px;
+    }
+    header .container .flex-wrap .menu-wrap.open nav{
+        height: calc(100% - 20px);
+    }
+    header .hamburger-logo{
+        width: 88px;
+        left: 20px;
+        margin-top:15px;
+
+        a{
+            img{
+                width: 100%;
+            }
+        }
+    }
+    header .hamburger{
+        top:2px
     }
     // header .hamburger{
     //     right: 20px;
@@ -528,8 +588,4 @@ header{
 
 @media screen and (max-width : 360px){
     
-}
-
-@media screen and (max-width : 350px){
-
 }

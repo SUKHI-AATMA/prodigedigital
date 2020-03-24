@@ -159,14 +159,14 @@ $(document).ready(function () {
     });
     
 
-    $('.play-btn').magnificPopup({
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: false,
-        fixedContentPos: false,
-        disableOn: 700
-    });
+    // $('.play-btn').magnificPopup({
+    //     type: 'iframe',
+    //     mainClass: 'mfp-fade',
+    //     removalDelay: 160,
+    //     preloader: false,
+    //     fixedContentPos: false,
+    //     disableOn: 700
+    // });
 
     $(window).scroll(function() {
         var hT = $('header').offset().top,
@@ -197,6 +197,7 @@ $(document).ready(function () {
     $('.hamburger').on("click tap", function () {
         $(this).toggleClass('open');
         $('header .menu-wrap').toggleClass('open');
+        $('header .hamburger-logo').toggleClass('active');
         $('body').toggleClass('bodyOverflowHidden');
         //alert('hi');
     });
