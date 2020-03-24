@@ -12,6 +12,16 @@ footer{
         .inner-wrap{
             .col{
 
+                &.logo-wrap{
+                    a{
+                        display: block;
+                        line-height:0;
+                        img{
+                            width: 170px;
+                        }
+                    }
+                }
+
                 &.link-wrap{
                     max-width: 446px;
                     width: 100%;

@@ -818,7 +818,13 @@ section.sec-video{
                 &:hover{
                     transform: translateY(-7px);
                 }
+                // #ytplayer{
+                //     width: 100%;
+                //     height: 578px;
+                // }
                 iframe {
+                    width: 100%;
+                    height: 578px;
                     border-radius: 8px;
                     box-shadow: 0 5px 10px 0 rgba(88,88,88,0.5);
                     @include transition(.3s ease-in-out);
@@ -859,7 +865,7 @@ section.sec-news{
 
                             .item{
                                 // width: 200px;
-                                margin-right: 58px;
+                                margin-right: 30px;
 
                                 &:hover{
                                     .box p,.box span{
@@ -876,28 +882,28 @@ section.sec-news{
                                     display: flex;
                                     flex-direction: column;
                                     align-items: flex-start;
-                                    width: 270px;
+                                    width: 320px;
 
-                                    &.rect-box{
-                                        width: 370px;
-                                        .rect{
-                                            height: 258px;
-                                            width: 100%;
-                                            border: 1px solid #979797;
-                                            opacity: 0.6;
-                                            background-color: #20352B;
-                                            border-radius: 8px;
-                                        }
-                                    }
+                                    // &.rect-box{
+                                    //     width: 370px;
+                                    //     .rect{
+                                    //         height: 258px;
+                                    //         width: 100%;
+                                    //         border: 1px solid #979797;
+                                    //         opacity: 0.6;
+                                    //         background-color: #20352B;
+                                    //         border-radius: 8px;
+                                    //     }
+                                    // }
                                     
-                                    .rect{
-                                        height: 258px;
-                                        width: 100%;
-                                        border: 1px solid #979797;
-                                        opacity: 0.6;
-                                        background-color: #20352B;
-                                        border-radius: 8px;
-                                    }
+                                    // .rect{
+                                    //     height: 258px;
+                                    //     width: 100%;
+                                    //     border: 1px solid #979797;
+                                    //     opacity: 0.6;
+                                    //     background-color: #20352B;
+                                    //     border-radius: 8px;
+                                    // }
                                     
                                     p{
                                         color: #000000;
@@ -1393,7 +1399,7 @@ section.sec-timeline{
     }
     section.sec-video .container .inner-wrap{
         max-width: 80%;
-        margin: 0;
+        margin: 0 auto;
         
         iframe{
             height: 500px;
@@ -1686,7 +1692,7 @@ section.sec-timeline{
     section.sec-video .container .inner-wrap{
         max-width: 100%;
     }
-    section.sec-video .container .inner-wrap iframe {
+    section.sec-video .container .inner-wrap .wrapper iframe {
         height: 400px;
     }
 
@@ -1986,7 +1992,7 @@ section.sec-timeline{
         margin-right: -50px;
     }
 
-    section.sec-video .container .inner-wrap iframe {
+    section.sec-video .container .inner-wrap .wrapper iframe {
         height: 250px;
     }
 
@@ -2054,7 +2060,7 @@ section.sec-timeline{
         font-size: 13px;
         line-height: 16px;
     }
-    section.sec-video .container .inner-wrap iframe {
+    section.sec-video .container .inner-wrap .wrapper iframe {
         height: 200px;
     }
 
