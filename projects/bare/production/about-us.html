@@ -33,13 +33,14 @@
     }
 
     .banner {
-        background: url('images/about-us-banner.jpg') no-repeat center center;
+        background: url('images/australia-traveling-travelling-travel-68704.jpg') no-repeat center center;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         color: #fff;
         position: relative;
+        background-size: cover;
     }
 
     .banner h1 {
@@ -63,22 +64,12 @@
         position: absolute;
         bottom: 30px;
         left: auto;
-        width: 0; 
-        height: 0;
-        border-left: 20px solid transparent;
-        border-right: 20px solid transparent;
-        border-top: 20px solid #fff;
-    }
-
-    .scrollDown-inner {
-        position: relative;
-        width: 0; 
-        height: 0;
-        border-left: 17px solid transparent;
-        border-right: 17px solid transparent;
-        border-top: 17px solid #4487a4;
-        left: -17px;
-        bottom: 3px;
+        width: 30px; 
+        height: 30px;
+        border-left: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        transform: rotate(-45deg);
+        cursor: pointer;
     }
 
     h1, h2, h3 {
@@ -178,7 +169,7 @@
     }
 
     .about-bare article section img {
-        width: 80%;
+        width: 95%;
     }
 
     .about-bare article section h3 {
@@ -305,46 +296,51 @@
     
         for(var i=0; i<mainSections.length; i++) {
             //console.log(mainSections[i].offsetTop);
+            $("main > section").eq(i).attr("data-posTop",mainSections[i].offsetTop);
+            //console.log(window.scrollY + "|||||" + (mainSections[i].offsetTop - 200));
             if(window.scrollY >= mainSections[i].offsetTop - 200) {
                 // for(var j=0; j<mainSections[i].children.length; j++) {
                 //     mainSections[i].children[j].style.opacity = 1;
                 // }
-                $("main > section").eq(sectionOrder).find("*").css("opacity","1");
+                //console.log(i);
                 sectionOrder = i;
+                $("main > section").eq(sectionOrder).find("*").css("opacity","1");
+            }
+        }
+
+        document.querySelectorAll(".scrollDown")[0].addEventListener("click", function() {
+            $("html,body").animate({
+                scrollTop: $("main > section").eq(1).offset().top
+            }, 500)
+        });
+
+        window.onscroll = function() {
+            //console.log(window.scrollY);
+            //console.log(sectionOrder);
+            if(sectionOrder < document.getElementsByTagName("main")[0].children.length - 1) {
+                if(window.scrollY >= mainSections[sectionOrder].nextElementSibling.offsetTop - 200) {
+                    $("main > section").eq(sectionOrder).next("section").find("*").css("opacity","1");
+                    // for(var j=0; j<mainSections[sectionOrder].nextElementSibling.children.length; j++) {
+                    //     mainSections[sectionOrder].nextElementSibling.children[j].style.opacity = 1;
+                    // }
+                    //mainSections[sectionOrder].nextElementSibling.style.opacity = 1;
+                    sectionOrder ++;
+                }
             }
         }
     }
 
-    window.onscroll = function() {
-        //console.log(window.scrollY);
-        console.log(sectionOrder);
-        if(sectionOrder < document.getElementsByTagName("main")[0].children.length - 1) {
-            if(window.scrollY >= mainSections[sectionOrder].nextElementSibling.offsetTop - 200) {
-                $("main > section").eq(sectionOrder).next("section").find("*").css("opacity","1");
-                // for(var j=0; j<mainSections[sectionOrder].nextElementSibling.children.length; j++) {
-                //     mainSections[sectionOrder].nextElementSibling.children[j].style.opacity = 1;
-                // }
-                //mainSections[sectionOrder].nextElementSibling.style.opacity = 1;
-                sectionOrder ++;
-            }
-        }
-    }
+    
     
     </script>
 </head>
 <body>
     <main>
         <section class="banner fullWidthHeight">
-            <h1>Celebrate the Strong,<span>Admire the Inspirational</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <span class="scrollDown">
-                <span class="scrollDown-inner"></span>
-            </span>
+            <span class="scrollDown"></span>
         </section>
         <section class="timeline">
-            <h2>Let’s go back in time and see how it all started</h2>
+            <h2>CELEBRATE THE STRONG, ADMIRE THE INSPIRATIONAL</h2>
             <article>
                 <section>
                     <img src="images/timeline-1.jpg" alt="A 60,000-year-old culture survived in some of the harshest lands on the planet by simply understanding their bodies and the environment around them.">
@@ -383,7 +379,7 @@
                         <p>Our bottles are made of recycled glass that is frosted to safeguard the purest botanical ingredients.<br>Think you love our design? So, do they!</p>
                     </section>
                     <section>
-                        <img src="images/our-design.jpg" alt="Our Design">
+                        <img src="images/our-design.png" alt="Our Design">
                     </section>
                 </article>
         </section>
