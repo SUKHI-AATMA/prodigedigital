@@ -12,17 +12,29 @@ $(document).ready(function () {
         // autoPlayTimeout: 5000,
         slideTransition: 'linear',
         mouseDrag: true,
-        // autoplay: false,
-        autoplay: 6000,
+        autoplay: false,
+        lazyLoad:true,
+        //autoplay: 6000,
         items: 1,
         video: true,
-        onInitialized:theThing, 
+        onTranslate: function(event) {
+
+            var currentSlide, player, command;
+            currentSlide = $('.owl-item.active');
+            player = currentSlide.find(".ytplayer-wrap iframe").get(0);
+            command = {
+                "event": "command",
+                "func": "pauseVideo"
+            };
+    
+            if (player != undefined) {
+                player.contentWindow.postMessage(JSON.stringify(command), "*");
+    
+            }
+    
+        } 
     });
 
-     function theThing(event){
-    //    alert("video video")
-       $(".active .owl-video-play-icon").trigger("click")
-     };
 
 
     
@@ -210,6 +222,27 @@ $(document).ready(function () {
     });
 
 
+    if ($(window).width() < 769){
+
+        $('header .li-link .link').click(function() {
+            if(!$(this).parent().find('.dropdown').hasClass('active')) {
+                $('.dropdown').slideUp();
+                $('.link').removeClass('active');
+                console.log('hi ====');
+                
+            }
+            console.log('hello ====');
+            // $(this).addClass('active');
+            $(this).toggleClass('active');
+            $('.dropdown').removeClass('active');
+            $(this).parent().find('.dropdown').slideToggle();
+            $(this).parent().find('.dropdown').toggleClass('active');
+            console.log('exit ====');
+        });
+    }
+    
+
+
 });
 
 
@@ -257,7 +290,7 @@ function onYouTubePlayerAPIReady() {
 
 function onPlayerReady(event) {
     event.target.mute();
-    // event.target.playVideo();
+    event.target.playVideo();
 }
 function onStateChange(state) {
   if (state.data === YT.PlayerState.ENDED) {
