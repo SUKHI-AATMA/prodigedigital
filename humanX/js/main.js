@@ -172,15 +172,6 @@ $(document).ready(function () {
     });
     
 
-    // $('.play-btn').magnificPopup({
-    //     type: 'iframe',
-    //     mainClass: 'mfp-fade',
-    //     removalDelay: 160,
-    //     preloader: false,
-    //     fixedContentPos: false,
-    //     disableOn: 700
-    // });
-
     $(window).scroll(function() {
         var hT = $('header').offset().top,
         hH = $('header').outerHeight(),
@@ -204,7 +195,6 @@ $(document).ready(function () {
         }
 
     });
-
 
 
     $('.hamburger').on("click tap", function () {
@@ -246,62 +236,6 @@ $(document).ready(function () {
 
 });
 
-
-
-// youtube video
-// Load the IFrame Player API code asynchronously.
-var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/player_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-var videoId = 'QbDLH5ChRho';
-var startSeconds = 50;
-var endSeconds = 64;
-
-// Replace the 'ytplayer' element with an <iframe> and
-// YouTube player after the API code downloads.
-var player;
-
-var playerConfig = {
-//   height: '360',
-//   width: '640',
-  videoId: videoId,
-  playerVars: {
-    autoplay: 0, // Auto-play the video on load
-    controls: 1, // Show pause/play buttons in player
-    showinfo: 0, // Hide the video title
-    modestbranding: 1, // Hide the Youtube Logo
-    fs: 1, // Hide the full screen button
-    cc_load_policy: 0, // Hide closed captions
-    iv_load_policy: 3, // Hide the Video Annotations
-    start: startSeconds,
-    end: endSeconds,
-    autohide: 0, // Hide video controls when playing
-  },
-  events: {
-    'onStateChange': onStateChange,
-    'onReady': onPlayerReady
-  }
-};
-
-function onYouTubePlayerAPIReady() {
-  player = new YT.Player('ytplayer', playerConfig);
-}
-
-function onPlayerReady(event) {
-    event.target.mute();
-    event.target.playVideo();
-}
-function onStateChange(state) {
-  if (state.data === YT.PlayerState.ENDED) {
-    player.loadVideoById({
-      videoId: videoId,
-      startSeconds: startSeconds,
-      endSeconds: endSeconds
-    });
-  }
-}
 
 
 
@@ -554,18 +488,5 @@ window.onload = function() {
 
     });
 }
-
-
-
-// window.onload=function() {
-// 	// Get the Object by ID
-// 	var a = document.getElementById("svgObject");
-// 	// Get the SVG document inside the Object tag
-// 	var svgDoc = a.contentDocument;
-// 	// Get one of the SVG items by ID;
-// 	var svgItem = svgDoc.getElementById("svgItem");
-// 	// Set the colour to something else
-// 	svgItem.setAttribute("fill", "lime");
-// };
 
 
