@@ -158,8 +158,8 @@ $(document).ready(function () {
         responsive: {
             0: {
                 items: 1,
-                // singleItem:true,
-                center:true,
+                singleItem:true,
+                // center:true,
                 nav: false
             },
             600: {
