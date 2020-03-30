@@ -12,17 +12,29 @@ $(document).ready(function () {
         // autoPlayTimeout: 5000,
         slideTransition: 'linear',
         mouseDrag: true,
-        // autoplay: true,
-        autoplay: 6000,
+        autoplay: false,
+        lazyLoad:true,
+        //autoplay: 6000,
         items: 1,
         video: true,
-        onInitialized:theThing, 
+        onTranslate: function(event) {
+
+            var currentSlide, player, command;
+            currentSlide = $('.owl-item.active');
+            player = currentSlide.find(".ytplayer-wrap iframe").get(0);
+            command = {
+                "event": "command",
+                "func": "pauseVideo"
+            };
+    
+            if (player != undefined) {
+                player.contentWindow.postMessage(JSON.stringify(command), "*");
+    
+            }
+    
+        } 
     });
 
-     function theThing(event){
-    //    alert("video video")
-       $(".active .owl-video-play-icon").trigger("click")
-     };
 
 
     
@@ -147,6 +159,7 @@ $(document).ready(function () {
             0: {
                 items: 1,
                 singleItem:true,
+                // center:true,
                 nav: false
             },
             600: {
@@ -158,15 +171,6 @@ $(document).ready(function () {
         },
     });
     
-
-    // $('.play-btn').magnificPopup({
-    //     type: 'iframe',
-    //     mainClass: 'mfp-fade',
-    //     removalDelay: 160,
-    //     preloader: false,
-    //     fixedContentPos: false,
-    //     disableOn: 700
-    // });
 
     $(window).scroll(function() {
         var hT = $('header').offset().top,
@@ -193,7 +197,6 @@ $(document).ready(function () {
     });
 
 
-
     $('.hamburger').on("click tap", function () {
         $(this).toggleClass('open');
         $('header .menu-wrap').toggleClass('open');
@@ -210,64 +213,29 @@ $(document).ready(function () {
     });
 
 
+    if ($(window).width() < 769){
+
+        $('header .li-link .link').click(function() {
+            if(!$(this).parent().find('.dropdown').hasClass('active')) {
+                $('.dropdown').slideUp();
+                $('.link').removeClass('active');
+                console.log('hi ====');
+                
+            }
+            console.log('hello ====');
+            // $(this).addClass('active');
+            $(this).toggleClass('active');
+            $('.dropdown').removeClass('active');
+            $(this).parent().find('.dropdown').slideToggle();
+            $(this).parent().find('.dropdown').toggleClass('active');
+            console.log('exit ====');
+        });
+    }
+    
+
+
 });
 
-
-
-// youtube video
-// Load the IFrame Player API code asynchronously.
-var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/player_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-var videoId = 'QbDLH5ChRho';
-var startSeconds = 50;
-var endSeconds = 64;
-
-// Replace the 'ytplayer' element with an <iframe> and
-// YouTube player after the API code downloads.
-var player;
-
-var playerConfig = {
-//   height: '360',
-//   width: '640',
-  videoId: videoId,
-  playerVars: {
-    autoplay: 0, // Auto-play the video on load
-    controls: 1, // Show pause/play buttons in player
-    showinfo: 0, // Hide the video title
-    modestbranding: 1, // Hide the Youtube Logo
-    fs: 1, // Hide the full screen button
-    cc_load_policy: 0, // Hide closed captions
-    iv_load_policy: 3, // Hide the Video Annotations
-    start: startSeconds,
-    end: endSeconds,
-    autohide: 0, // Hide video controls when playing
-  },
-  events: {
-    'onStateChange': onStateChange,
-    'onReady': onPlayerReady
-  }
-};
-
-function onYouTubePlayerAPIReady() {
-  player = new YT.Player('ytplayer', playerConfig);
-}
-
-function onPlayerReady(event) {
-    event.target.mute();
-    // event.target.playVideo();
-}
-function onStateChange(state) {
-  if (state.data === YT.PlayerState.ENDED) {
-    player.loadVideoById({
-      videoId: videoId,
-      startSeconds: startSeconds,
-      endSeconds: endSeconds
-    });
-  }
-}
 
 
 
@@ -520,18 +488,5 @@ window.onload = function() {
 
     });
 }
-
-
-
-// window.onload=function() {
-// 	// Get the Object by ID
-// 	var a = document.getElementById("svgObject");
-// 	// Get the SVG document inside the Object tag
-// 	var svgDoc = a.contentDocument;
-// 	// Get one of the SVG items by ID;
-// 	var svgItem = svgDoc.getElementById("svgItem");
-// 	// Set the colour to something else
-// 	svgItem.setAttribute("fill", "lime");
-// };
 
 

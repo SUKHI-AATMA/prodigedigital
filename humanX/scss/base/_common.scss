@@ -183,15 +183,15 @@ button.mfp-close{
     } 
 
     main{
-        margin-bottom: 300px;
+        margin-bottom: 0;
     }
     
 }
 
 @media screen and (max-width : 991px){
-    main{
-        margin-bottom: 460px;
-    }
+    // main{
+    //     margin-bottom: 460px;
+    // }
 }
 @media screen and (max-width : 768px){
     // main{
@@ -204,10 +204,17 @@ button.mfp-close{
     // }
 }
 
+
+@media screen and (max-width : 650px){
+    main{
+        padding-top: 65px;
+    }
+}
+
 @media screen and (max-width : 480px){
     main{
         padding-top: 64px;
-        margin-bottom: 450px;
+        // margin-bottom: 450px;
     }
     .container {
         padding-left: 20px;

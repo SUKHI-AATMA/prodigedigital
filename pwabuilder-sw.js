@@ -1,57 +1,125 @@
 // This is the "Offline page" service worker
 
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.0.0/workbox-sw.js');
+
 const CACHE = "pwabuilder-page";
 
+
+var cacheName = 'prodigedigital-v1';
+var appShellFiles = [
+  '/index.html',
+  '/about-us.html',
+  '/blog.html',
+  '/contact.html',
+  '/elements.html',
+  '/portfolio.html',
+  '/service.html',
+  '/single-blog.html',
+  '/thankyou.html',
+  '/css/bootstrap.min.css',
+  '/css/font-awesome.min.css',
+  '/css/responsive.css',
+  '/css/style.css',
+  '/font-icons/fontello.eot',
+  '/font-icons/fontello.svg',
+  '/font-icons/fontello.ttf',
+  '/font-icons/fontello.woff',
+  '/font-icons/fontello.woff2',
+  '/fonts/FontAwesome.otf',
+  '/fonts/fontawesome-webfont.eot',
+  '/fonts/fontawesome-webfont.svg',
+  '/fonts/fontawesome-webfont.ttf',
+  '/fonts/fontawesome-webfont.woff',
+  '/fonts/fontawesome-webfont.woff2',
+  '/js/bootstrap.min.js',
+  '/js/circle-active.js',
+  '/js/jquery-3.2.1.min.js',
+  '/js/popper.min.js',
+  '/js/smoothscroll.js',
+  '/js/theme.js',
+  '/img/3d-shap.png',
+  '/img/3d-slider-shap.png',
+  '/img/footer-bg.jpg',
+  '/img/world-map.jpg',
+  '/img/banner/banner-bg.jpg',
+  '/img/home-slider/slider-1.svg',
+  '/img/home-slider/slider-1-og.svg',
+  '/img/home-slider/slider-2.svg',
+  '/img/home-slider/slider-2-og.svg',
+  '/img/home-slider/slider-3.svg',
+  '/img/home-slider/slider-3-og.svg',
+  '/img/home-slider/slider-bg-1.png',
+  '/img/home-slider/slider-m-1.png',
+  '/img/icon/f-icon-1.png',
+  '/img/icon/f-icon-2.png',
+  '/img/icon/f-icon-3.png',
+  '/img/icon/f-icon-4.png',
+  '/img/icon/f-icon-5.png',
+  '/img/icon/f-icon-6.png',
+  '/img/icon/quote-icon.png',
+  '/img/icon/title-icon.png',
+  '/img/icon/video-icon.png',
+  '/img/svg/about.svg',
+  '/img/svg-icons/brand-identity.svg',
+  '/img/svg-icons/e-com.svg',
+  '/img/svg-icons/marketing-campaigns.svg',
+  '/img/svg-icons/web-design.svg',
+  '/img/svg-icons/web-dev.svg',
+  '/img/_fav-icon.png',
+  '/img/icon-72x72.png',
+  '/img/icon-96x96.png',
+  '/img/icon-128x128.png',
+  '/img/icon-144x144.png',
+  '/img/icon-152x152.png',
+  '/img/icon-192x192.png',
+  '/img/icon-384x384.png',
+  '/img/icon-512x512.png',
+
+];
+
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
-const offlineFallbackPage = "ToDo-replace-this-name.html";
+const offlineFallbackPage = "index.html";
 
-// Install stage sets up the offline page in the cache and opens a new cache
-self.addEventListener("install", function (event) {
-  console.log("[PWA Builder] Install Event processing");
-
-  event.waitUntil(
-    caches.open(CACHE).then(function (cache) {
-      console.log("[PWA Builder] Cached offline page during install");
-
-      if (offlineFallbackPage === "ToDo-replace-this-name.html") {
-        return cache.add(new Response("TODO: Update the value of the offlineFallbackPage constant in the serviceworker."));
-      }
-
-      return cache.add(offlineFallbackPage);
-    })
-  );
+self.addEventListener("message", (event) => {
+  if (event.data && event.data.type === "SKIP_WAITING") {
+    self.skipWaiting();
+  }
 });
 
-// If any fetch fails, it will show the offline page.
-self.addEventListener("fetch", function (event) {
-  if (event.request.method !== "GET") return;
+self.addEventListener('install', async (event) => {
+  // event.waitUntil(
+  //   caches.open(CACHE)
+  //     .then((cache) => cache.add(offlineFallbackPage))
+  // );
 
-  event.respondWith(
-    fetch(event.request).catch(function (error) {
-      // The following validates that the request was for a navigation to a new document
-      if (
-        event.request.destination !== "document" ||
-        event.request.mode !== "navigate"
-      ) {
-        return;
-      }
+  const cache = await caches.open(cacheName);
+  await cache.addAll(staticAssets);
+  return self.skipWaiting();
 
-      console.error("[PWA Builder] Network request Failed. Serving offline page " + error);
-      return caches.open(CACHE).then(function (cache) {
-        return cache.match(offlineFallbackPage);
-      });
-    })
-  );
 });
 
-// This is an event that can be fired from your page to tell the SW to update the offline page
-self.addEventListener("refreshOffline", function () {
-  const offlinePageRequest = new Request(offlineFallbackPage);
+if (workbox.navigationPreload.isSupported()) {
+  workbox.navigationPreload.enable();
+}
 
-  return fetch(offlineFallbackPage).then(function (response) {
-    return caches.open(CACHE).then(function (cache) {
-      console.log("[PWA Builder] Offline page updated from refreshOffline event: " + response.url);
-      return cache.put(offlinePageRequest, response);
-    });
-  });
+self.addEventListener('fetch', (event) => {
+  if (event.request.mode === 'navigate') {
+    event.respondWith((async () => {
+      try {
+        const preloadResp = await event.preloadResponse;
+
+        if (preloadResp) {
+          return preloadResp;
+        }
+
+        const networkResp = await fetch(event.request);
+        return networkResp;
+      } catch (error) {
+
+        const cache = await caches.open(CACHE);
+        const cachedResp = await cache.match(offlineFallbackPage);
+        return cachedResp;
+      }
+    })());
+  }
 });
