@@ -101,6 +101,7 @@
 
     .timeline article section {
         display: flex;
+        align-items: center;
     }
 
     .timeline article section:nth-child(2n) {
@@ -189,6 +190,14 @@
         transition: 1s all ease-in-out;
     }
 
+    @media screen and (max-width: 1024px) {
+        body > main > section * {
+            opacity: 1;
+        }
+    }
+
+    
+
     @media screen and (max-width: 768px) {
         .fullWidthHeight {
             height: 50vh;
@@ -207,9 +216,17 @@
             font-size: 1.8vw;
         }
         
-        .timeline article section {
+        /* .timeline article section {
             background-color: #f7f8fb;
-        }
+            display: block;
+            margin-bottom: 1px;
+        } */
+
+        /* .timeline article section img, .timeline article section p {
+            display: inline-block;
+            width: 49.5%;
+            vertical-align: middle;
+        } */
 
         .platform-iOS .timeline article section {
             display: block;
