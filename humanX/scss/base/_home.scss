@@ -1670,6 +1670,9 @@ section.sec-timeline{
         line-height: 46px;
     }
 
+    section.sec-map .container .title-wrap{
+        text-align: center;
+    }
     section.sec-map .container .mapData{
         width: 244px;
         padding: 16px 16px;
@@ -1915,6 +1918,7 @@ section.sec-timeline{
     section.sec-mission .container .inner-wrap{
         padding: 50px 0;
     }
+    
     section.sec-mission .container .inner-wrap,
     section.sec-mission .container .inner-wrap .title-wrap{
         text-align: center;
@@ -1952,11 +1956,15 @@ section.sec-timeline{
     
     section.sec-map,
     section.sec-map .container{
-        height: 1000px;
+        height: 960px;
     }
+    
+    section.sec-map .container .title-wrap,
     section.sec-map .container .map-block{
         width: 100%;
     }
+    
+    
     section.sec-map .container .content-wrap .col{
         padding-left: 16px;
         
@@ -2091,6 +2099,12 @@ section.sec-timeline{
     }
 
 
+    section.sec-map, section.sec-map .container{
+        height: 880px;
+    }
+    section.sec-map .container .figure-info{
+        bottom: 70px;
+    }
     section.sec-map:before{
         height: 54%;
     }
