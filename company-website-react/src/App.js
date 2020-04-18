@@ -1,4 +1,6 @@
-import React, {Fragment, useState, useEffect} from 'react';
+import React, {Fragment, useState, useEffect, useRef} from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+
 import './css/bootstrap.min.css';
 import './css/font-awesome.min.css';
 import './css/layers.css';
@@ -8,14 +10,39 @@ import './css/responsive.css';
 import './css/style.css';
 
 import Header from './components/header';
+import Footer from './components/footer';
+
+import Homepage from './components/homepage';
+import ContactUsPage from './components/contactus';
 
 function App() {
     const [data, setData] = useState([]);
+    const [globalStats, setGlobalStats] = useState([]);
+    const [statsForAllCountries, setStatsForAllCountries] = useState([]);
+    const [countrySel, setCountrySel] = useState([]);
+    const mySelect = useRef(null);
+
+    function abc() {
+      // console.log(mySelect.current);
+      // console.log(mySelect);
+    }
+
+    const displayStatsAsPerCountry = (e) => {
+      //console.log(e.target.value);
+      console.log(e.target.selectedIndex);
+      console.log(mySelect.current.value);
+      //mySelect.current.addClass("abc");
+      setCountrySel([{"index":e.target.selectedIndex}, {"countryName": e.target.value}]);
+      //abc();
+    }
 
     async function fetchUrl() {
-        const response = await fetch("https://coronavirus-tracker-api.herokuapp.com/v2/locations");
+        //const response = await fetch("https://coronavirus-tracker-api.herokuapp.com/v2/locations");
+        const response = await fetch("https://covidapi.info/api/v1/global"); // global stats
+        const response_all_countries = await fetch("https://covidapi.info/api/v1/global/latest");
         const json = await response.json();
-        
+        const json_all_contries = await response_all_countries.json();
+
         function removeDuplicates(originalArray, prop) {
             var newArray = [];
             var lookupObject  = {};
@@ -30,138 +57,59 @@ function App() {
              return newArray;
         }
        
-        var uniqueArray = removeDuplicates(json.locations, "country");
-        console.log(JSON.stringify(uniqueArray));
-        console.log(uniqueArray.length);    
+        //var uniqueArray = removeDuplicates(json.locations, "country");
+        // console.log(JSON.stringify(uniqueArray));
+        // console.log(uniqueArray.length);
 
-        setData(uniqueArray);
+        //setData(uniqueArray);
+        setGlobalStats(json.result);
+        setStatsForAllCountries(json_all_contries.result);
+        
+        //setGlobalStats(json.latest);
       }
 
     useEffect(() => {
         fetchUrl();
+        abc();
+        const script = document.createElement("script");
+        script.src = "https://prodigedigital.com/js/theme.js";
+        script.async = true;
+        document.body.appendChild(script);
       }, []
     );
 
   return (
-    <Fragment>
-        <Header />
-        <select>
-        {
-            data.map(({ id, country}) => (
-                <option key={id}>{country}</option>
-              ))
-        }
-        </select>
-        <section className="main_slider_area">
-                <div id="main_slider" className="rev_slider" data-version="5.3.1.6">
-                    <ul>
-                        <li data-index="rs-1587" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0"  data-saveperformance="off"  data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                            <div className="slider_text_box">
-                                <div className="tp-caption tp-resizeme first_text" 
-                                data-x="['left','left','left','left','30','center']" 
-                                data-hoffset="['0','80','80','0']" 
-                                data-y="['top','top','top','top']" 
-                                data-voffset="['350','350','350','250','180','180']" 
-                                data-fontsize="['50','50','50','42','42','32']"
-                                data-lineheight="['62','62','62','52','52','42']"
-                                data-width="['none']"
-                                data-height="none"
-                                data-whitespace="nowrape"
-                                data-type="text" 
-                                data-responsive_offset="on" 
-                                data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                                data-textalign="['left','left','left','left','left','center']">We help businesses <br />create unique online <br />experiences</div>
+    <Router>
+      <Fragment>
+          <Header />
+          <Switch>
+          <Route path="/" exact component={Homepage}></Route>
+          <Route path="/contact-us" component={ContactUsPage}></Route>
+          </Switch>
+          <Footer />
+          {/* <select onChange={displayStatsAsPerCountry} ref={mySelect}>
+          {
+              // data.map(({ id, country}) => (
+              //     <option key={id}>{country}</option>
+              //   ))
+              //console.log(globalStats)
 
-                                <div className="tp-caption tp-resizeme single_img" 
-                                data-x="['right','right','right','right','right','right']" 
-                                data-hoffset="['0','0','0','0']" 
-                                data-y="['top','top','top','top']" 
-                                data-voffset="['180','180','180','180','0']" 
-                                data-fontsize="['65','65','60','40','25']"
-                                data-lineheight="['75','75','75','50','35']"
-                                data-width="[none]"
-                                data-height="none"
-                                data-whitespace="normal"
-                                data-type="text" 
-                                data-responsive_offset="on" 
-                                data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                                data-textalign="['left','left','left','left','left','center']">
-                                    <img src="img/home-slider/slider-1.svg" alt="" />
-                                </div>
-                            </div>
-                        </li>
-                        <li data-index="rs-1588" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0"  data-saveperformance="off"  data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                            <div className="slider_text_box">
-                                <div className="tp-caption tp-resizeme first_text" 
-                                data-x="['left','left','left','left','30','center']" 
-                                data-hoffset="['0','80','80','0']" 
-                                data-y="['top','top','top','top']" 
-                                data-voffset="['350','350','350','250','180','180']" 
-                                data-fontsize="['50','50','50','42','42','32']"
-                                data-lineheight="['62','62','62','52','52','42']"
-                                data-width="['none']"
-                                data-height="none"
-                                data-whitespace="nowrape"
-                                data-type="text" 
-                                data-responsive_offset="on" 
-                                data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                                data-textalign="['left','left','left','left','left','center']">Crafting beautiful <br />brands & engaging <br />websites</div>
-                                <div className="tp-caption tp-resizeme single_img" 
-                                data-x="['right','right','right','right','right','right']" 
-                                data-hoffset="['0','0','0','0']" 
-                                data-y="['top','top','top','top']" 
-                                data-voffset="['180','180','180','180','0']" 
-                                data-fontsize="['65','65','60','40','25']"
-                                data-lineheight="['75','75','75','50','35']"
-                                data-width="['none']"
-                                data-height="none"
-                                data-whitespace="normal"
-                                data-type="text" 
-                                data-responsive_offset="on" 
-                                data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                                data-textalign="['left','left','left','left','left','center']">
-                                    <img src="img/home-slider/slider-2.svg" alt="" />
-                                </div>
-                            </div>
-                        </li>
-                        <li data-index="rs-1589" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0"  data-saveperformance="off"  data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                            <div className="slider_text_box">
-                                <div className="tp-caption tp-resizeme first_text" 
-                                data-x="['left','left','left','left','30','center']" 
-                                data-hoffset="['0','80','80','0']" 
-                                data-y="['top','top','top','top']" 
-                                data-voffset="['350','350','350','250','180','180']" 
-                                data-fontsize="['50','50','50','42','42','32']"
-                                data-lineheight="['62','62','62','52','52','42']"
-                                data-width="['none']"
-                                data-height="none"
-                                data-whitespace="nowrape"
-                                data-type="text" 
-                                data-responsive_offset="on" 
-                                data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                                data-textalign="['left','left','left','left','left','center']">Bringing brands <br />to life digitally</div>
-                                <div className="tp-caption tp-resizeme single_img" 
-                                data-x="['right','right','right','right','right','right']" 
-                                data-hoffset="['0','0','0','0']" 
-                                data-y="['top','top','top','top']" 
-                                data-voffset="['180','180','180','180','0']" 
-                                data-fontsize="['65','65','60','40','25']"
-                                data-lineheight="['75','75','75','50','35']"
-                                data-width="['none']"
-                                data-height="none"
-                                data-whitespace="normal"
-                                data-type="text" 
-                                data-responsive_offset="on" 
-                                data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                                data-textalign="['left','left','left','left','left','center']">
-                                    <img src="img/home-slider/slider-3.svg" alt="" />
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-    </Fragment>
+              //console.log(statsForAllCountries)
+
+              statsForAllCountries.map((i) => (
+                //console.log(JSON.stringify(Object.keys(i)[0]))
+                <option key={Object.keys(i)[0]}> {Object.keys(i)[0]} </option>
+              ))
+              
+          }
+          </select>
+          <section className="currentStatus">
+              {
+                  //console.log(globalStats)
+              }
+          </section> */}
+      </Fragment>
+    </Router>
   );
 }
 

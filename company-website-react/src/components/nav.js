@@ -1,17 +1,18 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const navigationDetails = [
     {
         'itemName':'Home',
-        'itemLink':'index.html'
+        'itemLink':'/'
     },
     {
         'itemName':'About Us',
-        'itemLink':'about-us.html'
+        'itemLink':'about-us'
     },
     {
         'itemName':'Services',
-        'itemLink':'service.html'
+        'itemLink':'service'
     },
     {
         'itemName':'Portfolio',
@@ -20,7 +21,7 @@ const navigationDetails = [
     },
     {
         'itemName':'Contact',
-        'itemLink':'contact.html'
+        'itemLink':'contact-us'
     }
 ]
 
@@ -30,7 +31,9 @@ const Nav = () => {
             {
                 navigationDetails.map((arrItems, i) => {
                     return(
-                        arrItems.openInNewWindow === 'true' ? <li key={i} className="nav-item"><a target="_blank" rel="noopener noreferrer" className="nav-link" href={arrItems.itemLink}>{arrItems.itemName}</a></li> : <li key={i}  className="nav-item"><a className="nav-link" href={arrItems.itemLink}>{arrItems.itemName}</a></li>
+                        //arrItems.openInNewWindow === 'true' ? <li key={i} className="nav-item"><a target="_blank" rel="noopener noreferrer" className="nav-link" href={arrItems.itemLink}>{arrItems.itemName}</a></li> : <li key={i}  className="nav-item"><a className="nav-link" href={arrItems.itemLink}>{arrItems.itemName}</a></li>
+
+                        <li key={i} className="nav-item"><Link to={arrItems.itemLink}>{arrItems.itemName}</Link></li>
                     )
                 })
             }

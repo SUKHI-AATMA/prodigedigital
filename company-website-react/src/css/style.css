@@ -175,7 +175,7 @@ i:before {
 /* Main Menu Area css
 ============================================================================================ */
 .main_menu_area {
-  /* position: absolute; */
+  position: absolute;
   left: 0px;
   top: 0px;
   width: 100%;
