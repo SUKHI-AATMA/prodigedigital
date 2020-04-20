@@ -258,7 +258,7 @@ $(document).ready(function () {
             animateOut: 'fadeOut',
             animateIn: 'fadeIn',
             mouseDrag: false,
-
+            autoplayHoverPause:true,
             smartSpeed: 250,
             slideTransition: 'linear',
             lazyLoad: true,

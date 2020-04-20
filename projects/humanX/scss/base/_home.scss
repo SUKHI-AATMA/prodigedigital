@@ -853,27 +853,26 @@ section.sec-video{
     padding: 0px 0px 120px;
     .container{
         .inner-wrap{
-            width: 1048px;
+            // width: 1048px;
             position: relative;
             margin: 0 auto;
             margin-top: 50px;
             height: auto;
             overflow: hidden;
-            padding: 10px;
             z-index: 9;
 
             .wrapper{
                 @include transition(.3s ease-in-out);
-                &:hover{
-                    transform: translateY(-7px);
-                }
+                // &:hover{
+                //     transform: translateY(-7px);
+                // }
                 // #ytplayer{
                 //     width: 100%;
                 //     height: 578px;
                 // }
                 iframe {
                     width: 100%;
-                    height: 578px;
+                    height: 718px;
                     border-radius: 8px;
                     // box-shadow: 0 5px 10px 0 rgba(88,88,88,0.5);
                     @include transition(.3s ease-in-out);
@@ -1095,8 +1094,6 @@ section.sec-testimonials{
                     // background-color: #004950;
                     background: url(../../images/quote-bg.svg) no-repeat center;
                     background-size: auto;
-                    // width: 100%;
-                    // height: 100%;
                     // border-radius: 50%;
                     width: 80px;
                     height: 80px;
@@ -1395,17 +1392,12 @@ section.sec-timeline{
 
 @media screen and (max-width : 1366px){
     
-    // section.sec-map:before{
-    //     width: 66%;
-    // }
-
     .owl-carousel .owl-item img{
         width: auto;
     }
 
-    section.sec-core .container .circle-wrap{
-        // top: 60px;
-        // transform: translateX(-50%) translateY(60px);
+    section.sec-video .container .inner-wrap{
+        padding: 0 30px;
     }
 
 }
@@ -1498,7 +1490,7 @@ section.sec-timeline{
         margin: 0 auto;
     }
     section.sec-video .container .inner-wrap{
-        max-width: 80%;
+        // max-width: 80%;
         margin: 0 auto;
         
         iframe{
@@ -1554,19 +1546,22 @@ section.sec-timeline{
         }
     }
 
-    section.sec-video .container .inner-wrap{
-        padding: 0;
-        iframe{
-            height: 420px;
-        }
-
-        .content-wrap{
-            bottom:20px;
-            left: 20px;
-            max-width: calc(100% - 40px);
-            h4{
-                font-size: 16px;
-                line-height: 21px;
+    section.sec-video {
+        padding: 0px 0px 60px;
+        .container .inner-wrap{
+            padding: 0;
+            iframe{
+                height: 420px;
+            }
+    
+            .content-wrap{
+                bottom:20px;
+                left: 20px;
+                max-width: calc(100% - 40px);
+                h4{
+                    font-size: 16px;
+                    line-height: 21px;
+                }
             }
         }
     }
