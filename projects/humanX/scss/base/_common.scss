@@ -191,6 +191,11 @@ button.mfp-close{
     //     height: 100vh; /* Fallback for browsers that do not support Custom Properties */
     //     height: calc(var(--vh, 1vh) * 100);
     // }
+
+    .title-wrap{
+        padding-bottom: 40px;
+        align-items: center;
+    } 
 }
 
 
@@ -211,7 +216,7 @@ button.mfp-close{
     }
 
     .title-wrap{
-        padding-bottom: 40px;
+        padding-bottom: 24px;
         h2{
             font-size: 21px;
             line-height: 30px;

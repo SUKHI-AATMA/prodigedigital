@@ -1620,6 +1620,7 @@ section.sec-timeline{
 }
 
 @media screen and (max-width : 768px){
+    
 
     section.sec-slider .banner-wrap .owl-carousel .content-wrap{
         max-width: 100%;
@@ -1825,6 +1826,9 @@ section.sec-timeline{
         right: -50px;
     }
 
+    section.sec-video{
+        padding: 20px 0px 60px;
+    }
     section.sec-video .container .inner-wrap{
         max-width: 100%;
     }
@@ -1832,20 +1836,39 @@ section.sec-timeline{
         height: 400px;
         box-shadow: 0 2px 3px 0 rgba(88,88,88,0.5);;
     }
+    
 
+    section.sec-news .container .inner-wrap>.flex-wrap,
+    section.sec-partners .container .inner-wrap>.flex-wrap,
+    section.sec-testimonials .container .inner-wrap>.flex-wrap{
+        justify-content: center;
+        padding-bottom: 40px;
+
+        .btn-read{
+            position: absolute;
+            bottom: -50px;
+        }
+    }
+
+    section.sec-news{
+        padding: 60px 0;
+    }
     section.sec-news .container .inner-wrap{
         max-width: 100%;
     }
     section.sec-news .container .inner-wrap .partners-wrap .owl-carousel .owl-stage .owl-item .item{
         margin-right: 30px;
     }
+
+    
+    section.sec-timeline{
+        padding: 48px 0;
+    }
+
     section.sec-timeline .container .inner-wrap ul span.line{
         display: none;
     }    
 
-    section.sec-timeline{
-        padding: 48px 0;
-    }
     section.sec-timeline .container .inner-wrap ul{
         flex-direction: column;
         padding-left: 24px;
@@ -2077,6 +2100,18 @@ section.sec-timeline{
     }
     section.sec-map .container p.caption{
         top: 24%;
+    }
+
+    section.sec-news .container .inner-wrap>.flex-wrap,
+    section.sec-partners .container .inner-wrap>.flex-wrap,
+    section.sec-testimonials .container .inner-wrap>.flex-wrap{
+        justify-content: center;
+        padding-bottom: 32px;
+
+        .btn-read{
+            position: absolute;
+            bottom: -30px;
+        }
     }
 
     section.sec-partners{
