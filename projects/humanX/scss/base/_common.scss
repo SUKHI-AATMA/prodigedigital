@@ -98,7 +98,7 @@ main{
     overflow: hidden;
     width: 100%;
     margin: 0 auto;
-    padding-top: 87px;
+    padding-top: 81px;
     background-color: #fff;
     margin-bottom: 213px;   
 }
@@ -206,10 +206,7 @@ button.mfp-close{
 }
 
 @media screen and (max-width : 480px){
-    main{
-        padding-top: 64px;
-        // margin-bottom: 450px;
-    }
+
     .container {
         padding-left: 20px;
         padding-right: 20px;

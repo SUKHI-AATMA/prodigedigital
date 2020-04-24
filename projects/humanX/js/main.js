@@ -8,7 +8,7 @@ $(document).ready(function () {
         wS = $(this).scrollTop();
         // console.log(hH);
 
-        if ($(window).width() > 1025){
+        if ($(window).width() > 1024){
             if (hT > 100){
                 // alert('you have scrolled top!');
                 //console.log('you have scrolled down!');
@@ -42,7 +42,7 @@ $(document).ready(function () {
     });
 
 
-    if ($(window).width() < 769){
+    if ($(window).width() < 1025){
 
         $('header .li-link .link').click(function() {
             if(!$(this).parent().find('.dropdown').hasClass('active')) {
@@ -51,7 +51,7 @@ $(document).ready(function () {
                 // console.log('hi ====');
                 
             }
-            console.log('hello ====');
+            // console.log('hello ====');
             // $(this).addClass('active');
             $(this).toggleClass('active');
             $('.dropdown').removeClass('active');
@@ -65,7 +65,7 @@ $(document).ready(function () {
 
 
     if ($('.sec-slider').length) {
-        var owlHomeBanner = $('#homeBanner .owl-carousel');
+        var owlHomeBanner = $('#homeBanner.owl-carousel');
         owlHomeBanner.owlCarousel({
             loop: true,
             nav: true,
@@ -81,8 +81,22 @@ $(document).ready(function () {
             //autoplay: 6000,
             items: 1,
             video: true,
-            onTranslate: function(event) {
 
+            onInitialized: function (event) {
+                // listen for keyboard input
+                $(document).on('keydown', function( event ) { //attach event listener
+                    if(event.keyCode == 37) {
+                        owlHomeBanner.trigger('prev.owl');
+                        // console.log('prev owl owlHomeBanner');
+                    }
+                    if(event.keyCode == 39) {
+                        owlHomeBanner.trigger('next.owl');
+                        // console.log('prev owl owlHomeBanner');
+                    }
+                });
+            },
+            
+            onTranslate: function(event) {
                 var currentSlide, player, command;
                 currentSlide = $('.owl-item.active');
                 player = currentSlide.find(".ytplayer-wrap iframe").get(0);
@@ -90,25 +104,32 @@ $(document).ready(function () {
                     "event": "command",
                     "func": "pauseVideo"
                 };
-        
                 if (player != undefined) {
-                    player.contentWindow.postMessage(JSON.stringify(command), "*");
-        
-                }
-        
-            } 
+                    player.contentWindow.postMessage(JSON.stringify(command), "*");        
+                }        
+            }
+
+
         });
-        // owlHomeBanner.on("changed.owl.carousel", function(event){
-        //     // selecting the current active item
-        //     var item = event.item.index-2;
-        //     // first removing animation for all captions
-        //     // console.log(item, 'item ===');
+
+        
+        // owlHomeBanner.on('changed.owl.carousel', function(event) {
+        //     console.log("test");
+            // selecting the current active item
+            //var item = event.item.index-2;
+            // first removing animation for all captions
+           // console.log(item, 'item ===');
             
-        //     $('h1').removeClass('wow fadeInUp saif');
-        //     $('.owl-item').not('.cloned').eq(item).find('h1').addClass('wow fadeInUp saif');
-        // })
+            // $('h1').removeClass('wow fadeInUp saif');
+            // $('.owl-item').not('.cloned').eq(item).find('h1').addClass('wow fadeInUp saif');
+
+        //});
+
+        
+        
     }
 
+    
     if ($('.sec-partners').length) {
         var owlPartners = $('#partners .owl-carousel');
         owlPartners.owlCarousel({
@@ -263,12 +284,26 @@ $(document).ready(function () {
             slideTransition: 'linear',
             lazyLoad: true,
             autoplay:true,
-            autoplayTimeout:9000,
+            autoplayTimeout:9000
+
+            // onInitialized: function (event) {
+            //     // listen for keyboard input
+            //     $(document).on('keydown', function( event ) { //attach event listener
+            //         if(event.keyCode == 37) {
+            //             owlHomeBanner.trigger('prev.owl');
+            //             console.log('prev owl testimonials');
+                        
+            //         }
+            //         if(event.keyCode == 39) {
+            //             owlTestimonials.trigger('next.owl');
+            //             console.log('next owl testimonials');
+            //         }
+            //     });
+            // },
         });
     }
 
    
-
 
     var num = $("ul.tabs").find("li").length;
     // console.log(num);
@@ -345,8 +380,6 @@ if ($('#counter').length) {
     
     });
 }
-
-
 
 
 if ($('.sec-map').length) {
