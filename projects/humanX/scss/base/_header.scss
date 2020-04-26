@@ -52,8 +52,21 @@ header{
         margin-top: 40px;
         // @include transition(.3s ease-in-out);
         &:hover {
-            background: #f3f3f3;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            background: #004950;
             cursor: pointer;
+
+            @media screen and (min-width:1025px) {
+                .icon{
+                    background-color: #FFFFFF;
+
+                    &:before,
+                    &:after{
+                        background-color: #FFFFFF;
+                    }
+                }
+            }
         }
 
         &.active{
@@ -62,6 +75,26 @@ header{
 
         &.open{
             // right: 11%;
+
+            @media screen and (min-width:1025px) {
+
+                &:hover {
+                    -webkit-transition-duration: 0.3s;
+                    transition-duration: 0.3s;
+                    background: #fff;
+                    cursor: pointer;
+
+                    .icon{
+                        // background-color: #212121;
+        
+                        &:before,
+                        &:after{
+                            background-color: #212121;
+                        }
+                    }
+                }
+            }
+
             .icon {
                 -webkit-transition-duration: 0.3s;
                 transition-duration: 0.3s;
@@ -133,7 +166,7 @@ header{
                     display: block;
                     line-height: 0;
                     img{
-                        width: 144px;
+                        width: 140px;
                         height: auto;
                     }
                 }
@@ -410,6 +443,13 @@ header{
 
 
 @media screen and (max-width : 1366px){
+
+    header .container .flex-wrap .menu-wrap.open{
+        padding: 120px 50px 30px;
+    }
+    header .container .flex-wrap .menu-wrap.open{
+        height: 84vh;
+    }
     
 }
 
@@ -424,9 +464,12 @@ header{
     header .container .flex-wrap .menu-wrap nav ul.menu>li:last-child ul.dropdown{
         left:-130px
     }
+    header .hamburger{
+        right: 30px;
+    }
 }
 
-@media screen and (max-width : 768px){
+@media screen and (max-width : 1024px){
     header{
         padding: 0 30px;
     }
@@ -440,6 +483,16 @@ header{
     header .hamburger-logo.active{
         display: none;
     }
+    // header .hamburger:hover {
+    //     background: unset;
+    // }
+    // header .hamburger:hover .icon{
+    //     background: none;
+    // }
+    // header .hamburger:hover .icon:after,
+    // header .hamburger:hover .icon:before{
+    //     background: #212121;
+    // }
     header .hamburger{
         display: block;
         top: 12px;
@@ -499,8 +552,8 @@ header{
     }
     header .container .flex-wrap .menu-wrap.open nav ul.menu>li>a{
         font-weight: normal;
-        width: 100%;
-        display: block;
+        width: auto;
+        display: inline;
         font-size: 18px;
         line-height: 26px;
     }
@@ -565,7 +618,8 @@ header{
         padding: 0px 20px;
     }
     header .container .flex-wrap .logo{
-        width: 88px;
+        width: 114px;
+        padding: 12px 0;
         a{
             img{
                 width: 100%;
@@ -590,7 +644,7 @@ header{
         }
     }
     header .hamburger{
-        top:4px;
+        top:3px;
         right:16px;
     }
 
