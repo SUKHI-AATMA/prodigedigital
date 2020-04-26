@@ -15,7 +15,7 @@
 
 <h1>Bar Graph With Text And Lines</h1>
 <button onclick="doRefresh();">Refresh</button>
-
+<a href="" id="result2" download="gtestPDF.pdf">Download PDF</a>
 <iframe id='result' style='width: 100%; height: 400px'></iframe>
 
 <svg id="svg" class="v-m-root" style="left: 600px; top: 600px; display: block; cursor: default" width="1000"
@@ -678,6 +678,7 @@
 
             return pdf;
         };
+        document.getElementById('result2').setAttribute('href', makePdf().output('dataurlstring'));
         document.getElementById('result').setAttribute('src', makePdf().output('dataurlstring'));
         document.getElementById('source').innerText = makePdf().output();
         //makePdf().save();
