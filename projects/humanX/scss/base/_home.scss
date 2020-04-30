@@ -2,7 +2,7 @@
 section.sec-slider{
     // display:none;
 
-    height: calc(100vh - 200px);
+    height: calc(100vh - 110px);
     overflow: hidden;
     position: relative;
     overflow: hidden;
@@ -273,16 +273,16 @@ section.sec-core{
             }
 
             .Oval_1 {
-                padding-top: 3%;
-                left: 15%;
+                padding-top: 2%;
+                left: 13%;
                 svg:first-child {
                     animation: circular-animate-oval-reverse 70s linear infinite;
                 }
             }
 
             .Oval_2 {
-                padding-top: 5%;
-                left: 15%;
+                padding-top: 1%;
+                left: 14%;
                 svg:first-child {
                     animation: circular-animate-oval 70s linear infinite;
                 }
@@ -419,7 +419,7 @@ section.sec-map{
                 p{
                     margin-top: 8px;
                     color: #004950;
-                        font-size: 18px;
+                    font-size: 18px;
                     font-weight: 600;
                     letter-spacing: 0.23px;
                     line-height: 24px;
@@ -1058,9 +1058,9 @@ section.sec-testimonials{
                 
                             .right{
                                 z-index: 1;
-                                max-width: 350px;
+                                max-width: 382px;
                                 width: 100%;         
-                                margin-right: 80px;           
+                                margin-right: 74px;           
                                 align-self: flex-end;
                 
                                 
@@ -1336,9 +1336,9 @@ section.sec-timeline{
 
 @media screen and (max-width : 1366px){
 
-    section.sec-slider{
-        height: calc(100vh - 140px);
-    }
+    // section.sec-slider{
+    //     height: calc(100vh - 110px);
+    // }
     
     .owl-carousel .owl-item img{
         width: auto;
@@ -1783,6 +1783,9 @@ section.sec-timeline{
     // section.sec-partners .container .inner-wrap .partners-wrap .owl-carousel .owl-stage .owl-item:after{
     //     display: none;
     // }
+    section.sec-partners .container .inner-wrap .title-wrap{
+        padding-bottom: 16px
+    }
     section.sec-partners .container .inner-wrap .partners-wrap .owl-carousel .owl-prev{
         left:-50px;
     }
@@ -1925,6 +1928,7 @@ section.sec-timeline{
         width: 100%;
         margin: 0 auto;
     }
+    
     section.sec-testimonials .container .inner-wrap .owl-carousel .owl-item .item .row{
         flex-direction: column;
     
@@ -1949,6 +1953,15 @@ section.sec-timeline{
         .owl-prev{
             left: -40px;
         }
+    }
+    section.sec-testimonials .container .inner-wrap .owl-carousel .owl-item .item .row .right p.desc{
+        font-size: 16px;
+        line-height: 21px;
+        text-align: center;
+    }
+    section.sec-testimonials .container .inner-wrap .owl-carousel .owl-item .item .row .right h4,
+    section.sec-testimonials .container .inner-wrap .owl-carousel .owl-item .item .row .right p{
+        text-align: center;
     }
     
 }
@@ -1980,13 +1993,15 @@ section.sec-timeline{
     section.sec-slider .banner-wrap .owl-carousel .content-wrap .inner-wrap h1 br.mobile{
         display: block;
     }
-
     section.sec-slider{
         height: calc(100vh - 65px);
     }
     
     section.sec-slider .banner-wrap .owl-carousel .owl-nav{
-        bottom: 8.3%;
+        bottom: 5%;
+    }
+    section.sec-slider .owl-dots{
+        bottom: 4%;
     }
     
     section.sec-slider .banner-wrap .owl-carousel .content-wrap .inner-wrap h1{
@@ -2049,8 +2064,7 @@ section.sec-timeline{
     section.sec-map .container .map-block{
         width: 100%;
     }
-    
-    
+        
     section.sec-map .container .content-wrap .col{
         padding-left: 16px;
         
@@ -2085,6 +2099,10 @@ section.sec-timeline{
             padding: 0;
 
             .inner-wrap{
+
+                .title-wrap{
+                    padding-bottom: 36px
+                }
                 .flex-wrap{
                     padding: 0 20px;
                 }

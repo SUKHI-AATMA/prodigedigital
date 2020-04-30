@@ -36,10 +36,10 @@ $(document).ready(function () {
     });
 
 
-    $('section.sec-testimonials .btn-wrap').on("click tap", function () {
-        $('section.sec-testimonials .other-item').slideToggle('slow');
-        $('.btn-wrap .btn-read img').toggleClass('active');
-    });
+    // $('section.sec-testimonials .btn-wrap').on("click tap", function () {
+    //     $('section.sec-testimonials .other-item').slideToggle('slow');
+    //     $('.btn-wrap .btn-read img').toggleClass('active');
+    // });
 
 
     if ($(window).width() < 1025){
@@ -61,8 +61,6 @@ $(document).ready(function () {
         });
     }
 
-    
-
 
     if ($('.sec-slider').length) {
         var owlHomeBanner = $('#homeBanner.owl-carousel');
@@ -73,25 +71,25 @@ $(document).ready(function () {
             dotsData: false,
             smartSpeed: 600,
             autoPlaySpeed: 600,
-            // autoPlayTimeout: 5000,
+            autoPlayTimeout: 5000,
             slideTransition: 'linear',
             mouseDrag: true,
-            autoplay: false,
+            autoplay: true,
             lazyLoad:true,
-            //autoplay: 6000,
             items: 1,
             video: true,
 
             onInitialized: function (event) {
                 // listen for keyboard input
-                $(document).on('keydown', function( event ) { //attach event listener
+                $(document).on('keydown', function( event ) { 
+                    //attach event listener
                     if(event.keyCode == 37) {
                         owlHomeBanner.trigger('prev.owl');
-                        // console.log('prev owl owlHomeBanner');
+                        //console.log('prev owl owlHomeBanner');
                     }
                     if(event.keyCode == 39) {
                         owlHomeBanner.trigger('next.owl');
-                        // console.log('prev owl owlHomeBanner');
+                        //console.log('next owl owlHomeBanner');
                     }
                 });
             },
@@ -111,6 +109,13 @@ $(document).ready(function () {
 
 
         });
+
+        owlHomeBanner.on('changed.owl.carousel', function(e) {
+            // console.log('onchange owlHomeBanner');
+            owlHomeBanner.trigger('stop.owl.autoplay');
+            owlHomeBanner.trigger('play.owl.autoplay');
+        });
+        
 
         
         // owlHomeBanner.on('changed.owl.carousel', function(event) {
@@ -284,22 +289,27 @@ $(document).ready(function () {
             slideTransition: 'linear',
             lazyLoad: true,
             autoplay:true,
-            autoplayTimeout:9000
+            autoplayTimeout:9000,
 
-            // onInitialized: function (event) {
-            //     // listen for keyboard input
-            //     $(document).on('keydown', function( event ) { //attach event listener
-            //         if(event.keyCode == 37) {
-            //             owlHomeBanner.trigger('prev.owl');
-            //             console.log('prev owl testimonials');
-                        
-            //         }
-            //         if(event.keyCode == 39) {
-            //             owlTestimonials.trigger('next.owl');
-            //             console.log('next owl testimonials');
-            //         }
-            //     });
-            // },
+            onInitialized: function (event) {
+                // listen for keyboard input
+                $(document).on('keydown', function( event ) { //attach event listener
+                    if(event.keyCode == 37) {
+                        owlTestimonials.trigger('prev.owl');
+                        //console.log('prev owl testimonials');
+                    }
+                    if(event.keyCode == 39) {
+                        owlTestimonials.trigger('next.owl');
+                        //console.log('next owl testimonials');
+                    }
+                });
+            }
+        });
+
+        owlTestimonials.on('changed.owl.carousel', function(e) {
+            // console.log('onchange owlTestimonials');
+            owlTestimonials.trigger('stop.owl.autoplay');
+            owlTestimonials.trigger('play.owl.autoplay');
         });
     }
 
@@ -311,26 +321,30 @@ $(document).ready(function () {
     $('ul.tabs li').click(function () {
         var tab_id = $(this).attr('data-tab');      
 
-        $('ul.tabs li').removeClass('current');
-        $('.tab-content').removeClass('current');
+        $('ul.tabs li').removeClass('active');
+        $('.tab-content').removeClass('active');
         
-        $(this).addClass('current');
-        $("#" + tab_id).addClass('current');
+        $(this).addClass('active');
+        $("#" + tab_id).addClass('active');
  
         // var index = $( "ul.tabs li" ).index( this );
         // console.log(index);       
 
     });
 
+    
+
+    
+
 });
 
 
 (function($) {
     $('.t1').click(function() {
-        $(".bgImg").css("background-image", "url('../../images/slider.jpg')");
+        $(".bgImg").css("background-image", "url('../../images/about/our-mission-bn.png')");
     });
     $('.t2').click(function() {
-        $(".bgImg").css("background-image", "url('../../images/slider-2.jpg')");      
+        $(".bgImg").css("background-image", "url('../../images/about/our-journey-bn.png')");      
     });
     $('.t3').click(function() {
         $(".bgImg").css("background-image", "url('../../images/slider-3.jpg')");
@@ -344,6 +358,22 @@ $(document).ready(function () {
 
 
 
+// Couner Number Comma
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function numCom(){
+    setTimeout(function(){
+        $("#counter .col span").each(function() {
+            var num = $(this).text();
+            //console.log(num, '== num');        
+            var commaNum = numberWithCommas(num);
+            //console.log(commaNum, '-- commNum');
+            $(this).text(commaNum);
+          });
+    }, 100);
+}
 
 
 // Number Counter
@@ -363,14 +393,16 @@ if ($('#counter').length) {
                 }).animate({
                     countNum: countTo
                 }, {
-                        duration: 7000,
+                        duration: 5000,
                         easing: 'swing',
                         step: function () {
                             $this.text(Math.floor(this.countNum));
                         },
                         complete: function () {
                             $this.text(this.countNum);
-                            //alert('finished');
+                            //console.log('finished');
+                            // number with comma function call
+                            numCom();
                         }
     
                     });
