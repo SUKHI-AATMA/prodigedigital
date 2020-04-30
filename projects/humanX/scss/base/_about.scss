@@ -66,11 +66,11 @@ section.sec-abt-bn{
 
         .circle-line-wrap{
             
-            display: none;
+            // display: none;
 
             position: absolute;
             right: -50px;
-            bottom: -60px;
+            bottom: -50px;
             z-index: 45;
             height: 570px;
             width: 570px;
@@ -81,27 +81,29 @@ section.sec-abt-bn{
                     position: absolute;
                     width: 100%;
                     text-align: center;
-                    left: 5%;
+                    left: 0;
                     svg {
                         position: absolute;
                         left: 0;
+                        width: 100%;
+                        height: auto;
                     }
                 }
     
                 .Oval_1 {
-                    padding-top: 2%;
-                    left: 13%;
-                    // svg:first-child {
-                    //     animation: circular-animate-oval-reverse 70s linear infinite;
-                    // }
+                    padding-top: 8px;
+                    left: 0;
+                    svg:first-child {
+                        animation: circular-animate-oval-reverse 70s linear infinite;
+                    }
                 }
     
                 .Oval_2 {
-                    padding-top: 1%;
-                    left: 14%;
-                    // svg:first-child {
-                    //     animation: circular-animate-oval 70s linear infinite;
-                    // }
+                    padding-top: 0;
+                    left: 2%;
+                    svg:first-child {
+                        animation: circular-animate-oval 70s linear infinite;
+                    }
                 }
             }
     
