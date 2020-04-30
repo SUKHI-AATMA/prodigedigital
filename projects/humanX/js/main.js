@@ -134,7 +134,6 @@ $(document).ready(function () {
         
     }
 
-    
     if ($('.sec-partners').length) {
         var owlPartners = $('#partners .owl-carousel');
         owlPartners.owlCarousel({
@@ -313,25 +312,56 @@ $(document).ready(function () {
         });
     }
 
-   
-
-    var num = $("ul.tabs").find("li").length;
-    // console.log(num);
 
     $('ul.tabs li').click(function () {
         var tab_id = $(this).attr('data-tab');      
 
         $('ul.tabs li').removeClass('active');
         $('.tab-content').removeClass('active');
+        $('.line-wrap ul.ul-line li').removeClass('active');
         
         $(this).addClass('active');
+        $('.line-wrap ul.ul-line #line-' +tab_id).addClass('active');
         $("#" + tab_id).addClass('active');
  
-        // var index = $( "ul.tabs li" ).index( this );
-        // console.log(index);       
 
     });
 
+   
+    // Read More
+    if ($('.board-wrap').length) {
+
+        var showChar = 550;  // How many characters are shown by default
+        var ellipsestext = "...";
+        var moretext = '<div class="btn-read flex-wrap"><span>read more</span> <img src="images/circle-arrow.svg" alt=""></div>';
+        var lesstext = '<div class="btn-read flex-wrap readLess"><span>read less</span> <img src="images/circle-arrow.svg" alt=""></div>';
+        
+
+        $('p.more').each(function() {
+            var content = $(this).html();    
+            if(content.length > showChar) {    
+                var c = content.substr(0, showChar);
+                var h = content.substr(showChar, content.length - showChar);
+                var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';    
+                $(this).html(html);
+            }    
+        });
+        
+        $(".morelink").click(function(){
+            if($(this).hasClass("less")) {
+                $(this).removeClass("less");
+                $(this).html(moretext);
+            } else {
+                $(this).addClass("less");
+                $(this).html(lesstext);
+            }
+            $(this).parent().prev().toggle();
+            $(this).prev().toggle();
+            return false;
+        });    
+
+    }
+    
     
 
     
@@ -341,16 +371,16 @@ $(document).ready(function () {
 
 (function($) {
     $('.t1').click(function() {
-        $(".bgImg").css("background-image", "url('../../images/about/our-mission-bn.png')");
+        $(".bgImg").css("background-image", "url('../../images/about/our-mission-bn.jpg')");
     });
     $('.t2').click(function() {
-        $(".bgImg").css("background-image", "url('../../images/about/our-journey-bn.png')");      
+        $(".bgImg").css("background-image", "url('../../images/about/our-journey-bn.jpg')");      
     });
     $('.t3').click(function() {
-        $(".bgImg").css("background-image", "url('../../images/slider-3.jpg')");
+        $(".bgImg").css("background-image", "url('../../images/about/our-board-bn.jpg')");
     });
     $('.t4').click(function() {
-        $(".bgImg").css("background-image", "url('../../images/slider-4.jpg')");
+        $(".bgImg").css("background-image", "url('../../images/about/our-team-bn.jpg')");
     });
 
 

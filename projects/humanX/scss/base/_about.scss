@@ -3,10 +3,10 @@ section.sec-abt-bn{
     display: block;
     height: 564px;
 
-    background: url(../../images/about/our-mission-bn.png);
-    background-size: auto;
+    background: url(../../images/about/our-mission-bn.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     width: 100%;
 
     &.bn-1{
@@ -64,14 +64,68 @@ section.sec-abt-bn{
         bottom: -60px;
         z-index: 44;
 
+        .circle-line-wrap{
+            
+            display: none;
+
+            position: absolute;
+            right: -50px;
+            bottom: -60px;
+            z-index: 45;
+            height: 570px;
+            width: 570px;
+            .circle-wrap{
+                position: relative;
+    
+                .Oval_1, .Oval_2 {
+                    position: absolute;
+                    width: 100%;
+                    text-align: center;
+                    left: 5%;
+                    svg {
+                        position: absolute;
+                        left: 0;
+                    }
+                }
+    
+                .Oval_1 {
+                    padding-top: 2%;
+                    left: 13%;
+                    // svg:first-child {
+                    //     animation: circular-animate-oval-reverse 70s linear infinite;
+                    // }
+                }
+    
+                .Oval_2 {
+                    padding-top: 1%;
+                    left: 14%;
+                    // svg:first-child {
+                    //     animation: circular-animate-oval 70s linear infinite;
+                    // }
+                }
+            }
+    
+            @keyframes circular-animate-oval {
+                0%   { transform: rotateZ(0deg); }
+                100% { transform: rotateZ(270deg); }
+            }
+        
+            @keyframes circular-animate-oval-reverse {
+                0%   { transform: rotateZ(0deg); }
+                100% { transform: rotateZ(-270deg); }
+            }
+
+        }
+        
+
         .inner-wrap{
             position: relative;
             
             .circle-img{
-                background: url(../../images/about/our-mission-bn.png);
-                background-size: auto;
+                background: url(../../images/about/our-mission-bn.jpg);
+                background-size: cover;
                 background-repeat: no-repeat;
-                background-position: center;
+                background-position: center center;
                 width: 475px;
                 height: 475px;
                 border-radius: 50%;
@@ -190,39 +244,47 @@ section.sec-abt-tab{
 
                     &:nth-child(2){
                         .dot{
-                            left: 28px;
+                            left: -7px;
                         }
                     }
 
                     &:nth-child(3){
                         .dot{
-                            left: 54px;
+                            left: 24px;
                         }
                     }
 
                     &:nth-child(4){
                         .dot{
+                            left: 54px;
+                        }
+                    }
+
+                    &:nth-child(5){
+                        .dot{
                             left: 85px;
                         }
                     }
 
-                    .dot{
-                        position: absolute;
-                        left: 0px;
-                        top: -9px;
+                    &.active{
+                        .dot{
+                            position: absolute;
+                            //left: 0px;
+                            top: -9px;
+    
+                            >span {
+                                display: block;
+                                position: relative;
+                                background: url(../../images/circle-dot.svg) no-repeat center;
+                                background-size: auto;
+                                width: 18px;
+                                height: 18px;
+                                @include transition(all .3s ease);
+                            }
+                            
+                        } 
+                    } 
 
-                        >span {
-                            display: block;
-                            position: relative;
-                            background: url(../../images/circle-dot.svg) no-repeat center;
-                            background-size: auto;
-                            width: 18px;
-                            height: 18px;
-                            @include transition(all .3s ease);
-
-                        }
-                        
-                    }  
                     span.oval{
                         width: 5px;
                         height: 5px;
@@ -233,10 +295,10 @@ section.sec-abt-tab{
                     }
 
                     span.oval-1{
-                        left: 7px;
+                        left: 0px;
                     }
                     span.oval-2{
-                        left: 34px;
+                        left: 30px;
                     }
                     span.oval-3{
                         left: 60px;
@@ -261,6 +323,51 @@ section.sec-abt-tab{
                     text-align: left;
                     text-transform: uppercase;
                     margin-bottom: 30px;
+                }
+
+                .morecontent > span {
+                    display: none;
+                }
+                .morelink {
+                    display: block;
+                }
+
+                .btn-read{
+                    width: 120px;
+                    margin-top: 12px;
+                    @include transition(all .3s ease);
+    
+                    // &:hover{
+                    //     img,svg{
+                    //         transform: translateY(10px);
+                    //         @include transition(all .3s ease);
+                    //     }
+                    // }
+
+                    &.readLess{
+                        img, svg{
+                            transform: rotate(-90deg);
+                        }
+                    }
+
+                    span{
+                        text-transform: capitalize;
+                        padding-right: 10px;
+                        color: #004950;
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 22px;
+                        cursor: pointer;
+                        width: auto;
+                        justify-content: flex-start;
+                    }
+                    img, svg{
+                        display: block;
+                        width: 24px;
+                        height: auto;
+                        @include transition(all .3s ease);
+                        transform: rotate(90deg);
+                    }
                 }
 
                 // tab content 1
@@ -366,6 +473,7 @@ section.sec-abt-tab{
                     .journey-wrap{
                         max-width: 830px;
                         width: 100%;
+                        padding-top: 12px;
                         p{
                             opacity: 0.78;
                             color: #29292B;
@@ -400,7 +508,7 @@ section.sec-abt-tab{
                     .form-wrap{
                         max-width: 770px;
                         width: 100%;
-                        margin: 0 auto;
+                        margin: 70px auto 0;
                         background-color: #F6F1EA;
                         padding: 70px 100px;
 
@@ -476,10 +584,9 @@ section.sec-abt-tab{
 
                 }
 
-                
                     // our-board
                     .board-wrap{
-                        padding-top: 52px;
+                        padding-top: 90px;
                         .roww{
                             display: flex;
                             justify-content: space-between;
