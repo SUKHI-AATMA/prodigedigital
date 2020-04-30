@@ -374,13 +374,13 @@ $(document).ready(function () {
         $(".bgImg").css("background-image", "url('../../images/about/our-mission-bn.jpg')");
     });
     $('.t2').click(function() {
-        $(".bgImg").css("background-image", "url('../../images/about/our-journey-bn.png')");      
+        $(".bgImg").css("background-image", "url('../../../../images/about/our-journey-bn.png')");      
     });
     $('.t3').click(function() {
-        $(".bgImg").css("background-image", "url('../../images/about/our-board-bn.jpg')");
+        $(".bgImg").css("background-image", "url('../../../../images/about/our-board-bn.jpg')");
     });
     $('.t4').click(function() {
-        $(".bgImg").css("background-image", "url('../../images/about/our-team-bn.jpg')");
+        $(".bgImg").css("background-image", "url('../../../../images/about/our-team-bn.jpg')");
     });
 
 
