@@ -376,7 +376,7 @@ $(document).ready(function () {
             }
             var index = 0;
             index = $(this).index();
-            console.log(index);
+            //console.log(index);
             
 
             $('body').toggleClass('active');
@@ -385,7 +385,7 @@ $(document).ready(function () {
             $('.desktopPop-wrap').toggleClass('is-visible');           
 
             var tab_id = $(this).attr('data-mem');     
-            console.log(tab_id);
+            //console.log(tab_id);
 
             $(this).removeClass('active');
             $('.memberData').removeClass('active').removeAttr("style");
@@ -396,16 +396,16 @@ $(document).ready(function () {
             // prev next 
             var divs = $('ul.desktopPop .memberData');
             var now = index;
-            console.log('now ---', now);            
-            console.log(divs.length, now);
+            //console.log('now ---', now);            
+            //console.log(divs.length, now);
 
             $(".btn-popup-group .btn-next").on('click', function() {
                 
                 divs.eq(now).removeClass('active').removeAttr("style");
-                console.log('now ---', now);
+                //console.log('now ---', now);
                 now = (now + 1 < divs.length) ? now + 1 : 0;
                 divs.eq(now).addClass('active');
-                console.log('next - ', now);
+                //console.log('next - ', now);
                 
             });
             $(".btn-popup-group .btn-prev").on('click', function() {
@@ -413,7 +413,7 @@ $(document).ready(function () {
                 divs.eq(now).removeClass('active').removeAttr("style");
                 now = (now > 0) ? now - 1 : divs.length - 1;
                 divs.eq(now).addClass('active');
-                console.log('prev - ', now);
+                //console.log('prev - ', now);
             });
 
         });
@@ -476,7 +476,6 @@ $(document).ready(function () {
 
 
 })(jQuery);
-
 
 
 
