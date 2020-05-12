@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     
     $(window).scroll(function() {
         var hT = $('header').offset().top,
@@ -36,12 +35,6 @@ $(document).ready(function () {
     });
 
 
-    // $('section.sec-testimonials .btn-wrap').on("click tap", function () {
-    //     $('section.sec-testimonials .other-item').slideToggle('slow');
-    //     $('.btn-wrap .btn-read img').toggleClass('active');
-    // });
-
-
     if ($(window).width() < 1025){
 
         $('header .li-link .link').click(function() {
@@ -60,7 +53,6 @@ $(document).ready(function () {
             // console.log('exit ====');
         });
     }
-
 
     if ($('.sec-slider').length) {
         var owlHomeBanner = $('#homeBanner.owl-carousel');
@@ -312,57 +304,156 @@ $(document).ready(function () {
         });
     }
 
-
-    $('ul.tabs li').click(function () {
+    $('ul.tabs li.tab-link').click(function () {
         var tab_id = $(this).attr('data-tab');      
 
         $('ul.tabs li').removeClass('active');
         $('.tab-content').removeClass('active');
-        $('.line-wrap ul.ul-line li').removeClass('active');
+        $('.dots-line-wrap ul.ul-line li').removeClass('active');
         
         $(this).addClass('active');
-        $('.line-wrap ul.ul-line #line-' +tab_id).addClass('active');
+        $('.dots-line-wrap ul.ul-line #line-' +tab_id).addClass('active');
         $("#" + tab_id).addClass('active');
- 
 
     });
 
-   
+    if ($(window).width() < 1025){
+        
+        $('ul.tabs')
+        .on("click", "li:not('.active') a", function(event) {
+            //console.log('saif');
+            $(this).closest('ul').removeClass("open");
+            $('span.arrow').removeClass('active');
+        })
+        .on("click", "li.active a", function(event) {
+            //console.log('ali');
+            $(this).closest('ul').toggleClass("open");
+            $('span.arrow').toggleClass('active');
+        });
+    }
+       
     // Read More
     if ($('.board-wrap').length) {
 
-        var showChar = 550;  // How many characters are shown by default
-        var ellipsestext = "...";
-        var moretext = '<div class="btn-read flex-wrap"><span>read more</span> <img src="images/circle-arrow.svg" alt=""></div>';
-        var lesstext = '<div class="btn-read flex-wrap readLess"><span>read less</span> <img src="images/circle-arrow.svg" alt=""></div>';
+        if ($(window).width() > 1024){
+            var showChar = 350;  // How many characters are shown by default
+            var ellipsestext = "...";
+            var moretext = '<div class="btn-read flex-wrap"><span>read more</span> <img src="images/circle-arrow.svg" alt=""></div>';
+            var lesstext = '<div class="btn-read flex-wrap readLess"><span>read less</span> <img src="images/circle-arrow.svg" alt=""></div>';
+            
+    
+            $('p.more').each(function() {
+                var content = $(this).html();    
+                if(content.length > showChar) {    
+                    var c = content.substr(0, showChar);
+                    var h = content.substr(showChar, content.length - showChar);
+                    var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';    
+                    $(this).html(html);
+                }    
+            });
+            
+            $(".morelink").click(function(){
+                if($(this).hasClass("less")) {
+                    $(this).removeClass("less");
+                    $(this).html(moretext);
+                } else {
+                    $(this).addClass("less");
+                    $(this).html(lesstext);
+                }
+                $(this).parent().prev().toggle();
+                $(this).prev().toggle();
+                return false;
+            }); 
+        }
         
+        
+        $('.board-wrap ul.mobile-wrap li').on('click', function(e) {
+            e.preventDefault();
+            if(!$(this).find('.memberData').hasClass('active')) {
+                $(this).removeClass('active');
+                $('.memberData').removeClass('active');
+                //  console.log('hi ====');
+            }
+            var index = 0;
+            index = $(this).index();
+            console.log(index);
+            
 
-        $('p.more').each(function() {
-            var content = $(this).html();    
-            if(content.length > showChar) {    
-                var c = content.substr(0, showChar);
-                var h = content.substr(showChar, content.length - showChar);
-                var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';    
-                $(this).html(html);
-            }    
+            $('body').toggleClass('active');
+            $('header').toggleClass('active');
+            $('.tab-drop-wrap').toggleClass('zindex');
+            $('.desktopPop-wrap').toggleClass('is-visible');           
+
+            var tab_id = $(this).attr('data-mem');     
+            console.log(tab_id);
+
+            $(this).removeClass('active');
+            $('.memberData').removeClass('active').removeAttr("style");
+            
+            $(this).addClass('active');
+            $("#" + tab_id).fadeIn(500).addClass('active').removeAttr("style");
+            
+            // prev next 
+            var divs = $('ul.desktopPop .memberData');
+            var now = index;
+            console.log('now ---', now);            
+            console.log(divs.length, now);
+
+            $(".btn-popup-group .btn-next").on('click', function() {
+                
+                divs.eq(now).removeClass('active').removeAttr("style");
+                console.log('now ---', now);
+                now = (now + 1 < divs.length) ? now + 1 : 0;
+                divs.eq(now).addClass('active');
+                console.log('next - ', now);
+                
+            });
+            $(".btn-popup-group .btn-prev").on('click', function() {
+                
+                divs.eq(now).removeClass('active').removeAttr("style");
+                now = (now > 0) ? now - 1 : divs.length - 1;
+                divs.eq(now).addClass('active');
+                console.log('prev - ', now);
+            });
+
+        });
+
+        $('ul.desktopPop .close').on('click', function(e) {
+            e.preventDefault();
+            $('body').toggleClass('active');
+            $('header').toggleClass('active');
+            $('.desktopPop-wrap').toggleClass('is-visible');
+           
+            $('ul.mobile-wrap li').removeClass('active').removeAttr("style");
+            $('.memberData').removeAttr("style").removeClass('active');            
+            
         });
         
-        $(".morelink").click(function(){
-            if($(this).hasClass("less")) {
-                $(this).removeClass("less");
-                $(this).html(moretext);
-            } else {
-                $(this).addClass("less");
-                $(this).html(lesstext);
-            }
-            $(this).parent().prev().toggle();
-            $(this).prev().toggle();
-            return false;
-        });    
+
+        
 
     }
+
+
+    // funder search
+    if ($('.sec-funders-tab').length){
+        $('[data-search]').on('keyup', function() {
+            var searchVal = $(this).val();
+            var filterItems = $('[data-filter-item]');
+    
+            if ( searchVal != '' ) {
+                filterItems.addClass('hidden');
+                $('[data-filter-item][data-filter-name*="' + searchVal.toLowerCase() + '"]').removeClass('hidden');
+            } else {
+                filterItems.removeClass('hidden');
+            }
+        });
+    }
+    
+
     
     
+     
 
     
 
@@ -374,7 +465,7 @@ $(document).ready(function () {
         $(".bgImg").css("background-image", "url('https://prodigedigital.com/projects/humanx/images/about/our-mission-bn.jpg')");
     });
     $('.t2').click(function() {
-        $(".bgImg").css("background-image", "url('https://prodigedigital.com/projects/humanx/images/about/our-journey-bn.png')");      
+        $(".bgImg").css("background-image", "url('https://prodigedigital.com/projects/humanx/images/about/our-journey-bn.jpg')");      
     });
     $('.t3').click(function() {
         $(".bgImg").css("background-image", "url('https://prodigedigital.com/projects/humanx/images/about/our-board-bn.jpg')");
@@ -385,6 +476,8 @@ $(document).ready(function () {
 
 
 })(jQuery);
+
+
 
 
 
@@ -443,7 +536,7 @@ if ($('#counter').length) {
     });
 }
 
-
+// Map 
 if ($('.sec-map').length) {
     var jsonData = [
         {

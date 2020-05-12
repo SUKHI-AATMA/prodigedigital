@@ -2262,8 +2262,16 @@ section.sec-timeline{
         padding-left: 0;
     }
 
+    section.sec-partners .container .inner-wrap .partners-wrap .owl-carousel .owl-stage .owl-item .item {
+        width: 150px;
+    }
 
 
+}
 
 
+@media screen and (max-width : 320px){
+    section.sec-partners .container .inner-wrap .partners-wrap .owl-carousel .owl-stage .owl-item .item {
+        width: 128px;
+    }
 }
