@@ -107,22 +107,7 @@ $(document).ready(function () {
             owlHomeBanner.trigger('stop.owl.autoplay');
             owlHomeBanner.trigger('play.owl.autoplay');
         });
-        
-
-        
-        // owlHomeBanner.on('changed.owl.carousel', function(event) {
-        //     console.log("test");
-            // selecting the current active item
-            //var item = event.item.index-2;
-            // first removing animation for all captions
-           // console.log(item, 'item ===');
-            
-            // $('h1').removeClass('wow fadeInUp saif');
-            // $('.owl-item').not('.cloned').eq(item).find('h1').addClass('wow fadeInUp saif');
-
-        //});
-
-        
+                
         
     }
 
@@ -332,7 +317,7 @@ $(document).ready(function () {
         });
     }
        
-    // Read More
+    // Board Block
     if ($('.board-wrap').length) {
 
         if ($(window).width() > 1024){
@@ -422,14 +407,106 @@ $(document).ready(function () {
             e.preventDefault();
             $('body').toggleClass('active');
             $('header').toggleClass('active');
+            $('.tab-drop-wrap').toggleClass('zindex');
             $('.desktopPop-wrap').toggleClass('is-visible');
            
             $('ul.mobile-wrap li').removeClass('active').removeAttr("style");
             $('.memberData').removeAttr("style").removeClass('active');            
             
-        });
+        });        
         
 
+    }
+
+    // Funders Block
+    if ($('.funders-block').length) {
+       
+        $('.funders-block ul.funders-list li ').on('click', function(e) {
+            e.preventDefault();
+            if(!$(this).find('ul .funder-details').hasClass('active')) {
+                $(this).removeClass('active');
+                $('.funder-details').removeClass('active');
+                //  console.log('hi ====');
+            }
+            var index = 0;
+            index = $(this).index();
+            //console.log(index);
+            
+
+            $('body').toggleClass('active');
+            $('header').toggleClass('active');
+            $('.tab-drop-wrap').toggleClass('zindex');
+            $('.funders-container').toggleClass('is-visible');           
+
+            var tab_id = $(this).attr('data-funder');     
+            //console.log(tab_id);
+
+            $(this).removeClass('active');
+            $('.funder-details').removeClass('active').removeAttr("style");
+            
+            $(this).addClass('active');
+            $("#" + tab_id).fadeIn(500).addClass('active').removeAttr("style");
+            
+            // prev next 
+            var divs = $('ul .funder-details');
+            var now = index;
+            //console.log('now ---', now);            
+            //console.log(divs.length, now);
+
+
+            // $(document).on('keydown', function( event ) { 
+            //     if(event.keyCode == 37) {
+            //         btnPrev();
+            //     }
+            //     if(event.keyCode == 39) {
+            //         btnNext();
+            //     }
+            // });
+
+            $(".btn-popup-group .btn-next").on('click', function() {
+                btnNext();
+            });
+            $(".btn-popup-group .btn-prev").on('click', function() {
+                btnPrev();
+            });
+
+            function btnNext(){
+                divs.eq(now).removeClass('active').removeAttr("style");
+                //console.log('now ---', now);
+                now = (now + 1 < divs.length) ? now + 1 : 0;
+                divs.eq(now).addClass('active');
+                //console.log('next - ', now);
+            }
+
+            function btnPrev(){
+                divs.eq(now).removeClass('active').removeAttr("style");
+                now = (now > 0) ? now - 1 : divs.length - 1;
+                divs.eq(now).addClass('active');
+                //console.log('prev - ', now);
+            }
+
+        });
+
+        $('ul.funders-content .close').on('click', function(e) {
+            e.preventDefault();
+            liClick($(this));            
+        });
+
+        $(document).bind('keydown', function(e) { 
+            if (e.which == 27) {
+                liClick($(this)); 
+            }
+        });
+        
+        function liClick() {
+            $('body').toggleClass('active');
+            $('header').toggleClass('active');
+            $('.tab-drop-wrap').toggleClass('zindex');
+            $('.funders-container').toggleClass('is-visible');
+           
+            $('ul.funders-list li').removeClass('active').removeAttr("style");
+            $('.funder-details').removeAttr("style").removeClass('active');    
+        }
         
 
     }

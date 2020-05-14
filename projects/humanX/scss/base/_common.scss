@@ -525,9 +525,11 @@ button.mfp-close{
         top: 36px;
         left: 0;
         z-index: 11;
+        display: block;
 
         &.zindex{
             z-index: 0;
+            display: none;
         }
 
         ul.tabs{
