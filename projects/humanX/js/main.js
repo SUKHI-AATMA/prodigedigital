@@ -41,11 +41,9 @@ $(document).ready(function () {
             if(!$(this).parent().find('.dropdown').hasClass('active')) {
                 $('.dropdown').slideUp();
                 $('.link').removeClass('active');
-                // console.log('hi ====');
-                
+                // console.log('hi ====');   
             }
             // console.log('hello ====');
-            // $(this).addClass('active');
             $(this).toggleClass('active');
             $('.dropdown').removeClass('active');
             $(this).parent().find('.dropdown').slideToggle();
@@ -111,113 +109,126 @@ $(document).ready(function () {
         
     }
 
-    if ($('.sec-partners').length) {
-        var owlPartners = $('#partners .owl-carousel');
-        owlPartners.owlCarousel({
-            margin: 30,
-            loop:true,
-            nav: true,
-            dots: false,
-            smartSpeed: 250,
-            slideTransition: 'linear',
-            mouseDrag: false,
-            lazyLoad: true,
-            autoplay:true,
-            autoplayTimeout:5000,
-            autoplayHoverPause:true,
-            responsive: {
-                0: {
-                    center: true,
-                    items: 1,
-                    margin: 0,
-                    nav: false,
-                    stagePadding: 80
-                },
-                361: {
-                    center: true,
-                    items: 1,
-                    margin: 0,
-                    nav: false,
-                    stagePadding: 100
-                },
-                375: {
-                    center: true,
-                    items: 1,
-                    margin: 0,
-                    nav: false,
-                    stagePadding: 70
-                },
-                481: {
-                    center: true,
-                    items: 1,
-                    margin: 0,
-                    nav: false,
-                    stagePadding: 90
-                },
-                768: {
-                    items: 3,
-                    slideBy: 2
-                },
-                1200: {
-                    items: 4,
-                    slideBy: 3
-                }
-            },
-        });
+    window.addEventListener('scroll', function(e) {
 
-        var owlFunders = $('#funders .owl-carousel');
-        owlFunders.owlCarousel({
-            margin: 30,
-            loop: true,
-            nav: true,
-            dots: false,
-            smartSpeed: 250,
-            slideTransition: 'linear',
-            mouseDrag: false,
-            lazyLoad: true,
-            autoplay:true,
-            autoplayTimeout:5000,
-            autoplayHoverPause:true,
-            responsive: {
-                0: {
-                    center: true,
-                    items: 1,
-                    margin: 0,
-                    nav: false,
-                    stagePadding: 80
-                },
-                361: {
-                    center: true,
-                    items: 1,
-                    margin: 0,
-                    nav: false,
-                    stagePadding: 100
-                },
-                375: {
-                    center: true,
-                    items: 1,
-                    margin: 0,
-                    nav: false,
-                    stagePadding: 80
-                },
-                481: {
-                    center: true,
-                    items: 1,
-                    margin: 0,
-                    nav: false,
-                    stagePadding: 90
-                },
-                768: {
-                    items: 3,
-                    slideBy: 2
-                },
-                1200: {
-                    items: 4,
-                    slideBy: 3
-                }
-            },
-        });
-    }    
+        if ($('.sec-partners').length) {
+
+            if (isOnScreen($('#partners'))) {
+                //console.log('partners');
+                var owlPartners = $('#partners .owl-carousel');
+                owlPartners.owlCarousel({
+                    margin: 30,
+                    loop:true,
+                    nav: true,
+                    dots: false,
+                    smartSpeed: 250,
+                    slideTransition: 'linear',
+                    mouseDrag: false,
+                    lazyLoad: true,
+                    autoplay:true,
+                    autoplayTimeout:5000,
+                    autoplayHoverPause:true,
+                    responsive: {
+                        0: {
+                            center: true,
+                            items: 1,
+                            margin: 0,
+                            nav: false,
+                            stagePadding: 80
+                        },
+                        361: {
+                            center: true,
+                            items: 1,
+                            margin: 0,
+                            nav: false,
+                            stagePadding: 100
+                        },
+                        375: {
+                            center: true,
+                            items: 1,
+                            margin: 0,
+                            nav: false,
+                            stagePadding: 70
+                        },
+                        481: {
+                            center: true,
+                            items: 1,
+                            margin: 0,
+                            nav: false,
+                            stagePadding: 90
+                        },
+                        768: {
+                            items: 3,
+                            slideBy: 2
+                        },
+                        1200: {
+                            items: 4,
+                            slideBy: 3
+                        }
+                    },
+                });
+            }
+
+            if (isOnScreen($('#funders'))) {
+                //console.log('funders');
+                var owlFunders = $('#funders .owl-carousel');
+                owlFunders.owlCarousel({
+                    margin: 30,
+                    loop: true,
+                    nav: true,
+                    dots: false,
+                    smartSpeed: 250,
+                    slideTransition: 'linear',
+                    mouseDrag: false,
+                    lazyLoad: true,
+                    autoplay:true,
+                    autoplayTimeout:5000,
+                    autoplayHoverPause:true,
+                    responsive: {
+                        0: {
+                            center: true,
+                            items: 1,
+                            margin: 0,
+                            nav: false,
+                            stagePadding: 80
+                        },
+                        361: {
+                            center: true,
+                            items: 1,
+                            margin: 0,
+                            nav: false,
+                            stagePadding: 100
+                        },
+                        375: {
+                            center: true,
+                            items: 1,
+                            margin: 0,
+                            nav: false,
+                            stagePadding: 80
+                        },
+                        481: {
+                            center: true,
+                            items: 1,
+                            margin: 0,
+                            nav: false,
+                            stagePadding: 90
+                        },
+                        768: {
+                            items: 3,
+                            slideBy: 2
+                        },
+                        1200: {
+                            items: 4,
+                            slideBy: 3
+                        }
+                    },
+                });
+            }
+        }
+        
+
+    });
+            
 
     if ($('.sec-news').length) {
         var owlNews = $('#news .owl-carousel');
@@ -829,4 +840,14 @@ if ($('.sec-map').length) {
     }
 }
 
+// viewport detect
+function isOnScreen(elem) {
+    // if the element doesn't exist, abort
+    var elementTop = elem.offset().top;
+    var elementBottom = elementTop + elem.outerHeight();
+
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+}
 

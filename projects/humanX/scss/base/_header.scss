@@ -200,7 +200,14 @@ header{
                         margin: 0 auto;
 
                         ul.menu>li{
-                            width: calc(100% / 5 - 24px);
+                            width: calc(100% / 5 - 24px) !important;
+
+                            &.active{
+                                >a{
+                                    color: #FFFFFF;
+                                }
+                            }
+
                             &:after {
                                 content: '';
                                 display: none;
@@ -364,13 +371,14 @@ header{
                             &.li-resources{
                                 ul.dropdown{
                                     li{
-                                        width: 164px;
+                                        // width: 164px;
+                                        width: 180px;
                                     }
                                 }
                             }
                             
                             ul.dropdown{
-                                padding: 30px 30px;
+                                padding: 30px 20px 30px 30px;
                                 display: none;
                                 position: absolute;
                                 top: 100%;
@@ -381,7 +389,7 @@ header{
                                 
 
                                 li{
-                                    width: 130px;
+                                    width: 142px;
                                     padding-bottom: 12px;
                                     position: relative;
                                     @include transition(.3s ease-in-out); 
@@ -555,7 +563,7 @@ header{
         cursor: pointer;
         padding: 0;
         margin-bottom: 24px;
-        width: 100%;
+        width: 100% !important;
         cursor: none;
         border-bottom: 1px solid;
         padding-bottom: 24px;

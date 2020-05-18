@@ -629,9 +629,13 @@ button.mfp-close{
     .banner-circle .circle-container{
         bottom: -50px;
     }
+    .banner-circle .circle-container .circle-line-wrap .circle-wrap .Oval_1{
+        padding-top: 5px;
+    }
     .banner-circle .circle-container .circle-line-wrap{
         height: 300px;
         width: 300px;    
+        bottom: -18px;
     }
     .banner-circle .circle-container .inner-wrap .circle-img{
         width: 260px;
@@ -697,11 +701,14 @@ button.mfp-close{
     .banner-circle .circle-container{
         bottom: -36px;
     }
+    .banner-circle .circle-container .circle-line-wrap .circle-wrap .Oval_1{
+        padding-top: 5px;
+    }
     .banner-circle .circle-container .circle-line-wrap {
         height: 260px;
         width: 260px;
         right: -12px;
-        bottom: -12px;
+        bottom: -14px;
     }
     .banner-circle .circle-container .inner-wrap .circle-img {
         width: 230px;
