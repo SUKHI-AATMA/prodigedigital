@@ -300,15 +300,16 @@ $(document).ready(function () {
         });
     }
 
-    $("ul.tabs li.tab-link").eq(0).addClass("active");
-    $(".tab-container .tab-content").eq(0).addClass("active");
+    // $("ul.tabs li.tab-link").eq(0).addClass("active");
+    // $(".tab-container .tab-content").eq(0).addClass("active");
 
 
     $('ul.tabs li.tab-link').click(function () {
+        //tabLink();
         var tab_id = $(this).attr('data-tab');  
         var tabLink = $(this).attr('data-link');     
         // console.log('tabLink', tabLink);
-        var imgPath = 'https://prodigedigital.com/projects/humanx/images/about/';
+        var imgPath = 'https://prodigedigital.com/projects/humanx/FES/images/about/';
         var imgURL = imgPath+tabLink+"-bn.jpg";
         //console.log(imgURL);
         
@@ -320,8 +321,8 @@ $(document).ready(function () {
         $(this).addClass('active');
         $('.dots-line-wrap ul.ul-line #line-' +tab_id).addClass('active');
         $("#" + tab_id).addClass('active');
-
     });
+    
 
     if ($(window).width() < 1025){
         
@@ -548,13 +549,34 @@ $(document).ready(function () {
     }
     
     
-     
-
     
+
 
 });
 
 
+
+$(window).load(function() {
+    //alert("window is loaded");
+    $("ul.tabs li.tab-link").eq(0).addClass("active");
+    $(".tab-container .tab-content").eq(0).addClass("active");
+    
+    var url = window.location.href; 
+    var headerHref = url.split("?").pop();
+    //console.log(headerHref, 'url');
+    
+    $("ul.tabs li.tab-link").each(function () {
+        var dataLink = $(this).attr('data-link');
+        
+        if(dataLink == headerHref) {
+            //console.log('page to action', headerHref , dataLink);
+            $(this).click();
+        }
+
+    });
+
+    
+});
 
 
 // Couner Number Comma
