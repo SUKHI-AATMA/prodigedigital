@@ -1496,6 +1496,10 @@ section.thankyou .coll img .desc p.link a {
   margin-top: 100px;
 }
 
+.contact_us_form .hidden {
+  display: none;
+}
+
 .contact_us_form .form-group {
   margin-bottom: 5px;
 }
