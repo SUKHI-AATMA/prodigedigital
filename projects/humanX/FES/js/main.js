@@ -24,7 +24,6 @@ $(document).ready(function () {
 
     });
 
-
     $('.hamburger').on("click tap", function () {
         $(this).toggleClass('open');
         $('header .menu-wrap').toggleClass('open');
@@ -309,7 +308,7 @@ $(document).ready(function () {
         var tab_id = $(this).attr('data-tab');  
         var tabLink = $(this).attr('data-link');     
         // console.log('tabLink', tabLink);
-        var imgPath = 'https://prodigedigital.com/projects/humanx/FES/images/about/';
+        var imgPath = '../../images/inner-banner/';
         var imgURL = imgPath+tabLink+"-bn.jpg";
         //console.log(imgURL);
         
@@ -574,6 +573,7 @@ $(window).load(function() {
         }
 
     });
+
 
     
 });
@@ -861,5 +861,6 @@ function isOnScreen(elem) {
     var viewportBottom = viewportTop + $(window).height();
     return elementBottom > viewportTop && elementTop < viewportBottom;
 }
+
 
 

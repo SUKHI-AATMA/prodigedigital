@@ -1,5 +1,5 @@
 section.sec-abt-bn{
-    background: url('../../images/about/our-mission-bn.jpg');
+    background: url('../../images/inner-banner/our-mission-bn.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -53,6 +53,15 @@ section.sec-abt-bn{
         }
     }
         
+    .inner-wrap{
+        
+        .circle-img{
+            background: url(../../images/inner-banner/our-mission-bn.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+    }
+
 }
 
 

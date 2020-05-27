@@ -1,5 +1,5 @@
 section.sec-funders-bn{
-    background: url('../../images/funders/funders-bn.jpg');
+    background: url('../../images/inner-banner/funders-bn.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -62,9 +62,9 @@ section.sec-funders-bn{
     .inner-wrap{
         
         .circle-img{
-            background: url(../../images/funders/funders-bn.jpg) !important;
-            background-size: 256% !important;
-            background-position: 34% center !important;
+            background: url(../../images/inner-banner/funders-bn.jpg);
+            background-size: 256%;
+            background-position: 34% center;
         }
     }
 }
