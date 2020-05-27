@@ -308,7 +308,7 @@ $(document).ready(function () {
         var tab_id = $(this).attr('data-tab');  
         var tabLink = $(this).attr('data-link');     
         // console.log('tabLink', tabLink);
-        var imgPath = '../../images/inner-banner/';
+        var imgPath = 'https://prodigedigital.com/projects/humanx/FES/images/inner-banner/';
         var imgURL = imgPath+tabLink+"-bn.jpg";
         //console.log(imgURL);
         
