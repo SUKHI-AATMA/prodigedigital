@@ -386,8 +386,14 @@ header{
                                 border-radius: 0 0 5px 5px;
                                 background-color: #FFFFFF;
                                 box-shadow: 0 5px 10px 0 rgba(206,206,206,0.3);
-                                
 
+                                &:hover > * {
+                                    opacity: 0.4;
+                                }
+                                &:hover > *:hover {
+                                    opacity: 1;
+                                }
+                                
                                 li{
                                     width: 142px;
                                     padding-bottom: 12px;
@@ -404,7 +410,8 @@ header{
                                         font-size: 14px;
                                         line-height: 19px;
                                         cursor: pointer;
-                                        @include transition(.3s ease-in-out);
+                                        transition: font-weight .4s ease-in-out;
+                                        // @include transition(.3s ease-in-out);
                                         width: 100%;
                                         display: block;
                                         text-transform: capitalize;
@@ -420,13 +427,14 @@ header{
                                             border-radius: 50%;
                                             position: absolute;
                                             top: 8px;
-                                            left: -16px;
+                                            right: 0px;
                                         }
                                         
                                         a{
+                                            //font-weight: bold;
                                             color: #004950;
-                                            transition: 50ms ease-out; 
-                                            @include transition(.3s ease-in-out);                   
+                                            // transition: 50ms ease-out; 
+                                            // @include transition(.3s ease-in-out);                   
                                         }
                                     }
                                 }

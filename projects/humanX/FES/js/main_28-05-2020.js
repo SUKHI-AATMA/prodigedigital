@@ -53,7 +53,6 @@ $(document).ready(function () {
 
     if ($('.sec-slider').length) {
         var owlHomeBanner = $('#homeBanner.owl-carousel');
-        
         owlHomeBanner.owlCarousel({
             loop: true,
             nav: true,
@@ -96,53 +95,15 @@ $(document).ready(function () {
                     player.contentWindow.postMessage(JSON.stringify(command), "*");        
                 }        
             }
+
+
         });
 
-        var videoInterval;
-
-        function videoTimer() {
-            //console.log(123);
-            var vid = document.getElementById("myVideo");
-            //console.log(vid.currentTime + "=====" + vid.duration)
-            if(vid.currentTime == vid.duration) {
-                clearTimeout(videoInterval);
-                $(".owl-dots .active").next().click();
-                //console.log("inside_1");
-                owlHomeBanner.trigger('play.owl.autoplay');
-            }
-            else {
-                //console.log("inside_2");
-                owlHomeBanner.trigger('stop.owl.autoplay');
-                videoInterval = setTimeout(videoTimer, 500);
-            }
-        }
-
-        videoTimer();
-        
         owlHomeBanner.on('changed.owl.carousel', function(e) {
-            //console.log($(".owl-dots .active").index());
-            if($(".owl-dots .active").index() == 0) {
-                document.getElementById("myVideo").play();
-                videoTimer();
-            }
-            else {
-                clearTimeout(videoInterval);
-                //console.log("b4:" + document.getElementById("myVideo").currentTime);
-                document.getElementById("myVideo").pause();
-                document.getElementById("myVideo").currentTime = 0;
-                ///-console.log("after:" + document.getElementById("myVideo").currentTime);
-                
-                owlHomeBanner.trigger('play.owl.autoplay');
-            }
-            
             // console.log('onchange owlHomeBanner');
-            //owlHomeBanner.trigger('stop.owl.autoplay');
-            //owlHomeBanner.trigger('play.owl.autoplay');
+            owlHomeBanner.trigger('stop.owl.autoplay');
+            owlHomeBanner.trigger('play.owl.autoplay');
         });
-
-        // $("#homeBanner .owl-next").click(function(){
-        //     console.log($(".owl-dots .active").index());
-        // })
                 
         
     }
@@ -164,7 +125,7 @@ $(document).ready(function () {
                     mouseDrag: false,
                     lazyLoad: true,
                     autoplay:true,
-                    autoplayTimeout:4000,
+                    autoplayTimeout:5000,
                     autoplayHoverPause:true,
                     responsive: {
                         0: {
@@ -220,7 +181,7 @@ $(document).ready(function () {
                     mouseDrag: false,
                     lazyLoad: true,
                     autoplay:true,
-                    autoplayTimeout:4000,
+                    autoplayTimeout:5000,
                     autoplayHoverPause:true,
                     responsive: {
                         0: {
@@ -343,15 +304,6 @@ $(document).ready(function () {
 
 
     $('ul.tabs li.tab-link').click(function () {
-
-        var index = $(this).index();
-        //console.log(index);
-        $('.sec-abt-bn .content').show();
-        if(index != 1){
-            $('.sec-abt-bn .content').hide();
-        }
-        
-
         //tabLink();
         var tab_id = $(this).attr('data-tab');  
         var tabLink = $(this).attr('data-link');     
@@ -490,7 +442,7 @@ $(document).ready(function () {
     // Funders Block
     if ($('.funders-block').length) {
        
-        $('.funders-block ul.itemList li ').on('click', function(e) {
+        $('.funders-block ul.funders-list li ').on('click', function(e) {
             e.preventDefault();
             if(!$(this).find('ul .funder-details').hasClass('active')) {
                 $(this).removeClass('active');
@@ -573,7 +525,7 @@ $(document).ready(function () {
             $('.tab-drop-wrap').toggleClass('zindex');
             $('.funders-container').toggleClass('is-visible');
            
-            $('ul.itemList li').removeClass('active').removeAttr("style");
+            $('ul.funders-list li').removeClass('active').removeAttr("style");
             $('.funder-details').removeAttr("style").removeClass('active');    
         }
         

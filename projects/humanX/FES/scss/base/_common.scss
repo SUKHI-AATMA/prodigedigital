@@ -359,7 +359,8 @@ button.mfp-close{
         span.arrow{
             position: absolute;
             top: 13px;
-            left: 10px;
+            // left: 10px;
+            right: 10px;
             z-index: 2;
             width: 18px;
             height: 18px;
@@ -393,7 +394,7 @@ button.mfp-close{
                 letter-spacing: 0px;
                 line-height: 22px;
                 cursor: pointer;
-                @include transition(.3s ease-in-out);;
+                @include transition(.3s ease-in-out);
             }
             &:hover{
                 transition: 50ms ease-out;
@@ -522,10 +523,12 @@ button.mfp-close{
     // tab drop
     .tab-drop-wrap{
         position: absolute;
-        top: 36px;
+        // top: 36px;
+        top: 40px;
         left: 0;
         z-index: 11;
         display: block;
+        width: 100%;
 
         &.zindex{
             z-index: 0;
@@ -540,6 +543,7 @@ button.mfp-close{
             margin-bottom: 0;
             height: inherit;
             background-color: #fff;
+            max-width: 100%;
 
             span.arrow{
                 display: block;
@@ -552,6 +556,7 @@ button.mfp-close{
                 a {
                   position: relative;
                   display: block;
+                  width: 100%;
                 }
         
                 > li.active > a {
@@ -588,9 +593,10 @@ button.mfp-close{
                     height: 100%;
                     display: inline-block;
                     border-color: transparent;
-                    width: 180px;
+                    // width: 180px;
+                    width: 100%;
                     padding-right: 16px;
-                    padding: 12px 12px 12px 36px;
+                    padding: 12px 12px 12px 12px;
                     font-weight: 600;
                     font-size: 21px;
                     line-height: 30px;
@@ -678,9 +684,9 @@ button.mfp-close{
         ul.tabs{
             margin: 0 12px;
 
-            span.arrow {
-                left: 8px;
-            }
+            // span.arrow {
+            //     left: 8px;
+            // }
             // li a{
             //     padding: 12px 24px 12px 8px;
             // }
