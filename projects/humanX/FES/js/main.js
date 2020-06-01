@@ -36,17 +36,20 @@ $(document).ready(function () {
 
     if ($(window).width() < 1025){
 
-        $('header .li-link .link').click(function() {
-            if(!$(this).parent().find('.dropdown').hasClass('active')) {
+        $('header .li-link').click(function() {
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active')
+        
+            if(!$(this).find('.dropdown').hasClass('active')) {
                 $('.dropdown').slideUp();
                 $('.link').removeClass('active');
                 // console.log('hi ====');   
             }
             // console.log('hello ====');
-            $(this).toggleClass('active');
+            $(this).find('.link').toggleClass('active');
             $('.dropdown').removeClass('active');
-            $(this).parent().find('.dropdown').slideToggle();
-            $(this).parent().find('.dropdown').toggleClass('active');
+            $(this).find('.dropdown').slideToggle();
+            $(this).find('.dropdown').toggleClass('active');
             // console.log('exit ====');
         });
     }

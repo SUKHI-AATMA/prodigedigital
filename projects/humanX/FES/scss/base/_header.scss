@@ -395,7 +395,7 @@ header{
                                 }
                                 
                                 li{
-                                    width: 142px;
+                                    width: 148px;
                                     padding-bottom: 12px;
                                     position: relative;
                                     @include transition(.3s ease-in-out); 
@@ -427,7 +427,7 @@ header{
                                             border-radius: 50%;
                                             position: absolute;
                                             top: 8px;
-                                            right: 0px;
+                                            right: -6px;
                                         }
                                         
                                         a{
@@ -575,15 +575,13 @@ header{
         cursor: none;
         border-bottom: 1px solid;
         padding-bottom: 24px;
+        cursor: pointer;
 
         &:last-child{
             border-bottom: 0;
         }
     }
-    // header .container .flex-wrap .menu-wrap.open nav ul.menu>li{
-    //     display: flex;
-    //     justify-content: space-between;
-    // }
+
     header .container .flex-wrap .menu-wrap nav ul.menu>li.active>a, header .container .flex-wrap .menu-wrap nav ul.menu>li:hover>a{
         color: #fff;
     }
@@ -625,6 +623,10 @@ header{
     header .container .flex-wrap .menu-wrap.open nav ul.menu>li.li-resources ul.dropdown{
         left: 0;
     }
+    
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li.li-resources ul.dropdown li{
+        width: 184px;
+    }
     header .container .flex-wrap .menu-wrap.open nav ul.menu>li ul.dropdown{
         display:none;
         padding: 0;
@@ -644,6 +646,9 @@ header{
     }
     header .container .flex-wrap .menu-wrap nav ul.menu>li.li-resources ul.dropdown li{
         width: auto;
+    }
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li ul.dropdown li:hover:before{
+        display: none;
     }
 
 
