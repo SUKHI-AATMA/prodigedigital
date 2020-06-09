@@ -1,0 +1,197 @@
+@media only screen and (max-width: 1024px) {
+    main {
+        header {
+            .display-flex {
+                .logo {
+                    width: 90%;
+                }
+            }
+            
+            nav {
+                display: none;
+            }
+        }
+
+        .fixed-wrapper {
+            padding-left: 30px;
+            padding-right: 30px;
+            width: 100%;
+        }
+    
+        .banner-wrapper {
+            .owl-item {
+                &.active {
+                    .child-companies {
+                        padding: 0 30px;
+                        flex-wrap: wrap;
+    
+                        img {
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .banner-wrapper, .message-box-wrapper, .ht-media-intro {
+            margin-bottom: 40px;
+        }
+    
+        .ht-media-intro {
+            .ht-media-logo {
+                margin-bottom: 30px;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            h2 {
+                width: 100%;
+                line-height: inherit;
+            }
+        }
+    
+        .ht-reach-wrapper {
+            background-position: center center;
+        }
+    
+        .ht-gallery-wrapper {
+            .ht-gallery-content {
+                .carousel-content {
+                    img {
+                        width: 95%;
+                        margin: 0 auto;
+                    }
+
+                    .headline {
+                        font-size: 4rem;
+                    }
+                }
+            }
+        }
+    
+        footer {
+            padding-left: 10px;
+            padding-right: 10px;
+    
+            nav {
+                ul {
+                    width: 80%;
+    
+                    li {
+                        width: 50%;
+
+                        &:nth-child(3) {
+                            margin-top: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    main {
+        header {
+            .display-flex {
+                .logo {
+                    width: 75%;
+                }
+            }
+        }
+
+        .preloader {
+            .preloader-text {
+                font-size: 3rem;
+            }
+        }
+
+        .banner-wrapper {
+            .owl-item.active {
+                .child-companies {
+                    img {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+        
+
+        .ht-media-intro {
+            h1 {
+                font-size: 3rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        .ht-reach-wrapper {
+            .ht-reach-content {
+                .box {
+                    font-size: 2rem;
+
+                    span {
+                        font-size: 4rem;
+                    }
+                }
+            }
+        }
+
+        .padded-box-left-right-72 {
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+
+        .message-box-wrapper {
+            p {
+                font-size: 2.5rem;
+                line-height: inherit;
+            }
+        }
+
+        footer {
+            & > .display-flex {
+                flex-wrap: wrap;
+            }
+
+            nav {
+                ul {
+                    width: 100%;
+
+                    li {
+                        width: 50%;
+                    }
+                }
+            }
+
+            .social-copyrights-wrapper {
+                margin-top: 20px;
+                width: 100%;
+
+                .ht-media-logo {
+                    display: none;
+                }
+
+                .social-media-wrapper {
+                    width: 100%;
+                    padding-bottom: 10px;
+                    border-bottom: 0.5px solid $colorWhite;
+                }
+
+                .copyrights-text {
+                    text-align: left;
+                    background: url('../images/HT-Media-logo.png') no-repeat 0 0;
+                    background-size: 25%;
+                    padding: 2px 0 4px 100px;
+                }
+            }
+        }
+    }
+
+    
+}
