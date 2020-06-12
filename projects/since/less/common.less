@@ -15,7 +15,7 @@ body {
 }
 
 body {
-    
+
     color: #000;
     font-family: 'AktivGroteskEx-Regular', sans-serif;
 }
@@ -109,8 +109,9 @@ header {
             position: relative;
             width: 60%;
 
-            img,svg {
-            	float: right;
+            img,
+            svg {
+                float: right;
                 width: 100%;
 
                 &.brand_tag_line {
@@ -374,19 +375,22 @@ footer {
 
 
     &:nth-child(2) {
-    	background: #AECDD2;
-    	.content {
-	    	.img {
-		    	margin: 40px 0 0;
-	    	}
-    	}
+        background: #AECDD2;
+
+        .content {
+            .img {
+                margin: 40px 0 0;
+            }
+        }
     }
+
     &:nth-child(3) {
         background: #EBE0A9;
 
         .content .desc {
-            bottom: 130px;
-            right: -85px;
+            bottom: 124px;
+            right: -107px;
+            width: 170px;
         }
     }
 
@@ -394,7 +398,7 @@ footer {
         background: #CBD7B7;
 
         .content .desc {
-            right: -105px;
+            right: -109px;
         }
     }
 
@@ -432,11 +436,12 @@ footer {
             top: 30%;
             left: -27%;
             z-index: 1;
-			
+
             p {
                 margin: 0 0 20px;
+
                 span {
-                	display: inline-block;
+                    display: inline-block;
                 }
             }
         }
@@ -452,8 +457,9 @@ footer {
             color: #000000;
             position: absolute;
             bottom: 20%;
-            right: -20%;
+            right: -142px;
             width: 150px;
+            margin: 0 0 0 30px
         }
 
         .img {
@@ -473,20 +479,24 @@ footer {
     top: 50%;
     right: 0;
     /*transform: translate(50%, -50%);*/
-	transform-origin: 100% 0;
+    transform-origin: 100% 0;
 
     .timeofday {
         position: relative;
-		svg {
-			/*transform: ;*/
-			transition: all linear 0.3s;
-			path {
-				transition: all linear 0.3s;
-			}
-		}
+
+        svg {
+            /*transform: ;*/
+            transition: all linear 0.3s;
+
+            path {
+                transition: all linear 0.3s;
+            }
+        }
+
         &.morning {
             svg {
                 transform: rotate(0deg);
+
                 path {
                     fill: #fff;
 
@@ -500,6 +510,7 @@ footer {
         &.afternoon {
             svg {
                 transform: rotate(-100deg);
+
                 path {
                     fill: #fff;
 
@@ -513,6 +524,7 @@ footer {
         &.evening {
             svg {
                 transform: rotate(-205deg);
+
                 path {
                     fill: #fff;
 
@@ -526,6 +538,7 @@ footer {
         &.night {
             svg {
                 transform: rotate(-280deg);
+
                 path {
                     fill: #fff;
 
@@ -551,9 +564,11 @@ footer {
             transform: translate(0, -50%);
             opacity: 0;
             transition: all ease-in 0.2s;
-			&.blink {
-				opacity: 1;
-			}
+
+            &.blink {
+                opacity: 1;
+            }
+
             span {
                 display: inline-block;
                 font-size: 21px;
@@ -561,4 +576,243 @@ footer {
             }
         }
     }
+}
+
+@media only screen and (max-width: 1680px) {
+    .sec .content {
+        width: 40%;
+    }
+
+    .sec:nth-child(3) .content .desc {
+        right: -109px;
+    }
+
+    .sec:nth-child(4) .content .desc {
+        right: -111px;
+    }
+
+    .sec:nth-child(5) .content .desc {
+        right: -103px;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    header .container .search input {}
+
+    .sec .content .title {
+        font-size: 70px;
+    }
+
+    .sec .content .desc {
+        font-size: 16px;
+    }
+
+    .sec .content {
+        width: 35%;
+    }
+
+    .sec:nth-child(3) .content .desc {
+        right: -113px;
+    }
+
+    .sec .content .desc {
+        right: -148px;
+    }
+
+    .sec:nth-child(3) .content .desc {
+        right: -125px;
+        bottom: 104px;
+    }
+
+    .sec:nth-child(5) .content .desc {
+        right: -116px;
+    }
+
+    .sec:nth-child(5) .content .desc {
+        bottom: 18.5%;
+    }
+
+    header nav li {
+        font-size: 14px;
+    }
+
+    header .container .search input {
+        font-size: 12px;
+    }
+
+    header .container .headRight a {
+        font-size: 12px;
+        width: 25px;
+    }
+
+    .clock {
+        width: 200px;
+        height: auto;
+    }
+
+    .clock .timeofday svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .clock .timeofday .time {
+        font-size: 24px;
+    }
+
+    .clock .timeofday .time span {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .sec .content .title {
+        font-size: 50px;
+    }
+
+    .primaryBtn {
+        font-size: 12px;
+        padding: 12px 26px 8px;
+    }
+
+    .sec .content .desc {
+        right: -137px;
+        margin: 0 0 0 20px;
+        width: 140px;
+    }
+
+    .sec .content {
+        width: 40%;
+    }
+
+    .sec:nth-child(3) .content .desc {
+        right: -113px;
+    }
+
+    .sec:nth-child(5) .content .desc {
+        right: -104px;
+    }
+
+    footer .row {
+        padding: 60px 0 60px;
+    }
+
+    footer .row .col:first-child label {
+        font-size: 26px;
+    }
+
+    footer .row .col:nth-child(3) .tip .tipTitle {
+        font-size: 18px;
+    }
+
+    footer .row .col:nth-child(2) p.social a {
+        width: 45px;
+    }
+
+    footer .row .col:nth-child(2) p.social {
+        width: 84%;
+    }
+
+}
+
+@media only screen and (max-width: 1440px) {
+    footer .row .col:first-child input[type="text"] {
+        padding: 12px 10px 8px;
+        font-size: 12px;
+    }
+    header nav li {
+        font-size: 12px;
+    }
+
+    header nav li a:after {
+        height: 1px;
+    }
+
+    .sec .content .title {
+        font-size: 45px;
+    }
+
+    .primaryBtn {
+        font-size: 10px;
+    }
+
+    .sec .content .title p {
+        margin: 0 0 10px;
+    }
+
+    .clock {
+        width: 160px;
+    }
+
+    .clock .timeofday .time {
+        font-size: 20px;
+    }
+
+    .clock .timeofday .time span {
+        font-size: 15px;
+    }
+
+    .sec .content {
+        width: 33%;
+    }
+
+    .sec .content .desc {
+        font-size: 14px;
+        width: 120px;
+        right: -115px;
+    }
+
+    header .container .search input {
+        font-size: 10px;
+    }
+
+    header .container .headRight a {
+        font-size: 10px;
+        width: 20px;
+    }
+
+    header .container .logo {
+        width: 50%;
+    }
+
+    .sec:nth-child(3) .content .desc {
+        width: 150px;
+        right: -110px;
+        bottom: 92px;
+    }
+
+    .sec:nth-child(4) .content .desc {
+        width: 130px;
+        right: -104px;
+    }
+
+    .sec:nth-child(5) .content .desc {
+        right: -89px;
+        bottom: 19%;
+    }
+
+    footer .row .col:first-child label {
+        font-size: 22px;
+    }
+
+    footer .row .col:nth-child(3) .tip .tipTitle {
+        font-size: 16px;
+    }
+
+    footer .row .col:nth-child(3) .tip .subText {
+        font-size: 11px;
+    }
+
+    p.tipText {}
+
+    footer .row .col:nth-child(2) p.social a {
+        width: 40px;
+    }
+
+    a {}
+
+    footer .row .col:nth-child(2) p.social {
+        width: 85%;
+    }
+
+    footer {}
 }
