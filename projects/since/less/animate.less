@@ -25,6 +25,15 @@
 		opacity: 1;
     }
 }
+[data-animate="appear"] {
+    /*transform: translate(0, 50%);*/
+    opacity: 0;
+    transition: all linear 0.3s;
+    &.appear.animate {
+		/*transform: translate(0,0);*/
+		opacity: 1;
+    }
+}
 [data-animate="zoomOut"] {
 	transform: translate(50%, -50%) scale(0) rotate(160deg);
 	transform-origin: 50% 50%;
