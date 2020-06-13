@@ -78,11 +78,11 @@ header {
             input {
                 border: none;
                 background: url(../images/search.svg) no-repeat 90% center transparent;
-                background-size: 13px;
+                background-size: 17px;
                 color: #000;
                 line-height: 1;
                 padding: 9px 10px 5px;
-                width: 105px;
+                width: 140px;
 
                 /**/
                 font-style: normal;
@@ -111,7 +111,7 @@ header {
 
                 &:focus {
                     background: url(../images/search.svg) no-repeat 95% center #fff;
-                    background-size: 13px;
+                    background-size: 17px;
                     border: none;
                     outline: none;
                     width: 160px;
@@ -152,7 +152,7 @@ header {
 
                 img {
                     float: left;
-                    width: 14px;
+                    width: 17px;
                 }
 
                 &:first-child {
@@ -162,7 +162,7 @@ header {
                 &:last-child {
 
                     img {
-                        width: 12px;
+                        width: 14px;
                     }
 
                 }
@@ -480,11 +480,13 @@ footer {
 
                     span {
                         float: left;
-                        overflow: hidden; 
+                        overflow: hidden;
+
                         i {
                             display: block;
                             font-style: normal;
-                            
+                            padding: 0 10px 0 0;
+
                         }
                     }
                 }
@@ -630,24 +632,25 @@ footer {
             &.blink {
                 /*opacity: 1;*/
 
-                animation: animationFrames linear 1.5s;
+                animation: blinker linear 1.5s;
                 animation-iteration-count: infinite;
                 transform-origin: 50% 50%;
-
-                @keyframes animationFrames {
-                    0% {
-                        opacity: 1;
-
-                    }
-
-                    50% {
-                        opacity: 0;
-
-                    }
-
-                    100% {
-                        opacity: 1;
-                    }
+                @keyframes blinker {
+                  0% {
+                    opacity: 1;
+                  }
+                  49% {
+                    opacity: 1;
+                  }
+                  50%{
+                    opacity: 0;
+                  }
+                  99% {
+                    opacity: 0;
+                  }
+                  100% {
+                    opacity: 1;
+                  }
                 }
             }
 
@@ -660,7 +663,18 @@ footer {
     }
 }
 
+@media only screen and (max-width: 1920px) {
+    .secs .sec .content {
+        width: calc(37%);
+    }
+
+    header nav {
+        top: 195px;
+    }
+}
+
 @media only screen and (max-width: 1680px) {
+
     .sec .content {
         width: 40%;
     }
@@ -676,6 +690,16 @@ footer {
     .sec:nth-child(5) .content .desc {
         right: -103px;
     }
+
+    .secs .sec .content {
+        width: calc(40%);
+    }
+
+    header .container .logo {
+        width: 65%;
+    }
+
+
 }
 
 @media only screen and (max-width: 1600px) {
@@ -719,12 +743,26 @@ footer {
     }
 
     header .container .search input {
+        background-size: 15px;
         font-size: 12px;
+        width: 125px;
+
+        &:focus {
+            background-size: 15px;
+        }
     }
 
     header .container .headRight a {
         font-size: 12px;
+
         /*width: 25px;*/
+        img {
+            width: 15px;
+        }
+
+        &:last-child img {
+            width: 13px;
+        }
     }
 
     .clock {
@@ -744,11 +782,26 @@ footer {
     .clock .timeofday .time span {
         /*font-size: 18px;*/
     }
-}
 
-@media only screen and (max-width: 1600px) {
-    .sec .content .title {
+    .secs .sec:nth-child(3) .content {
+        justify-content: flex-start;
+    }
+
+    .secs .sec:nth-child(3) .content .img {
+        width: calc(87%);
+    }
+
+    .secs .sec .content .title {
+        font-size: 60px;
+    }
+
+    /*   .sec .content .title {
         font-size: 50px;
+    }
+    */
+    .secs .sec:nth-child(3) .content .desc {
+        right: -40px;
+        bottom: 2%;
     }
 
     .primaryBtn {
@@ -846,6 +899,7 @@ footer {
 
     header .container .search input {
         font-size: 10px;
+        width: 109px;
     }
 
     header .container .headRight a {
@@ -854,7 +908,7 @@ footer {
     }
 
     header .container .logo {
-        /*width: 50%;*/
+        width: 67%;
     }
 
     .sec:nth-child(3) .content .desc {
@@ -897,36 +951,84 @@ footer {
         width: 85%;
     }
 
+    header nav {
+        top: 163px;
+    }
 
+    .secs .sec .content .title {
+        left: -29%;
+    }
+    .secs .sec .content {
+        width: 40%;
+    }
+
+    .secs .sec .content .desc {
+        font-size: 16px;
+    }
+
+    .secs .sec:nth-child(2) .content .desc {
+        bottom: 5px;
+    }
+
+    p.desc.animate.delay-600.slideFromDown {}
+
+    .secs .sec:nth-child(3) .content .desc {
+        right: -120px;
+        bottom: 4%;
+    }
+
+    .secs .sec:nth-child(3) .content .img {
+        width: calc(100%);
+    }
+
+    .secs .sec:nth-child(4) .content .desc {
+        right: -93px;
+        bottom: 6px;
+    }
 }
 
 @media only screen and (max-width: 1366px) {
     header nav {
-        top: 134px;
+        top: 127px;
     }
 
     .secs .sec .content .title {
         font-size: 50px;
+        /*left: -29%;*/
     }
 
     .secs .sec .content .desc {
         font-size: 14px;
-        margin: 0 0 0 20px;
+        margin: 0 0 0 15px;
+        right: -134px;
     }
 
     .secs .sec:nth-child(2) .content .desc {
-        right: -124px;
+        right: -111px;
         bottom: 6px;
     }
 
     .secs .sec:nth-child(3) .content .desc {
-        right: -118px;
+        right: -46px;
     }
+    .secs .sec:nth-child(3) .content .img {
+        width: calc(87%);
+    }
+
     .secs .sec:nth-child(4) .content .desc {
-        right: -93px;
+        right: -81px;
         bottom: 20px;
     }
     .primaryBtn {
         padding: 12px 27px 9px 26px;
+    }
+    .secs .sec .content {
+        width: 34%;
+    }
+    header .container .logo {
+        width: 65%;
+    }
+    header .container .logo  img.brand_tag_line{
+        width: 65%;
     }
 }
