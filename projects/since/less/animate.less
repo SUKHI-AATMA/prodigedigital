@@ -16,6 +16,19 @@
 		opacity: 1;
     }
 }
+[data-animate="slideFromCut"] {
+    /*transform: translate(0, -100%);*/
+    /*opacity: 0;*/
+    i {
+	    transition: all linear 0.3s;
+    	transform: translate(0 , 110%);
+    }
+    &.slideFromCut.animate {
+		i {
+	    	transform: translate(0 , 7%);
+	    }
+    }
+}
 [data-animate="slideFromDown"] {
     transform: translate(0, 50%);
     opacity: 0;

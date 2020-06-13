@@ -23,6 +23,7 @@ body {
 .primaryBtn {
     /*height: 37px;*/
     background: #000;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,12 +42,14 @@ body {
     padding: 17px 36px 12px;
     transition: all ease-in 0.3s;
     transform: translate(0, 0);
-    box-shadow: 0px 0px 0px 0px  rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
     transition-delay: unset;
 
     &:hover {
-        transform: translate(-5px, -5px);
-        box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.5);
+        /*transform: translate(-5px, -5px);*/
+        /*box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.5);*/
+        background: #fff;
+        color: #000;
 
     }
 }
@@ -75,11 +78,11 @@ header {
             input {
                 border: none;
                 background: url(../images/search.svg) no-repeat 90% center transparent;
-                background-size: 25px;
+                background-size: 13px;
                 color: #000;
                 line-height: 1;
                 padding: 9px 10px 5px;
-                width: 145px;
+                width: 105px;
 
                 /**/
                 font-style: normal;
@@ -108,7 +111,7 @@ header {
 
                 &:focus {
                     background: url(../images/search.svg) no-repeat 95% center #fff;
-                    background-size: 25px;
+                    background-size: 13px;
                     border: none;
                     outline: none;
                     width: 160px;
@@ -142,12 +145,26 @@ header {
             align-items: center;
 
             a {
+                display: flex;
                 font-size: 14px;
                 margin: 0 0 0 22px;
                 width: 30px;
 
                 img {
-                    width: 100%;
+                    float: left;
+                    width: 14px;
+                }
+
+                &:first-child {
+                    padding: 6px 0 0;
+                }
+
+                &:last-child {
+
+                    img {
+                        width: 12px;
+                    }
+
                 }
             }
         }
@@ -170,22 +187,24 @@ header {
             a {
                 color: #000;
                 display: inline-block;
+                transition: all linear 0.3s;
 
-                &:after {
+                /*&:after {
                     background: #000;
                     display: block;
                     content: '';
                     height: 2px;
                     width: 0%;
                     transition: all linear 0.3s;
-                }
+                }*/
             }
 
             &:hover {
                 a {
-                    &:after {
+                    color: #fff;
+                    /*&:after {
                         width: 100%;
-                    }
+                    }*/
                 }
             }
         }
@@ -435,7 +454,7 @@ footer {
             align-items: center;
             margin: 0 auto;
             position: relative;
-            width: 36%;
+            width: calc(36%);
 
             .title {
                 display: flex;
@@ -460,7 +479,13 @@ footer {
                     margin: 0 0 20px;
 
                     span {
-                        display: inline-block;
+                        float: left;
+                        overflow: hidden; 
+                        i {
+                            display: block;
+                            font-style: normal;
+                            
+                        }
                     }
                 }
             }
@@ -507,10 +532,10 @@ footer {
 
         svg {
             /*transform: ;*/
-            transition: all linear 0.3s;
+            transition: all linear 0.2s;
 
             path {
-                transition: all linear 0.3s;
+                transition: all linear 0.2s;
             }
         }
 
@@ -526,6 +551,10 @@ footer {
                     }
                 }
             }
+
+            .time {
+                color: #6691A2;
+            }
         }
 
         &.afternoon {
@@ -540,9 +569,17 @@ footer {
                     }
                 }
             }
+
+            .time {
+                color: #B3AB85;
+            }
         }
 
         &.evening {
+            .time {
+                color: #8A9579;
+            }
+
             svg {
                 transform: rotate(-205deg);
 
@@ -557,6 +594,10 @@ footer {
         }
 
         &.night {
+            .time {
+                color: #2B3E6E;
+            }
+
             svg {
                 transform: rotate(-280deg);
 
@@ -575,19 +616,39 @@ footer {
             font-style: normal;
             font-weight: normal;
             font-size: 28px;
-            line-height: 92.7%;
+            line-height: 26px;
 
             /* or 26px */
-            color: #2B3E6E;
+            /*color: #2B3E6E;*/
             position: absolute;
             top: 50%;
             left: 26%;
             transform: translate(0, -50%);
-            opacity: 0;
+            /*opacity: 0;*/
             transition: all ease-in 0.2s;
 
             &.blink {
-                opacity: 1;
+                /*opacity: 1;*/
+
+                animation: animationFrames linear 1.5s;
+                animation-iteration-count: infinite;
+                transform-origin: 50% 50%;
+
+                @keyframes animationFrames {
+                    0% {
+                        opacity: 1;
+
+                    }
+
+                    50% {
+                        opacity: 0;
+
+                    }
+
+                    100% {
+                        opacity: 1;
+                    }
+                }
             }
 
             span {
@@ -663,7 +724,7 @@ footer {
 
     header .container .headRight a {
         font-size: 12px;
-        width: 25px;
+        /*width: 25px;*/
     }
 
     .clock {
@@ -677,11 +738,11 @@ footer {
     }
 
     .clock .timeofday .time {
-        font-size: 24px;
+        /*font-size: 24px;*/
     }
 
     .clock .timeofday .time span {
-        font-size: 18px;
+        /*font-size: 18px;*/
     }
 }
 
@@ -762,15 +823,15 @@ footer {
     }
 
     .clock {
-        width: 160px;
+        /*width: 160px;*/
     }
 
     .clock .timeofday .time {
-        font-size: 20px;
+        /*font-size: 20px;*/
     }
 
     .clock .timeofday .time span {
-        font-size: 15px;
+        /*font-size: 15px;*/
     }
 
     .sec .content {
@@ -789,11 +850,11 @@ footer {
 
     header .container .headRight a {
         font-size: 10px;
-        width: 20px;
+        /*width: 20px;*/
     }
 
     header .container .logo {
-        width: 50%;
+        /*width: 50%;*/
     }
 
     .sec:nth-child(3) .content .desc {
@@ -837,4 +898,35 @@ footer {
     }
 
 
+}
+
+@media only screen and (max-width: 1366px) {
+    header nav {
+        top: 134px;
+    }
+
+    .secs .sec .content .title {
+        font-size: 50px;
+    }
+
+    .secs .sec .content .desc {
+        font-size: 14px;
+        margin: 0 0 0 20px;
+    }
+
+    .secs .sec:nth-child(2) .content .desc {
+        right: -124px;
+        bottom: 6px;
+    }
+
+    .secs .sec:nth-child(3) .content .desc {
+        right: -118px;
+    }
+    .secs .sec:nth-child(4) .content .desc {
+        right: -93px;
+        bottom: 20px;
+    }
+    .primaryBtn {
+        padding: 12px 27px 9px 26px;
+    }
 }

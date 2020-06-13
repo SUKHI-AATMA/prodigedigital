@@ -22,12 +22,13 @@ $(window).on('load', function() {
             });
             if(nextIndex == 5)
             {
-                $('.clock').css({top: '40%'})
+                // $('.clock').css({top: '40%'})
+                $('.clock').fadeOut(300);
                 // alert(1);
             }
             else
             {
-                $('.clock').css({top: '50%'})
+                $('.clock').fadeIn(300);
             }
         },
         afterLoad: function(anchorLink, index) {
@@ -51,20 +52,36 @@ $(window).on('load', function() {
             {
                 $('.timeofday').attr('class','timeofday '+ $('.secs .sec:nth-child('+index+')').attr('data-sec'));
             }
+            if(index == 1)
+            {
+                $('.clock .time').html('09<br>00<br><span>am</span>');
+            }
+            if(index == 2)
+            {
+                $('.clock .time').html('13<br>00<br><span>pm</span>');
+            }
+            if(index == 3)
+            {
+                $('.clock .time').html('18<br>30<br><span>pm</span>');
+            }
+            if(index == 4)
+            {
+                $('.clock .time').html('21<br>45<br><span>pm</span>');
+            }
             // $('.secs .sec:nth-child('+index+') [data-animate="scaleUpRight"]').each(function() {
             //     $(this).addClass('scaleUpRight');
             //     // $(this).removeAttr('data-animate');
             // });
         },
         afterRender: function() {
-            var ctime = formatAMPM(new Date);
-            $('.clock .time').html(ctime);
-            var intervalTime = setInterval(function() {
-                if (ctime != formatAMPM(new Date)) {
-                    $('.clock .time').html(ctime);
-                }
-            }, 30000);
-            setTimeout(function() { clearInterval(intervalTime) }, 900000);
+            // var ctime = formatAMPM(new Date);
+            // $('.clock .time').html(ctime);
+            // var intervalTime = setInterval(function() {
+                // if (ctime != formatAMPM(new Date)) {
+                    // $('.clock .time').html(ctime);
+                // }
+            // }, 30000);
+            // setTimeout(function() { clearInterval(intervalTime) }, 900000);
             $('[data-animate="fadeOut"]').each(function() {
                 $(this).fadeOut(500);
                 setTimeout(function() {
@@ -93,9 +110,9 @@ function firstAnimate() {
             {
                 $('.timeofday').addClass('morning')
             }
-            var blinkInterval = setInterval(function() {
-                $('.clock .time').toggleClass('blink');
-            }, 1000);
+            // var blinkInterval = setInterval(function() {
+            //     $('.clock .time').toggleClass('blink');
+            // }, 1000);
         }, 600);
     });
     
