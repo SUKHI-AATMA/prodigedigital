@@ -9,6 +9,9 @@ function formatAMPM(date) {
     return strTime;
 }
 $(document).ready(function(){
+});
+$(window).on('load', function() {
+    
     $('.sec:nth-child(3) .img').css({height: $(window).outerHeight()})
     $('.content .img').each(function(){
         // $(this).css({width: $(this).find('.img').outerWidth(true) })
@@ -19,9 +22,6 @@ $(document).ready(function(){
             width: '0%'
         });
     });
-});
-$(window).on('load', function() {
-    
     $('#fullpage').fullpage({
         anchors: ['MORNING','AFTERNOON','EVENING','NIGHT','SUBSCRIBE'],
         normalScrollElements: '.scroll',
