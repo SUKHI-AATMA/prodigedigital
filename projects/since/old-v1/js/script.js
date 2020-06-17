@@ -49,10 +49,6 @@ $(window).on('load', function() {
                 setTimeout(function(){
                     $('.secs .sec:nth-child('+index+') .animate').each(function() {
                         $(this).addClass($(this).attr('data-animate'));
-                        if($(this).attr('data-delay'))
-                        {
-                            $(this).addClass('delay-'+$(this).attr('data-delay'));
-                        }
                         // $(this).removeAttr('data-animate');
                     });
                 },500);
@@ -60,14 +56,9 @@ $(window).on('load', function() {
             else {
                 $('.secs .sec:nth-child('+index+') .animate').each(function() {
                     $(this).addClass($(this).attr('data-animate'));
-                    if($(this).attr('data-delay'))
-                    {
-                        $(this).addClass('delay-'+$(this).attr('data-delay'));
-                    }
                     // $(this).removeAttr('data-animate');
                 });
             }
-            $('.secs .sec.active').find('.primaryBtn').removeClass('delay-'+$('.secs .sec.active').find('.primaryBtn').attr('data-delay'));
             // $('.timeofday').removeClass('morning afternoon evening night');
             if($('.secs .sec:nth-child('+index+')').attr('data-sec'))
             {
@@ -115,10 +106,6 @@ $(window).on('load', function() {
                     firstAnimate();
                 }, 500)
             });
-            var tOut = $('.secs .sec.active').find('.primaryBtn').attr('data-delay'); 
-            setTimeout(function(){
-               $('.secs .sec.active').find('.primaryBtn').removeClass('delay-'+$('.secs .sec.active').find('.primaryBtn').attr('data-delay')); 
-            },  tOut);
         }
     })
 });
@@ -147,33 +134,3 @@ function firstAnimate() {
     });
     
 }
-document.addEventListener('DOMContentLoaded', function(){
-
-    var cursor = document.createElement('div');
-    var cursorPoint = document.createElement('div');
-    var cursorTail = document.createElement('div');
-
-    cursor.classList.add('cursor');
-    cursorPoint.classList.add('cursor-point');
-    cursorTail.classList.add('cursor-tail');
-
-    cursor.appendChild(cursorPoint);
-    cursor.appendChild(cursorTail);
-    document.body.appendChild(cursor);
-
-    var cursorPoint = document.querySelector('.cursor-point');
-    var cursorTail = document.querySelector('.cursor-tail');
-
-    document.addEventListener('mousemove', function(e){
-        cursorPoint.setAttribute("style", "top: " + e.clientY + "px; left: " + e.clientX + "px");
-        cursorTail.setAttribute("style", "top: " + e.clientY + "px; left: " + e.clientX + "px");
-    });
-
-    document.addEventListener('click', function(e){
-        cursorPoint.classList.add("cursor-click");
-        setTimeout(function(){
-                cursorPoint.classList.remove("cursor-click");
-        }, 450);
-    });
-    
-});

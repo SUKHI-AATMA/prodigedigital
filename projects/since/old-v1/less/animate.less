@@ -66,14 +66,12 @@
     }
 }
 [data-animate="zoomOut"] {
-    opacity: 0;
-	transform: translate(50%, -50%) rotate(-160deg);
+	transform: translate(50%, -50%) scale(0) rotate(160deg);
 	transform-origin: 50% 50%;
     transition: all linear 0.5s;
 
     &.zoomOut.animate {
-        opacity: 1;
-	    transform: translate(50%, -50%) rotate(0deg);
+	    transform: translate(50%, -50%) scale(1) rotate(0deg);
 	    transform-origin: 50% 50%;
     }
 }
