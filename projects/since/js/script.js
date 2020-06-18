@@ -13,15 +13,15 @@ $(document).ready(function(){
 $(window).on('load', function() {
     
     $('.sec:nth-child(3) .img').css({height: $(window).outerHeight()})
-    $('.content .img').each(function(){
-        // $(this).css({width: $(this).find('.img').outerWidth(true) })
-        $(this).css({height: $(this).find('img').outerHeight(true)});
-        $(this).find('img').css({width: $(this).find('img').outerWidth()})
-        $(this).find('div').css({
-            height: $(this).find('img').outerHeight(),
-            width: '0%'
-        });
-    });
+    // $('.content .img').each(function(){
+    //     // $(this).css({width: $(this).find('.img').outerWidth(true) })
+    //     $(this).css({height: $(this).find('img').outerHeight(true)});
+    //     $(this).find('img').css({width: $(this).find('img').outerWidth()})
+    //     $(this).find('div').css({
+    //         height: $(this).find('img').outerHeight(),
+    //         // width: '0%'
+    //     });
+    // });
     $('#fullpage').fullpage({
         anchors: ['MORNING','AFTERNOON','EVENING','NIGHT','SUBSCRIBE'],
         normalScrollElements: '.scroll',

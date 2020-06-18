@@ -39,20 +39,20 @@
     }
 }
 [data-animate="imgReveal"] {
-    /*transform: translate(0, 50%);*/
-    /*opacity: 0;*/
-    width: 0%;
-    transition: all linear 0.5s;
+    transform: translate(0, 50%);
+    opacity: 0;
+    width: 100%;
+    transition: all ease-out 0.8s;
     img {
 	    transition: all linear 0.5s;
-    	transform: scale(1.2);
+    	/*transform: scale(1.2);*/
     }
     &.imgReveal.animate {
     	width: 100% !important;
-		/*transform: translate(0,0);*/
-		/*opacity: 1;*/
+		transform: translate(0,0);
+		opacity: 1;
 		img {
-	    	transform: scale(1);
+	    	/*transform: scale(1);*/
 	    }
     }
 }
