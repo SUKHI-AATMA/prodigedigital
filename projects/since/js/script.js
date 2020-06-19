@@ -175,39 +175,39 @@ document.addEventListener('DOMContentLoaded', function() {
         // });
     // }
 // }
-$('.img').tilt({
-    maxTilt:        20,
-    perspective:    1000,   // Transform perspective, the lower the more extreme the tilt gets.
-    easing:         "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
-    scale:          1,      // 2 = 200%, 1.5 = 150%, etc..
-    speed:          300,    // Speed of the enter/exit transition.
-    transition:     true,   // Set a transition on enter/exit.
-    disableAxis:    null,   // What axis should be disabled. Can be X or Y.
-    reset:          false,   // If the tilt effect has to be reset on exit.
-    glare:          false,  // Enables glare effect
-    maxGlare:       1       // From 0 - 1.
-})
-
-// const boxer = fullpage.querySelector(".img"),
-//     maxMove = fullpage.offsetWidth / 30,
-//     boxerCenterX = boxer.offsetLeft + (boxer.offsetWidth / 2),
-//     boxerCenterY = boxer.offsetTop + (boxer.offsetHeight / 2),
-//     fluidboxer = window.matchMedia("(min-width: 726px)");
-
-// function getMousePos(xRef, yRef) {
-//     let panelRect = fullpage.getBoundingClientRect();
-//     return {
-//         x: Math.floor(xRef - panelRect.left) / (panelRect.right - panelRect.left) * fullpage.offsetWidth,
-//         y: Math.floor(yRef - panelRect.top) / (panelRect.bottom - panelRect.top) * fullpage.offsetHeight
-//     };
-// }
-
-// document.body.addEventListener("mousemove", function(e) {
-//     let mousePos = getMousePos(e.clientX, e.clientY),
-//         distX = mousePos.x - boxerCenterX,
-//         distY = mousePos.y - boxerCenterY;
-//     // if (Math.abs(distX) < 500 && distY < 200) {
-//         boxer.style.transform = "translate(" + (-1 * distX) / 20 + "px," + (-1 * distY) / 20 + "px)";
-//         // fullpage.style.backgroundPosition = `calc(50% + ${distX/50}px) calc(50% + ${distY/50}px)`;
-//     // }
+// $('.img').tilt({
+//     maxTilt:        0,
+//     perspective:    1000,   // Transform perspective, the lower the more extreme the tilt gets.
+//     easing:         "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
+//     scale:          1,      // 2 = 200%, 1.5 = 150%, etc..
+//     speed:          300,    // Speed of the enter/exit transition.
+//     transition:     true,   // Set a transition on enter/exit.
+//     disableAxis:    null,   // What axis should be disabled. Can be X or Y.
+//     reset:          false,   // If the tilt effect has to be reset on exit.
+//     glare:          false,  // Enables glare effect
+//     maxGlare:       1       // From 0 - 1.
 // })
+
+const boxer = fullpage.querySelector(".img"),
+    maxMove = fullpage.offsetWidth / 30,
+    boxerCenterX = boxer.offsetLeft + (boxer.offsetWidth / 2),
+    boxerCenterY = boxer.offsetTop + (boxer.offsetHeight / 2),
+    fluidboxer = window.matchMedia("(min-width: 726px)");
+
+function getMousePos(xRef, yRef) {
+    let panelRect = fullpage.getBoundingClientRect();
+    return {
+        x: Math.floor(xRef - panelRect.left) / (panelRect.right - panelRect.left) * fullpage.offsetWidth,
+        y: Math.floor(yRef - panelRect.top) / (panelRect.bottom - panelRect.top) * fullpage.offsetHeight
+    };
+}
+
+document.body.addEventListener("mousemove", function(e) {
+    let mousePos = getMousePos(e.clientX, e.clientY),
+        distX = mousePos.x - boxerCenterX,
+        distY = mousePos.y - boxerCenterY;
+    // if (Math.abs(distX) < 500 && distY < 200) {
+        boxer.style.transform = "translate(" + (-1 * distX) / 20 + "px," + (-1 * distY) / 20 + "px)";
+        // fullpage.style.backgroundPosition = `calc(50% + ${distX/50}px) calc(50% + ${distY/50}px)`;
+    // }
+})
