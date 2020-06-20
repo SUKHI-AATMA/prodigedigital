@@ -207,7 +207,7 @@ document.body.addEventListener("mousemove", function(e) {
         distX = mousePos.x - boxerCenterX,
         distY = mousePos.y - boxerCenterY;
     // if (Math.abs(distX) < 500 && distY < 200) {
-        boxer.style.transform = "translate(" + (-1 * distX) / 50 + "px," + (-1 * distY) / 50 + "px)";
+        boxer.style.transform = "translate(" + (-1 * distX) / 60 + "px," + (-1 * distY) / 60 + "px)";
         // fullpage.style.backgroundPosition = `calc(50% + ${distX/50}px) calc(50% + ${distY/50}px)`;
     // }
 })
