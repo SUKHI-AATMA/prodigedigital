@@ -188,26 +188,26 @@ document.addEventListener('DOMContentLoaded', function() {
 //     maxGlare:       1       // From 0 - 1.
 // })
 
-// const boxer = fullpage.querySelector(".img"),
-//     maxMove = fullpage.offsetWidth / 30,
-//     boxerCenterX = boxer.offsetLeft + (boxer.offsetWidth / 2),
-//     boxerCenterY = boxer.offsetTop + (boxer.offsetHeight / 2),
-//     fluidboxer = window.matchMedia("(min-width: 726px)");
+const boxer = fullpage.querySelector(".img"),
+    maxMove = fullpage.offsetWidth / 30,
+    boxerCenterX = boxer.offsetLeft + (boxer.offsetWidth / 2),
+    boxerCenterY = boxer.offsetTop + (boxer.offsetHeight / 2),
+    fluidboxer = window.matchMedia("(min-width: 726px)");
 
-// function getMousePos(xRef, yRef) {
-//     let panelRect = fullpage.getBoundingClientRect();
-//     return {
-//         x: Math.floor(xRef - panelRect.left) / (panelRect.right - panelRect.left) * fullpage.offsetWidth,
-//         y: Math.floor(yRef - panelRect.top) / (panelRect.bottom - panelRect.top) * fullpage.offsetHeight
-//     };
-// }
+function getMousePos(xRef, yRef) {
+    let panelRect = fullpage.getBoundingClientRect();
+    return {
+        x: Math.floor(xRef - panelRect.left) / (panelRect.right - panelRect.left) * fullpage.offsetWidth,
+        y: Math.floor(yRef - panelRect.top) / (panelRect.bottom - panelRect.top) * fullpage.offsetHeight
+    };
+}
 
-// document.body.addEventListener("mousemove", function(e) {
-//     let mousePos = getMousePos(e.clientX, e.clientY),
-//         distX = mousePos.x - boxerCenterX,
-//         distY = mousePos.y - boxerCenterY;
-//     // if (Math.abs(distX) < 500 && distY < 200) {
-//         boxer.style.transform = "translate(" + (-1 * distX) / 50 + "px," + (-1 * distY) / 50 + "px)";
-//         // fullpage.style.backgroundPosition = `calc(50% + ${distX/50}px) calc(50% + ${distY/50}px)`;
-//     // }
-// })
+document.body.addEventListener("mousemove", function(e) {
+    let mousePos = getMousePos(e.clientX, e.clientY),
+        distX = mousePos.x - boxerCenterX,
+        distY = mousePos.y - boxerCenterY;
+    // if (Math.abs(distX) < 500 && distY < 200) {
+        boxer.style.transform = "translate(" + (-1 * distX) / 50 + "px," + (-1 * distY) / 50 + "px)";
+        // fullpage.style.backgroundPosition = `calc(50% + ${distX/50}px) calc(50% + ${distY/50}px)`;
+    // }
+})
