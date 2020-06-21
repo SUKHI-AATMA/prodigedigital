@@ -734,7 +734,9 @@ footer {
             align-items: center;
             margin: 0 auto;
             position: relative;
+            left: 80%;
             width: calc(36%);
+            transition: left ease-in-out 1s;
 
             .title {
                 display: flex;
@@ -752,8 +754,9 @@ footer {
                 color: #FFFFFF;
                 position: absolute;
                 top: 30%;
-                left: -27%;
+                left: -0%;
                 z-index: 1;
+                transition: left ease-in-out 0.5s 0.5s;
 
                 p {
                     margin: 0 0 20px;
@@ -788,7 +791,8 @@ footer {
                 right: 0;
                 width: 150px;
                 margin: 0;
-                transform: translate(115%, 0);
+                transform: translate(200%, 0);
+                transition: transform ease-in-out 0.5s 0.5s;
                 span {
                     display: inline-block;
                 }

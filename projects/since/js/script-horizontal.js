@@ -1,26 +1,7 @@
-// function formatAMPM(date) {
-//     var hours = date.getHours();
-//     var minutes = date.getMinutes();
-//     var ampm = hours >= 12 ? 'pm' : 'am';
-//     hours = hours % 12;
-//     hours = hours ? ((hours < 10) ? '0' + hours : hours) : 12; // the hour '0' should be '12'
-//     minutes = minutes < 10 ? '0' + minutes : minutes;
-//     var strTime = hours + '<br>' + minutes + '<br><span>' + ampm + '</span>';
-//     return strTime;
-// }
 $(document).ready(function() {});
 $(window).on('load', function() {
     $('.entryTitle').css({ width: $('.logo').outerWidth(), top: $('.logo').outerHeight(true) + 40, left: $('.logo').position().left });
-    // $('.sec:nth-child(3) .img').css({ height: $(window).outerHeight() })
-    // $('.content .img').each(function(){
-    //     // $(this).css({width: $(this).find('.img').outerWidth(true) })
-    //     $(this).css({height: $(this).find('img').outerHeight(true)});
-    //     $(this).find('img').css({width: $(this).find('img').outerWidth()})
-    //     $(this).find('div').css({
-    //         height: $(this).find('img').outerHeight(),
-    //         // width: '0%'
-    //     });
-    // });
+
     $('#fullpage').fullpage({
         // anchors: ['SITE'],
         normalScrollElements: '.scroll',
@@ -65,22 +46,25 @@ $(window).on('load', function() {
             }
 
             if (direction == "right") {
-                $('.slide.active').find('.animate').each(function() {
-                    if(!$(this).attr('data-animate'))
-                    {
-                        var offsetLft = $(this).offset().left;
-                        var leftPos = offsetLft + $(this).outerWidth();
-                        $(this).css({ left: -leftPos });
-                    }
-                });
-                $('.slide.active').next('.slide').find('.animate').each(function() {
-                    if(!$(this).attr('data-animate'))
-                    {
-                        var offsetLft = $(this).offset().left
-                        var leftPos = offsetLft;
-                        $(this).css({ left: leftPos });
-                    }
-                });
+                // $('.slide.active').find('.animate').each(function() {
+                //     if(!$(this).attr('data-animate'))
+                //     {
+                //         var offsetLft = $(this).offset().left;
+                //         var leftPos = offsetLft + $(this).outerWidth();
+                //         $(this).css({ left: -leftPos });
+                //     }
+                // });
+                // $('.slide.active').next('.slide').find('.animate').each(function() {
+                //     if(!$(this).attr('data-animate'))
+                //     {
+                //         var offsetLft = $(this).offset().left
+                //         var leftPos = offsetLft;
+                //         $(this).css({ left: leftPos });
+                //     }
+                // });
+                $('.slide.active .content').css({left: '-80%'});
+                $('.slide.active .content .title').css({left: '-0%'});
+                $('.slide.active .content .desc').css({transform: 'translate(50%, 0)'});
             }
             var bgColor = $('.slide').eq(nxtIndex.index).attr('data-color');
             $('.background').css({background: bgColor});
@@ -94,35 +78,38 @@ $(window).on('load', function() {
             // console.log(JSON.parse(JSON.stringify(destination)));
             var nxtIndex = JSON.parse(JSON.stringify(origin));
             if (direction == 'right') {
-                $('.slide.active').find('.animate').each(function() {
-                    // if(!$(this).attr('data-animate'))
-                    // {
-                        var leftPos = $(window).outerWidth();
-                        console.log($(window).outerWidth())
-                        $(this).css({ left: leftPos });
-                    // }
-                });
+                $('.slide.active .content').css({left: '0%'});
+                $('.slide.active .content .title').css({left: '-27%'});
+                $('.slide.active .content .desc').css({transform: 'translate(115%, 0)'});
+                // $('.slide.active').find('.animate').each(function() {
+                //     // if(!$(this).attr('data-animate'))
+                //     // {
+                //         var leftPos = $(window).outerWidth();
+                //         console.log($(window).outerWidth())
+                //         $(this).css({ left: leftPos });
+                //     // }
+                // });
 
-                $('.slide.active').find('.animate').each(function() {
-                    if(!$(this).attr('data-animate'))
-                    {
-                        var leftPos = $(window).width() - $(this).offset().left;
-                        $(this).css({ transition: 'left ease-in-out 1s', 'transition-delay': $(this).attr('data-delay') })
-                        $(this).css({ left: '0px' })
-                    }
-                });
+                // $('.slide.active').find('.animate').each(function() {
+                //     if(!$(this).attr('data-animate'))
+                //     {
+                //         var leftPos = $(window).width() - $(this).offset().left;
+                //         $(this).css({ transition: 'left ease-in-out 1s', 'transition-delay': $(this).attr('data-delay') })
+                //         $(this).css({ left: '0px' })
+                //     }
+                // });
             }
-            $('.secs .sec.active .animate').each(function() {
-                $(this).addClass($(this).attr('data-animate'));
-                // $(this).removeAttr('data-animate');
-            });
+            // $('.secs .sec.active .animate').each(function() {
+            //     $(this).addClass($(this).attr('data-animate'));
+            //     // $(this).removeAttr('data-animate');
+            // });
         },
         onLeave: function(origin, destination, direction) {},
         afterLoad: function(anchorLink, index) {},
         afterRender: function() {
-            $('.slide').find('.animate').each(function(){
-                $(this).attr('data-offset', $(this).parent()    .position().left);
-            });
+            // $('.slide').find('.animate').each(function(){
+            //     $(this).attr('data-offset', $(this).parent()    .position().left);
+            // });
             $('[data-animate="fadeOut"]').each(function() {
                 $(this).fadeOut(500);
                 setTimeout(function() {
