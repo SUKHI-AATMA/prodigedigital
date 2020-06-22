@@ -276,17 +276,7 @@ header {
                     width: 17px;
                 }
 
-                &:first-child {
-                    padding: 6px 0 0;
-                }
-
-                &:last-child {
-
-                    img {
-                        width: 14px;
-                    }
-
-                }
+                
             }
         }
     }
@@ -529,22 +519,22 @@ footer {
 
     &.morning {
         opacity: 1;
-        left: 19%;
+        left: 15.5%;
     }
 
     &.afternoon {
         opacity: 1;
-        left: 29%;
+        left: 35%;
     }
 
     &.evening {
         opacity: 1;
-        left: 39%;
+        left: 55%;
     }
 
     &.night {
         opacity: 1;
-        left: 49%;
+        left: 65%;
     }
 
     &.footer {
@@ -877,4 +867,33 @@ footer {
 /*}*/
 
 
-@media only screen and (max-width: 1440px) {}
+@media only screen and (max-width: 1440px) {
+    header nav {
+        top: 500px;
+    }
+
+    .secs .sec .content .title {
+        font-size: 75px;
+        top: 20%;
+    }
+
+    header .container .headRight a {
+        line-height: 0;
+        letter-spacing: 0;
+    }
+
+    header .container .search input {
+        background: url(../images/search.svg) no-repeat 90% 50% transparent;
+        background-size: 20px;
+    }
+
+    header .container .search input:focus {
+        background: url(../images/search.svg) no-repeat 90% 50% #fff;
+        background-size: 20px;
+    }
+
+    header nav li {
+        text-transform: capitalize;
+        font-size: 16px;
+    }
+}

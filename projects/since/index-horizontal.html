@@ -56,12 +56,12 @@
         </div>
         <nav>
             <ul>
-                <li class="animate delay-100" data-animate="slideFromLeft"><a href=""><span><i>SHOP</i><i>SHOP</i></span></a></li>
-                <li class="animate delay-200" data-animate="slideFromLeft"><a href="#MORNING/0"><span><i>MORNING</i><i>MORNING</i></span></a></li>
-                <li class="animate delay-300" data-animate="slideFromLeft"><a href="#AFTERNOON/1"><span><i>AFTERNOON</i><i>AFTERNOON</i></span></a></li>
-                <li class="animate delay-400" data-animate="slideFromLeft"><a href="#EVENING/2"><span><i>EVENING</i><i>EVENING</i></span></a></li>
-                <li class="animate delay-500" data-animate="slideFromLeft"><a href="#NIGHT/3"><span><i>NIGHT</i><i>NIGHT</i></span></a></li>
-                <li class="animate delay-600" data-animate="slideFromLeft"><a href=""><span><i>EVENTS</i><i>EVENTS</i></span></a></li>
+                <li class="animate delay-100" data-animate="slideFromLeft"><a href=""><span><i>Shop</i><i>Shop</i></span></a></li>
+                <li class="animate delay-200" data-animate="slideFromLeft"><a href="#MORNING/0"><span><i>Morning</i><i>Morning</i></span></a></li>
+                <li class="animate delay-300" data-animate="slideFromLeft"><a href="#AFTERNOON/1"><span><i>Afternoon</i><i>Afternoon</i></span></a></li>
+                <li class="animate delay-400" data-animate="slideFromLeft"><a href="#EVENING/2"><span><i>Evening</i><i>Evening</i></span></a></li>
+                <li class="animate delay-500" data-animate="slideFromLeft"><a href="#NIGHT/3"><span><i>Night</i><i>Night</i></span></a></li>
+                <li class="animate delay-600" data-animate="slideFromLeft"><a href=""><span><i>Events</i><i>Events</i></span></a></li>
                 <!-- <li class="animate delay-700" data-animate="slideFromLeft"><a href="#SUBSCRIBE/4"><span><i>SUBSCRIPION</i><i>SUBSCRIPION</i></span></a></li> -->
                 <!-- <li class="animate delay-800" data-animate="slideFromLeft"><a href=""><span><i>EXPERTS</i><i>EXPERTS</i></span></a></li> -->
             </ul>
@@ -69,7 +69,7 @@
     </header>
     <div class="secs" id="fullpage">
         <div class="section">
-            <div class="sec slide" data-sec="landing" data-color="#AECDD2">
+            <div class="sec slide" data-sec="landing" data-color="#AECDD2" data-hr="01" data-min="01" data-secs="10" data-ampm="am">
                 <div class="entryTitle">
                     <span>Wisdom is the what and why, </span><br>
                     <span>since is a blend of <span class="italics">what </span> </span><br>
@@ -79,7 +79,7 @@
                 <div class="scrollToStart animate " data-delay="400" data-animate="slideFromDown">scroll to start the day</div>
                 <!-- <img src="images/ht/hm_bg.png" alt=""> -->
             </div>
-            <div class="sec slide" data-sec="morning" data-color="#AECDD2">
+            <div class="sec slide" data-sec="morning" data-color="#AECDD2" data-hr="07" data-min="15" data-secs="20" data-ampm="am">
                 <div class="content">
                     <div class="title">
                         <p>
@@ -106,7 +106,7 @@
                     </p>
                 </div>
             </div>
-            <div class="sec slide" data-sec="afternoon" data-color="#EBE0A9">
+            <div class="sec slide" data-sec="afternoon" data-color="#EBE0A9" data-hr="13" data-min="30" data-secs="50" data-ampm="pm">
                 <div class="content">
                     <div class="title">
                         <p>
@@ -132,7 +132,7 @@
                     </p>
                 </div>
             </div>
-            <div class="sec slide" data-sec="evening" data-color="#D6AA9C">
+            <div class="sec slide" data-sec="evening" data-color="#D6AA9C" data-hr="18" data-min="45" data-secs="60" data-ampm="pm">
                 <div class="content">
                     <div class="title">
                         <p>
@@ -158,7 +158,7 @@
                     </p>
                 </div>
             </div>
-            <div class="sec slide" data-sec="night" data-color="#67677B">
+            <div class="sec slide" data-sec="night" data-color="#67677B" data-hr="22" data-min="59" data-secs="25" data-ampm="pm">
                 <div class="content">
                     <div class="title">
                         <p>
@@ -183,7 +183,7 @@
                     </p>
                 </div>
             </div>
-            <div class="sec slide" data-sec="footer" data-color="#fff">
+            <div class="sec slide" data-sec="footer" data-color="#fff" data-hr="22" data-min="59" data-secs="25" data-ampm="pm">
                 <div class="scrollToStart animate" data-delay="400" data-animate="slideFromDown">Word of the day</div>
                 <div class="tip">
                     <p class="tipTitle">
@@ -243,7 +243,11 @@
             </div>
         </div>
     </div>
-    <div class="time"><span class="hr">7</span>:<span class="min">20</span>:<span class="sec">45</span><span class="ampm">am</span></div>
+    <div class="time" data-hr="01" data-min="01" data-secs="10" data-ampm="am">
+        <span id="hrs">7</span> : 
+        <span id="min">20</span> : 
+        <span id="sec">45</span>
+        <span id="ampm">am</span></div>
     <div class="overlay animate" data-animate="fadeOut" style="display: block; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; z-index: 50;"></div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/fullpage.scrollHorizontally.min.js"></script>
