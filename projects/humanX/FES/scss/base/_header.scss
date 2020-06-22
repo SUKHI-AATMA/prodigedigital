@@ -12,9 +12,7 @@ header{
     left: 0;
     z-index: 998;
     width: 100%;
-
     box-shadow: 0 5px 10px 0 rgba(88,88,88,0.3);
-
     transition: .9s all ease;
 
     &.active{
@@ -35,7 +33,7 @@ header{
             display: block;
             line-height:0;
             img{
-                width: 144px;
+                width: 170px;
                 height: auto;
             }
         }
@@ -52,12 +50,11 @@ header{
         -webkit-transition-duration: 0.3s;
         transition-duration: 0.3s;
         background-color:#fff;
-        //box-shadow: 0 5px 10px 0 rgba(206,206,206,0.3);
-        // box-shadow: 0 4px 9px 0 rgba(169, 169, 169, 0.5);  
         box-shadow: 0 4px 9px 0 rgba(128, 128, 128, 0.2);                
         border-radius: 50%;
         margin-top: 40px;
         // @include transition(.3s ease-in-out);
+
         &:hover {
             -webkit-transition-duration: 0.3s;
             transition-duration: 0.3s;
@@ -165,7 +162,7 @@ header{
             // position: relative;
 
             .logo{
-                padding: 15px 0;
+                padding: 10px 0;
                 &.active{
                     display: none;
                 }
@@ -280,7 +277,7 @@ header{
                             padding-top: 12px;
                             padding-bottom: 12px;
                             position: relative;
-                            padding-right: 30px; 
+                            padding-right: 40px; 
                             // width: 80px;
                             transition: 50ms ease-out;
                             -webkit-transition: 50ms ease-out;
@@ -289,20 +286,20 @@ header{
                             -o-transition: 50ms ease-out;                       
     
                             &:first-child{
-                                width: 78px;
+                                width: 98px;
                             }
                             &:nth-child(2){
-                                width: 73px;
+                                width: 90px;
                             }
                             &:nth-child(3){
-                                width: 84px;
+                                width: 102px;
                             }
                             &:nth-child(4){
-                                width: 77px;
+                                width: 94px;
                             }
                             &:last-child{
                                 padding-right: 0;
-                                width: 82px;
+                                width: 98px;
                             }
 
                             span.plus{
@@ -313,8 +310,8 @@ header{
                                 text-transform: uppercase;
                                 color: #000000;
                                 font-family: "Open Sans";
-                                font-size: 14px;
-                                letter-spacing: 0.2px;
+                                font-size: 16px;
+                                letter-spacing: 0.73px;
                                 line-height: 19px;
                                 cursor: pointer;
                                 @include transition(.3s ease-in-out);;
@@ -336,30 +333,32 @@ header{
                             &:after {
                                 content: '';
                                 display: block;
-                                width: calc(0% - 30px);
+                                width: calc(0% - 40px);
                                 position: absolute;
-                                height: 2px;
-                                background: #333;
+                                height: 4px;
+                                bottom: -16px;
+                                border-radius: 20px;
+                                background: #004950;
                                 transition: width 350ms ease-out;
                             }
             
                             &:hover:after {
-                                width: calc(100% - 30px);
+                                width: calc(100% - 40px);
                                 transition: width 350ms ease-out;
                             }
                             &.active:after {
-                                width: calc(100% - 30px);
+                                width: calc(100% - 40px);
                             }
     
                             &:last-child:after {
-                                width: calc(0%);
+                                width: 0%;
                             }
             
                             &:last-child:hover:after {
-                                width: calc(100%);
+                                width: 100%;
                             }
                             &:last-child.active:after {
-                                width: calc(100%);
+                                width: 100%;
                             }
     
                             &:hover{
