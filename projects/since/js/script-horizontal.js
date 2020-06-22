@@ -269,7 +269,10 @@ document.addEventListener('DOMContentLoaded', function() {
 //     glare:          false,  // Enables glare effect
 //     maxGlare:       1       // From 0 - 1.
 // })
-
+// $('body').find('a[href="http://alvarotrigo.com/fullPage/extensions/"]').parent()
+$('body > div:last-child').css({
+    top: '-100%'
+})
 const boxer = fullpage.querySelector(".img"),
     maxMove = fullpage.offsetWidth / 30,
     boxerCenterX = boxer.offsetLeft + (boxer.offsetWidth / 2),
