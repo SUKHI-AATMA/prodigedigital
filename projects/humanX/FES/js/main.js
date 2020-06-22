@@ -1,5 +1,26 @@
 $(document).ready(function () {
     
+
+    // disable Scroll
+    function disableScroll() { 
+        // Get the current page scroll position 
+        scrollTop =  
+          window.pageYOffset || document.documentElement.scrollTop; 
+        scrollLeft =  
+          window.pageXOffset || document.documentElement.scrollLeft, 
+
+            // if any scroll is attempted, 
+            // set this to the previous value 
+            window.onscroll = function() { 
+                window.scrollTo(scrollLeft, scrollTop); 
+            }; 
+    }
+
+    // Enable Scroll
+    function enableScroll() { 
+        window.onscroll = function() {}; 
+    }
+
     $(window).scroll(function() {
         var hT = $('header').offset().top,
         hH = $('header').outerHeight(),
@@ -62,14 +83,13 @@ $(document).ready(function () {
             nav: true,
             dots: true,
             dotsData: false,
+            items: 1,   
             smartSpeed: 600,
             autoPlaySpeed: 600,
-            autoPlayTimeout: 5000,
+            autoplay: 9000,
+            autoPlayTimeout: 9000,
             slideTransition: 'linear',
             mouseDrag: true,
-            autoplay: true,
-            lazyLoad:true,
-            items: 1,
             video: true,
 
             onInitialized: function (event) {
@@ -341,9 +361,6 @@ $(document).ready(function () {
         });
     }
 
-    // $("ul.tabs li.tab-link").eq(0).addClass("active");
-    // $(".tab-container .tab-content").eq(0).addClass("active");
-
 
     $('ul.tabs li.tab-link').click(function () {
 
@@ -359,7 +376,7 @@ $(document).ready(function () {
         var tab_id = $(this).attr('data-tab');  
         var tabLink = $(this).attr('data-link');     
         // console.log('tabLink', tabLink);
-        var imgPath = 'https://prodigedigital.com/projects/humanx/FES/images/inner-banner/';
+        var imgPath = '../../images/inner-banner/';
         var imgURL = imgPath+tabLink+"-bn.jpg";
         //console.log(imgURL);
         
@@ -495,6 +512,8 @@ $(document).ready(function () {
        
         $('.funders-block ul.itemList li ').on('click', function(e) {
             e.preventDefault();
+            disableScroll();
+
             if(!$(this).find('ul .funder-details').hasClass('active')) {
                 $(this).removeClass('active');
                 $('.funder-details').removeClass('active');
@@ -505,7 +524,7 @@ $(document).ready(function () {
             //console.log(index);
             
 
-            $('body').toggleClass('active');
+            //$('body').toggleClass('active');
             $('header').toggleClass('active');
             $('.tab-drop-wrap').toggleClass('zindex');
             $('.funders-container').toggleClass('is-visible');           
@@ -571,10 +590,11 @@ $(document).ready(function () {
         });
         
         function liClick() {
-            $('body').toggleClass('active');
-            $('header').toggleClass('active');
-            $('.tab-drop-wrap').toggleClass('zindex');
-            $('.funders-container').toggleClass('is-visible');
+            enableScroll();
+            //$('body').toggleClass('active');
+            $('header').removeClass('active');
+            $('.tab-drop-wrap').removeClass('zindex');
+            $('.funders-container').removeClass('is-visible');
            
             $('ul.itemList li').removeClass('active').removeAttr("style");
             $('.funder-details').removeAttr("style").removeClass('active');    
