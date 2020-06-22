@@ -68,6 +68,13 @@ $(window).on('load', function() {
                 $('.slide.active .content').css({ left: '-80%'});
                 $('.slide.active .content .title').css({left: '-0%'});
                 $('.slide.active .content .desc').css({transform: 'translate(50%, 0)'});
+                if(nxtIndex.index == 1)
+                {
+                    $('.entryTitle >span').each(function(){
+                        delay += 0.02;
+                        $(this).css({left:'-180%'});
+                    });
+                }
                 if(nxtIndex.index == 5)
                 {
                     $('.slide').eq(5).find('.tipTitle').css({left: '230%'});
@@ -104,9 +111,18 @@ $(window).on('load', function() {
             $('.slide').eq(nxtIndex.index).find('.link').css({left: 0});
               
             $('.slide.active .content').css({left: '0%'});
-            $('.slide.active .content .title').css({left: '-27%'});
+            $('.slide.active .content .title').css({left: '-37.5%'});
             $('.slide.active .content .desc').css({transform: 'translate(115%, 0)'});
 
+            if(nxtIndex.index == 0)
+            {
+                // setTimeout(function(){
+                    $('.entryTitle >span').each(function(){
+                        delay += 0.02;
+                        $(this).css({left:'0%', transition: 'left ease-in-out 0.5s ' + delay + 's'});
+                    });
+                // },500);
+            }
 
             // }
             // if (direction == 'right') {
@@ -161,9 +177,15 @@ function firstAnimate() {
         $(this).addClass('slideFromLeft');
         // $(this).removeAttr('data-animate');
     });
+
     $('.secs .sec.active .animate').each(function() {
         $(this).addClass($(this).attr('data-animate'));
         // $(this).removeAttr('data-animate');
+    });
+    delay = 0.01;
+    $('.entryTitle >span').each(function(){
+        delay += 0.02;
+        $(this).css({left:'0%', transition: 'left ease-in-out 0.5s ' + delay + 's'});
     });
     // $('[data-animate="zoomOut"].clock').each(function() {
     //     $(this).addClass('zoomOut');
