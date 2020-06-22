@@ -541,8 +541,26 @@ footer {
         opacity: 0;
         left: 49%;
     }
+    i {
+        font-style: normal;
+        opacity: 1;
+        animation: clock-blink 1s infinite;
+    }
 }
-
+@keyframes clock-blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  50.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .tip {
     /*background: #fff;*/
     padding: 0;
