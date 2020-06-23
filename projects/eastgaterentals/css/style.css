@@ -1,0 +1,3057 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+
+@font-face {
+    font-family: 'Montserrat-Black';
+    src: url("../fonts/Montserrat-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.ttf") format("truetype"), url("../fonts/Montserrat-Black.svg#Montserrat-Black") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url("../fonts/Montserrat-Bold.eot?") format("eot"), url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.ttf") format("truetype"), url("../fonts/Montserrat-Bold.svg#Montserrat-Bold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("../fonts/Montserrat-Regular.eot?") format("eot"), url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.ttf") format("truetype"), url("../fonts/Montserrat-Regular.svg#Montserrat-Regular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MontserratExtraBold';
+    src: url("../fonts/MontserratExtraBold.eot");
+    src: url("../fonts/MontserratExtraBold.eot");
+    src: url("../fonts/MontserratExtraBold.eot") format("embedded-opentype"), url("../fonts/MontserratExtraBold.woff2") format("woff2"), url("../fonts/MontserratExtraBold.woff") format("woff"), url("../fonts/MontserratExtraBold.ttf") format("truetype"), url("../fonts/MontserratExtraBold.svg#MontserratExtraBold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MontserratLight';
+    src: url("../fonts/MontserratLight.eot");
+    src: url("../fonts/MontserratLight.eot") format("embedded-opentype"), url("../fonts/MontserratLight.woff2") format("woff2"), url("../fonts/MontserratLight.woff") format("woff"), url("../fonts/MontserratLight.ttf") format("truetype"), url("../fonts/MontserratLight.svg#MontserratLight") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fontello';
+    src: url("../fonts/icons/fontello.eot?70606392");
+    src: url("../fonts/icons/fontello.eot?70606392#iefix") format("embedded-opentype"), url("../fonts/icons/fontello.woff2?70606392") format("woff2"), url("../fonts/icons/fontello.woff?70606392") format("woff"), url("../fonts/icons/fontello.ttf?70606392") format("truetype"), url("../fonts/icons/fontello.svg?70606392#fontello") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800,900');*/
+/* Bacground Color - START*/
+/* Bacground Color - END*/
+/* BLUE SHADES */
+/* GRAY SHADES */
+/* BLACK/WHITE SHADES */
+/* Other Colors */
+/* MOUSE Varibles */
+body,
+p,
+input,
+button,
+textarea {
+    font-family: "MontserratLight", Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    font-family: "MontserratLight", Helvetica, sans-serif;
+}
+
+p,
+input,
+textarea,
+button,
+a,
+li,
+label {
+    font-size: 1.8rem;
+    line-height: 1.4;
+}
+
+/* Assign Font Properties - END */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "MontserratLight", Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    border: none;
+    max-width: 100%;
+    vertical-align: top;
+    border: none;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+}
+
+p,
+.ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding-bottom: 5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 3.3rem;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    font-size: inherit;
+    text-decoration: underline;
+}
+
+table,
+table tr td,
+table tr th {
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input,
+textarea {
+    outline: none;
+}
+
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+section,
+summary,
+mark {
+    float: left;
+    width: 100%;
+}
+
+.fl {
+    float: left !important;
+}
+
+.fr {
+    float: right !important;
+}
+
+input[type=submit],
+input[type=button],
+button[type=submit] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+}
+
+::-moz-selection {
+    background: #ed1b2d;
+    color: #fff;
+}
+
+::selection {
+    background: #ed1b2d;
+    color: #fff;
+}
+
+input::-webkit-input-placeholder {
+    color: #b6b6b6;
+}
+
+/* Grid CSS - START */
+.span2 {
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+}
+
+.span3 {
+    width: 33.3%;
+    padding: 0 15px;
+    float: left;
+    position: relative;
+}
+
+.span4 {
+    width: 25%;
+    padding: 0 15px;
+    float: left;
+}
+
+.span5 {
+    width: 20%;
+    padding: 0 15px;
+    float: left;
+}
+
+.span40 {
+    width: 40%;
+    padding: 0 15px;
+    float: left;
+}
+
+.span60 {
+    width: 60%;
+    padding: 0 15px;
+    float: left;
+}
+
+.span6 {
+    width: 66.6%;
+    padding: 0 15px;
+    float: left;
+}
+
+.span8 {
+    width: 75%;
+    padding: 0 15px;
+    float: left;
+}
+
+.span9 {
+    width: 80%;
+    padding: 0 15px;
+    float: left;
+}
+
+.span10 {
+    width: 90%;
+    padding: 0 15px;
+    float: left;
+}
+
+.span12 {
+    width: 100%;
+    padding: 0 15px;
+    float: left;
+}
+
+.centered {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Grid CSS - END */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    -o-text-overflow: '';
+    text-overflow: '';
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    max-width: 1440px;
+    position: relative;
+}
+
+.customSelect {
+    position: relative;
+    border-bottom: 1px solid #ebebeb;
+    cursor: pointer;
+    float: left;
+}
+
+.customSelect select {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #4f4f4f;
+    background: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.customSelect select option {
+    background: #fff;
+    color: #4f4f4f;
+    font-size: 1.8rem;
+}
+
+.customSelect .selectedText {
+    position: relative;
+    z-index: 2;
+    color: #ff9b41;
+    float: left;
+    padding: 0 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.customSelect .selectedText:after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 8px;
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #cacaca;
+    border-color: transparent transparent #cacaca #cacaca;
+    right: -5px;
+    background: none;
+}
+
+.errorMsg {
+    color: red;
+    font-size: 1.1rem;
+    display: none;
+    width: 100%;
+    float: left;
+    padding: 5px 0 15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.wrapper {
+    width: 100%;
+    float: left;
+}
+
+.btn {
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.44);
+    color: #fff;
+    font-size: 1.4rem;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.btn:hover {
+    background-color: #2d79ff;
+}
+
+header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    padding: 25px 0;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+header.active {
+    background-color: #041026;
+}
+
+header.active .container .leftSec a {
+    position: relative;
+    top: 0;
+}
+
+header.active .container .leftSec img {
+    max-width: 180px;
+}
+
+header.active .container .leftSec span {
+    font-size: 2.5rem;
+}
+
+header .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+header .container .leftSec a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    /*top: 20px;*/
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+header .container .leftSec img {
+    max-width: 210px;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+header .container .leftSec span {
+    color: #fff;
+    /*      padding-top: 5px;
+*/
+    font-size: 3rem;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+header .container .rightSec {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+header .container .rightSec .link {
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.64);
+    padding-left: 30px;
+}
+
+header .container .rightSec .link:hover {
+    text-decoration: underline;
+}
+
+header .container .rightSec .callUs {
+    text-transform: uppercase;
+    padding: 11px 15px;
+    font-weight: 600;
+}
+
+header .container .rightSec .callUs a {
+    color: #2d79ff;
+    font-size: 3rem;
+}
+
+.fp-tableCell {
+    width: 100%;
+}
+
+.bannerWrapper {
+    background: url("../images/home-top-bg.png") center no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 35vh 0 0 0;
+}
+
+.bannerWrapper h1 {
+    font-family: "MontserratLight", Helvetica, sans-serif;
+    font-size: 5.2rem;
+    color: #fff;
+    line-height: 7rem;
+    margin-bottom: 65px;
+    width: 100%;
+    float: left;
+    font-weight: 200;
+}
+
+.bannerWrapper h1 span {
+    font-family: "MontserratLight", Helvetica, sans-serif;
+    font-size: 2.4rem;
+    clear: both;
+    width: 100%;
+    float: left;
+}
+
+.bannerWrapper .hireNow {
+    background-color: #2d79ff;
+    padding: 20px 37px;
+    color: #fff;
+    font-size: 3.8rem;
+    width: 352px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    float: left;
+    position: relative;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.bannerWrapper .hireNow:before {
+    background: url("../images/arrow-icon.png") 0 0 no-repeat;
+    background-size: 100%;
+    width: 46px;
+    height: 46px;
+    content: "";
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.bannerWrapper .hireNow:hover {
+    background-color: #041026;
+}
+
+.bannerWrapper .hireNow:hover:before {
+    right: 25px;
+}
+
+.bannerWrapper .hireNow span {
+    color: rgba(255, 255, 255, 0.43);
+    font-size: 1.7rem;
+}
+
+.bannerWrapper .hireNow:nth-child(3) {
+    margin-left: 20px;
+}
+
+.bannerWrapper .locations {
+    background-color: #041026;
+    padding: 20px 37px;
+    color: #fff;
+    font-size: 3.8rem;
+    width: 352px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    float: left;
+    margin-left: 40px;
+    position: relative;
+}
+
+.bannerWrapper .locations:before {
+    background: url("../images/location-icon.png") 0 0 no-repeat;
+    background-size: 100%;
+    width: 46px;
+    height: 46px;
+    content: "";
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.bannerWrapper .locations:hover:before {
+    -webkit-transform: translateY(-50%) rotate(90deg);
+    -moz-transform: translateY(-50%) rotate(90deg);
+    -ms-transform: translateY(-50%) rotate(90deg);
+    -o-transform: translateY(-50%) rotate(90deg);
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.bannerWrapper .locations span {
+    color: rgba(255, 255, 255, 0.43);
+    font-size: 1.7rem;
+}
+
+.ourServices {
+    overflow: visible;
+    position: relative;
+}
+
+.ourServices .background {
+    background: url("../images/home-mid-bg.svg") 0 0 no-repeat #041026;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.ourServices .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 15vh 0 0 0;
+}
+
+.ourServices h2 {
+    font-size: 4.6rem;
+    color: #fff;
+    text-align: center;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+}
+
+.ourServices .introCopy {
+    color: #fff;
+    font-size: 2.4rem;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+    text-align: center;
+    padding: 32px 0 0 0;
+}
+
+.ourServices .serviceWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 124px;
+}
+
+.ourServices .serviceWrapper .iceManufacturing {
+    background: url("../images/pump-location-bg.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+
+.ourServices .serviceWrapper .iceManufacturing .icon img {
+    width: 47px;
+}
+
+.ourServices .serviceWrapper .dieselDelivery {
+    background: url("../images/pump-location-bg.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+
+.ourServices .serviceWrapper .dieselDelivery .icon img {
+    width: 46px;
+}
+
+.ourServices .serviceWrapper .pumpLocation {
+    background: url("../images/pump-location-bg.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+
+.ourServices .serviceWrapper .pumpLocation .icon img {
+    width: 55px;
+}
+
+.ourServices .serviceWrapper .serviceCard {
+    width: 394px;
+    height: 488px;
+    text-align: center;
+}
+
+.ourServices .serviceWrapper .serviceCard .icon {
+    width: 100%;
+    text-align: center;
+    float: left;
+    margin: 86px 0 50px 0;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.ourServices .serviceWrapper .serviceCard:hover .icon {
+    margin-top: 75px;
+    margin-bottom: 61px;
+}
+
+.ourServices .serviceWrapper .serviceCard span {
+    font-size: 1.4rem;
+    color: #fff;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+    width: 100%;
+}
+
+.ourServices .serviceWrapper .serviceCard h3 {
+    font-size: 2rem;
+    color: #fff;
+    width: 100%;
+    margin-top: 20px;
+    margin: 20px 0 60px 0;
+}
+
+.ourLocations {
+    position: relative;
+}
+
+.ourLocations:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: url("../images/white-bg.jpg") 0 0 no-repeat;
+    width: 100%;
+    height: 50vh;
+}
+
+.ourLocations .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 15vh 0 0 0;
+}
+
+.ourLocations h2 {
+    font-size: 4.6rem;
+    color: #fff;
+    text-align: center;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+}
+
+.ourLocations .introCopy {
+    color: #fff;
+    font-size: 2.4rem;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+    text-align: center;
+    padding: 32px 0 0 0;
+}
+
+.ourLocations .googleMapWrapper {
+    width: 100%;
+    height: 60vh;
+    background-color: #fff;
+    float: left;
+    margin-top: 85px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.ourLocations .googleMapWrapper img {
+    width: 100%;
+}
+
+.hireNowWrapper {
+    width: 100%;
+    background-color: #fff;
+}
+
+.hireNowWrapper .container {
+    padding-top: 10vh;
+}
+
+.hireNowWrapper h2 {
+    font-size: 4.6rem;
+    text-align: center;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+}
+
+.hireNowWrapper .fp-tableCell {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.hireNowWrapper .topSec {
+    padding: 28px 0;
+    border-bottom: 1px solid #f5e3e3;
+}
+
+.hireNowWrapper .topSec .leftSec {
+    float: left;
+}
+
+.hireNowWrapper .topSec .leftSec p {
+    font-size: 1.7rem;
+    color: #364349;
+}
+
+.hireNowWrapper .topSec .leftSec span {
+    font-size: 1.7rem;
+    color: #9babb4;
+}
+
+.hireNowWrapper .topSec .btnWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.hireNowWrapper .topSec .btnWrapper a {
+    padding: 22px 46px;
+    color: #fff;
+    background-color: #2d79ff;
+    font-size: 3rem;
+    margin: 0 3px;
+}
+
+.hireNowWrapper .topSec .btnWrapper a.active {
+    background-color: #041026;
+    color: #fff;
+}
+
+.hireNowWrapper .resultListWrapper .owl-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+}
+
+.hireNowWrapper .resultListWrapper .owl-nav .owl-prev {
+    float: left;
+    background: url("../images/carousel-prev-btn.png") right 0 no-repeat;
+    width: 18px;
+    height: 42px;
+    background-size: 100%;
+    cursor: pointer;
+    margin-left: -40px;
+    text-indent: -9999px;
+}
+
+.hireNowWrapper .resultListWrapper .owl-nav .owl-prev.disabled {
+    cursor: default;
+}
+
+.hireNowWrapper .resultListWrapper .owl-nav .owl-next {
+    float: right;
+    background: url("../images/carousel-next-btn.png") right 0 no-repeat;
+    width: 18px;
+    height: 42px;
+    background-size: 100%;
+    cursor: pointer;
+    margin-right: -40px;
+    text-indent: -9999px;
+}
+
+.hireNowWrapper .resultListWrapper .owl-nav .owl-next.disabled {
+    cursor: default;
+}
+
+.hireNowWrapper .resultListWrapper ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.hireNowWrapper .resultListWrapper ul li {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 50px 0;
+}
+
+.hireNowWrapper .resultListWrapper ul li .leftSec {
+    width: 100%;
+    max-width: 335px;
+}
+
+.hireNowWrapper .resultListWrapper ul li .leftSec img {
+    width: 100%;
+}
+
+.hireNowWrapper .resultListWrapper ul li .rightSec {
+    padding: 0 25px 0;
+    width: 60%;
+}
+
+.hireNowWrapper .resultListWrapper ul li .rightSec .title {
+    font-size: 1.9rem;
+    color: #141a26;
+    padding: 0;
+    font-weight: bold;
+}
+
+.hireNowWrapper .resultListWrapper ul li .rightSec .details {
+    font-size: 1.4rem;
+    color: #364349;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+    padding: 12px 0;
+    line-height: 21px;
+    min-height: 124px;
+}
+
+.hireNowWrapper .resultListWrapper ul li .rightSec .viewDetails {
+    padding: 12px 23px;
+    background-color: #2d79ff;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.hireNowWrapper .resultListWrapper ul li .rightSec .viewDetails:hover {
+    background-color: #041026;
+}
+
+.hireNowWrapper .bottomSec {
+    padding: 28px 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.hireNowWrapper .bottomSec .btnWrapper {
+    float: right;
+}
+
+.hireNowWrapper .bottomSec .btnWrapper a {
+    padding: 12px 35px;
+    color: #4775bc;
+    background-color: #eaf0fc;
+    font-size: 1.6rem;
+    margin: 0 3px;
+}
+
+.hireNowWrapper .bottomSec .btnWrapper a.active {
+    background-color: #2d79ff;
+    color: #fff;
+}
+
+.hireProcessWrapper {
+    padding-top: 17vh;
+}
+
+.hireProcessWrapper h2 {
+    font-size: 4.6rem;
+    color: #364349;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+}
+
+.hireProcessWrapper .introCopy {
+    font-size: 2.4rem;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+    color: #606f7b;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.hireProcessWrapper .stepsWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 5vh;
+}
+
+.hireProcessWrapper .stepsWrapper .steps {
+    text-align: center;
+    position: relative;
+}
+
+.hireProcessWrapper .stepsWrapper .steps.selectLocation img {
+    width: 100px;
+}
+
+.hireProcessWrapper .stepsWrapper .steps.choosevehicle img {
+    width: 200px;
+}
+
+.hireProcessWrapper .stepsWrapper .steps.contactUs img {
+    width: 100px;
+}
+
+.hireProcessWrapper .stepsWrapper .steps span,
+.hireProcessWrapper .stepsWrapper .steps p {
+    width: 100%;
+    float: left;
+}
+
+.hireProcessWrapper .stepsWrapper .steps span {
+    padding-top: 65px;
+    font-size: 1.7rem;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.hireProcessWrapper .stepsWrapper .steps p {
+    padding-top: 5px;
+    font-size: 1.7rem;
+    color: #606f7b;
+}
+
+.hireProcessWrapper .stepsWrapper .steps p a {
+    padding-top: 5px;
+    font-size: 1.7rem;
+    color: #606f7b;
+}
+
+.hireProcessWrapper .stepsWrapper .steps .arrow {
+    height: 40px;
+    width: 56px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 15%;
+}
+
+.hireProcessWrapper .stepsWrapper .steps .arrow:before {
+    content: '';
+    height: 15px;
+    width: 15px;
+    display: block;
+    border: 2px solid #adb7bf;
+    border-left-width: 0;
+    border-top-width: 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.hireProcessWrapper .stepsWrapper .steps .arrow:after {
+    content: '';
+    height: 1px;
+    width: 53px;
+    display: block;
+    background: #adb7bf;
+    position: absolute;
+    top: 13px;
+    left: 0px;
+}
+
+footer {
+    background-color: #041026;
+    margin-top: 10vh;
+    height: 40vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+footer .topSec {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 50px 0;
+    border-bottom: 1px solid #333232;
+}
+
+footer .topSec .leftSec span,
+footer .topSec .leftSec a {
+    font-size: 3.2rem;
+    color: #fff;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+}
+
+footer .topSec .leftSec p {
+    font-size: 1.7rem;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+    color: #8795a1;
+    padding-top: 10px;
+}
+
+footer .topSec .rightSec {
+    display: none;
+}
+
+footer .topSec .rightSec .socialWrapper {
+    float: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+footer .topSec .rightSec .socialWrapper a {
+    padding: 0 8px;
+}
+
+footer .topSec .rightSec .socialWrapper .icoFb img {
+    width: 12px;
+}
+
+footer .topSec .rightSec .socialWrapper .icoTwitter img,
+footer .topSec .rightSec .socialWrapper .icoInsta img {
+    width: 25px;
+}
+
+footer .topSec .rightSec p {
+    width: 100%;
+    font-size: 1.4rem;
+    color: #8795a1;
+    text-align: right;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+    float: right;
+    padding-top: 10px;
+}
+
+footer .bottomSec {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 50px 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+footer .bottomSec .leftSec {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+footer .bottomSec .leftSec a.logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+footer .bottomSec .leftSec a.logo img {
+    max-width: 100px;
+}
+
+footer .bottomSec .leftSec a.logo span {
+    color: #fff;
+    /*padding-top: 5px;*/
+    font-size: 2rem;
+}
+
+footer .bottomSec .leftSec .footerLink {
+    margin-left: 10px;
+}
+
+footer .bottomSec .leftSec .footerLink a {
+    color: #fff;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+    color: #8795a1;
+    font-size: 1.6rem;
+    padding: 0 7px;
+}
+
+footer .bottomSec .leftSec .footerLink a:hover {
+    text-decoration: underline;
+}
+
+footer .bottomSec .copyright {
+    font-size: 1.4rem;
+    color: #fff;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+}
+
+.history {
+    padding: 50px 0 0;
+}
+
+.history h2 {
+    font-size: 3.8rem;
+}
+
+.productDetailWrapper {
+    background-color: #eff0f5;
+}
+
+.productDetail {
+    width: 95%;
+    max-width: 1000px;
+    background-color: #fff;
+    margin: 20vh auto 0 auto;
+    -webkit-box-shadow: 0 0 10px #606f7b;
+    box-shadow: 0 0 10px #606f7b;
+}
+
+.productDetail .topSec {
+    padding: 20px 110px 20px 30px;
+    position: relative;
+}
+
+.productDetail .topSec .title {
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.productDetail .topSec .descCopy {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #606f7b;
+}
+
+.productDetail .topSec .goBack {
+    background-color: #e0e6ef;
+    font-size: 1.3rem;
+    padding: 10px 18px;
+    color: #2d79ff;
+    font-weight: 600;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+
+.productDetail .topSec .goBack:hover {
+    color: #fff;
+    background-color: #2d79ff;
+}
+
+.productDetail .carouselWrapper {
+    width: 100%;
+    position: relative;
+}
+
+.productDetail .carouselWrapper .carouselContainer {
+    max-height: 432px;
+    overflow: hidden;
+}
+
+.productDetail .carouselWrapper .carouselContainer img {
+    width: 100%;
+}
+
+.productDetail .carouselWrapper p {
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.35);
+    padding: 5px 10px;
+    color: #fff;
+    position: absolute;
+    left: 42px;
+    bottom: 24px;
+    z-index: 2;
+}
+
+.productDetail .carouselWrapper .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+}
+
+.productDetail .carouselWrapper .owl-nav .owl-prev {
+    float: left;
+    background: url("../images/prev-btn.png") right 0 no-repeat;
+    width: 18px;
+    height: 42px;
+    background-size: 100%;
+    cursor: pointer;
+    margin-left: 40px;
+    text-indent: -9999px;
+}
+
+.productDetail .carouselWrapper .owl-nav .owl-next {
+    float: right;
+    background: url("../images/next-btn.png") right 0 no-repeat;
+    width: 18px;
+    height: 42px;
+    background-size: 100%;
+    cursor: pointer;
+    margin-right: 40px;
+    text-indent: -9999px;
+}
+
+.productDetail .descriptionWrapper {
+    padding: 35px 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.productDetail .descriptionWrapper .leftSec {
+    width: 55%;
+    position: relative;
+}
+
+.productDetail .descriptionWrapper .leftSec:before {
+    position: absolute;
+    content: "";
+    right: -25px;
+    top: 0;
+    height: 100%;
+    border-right: 1px solid #eaeaea;
+}
+
+.productDetail .descriptionWrapper .leftSec h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.productDetail .descriptionWrapper .leftSec p {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.productDetail .descriptionWrapper .leftSec table {
+    float: left;
+    display: block;
+    margin-top: 15px;
+}
+
+.productDetail .descriptionWrapper .leftSec table tr th {
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: 800;
+    padding: 10px;
+}
+
+.productDetail .descriptionWrapper .leftSec table tr td {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #606f7b;
+    padding: 10px;
+    text-align: left;
+}
+
+.productDetail .descriptionWrapper .leftSec table tr td:nth-child(2) {
+    color: #000000;
+}
+
+.productDetail .descriptionWrapper .leftSec .features ul li {
+    font-size: 1.4rem;
+    list-style: disc outside;
+    margin-left: 15px;
+    padding: 3px 0;
+}
+
+.productDetail .descriptionWrapper .leftSec .features p {
+    font-size: 1.4rem;
+}
+
+.productDetail .descriptionWrapper .leftSec .ratesWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 20px 0 0 0;
+}
+
+.productDetail .descriptionWrapper .leftSec .ratesWrapper .rates h3 {
+    font-size: 1.7rem;
+    font-weight: 800;
+}
+
+.productDetail .descriptionWrapper .leftSec .ratesWrapper .rates:nth-child(2) {
+    margin-left: 25px;
+}
+
+.productDetail .descriptionWrapper .leftSec .ratesWrapper .rates p {
+    line-height: 30px;
+    font-size: 1.4rem;
+}
+
+.productDetail .descriptionWrapper .rightSec {
+    width: 35%;
+}
+
+.productDetail .descriptionWrapper .rightSec h3 {
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: #364349;
+    padding: 25px 0;
+}
+
+.productDetail .descriptionWrapper .rightSec p {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #606f7b;
+}
+
+.productDetail .descriptionWrapper .rightSec p a {
+    font-size: 1.7rem;
+    color: #606f7b;
+}
+
+.productDetail .descriptionWrapper .rightSec p.address {
+    font-size: 1.6rem;
+    color: #000000;
+}
+
+.productDetail .descriptionWrapper .rightSec .getDirection {
+    font-size: 1.4rem;
+    color: #5d83ff;
+    font-weight: 500;
+}
+
+.productDetail .descriptionWrapper .rightSec .pumAdress {
+    margin-bottom: 20px;
+}
+
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.lightbox {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    max-width: 1240px;
+    height: 80vh;
+    background-color: #171f30;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.lightbox .closeBtn {
+    height: 30px;
+    width: 30px;
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.lightbox .closeBtn:before,
+.lightbox .closeBtn:after {
+    content: '';
+    height: 5px;
+    width: 30px;
+    display: block;
+    background: #000000;
+    position: absolute;
+    top: 16px;
+    left: 0px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.lightbox .closeBtn:after {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.lightbox.locationPopup {
+    display: none;
+    max-width: 1140px;
+}
+
+.lightbox.locationPopup .leftSec {
+    width: 25%;
+}
+
+.lightbox.locationPopup .leftSec .selectLocationDrp {
+    display: none;
+}
+
+.lightbox.locationPopup .leftSec h2 {
+    color: #fff;
+    font-size: 2rem;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+    padding: 35px 22px;
+}
+
+.lightbox.locationPopup .leftSec ul {
+    height: 85%;
+    overflow: auto;
+}
+
+.lightbox.locationPopup .leftSec ul li {
+    padding: 15px 22px;
+    background-color: #1c273a;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+.lightbox.locationPopup .leftSec ul li .title {
+    color: #fff;
+    font-size: 1.7rem;
+    font-family: "Montserrat-Regular", Helvetica, sans-serif;
+}
+
+.lightbox.locationPopup .leftSec ul li .address {
+    color: #fff;
+    font-size: 1.4rem;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+}
+
+.lightbox.locationPopup .leftSec ul li a {
+    color: #5d83ff;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+    font-size: 1.4rem;
+}
+
+.lightbox.locationPopup .leftSec ul li:hover,
+.lightbox.locationPopup .leftSec ul li.active {
+    background-color: #2d79ff;
+}
+
+.lightbox.locationPopup .leftSec ul li:hover .title,
+.lightbox.locationPopup .leftSec ul li.active .title {
+    color: #fff;
+}
+
+.lightbox.locationPopup .leftSec ul li:hover a,
+.lightbox.locationPopup .leftSec ul li.active a {
+    color: rgba(255, 255, 255, 0.57);
+}
+
+.lightbox.locationPopup .rightSec {
+    width: 75%;
+    position: relative;
+}
+
+.lightbox.locationPopup .rightSec img {
+    width: 100%;
+    height: 100%;
+}
+
+.lightbox.locationPopup .rightSec .direction {
+    display: none;
+}
+
+.lightbox.locationPopup .rightSec .locationDetails {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px 0 30px 55px;
+    bottom: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.lightbox.locationPopup .rightSec .locationDetails .title {
+    font-size: 2.9rem;
+    padding-bottom: 10px;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+    color: #fff;
+}
+
+.lightbox.locationPopup .rightSec .locationDetails .address {
+    font-size: 2.3rem;
+    color: #fff;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+}
+
+.lightbox.iceManufacturingLightbox,
+.lightbox.dieselDeliveryLightbox {
+    background-color: #fff;
+    height: auto;
+    display: none;
+}
+
+.lightbox.iceManufacturingLightbox .lightboxCont,
+.lightbox.dieselDeliveryLightbox .lightboxCont {
+    padding: 50px;
+}
+
+.lightbox.iceManufacturingLightbox .lightboxCont h2,
+.lightbox.dieselDeliveryLightbox .lightboxCont h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.lightbox.iceManufacturingLightbox .lightboxCont p,
+.lightbox.dieselDeliveryLightbox .lightboxCont p {
+    padding: 10px 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.lightbox.iceManufacturingLightbox .lightboxCont ul li,
+.lightbox.dieselDeliveryLightbox .lightboxCont ul li {
+    font-size: 1.6rem;
+    font-weight: 400;
+    list-style: disc outside;
+    margin-left: 15px;
+}
+
+.lightbox.iceManufacturingLightbox .lightboxCont .callUs,
+.lightbox.dieselDeliveryLightbox .lightboxCont .callUs {
+    background-color: #2d79ff;
+    color: #fff;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    padding: 11px 15px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.lightbox.iceManufacturingLightbox .lightboxCont .callUs a,
+.lightbox.dieselDeliveryLightbox .lightboxCont .callUs a {
+    color: #fff;
+}
+
+.aboutUs .aboutUsBannerWrapper {
+    padding: 25vh 0 0 0;
+    background-color: #eff0f5;
+}
+
+.aboutUs .aboutUsBannerWrapper .background {
+    background: url("../images/home-top-bg.png") right 0 no-repeat #eff0f5;
+    background-size: cover;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 55vh;
+}
+
+.aboutUs .aboutUsBannerWrapper h1 {
+    color: #fff;
+    font-size: 4.2rem;
+    text-align: center;
+    width: 100%;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+    font-weight: 200;
+}
+
+.aboutUs .aboutUsBannerWrapper .introCopy {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "MontserratLight", Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.aboutUs .aboutUsBannerWrapper .banner {
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 72px;
+    padding: 80px 75px;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.aboutUs .aboutUsBannerWrapper .banner h2 {
+    font-size: 3.8rem;
+    color: #000000;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+    text-align: center;
+}
+
+.aboutUs .aboutUsBannerWrapper .banner p {
+    font-size: 1.9rem;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+}
+
+.aboutUs .aboutUsBannerWrapper .contContainer {
+    padding: 105px 0;
+}
+
+.aboutUs .aboutUsBannerWrapper .contContainer p {
+    font-size: 1.9rem;
+    line-height: 40px;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+    text-align: center;
+}
+
+.aboutUs .ourTeam {
+    padding: 145px 0 50px 0;
+}
+
+.aboutUs .ourTeam h2 {
+    font-size: 3.8rem;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+}
+
+.aboutUs .ourTeam .introCopy {
+    font-size: 1.9rem;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+    padding-top: 15px;
+}
+
+.aboutUs .ourTeam ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 72px;
+}
+
+.aboutUs .ourTeam ul li {
+    background-color: #eff0f5;
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 35px 35px 0;
+    position: relative;
+}
+
+.aboutUs .ourTeam ul li:before {
+    content: "";
+    border-top: 2px solid #adb7bf;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    -webkit-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+}
+
+.aboutUs .ourTeam ul li:after {
+    content: "";
+    border-left: 2px solid #adb7bf;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0%;
+    -webkit-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+}
+
+.aboutUs .ourTeam ul li span.line:before {
+    content: "";
+    border-right: 2px solid #adb7bf;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 0%;
+    -webkit-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+}
+
+.aboutUs .ourTeam ul li span.line:after {
+    content: "";
+    border-bottom: 2px solid #adb7bf;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    -webkit-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+}
+
+.aboutUs .ourTeam ul li:hover:before {
+    width: 100%;
+}
+
+.aboutUs .ourTeam ul li:hover:after {
+    height: 100%;
+}
+
+.aboutUs .ourTeam ul li:hover span.line:before {
+    height: 100%;
+}
+
+.aboutUs .ourTeam ul li:hover span.line:after {
+    width: 100%;
+}
+
+.aboutUs .ourTeam ul li .title {
+    padding-top: 77px;
+    font-size: 1.4rem;
+    width: 100%;
+}
+
+.aboutUs .ourTeam ul li .name {
+    width: 100%;
+    font-size: 2.2rem;
+    font-family: "MontserratLight", Helvetica, sans-serif;
+    padding: 13px 0 10px 0;
+}
+
+.aboutUs .ourTeam ul li img {
+    max-width: 276px;
+    width: auto;
+    margin-top: 24px;
+}
+
+.aboutUs .ourTeam ul li .linkedin img {
+    max-width: 30px;
+    margin-top: 0;
+}
+
+.aboutUs .team {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.aboutUs .team:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #eff0f5;
+    height: 70%;
+    width: 100%;
+}
+
+.aboutUs .team .teamImg {
+    margin-top: 10%;
+}
+
+@media screen and (max-width: 1440px) and (max-height: 768px) {
+    .container {
+        max-width: 1000px;
+    }
+
+    header {
+        padding: 20px 0;
+    }
+
+    header .container .leftSec a {
+        position: relative;
+        /*top: 10px;*/
+        -webkit-transition: all 0.5s ease-in;
+        -moz-transition: all 0.5s ease-in;
+        -ms-transition: all 0.5s ease-in;
+        -o-transition: all 0.5s ease-in;
+        transition: all 0.5s ease-in;
+    }
+
+    header .container .leftSec img {
+        max-width: 160px;
+        -webkit-transition: all 0.5s ease-in;
+        -moz-transition: all 0.5s ease-in;
+        -ms-transition: all 0.5s ease-in;
+        -o-transition: all 0.5s ease-in;
+        transition: all 0.5s ease-in;
+    }
+
+    header .container .leftSec span {
+        font-size: 1.6rem;
+        -webkit-transition: all 0.5s ease-in;
+        -moz-transition: all 0.5s ease-in;
+        -ms-transition: all 0.5s ease-in;
+        -o-transition: all 0.5s ease-in;
+        transition: all 0.5s ease-in;
+    }
+
+    header .container .rightSec .callUs a {
+        font-size: 2.6rem;
+    }
+
+    header .container .rightSec .link {
+        font-size: 1.4rem;
+    }
+
+    header.active .container .leftSec a {
+        position: relative;
+        top: 0;
+    }
+
+    header.active .container .leftSec img {
+        max-width: 130px;
+    }
+
+    header.active .container .leftSec span {
+        font-size: 1.3rem;
+    }
+
+    .bannerWrapper h1 {
+        font-size: 4.6rem;
+        line-height: 6rem;
+    }
+
+    .bannerWrapper h1 span {
+        font-size: 2.2rem;
+    }
+
+    .bannerWrapper .hireNow {
+        font-size: 2.8rem;
+        width: 270px;
+        padding: 20px 27px;
+    }
+
+    .bannerWrapper .hireNow:before {
+        width: 40px;
+        height: 40px;
+    }
+
+    .ourServices h2 {
+        font-size: 3.8rem;
+    }
+
+    .ourServices .introCopy {
+        font-size: 2.2rem;
+        padding: 28px 0 0 0;
+    }
+
+    .ourServices .serviceWrapper {
+        margin-top: 60px;
+    }
+
+    .ourServices .serviceWrapper .serviceCard {
+        width: 354px;
+        height: 378px;
+    }
+
+    .ourServices .serviceWrapper .serviceCard h3 {
+        font-size: 1.8rem;
+    }
+
+    .ourServices .serviceWrapper .iceManufacturing .icon img {
+        width: 37px;
+    }
+
+    .ourServices .serviceWrapper .dieselDelivery .icon img {
+        width: 36px;
+    }
+
+    .ourServices .serviceWrapper .pumpLocation .icon img {
+        width: 45px;
+    }
+
+    .hireNowWrapper h2 {
+        font-size: 4.2rem;
+    }
+
+    .hireNowWrapper .container {
+        padding-top: 20vh;
+    }
+
+    .hireNowWrapper .resultListWrapper ul {
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+
+    .hireNowWrapper .resultListWrapper ul li {
+        width: 50%;
+    }
+
+    .hireNowWrapper .resultListWrapper ul li .leftSec {
+        max-width: 280px;
+    }
+
+    .hireNowWrapper .resultListWrapper ul li .rightSec {
+        padding: 0 15px 0;
+    }
+
+    .hireNowWrapper .resultListWrapper ul li .rightSec .details {
+        font-size: 1.2rem;
+        line-height: 18px;
+        min-height: 95px;
+        padding: 5px 0;
+    }
+
+    .hireNowWrapper .resultListWrapper ul li .rightSec .viewDetails {
+        padding: 10px 19px;
+    }
+
+    .hireProcessWrapper {
+        padding-top: 20vh;
+    }
+
+    .hireProcessWrapper h2 {
+        font-size: 3.8rem;
+    }
+
+    .hireProcessWrapper .introCopy {
+        font-size: 2rem;
+    }
+
+    .hireProcessWrapper .stepsWrapper {
+        margin-top: 3vh;
+    }
+
+    .hireProcessWrapper .stepsWrapper .steps.selectLocation img,
+    .hireProcessWrapper .stepsWrapper .steps.contactUs img {
+        width: 70px;
+    }
+
+    .hireProcessWrapper .stepsWrapper .steps.choosevehicle img {
+        width: 140px;
+    }
+
+    .hireProcessWrapper .stepsWrapper .steps span {
+        padding-top: 20px;
+        font-size: 1.6rem;
+    }
+
+    .hireProcessWrapper .stepsWrapper .steps p {
+        font-size: 1.6rem;
+    }
+
+    footer {
+        margin-top: 5vh;
+    }
+
+    footer .topSec {
+        padding: 25px 0;
+    }
+
+    footer .topSec .leftSec span,
+    footer .topSec .leftSec a {
+        font-size: 2.8rem;
+    }
+
+    footer .bottomSec {
+        padding: 25px 0;
+    }
+
+    .lightbox {
+        max-width: 95%;
+    }
+
+    .lightbox.locationPopup {
+        height: 90vh;
+        max-width: 1000px;
+    }
+
+    .lightbox.locationPopup .leftSec {
+        width: 30%;
+    }
+
+    .lightbox.locationPopup .leftSec h2 {
+        padding: 20px 17px;
+        font-size: 1.6rem;
+    }
+
+    .lightbox.locationPopup .leftSec ul {
+        height: 90%;
+    }
+
+    .lightbox.locationPopup .leftSec ul li {
+        padding: 10px 12px;
+    }
+
+    .lightbox.locationPopup .leftSec ul li .title {
+        font-size: 1.5rem;
+    }
+
+    .lightbox.locationPopup .leftSec ul li .address {
+        font-size: 1.2rem;
+    }
+
+    .lightbox.locationPopup .rightSec {
+        width: 70%;
+    }
+
+    .lightbox.locationPopup .rightSec .locationDetails {
+        padding: 20px;
+    }
+
+    .lightbox.locationPopup .rightSec .locationDetails .title {
+        font-size: 2.2rem;
+    }
+
+    .lightbox.locationPopup .rightSec .locationDetails .address {
+        font-size: 1.8rem;
+    }
+
+    .aboutUs .aboutUsBannerWrapper .banner {
+        padding: 60px 75px;
+    }
+
+    .aboutUs .aboutUsBannerWrapper .contContainer {
+        padding: 80px 0;
+    }
+
+    .aboutUs .aboutUsBannerWrapper .contContainer p {
+        line-height: 30px;
+    }
+
+    .aboutUs .ourTeam {
+        padding: 100px 0 50px 0;
+    }
+
+    .aboutUs .ourTeam ul li {
+        margin: 0 32px 35px 0;
+    }
+
+    .aboutUs .ourTeam ul li .title {
+        padding-top: 40px;
+    }
+
+    .aboutUs .ourTeam ul li img {
+        max-width: 225px;
+    }
+
+    .productDetail {
+        max-width: 800px;
+    }
+
+    .productDetail .descriptionWrapper .leftSec h2 {
+        font-size: 1.8rem;
+    }
+
+    .productDetail .descriptionWrapper .leftSec .ratesWrapper .rates h3 {
+        font-size: 1.4rem;
+    }
+
+    .productDetail .descriptionWrapper .rightSec h3 {
+        padding: 15px 0;
+    }
+
+    .productDetail .descriptionWrapper .rightSec p {
+        font-size: 1.5rem;
+    }
+
+    .productDetail .descriptionWrapper .rightSec p a {
+        font-size: 1.4rem;
+    }
+
+    .productDetail .descriptionWrapper .rightSec p.address {
+        font-size: 1.4rem;
+    }
+
+    .productDetail .descriptionWrapper .rightSec a {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 95%;
+        padding: 0 10px;
+    }
+
+    .ourServices .serviceWrapper .serviceCard {
+        width: 30%;
+        background-size: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    header .container .leftSec img {
+        max-width: 120px;
+    }
+
+    header .container .leftSec span {
+        font-size: 1.2rem;
+    }
+
+    .bannerWrapper {
+        padding: 20vh 0 23vh 0;
+    }
+
+    .ourServices .serviceWrapper .serviceCard h3 {
+        font-size: 1.6rem;
+    }
+
+    .ourLocations {
+        padding: 10vh 0;
+    }
+
+    .ourLocations:before {
+        height: 50%;
+    }
+
+    .ourLocations .googleMapWrapper {
+        height: auto;
+    }
+
+    .hireProcessWrapper {
+        padding-top: 5vh;
+    }
+
+    .hireNowWrapper .resultListWrapper ul li .rightSec {
+        width: 100%;
+    }
+
+    .hireNowWrapper .resultListWrapper .resultContainer {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    footer {
+        margin-top: 5vh;
+    }
+
+    .lightbox {
+        height: auto;
+    }
+
+    .hireNowWrapper {
+        padding: 50px 0;
+    }
+
+    .hireNowWrapper .resultListWrapper ul:before {
+        display: none;
+    }
+
+    .hireNowWrapper .resultListWrapper ul li {
+        padding: 30px 0;
+    }
+
+    .hireNowWrapper .resultListWrapper ul li .rightSec {
+        padding: 0 20px 0;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .bannerWrapper h1 {
+        font-size: 4.8rem;
+    }
+
+    .bannerWrapper .hireNow,
+    .bannerWrapper .locations {
+        width: 300px;
+        font-size: 2.8rem;
+    }
+
+    .ourServices {
+        background-size: cover;
+    }
+
+    .ourServices .serviceWrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-top: 75px;
+    }
+
+    .ourServices .serviceWrapper .serviceCard {
+        width: 95%;
+        max-width: 378px;
+        margin-bottom: 30px;
+        background-size: 100% 100%;
+        padding-bottom: 50px;
+    }
+
+    .ourLocations {
+        padding: 10vh 0;
+    }
+
+    .hireNowWrapper .container {
+        padding-top: 0px;
+    }
+
+    .hireNowWrapper .resultListWrapper ul li {
+        width: 100%;
+    }
+
+    .aboutUs .aboutUsBannerWrapper {
+        padding: 20vh 0 0 0;
+    }
+
+    .aboutUs .aboutUsBannerWrapper .background {
+        height: 45vh;
+    }
+
+    .aboutUs .aboutUsBannerWrapper .contContainer {
+        padding: 75px 0;
+    }
+
+    .aboutUs .aboutUsBannerWrapper .banner {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 70px 50px;
+    }
+
+    .aboutUs .aboutUsBannerWrapper .banner .rightSec {
+        padding: 10% 5%;
+    }
+
+    .aboutUs .ourTeam {
+        padding: 85px 0;
+    }
+
+    .aboutUs .ourTeam ul li {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .lightbox {
+        top: auto;
+        width: 90%;
+        transform: translate(-50%, 0%);
+        -webkit-transform: translate(-50%, 0%);
+        -moz-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+        -o-transform: translate(-50%, 0%);
+    }
+
+    .lightbox.locationPopup {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .lightbox.locationPopup .leftSec {
+        width: 100%;
+    }
+
+    .lightbox.locationPopup .leftSec .selectLocationDrp {
+        font-size: 2rem;
+        width: 100%;
+        padding: 20px;
+        color: #fff;
+        position: relative;
+        background-color: #2d79ff;
+        display: block;
+    }
+
+    .lightbox.locationPopup .leftSec .selectLocationDrp:before {
+        content: '';
+        height: 10px;
+        width: 10px;
+        display: block;
+        border: 3px solid #fff;
+        border-right-width: 0;
+        border-top-width: 0;
+        transform: rotate(-45deg) translateY(-50%);
+        -webkit-transform: rotate(-45deg) translateY(-50%);
+        -moz-transform: rotate(-45deg) translateY(-50%);
+        -o-transform: rotate(-45deg) translateY(-50%);
+        -ms-transform: rotate(-45deg) translateY(-50%);
+        position: absolute;
+        top: 50%;
+        right: 25px;
+    }
+
+    .lightbox.locationPopup .leftSec ul {
+        position: absolute;
+        height: 300px;
+        overflow: auto;
+        z-index: 1;
+        width: 100%;
+        display: block;
+    }
+
+    .lightbox.locationPopup .leftSec ul li {
+        padding: 15px 22px;
+        -o-transition: none;
+        transition: none;
+        -webkit-transition: none;
+    }
+
+    .lightbox.locationPopup .leftSec ul li .address,
+    .lightbox.locationPopup .leftSec ul li a {
+        display: none;
+    }
+
+    .lightbox.locationPopup .rightSec {
+        width: 100%;
+    }
+
+    .lightbox.locationPopup .rightSec .direction {
+        display: block;
+        position: absolute;
+        bottom: 25px;
+        right: 10px;
+        color: #fff;
+        background-color: #2d79ff;
+        padding: 10px;
+    }
+
+    .lightbox.locationPopup .rightSec .locationDetails {
+        left: 0;
+        padding-left: 26px;
+        bottom: 20px;
+    }
+
+    .lightbox.locationPopup .rightSec .locationDetails .title {
+        font-size: 2.5rem;
+    }
+
+    .lightbox.locationPopup .rightSec .locationDetails .address {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header .container .leftSec img {
+        max-width: 90px;
+    }
+
+    header .container .leftSec span {
+        font-size: 1.5rem;
+    }
+
+    header .container .rightSec .callUs {
+        border-radius: 0px;
+        padding: 0px;
+        width: auto;
+        height: auto;
+        background: none;
+    }
+
+    header .container .rightSec .callUs span {
+        display: none;
+    }
+
+    header .container .rightSec .callUs a {
+        float: left;
+        text-indent: -9999px;
+        padding: 0;
+        background: url("../images/call-icon.png") 0 0 no-repeat;
+        width: 30px;
+        height: 30px;
+    }
+
+    header .container .rightSec .link {
+        padding: 0 10px;
+    }
+
+    .bannerWrapper h1 {
+        line-height: 5.5rem;
+    }
+
+    .bannerWrapper .hireNow,
+    .bannerWrapper .locations {
+        width: 45%;
+        font-size: 2.2rem;
+    }
+
+    .bannerWrapper .hireNow span,
+    .bannerWrapper .locations span {
+        font-size: 1.4rem;
+    }
+
+    .ourServices .background {
+        background-size: cover;
+    }
+
+    .ourServices .serviceWrapper .serviceCard {
+        height: auto;
+    }
+
+    .ourLocations {
+        padding: 10vh 0;
+    }
+
+    .ourLocations:before {
+        height: 20vh;
+    }
+
+    .history h2 {
+        font-size: 3.2rem;
+    }
+
+    footer .topSec {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    footer .topSec .rightSec {
+        padding-top: 40px;
+    }
+
+    footer .topSec .rightSec .socialWrapper,
+    footer .topSec .rightSec p {
+        float: left;
+        text-align: left;
+    }
+
+    footer .bottomSec {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    footer .bottomSec .copyright {
+        padding-top: 40px;
+    }
+
+    .aboutUs .aboutUsBannerWrapper {
+        padding: 35vh 0 0 0;
+    }
+
+    .aboutUs .aboutUsBannerWrapper h1 {
+        font-size: 3.6rem;
+    }
+
+    .aboutUs .aboutUsBannerWrapper .background {
+        height: 90vh;
+    }
+
+    .aboutUs .aboutUsBannerWrapper .banner {
+        margin-top: 32px;
+    }
+
+    .aboutUs .aboutUsBannerWrapper .banner .rightSec h2 {
+        font-size: 3.2rem;
+        padding-bottom: 10px;
+    }
+
+    .aboutUs .aboutUsBannerWrapper .contContainer p {
+        font-size: 1.6rem;
+        line-height: 33px;
+    }
+
+    .aboutUs .ourTeam {
+        padding: 40px 0;
+    }
+
+    .aboutUs .ourTeam ul {
+        margin-top: 32px;
+    }
+
+    .aboutUs .ourTeam h2 {
+        font-size: 3.2rem;
+    }
+
+    .productDetail {
+        height: auto;
+        margin: 130px auto 50px auto;
+    }
+
+    .productDetail .descriptionWrapper {
+        padding: 30px 25px;
+    }
+
+    .hireNowWrapper .topSec .btnWrapper a {
+        padding: 15px 26px;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .bannerWrapper {
+        padding: 150px 0;
+    }
+
+    .bannerWrapper h1 {
+        font-size: 3.5rem;
+        line-height: 45px;
+    }
+
+    .bannerWrapper h1 span {
+        font-size: 2rem;
+    }
+
+    .ourServices h2,
+    .ourLocations h2,
+    .hireProcessWrapper h2,
+    .hireNowWrapper h2 {
+        font-size: 3rem;
+    }
+
+    .ourServices .introCopy,
+    .ourLocations .introCopy,
+    .hireProcessWrapper .introCopy,
+    .hireNowWrapper .introCopy {
+        font-size: 2rem;
+    }
+
+    .ourLocations:before {
+        height: 50%;
+    }
+
+    .hireNowWrapper .resultListWrapper ul li .rightSec {
+        padding: 0 15px;
+    }
+
+    .hireNowWrapper .bottomSec {
+        padding: 28px 0;
+    }
+
+    .hireNowWrapper .bottomSec .btnWrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .hireProcessWrapper .stepsWrapper .steps {
+        width: 30%;
+    }
+
+    .hireProcessWrapper .stepsWrapper .steps span {
+        font-size: 1.5rem;
+    }
+
+    .hireProcessWrapper .stepsWrapper .steps p {
+        font-size: 1.4rem;
+    }
+
+    .hireProcessWrapper .stepsWrapper .steps.selectLocation img,
+    .hireProcessWrapper .stepsWrapper .steps.contactUs img {
+        width: 30%;
+    }
+
+    .hireProcessWrapper .stepsWrapper .steps.choosevehicle img {
+        width: 60%;
+    }
+
+    .hireProcessWrapper .stepsWrapper .steps .arrow {
+        right: -25%;
+    }
+
+    .aboutUs .aboutUsBannerWrapper .contContainer {
+        padding: 75px 0 30px;
+    }
+
+    footer {
+        height: auto;
+    }
+
+    footer .topSec .leftSec span,
+    footer .topSec .leftSec a {
+        font-size: 2.6rem;
+    }
+
+    footer .bottomSec .leftSec {
+        display: block;
+    }
+    footer .bottomSec .leftSec a.logo span {
+      font-size: 1.5rem;
+    }
+    footer .bottomSec .leftSec .footerLink {
+        margin: 20px 0 0 0;
+        text-align: center;
+    }
+
+    .history {
+        padding: 0;
+    }
+
+    .lightbox.iceManufacturingLightbox .lightboxCont,
+    .lightbox.dieselDeliveryLightbox .lightboxCont {
+        padding: 50px 10px;
+    }
+
+    .productDetail .topSec {
+        padding: 20px 130px 20px 30px;
+    }
+
+    .productDetail .carouselWrapper .owl-nav .owl-prev {
+        margin-left: 10px;
+    }
+
+    .productDetail .carouselWrapper .owl-nav .owl-next {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .bannerWrapper {
+        padding: 100px 0 70px 0;
+    }
+
+    .bannerWrapper h1 {
+        font-size: 3rem;
+    }
+
+    .bannerWrapper .hireNow {
+        width: 100%;
+    }
+
+    .bannerWrapper .hireNow:nth-child(3) {
+        margin: 20px 0 0 0;
+    }
+
+    .bannerWrapper .locations {
+        margin: 30px 0 0 0;
+    }
+
+    .ourLocations .container {
+        padding: 0;
+    }
+
+    .ourLocations .googleMapWrapper {
+        margin-top: 35px;
+    }
+
+    .hireProcessWrapper .stepsWrapper .steps .arrow {
+        -webkit-transform: scale(0.7);
+        -moz-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        -o-transform: scale(0.7);
+        transform: scale(0.7);
+        top: 0;
+        right: -40%;
+    }
+
+    .history h2 {
+        font-size: 3rem;
+    }
+
+    .aboutUs .aboutUsBannerWrapper {
+        padding: 30vh 0 0 0;
+    }
+
+    .aboutUs .aboutUsBannerWrapper .background {
+        height: 85vh;
+    }
+
+    .aboutUs .aboutUsBannerWrapper .banner {
+        margin-top: 20px;
+        padding: 30px;
+    }
+
+    .aboutUs .aboutUsBannerWrapper .banner h2 {
+        font-size: 3rem;
+    }
+
+    .aboutUs .aboutUsBannerWrapper .banner P {
+        font-size: 1.6rem;
+    }
+
+    .aboutUs .ourTeam {
+        padding: 40px 0;
+    }
+
+    .aboutUs .ourTeam h2 {
+        font-size: 3rem;
+    }
+
+    .aboutUs .ourTeam ul li {
+        width: 100%;
+    }
+
+    .hireNowWrapper {
+        padding: 30px 0;
+    }
+
+    .productDetail {
+        max-height: initial;
+    }
+
+    .productDetail .descriptionWrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .productDetail .descriptionWrapper .leftSec {
+        width: 100%;
+    }
+
+    .productDetail .descriptionWrapper .leftSec:before {
+        display: none;
+    }
+
+    .productDetail .descriptionWrapper .rightSec {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .hireNowWrapper .topSec {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .hireNowWrapper .topSec .btnWrapper {
+        float: left;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .hireNowWrapper .topSec .btnWrapper a {
+        margin: 0 3px 0 3px;
+    }
+
+    .hireNowWrapper .bottomSec {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .hireNowWrapper .bottomSec .btnWrapper {
+        margin: 22px 0 0 0;
+    }
+
+    .hireNowWrapper .resultListWrapper ul li {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .hireNowWrapper .resultListWrapper ul li .leftSec {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hireNowWrapper .resultListWrapper ul li .rightSec {
+        margin: 15px 0 0 0;
+    }
+
+    .hireNowWrapper .container>div {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .aboutUs .aboutUsBannerWrapper {
+        padding: 100px 0 0 0;
+    }
+
+    .aboutUs .aboutUsBannerWrapper .background {
+        height: 45%;
+    }
+
+    .aboutUs .aboutUsBannerWrapper .contContainer p {
+        line-height: 25px;
+    }
+
+    .lightbox.locationPopup .rightSec .locationDetails {
+        padding-left: 15px;
+        bottom: 60px;
+    }
+
+    .lightbox.locationPopup .rightSec .locationDetails .title {
+        font-size: 1.6rem;
+    }
+
+    .lightbox.locationPopup .rightSec .locationDetails .address {
+        font-size: 1.4rem;
+    }
+
+    .lightbox.locationPopup .rightSec .direction {
+        left: 15px;
+        right: auto;
+        font-size: 1.4rem;
+        bottom: 15px;
+    }
+
+    .productDetail .descriptionWrapper {
+        padding: 30px 15px;
+    }
+
+    .productDetail .carouselWrapper p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .aboutUs .aboutUsBannerWrapper .banner {
+        padding: 20px;
+    }
+
+    .aboutUs .aboutUsBannerWrapper .background {
+        height: 60%;
+    }
+}
