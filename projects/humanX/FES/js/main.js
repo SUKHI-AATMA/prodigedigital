@@ -87,7 +87,7 @@ $(document).ready(function () {
             smartSpeed: 600,
             autoPlaySpeed: 600,
             autoplay: true,
-            autoPlayTimeout: 10000,
+            autoplayTimeout: 10000,
             mouseDrag: true,
             video: true,
 
