@@ -213,11 +213,13 @@ header{
                             &:before {
                                 content: '';
                                 width: 48px;
-                                height: 1px;
+                                height: 2px;
+                                border-radius: 20px;
                                 background: #fff;
                                 position: absolute;
                                 bottom: 0;
                                 left: 0;
+                                opacity: .3;
                             }
 
                             &.li-resources{
@@ -239,7 +241,9 @@ header{
                                 font-weight: 600;
                                 letter-spacing: 0.23px;
                                 line-height: 24px;
+                                opacity: 1;
                                 @include transition(.3s ease-in-out);
+
                                 &.active, &:hover{
                                     color: #fff;
                                 }
@@ -328,6 +332,7 @@ header{
                                 > a{
                                     color: #004950;
                                     font-weight: bold;
+                                    opacity: 1;
                                 }
                             }
                             
@@ -574,21 +579,24 @@ header{
         padding: 0;
         margin-bottom: 24px;
         width: 100% !important;
-        cursor: none;
         border-bottom: 1px solid;
         padding-bottom: 24px;
-        cursor: pointer;
 
         &:last-child{
             border-bottom: 0;
         }
     }
 
-    header .container .flex-wrap .menu-wrap nav ul.menu>li.active>a, header .container .flex-wrap .menu-wrap nav ul.menu>li:hover>a{
+    header .container .flex-wrap .menu-wrap nav ul.menu>li.active>a,
+    header .container .flex-wrap .menu-wrap nav ul.menu>li:hover>a{
         color: #fff;
+    }
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li:hover>a{
+        font-weight: normal;
     }
     header .container .flex-wrap .menu-wrap.open nav ul.menu>li>a{
         font-weight: normal;
+        z-index: 0;
         width: auto;
         display: inline;
         font-size: 18px;
@@ -606,20 +614,21 @@ header{
         position: absolute;
         top: 0;
         right: 0px;
+        z-index: 0;
     }
     header .container .flex-wrap .menu-wrap.open nav ul.menu>li span.plus:before{
         content: '+';
         display: block;
         font-size:20px;
-        line-height: 20px;
+        line-height: 22px;
         font-weight:200;
         padding-left: 5px;
     }
-    header .container .flex-wrap .menu-wrap.open nav ul.menu>li .active span.plus:before{
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li.active span.plus:before{
         content: '-';
         padding-left: 7px;
         font-size: 22px;
-        line-height: 16px;
+        line-height: 18px;
     }
 
     header .container .flex-wrap .menu-wrap.open nav ul.menu>li.li-resources ul.dropdown{

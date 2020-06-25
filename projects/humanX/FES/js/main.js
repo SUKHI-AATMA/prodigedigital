@@ -59,7 +59,7 @@ $(document).ready(function () {
 
         $('header .li-link').click(function() {
             $(this).siblings().removeClass('active');
-            $(this).addClass('active')
+            $(this).toggleClass('active')
         
             if(!$(this).find('.dropdown').hasClass('active')) {
                 $('.dropdown').slideUp();

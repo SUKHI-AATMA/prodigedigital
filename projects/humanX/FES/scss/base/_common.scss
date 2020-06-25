@@ -525,7 +525,15 @@ button.mfp-close{
             line-height: 36px;
         }
     } 
-    
+
+    .banner-circle .circle-container .circle-line-wrap .circle-wrap div{
+        svg{
+            #About{
+                stroke-width: 1.5;
+            }
+        }
+    }
+
     .banner-circle .circle-container .circle-line-wrap{
         right: -14px;
         bottom: -17px;
