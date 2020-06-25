@@ -69,12 +69,11 @@ section.sec-slider{
                 display: none;
             }
 
-
             .content-wrap{
                 position: absolute;
                 z-index: 44;
                 left: 50%;
-                bottom: 20px;
+                bottom: 12px;
                 transform: translateX(-50%) translateY(-50%);
                 display: block;
                 // max-width: 760px;
