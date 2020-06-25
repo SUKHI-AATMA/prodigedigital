@@ -86,9 +86,8 @@ $(document).ready(function () {
             items: 1,   
             smartSpeed: 600,
             autoPlaySpeed: 600,
-            autoplay: 9000,
-            autoPlayTimeout: 9000,
-            slideTransition: 'linear',
+            autoplay: true,
+            autoPlayTimeout: 10000,
             mouseDrag: true,
             video: true,
 
@@ -369,8 +368,7 @@ $(document).ready(function () {
         $('.sec-abt-bn .content').show();
         if(index != 1){
             $('.sec-abt-bn .content').hide();
-        }
-        
+        }        
 
         //tabLink();
         var tab_id = $(this).attr('data-tab');  

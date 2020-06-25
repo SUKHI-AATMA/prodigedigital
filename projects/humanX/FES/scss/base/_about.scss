@@ -1000,6 +1000,7 @@ section.sec-abt-tab{
 
                 img{
                     width: 100%;
+                    display: block;
                 }
             }
             .img-box{
@@ -1202,10 +1203,10 @@ section.sec-abt-tab{
     section.sec-abt-tab .tab-container .tab-content .row .journey-wrap, section.sec-abt-tab .tab-container .tab-content .row .mission-wrap{
         padding: 60px 20px 90px;
     }
-    section.sec-abt-tab .tab-container .tab-content .row .head-wrap h2{
-        font-size: 14px;
-        line-height: 20px;
-    }
+    // section.sec-abt-tab .tab-container .tab-content .row .head-wrap h2{
+    //     font-size: 14px;
+    //     line-height: 20px;
+    // }
 
     // section.sec-abt-tab .tab-container .tab-content .board-wrap{
     //     padding-top: 12px;

@@ -32,6 +32,7 @@ header{
         a{
             display: block;
             line-height:0;
+
             img{
                 width: 170px;
                 height: auto;
@@ -170,7 +171,7 @@ header{
                     display: block;
                     line-height: 0;
                     img{
-                        width: 140px;
+                        width: 170px;
                         height: auto;
                     }
                 }
@@ -314,6 +315,7 @@ header{
                                 letter-spacing: 0.73px;
                                 line-height: 19px;
                                 cursor: pointer;
+                                opacity: .7;
                                 @include transition(.3s ease-in-out);;
                             }
                             &.active, &:hover{
@@ -338,16 +340,17 @@ header{
                                 height: 4px;
                                 bottom: -16px;
                                 border-radius: 20px;
+                                left: -10px;
                                 background: #004950;
                                 transition: width 350ms ease-out;
                             }
             
                             &:hover:after {
-                                width: calc(100% - 40px);
+                                width: calc(100% - 20px);
                                 transition: width 350ms ease-out;
                             }
                             &.active:after {
-                                width: calc(100% - 40px);
+                                width: calc(100% - 20px);
                             }
     
                             &:last-child:after {
@@ -377,7 +380,7 @@ header{
                             }
                             
                             ul.dropdown{
-                                padding: 30px 20px 30px 30px;
+                                padding: 42px 20px 20px 30px;
                                 display: none;
                                 position: absolute;
                                 top: 100%;
@@ -659,8 +662,8 @@ header{
         padding: 0px 20px;
     }
     header .container .flex-wrap .logo{
-        width: 114px;
-        padding: 12px 0;
+        width: 148px;
+        padding: 8px 0;
         a{
             img{
                 width: 100%;

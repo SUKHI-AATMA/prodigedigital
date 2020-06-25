@@ -350,7 +350,7 @@ button.mfp-close{
 
     ul.tabs {
         margin-left: 125px;
-        display: inline-block;
+        display: table;
         width: auto;
         // display: flex;
         // justify-content: space-between;
@@ -383,7 +383,7 @@ button.mfp-close{
         span.line{
             width: 100%;
             height: 1px;
-            opacity: 0.8;
+            opacity: 0.1;
             position: absolute;
             left: 0;
             top: 53px;
@@ -437,19 +437,19 @@ button.mfp-close{
                 display: block;
                 width: 0;
                 position: absolute;
-                bottom: 0px;
-                height: 4px;
-                border-radius: 20px;
+                bottom: 1px;
+                height: 3px;
+                border-radius: 50px;
                 background: #004950;
                 transition: width 350ms ease-out;
             }
 
             &:hover:after {
-                width: 106%;
+                width: 100%;
                 transition: width 350ms ease-out;
             }
             &.active:after {
-                width: 106%;
+                width: 100%;
             }
 
             
@@ -651,7 +651,7 @@ button.mfp-close{
 
 @media screen and (max-width : 650px){
     main{
-        padding-top: 65px;
+        padding-top: 69px;
     }
     
     .banner-circle .circle-container{
