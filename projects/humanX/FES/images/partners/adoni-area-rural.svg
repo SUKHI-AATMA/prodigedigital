@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="160px" height="160px" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
-    <title>2</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Homepage-&amp;-menu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="2">
-            <polygon id="Rectangle-Copy-5" fill="#E8F5EE" opacity="0.5" points="0 0 160 0 160 160 0 160"></polygon>
-            <text id="Adoni-Area-Rural-Dev" font-family="NotoSerifJP-SemiBold, Noto Serif JP" font-size="14" font-weight="500" letter-spacing="0.133333333" fill="#004950">
-                <tspan x="19.1673333" y="56">Adoni Area Rural </tspan>
-                <tspan x="32.9196667" y="76">Development </tspan>
-                <tspan x="44.4136667" y="96">Initiatives </tspan>
-                <tspan x="38.212" y="116">Programme</tspan>
-            </text>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="160px" height="160px" viewBox="0 0 160 160" enable-background="new 0 0 160 160" xml:space="preserve">
+<title>2</title>
+<desc>Created with Sketch.</desc>
+<g id="Homepage-_x26_-menu">
+	<g id="_x32_">
+		<polygon id="Rectangle-Copy-5" opacity="0.5" fill="#E8F5EE" enable-background="new    " points="0,0 160,0 160,160 0,160 		"/>
+		<text transform="matrix(1 0 0 1 24.0747 56)" fill="#004950" font-family="'ArialMT'" font-size="14">Adoni Area Rural </text>
+		<text transform="matrix(1 0 0 1 37.8267 76)" fill="#004950" font-family="'ArialMT'" font-size="14">Development </text>
+		<text transform="matrix(1 0 0 1 49.3208 96)" fill="#004950" font-family="'ArialMT'" font-size="14">Initiatives </text>
+		<text transform="matrix(1 0 0 1 43.1191 116)" fill="#004950" font-family="'ArialMT'" font-size="14">Programme</text>
+	</g>
+</g>
 </svg>
