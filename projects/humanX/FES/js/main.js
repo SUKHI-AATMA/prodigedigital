@@ -631,7 +631,7 @@ $(window).load(function() {
     
     var url = window.location.href; 
     var headerHref = url.split("?").pop();
-    //console.log(headerHref, 'url');
+    console.log(headerHref, 'url');
     
     $("ul.tabs li.tab-link").each(function () {
         var dataLink = $(this).attr('data-link');
