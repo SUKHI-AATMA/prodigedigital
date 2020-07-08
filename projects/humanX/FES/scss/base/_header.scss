@@ -497,9 +497,10 @@ header{
 }
 
 
-@media (min-height: 600px) and (max-height: 700px){
+@media (min-height: 300px) and (max-height: 700px){
     header .container .flex-wrap .menu-wrap.open {
-        height: 540px;
+        height: 500px;
+        padding: 100px 50px 30px;
     }
     header .container .flex-wrap .menu-wrap.open nav ul.menu>li ul.dropdown{
         padding: 20px 20px 20px 30px;
