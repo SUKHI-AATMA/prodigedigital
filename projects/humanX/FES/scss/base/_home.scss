@@ -1269,6 +1269,16 @@ section.sec-timeline{
     }
 }
 
+@media screen and (max-width : 2050px) and (min-width : 2040px){
+    section.sec-slider .banner-wrap .owl-carousel .item.ytplayer-wrap video {
+        width: auto;
+        height: 100%;
+    }
+    .owl-carousel .owl-item img {
+        width: auto;
+        height: 100%;
+    }
+}
 
 
 // media query
