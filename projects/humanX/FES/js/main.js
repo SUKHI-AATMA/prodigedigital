@@ -85,7 +85,7 @@ $(document).ready(function () {
             dotsData: false,
             items: 1,   
             smartSpeed: 600,
-            autoPlaySpeed: 600,
+            autoplaySpeed: 600,
             autoplay: true,
             autoplayTimeout: 10000,
             mouseDrag: true,
@@ -142,7 +142,7 @@ $(document).ready(function () {
         videoTimer();
         
         owlHomeBanner.on('changed.owl.carousel', function(e) {
-            //console.log($(".owl-dots .active").index());
+            console.log($(".owl-dots .active").index());
             if($(".owl-dots .active").index() == 0) {
                 document.getElementById("myVideo").play();
                 videoTimer();
