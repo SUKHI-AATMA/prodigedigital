@@ -87,7 +87,7 @@ $(document).ready(function () {
             smartSpeed: 600,
             autoplaySpeed: 600,
             autoplay: true,
-            autoplayTimeout: 10000,
+            autoplayTimeout: 11000,
             mouseDrag: true,
             video: true,
 
@@ -156,6 +156,7 @@ $(document).ready(function () {
                 
                 owlHomeBanner.trigger('play.owl.autoplay');
             }
+           
             
             // console.log('onchange owlHomeBanner');
             //owlHomeBanner.trigger('stop.owl.autoplay');
