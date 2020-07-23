@@ -86,7 +86,7 @@ $(document).ready(function () {
             items: 1,   
             smartSpeed: 600,
             autoplaySpeed: 600,
-            autoplay: true,
+            autoplay: false,
             autoplayTimeout: 11000,
             mouseDrag: true,
             video: true,
@@ -121,6 +121,7 @@ $(document).ready(function () {
         });
 
         var videoInterval;
+       
 
         function videoTimer() {
             //console.log(123);
@@ -129,12 +130,15 @@ $(document).ready(function () {
             if(vid.currentTime == vid.duration) {
                 clearTimeout(videoInterval);
                 $(".owl-dots .active").next().click();
-                //console.log("inside_1");
-                owlHomeBanner.trigger('play.owl.autoplay');
+                console.log("inside_1");
+                owlHomeBanner.trigger('refresh.owl.carousel');
+                owlHomeBanner.trigger('play.owl.autoplay',[11000]);
+                
+            
             }
             else {
                 //console.log("inside_2");
-                owlHomeBanner.trigger('stop.owl.autoplay');
+                owlHomeBanner.trigger('stop.owl.autoplay',[0]);
                 videoInterval = setTimeout(videoTimer, 500);
             }
         }
@@ -142,7 +146,7 @@ $(document).ready(function () {
         videoTimer();
         
         owlHomeBanner.on('changed.owl.carousel', function(e) {
-            console.log($(".owl-dots .active").index());
+            //console.log($(".owl-dots .active").index());
             if($(".owl-dots .active").index() == 0) {
                 document.getElementById("myVideo").play();
                 videoTimer();
@@ -154,10 +158,8 @@ $(document).ready(function () {
                 document.getElementById("myVideo").currentTime = 0;
                 ///-console.log("after:" + document.getElementById("myVideo").currentTime);
                 
-                owlHomeBanner.trigger('play.owl.autoplay');
+                owlHomeBanner.trigger('play.owl.autoplay',[11000]);
             }
-           
-            
             // console.log('onchange owlHomeBanner');
             //owlHomeBanner.trigger('stop.owl.autoplay');
             //owlHomeBanner.trigger('play.owl.autoplay');
