@@ -123,25 +123,6 @@ $(document).ready(function() {
         });
 
         var videoInterval;
-
-        // function videoTimer() {
-        //     //console.log(123);
-        //     //console.log(vid.currentTime + "=====" + vid.duration)
-        //     if(vid.currentTime == vid.duration) {
-        //         clearTimeout(videoInterval);
-        //         $(".owl-dots .active").next().click();
-        //         console.log("inside_1");
-        //         // owlHomeBanner.trigger('refresh.owl.carousel');
-        //         // owlHomeBanner.trigger('play.owl.autoplay',[11000]);
-
-
-        //     }
-        //     else {
-        //         //console.log("inside_2");
-        //         // owlHomeBanner.trigger('stop.owl.autoplay',[0]);
-        //         videoInterval = setTimeout(videoTimer, 500);
-        //     }
-        // }
         var clearTO;
         var playTimerInterval;
         var isVideo = $('.owl-item.active').find('.video').length;
@@ -188,6 +169,25 @@ $(document).ready(function() {
                 owlSlideInitiate();
             }
         });
+
+        // function videoTimer() {
+        //     //console.log(123);
+        //     //console.log(vid.currentTime + "=====" + vid.duration)
+        //     if(vid.currentTime == vid.duration) {
+        //         clearTimeout(videoInterval);
+        //         $(".owl-dots .active").next().click();
+        //         console.log("inside_1");
+        //         // owlHomeBanner.trigger('refresh.owl.carousel');
+        //         // owlHomeBanner.trigger('play.owl.autoplay',[11000]);
+
+
+        //     }
+        //     else {
+        //         //console.log("inside_2");
+        //         // owlHomeBanner.trigger('stop.owl.autoplay',[0]);
+        //         videoInterval = setTimeout(videoTimer, 500);
+        //     }
+        // }
         // owlHomeBanner.on('changed.owl.carousel', function(e) {
         //     //console.log($(".owl-dots .active").index());
         //     if ($(".owl-dots .active").index() == 0) {
