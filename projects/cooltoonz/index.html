@@ -108,10 +108,9 @@
     });
 
     function onYouTubeIframeAPIReadyss(vidId) {
-        player = new YT.Player('video', {
-            height: '1240',
-            width: '698',
-            // width="1240" height="698"
+        player = new YT.Player('player', {
+            height: '390',
+            width: '640',
             videoId: vidId,
             playerVars: {
                 'autoplay': 1,
@@ -137,9 +136,9 @@
     var done = false;
 
     function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.ENDED) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
             // setTimeout(stopVideo, 65000);
-            // done = true;
+            done = true;
         }
     }
 
@@ -157,9 +156,10 @@
         var divPlayer = '<div class="container">'
         divPlayer += `<div class="title">
             <p>` + title + `</p>
-            <!-- <p>EP 1</p>-->
+            <p>EP 1</p>
         </div>
-        <div class="vid" id="video">
+        <div class="vid">
+            <iframe width="1240" height="698" src="https://www.youtube.com/embed/` + vidId + `?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="quiz">
             <a href="javascript:;" class="submit tkQuiz">Take Quiz</a>
@@ -177,7 +177,6 @@
         divPlayer += '</div>';
         $('#player').html('').append(divPlayer);
         generateQuestions(vidId);
-        onYouTubeIframeAPIReadyss(vidId)
         
         // $('iframe').attr('src', )
         // $('h3').text(data.title)
