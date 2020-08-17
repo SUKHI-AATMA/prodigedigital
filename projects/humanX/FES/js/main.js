@@ -128,7 +128,7 @@ $(document).ready(function() {
         var isVideo = $('.owl-item.active').find('.video').length;
 
         function owlSlideInitiate(isVideo) {
-            console.log($('.owl-dot.active').index());
+            //console.log($('.owl-dot.active').index());
             if ($('.owl-dot.active').index() == 0) {
                 if (vid.currentTime == 0) {
                     vid.play();
@@ -139,10 +139,10 @@ $(document).ready(function() {
                         vid.currentTime = 0;
                         owlHomeBanner.trigger('next.owl.carousel');
                         clearInterval(playTimerInterval);
-                        console.log('index if - ' + $('button.owl-dot.active').index());
+                        //console.log('index if - ' + $('button.owl-dot.active').index());
                         clearTO = setInterval(function() {
                             owlHomeBanner.trigger('next.owl.carousel');
-                            console.log('index if - ' + $('button.owl-dot.active').index());
+                            //console.log('index if - ' + $('button.owl-dot.active').index());
                         }, 10000)
                     }
                 }, 500);
@@ -157,7 +157,7 @@ $(document).ready(function() {
                 clearInterval(clearTO);
                 clearTO = setInterval(function() {
                     owlHomeBanner.trigger('next.owl.carousel');
-                    console.log('index if - ' + $('button.owl-dot.active').index());
+                    //console.log('index if - ' + $('button.owl-dot.active').index());
                 }, 10000);
             }
         })
