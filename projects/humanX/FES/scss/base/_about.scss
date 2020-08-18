@@ -16,6 +16,7 @@ section.sec-abt-bn{
             max-width: 531px;
             width: 100%;
             margin-left: 125px;
+
             h1{
                 color: #FFFFFF;
                 font-family: 'Noto Serif JP', serif;
@@ -68,30 +69,14 @@ section.sec-abt-bn{
 section.sec-abt-tab{
     padding: 42px 0px 0;
     
-
     .container{
-
         .wrapper{
             padding: 90px 125px 110px 125px;
             position: relative;
-
-            // &:before{
-            //     content: '';
-            //     background-color: rgba(232, 245, 238, .5);
-            //     width: 455px;
-            //     height: 100%;
-            //     position: absolute;
-            //     top: 0;
-            //     left: 0;
-            //     z-index: 1;
-            // }
-
             &.drop-wrapper{
                 padding: 40px 125px 20px 125px;
             }
-            
         }
-
         .tab-drop-wrap ul.tabs{
             margin-bottom: 20px;
         }
@@ -114,7 +99,6 @@ section.sec-abt-tab{
                 text-transform: uppercase;
                 margin-bottom: 30px;
             }
-
             .morecontent > span {
                 display: none;
             }
@@ -127,19 +111,11 @@ section.sec-abt-tab{
                 margin-top: 12px;
                 @include transition(all .3s ease);
 
-                // &:hover{
-                //     img,svg{
-                //         transform: translateY(10px);
-                //         @include transition(all .3s ease);
-                //     }
-                // }
-
                 &.readLess{
                     img, svg{
                         transform: rotate(-90deg);
                     }
                 }
-
                 span{
                     text-transform: capitalize;
                     padding-right: 10px;
@@ -191,7 +167,6 @@ section.sec-abt-tab{
             }
             
             .row{
-
                 .row-wrap{
                     width: 100%;
                     height: 100%;
@@ -208,10 +183,8 @@ section.sec-abt-tab{
                         padding-left: 0;
                         padding-right: 0;
                         background-color: rgba(232, 245, 238, .5);
-                    }
-                    
+                    }                    
                 }
-
                 
                 .head-wrap{
                     width: 100%;
@@ -222,9 +195,25 @@ section.sec-abt-tab{
                         font-weight: 600;
                         letter-spacing: 0;
                         line-height: 35px;
-                        z-index: 2;
-                        padding-bottom: 72px;
+                        z-index: 2;                        
+                        padding-bottom: 30px;
                     }
+                    p {
+                        opacity: 0.8;
+                        color: #000000;
+                        font-size: 18px;
+                        letter-spacing: 0.26px;
+                        line-height: 26px;
+                        padding-bottom: 30px;
+                    }                
+                    padding-bottom: 42px;
+                }
+
+                .inner-container{                    
+                    padding: 80px 125px;                                            
+                    max-width: 1280px;
+                    width: 100%;
+                    margin: 0 auto;
                 }
 
                 .mission-wrap{

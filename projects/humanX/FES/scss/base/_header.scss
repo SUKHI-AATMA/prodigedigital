@@ -253,6 +253,11 @@ header{
                                 background: no-repeat;
                                 box-shadow: none;
                                 li {
+                                    &.active{
+                                        >a{
+                                            color: #FFFFFF;
+                                        }
+                                    }
                                     &:hover{
                                         &:before{
                                             background-color: #fff;
@@ -269,6 +274,65 @@ header{
                                         // &:hover{
                                         //     color: #000000;
                                         // }
+                                    }
+
+                                    &.inner-li-link{
+
+                                        &.active,&:hover{
+                                            &:before{
+                                                display: none;
+                                            }
+                                        }
+
+                                        &::after {
+                                            border-right: 1px solid #ffffff;
+                                            border-bottom: 1px solid #ffffff;
+                                        }
+
+                                        &:last-child{
+                                            ul{
+                                                li{
+                                                    &:last-child{
+                                                        padding-bottom: 0px;
+                                                        border-bottom: none;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    ul.inner-dropdown{
+                                        display: none;
+                                        padding-top: 12px;
+
+                                        &:hover > * {
+                                            opacity: 0.4;
+                                        }
+                                        &:hover > *:hover {
+                                            opacity: 1;
+                                        }
+
+                                        li{
+                                            position: relative;
+                                            width: 100%;
+                                            padding-bottom: 10px;
+
+                                            &:last-child{
+                                                padding-bottom: 12px;
+                                                border-bottom: 1px solid rgb(255 255 255 / .3);
+                                            }
+
+                                            &.active,&:hover{
+                                                @include transition(.3s ease-in-out); 
+                                                &:before{
+                                                    background-color: #fff;
+                                                }
+                                                
+                                                > a{
+                                                    color: #fff;                  
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -401,7 +465,7 @@ header{
                                     opacity: 1;
                                 }
                                 
-                                li{
+                                > li{
                                     width: 148px;
                                     padding-bottom: 12px;
                                     position: relative;
@@ -424,6 +488,7 @@ header{
                                         text-transform: capitalize;
                                     }
     
+                                    // &.active,&:hover{
                                     &.active,&:hover{
                                         @include transition(.3s ease-in-out); 
                                         &:before{
@@ -437,11 +502,88 @@ header{
                                             right: -6px;
                                         }
                                         
-                                        a{
+                                        > a{
                                             //font-weight: bold;
                                             color: #004950;
                                             // transition: 50ms ease-out; 
                                             // @include transition(.3s ease-in-out);                   
+                                        }
+                                    }
+
+                                    &.inner-li-link{
+
+                                        &.active,&:hover{
+                                            &:before{
+                                                display: none;
+                                            }
+                                        }
+
+                                        &::after {
+                                            width: 8px;
+                                            height: 8px;
+                                            border-right: 1px solid #000;
+                                            border-bottom: 1px solid #000;
+                                            position: absolute;
+                                            right: -7px;
+                                            content: " ";
+                                            top: 7px;
+                                            transform: rotate(45deg);
+                                            transition: all 0.2s ease-in-out;
+                                        }
+                                        &.active::after {
+                                            transform: rotate(-134deg);
+                                            transition: all 0.2s ease-in-out;
+                                        }
+                                        &:last-child{
+                                            ul{
+                                                li{
+                                                    &:last-child{
+                                                        padding-bottom: 0px;
+                                                        border-bottom: none;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    ul.inner-dropdown{
+                                        display: none;
+                                        padding-top: 12px;
+
+                                        &:hover > * {
+                                            opacity: 0.4;
+                                        }
+                                        &:hover > *:hover {
+                                            opacity: 1;
+                                        }
+
+                                        li{
+                                            position: relative;
+                                            width: 100%;
+                                            padding-bottom: 10px;
+
+                                            &:last-child{
+                                                padding-bottom: 12px;
+                                                border-bottom: 1px solid rgb(151 151 151 / .3);
+                                            }
+
+                                            &.active,&:hover{
+                                                @include transition(.3s ease-in-out); 
+                                                &:before{
+                                                    content: '';
+                                                    background-color: #11555c;
+                                                    width: 6px;
+                                                    height: 6px;
+                                                    border-radius: 50%;
+                                                    position: absolute;
+                                                    top: 8px;
+                                                    right: -6px;
+                                                }
+                                                
+                                                > a{
+                                                    color: #004950;                  
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -673,6 +815,9 @@ header{
         display: none;
     }
 
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li ul.dropdown li.inner-li-link:after{
+        right: 10px;
+    }
 
 }
 

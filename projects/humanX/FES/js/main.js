@@ -1,5 +1,23 @@
 $(document).ready(function() {
 
+    $('.inner-li-link').click(function(j) {
+    
+        var dropDown = $(this).find('.inner-dropdown');
+        $(this).closest('.dropdown').find('.inner-dropdown').not(dropDown).slideUp();
+        
+        if ($(this).hasClass('active')) {
+            //console.log('if');
+            $(this).removeClass('active');
+        } else {
+            //console.log('else');
+            $(this).closest('.dropdown').find('.inner-li-link.active').removeClass('active');
+            $(this).addClass('active');
+        }
+        
+        dropDown.stop(false, true).slideToggle();
+        j.preventDefault();
+        
+      });
 
     // disable Scroll
     function disableScroll() {
@@ -57,7 +75,8 @@ $(document).ready(function() {
 
     if ($(window).width() < 1025) {
 
-        $('header .li-link').click(function() {
+        $('header ul.menu > .li-link').click(function(e) {
+            e.preventDefault();
             $(this).siblings().removeClass('active');
             $(this).toggleClass('active')
 
@@ -409,17 +428,44 @@ $(document).ready(function() {
     $('ul.tabs li.tab-link').click(function() {
 
         var index = $(this).index();
-        //console.log(index);
-        $('.sec-abt-bn .content').show();
+        // var contentIndex = $('.sec-core-bn .content').length;
+        // console.log('index = ', index, '  &&  contentIndex = ', contentIndex);
+        $('.sec-abt-bn .content, .sec-core-bn .content').show();
         if (index != 1) {
-            $('.sec-abt-bn .content').hide();
+            $('.sec-abt-bn .content, .sec-core-bn .content').hide();
         }
+
+        // $( '.sec-core-bn .content').each(function( index ) {
+
+        //     if (index == 1) {
+        //         $('.sec-core-bn .content').eq(index).show().siblings().hide();
+        //     // } else {
+        //     //     $('.sec-core-bn .content').hide();
+        //     }
+        //     if (index == 2) {
+        //         $('.sec-core-bn .content').eq(index).addClass('active').show().siblings().hide();
+        //     // } else {
+        //     //     $('.sec-core-bn .content').hide();
+        //     }
+        //     if (index == 3 ) {
+        //         $('.sec-core-bn .content').eq(index).show().siblings().hide();
+        //     // } else {
+        //     //     $('.sec-core-bn .content').hide();
+        //     }
+        //     if (index == 4 ) {
+        //         $('.sec-core-bn .content').eq(index).show().siblings().hide();
+        //     // } else {
+        //     //     $('.sec-core-bn .content').hide();
+        //     }
+        // });
+        
 
         //tabLink();
         var tab_id = $(this).attr('data-tab');
         var tabLink = $(this).attr('data-link');
         // console.log('tabLink', tabLink);
-        var imgPath = 'https://prodigedigital.com/projects/humanx/FES/images/inner-banner/';
+        // var imgPath = 'https://prodigedigital.com/projects/humanx/FES/images/inner-banner/';
+        var imgPath = '../../images/inner-banner/';
         var imgURL = imgPath + tabLink + "-bn.jpg";
         //console.log(imgURL);
 
