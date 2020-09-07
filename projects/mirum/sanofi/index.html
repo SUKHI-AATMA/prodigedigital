@@ -95,6 +95,11 @@
             padding: 44px 0 0 0;
         }
 
+        .banner-wrapper header > div > img {
+            width: fit-content;
+            max-width: 100%;
+        }
+
         .banner-wrapper .banner-content-wrapper {
             justify-content: flex-end;
             height: 100%;
@@ -131,7 +136,7 @@
         }
 
         .banner-wrapper .banner-content h2 {
-            font-size: 2.2rem;
+            font-size: 2rem;
             text-align: center;
             padding-bottom: 80px;
             font-weight: 300;
@@ -163,10 +168,10 @@
             padding: 101px 0 75px 0;
         }
 
-        .latest-episode-wrapper h1, .latest-episode-content .box-content .heading,
+        .latest-episode-wrapper h2, .latest-episode-content .box-content .heading,
         .medical-college-diaries-wrapper .heading,
         footer .help-us-wrapper .heading {
-            font-size: 4.1rem;
+            font-size: 3.4rem;
             margin-bottom: 32px;
         }
 
@@ -190,7 +195,7 @@
 
         .latest-episode-content .box-content .description,
         .medical-college-diaries-wrapper .description {
-            font-size: 3.3rem;
+            font-size: 2.6rem;
             margin-bottom: 39px;
         }
 
@@ -200,7 +205,7 @@
 
         .latest-episode-content .box-content .details > span {
             display: block;
-            font-size: 3.9rem;
+            font-size: 3.2rem;
         }
 
         .latest-episode-content .box-content .details i {
@@ -208,8 +213,9 @@
             top: 0;
             right: 0;
             background: url('./images/icon-info.png') no-repeat 0 0;
-            width: 40px;
-            height: 40px;
+            background-size: contain;
+            width: 30px;
+            height: 30px;
             cursor: pointer;
         }
 
@@ -229,7 +235,7 @@
         }
 
         .medical-college-diaries-wrapper .sub-heading {
-            font-size: 3.6rem;
+            font-size: 2.9rem;
         }
 
         .medical-college-diaries-wrapper .description {
@@ -275,7 +281,7 @@
         
         .medical-college-diaries-wrapper .diaries-content .box-content .name {
             text-transform: uppercase;
-            font-size: 26px;
+            font-size: 1.9rem;
             font-weight: 600;
             margin-bottom: 78px;
         }
@@ -333,7 +339,7 @@
         footer .help-us-wrapper button {
             background-color: #00b0ca;
             text-transform: uppercase;
-            font-size: 3.3rem;
+            font-size: 2.6rem;
             padding: 15px 45px;
             border-radius: 15px;
             color: #f2f2f2;
@@ -341,7 +347,7 @@
         }
 
         footer .more-info-wrapper p {
-            font-size: 3.3rem;
+            font-size: 2.6rem;
             line-height: 55px;
             margin-bottom: 100px;
         }
@@ -433,6 +439,301 @@
             .banner-wrapper .banner-content h2 {
                 font-size: 2.7rem;
             }
+
+            .latest-episode-wrapper h2, .latest-episode-content .box-content .heading,
+            .medical-college-diaries-wrapper .heading,
+            footer .help-us-wrapper .heading {
+                font-size: 4.1rem;
+            }
+
+            .latest-episode-content .box-content .description,
+            .medical-college-diaries-wrapper .description {
+                font-size: 3.3rem;
+            }
+
+            .latest-episode-content .box-content .details > span {
+                font-size: 3.9rem;
+            }
+
+            .latest-episode-content .box-content .details i {
+                width: 40px;
+                height: 40px;
+            }
+
+            .medical-college-diaries-wrapper .sub-heading {
+                font-size: 3.6rem;
+            }
+
+            .medical-college-diaries-wrapper .diaries-content .box-content .name {
+                font-size: 2.6rem;
+            }
+
+            footer .help-us-wrapper button, footer .more-info-wrapper p {
+                font-size: 3.3rem;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .fixed-wrapper {
+                width: 100%;
+                padding: 0 20px;
+            }
+
+            .banner-wrapper {
+                background-position: top left   ;
+            }
+
+            .banner-wrapper .banner-content-wrapper {
+                padding-right: 0;
+                align-items: flex-start;
+            }
+
+            .banner-wrapper .banner-content {
+                height: 100%;
+                justify-content: space-between;
+                width: 400px;
+            }
+
+            .banner-wrapper .banner-content h1 {
+                font-weight: 300;
+                font-size: 2.1rem;
+                padding: 15px 0;
+            }
+
+            .banner-wrapper .banner-content .next-screen-arrow {
+                bottom: 30px
+            }
+
+            .latest-episode-wrapper h2, .latest-episode-content .box-content .heading, .medical-college-diaries-wrapper .heading, footer .help-us-wrapper .heading {
+                font-size: 2.8rem;
+            }
+
+            .latest-episode-wrapper, .medical-college-diaries-wrapper {
+                padding: 50px 0 35px 0;
+            }
+
+            .latest-episode-content .box-content .heading {
+                padding-right: 0;
+            }
+
+            .latest-episode-content .box-content .description, .medical-college-diaries-wrapper .description {
+                font-size: 2.1rem;
+            }
+
+            .latest-episode-content .box-content .details > span {
+                font-size: 2rem;
+            }
+
+            .latest-episode-wrapper .latest-episode-content .owl-nav {
+                display: none;
+            }
+
+            .medical-college-diaries-wrapper .diaries-content {
+                margin-bottom: 50px;
+            }
+
+            .medical-college-diaries-wrapper .diaries-content.owl-carousel .owl-nav .owl-prev span::before {
+                left: 0px;
+            }
+
+            .medical-college-diaries-wrapper .diaries-content.owl-carousel .owl-nav .owl-next span::before {
+                right: 0px;
+            }
+
+            .medical-college-diaries-wrapper .diaries-content .box-content .profile-img {
+                width: 250px;
+                height: 250px;
+            }
+
+            .medical-college-diaries-wrapper .diaries-content.owl-carousel .owl-dots {
+                margin-top: 30px;
+            }
+
+            .medical-college-diaries-wrapper .diaries-content .box-content .name {
+                margin-bottom: 30px;
+            }
+
+            .laughter-wrapper .heading {
+                background-size: 20%;
+            }
+
+            .laughter-wrapper .diaries-content .owl-stage-outer {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            footer {
+                padding: 50px 0;
+            }
+
+            footer .help-us-wrapper button {
+                font-size: 2.2rem;
+                padding: 10px 25px;
+            }
+
+            footer .more-info-wrapper p {
+                font-size: 2rem;
+                line-height: 30px;
+                margin-bottom: 50px;
+            }
+        }
+
+        @media only screen and (max-width: 414px) {
+            /* .fixed-wrapper {
+                width: 100%;
+                padding: 0 20px;
+            } */
+
+            .banner-wrapper {
+                background-image: url('./images/banner-bg-device.jpg');
+                background-position: bottom center;
+            }
+
+            .banner-wrapper header {
+                padding: 24px 0 0 0;
+                margin-bottom: 30px;
+            }
+
+            .banner-wrapper header > div {
+                width: 40%;
+            }
+
+            /* .banner-wrapper .banner-content-wrapper {
+                padding-right: 0;
+                align-items: flex-start;
+            } */
+
+            /* .banner-wrapper .banner-content {
+                height: 100%;
+                justify-content: space-between;
+            } */
+
+            .banner-wrapper .banner-content {
+                width: 100%;
+            }
+
+            /* .banner-wrapper .banner-content h1 {
+                font-weight: 300;
+                font-size: 2.1rem;
+                padding: 15px 0;
+            } */
+
+            .banner-wrapper .banner-content h2 {
+                font-size: 1.8rem;
+            }
+
+            /* .banner-wrapper .banner-content .next-screen-arrow {
+                bottom: 30px
+            } */
+
+            /* .latest-episode-wrapper, .medical-college-diaries-wrapper {
+                padding: 50px 0 35px 0;
+            } */
+
+            /* .latest-episode-wrapper h2, .latest-episode-content .box-content .heading, .medical-college-diaries-wrapper .heading, footer .help-us-wrapper .heading {
+                font-size: 2.8rem;
+            } */
+
+            /* .latest-episode-content .box-content .description, .medical-college-diaries-wrapper .description {
+                font-size: 2.1rem;
+            } */
+
+            .latest-episode-content .box-content .details > span {
+                font-size: 1.8rem;
+            }
+
+            .latest-episode-wrapper h2, .latest-episode-content .box-content .heading, .medical-college-diaries-wrapper .heading, footer .help-us-wrapper .heading, .latest-episode-content .box-content .description, .medical-college-diaries-wrapper .description {
+                margin-bottom: 20px;
+            }
+
+            .latest-episode-wrapper .latest-episode-content .box-content {
+                flex-direction: column;
+            }
+
+            .latest-episode-content .box-content .col-1, .latest-episode-content .box-content .col-2 {
+                width: 100%;
+            }
+
+            .latest-episode-content .box-content .col-1 {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+
+            /* .latest-episode-content .box-content .heading {
+                padding-right: 0;
+            } */
+
+            .latest-episode-content .box-content .details i {
+                width: 20px;
+                height: 20px;
+            }
+            
+            /* .latest-episode-wrapper .latest-episode-content .owl-nav {
+                display: none;
+            } */
+
+            /* .medical-college-diaries-wrapper .diaries-content {
+                margin-bottom: 50px;
+            } */
+
+            .medical-college-diaries-wrapper .diaries-content.owl-carousel .owl-nav .owl-prev span::before,
+            .medical-college-diaries-wrapper .diaries-content.owl-carousel .owl-nav .owl-next span::before {
+                width: 25px;
+                height: 25px;
+            }
+
+            .medical-college-diaries-wrapper .diaries-content.owl-carousel .owl-nav .owl-prev span::before {
+                left: 0px;
+            }
+
+            .medical-college-diaries-wrapper .diaries-content.owl-carousel .owl-nav .owl-next span::before {
+                right: 0px;
+            }
+
+            .laughter-wrapper .heading {
+                background-size: 30%;
+                padding-right: 120px;
+                text-align: left;
+            }
+
+            /* .medical-college-diaries-wrapper .diaries-content.owl-carousel .owl-dots {
+                margin-top: 30px;
+            }
+
+            .medical-college-diaries-wrapper .diaries-content .box-content .name {
+                margin-bottom: 30px;
+            }
+
+            .laughter-wrapper .diaries-content .owl-stage-outer {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            footer {
+                padding: 50px 0;
+            }
+
+            footer .help-us-wrapper button {
+                font-size: 2.2rem;
+                padding: 10px 25px;
+            }
+
+            footer .more-info-wrapper p {
+                font-size: 2rem;
+                line-height: 30px;
+                margin-bottom: 50px;
+            } */
+        }
+
+        @media only screen and (max-width: 375px) {
+            .banner-wrapper .banner-content h1 {
+                font-size: 1.6rem;
+            }
+
+            /* .medical-college-diaries-wrapper .diaries-content .box-content .profile-img {
+                width: 250px;
+                height: 250px;
+            } */
         }
     </style>
 </head>
@@ -450,9 +751,11 @@
                 </header>
                 <div class="banner-content-wrapper display-flex full-width">
                     <div class="banner-content display-flex flex-direction-column">
-                        <h1>For the first time in Pediatrics,<br>we present to you our podcast.</h1>
-                        <div class="logo-image">
-                            <img src="./images/logo-sanofipedia.png" alt="SanofiPedia - By Doctors for Doctors">
+                        <div>
+                            <h1>For the first time in Pediatrics,<br>we present to you our podcast.</h1>
+                            <div class="logo-image">
+                                <img src="./images/logo-sanofipedia.png" alt="SanofiPedia - By Doctors for Doctors">
+                            </div>
                         </div>
                         <h2>Hello Doctors!<br>Here’s a podcast with the latest in paediatrics & vaccination with news, practice tips, insightful discussions with your fellow doctors and more.</h2>
                         <span class="next-screen-arrow"></span>
@@ -462,7 +765,7 @@
         </section>
         <section class="latest-episode-wrapper display-flex full-width">
             <div class="fixed-wrapper display-flex flex-direction-column">
-                <h1>Latest Episode</h1>
+                <h2>Latest Episode</h2>
                 <div class="latest-episode-content">
                     <div class="box-content display-flex flex-direction-row flex-wrap space-between">
                         <div class="col-1">
@@ -653,8 +956,61 @@
                     nav: true,
                     responsive: {
                         1200: {
-                            items: 3,
-                            slideBy: 3
+                            items: 3
+                        }
+                    }
+                });
+            }
+        }
+        else if(winW >= 768) {
+            if($(".medical-college-diaries-wrapper:not('.laughter-wrapper') .diaries-content .box-content").length > 2) {
+                $(".medical-college-diaries-wrapper:not('.laughter-wrapper') .diaries-content").addClass("owl-carousel");
+                $(".medical-college-diaries-wrapper:not('.laughter-wrapper') .diaries-content.owl-carousel").owlCarousel({
+                    dots: true,
+                    nav: true,
+                    responsive: {
+                        768: {
+                            items: 2
+                        }
+                    }
+                });
+            }
+
+            if($(".laughter-wrapper .diaries-content .box-content").length > 2) {
+                $(".laughter-wrapper .diaries-content").addClass("owl-carousel");
+                $(".laughter-wrapper .diaries-content.owl-carousel").owlCarousel({
+                    dots: true,
+                    nav: true,
+                    responsive: {
+                        768: {
+                            items: 2
+                        }
+                    }
+                });
+            }
+        }
+        else if(winW >= 320) {
+            if($(".medical-college-diaries-wrapper:not('.laughter-wrapper') .diaries-content .box-content").length > 1) {
+                $(".medical-college-diaries-wrapper:not('.laughter-wrapper') .diaries-content").addClass("owl-carousel");
+                $(".medical-college-diaries-wrapper:not('.laughter-wrapper') .diaries-content.owl-carousel").owlCarousel({
+                    dots: true,
+                    nav: true,
+                    responsive: {
+                        0: {
+                            items: 1
+                        }
+                    }
+                });
+            }
+
+            if($(".laughter-wrapper .diaries-content .box-content").length > 1) {
+                $(".laughter-wrapper .diaries-content").addClass("owl-carousel");
+                $(".laughter-wrapper .diaries-content.owl-carousel").owlCarousel({
+                    dots: true,
+                    nav: true,
+                    responsive: {
+                        0: {
+                            items: 1
                         }
                     }
                 });
