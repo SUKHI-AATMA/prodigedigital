@@ -64,7 +64,7 @@ var API_BASEURL_SYSTEM="https://staging.webapi.toyotabharat.com/"
 
 //LOAD HEADER FOOTER
 
-    $('#headerContent').load('/common/header.html', function(){
+    $('#headerContent').load('common/header.html', function(){
 		if($(location).attr('href').includes('/showroom/glanza/')){
 			var desktopLogo = $('#desktopLogo')
 			var mobileLogo = $('#mobileLogo')
@@ -73,8 +73,8 @@ var API_BASEURL_SYSTEM="https://staging.webapi.toyotabharat.com/"
 			mobileLogo.attr('src', 'https://static.toyotabharat.com/images/logo-without-qdr-130x42.png')
 		}
 	});
-    $('#footerContent').load('/common/footer.html'); 
-    $('#snav').load('/common/sticky-navigation.html');
+    $('#footerContent').load('common/footer.html'); 
+    $('#snav').load('common/sticky-navigation.html');
 
 //FINGERPRINT JS
 	!function (e, t, i) { "use strict"; "function" == typeof define && define.amd ? define(i) : "undefined" != typeof module && module.exports ? module.exports = i() : t.exports ? t.exports = i() : t[e] = i() }("Fingerprint2", this, function () {
