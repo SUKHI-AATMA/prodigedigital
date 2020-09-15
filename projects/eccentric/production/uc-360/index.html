@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Toyota India | UC-360</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description"
+        content="Toyota Kirloskar Motor - UC-360" />
+    <meta name="keywords" content="Toyota, UC-360" />
+    <link rel="icon" href="/images/favicon.ico" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <!--================================HEADER START==================================-->
+    <div id="headerContent"></div>
+    <!--================================ HEADER END==================================-->
+
+    <!---Agency team HTML code start-->
+    <div>
+       <!-- <h1 style="margin-top:100px">Please add the content here(In-between header and footer)</h1> -->
+       <!---Please remove this line and implementing your code -->
+       <section class="one3d-main-section">
+            <div class="one3d-object-wrapper">
+                <div class="one3d-object-container"></div>
+                <div class="one3d-toggle-view">
+                    <div class="one3d-row">
+                        <input type="radio" name="toggle-view" id="one3d-exterior" value="exterior" checked>
+                        <label for="one3d-exterior">Exterior</label>
+                    </div>
+                    <div class="one3d-row">
+                        <input type="radio" name="toggle-view" id="one3d-interior" value="interior">
+                        <label for="one3d-interior">Interior</label>
+                    </div>
+                </div>
+                <div class="one3d-toggle-color">
+                    <div class="one3d-toggle-color-options">
+                        <p class="one3d-toggle-color-heading">Colors</p>
+                        <ul>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                        </ul>
+                    </div>
+                    <div class="one3d-toggle-color-selected">
+                        <span class="one3d-selected-color"></span>
+                        <span class="one3d-selected-color-name">Spunky Blue</span>
+                    </div>
+                </div>
+            </div>
+            <div class="one3d-full-width-row one3d-bg-black one3d-align-center one-3d-cta-section">
+                <button class="one3d-book-test-drive"><span>Book a Test Drive</span></button>
+                <button class="one3d-book-online"><span>Book Online</span></button>
+            </div>
+            
+       </section>
+    </div>
+    <!---Agency team HTML code end-->
+
+    <!--================================ SIDENAV START==============================-->
+    <div id="snav" class="en"></div>
+    <!--================================ SIDENAV END==============================-->
+
+    <!--================================ FOOTER START==============================-->
+    <footer class="footer add-mrgtop" id="footerContent"> </footer>
+    <!--================================FOOTER END==================================-->
+
+    <script src="/js/jquery-3.2.1.min.js"></script> <!-- Jquery v3.2.1  -->
+    <script src="/js/bootstrap.min.js"></script> <!-- Bootstrap v3.3.7  -->
+    <script src="/js/common.js"></script>
+    <!--Do not add any script in this file -->
+
+    <!-- js path should be /js/q-service/....js  -->
+
+    <style>
+    .one3d-main-section {
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 70px);
+        margin-top: 70px;
+        position: relative;
+    }
+
+    .one3d-object-wrapper {
+        display: flex;
+        background-color: #eee;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .one3d-object-container {
+        display: flex;
+        background-color: #eee;
+        width: 100%;
+        height: 100%;
+    }
+
+    .one3d-toggle-view {
+        position: absolute;
+        top: 30px;
+        right: 50px;
+        border: 1px solid #ccc;
+        display: flex;
+        padding: 1px;
+    }
+
+    .one3d-full-width-row {
+        display: flex;
+        width: 100%;
+        padding: 25px 0;
+    }
+
+    .one3d-bg-black {
+        background-color: #000;
+    }
+
+    .one3d-align-center {
+        justify-content: center;
+    }
+
+    .one-3d-cta-section > button {
+        padding: 12px 24px;
+        margin-left: 30px;
+        position: relative;
+    }
+
+    .one-3d-cta-section > button:first-child {
+        margin-left: 0;
+    }
+
+    .one-3d-cta-section > button > span {
+        position: relative;
+        padding-left: 32px;
+        display: flex;
+    }
+
+    .one-3d-cta-section > button > span:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 24px;
+        width: 24px;
+    }
+
+    .one3d-book-test-drive {
+        background: #000;
+        border: 1px solid #fff;
+    }
+
+    .one3d-book-test-drive span {
+        color: #fff;
+    }
+
+    .one3d-book-test-drive span:before {
+        background: url('../images/one3d-steering-wheel.svg') no-repeat 0 0;
+    }
+
+    .one3d-book-online {
+        background: #fff;
+        border: 1px solid #000;
+        color: #000;
+    }
+
+    .one3d-book-online span:before {
+        background: url('../images/one3d-book-online.svg') no-repeat 0 0;
+    }
+
+    .one3d-toggle-view .one3d-row label {
+        text-transform: uppercase;
+    }
+
+    .one3d-toggle-view input[type=radio] {
+        display: none;
+    }
+
+    .one3d-toggle-view .one3d-row input:checked ~ label {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .one3d-toggle-view label {
+        color: #000;
+        margin-bottom: 0;
+        padding: 12px;
+        border-radius: 4px;
+        background-color: #fff;
+        transition: 0.5s all ease;
+        cursor: pointer;
+    }
+
+    .one3d-toggle-color {
+        position: absolute;
+        bottom: 20px;
+        left: 80px;
+        display: flex;
+        flex-direction: column;
+        width: 220px;
+    }
+
+    .one3d-toggle-color .one3d-toggle-color-selected {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        max-width: 220px;
+        width: 100%;
+        background-color: #000;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        padding: 8px 10px;
+        cursor: pointer;
+        transition: 0.5s all ease;
+    }
+
+    .one3d-toggle-color-selected:after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-left: 2px solid #fff;
+        border-top: 2px solid #fff;
+        right: 10px;
+        top: 55%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    .one3d-toggle-color .one3d-toggle-color-selected .one3d-selected-color {
+        border: 1px solid #fff;
+        border-radius: 2px;
+        margin-right: 9px;
+        width: 36px;
+        height: 36px;
+        display: inline-block;
+    }
+
+    .one3d-toggle-color .one3d-toggle-color-selected .one3d-selected-color-name {
+        font-size: 1.4rem;
+        color: #fff;
+    }
+
+    .one3d-toggle-color-selected.one3d-select-color {
+        border-top: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .one3d-toggle-color-options {
+        /* position: absolute;
+        bottom: 51px;
+        left: 0; */
+        background-color: #000;
+        width: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: 0;
+        padding: 8px 10px;
+        display: none;
+        margin-bottom: -2px;
+        position: relative;
+        z-index: 2;
+        /* height: 0; */
+    }
+
+    .one3d-toggle-color-options .one3d-toggle-color-heading {
+        color: #fff;
+    }
+
+    .one3d-toggle-color-options ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .one3d-toggle-color-options ul li {
+        border: 1px solid #fff;
+        border-radius: 2px;
+        margin-right: 9px;
+        margin-bottom: 9px;
+        width: 36px;
+        height: 36px;
+        display: flex;
+    }
+    
+    </style>
+    <script>
+    $(function() {
+        if($(".one3d-toggle-color-selected").length) {
+            $(".one3d-toggle-color-selected").on("click", function() {
+                $(this).toggleClass("one3d-select-color");
+                $(".one3d-toggle-color-options").slideToggle('200');
+            })
+        }
+    });  
+    </script>
+</body>
+
+</html>
