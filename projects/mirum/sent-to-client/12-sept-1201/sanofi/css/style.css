@@ -1,0 +1,770 @@
+/** default css starts **/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Work Sans', sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    letter-spacing: -0.40px;
+    font-size: 62.5%;
+    color: #282828;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+/** default css ends **/
+
+/** common css starts **/
+@font-face {
+    font-family: 'futuralight';
+    src: url('../fonts/futura_light_bt-webfont.woff2') format('woff2'),
+        url('../fonts/futura_light_bt-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'futuraheavy';
+    src: url('../fonts/futura_heavy_font-webfont.woff2') format('woff2'),
+        url('../fonts/futura_heavy_font-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'futuralight';
+}
+
+.display-flex {
+    display: flex;
+}
+
+.flex-direction-row {
+    flex-direction: row;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.fixed-wrapper {
+    width: 1280px;
+    padding: 0 40px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    transform: scale(0.9);
+}
+
+.banner-wrapper .fixed-wrapper {
+    transform: scale(1);
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+/** common css ends **/
+
+.banner-wrapper {
+    background: url('../images/banner-bg.jpg') no-repeat top center;
+    height: 100vh;
+    background-size: cover;
+    color: #e5f2f4;
+}
+
+.banner-wrapper header {
+    padding: 44px 0 0 0;
+}
+
+.banner-wrapper header > div > img {
+    width: fit-content;
+    max-width: 100%;
+}
+
+.banner-wrapper .banner-content-wrapper {
+    justify-content: flex-end;
+    height: 100%;
+    padding-right: 100px;
+    align-items: center;
+}
+
+.banner-wrapper .banner-content {
+    width: 532px;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.banner-wrapper .banner-content h1 {
+    color: #a8b400;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    border-top: 1px solid #18b5cc;
+    border-bottom: 1px solid #18b5cc;
+    padding: 25px 0;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.banner-wrapper .banner-content .logo-image {
+    margin-bottom: 35px;
+}
+
+.banner-wrapper .banner-content .logo-image img {
+    width: fit-content;
+    max-width: 100%;
+}
+
+.banner-wrapper .banner-content h2 {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 80px;
+    font-weight: 300;
+}
+
+.banner-wrapper .banner-content .next-screen-arrow {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-bottom: 4px solid #f1f2f2;
+    border-left: 4px solid #f1f2f2;
+    bottom: 10px;
+    left: 50%;
+    transform: rotate(-45deg);
+    cursor: pointer;
+    transition: 0.5s all ease;
+}
+
+.banner-wrapper .banner-content .next-screen-arrow:hover {
+    border-color: #00b0ca;
+}
+
+.banner-wrapper .banner-content h1,
+.latest-episode-content .box-content .heading,
+.latest-episode-content .box-content .details > span strong,
+.medical-college-diaries-wrapper .heading,
+.medical-college-diaries-wrapper .diaries-content .box-content .name,
+footer .help-us-wrapper .heading {
+    font-family: 'futuraheavy';
+}
+
+.latest-episode-wrapper {
+    background-color: #dbe9e1;
+    padding: 101px 0 75px 0;
+}
+
+.latest-episode-wrapper h2, .latest-episode-content .box-content .heading,
+.medical-college-diaries-wrapper .heading,
+footer .help-us-wrapper .heading {
+    font-size: 3.4rem;
+    margin-bottom: 32px;
+}
+
+.latest-episode-wrapper .latest-episode-content .owl-stage-outer {
+    margin-bottom: 30px;
+}
+
+.latest-episode-content .box-content .col-1, .latest-episode-content .box-content .col-2 {
+    width: 50%;
+}
+
+.latest-episode-content .box-content .col-1 {
+    padding-right: 50px;
+}
+
+.latest-episode-content .box-content .heading {
+    color: #1d1d55;
+    padding-right: 110px;
+    text-transform: uppercase;
+}
+
+.latest-episode-content .box-content .description,
+.medical-college-diaries-wrapper .description {
+    font-size: 2.6rem;
+    margin-bottom: 39px;
+}
+
+.latest-episode-content .box-content .details {
+    position: relative;
+}
+
+.latest-episode-content .box-content .details > span {
+    display: block;
+    font-size: 3.2rem;
+}
+
+.latest-episode-content .box-content .details i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('../images/icon-info.png') no-repeat 0 0;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.latest-episode-content .box-content .col-2 iframe {
+    max-width: 100%;
+}
+
+.medical-college-diaries-wrapper {
+    background-color: #022278;
+    padding: 15px 0;
+    text-align: center;
+    color: #f1f2f2;
+}
+
+.medical-college-diaries-wrapper .heading {
+    text-transform: uppercase;
+    background: url('../images/diaries-heading-bg.png') no-repeat 100% 50%;
+    padding: 22px 85px 18px 0;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.medical-college-diaries-wrapper .sub-heading {
+    font-size: 2.9rem;
+}
+
+.medical-college-diaries-wrapper .description {
+    margin-bottom: 68px;
+}
+
+.medical-college-diaries-wrapper .description a[href^="tel:"] {
+    color: #ebff00;
+    text-decoration: none;
+    position: relative;
+}
+
+.medical-college-diaries-wrapper .description a[href^="tel:"]:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 0;
+    background-color: #ebff00;
+    transition: 0.5s all ease;
+    overflow: hidden;
+}
+
+.medical-college-diaries-wrapper .description a[href^="tel:"]:hover:after {
+    width: 100%;
+}
+
+.medical-college-diaries-wrapper .diaries-content {
+    margin-bottom: 50px;
+}
+
+.medical-college-diaries-wrapper .diaries-content:not(.owl-carousel) .box-content {
+    width: 33%;
+}
+
+.medical-college-diaries-wrapper .diaries-content .box-content {
+    align-items: center;
+}
+
+.medical-college-diaries-wrapper .diaries-content .box-content .profile-img {
+    width: 301px;
+    height: 301px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 35px;
+    position: relative;
+    border: 3px solid #f1f2f2;
+    transition: 0.5s all ease;
+    background-color: #fff;
+    padding-top: 46px;
+}
+
+.medical-college-diaries-wrapper .diaries-content .owl-item.active.center .box-content .profile-img {
+    border: 6px solid #e0be2d;
+}
+
+.medical-college-diaries-wrapper .diaries-content .box-content audio {
+    border-radius: 30px;
+    box-shadow: 0 0 10px #282828;
+}
+
+.medical-college-diaries-wrapper .diaries-content .box-content img {
+    width: fit-content;
+    max-width: 100%;
+}
+
+.medical-college-diaries-wrapper .diaries-content .box-content .name {
+    text-transform: uppercase;
+    font-size: 1.9rem;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+.laughter-wrapper {
+    background-color: #f1f2f2;
+    color: #282828;
+}
+
+.laughter-wrapper .heading {
+    color: #1d1d55;
+    width: fit-content;
+    margin: 0 auto 32px auto;
+    background: url('../images/laughter-heading-bg.png') no-repeat 100% 50%;
+    padding: 57px 156px 18px 0;
+}
+
+.laughter-wrapper .description {
+    margin-bottom: 85px;
+}
+
+.laughter-wrapper .diaries-content {
+    margin-bottom: 0;
+}
+
+.laughter-wrapper .diaries-content .owl-stage-outer {
+    padding-bottom: 30px;
+    margin-bottom: 60px;
+}
+
+.laughter-wrapper .diaries-content .box-content .profile-img {
+    background-color: #282828;
+    justify-content: center;
+    align-items: center;
+    border-color: #00b0ca;
+    padding-top: 0;
+}
+
+.laughter-wrapper .diaries-content .box-content .profile-img img {
+    height: fit-content;
+}
+
+footer {
+    background-color: #282828;
+    padding: 50px 0;
+    color: #f2f2f2;
+    text-align: center;
+}
+
+footer .help-us-wrapper {
+    border-bottom: 2px solid #8d8d8d;
+    padding-bottom: 45px;
+    margin-bottom: 45px;
+}
+
+footer .help-us-wrapper button {
+    background-color: #00b0ca;
+    text-transform: uppercase;
+    font-size: 2.6rem;
+    padding: 15px 45px;
+    border-radius: 15px;
+    color: #f2f2f2;
+    border: none;
+}
+
+footer .more-info-wrapper p {
+    font-size: 2.6rem;
+    line-height: 55px;
+    margin-bottom: 100px;
+}
+
+footer .more-info-wrapper p:last-child {
+    margin-bottom: 0;
+}
+
+footer a {
+    color: #00b0ca;
+    text-decoration: none;
+}
+
+.floating-nav {
+    position: fixed;
+    right: 0;
+    top: calc(100vh - 240px);
+}
+
+.floating-nav > a {
+    margin-bottom: 15px;
+    position: relative;
+    width: 70px;
+    height: 60px;
+    background-color: #ebff00;
+    overflow: hidden;
+    display: block;
+    border-radius: 8px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    right: -10px;
+    transition: 0.3s all ease;
+}
+
+.floating-nav > a:last-child {
+    margin-bottom: 0;
+}
+
+.floating-nav > a:hover {
+    background-color: #a8b400;
+    right: 0;
+}
+
+.floating-nav > a:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url('../images/sprite.png') no-repeat 0 0;
+    width: 40px;
+    height: 44px;
+}
+
+.floating-nav .ic-medical-college-diaries-wrapper:before {
+    background-position: 0 -77px;
+}
+
+.floating-nav .ic-laughter-wrapper:before {
+    background-position: 0 -157px;
+    height: 38px;
+}
+
+
+
+.owl-carousel {
+    position: relative;
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next {
+    opacity: 1;
+    transition: 0.5s all ease;
+}
+
+.owl-carousel .owl-nav .owl-prev span, .owl-carousel .owl-nav .owl-next span {
+    font-size: 1px;
+}
+
+.owl-carousel .owl-nav .owl-prev span:before, .owl-carousel .owl-nav .owl-next span:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.owl-carousel .owl-nav .owl-prev span:before {
+    border-left: 3px solid #00b0ca;
+    border-bottom: 3px solid #00b0ca;
+    left: -45px;
+}
+
+.owl-carousel .owl-nav .owl-next span:before {
+    border-top: 3px solid #00b0ca;
+    border-right: 3px solid #00b0ca;
+    right: -45px;
+}
+
+.owl-carousel .owl-nav .owl-prev.disabled, .owl-carousel .owl-nav .owl-next.disabled {
+    opacity: 0.1;
+    cursor: not-allowed;
+}
+
+.owl-carousel .owl-dots {
+    text-align: center;
+}
+
+.owl-carousel .owl-dots .owl-dot {
+    width: 15px;
+    height: 15px;
+    background-color: #282828;
+    border-radius: 50%;
+    margin-left: 15px;
+    outline: none;
+}
+
+.owl-carousel .owl-dots .owl-dot:first-child {
+    margin-left: 0;
+}
+
+.owl-carousel .owl-dots .owl-dot.active {
+    background-color: #00b0ca;
+}
+
+@media only screen and (min-width: 1600px) {
+    .fixed-wrapper {
+        transform: scale(1);
+    }
+
+    .banner-wrapper .banner-content {
+        width: 632px;
+    }
+
+    .banner-wrapper .banner-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .banner-wrapper .banner-content .logo-image {
+        margin-bottom: 75px;
+    }
+
+    .banner-wrapper .banner-content h2 {
+        font-size: 2.7rem;
+    }
+
+    .latest-episode-wrapper h2, .latest-episode-content .box-content .heading,
+    .medical-college-diaries-wrapper .heading,
+    footer .help-us-wrapper .heading {
+        font-size: 4.1rem;
+    }
+
+    .latest-episode-content .box-content .description,
+    .medical-college-diaries-wrapper .description {
+        font-size: 3.3rem;
+    }
+
+    .latest-episode-content .box-content .details > span {
+        font-size: 3.9rem;
+    }
+
+    .latest-episode-content .box-content .details i {
+        width: 40px;
+        height: 40px;
+    }
+
+    .medical-college-diaries-wrapper .sub-heading {
+        font-size: 3.6rem;
+    }
+
+    .medical-college-diaries-wrapper .diaries-content .box-content .name {
+        font-size: 2.6rem;
+    }
+
+    footer .help-us-wrapper button, footer .more-info-wrapper p {
+        font-size: 3.3rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-height: 768px) {
+    .banner-wrapper {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .fixed-wrapper {
+        width: 100%;
+        padding: 0 20px;
+        transform: scale(1);
+    }
+
+    .floating-nav {
+        display: none;
+    }
+
+    .floating-nav {
+        top: calc(100vh - 180px);
+    }
+
+    .floating-nav > a {
+        width: 50px;
+        height: 40px;
+    }
+
+    .floating-nav > a:before {
+        transform: translate(-57%, -50%) scale(0.7);
+    }
+
+    .banner-wrapper {
+        background-position: top left   ;
+    }
+
+    .banner-wrapper .banner-content-wrapper {
+        padding-right: 0;
+        align-items: flex-start;
+    }
+
+    .banner-wrapper .banner-content {
+        height: 100%;
+        justify-content: space-between;
+        width: 400px;
+    }
+
+    .banner-wrapper .banner-content h1 {
+        font-weight: 300;
+        font-size: 2.1rem;
+        padding: 15px 0;
+    }
+
+    .banner-wrapper .banner-content .next-screen-arrow {
+        bottom: 30px
+    }
+
+    .latest-episode-wrapper h2, .latest-episode-content .box-content .heading, .medical-college-diaries-wrapper .heading, footer .help-us-wrapper .heading {
+        font-size: 2.6rem;
+        text-align: left;
+    }
+
+    .latest-episode-wrapper, .medical-college-diaries-wrapper {
+        padding: 50px 0 35px 0;
+    }
+
+    .latest-episode-content .box-content .heading {
+        padding-right: 0;
+    }
+
+    .latest-episode-content .box-content .description, .medical-college-diaries-wrapper .description {
+        font-size: 2.1rem;
+    }
+
+    .latest-episode-content .box-content .details > span {
+        font-size: 2rem;
+    }
+
+    .latest-episode-wrapper .latest-episode-content .owl-nav {
+        display: none;
+    }
+
+    .medical-college-diaries-wrapper .diaries-content {
+        margin-bottom: 50px;
+    }
+
+    .medical-college-diaries-wrapper .diaries-content.owl-carousel .owl-nav .owl-prev span::before {
+        left: 0px;
+    }
+
+    .medical-college-diaries-wrapper .diaries-content.owl-carousel .owl-nav .owl-next span::before {
+        right: 0px;
+    }
+
+    .medical-college-diaries-wrapper .diaries-content .box-content .profile-img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .medical-college-diaries-wrapper .diaries-content.owl-carousel .owl-dots {
+        margin-top: 30px;
+    }
+
+    .medical-college-diaries-wrapper .diaries-content .box-content .name {
+        margin-bottom: 30px;
+    }
+
+    .laughter-wrapper .heading {
+        background-size: 20%;
+    }
+
+    .laughter-wrapper .diaries-content .owl-stage-outer {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    footer .help-us-wrapper button {
+        font-size: 2.2rem;
+        padding: 10px 25px;
+    }
+
+    footer .more-info-wrapper p {
+        font-size: 2rem;
+        line-height: 30px;
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .floating-nav {
+        display: none;
+    }    
+}
+
+
+
+@media only screen and (max-width: 414px) {
+    .banner-wrapper {
+        background-image: url('../images/banner-bg-device.jpg');
+        background-position: bottom center;
+    }
+
+    .banner-wrapper header {
+        padding: 24px 0 0 0;
+        margin-bottom: 30px;
+    }
+
+    .banner-wrapper header > div {
+        width: 40%;
+    }
+
+    .banner-wrapper .banner-content {
+        width: 100%;
+    }
+
+    .banner-wrapper .banner-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .latest-episode-content .box-content .details > span {
+        font-size: 1.8rem;
+    }
+
+    .latest-episode-wrapper h2, .latest-episode-content .box-content .heading, .medical-college-diaries-wrapper .heading, footer .help-us-wrapper .heading, .latest-episode-content .box-content .description, .medical-college-diaries-wrapper .description {
+        margin-bottom: 20px;
+    }
+
+    .latest-episode-wrapper .latest-episode-content .box-content {
+        flex-direction: column;
+    }
+
+    .latest-episode-content .box-content .col-1, .latest-episode-content .box-content .col-2 {
+        width: 100%;
+    }
+
+    .latest-episode-content .box-content .col-1 {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .latest-episode-content .box-content .details i {
+        width: 20px;
+        height: 20px;
+    }
+
+    .medical-college-diaries-wrapper .diaries-content.owl-carousel .owl-nav .owl-prev span::before,
+    .medical-college-diaries-wrapper .diaries-content.owl-carousel .owl-nav .owl-next span::before {
+        width: 25px;
+        height: 25px;
+    }
+
+    .medical-college-diaries-wrapper .diaries-content.owl-carousel .owl-nav .owl-prev span::before {
+        left: 0px;
+    }
+
+    .medical-college-diaries-wrapper .diaries-content.owl-carousel .owl-nav .owl-next span::before {
+        right: 0px;
+    }
+
+    .laughter-wrapper .heading {
+        background-size: 30%;
+        padding-right: 120px;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .banner-wrapper .banner-content h1 {
+        font-size: 1.6rem;
+    }
+}

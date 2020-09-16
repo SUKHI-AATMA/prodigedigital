@@ -184,13 +184,13 @@
         color: #b1aad2;
     }
 
-    body > main > section * {
+    #main main > section * {
         opacity: 0;
         transition: 1s all ease-in-out;
     }
 
     @media screen and (max-width: 1024px) {
-        body > main > section * {
+        #main main > section * {
             opacity: 1;
         }
     }
@@ -312,7 +312,7 @@
     
         for(var i=0; i<mainSections.length; i++) {
             //console.log(mainSections[i].offsetTop);
-            $("main > section").eq(i).attr("data-posTop",mainSections[i].offsetTop);
+            $("#main main > section").eq(i).attr("data-posTop",mainSections[i].offsetTop);
             //console.log(window.scrollY + "|||||" + (mainSections[i].offsetTop - 200));
             if(window.scrollY >= mainSections[i].offsetTop - 200) {
                 // for(var j=0; j<mainSections[i].children.length; j++) {
@@ -320,13 +320,13 @@
                 // }
                 //console.log(i);
                 sectionOrder = i;
-                $("main > section").eq(sectionOrder).find("*").css("opacity","1");
+                $("#main main > section").eq(sectionOrder).find("*").css("opacity","1");
             }
         }
 
         document.querySelectorAll(".scrollDown")[0].addEventListener("click", function() {
             $("html,body").animate({
-                scrollTop: $("main > section").eq(1).offset().top
+                scrollTop: $("#main main > section").eq(1).offset().top
             }, 500)
         });
 
@@ -335,7 +335,7 @@
             //console.log(sectionOrder);
             if(sectionOrder < document.getElementsByTagName("main")[0].children.length - 1) {
                 if(window.scrollY >= mainSections[sectionOrder].nextElementSibling.offsetTop - 200) {
-                    $("main > section").eq(sectionOrder).next("section").find("*").css("opacity","1");
+                    $("#main main > section").eq(sectionOrder).next("section").find("*").css("opacity","1");
                     // for(var j=0; j<mainSections[sectionOrder].nextElementSibling.children.length; j++) {
                     //     mainSections[sectionOrder].nextElementSibling.children[j].style.opacity = 1;
                     // }
