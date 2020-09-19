@@ -1,8 +1,6 @@
 $(function() {
     var winW = $(window).width();
 
-    alert(winW + "\n" + $(window).height());
-
     $(".next-screen-arrow").on("click", function() {
         $("html,body").animate({
             scrollTop: $(".latest-episode-wrapper").offset().top + "px"
