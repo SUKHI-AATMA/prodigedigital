@@ -1,0 +1,1246 @@
+<style>
+#Episode1Info, #Episode2Info, #Episode3Info, #Episode4Info, #Episode5Info {
+	position: fixed;
+	top: 15px;
+	z-index: 9999;
+	left: 50%;
+	transform: translateX(-50%);
+	max-height: calc(100vh - 30px);
+    overflow: auto;
+    width: 90%;
+    background-color: #fff;
+}
+#Episode1Info .modal-dialog, #Episode2Info .modal-dialog, #Episode3Info .modal-dialog, #Episode4Info .modal-dialog, #Episode5Info  .modal-dialog{
+	width: auto;
+	overflow: auto;
+	margin: 0;
+	max-width: 640px;
+}
+
+    @media only screen and (max-width: 480px), only screen and (max-width: 768px) {
+    #videoModal, #Episode1Info, #Episode2Info, #Episode3Info, #Episode4Info, #Episode5Info {
+    z-index: 99999;
+    }
+    }
+    #videoModal .modal-dialog {
+    width: 50%;
+    max-width: 400px;
+    }
+
+    @media only screen and (max-width: 480px), only screen and (max-width: 768px) {
+    #videoModal .modal-dialog, #Episode1Info .modal-dialog, #Episode2Info .modal-dialog, #Episode3Info .modal-dialog, #Episode4Info .modal-dialog, #Episode5Info .modal-dialog  {
+    width: 95%;
+    }
+    }
+    #videoModal .modal-dialog .modal-content, #Episode1Info .modal-dialog .modal-content, #Episode2Info .modal-dialog .modal-content, #Episode3Info .modal-dialog .modal-content, #Episode4Info .modal-dialog .modal-content, #Episode5Info .modal-dialog .modal-content  {
+    border-radius: 0;
+    }
+    #videoModal .modal-dialog .modal-content .modal-body, #Episode1Info .modal-dialog .modal-content .modal-body, #Episode2Info .modal-dialog .modal-content .modal-body, #Episode3Info .modal-dialog .modal-content .modal-body, #Episode4Info .modal-dialog .modal-content .modal-body, #Episode5Info .modal-dialog .modal-content .modal-body  {
+    padding: 0 15px 20px;
+    }
+    #videoModal .modal-dialog .modal-content .modal-header, #Episode1Info .modal-dialog .modal-content .modal-header, #Episode2Info .modal-dialog .modal-content .modal-header, #Episode3Info .modal-dialog .modal-content .modal-header, #Episode4Info .modal-dialog .modal-content .modal-header, #Episode5Info .modal-dialog .modal-content .modal-header  {
+    padding: 20px 20px;
+    min-height: auto;
+    }
+    #videoModal .modal-dialog .modal-content .modal-header .close, #Episode1Info .modal-dialog .modal-content .modal-header .close, #Episode2Info .modal-dialog .modal-content .modal-header .close, #Episode3Info .modal-dialog .modal-content .modal-header .close, #Episode4Info .modal-dialog .modal-content .modal-header .close, #Episode5Info .modal-dialog .modal-content .modal-header .close  {
+    position: absolute;
+    right: 0;
+    opacity: 1;
+    background: url('/-/media/4B8A8267-1D86-46AF-B9DA-C2B9DD0352EF.ashx') no-repeat;
+    font-size: 0;
+    width: 30px;
+    height: 25px;
+    z-index: 99;
+    background-color: white;
+    top: 10px;
+    right: 15px;
+    background-size: cover;
+    }
+
+    .modal-body .heading {
+        font-size: 1.8rem;
+    }
+
+    .modal-body .details {
+        font-size: 1.5rem;
+    }
+
+
+/** default css starts **/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Work Sans', sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    letter-spacing: -0.40px;
+    font-size: 62.5%;
+    color: #282828;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
+.box-content {
+    text-align: left;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    padding-bottom: 0;
+    line-height: normal;
+}
+
+.owl-carousel {
+    margin: 0;
+}
+
+p {
+    padding-bottom: 0;
+}
+/** default css ends **/
+
+/** common css starts **/
+@font-face {
+    font-family: 'futuralight';
+    src: url('https://prodpreview-apac-sanofipasteur-hcp-hr.snfems.com/-/media/EMS/Conditions/Vaccines/Brands/SanofiPasteur-HCP/futura_light_bt-webfont.woff2') format('woff2'),
+         url('https://prodpreview-apac-sanofipasteur-hcp-hr.snfems.com/-/media/EMS/Conditions/Vaccines/Brands/SanofiPasteur-HCP/futura_light_bt-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'futuraheavy';
+    src: url('https://prodpreview-apac-sanofipasteur-hcp-hr.snfems.com/-/media/EMS/Conditions/Vaccines/Brands/SanofiPasteur-HCP/futura_heavy_font-webfont.woff2') format('woff2'),
+         url('https://prodpreview-apac-sanofipasteur-hcp-hr.snfems.com/-/media/EMS/Conditions/Vaccines/Brands/SanofiPasteur-HCP/futura_heavy_font-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    line-height: normal;
+}
+
+body, .customize-css *,.heading,.details{
+    font-family: 'futuralight';
+}
+
+.display-flex {
+    display: flex;
+}
+
+.flex-direction-row {
+    flex-direction: row;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.fixed-wrapper {
+    width: 1280px;
+    padding: 0 40px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    transform: scale(0.9);
+}
+
+.banner-wrapper .fixed-wrapper {
+    transform: scale(1);
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+/** common css ends **/
+
+.banner-wrapper {
+    background: url('-/media/f216e084ad8c4f3387d6e507ff161dd1.ashx') no-repeat top center;
+    height: 100vh;
+    background-size: cover;
+    color: #e5f2f4;
+}
+
+.banner-wrapper header {
+    padding: 44px 0 0 0;
+    position: static;
+}
+
+.banner-wrapper header > div > img {
+    width: fit-content;
+    max-width: 100%;
+}
+
+.banner-wrapper .banner-content-wrapper {
+    justify-content: flex-end;
+    height: 100%;
+    padding-right: 100px;
+    align-items: center;
+}
+
+.banner-wrapper .banner-content {
+    width: 532px;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.banner-wrapper .banner-content h1 {
+    color: #a8b400;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    border-top: 1px solid #18b5cc;
+    border-bottom: 1px solid #18b5cc;
+    padding: 25px 0;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.banner-wrapper .banner-content .logo-image {
+    margin-bottom: 35px;
+}
+
+.banner-wrapper .banner-content .logo-image img {
+    width: fit-content;
+    max-width: 100%;
+}
+
+.banner-wrapper .banner-content h2 {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 80px;
+    font-weight: 300;
+}
+
+.banner-wrapper .banner-content .next-screen-arrow {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-bottom: 4px solid #f1f2f2;
+    border-left: 4px solid #f1f2f2;
+    bottom: 10px;
+    left: 50%;
+    transform: rotate(-45deg);
+    cursor: pointer;
+    transition: 0.5s all ease;
+}
+
+.banner-wrapper .banner-content .next-screen-arrow:hover {
+    border-color: #00b0ca;
+}
+
+.banner-wrapper .banner-content h1,
+.latest-episode-content .box-content .heading,
+.latest-episode-content .box-content .details > span strong,
+.medical-college-diaries-wrapper .heading,
+.medical-college-diaries-wrapper .diaries-content .box-content .name,
+footer .help-us-wrapper .heading {
+    font-family: 'futuraheavy';
+}
+
+.latest-episode-wrapper {
+    background-color: #dbe9e1;
+    padding: 101px 0 75px 0;
+}
+
+.latest-episode-content .box-content h2, .latest-episode-content .box-content .heading,
+.medical-college-diaries-wrapper .heading,
+footer .help-us-wrapper .heading {
+    font-size: 3.4rem;
+    margin-bottom: 32px;
+}
+
+.latest-episode-wrapper .latest-episode-content .owl-stage-outer {
+    margin-bottom: 30px;
+}
+
+.latest-episode-content .box-content .col-1, .latest-episode-content .box-content .col-2 {
+    width: 50%;
+}
+
+.latest-episode-content .box-content .col-1 {
+    padding-right: 50px;
+}
+
+.latest-episode-content .box-content .heading {
+    color: #1d1d55;
+    padding-right: 110px;
+    text-transform: uppercase;
+}
+
+.latest-episode-content .box-content .description,
+.medical-college-diaries-wrapper .description {
+    font-size: 2.6rem;
+    margin-bottom: 39px;
+}
+
+.latest-episode-content .box-content .details {
+    position: relative;
+}
+
+.latest-episode-content .box-content .details > span {
+    display: block;
+    font-size: 3.2rem;
+}
+
+.latest-episode-content .box-content .details i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('-/media/7C5ED1BB43B24148B601FB3A446FE444.ashx') no-repeat 0 0;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.latest-episode-content .box-content .col-2 iframe {
+    max-width: 100%;
+	margin-top:80px;
+}
+
+.medical-college-diaries-wrapper {
+    background-color: #022278;
+    padding: 15px 0;
+    text-align: center;
+    color: #f1f2f2;
+}
+
+.medical-college-diaries-wrapper * {
+    color: #f1f2f2;
+}
+
+.medical-college-diaries-wrapper .heading {
+    text-transform: uppercase;
+    background: url('-/media/2ED12E62E3B1484C84546AD0554B0DFE.ashx') no-repeat 100% 50%;
+    padding: 22px 85px 18px 0;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.medical-college-diaries-wrapper .sub-heading {
+    font-size: 2.9rem;
+}
+
+.medical-college-diaries-wrapper .description {
+    margin-bottom: 68px;
+}
+
+.medical-college-diaries-wrapper .description a[href^="tel:"] {
+    color: #ebff00;
+    text-decoration: none;
+    position: relative;
+}
+
+.medical-college-diaries-wrapper .description a[href^="tel:"]:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 0;
+    background-color: #ebff00;
+    transition: 0.5s all ease;
+    overflow: hidden;
+}
+
+.medical-college-diaries-wrapper .description a[href^="tel:"]:hover:after {
+    width: 100%;
+}
+
+.medical-college-diaries-wrapper .diaries-content {
+    margin-bottom: 50px;
+}
+
+.medical-college-diaries-wrapper .diaries-content:not(.owl-carousel) .box-content {
+    width: 33%;
+}
+
+.medical-college-diaries-wrapper .diaries-content .box-content {
+    align-items: center;
+}
+
+.medical-college-diaries-wrapper .diaries-content .box-content .profile-img {
+    width: 301px;
+    height: 301px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 35px;
+    position: relative;
+    border: 3px solid #f1f2f2;
+    transition: 0.5s all ease;
+    background-color: #fff;
+    padding-top: 46px;
+}
+
+.medical-college-diaries-wrapper .diaries-content .owl-item.active.center .box-content .profile-img {
+    border: 6px solid #e0be2d;
+}
+
+.medical-college-diaries-wrapper .diaries-content .box-content audio {
+    border-radius: 30px;
+    box-shadow: 0 0 10px #282828;
+}
+
+.medical-college-diaries-wrapper .diaries-content .box-content img {
+    width: fit-content;
+    max-width: 100%;
+}
+
+.medical-college-diaries-wrapper .diaries-content .box-content .name {
+    text-transform: uppercase;
+    font-size: 1.9rem;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+.laughter-wrapper {
+    background-color: #f1f2f2;
+    color: #282828;
+}
+
+.laughter-wrapper * {
+    color: #282828;
+}
+
+.laughter-wrapper .heading {
+    color: #1d1d55;
+    width: fit-content;
+    margin: 0 auto 32px auto;
+    background: url('-/media/22570B604F4F4E7FA82B8839C4726EA4.ashx') no-repeat 100% 50%;
+    padding: 57px 156px 18px 0;
+}
+
+.laughter-wrapper .description {
+    margin-bottom: 85px;
+}
+
+.laughter-wrapper .diaries-content {
+    margin-bottom: 0;
+}
+
+.laughter-wrapper .diaries-content .owl-stage-outer {
+    padding-bottom: 40px;
+    margin-bottom: 60px;
+}
+
+.laughter-wrapper .diaries-content .box-content .profile-img {
+    background-color: #282828;
+    justify-content: center;
+    align-items: center;
+    border-color: #00b0ca;
+    padding-top: 0;
+}
+
+.laughter-wrapper .diaries-content .box-content .profile-img img {
+    height: fit-content;
+}
+
+footer {
+    background-color: #282828;
+    padding: 50px 0;
+    color: #f2f2f2;
+    text-align: center;
+}
+
+footer * {
+    color: #f2f2f2;
+}
+
+footer .help-us-wrapper {
+    border-bottom: 2px solid #8d8d8d;
+    padding-bottom: 45px;
+    margin-bottom: 45px;
+}
+
+footer .help-us-wrapper button {
+    background-color: #00b0ca;
+    text-transform: uppercase;
+    font-size: 2.6rem;
+    padding: 15px 45px;
+    border-radius: 15px;
+    color: #f2f2f2;
+    border: none;
+}
+
+footer .more-info-wrapper p {
+    font-size: 2.6rem;
+    line-height: 55px;
+    margin-bottom: 100px;
+}
+
+footer .more-info-wrapper p:last-child {
+    margin-bottom: 0;
+}
+
+footer a {
+    color: #00b0ca;
+    text-decoration: none;
+}
+
+.floating-nav {
+    position: fixed;
+    right: 0;
+    top: calc(100vh - 240px);
+}
+
+.floating-nav > a {
+    margin-bottom: 15px;
+    position: relative;
+    width: 70px;
+    height: 60px;
+    background-color: #ebff00;
+    overflow: hidden;
+    display: block;
+    border-radius: 8px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    right: -10px;
+    transition: 0.3s all ease;
+}
+
+.floating-nav > a:last-child {
+    margin-bottom: 0;
+}
+
+.floating-nav > a:hover {
+    background-color: #a8b400;
+    right: 0;
+}
+
+.floating-nav > a:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url('-/media/F6C08606865D47D4B12CC0FAAD9766F2.ashx') no-repeat 0 0;
+    width: 40px;
+    height: 44px;
+}
+
+.floating-nav .ic-medical-college-diaries-wrapper:before {
+    background-position: 0 -77px;
+}
+
+.floating-nav .ic-laughter-wrapper:before {
+    background-position: 0 -157px;
+    height: 38px;
+}
+
+
+
+.owl-carousel {
+    position: relative;
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next {
+    opacity: 1;
+    transition: 0.5s all ease;
+}
+
+.owl-carousel .owl-nav .owl-prev span, .owl-carousel .owl-nav .owl-next span {
+    font-size: 1px;
+}
+
+.owl-carousel .owl-nav .owl-prev span:before, .owl-carousel .owl-nav .owl-next span:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.owl-carousel .owl-nav .owl-prev span:before {
+    border-left: 3px solid #00b0ca;
+    border-bottom: 3px solid #00b0ca;
+    left: -45px;
+}
+
+.owl-carousel .owl-nav .owl-next span:before {
+    border-top: 3px solid #00b0ca;
+    border-right: 3px solid #00b0ca;
+    right: -45px;
+}
+
+.owl-carousel .owl-nav .owl-prev.disabled, .owl-carousel .owl-nav .owl-next.disabled {
+    opacity: 0.1;
+    cursor: not-allowed;
+}
+
+.owl-carousel .owl-dots {
+    text-align: center;
+}
+
+.owl-carousel .owl-dots .owl-dot {
+    width: 15px;
+    height: 15px;
+    background-color: #282828;
+    border-radius: 50%;
+    margin-left: 15px;
+    outline: none;
+}
+
+.owl-carousel .owl-dots .owl-dot:first-child {
+    margin-left: 0;
+}
+
+.owl-carousel .owl-dots .owl-dot.active {
+    background-color: #00b0ca;
+}
+
+@media only screen and (min-width: 1600px) {
+    .fixed-wrapper {
+        transform: scale(1);
+    }
+
+    .banner-wrapper .banner-content {
+        width: 632px;
+    }
+
+    .banner-wrapper .banner-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .banner-wrapper .banner-content .logo-image {
+        margin-bottom: 75px;
+    }
+
+    .banner-wrapper .banner-content h2 {
+        font-size: 2.7rem;
+    }
+
+    .latest-episode-wrapper h2, .latest-episode-content .box-content .heading,
+    .medical-college-diaries-wrapper .heading,
+    footer .help-us-wrapper .heading {
+        font-size: 4.1rem;
+    }
+
+    .latest-episode-content .box-content .description,
+    .medical-college-diaries-wrapper .description {
+        font-size: 3.3rem;
+    }
+
+    .latest-episode-content .box-content .details > span {
+        font-size: 3.9rem;
+    }
+
+    .latest-episode-content .box-content .details i {
+        width: 40px;
+        height: 40px;
+    }
+
+    .medical-college-diaries-wrapper .sub-heading {
+        font-size: 3.6rem;
+    }
+
+    .medical-college-diaries-wrapper .diaries-content .box-content .name {
+        font-size: 2.6rem;
+    }
+
+    footer .help-us-wrapper button, footer .more-info-wrapper p {
+        font-size: 3.3rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-height: 768px) {
+    .banner-wrapper {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+	#Episode1Info .modal-dialog, #Episode2Info .modal-dialog, #Episode3Info .modal-dialog, #Episode4Info .modal-dialog, #Episode5Info .modal-dialog {
+    width: 90%;
+    max-width: 400px;
+    }
+
+    .fixed-wrapper {
+        width: 100%;
+        padding: 0 20px;
+        transform: scale(1);
+    }
+
+    .floating-nav {
+        display: none;
+    }
+
+    .floating-nav {
+        top: calc(100vh - 180px);
+    }
+
+    .floating-nav > a {
+        width: 50px;
+        height: 40px;
+    }
+
+    .floating-nav > a:before {
+        transform: translate(-57%, -50%) scale(0.7);
+    }
+
+    .banner-wrapper {
+        background-position: top left   ;
+    }
+
+    .banner-wrapper .banner-content-wrapper {
+        padding-right: 0;
+        align-items: flex-start;
+    }
+
+    .banner-wrapper .banner-content {
+        height: 100%;
+        justify-content: space-between;
+        width: 400px;
+    }
+
+    .banner-wrapper .banner-content h1 {
+        font-weight: 300;
+        font-size: 2.1rem;
+        padding: 15px 0;
+    }
+
+    .banner-wrapper .banner-content .next-screen-arrow {
+        bottom: 30px
+    }
+
+    .latest-episode-wrapper h2, .latest-episode-content .box-content .heading, .medical-college-diaries-wrapper .heading, footer .help-us-wrapper .heading {
+        font-size: 2.6rem;
+        /* text-align: left; */
+    }
+
+    .latest-episode-wrapper, .medical-college-diaries-wrapper {
+        padding: 50px 0 35px 0;
+    }
+
+    .latest-episode-content .box-content .heading {
+        padding-right: 0;
+    }
+	.latest-episode-content .box-content .col-2 iframe {
+		margin-top:0px;
+	}
+
+    .latest-episode-content .box-content .description, .medical-college-diaries-wrapper .description {
+        font-size: 2.1rem;
+    }
+
+    .latest-episode-content .box-content .details > span {
+        font-size: 2rem;
+    }
+
+    .latest-episode-wrapper .latest-episode-content .owl-nav {
+        display: none;
+    }
+
+    .medical-college-diaries-wrapper .diaries-content {
+        margin-bottom: 50px;
+    }
+
+    .medical-college-diaries-wrapper .diaries-content.owl-carousel .owl-nav .owl-prev span::before {
+        left: 0px;
+    }
+
+    .medical-college-diaries-wrapper .diaries-content.owl-carousel .owl-nav .owl-next span::before {
+        right: 0px;
+    }
+
+    .medical-college-diaries-wrapper .diaries-content .box-content .profile-img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .medical-college-diaries-wrapper .diaries-content.owl-carousel .owl-dots {
+        margin-top: 30px;
+    }
+
+    .medical-college-diaries-wrapper .diaries-content .box-content .name {
+        margin-bottom: 30px;
+    }
+
+    .laughter-wrapper .heading {
+        background-size: 20%;
+    }
+
+    .laughter-wrapper .diaries-content .owl-stage-outer {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    footer .help-us-wrapper button {
+        font-size: 2.2rem;
+        padding: 10px 25px;
+    }
+
+    footer .more-info-wrapper p {
+        font-size: 2rem;
+        line-height: 30px;
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .floating-nav {
+        display: none;
+    }    
+}
+
+
+
+@media only screen and (max-width: 414px) {
+    .banner-wrapper {
+        background-image: url('-/media/D6214BC0936E44A594FA46A1F107F738.ashx');
+        background-position: bottom center;
+    }
+
+    .banner-wrapper header {
+        /* padding: 24px 0 0 0; */
+        padding: 15px 0 0 0;
+        /* margin-bottom: 30px; */
+        margin-bottom: 15px;
+    }
+
+    .banner-wrapper header > div {
+        width: 40%;
+    }
+
+    .banner-wrapper .banner-content {
+        width: 100%;
+    }
+
+    .banner-wrapper .banner-content h1 {
+        padding: 5px 0;
+        margin-bottom: 15px;
+    }
+
+    .banner-wrapper .banner-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .latest-episode-content .box-content .details > span {
+        font-size: 1.8rem;
+    }
+
+    .latest-episode-wrapper h2, .latest-episode-content .box-content .heading, .medical-college-diaries-wrapper .heading, footer .help-us-wrapper .heading, .latest-episode-content .box-content .description, .medical-college-diaries-wrapper .description {
+        margin-bottom: 20px;
+    }
+
+    .latest-episode-wrapper .latest-episode-content .box-content {
+        flex-direction: column;
+    }
+
+    .latest-episode-content .box-content .col-1, .latest-episode-content .box-content .col-2 {
+        width: 100%;
+    }
+
+    .latest-episode-content .box-content .col-1 {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .latest-episode-content .box-content .details i {
+        width: 20px;
+        height: 20px;
+    }
+
+    .medical-college-diaries-wrapper .diaries-content.owl-carousel .owl-nav .owl-prev span::before,
+    .medical-college-diaries-wrapper .diaries-content.owl-carousel .owl-nav .owl-next span::before {
+        width: 25px;
+        height: 25px;
+    }
+
+    .medical-college-diaries-wrapper .diaries-content.owl-carousel .owl-nav .owl-prev span::before {
+        left: 0px;
+    }
+
+    .medical-college-diaries-wrapper .diaries-content.owl-carousel .owl-nav .owl-next span::before {
+        right: 0px;
+    }
+
+    .laughter-wrapper .heading {
+        background-size: 30%;
+        padding-right: 120px;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .banner-wrapper .banner-content h1 {
+        font-size: 1.6rem;
+    }
+}
+.owl-carousel,.owl-carousel .owl-item{-webkit-tap-highlight-color:transparent;position:relative}.owl-carousel{width:100%;z-index:1}.owl-carousel .owl-stage{position:relative;-ms-touch-action:pan-Y;touch-action:manipulation;-moz-backface-visibility:hidden}.owl-carousel .owl-stage:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}.owl-carousel .owl-stage-outer{position:relative;overflow:hidden;-webkit-transform:translate3d(0,0,0)}.owl-carousel .owl-item,.owl-carousel .owl-wrapper{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0)}.owl-carousel .owl-item{min-height:1px;float:left;-webkit-backface-visibility:hidden;-webkit-touch-callout:none}.owl-carousel .owl-dots.disabled,.owl-carousel .owl-nav.disabled{display:none}.no-js .owl-carousel,.owl-carousel.owl-loaded{display:block}.owl-carousel .owl-dot,.owl-carousel .owl-nav .owl-next,.owl-carousel .owl-nav .owl-prev{cursor:pointer;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.owl-carousel .owl-nav button.owl-next,.owl-carousel .owl-nav button.owl-prev,.owl-carousel button.owl-dot{background:0 0;color:inherit;border:none;padding:0!important;font:inherit}.owl-carousel.owl-loading{opacity:0;display:block}.owl-carousel.owl-hidden{opacity:0}.owl-carousel.owl-refresh .owl-item{visibility:hidden}.owl-carousel.owl-drag .owl-item{-ms-touch-action:pan-y;touch-action:pan-y;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.owl-carousel.owl-grab{cursor:move;cursor:grab}.owl-carousel.owl-rtl{direction:rtl}.owl-carousel.owl-rtl .owl-item{float:right}.owl-carousel .animated{animation-duration:1s;animation-fill-mode:both}.owl-carousel .owl-animated-in{z-index:0}.owl-carousel .owl-animated-out{z-index:1}.owl-carousel .fadeOut{animation-name:fadeOut}@keyframes fadeOut{0%{opacity:1}100%{opacity:0}}.owl-height{transition:height .5s ease-in-out}.owl-carousel .owl-item .owl-lazy{opacity:0;transition:opacity .4s ease}.owl-carousel .owl-item .owl-lazy:not([src]),.owl-carousel .owl-item .owl-lazy[src^=""]{max-height:0}.owl-carousel .owl-item img.owl-lazy{transform-style:preserve-3d}.owl-carousel .owl-video-wrapper{position:relative;height:100%;background:#000}.owl-carousel .owl-video-play-icon{position:absolute;height:80px;width:80px;left:50%;top:50%;margin-left:-40px;margin-top:-40px;background:url(owl.video.play.png) no-repeat;cursor:pointer;z-index:1;-webkit-backface-visibility:hidden;transition:transform .1s ease}.owl-carousel .owl-video-play-icon:hover{-ms-transform:scale(1.3,1.3);transform:scale(1.3,1.3)}.owl-carousel .owl-video-playing .owl-video-play-icon,.owl-carousel .owl-video-playing .owl-video-tn{display:none}.owl-carousel .owl-video-tn{opacity:0;height:100%;background-position:center center;background-repeat:no-repeat;background-size:contain;transition:opacity .4s ease}.owl-carousel .owl-video-frame{position:relative;z-index:1;height:100%;width:100%}
+</style>
+
+<main class="customize-css" style="display:none">
+	<section class="banner-wrapper display-flex full-width">
+		<div class="fixed-wrapper display-flex flex-direction-column">
+			<header class="display-flex flex-direction-row full-width space-between">
+				<div class="col-1">
+					<img src="-/media/36CE8F916A9D4F1884E9EDA74C21A08A.ashx" alt="Hexaxim 6-in-1 ready to use vaccine">
+				</div>
+				<div class="col-2">
+					<img src="-/media/1590407575FB4B50AC068EBBBC796F5F.ashx" alt="Sanofi Pasteur">
+				</div>
+			</header>
+			<div class="banner-content-wrapper display-flex full-width">
+				<div class="banner-content display-flex flex-direction-column">
+					<div>
+						<h1>For the first time in Pediatrics,<br>we present to you our podcast.</h1>
+						<div class="logo-image">
+							<img src="-/media/2773941EA75B4B9BAA824F5AF8C5608D.ashx" alt="SanofiPedia - By Doctors for Doctors">
+						</div>
+					</div>
+					<h2>Hello Doctors!<br>Here&rsquo;s a podcast with the latest in paediatrics &amp; vaccination with news, practice tips, insightful discussions with your fellow doctors and more.</h2>
+					<span class="next-screen-arrow"></span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="latest-episode-wrapper display-flex full-width">
+		<div class="fixed-wrapper display-flex flex-direction-column">
+			
+			<div class="latest-episode-content">
+				<div class="box-content display-flex flex-direction-row flex-wrap space-between">
+					<div class="col-1">
+						<h2>Latest Episode 5</h2>
+						<p class="heading">Adverse events following immunization</p>
+						<p class="description">Understanding different kinds of AEFI, the impact on mass immunization, how it is handled in India, need for vaccine standard quality and significance of WHO pre-qualification</p>
+						<p class="details">
+							<a href="#" data-toggle="modal" data-target="#Episode5Info" class="link"><i></i></a>
+							<span>By</span>
+							<span><strong>Dr. Rajiv Mohta</strong>, Nagpur</span>
+							<span><strong>Dr. Ravinder Gupta</strong>, Jammu</span>
+							<span><strong>Dr. J Ganesh</strong>, Chennai</span>
+						</p>
+					</div>
+					<div class="col-2">
+						<iframe width="675" height="377" src="https://www.youtube.com/embed/qE3sSSSdtt8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+					</div>
+				</div>
+				<div class="box-content display-flex flex-direction-row flex-wrap space-between">
+					<div class="col-1">
+						<h2>Episode 1</h2>
+						<p class="heading">Catch - up vaccination and OPD management</p>
+						<p class="description">All about clinical practices and resuming immunization post lockdown</p>
+						<p class="details">
+							<a href="#" data-toggle="modal" data-target="#Episode1Info" class="link"><i></i></a>
+							<span>By</span>
+							<span><strong>Dr. Sampada Tamboklar</strong>, Pune</span>
+							<span><strong>Dr. PS Kumar</strong>, Delhi</span>
+						</p>
+					</div>
+					<div class="col-2">
+						<iframe width="675" height="377" src="https://www.youtube.com/embed/MQgymay-7tk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+					</div>
+				</div>
+				<div class="box-content display-flex flex-direction-row flex-wrap space-between">
+					<div class="col-1">
+						<h2>Episode 2</h2>
+						<p class="heading">Pertussis vaccination - Prioritise prevention</p>
+						<p class="description">Why haven't we been able to eliminate Pertussis in India?</p>
+						<p class="details">
+							<a href="#" data-toggle="modal" data-target="#Episode2Info" class="link"><i></i></a>
+							<span>By</span>
+							<span><strong>Dr. Mahesh Sulakshane</strong>, Pune</span>
+							<span><strong>Dr. A Somasundaram</strong>, Chennai</span>
+							<span><strong>Dr. Karan Kinger</strong>, Bangalore</span>
+							<span><strong>Dr. Anuj Rastogi</strong>, Meerut</span>
+						</p>
+					</div>
+					<div class="col-2">
+						<iframe width="675" height="377" src="https://www.youtube.com/embed/mFOc9yev1o0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+					</div>
+				</div>
+				<div class="box-content display-flex flex-direction-row flex-wrap space-between">
+					<div class="col-1">
+						<h2>Episode 3</h2>
+						<p class="heading">Polio: Necessity to prevent resurgence</p>
+						<p class="description">It's concerning, but can Polio really make a comeback in India?</p>
+						<p class="details">
+							<a href="#" data-toggle="modal" data-target="#Episode3Info" class="link"><i></i></a>
+							<span>By</span>
+							<span><strong>Dr. Rajesh Khanna</strong>, Hyderabad</span>
+							<span><strong>Dr. Dhananjay kumar</strong>, Lucknow</span>
+							<span><strong>Dr. Neminathan</strong>, Coimbatore</span>
+							<span><strong>Dr. Ashim Ghosh</strong>, Asansol</span>
+						</p>
+					</div>
+					<div class="col-2">
+						<iframe width="675" height="377" src="https://www.youtube.com/embed/suXcEFOQnYs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+					</div>
+				</div>
+				<div class="box-content display-flex flex-direction-row flex-wrap space-between">
+					<div class="col-1">
+						<h2>Episode 4</h2>
+						<p class="heading">Boosters: Because Immunity wanes with time</p>
+						<p class="description">Waning immunity, vaccine drop-outs, VPD resurgence & more.</p>
+						<p class="details">
+							<a href="#" data-toggle="modal" data-target="#Episode4Info" class="link"><i></i></a>
+							<span>By</span>
+							<span><strong>Dr. J Shyamla</strong>, Chennai</span>
+							<span><strong>Dr. PS Narang</strong>, Delhi</span>
+							<span><strong>Dr. Nischal Bhatt</strong>, Ahmedabad</span>
+						</p>
+					</div>
+					<div class="col-2">
+						<iframe width="675" height="377" src="https://www.youtube.com/embed/8WUy-v2Zp6c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="medical-college-diaries-wrapper display-flex full-width">
+		<div class="fixed-wrapper display-flex flex-direction-column">
+			<p class="heading" style="color:white;">Medical College Diaries</p>
+			<p class="sub-heading" style="color:white;">Let&rsquo;s rewind!</p>
+			<p class="description" style="color:white;">It&rsquo;s not all work and no play for doctors!<br>Here are some fun stories back from college, a time every one of you loves to reminisce about! Listen and take a trip down memory lane!</p>
+			<div class="diaries-content display-flex flex-direction-row flex-wrap">
+				<div class="box-content display-flex flex-direction-column">
+					<div class="profile-img">
+						<img src="-/media/A94F87F3F8AF4FE6BA6887E50416155C.ashx" alt="Dr. Sampada Tambolkar">
+					</div>
+					<p class="name" style="color:white;">Dr. Sampada Tambolkar</p>
+					<audio controls="">
+						<source src="-/media/18A2A285668A4A859E8C55651E1702F1.ashx" type="audio/mpeg"></source>
+						Your browser does not support the audio element.
+					</audio>
+				</div>
+				<div class="box-content display-flex flex-direction-column">
+					<div class="profile-img">
+						<img src="-/media/865870240C5648579CFC112B38AD95FF.ashx" alt="Dr. Rajiv Mohta">
+					</div>
+					<p class="name" style="color:white;">Dr. Rajiv Mohta</p>
+					<audio controls="">
+						<source src="-/media/495ABB435EE14F77BBCAE39BE66718B2.ashx" type="audio/mpeg"></source>
+						Your browser does not support the audio element.
+					</audio>
+				</div>
+				
+				
+			</div>
+			<p class="description no-margin-bottom" style="color:white;">Share your interesting college stories on<br>
+			<a href="tel:+91 9867030876">+91 9867030876</a> or contact your Sanofi Pasteur representative for more details.</p>
+		</div>
+	</section>
+
+
+	<section class="medical-college-diaries-wrapper laughter-wrapper display-flex full-width">
+		<div class="fixed-wrapper display-flex flex-direction-column">
+			<p class="heading">Laughter - the best medicine</p>
+			<p class="description">Munna Bhai &amp; Circuit live by this funda but every doctor recommends this too!<br>Catch a break between consultations and appointments, and have a laugh!</p>
+			<div class="diaries-content display-flex flex-direction-row flex-wrap">
+				<div class="box-content display-flex flex-direction-column">
+					<div class="profile-img display-flex">
+						<img src="-/media/3B5968100ED64F94AC6734658AE0CE0C.ashx" alt="Munna bhai &amp; Circuit 1">
+					</div>
+					<p class="name">Munna bhai &amp; Circuit 1</p>
+					<audio controls="">
+						<source src="-/media/4322434FF31C4EDFA4E10226BA908F4B.ashx" type="audio/mpeg"></source>
+					</audio>
+				</div>
+				<div class="box-content display-flex flex-direction-column">
+					<div class="profile-img display-flex">
+						<img src="-/media/3B5968100ED64F94AC6734658AE0CE0C.ashx" alt="Munna bhai &amp; Circuit 2">
+					</div>
+					<p class="name">Munna bhai &amp; Circuit 2</p>
+					<audio controls="">
+						<source src="-/media/64C2B40C775E456CB90FAB139801E216.ashx" type="audio/mpeg"></source>
+					</audio>
+				</div>
+				<div class="box-content display-flex flex-direction-column">
+					<div class="profile-img display-flex">
+						<img src="-/media/3B5968100ED64F94AC6734658AE0CE0C.ashx" alt="Munna bhai &amp; Circuit 3">
+					</div>
+					<p class="name">Munna bhai &amp; Circuit 3</p>
+					<audio controls="">
+						<source src="-/media/AFA1A0F9180249E589196DC60E7A8FCA.ashx" type="audio/mpeg"></source>
+					</audio>
+				</div>
+				<div class="box-content display-flex flex-direction-column">
+					<div class="profile-img display-flex">
+						<img src="-/media/3B5968100ED64F94AC6734658AE0CE0C.ashx" alt="Munna bhai &amp; Circuit 4">
+					</div>
+					<p class="name">Munna bhai &amp; Circuit 4</p>
+					<audio controls="">
+						<source src="-/media/7E1007CE07694C52B3F59436EE23A3E1.ashx" type="audio/mpeg"></source>
+					</audio>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="display-flex full-width">
+		<div class="fixed-wrapper display-flex flex-direction-column">
+			<div class="help-us-wrapper">
+				<p class="heading" style="color: white;">Help us make Sanofi Pedia podcast better, share with us your feedback.</p>
+				<button>click here</button>
+			</div>
+			<div class="more-info-wrapper">
+				<p style="color: white;">
+					For full prescribing information of our products visit <a href="http://www.sanofi.in" target="_blank">www.sanofi.in</a><br>
+					For the use of registered medical practitioners, hospitals or laboratory only<br>
+					MAT-IN-2000058/06-06-2020
+				</p>
+				<p style="color: white;">
+					Sanofi Pasteur India Ltd.,<br>
+					Sanofi House C.T.S No : 117-B, L &amp; T Business Park,<br>
+					Saki Vihar Road, Powai, Mumbai - 400 072.
+				</p>
+			</div>
+		</div>
+	</footer>
+	<nav class="floating-nav">
+		<a class="ic-latest-episode-wrapper"></a>
+		<a class="ic-medical-college-diaries-wrapper"></a>
+		<a class="ic-laughter-wrapper"></a>
+	</nav>
+</main>
+<div id="videoModal" style="display:block;position:absolute;width:100%;">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div style="position: relative; display: block;">
+					<div style="padding-top: 10%;line-height:35px;" class="heading">
+						Please enter the password
+						<br>
+						<input type="text" name="txtcode" id="txtcode">
+						<br>
+						<button type="button" id="myBtnCheck" style="padding:5px;">Okay</button>
+						&nbsp;
+						<button type="button" id="myBtnReset" style="padding:5px;">Cancel</button>
+						<br>
+						<span id="txterrlabel" style="display: none;">Please provide the correct password to proceed.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="Episode1Info" style="display:none;">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">×</button>
+			</div>
+			<div class="modal-body">
+				<div style="position: relative; display: block;">
+					<div style="line-height:25px;">
+						<p class="heading" style="padding-bottom:10px;padding-top:10px;"><strong>Dr. Sampada Tamboklar</strong>
+						<p class="details">Dr. Sampada Tambolkar is a Consultant Pediatrician & Neonatologist from Pune, with over a decade of experience in the medical profession. She is also a visiting professor in pediatrics at Dr DY Patil Medical College. </p>
+						<p class="heading" style="padding-bottom:10px;padding-top:10px;"><strong>Dr. PS Kumar</strong>
+						<p class="details">Dr. Paramjeet Singh Kumar is a senior pediatric consultant at Madhukar Rainbow Hospital, Delhi. He has over 25 years of experience and with multiple publications and associations in medical societies in various roles, he has rose to become one of the most eminent" Paediatrician in the country.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="Episode2Info" style="display:none;">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">×</button>
+			</div>
+			<div class="modal-body">
+				<div style="position: relative; display: block;">
+					<div style="line-height:25px;">
+						<p class="heading" style="padding-bottom:10px;padding-top:10px;"><strong>Dr. Mahesh Sulakshane</strong>
+						<p class="details">Dr. Mahesh Sulakshane is a Consultant Pediatrician & Neonatologist from Pune, with over 12 years of experience in the Medical Profession. He has also been a Principal Investigator for clinical trials and a teaching faculty for Emergency Medical Services course conducted at Ruby Hall Clinic.</p>
+						<p class="heading" style="padding-bottom:10px;padding-top:10px;"><strong>Dr. A Somasundaram</strong>
+						<p class="details">Dr. Somasundaram is a paediatric consultant from Chennai with over X years of experience. He specializes in Child Development and Behaviour and is the chief mentor at D’Soul Child Development Centre, developmental paediatrician at Sabari Child Care Clinics and a consultant at Apollo Specialty Hospital. He is the executive board member for CIAP 2020 & has been the secretary IAP, Tamil Nadu state chapter 2017 & 2018.</p>
+						<p class="heading" style="padding-bottom:10px;padding-top:10px;"><strong>Dr. Karan Kinger</strong>
+						<p class="details">Dr. Kiran Kumar Kinger is a Senior Consultant Paediatrician in Central Bangalore for over 15 years. He completed comprehensive PAEDIATRIC and CHILD HEALTH training over a period of 10 years in the UK. He believes in practical and overall healthcare including all vaccinations. His motto is "Healthcare for All".</p>
+						<p class="heading" style="padding-bottom:10px;padding-top:10px;"><strong>Dr. Anuj Rastogi</strong>
+						<p class="details">Dr. Anuj Rastogi is a practising neonatologist from Meerut UP, with over 26 years of experience. Dr Anuj regularly conducts patients’ education programme on prevention of common diseases and illnesses through Facebook. He actively contributes to other non-profitable activities through his social initiative Taara Kids. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="Episode3Info" style="display:none;">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">×</button>
+			</div>
+			<div class="modal-body">
+				<div style="position: relative; display: block;">
+					<div style="line-height:25px;">
+						<p class="heading" style="padding-bottom:10px;padding-top:10px;"><strong>Dr. Rajesh Khanna</strong>
+						<p class="details">Dr. Rajesh Khanna Consultant Pediatrician & Head of the Department of The BirthPlace Hospital, Hyderabad with over 12 years of experience in the Medical Profession. Also been a Principal Investigator for clinical trials and a teaching faculty as Assistant Professor of Pediatric, MEDICITY INSTITUTE OF MEDICAL SCIENCES, Hyderabad.</p>
+						<p class="heading" style="padding-bottom:10px;padding-top:10px;"><strong>Dr.  Dhananjay kumar</strong>
+						<p class="details">Dr. Dhananjay kumar, consultant pediatrician at Ajanta hospital,Lucknow UP. Did md and senior residency from KGMU,Lucknow and work in pediatric population for last 20yrs</p>
+						<p class="heading" style="padding-bottom:10px;padding-top:10px;"><strong>Dr. Neminathan</strong>
+						<p class="details">Dr. Neminathan, Chief of Coimbatore Child Trust Hospital In Community pediatric service for the past 30 years. He is an Active member of WHO's influenza surveillance network, Held National executive  post in central  Indian Academy of Pediatrics and vice president of IAP - TN state levels</p>
+						<p class="heading" style="padding-bottom:10px;padding-top:10px;"><strong>Dr. Ashim Ghosh</strong>
+						<p class="details">Dr. Ashim Kumar Ghosh is a Pediatric consultant at Arogya Nursing Home and Central Nursing Home in Asansol, current Convener of IAP coalfield branch and a passionate speaker on Scientific forums.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="Episode4Info" style="display:none;">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">×</button>
+			</div>
+			<div class="modal-body">
+				<div style="position: relative; display: block;">
+					<div style="line-height:25px;">
+						<p class="heading" style="padding-bottom:10px;padding-top:10px;"><strong>Dr. J Shyamla</strong>
+						<p class="details">Dr. J. Shymala, a consultant Pediatrican and Neonatologist is an HOD at Apollo Children’s Hospital, Chennai She completed her neonatal fellowship from Australia and is an honorary associate of the Sydney medical School.  With over 28 yrs of experience in the field, she is on the editorial board of the Indian Journal of Pratical Pediatrics and has many publications to her credit.</p>
+						<p class="heading" style="padding-bottom:10px;padding-top:10px;"><strong>Dr. PS Narang</strong>
+						<p class="details">Dr. PS Narang is an Associate Director, Dept of Pediatrics in Max hospital and Principal consultant pediatrician, savera hospital, Delhi with over 30 years of experience in the field. He is also working as short term locums in UK over the past 10yrs. He is also a renowned speaker and faculty to many national and international conferences and has various publications under his name.</p>
+						<p class="heading" style="padding-bottom:10px;padding-top:10px;"><strong>Dr. Nischal Bhatt</strong>
+						<p class="details">Dr. Nishchal Bhatt is a Child Specialist & Teenage Health Consultant from Ahemdabad, with over 19 years of experience in the pediatric field. He was the president of Academy of Pediatrics - Gujarat in the year 2018 and has also been the creator of "PARENTeens" workshop for parents and Teenagers and certified trainer on "Success Principles" from the Jack Canfield University (USA)</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="Episode5Info" style="display:none;">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">×</button>
+			</div>
+			<div class="modal-body">
+				<div style="position: relative; display: block;">
+					<div style="line-height:25px;">
+						<p class="heading" style="padding-bottom:10px;padding-top:10px;"><strong>Dr. Rajiv Mohta</strong>
+						<p class="details">Dr. Rajiv Mohta is a consultant paediatrician and adolescence specialist and counsellor from NAGPUR with over 31 years experience. He is also a Faculty-Guide in Lata Mangeshkar Medical college and Hospital. He was honored with the Late President Dr. A. P. J. Kalam for Activities done for youth of India and Anandi Bai Joshi & Shiv Chatrapati Award by Govt. Of Maharashtra.</p>
+						<p class="heading" style="padding-bottom:10px;padding-top:10px;"><strong>Dr. Ravinder Gupta</strong>
+						<p class="details">Dr. Ravinder Gupta is a Professor & Head of Dept. Pediatrics in Acharya Shri Chander College of Medical Sciences, Sidhra ,Jammu with more than 20yrs of experience. He is the President of Indian Rheumatology Association and Vice president IAP, J&K State Chapter. He also has more than 50 scientific papers published in Indexed Journals and PediatricsTextbooks under his name.</p>
+						<p class="heading" style="padding-bottom:10px;padding-top:10px;"><strong>Dr. J Ganesh</strong>
+						<p class="details">Dr. J Ganesh a practicing pediatrion in Chennai with over 25 yrs of experience. He has his own paediatrics clinic and nursing home in Askhok nagar Chennai as well as visiting paediatric consultant  in Maya Nursing Home, Chennai. He has a spl interest in Pedatric Practice in Childhood Nutrition and Immunizations.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
