@@ -6,7 +6,7 @@
             <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.109804 0 0 0 0 0.333333 0 0 0 0 0.482353 0 0 0 1.000000 0"></feColorMatrix>
         </filter>
     </defs>
-    <g id="Core" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="overview" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="UI/Web/Core" transform="translate(-224.000000, -1732.000000)">
             <g id="Resource-Management-And-Governance-Plans" transform="translate(225.000000, 1733.000000)">
                 <circle id="Oval-Copy-9" stroke="#1C557B" stroke-width="2" cx="39.5088289" cy="39.5088289" r="39.5088289"></circle>
