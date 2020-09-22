@@ -199,6 +199,12 @@ header{
 
                         ul.menu>li{
                             width: calc(100% / 5 - 24px) !important;
+                            // width: 19%;
+
+                            // &:nth-child(2),
+                            // &:last-child{
+                            //     width: 21.5%;
+                            // }
 
                             &.active{
                                 >a{
@@ -449,7 +455,7 @@ header{
                             }
                             
                             ul.dropdown{
-                                padding: 42px 20px 20px 30px;
+                                padding: 42px 38px 20px 30px;
                                 display: none;
                                 position: absolute;
                                 top: 100%;
@@ -499,7 +505,7 @@ header{
                                             border-radius: 50%;
                                             position: absolute;
                                             top: 8px;
-                                            right: -6px;
+                                            right: -20px;
                                         }
                                         
                                         > a{
@@ -524,7 +530,7 @@ header{
                                             border-right: 1px solid #000;
                                             border-bottom: 1px solid #000;
                                             position: absolute;
-                                            right: -7px;
+                                            right: -22px;
                                             content: " ";
                                             top: 7px;
                                             transform: rotate(45deg);
@@ -577,7 +583,7 @@ header{
                                                     border-radius: 50%;
                                                     position: absolute;
                                                     top: 8px;
-                                                    right: -6px;
+                                                    right: -20px;
                                                 }
                                                 
                                                 > a{
