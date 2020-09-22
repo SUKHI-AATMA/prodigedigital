@@ -1,0 +1,21 @@
+<svg width="90px" height="120px" viewBox="0 0 90 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path stroke="#c96b86" stroke-width="2" stroke-miterlimit="10" d="M64.7146933,90 L90,90 L90,120 L0,120 L0,90 L25,90 L25,30 L0,30 L0,0 L90,0 L90,30 L64.7146933,30 L64.7146933,90 Z" id="ipath-1"></path>
+        <path stroke="#c96b86" stroke-width="2" stroke-miterlimit="10" d="M64.7146933,90 L90,90 L90,120 L0,120 L0,90 L25,90 L25,30 L0,30 L0,0 L90,0 L90,30 L64.7146933,30 L64.7146933,90 Z" id="ipath-3"></path>
+    </defs>
+    <g id="iPage-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="i1.3-CG_Connecting-Dots_Home-Third-Fold" transform="translate(-243.000000, -236.000000)">
+            <g id="iBitmap" transform="translate(243.000000, 236.000000)">
+                <mask id="imask-2" fill="white">
+                    <use xlink:href="#ipath-1"></use>
+                </mask>
+                <use id="iCombined-Shape" fill="#FFDDD5" xlink:href="#ipath-1"></use>
+                <image style="mix-blend-mode: luminosity;" mask="url(#imask-2)" x="-108" y="-67" width="782" height="522" xlink:href="../../dist/images/mask_image.png"></image>
+                <mask id="imask-4" fill="white">
+                    <use xlink:href="#ipath-3"></use>
+                </mask>
+                <use id="iCombined-Shape" fill="#FFDDD5" style="mix-blend-mode: multiply;" xlink:href="#ipath-3"></use>
+            </g>
+        </g>
+    </g>
+</svg>

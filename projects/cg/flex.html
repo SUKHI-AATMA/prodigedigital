@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex Grid</title>
+    <style>
+    /* .flexBox {
+        display: flex;
+        width: 100%;
+        max-width: 800px;
+        flex-wrap: wrap;
+    }
+
+    .flexItem {
+        width: 25%;
+        box-sizing: border-box;
+        padding: 10px;
+        border: 1px solid red;
+        transform: scale(1);
+        transition: 0.5s all ease;
+    }
+
+    .flexItem .flexItemContent {
+        background-color: #eee;
+        display: flex;
+        height: 100%;
+    }
+    
+    .flexItem:nth-child(3n+1) {
+        width: 50%;
+    }
+
+    .flexItem:nth-child(2n+1) {
+        width: 50%;
+    }
+
+    .flexItem:nth-child(1) {
+        width: 25%;
+    }
+
+    .disabled {
+        color: #ccc;
+    }
+
+    .scaledDown {
+        transform: scale(0);
+    } */
+
+    .flexBoxWrapper {
+        border: 1px solid red;
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .flexBox {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        box-sizing: border-box;
+        margin-left: -10px;
+        margin-top: -10px;
+    }
+
+    .flexItem {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s all ease;
+        height: 300px;
+        /* border-bottom: 1px solid #888; */
+        background-color: #ccc;
+        min-width: 192.5px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    </style>
+
+</head>
+<body>
+    <input type="button" value="Show Block 3" class="hide">
+    <input type="button" value="Show All" class="show">
+    <div class="flexBoxWrapper">
+        <div class="flexBox">
+            <div class="flexItem">
+                <div class="flexItemContent">
+                    This is content for block 1
+                </div>
+            </div>
+            <div class="flexItem">
+                <div class="flexItemContent">
+                    <p>The flex-wrap property specifies whether the flexible items should wrap or not.</p>
+                </div>
+            </div>
+            <div class="flexItem">
+                <div class="flexItemContent">
+                    This is content for block 3
+                </div>
+            </div>
+            <div class="flexItem">
+                <div class="flexItemContent">
+                    This is block 4
+                </div>
+            </div>
+           <div class="flexItem">
+                <div class="flexItemContent">
+                    5
+                </div>
+            </div>
+            <div class="flexItem">
+                <div class="flexItemContent">
+                    <p>The flex-wrap property specifies whether the flexible items should wrap or not.</p>
+                </div>
+            </div>
+            <div class="flexItem">
+                <div class="flexItemContent">
+                    7
+                </div>
+            </div>
+             <div class="flexItem">
+                <div class="flexItemContent">
+                    8
+                </div>
+            </div>
+            <div class="flexItem">
+                <div class="flexItemContent">
+                    9
+                </div>
+            </div>
+            <div class="flexItem">
+                <div class="flexItemContent">
+                    10
+                </div>
+            </div>
+            <div class="flexItem">
+                <div class="flexItemContent">
+                    11
+                </div>
+            </div>
+            <div class="flexItem">
+                <div class="flexItemContent">
+                    12
+                </div>
+            </div>
+            <div class="flexItem">
+                <div class="flexItemContent">
+                    <p>The flex-wrap property specifies whether the flexible items should wrap or not.</p>
+                </div>
+            </div>
+            <div class="flexItem">
+                <div class="flexItemContent">
+                    <p>The flex-wrap property specifies whether the flexible items should wrap or not 1.</p>
+                </div>
+            </div>
+            <div class="flexItem">
+                <div class="flexItemContent">
+                    <p>The flex-wrap property specifies whether the flexible items should wrap or not 2.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="http://centuroglobal.com/dist/js/jquery-3.3.1.min.js"></script>
+    <script>
+        var maxAvailWidth = 0;
+        var maxBoxWidth = 400;
+        var width = 0;
+        var height = 0;
+        var dataRowNum = 1;
+        var winWidth = 0;
+        var grabWinWidth;
+
+        $(window).on('load',function(){
+            winWidth = $(window).width();
+            
+            
+            masonryEffect();
+        });
+
+        $(window).resize(function() {
+            clearTimeout(grabWinWidth);
+            grabWinWidth = setTimeout(resizedWin, 100);
+        });
+
+        function resizedw(){
+            masonryEffect();
+        }
+
+        function masonryEffect() {
+            
+            if(winWidth > 1024) {
+                maxBoxWidth = 400;
+                maxAvailWidth = parseInt($(".flexBox").css("max-width"));
+            }
+            else if(winWidth <= 768 && winWidth > 480) {
+                maxBoxWidth = winWidth / 2;
+                maxAvailWidth = maxBoxWidth;
+            }
+            else if(winWidth <= 480) {
+                maxBoxWidth = winWidth;
+                maxAvailWidth = maxBoxWidth;
+            }
+            
+            $(".flexItem").each(function(i){
+                if(winWidth <= 480) {
+                    $(this).find(".flexItemContent").css("width", maxBoxWidth - 20 + "px");
+                }
+                else
+                {
+                    if($(this).find(".flexItemContent").width() > maxBoxWidth) {
+                        $(this).find(".flexItemContent").css("width", maxBoxWidth - 5 + "px");
+                    }
+                }
+
+                if(i>0 && width < maxAvailWidth) {
+                    width += $(this).prev(".flexItem").outerWidth(true);
+                    if(width >= maxAvailWidth) {
+                        width = 0;
+                        height += $(this).outerHeight(true);
+                        dataRowNum++;
+                    }
+                    $(this).css({"left": width + "px", "top": height + "px"});
+                    $(this).attr("data-row", dataRowNum);
+                }
+            }).promise().done(function(){
+                $(".flexBoxWrapper").css("height", height + $(".flexItem").height() + "px");
+            });
+        }
+    // $(window).on("load",function() {
+    //     $(".hide").click(function() {
+    //         if($(this).hasClass("disabled")) {
+    //             return false;
+    //         }
+    //         $(".show").addClass("disabled");
+    //         $(".flexItem").addClass("scaledDown").delay(200).fadeOut(100,function(){
+    //             $(".flexItem").eq(2).fadeIn().delay(200).removeClass("scaledDown");
+    //             $(".flexItem").eq(5).fadeIn().delay(200).removeClass("scaledDown");
+    //             $(".show").removeClass("disabled");
+    //         });
+    //     });
+
+    //     $(".show").click(function() {
+    //         if($(this).hasClass("disabled")) {
+    //             return false;
+    //         }
+    //         $(".hide").addClass("disabled");
+    //         $(".flexItem").addClass("scaledDown").delay(200).fadeOut(100,function(){
+    //             $(".flexItem").fadeIn().delay(100).removeClass("scaledDown");
+    //             $(".hide").removeClass("disabled");
+    //         });
+    //     });
+        
+    // });
+    </script>
+</body>
+</html>

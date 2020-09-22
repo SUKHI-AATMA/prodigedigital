@@ -1,0 +1,645 @@
+
+.signup-section {
+    display: block;
+    width: 100%;
+    position: relative;
+
+    .left-img {
+        position: absolute;
+        left: 0px;
+        top: -25px;
+
+        .square {
+            position: absolute;
+            top: get-vw(-10px);
+            right: get-vw(-10px);
+            background-color: rgba(113, 206, 234, 0.2);
+            width: get-vw(100px);
+            height: get-vw(100px);
+            @include animation(rotateSquare 4s infinite linear); 
+        }
+
+        .hexagon {
+            background: url('/dist/images/sign-up-hexagon.png') no-repeat 0 0;
+            background-size: contain;
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            // transform: translateX(-50%);
+            width: get-vw(100px);
+            height: get-vw(115px);
+            transform-origin: center;
+            @include animation(rotateHexagon 4s infinite linear);
+        }
+    }
+
+    .right-img {
+        position: absolute;
+        right: 10px;
+
+        .triangle {
+            position: absolute;
+            top: get-vw(-50px);
+            left: 50%;
+            background: url('/dist/images/sign-up-triangle.png') no-repeat 0 0;
+            background-size: contain;
+            width: get-vw(100px);
+            height: get-vw(100px);
+            @include animation(rotateTriangle 4s infinite linear);
+        }
+
+        .circle {
+            background-color: rgba(253, 193, 73, 0.2);
+            position: absolute;
+            top: 80%;
+            left: get-vw(-50px);
+            width: get-vw(100px);
+            height: get-vw(100px);
+            border-radius: 50%;
+            @include animation(blobCircle 4s infinite linear);
+        }
+    }
+
+    .signup-container {
+        position: relative;
+        margin: 70px auto 0;
+        width: 780px;
+        text-align: left;
+
+        .signup-title {
+            display: block;
+            font-size: 42px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            font-family: 'Open Sans', sans-serif; font-weight: 400;
+            color: $colorBlack;
+            margin-bottom: 40px;
+        }
+
+        .social-btn-row {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding-bottom: 38px;
+            position: relative;
+            margin-bottom: 38px;
+
+            &:before {
+                position: absolute;
+                content: '';
+                width: 74px;
+                height: 2px;
+                background: #bababa;
+                left: 0px;
+                bottom: 0px;
+            }
+
+            label {
+                font-size: 12px;
+                font-weight: 300;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                display: block;
+                color: $colorBlack;
+                margin-bottom: 15px;
+            }
+
+            .social-linkedin-btn {
+                width: 194px;
+                display: inline-block;
+                height: 36px;
+                border-radius: 25px;
+                font-size: 14px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: center;
+                color: #ffffff;
+                text-decoration: none;
+                padding: 9px 0;
+                margin: 0px;
+                background: #007cba;
+                -webkit-transition: ease-in-out all .5s;
+                -o-transition: ease-in-out all .5s;
+                transition: ease-in-out all .5s;
+
+                &:hover {
+                    background: #006fa7;
+                }
+            }
+        }
+
+        .signup-btn-row {
+            display: block;
+            width: 100%;
+            text-align: left;
+            position: relative;
+            margin-bottom: 60px;
+
+            label {
+                font-size: 12px;
+                font-weight: 300;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                display: block;
+                color: $colorBlack;
+                margin-bottom: 15px;
+            }
+
+            .signup-btn {
+                width: 194px;
+                display: inline-block;
+                height: 36px;
+                border-radius: 25px;
+                font-size: 14px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: center;
+                color: #ffffff;
+                text-decoration: none;
+                padding: 9px 0;
+                margin: 0px;
+            }
+        }
+
+        .signup-text {
+            display: block;
+            width: 100%;
+            font-size: 12px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #787878;
+
+            a {
+                font-weight: bold;
+                color: #572359;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .signup-form-container {
+        width: 800px;
+        margin: 70px auto 0;
+        position: relative;
+
+        .signup-pos-arrow {
+            position: absolute;
+            left: 0px;
+            top: -60px;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+
+        .form-details {
+            display: block;
+            position: relative;
+            width: 100%;
+
+            .form-details-inner {
+                display: inline-block;
+                width: 640px;
+            }
+
+            .col-2 {
+                display: flex;
+                position: relative;
+                margin: 0 -10px;
+
+                .col-box {
+                    display: inline-block;
+                    width: 50%;
+                    padding: 0 10px;
+                }
+            }
+
+            .form-input {
+                position: relative;
+                display: block;
+                -moz-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+                -o-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+                -webkit-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+                transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+                margin-bottom: 50px;
+                border-bottom: solid 1px #888888;
+                padding-bottom: 2px;
+                .info-icon{
+                    position: absolute;
+                    right: 0px;
+                    bottom: 12px;
+                    display: inline-block;
+                    z-index: 9;
+                    opacity: 0;
+                    transition: 0.5s all ease;
+                }
+
+                .toolTip {
+                    opacity: 0;
+                    transition: 0.5s all ease;
+                    position: absolute;
+                    right: -10px;
+                    bottom: 50px;
+                    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+                    background-color: #fff9ec;
+                    padding: 8px;
+                    font-size: 12px;
+                    line-height: 1.2;
+                    font-family: 'Open Sans', sans-serif; font-weight: 400;
+                    width: 183px;
+                    box-sizing: border-box; 
+
+                    &:before {
+                        position: absolute;
+                        content: "";
+                        width: 15px;
+                        height: 15px;
+                        transform: rotate(45deg);
+                        bottom: -7px;
+                        right: 12px;
+                        box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.2);
+                        background-color: #fff9ec;
+                    }
+                }
+
+                &.currFieldFocus {
+                    .info-icon, .toolTip {
+                        opacity: 1;
+                    }
+
+                    label {
+                        -moz-transform: translate(0, -16px) !important;
+                        -ms-transform: translate(0, -16px) !important;
+                        -webkit-transform: translate(0, -16px) !important;
+                        transform: translate(0, -16px) !important;
+                        font-size: 12px;
+                    }
+
+                    .countryCodeVal {
+                        opacity: 1 !important;
+                    }
+                }
+                &.errorMsg {
+                    border-bottom-color: red;
+                    border-bottom-width: 1px;
+                }
+                
+            }
+
+            .form-input.width50 {
+                width: 50%;
+            }
+
+            .form-input:first-of-type {
+                padding-top: 0;
+            }
+
+            .form-input:last-of-type {
+                padding-bottom: 0;
+            }
+
+            .form-input label {
+                transform-origin: left center;
+                font-size: 24px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #bababa;
+                text-align: left;
+                box-sizing: border-box;
+                padding: 1px 0;
+                display: block;
+                position: absolute;
+                background: none;
+                top: 0px;
+                left: 0px;
+                z-index: 2;
+                pointer-events: none;
+                -moz-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+                -o-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+                -webkit-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+                transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+            }
+            .form-input.errorMsg {
+                border-bottom:1px solid red;
+            }
+            .form-input .input-type {
+                -webkit-appearance: none;
+                width: 100%;
+                display: block;
+                box-sizing: border-box;
+                padding: 0 0;
+                font-size: 24px;
+                font-weight: 800;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #572359;
+                position: relative;
+                z-index: 1;
+                // height: 40px;
+                border-radius: 0;
+                background: none;
+                border: 0px;
+                // border-bottom: solid 1px #888888;
+
+                &:focus {
+                    border-bottom-width: 2px;
+                }
+
+                &.errorMsg {
+                    /*border-bottom: 1px solid red;*/
+                    /*border-bottom-width: 1px;*/
+                }
+            }
+
+            .form-input.success label {
+                color: #92c845;
+            }
+
+            .form-input.success .input-type {
+                border: solid 0px #92c845;
+            }
+
+            .form-input.error label {
+                color: #e33e25;
+            }
+
+            .form-input .invalid {
+                font-size: 12px;
+                font-weight: 300;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #000000;
+                float: left;
+                width: 100%;
+                display: none;
+                padding-left: 0;
+            }
+
+            .form-input.error .invalid {
+                display: block;
+            }
+
+            .form-input.error .input-type {
+                border: solid 0px #e33e25;
+            }
+
+            .form-input .input-type:focus {
+                outline: none;
+            }
+            .form-input .input-type ~ label {
+                -moz-transform: translate(0, 0);
+                -ms-transform: translate(0, 0);
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+            }
+            .form-input .input-type:focus ~ label, .form-input .input-type.notEmpty ~ label {
+                -moz-transform: translate(0, -16px);
+                -ms-transform: translate(0, -16px);
+                -webkit-transform: translate(0, -16px);
+                transform: translate(0, -16px);
+                font-size: 12px;
+            }
+            // .form-input .input-type:valid ~ label {
+            //     -moz-transform: translate(0, -16px);
+            //     -ms-transform: translate(0, -16px);
+            //     -webkit-transform: translate(0, -16px);
+            //     transform: translate(0, -16px);
+            //     font-size: 12px;
+            // }
+
+            .form-input.mobile-no .input-type {
+                padding-left: 90px;
+            }
+            .form-input.mobile-no .countryCodeVal {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                font-size: 23px;
+                font-weight: 800;
+                top: 50%;
+                transform: translateY(-50%);
+                background: url(#{$imgPath}images/down-cart.png) no-repeat 94% 50%;
+                color: #572359;
+                padding-right: 21px;
+            }
+            .form-input.mobile-no .contry-code {
+                box-sizing: border-box;
+                display: inline-block;
+                max-width: 90px;
+                min-width: 76px;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                padding: 0 0;
+                // font-size: 24px;
+                // font-weight: 800;
+                // font-style: normal;
+                // font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #572359;
+                z-index: 1;
+                height: 40px;
+                border-radius: 0;
+                background: url(#{$imgPath}images/down-cart.png) no-repeat 94% 50%;
+                background-size: 10px;
+                border: solid 0px #888888;
+                -webkit-appearance: none;
+                z-index: 1;
+                outline: none;
+                // visibility: hidden;
+                opacity: 0;
+                -webkit-transition: ease-in-out all 0.5s;
+                -o-transition: ease-in-out all 0.5s;
+                transition: ease-in-out all 0.5s;
+                opacity: 0;
+                position: absolute;
+            }
+            // .form-input.mobile-no .input-type:focus ~ .contry-code,
+            // .form-input.mobile-no .input-type:valid ~ .contry-code {
+            //     visibility: visible;
+            //     opacity: 1;
+            // }
+            .form-input.mobile-no .input-type:focus ~ .countryCodeVal,
+            .form-input.mobile-no .input-type:valid ~ .countryCodeVal {
+                opacity: 1;
+            }    
+            
+            .check-box-input {
+                display: block;
+                width: 100%;
+                margin-bottom: 20px;
+
+                &.right {
+                    .check-block-text {
+                        display: inline-block;
+                        font-size: 14px;
+                        font-weight: normal;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 22px;
+                        letter-spacing: normal;
+                        color: #787878;
+                    }
+
+                    label {
+                        display: inline-block;
+                        margin-left: 30px;
+                        color: #572359;
+                        font-weight: bold;
+                    }
+                }
+
+                &.errorMsg {
+                    .checkmark {
+                        border-color: red;
+                    }
+                }
+            }
+
+            .check-box-input .check-box {
+                display: block;
+                position: relative;
+                padding-left: 45px;
+                margin-bottom: 0;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 22px;
+                letter-spacing: normal;
+                color: #787878;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            .check-box-input .check-box a {
+                color: #345188;
+                text-decoration: none;
+                display: inline-block;
+                font-weight: bold;
+            }
+
+            /* Hide the browser's default checkbox */
+            .check-box input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+
+            /* Create a custom checkbox */
+            .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 22px;
+                width: 22px;
+                background-color: transparent;
+                border: 2px solid #582459;
+                border-radius: 3px;
+            }
+
+            /* On mouse-over, add a grey background color */
+            .check-box:hover input~.checkmark {
+                background-color: #ffffff;
+            }
+
+            /* When the checkbox is checked, add a blue background */
+            .check-box input:checked~.checkmark {
+                background-color: #ffffff;
+            }
+
+            /* Create the checkmark/indicator (hidden when not checked) */
+            .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+
+            /* Show the checkmark when checked */
+            .check-box input:checked~.checkmark:after {
+                display: block;
+            }
+
+            .check-box input:checked~.checkmark {
+                background: #562359;
+            }
+
+            /* Style the checkmark/indicator */
+            .check-box .checkmark:after {
+                left: 5px;
+                top: 1px;
+                width: 6px;
+                height: 10px;
+                border: solid #ffffff;
+                border-width: 0 2px 2px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+
+            .signup-form-btn-row {
+                display: block;
+                width: 100%;
+                text-align: left;
+                position: relative;
+                margin-bottom: 15px;
+                padding-top: 10px;
+
+                .signup-form-btn {
+                    width: 180px;
+                    display: inline-block;
+                    height: 45px;
+                    border-radius: 25px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    text-align: center;
+                    color: #ffffff;
+                    text-decoration: none;
+                    padding: 14px 0;
+                    margin: 0px;
+                    @include background-gradient-effect(to right, #562359, #c96b86, #c96b86, #562359);
+                    @include transition(all .4s ease-in-out);
+
+
+                    &.disabled {
+                        background: linear-gradient(to right, #bababa 0%, #e6e6e6 100%);
+                        cursor: not-allowed;
+                    }
+                }
+            }
+        }
+    }
+}

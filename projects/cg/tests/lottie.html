@@ -1,0 +1,37 @@
+<div id="container" data-fill="#f00"></div>
+
+<a href="/" id="a1">Click</a><a id="a2" href="javascript:;" style="float: right;">Click</a>
+<script type="text/javascript" src="../dist/js/lottie.min.js"></script>
+
+<script>
+var circleMeshAnimData = {
+    container: document.getElementById('container'), // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: false,
+    autoplay: true,
+    path: '/dist/json/today.json', // the path to the animation json
+};
+var circleMeshAnim = bodymovin.loadAnimation(circleMeshAnimData);
+// circleMeshAnim.playSegments([[10,100]],true);
+// circleMeshAnim.pause();
+// document.getElementById('a1').addEventListener('mouseenter', function() {
+// 	circleMeshAnim.playSegments([[1,217]],true);
+// });
+// document.getElementById('a2').addEventListener('mouseenter', function() {
+// 	circleMeshAnim.playSegments([[217,290]],true);
+// });
+// circleMeshAnim.addEventListener('DOMLoaded', function() {
+// 	$('#container svg').each(function(index) {
+//         var
+//             squareStroke = $('svg').find('g:nth-child(2)').find('g:nth-child(1)').find('g:nth-child(1)').find('path'),
+//             arrLineStroke = $('svg').find('g:nth-child(2)').find('g:nth-child(2)').find('g:nth-child(1)').find('path').eq(1),
+//             arrPointStroke = $('svg').find('g:nth-child(2)').find('g:nth-child(3)').find('g:nth-child(1)').find('path'),
+//             svgColor = '#f00'
+//         $(this).find('g:nth-child(2)').find('g:nth-child(2)').find('g:nth-child(1)').find('path').attr('fill', svgColor).attr('id', 'id' + index)
+//         TweenMax.set(squareStroke, { stroke: svgColor });
+//         TweenMax.set(arrLineStroke, { stroke: svgColor });
+//         TweenMax.set(arrPointStroke, { stroke: svgColor });
+//         // .attr('stroke',$(this).attr('data-fill'))
+//     });
+// });
+</script>
