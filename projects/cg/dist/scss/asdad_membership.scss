@@ -1,0 +1,253 @@
+.membership {
+    .banner {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        font-size: get-vw(140px);
+        font-family: 'MontserratExtraBold';
+        @include background-gradient-effect(to bottom, #572359 0%, #572359 98%, #ffffff 98%, #ffffff 100%); 
+        position: relative;
+        color: #fff;
+        letter-spacing: get-vw(9px);
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        span {
+            display: inline-block;
+        }
+
+        .bg1 {
+            position: relative; 
+        }
+
+        .bg2 {
+            bottom: 0;
+            left: 22.5%;
+            position: absolute;
+            width: 55%;
+        }
+    }
+
+    .content {
+        background: #fff;
+        display: block;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+
+        .row {
+            display: flex;
+            padding: 10% 15% 0;
+            width: 100%;
+
+            >div {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+            }
+
+            .clmn_content {
+                .svgLetterBox {
+                    width: get-vw(110px);
+
+                    svg,
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .introText {
+                    margin: get-vw(40px) 0 0 get-vw(40px);
+                    height: auto;
+                    width: auto;
+
+                    .line {
+                        background: #71ceea;
+                    }
+
+                    p {
+                        color: #345188;
+                    }
+
+                    p span {
+                        color: #71ceea;
+                    }
+                }
+
+                ul {
+                    float: left;
+                    margin: get-vw(50px) 0 0 get-vw(110px);
+                    font-family: MontserratLight;
+                    font-size: get-vw(16px);
+                    line-height: 2;
+                    color: $colorBlack;
+
+                    span {
+                        color: #787878;
+                        font-size: get-vw(14px);
+                        display: block;
+                        margin: 0 0 0 get-vw(12px);
+                    }
+                }
+            }
+
+            .clmn_icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img,
+                svg {
+                    width: 40%;
+                    /*path.greyIcon {
+                        opacity: 0;
+                    }
+
+                    path.greyElem {
+                        opacity: 0;
+                    }
+
+                    path.greyBox {
+                        transform: scale(0, 1);
+                    }
+
+                    g.yellowBox {
+                        transform: scale(0, 1);
+                    }
+
+                    path.greyElemOpa {
+                        opacity: 0;
+                    }
+
+                    &.animate {
+                        path.greyIcon {
+                            opacity: 1;
+                        }
+
+                        path.greyElem {
+                            opacity: 1;
+                        }
+
+                        path.greyBox {
+                            transform: scale(1, 1);
+                        }
+
+                        g.yellowBox {
+                            transform: scale(1, 1);
+                        }
+
+                        path.greyElemOpa {
+                            opacity: 1;
+                        }
+                    }*/
+                }
+            }
+
+            &.quicklinks {
+                @include background-gradient-effect(to right, #71ceea 0%, #345188 100%);
+                color: #fff;
+                font-family: "Montserrat-Bold";
+                font-size: get-vw(36px);
+                margin: get-vw(120px) 0 0;
+                padding: get-vw(100px) 15%;
+
+                a.whiteButton {
+                    color: #345188
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .membership .banner {
+        height: 50vh;
+    }
+
+    .fixedBanner {
+        height: 50vh;
+    }
+
+    .membership .banner .bg2 {
+        left: 5%;
+        width: 90%;
+    }
+
+    .membership .content .row {
+        display: block;
+        float: left;
+        padding: 10% 10% 20%;
+        position: relative;
+        width: 100%;
+    }
+
+
+    .membership .content .row>div {
+        display: block;
+        float: left;
+        width: 100%;
+    }
+
+    .membership .content {
+        float: left;
+        overflow: hidden;
+        padding: 25% 0 0;
+    }
+
+    .membership .content .row .clmn_icon {
+        float: left;
+        position: absolute;
+        top: -5%;
+        right: 5%;
+        width: 30%;
+    }
+
+    .membership .content .row .clmn_icon img,
+    .membership .content .row .clmn_icon svg {
+        width: 100%;
+    }
+
+    .membership .content .row .clmn_icon:last-child {
+        float: right;
+    }
+
+    .membership .content .row .clmn_content .svgLetterBox {
+        width: 15vw;
+    }
+
+    .membership .content .row .clmn_content .introText p {
+        font-size: 7vw;
+    }
+
+    .membership .content .row .clmn_content ul {
+        font-size: 3.3vw;
+    }
+
+    .membership .content .row .clmn_content ul span {
+        font-size: 3.2vw;
+        margin: 0;
+    }
+
+    .membership .content .row .clmn_content .introText {
+        margin: 2.08333vw 0 0 2.08333vw;
+        height: auto;
+        padding: 0 0 0 6.07vw;
+        width: auto;
+    }
+
+    .membership .content .row .clmn_content .introText .line {
+        width: 3px;
+    }
+
+    .membership .content .row.quicklinks {
+        font-size: 4.5vw;
+        padding: 5%;
+    }
+
+    .membership .content .row.quicklinks div {
+        padding: 0 0 5%;
+    }
+}

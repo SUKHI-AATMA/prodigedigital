@@ -1,0 +1,790 @@
+/*/// Adds a browser prefix to the property*/
+/*/// @param {*} $property Property*/
+/*/// @param {*} $value Value*/
+/*/// Background Gradient*/
+/*/// @param {Color} $startColor [#3C3C3C] - Start Color*/
+/*/// @param {Color} $endColor [#999999] - End Color*/
+/*/// Background Horizontal*/
+/*/// @param {Color} $startColor [#3C3C3C] - Start Color*/
+/*/// @param {Color} $endColor [#999999] - End Color*/
+/*/// Background Horizontal - inverse direction*/
+/*/// @param {Color} $startColor [#999999] - Start Color*/
+/*/// @param {Color} $endColor [#3C3C3C] - End Color*/
+/*/// Background Radial*/
+/*/// @param {Color} $startColor [#3C3C3C] - Start Color*/
+/*/// @param {Percentage} $startPos [0%] - Start position*/
+/*/// @param {Color} $endColor [#999999] - End Color*/
+/*/// @param {Percentage} $endPos [100%] - End position*/
+/*/// Background Size*/
+/*/// @param {Size} $width [100%] - Width*/
+/*/// @param {Size} $width [$width] - Height*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Background Color Opacity*/
+/*/// @param {Color} $color [100%] - Color*/
+/*/// @param {Double} $opacity [0.85] - Opacity*/
+/*/// Border Radius*/
+/*/// @param {Size} $radius [5px] - Radius*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Border Radius Separate*/
+/*/// @param {Size} $topLeftRadius [5px] - Top Left*/
+/*/// @param {Size} $topRightRadius [5px] - Top Right*/
+/*/// @param {Size} $bottomLeftRadius [5px] - Bottom Left*/
+/*/// @param {Size} $bottomRightRadius [5px] - Bottom Right*/
+/*/// Box*/
+/*/// @param {*} $orient [horizontal] - Orientation*/
+/*/// @param {*} $pack [center] - Pack*/
+/*/// @param {*} $align [center] - Align*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Box RGBA*/
+/*/// @param {Integer} $r [60] - Red*/
+/*/// @param {Integer} $g [3] - Green*/
+/*/// @param {Integer} $b [12] - Blue*/
+/*/// @param {Double} $opacity [0.23] - Opacity*/
+/*/// @param {Color} $color [#3C3C3C] - Color*/
+/*/// Box Shadow*/
+/*/// @param {Size} $x [2px] - X*/
+/*/// @param {Size} $y [2px] - Y*/
+/*/// @param {Size} $blur [5px] - Blur*/
+/*/// @param {Color} $color [rgba(0,0,0,.4)] - Color*/
+/*/// @param {Boolean} $inset - Inset*/
+/*/// Box Sizing*/
+/*/// @param {*} $type [border-box] - Type*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Columns*/
+/*/// @param {Integer} $count [3] - Count*/
+/*/// @param {Integer} $gap [10] - Gap*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Double Borders*/
+/*/// @param {Color} $colorOne [#3C3C3C] - Color One*/
+/*/// @param {Color} $colorTwo [#999999] - Color Two*/
+/*/// @param {Size} $radius [0] - Radius*/
+/*/// @require {mixin} css3-prefix*/
+/*/// @require {mixin} border-radius*/
+/*/// Flex*/
+/*/// @param {Integer} $value [1] - Value*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Flip*/
+/*/// @param {Double} $scaleX [-1] - ScaleX*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Font Face*/
+/*/// @param {Font} $fontFamily [myFont] - Font Family*/
+/*/// @param {String} $eotFileSrc ['myFont.eot'] - Eot File Source*/
+/*/// @param {String} $woffFileSrc ['myFont.woff'] - Woff File Source*/
+/*/// @param {String} $ttfFileSrc ['myFont.ttf'] - Ttf File Source*/
+/*/// @param {String} $svgFileSrc ['myFont.svg'] - Svg File Source*/
+/*/// Opacity*/
+/*/// @param {Double} $opacity [0.5] - Opacity*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Outline Radius*/
+/*/// @param {Size} $radius [5px] - Radius*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Resize*/
+/*/// @param {*} $directoin [both] - Direction*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Rotate*/
+/*/// CSS Matrix Rotation Calculator http://www.boogdesign.com/examples/transforms/matrix-calculator.html*/
+/*/// @param {Double} $deg [0] - Degree*/
+/*/// @param {Double} $m11 [0] - M11*/
+/*/// @param {Double} $m12 [0] - M12*/
+/*/// @param {Double} $m21 [0] - M21*/
+/*/// @param {Double} $m22 [0] - M22*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Text Shadow*/
+/*/// @param {Size} $x [2px] - X*/
+/*/// @param {Size} $y [2px] - Y*/
+/*/// @param {Size} $blur [2px] - Blur*/
+/*/// @param {Color} $color [rgba(0,0,0,.4)] - Color*/
+/*/// Transform*/
+/*/// @param {List} $params - Params*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Transform-Origin*/
+/*/// @param {List} $params - Params*/
+/*/// @require {mixin} css3-prefix*/
+/*/// @param {List} $params - Params*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Transition*/
+/*/// @param {List} $properties - Properties*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Triple Borders*/
+/*/// @param {Color} $colorOne [#3C3C3C] - Color One*/
+/*/// @param {Color} $colorTwo [#999999] - Color Two*/
+/*/// @param {Color} $colorThree [#000000] - Color Three*/
+/*/// @param {Size} $radius [0] - Radius*/
+/*/// @require {mixin} border-radius*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Keyframes*/
+/*/// @param {*} $animation-name - Animation name*/
+/*/// @content [Animation css]*/
+/*/// Animation*/
+/*/// @param {*} $str - name duration timing-function delay iteration-count direction fill-mode play-state ([http://www.w3schools.com/cssref/css3_pr_animation.asp](http://www.w3schools.com/cssref/css3_pr_animation.asp))*/
+/*/// @require {mixin} css3-prefix*/
+#contactUsPage {
+  background: rgba(113, 206, 234, 0.1); }
+  #contactUsPage .intro {
+    display: none; }
+  #contactUsPage .container #contactUsHolder {
+    width: 100%; }
+    #contactUsPage .container #contactUsHolder .contactUsWrapper {
+      opacity: 0; }
+      #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer {
+        display: flex;
+        justify-content: center;
+        padding: 30px 0;
+        font-family: 'Open Sans', sans-serif; }
+        #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs,
+        #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs {
+          padding: 25px 32px; }
+        #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs {
+          background: #345188;
+          border-radius: 10px 0 0 10px;
+          position: relative; }
+          #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs h1 {
+            color: #fff;
+            font-size: 36px; }
+            #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs h1 span {
+              color: #85c5db;
+              font-size: 0.97222vw;
+              display: block;
+              margin-top: 10px; }
+          #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs ul {
+            margin-top: 40px; }
+            #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs ul li {
+              color: #fefeff;
+              font-size: 0.97222vw;
+              margin-bottom: 2.77778vw; }
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs ul li.address {
+                background: url("../images/contactUs-location.svg") no-repeat 0 0;
+                padding-top: 44px; }
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs ul li.phone {
+                background: url("../images/contactUs-call.svg") no-repeat 0 0;
+                padding-top: 44px; }
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs ul li.phone a {
+                  color: #fefeff;
+                  text-decoration: none; }
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs ul li.mail {
+                background: url("../images/contactUs-mail.svg") no-repeat 0 0;
+                padding-top: 42px; }
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs ul li.mail a {
+                  color: #fff;
+                  text-decoration: none; }
+                  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs ul li.mail a:hover {
+                    color: #85c5db;
+                    text-decoration: underline; }
+          #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs .qrCode p {
+            color: #85c5db;
+            font-size: 0.97222vw;
+            margin-bottom: 15px; }
+          #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs .qrCode img {
+            width: 140px; }
+        #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs {
+          background: #fff;
+          border-radius: 0 10px 10px 0;
+          position: relative; }
+          #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs h2 {
+            color: #222;
+            font-size: 36px; }
+            #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs h2 span {
+              color: #888;
+              font-size: 0.97222vw;
+              display: block;
+              margin-top: 10px; }
+          #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper {
+            margin-top: 30px; }
+            #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1,
+            #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 {
+              display: flex; }
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row,
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row {
+                position: relative;
+                margin: 0 0 15px 40px;
+                height: 45px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end; }
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row:first-child,
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row:first-child {
+                  margin-left: 0; }
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row.fieldFocus label,
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row.fieldFocus label {
+                  bottom: 75%;
+                  font-size: 12px; }
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row.fieldFocus input,
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row.fieldFocus input {
+                  border-bottom: 1px solid #898989; }
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row.fieldFocus .infoIcon,
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row.fieldFocus .hintText,
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row.fieldFocus .infoIcon,
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row.fieldFocus .hintText {
+                  opacity: 1;
+                  right: -10px; }
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row.fieldFocus .infoIcon,
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row.fieldFocus .infoIcon {
+                  right: 0; }
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row.filled label,
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row.filled label {
+                  bottom: 75%;
+                  font-size: 12px; }
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row.filled input,
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row.filled input {
+                  border-bottom: 1px solid #898989; }
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row.filled .infoIcon,
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row.filled .hintText,
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row.filled .infoIcon,
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row.filled .hintText {
+                  opacity: 0;
+                  right: 5000px; }
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row.filled .infoIcon,
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row.filled .infoIcon {
+                  right: 0; }
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row.showErrorMsg input[type=text],
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row.showErrorMsg select,
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row.showErrorMsg input[type=text],
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row.showErrorMsg select {
+                  border-bottom-color: #f00; }
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row.showErrorMsg .errorMsg,
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row.showErrorMsg .errorMsg {
+                  display: none;
+                  visibility: visible; }
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row .infoIcon,
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row .infoIcon {
+                  position: absolute;
+                  top: 35%;
+                  right: 0;
+                  background: url("../images/information.png") no-repeat 0 0;
+                  width: 20px;
+                  height: 20px;
+                  cursor: default;
+                  z-index: 1;
+                  opacity: 0;
+                  transition: 0.5s all ease; }
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row .hintText,
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row .hintText {
+                  position: absolute;
+                  right: 5000px;
+                  bottom: 50px;
+                  opacity: 0;
+                  transition: 0.5s opacity ease;
+                  position: absolute;
+                  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+                  background-color: #fff9ec;
+                  padding: 8px;
+                  font-size: 12px;
+                  line-height: 1.2;
+                  font-family: 'Open Sans', sans-serif;
+                  font-weight: 400;
+                  width: 183px;
+                  box-sizing: border-box;
+                  z-index: 1; }
+                  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row .hintText:before,
+                  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row .hintText:before {
+                    position: absolute;
+                    content: "";
+                    width: 15px;
+                    height: 15px;
+                    transform: rotate(45deg);
+                    bottom: -7px;
+                    right: 12px;
+                    box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.2);
+                    background-color: #fff9ec; }
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 label,
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 label {
+                font-family: "Montserrat-Bold", Helvetica, sans-serif;
+                font-size: 18px;
+                color: #bababa;
+                transition: 0.5s all ease;
+                align-self: flex-start; }
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .errorMsg,
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .errorMsg {
+                display: none;
+                font-size: 0.90278vw;
+                color: red;
+                margin-top: 5px;
+                visibility: hidden; }
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 input[type=text],
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 select,
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 input[type=text],
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 select {
+                border: none;
+                border-bottom: 1px solid #bababa;
+                width: 100%;
+                outline: none;
+                transition: 0.5s all ease;
+                -webkit-appearance: none;
+                width: 100%;
+                display: block;
+                box-sizing: border-box;
+                padding: 0 0 5px;
+                font-size: 16px;
+                font-weight: 800;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #572359;
+                position: relative;
+                z-index: 1;
+                border-radius: 0;
+                background: none;
+                /*border: 0px;*/ }
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 input[type=text],
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 select,
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 input[type=text],
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 select {
+                position: relative;
+                z-index: 1;
+                background: transparent;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -ms-appearance: none; }
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 label,
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 input[type=text],
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 label,
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 input[type=text] {
+                position: absolute;
+                top: 44%; }
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 select[name=queryType],
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 select[name=queryType] {
+                opacity: 0;
+                position: absolute;
+                top: unset;
+                bottom: 0; }
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 select[name=queryType] ~ div,
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 select[name=queryType] ~ div {
+                  font-family: "Montserrat-Bold", Helvetica, sans-serif;
+                  border-bottom: 1px solid #bababa;
+                  width: 100%;
+                  font-size: 1.11111vw;
+                  color: #bababa;
+                  padding-bottom: 7px; }
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 textarea,
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 textarea {
+                font-family: "Montserrat-Bold", Helvetica, sans-serif;
+                border: 1px solid #f5f5f5;
+                width: 100%;
+                background: #f5f5f5;
+                height: 100px;
+                resize: none;
+                padding: 16px 18px;
+                box-sizing: border-box;
+                outline: none;
+                margin: 20px 0 5px 0;
+                transition: 0.5s all ease;
+                color: #000;
+                -webkit-appearance: none;
+                width: 100%;
+                display: block;
+                box-sizing: border-box;
+                padding: 10px;
+                font-size: 16px;
+                font-weight: 800;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #572359;
+                position: relative;
+                z-index: 1;
+                border-radius: 0; }
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 textarea::placeholder,
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 textarea::placeholder {
+                  font-family: 'Open Sans', sans-serif;
+                  font-size: 1.04167vw;
+                  color: #bababa; }
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 textarea:focus,
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 textarea:focus {
+                  /*background: #fff;*/
+                  border: 1px solid #f5f5f5; }
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .autoHeight,
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .autoHeight {
+                height: auto; }
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .posRelative,
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .posRelative {
+                position: relative; }
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .customCheckbox,
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .customCheckbox {
+                flex-direction: row;
+                justify-content: left; }
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .customCheckbox input[type=checkbox],
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .customCheckbox input[type=checkbox] {
+                  position: absolute;
+                  left: 2px;
+                  top: 1px;
+                  opacity: 0;
+                  margin: 0;
+                  z-index: 1;
+                  width: 20px;
+                  height: 20px; }
+                  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .customCheckbox input[type=checkbox]:checked ~ .checkmark,
+                  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .customCheckbox input[type=checkbox]:checked ~ .checkmark {
+                    background-color: #562359; }
+                    #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .customCheckbox input[type=checkbox]:checked ~ .checkmark::before,
+                    #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .customCheckbox input[type=checkbox]:checked ~ .checkmark::before {
+                      display: block; }
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .customCheckbox .checkmark,
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .customCheckbox .checkmark {
+                  border: 2px solid #582459;
+                  width: 22px;
+                  height: 22px;
+                  border-radius: 3px;
+                  top: 0;
+                  position: relative; }
+                  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .customCheckbox .checkmark::before,
+                  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .customCheckbox .checkmark::before {
+                    content: '';
+                    width: 6px;
+                    height: 10px;
+                    border: solid #fff;
+                    border-width: 0 2px 2px 0;
+                    transform: rotate(45deg);
+                    position: absolute;
+                    top: 1px;
+                    left: 5px;
+                    display: none; }
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .customCheckbox label,
+                #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .customCheckbox label {
+                  margin: 0 0 0 10px;
+                  font-size: 14px;
+                  top: 0;
+                  align-self: center;
+                  font-family: 'Open Sans', sans-serif;
+                  color: #888; }
+                  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .customCheckbox label a,
+                  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .customCheckbox label a {
+                    color: #345188;
+                    text-decoration: none;
+                    font-weight: bold; }
+                    #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .customCheckbox label a:hover,
+                    #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .customCheckbox label a:hover {
+                      color: #582459;
+                      text-decoration: underline; }
+            #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row {
+              width: 50%; }
+            #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row {
+              width: 100%; }
+            #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .contactUs-form-btn {
+              margin-top: 15px; }
+              #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .contactUs-form-btn.disabled {
+                background: linear-gradient(to right, #bababa 0%, #e6e6e6 100%);
+                cursor: not-allowed; }
+            #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .mrgBtm10 {
+              margin-bottom: 10px; }
+  #contactUsPage .popUpWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 13;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15);
+    border: solid 1px #f5f5f5;
+    width: 80%;
+    max-width: 800px;
+    display: none; }
+    #contactUsPage .popUpWrapper .popUpContent {
+      display: flex;
+      padding: 60px 40px; }
+      #contactUsPage .popUpWrapper .popUpContent .lhsSection {
+        padding-right: 50px;
+        box-sizing: border-box; }
+        #contactUsPage .popUpWrapper .popUpContent .lhsSection h2, #contactUsPage .popUpWrapper .popUpContent .lhsSection p {
+          color: #222;
+          font-family: 'Open Sans', sans-serif; }
+        #contactUsPage .popUpWrapper .popUpContent .lhsSection h2 {
+          font-size: 36px;
+          margin-bottom: 20px; }
+        #contactUsPage .popUpWrapper .popUpContent .lhsSection p {
+          font-size: 16px;
+          line-height: 1.4; }
+        #contactUsPage .popUpWrapper .popUpContent .lhsSection .backgroundImage {
+          margin-top: 62px; }
+      #contactUsPage .popUpWrapper .popUpContent .rhsSection .closeWrapper {
+        position: relative;
+        width: 100%;
+        margin-bottom: 55px;
+        display: flex;
+        justify-content: flex-end;
+        transform: translateY(8px); }
+        #contactUsPage .popUpWrapper .popUpContent .rhsSection .closeWrapper .close {
+          width: 22px;
+          height: 22px;
+          position: relative;
+          cursor: pointer; }
+          #contactUsPage .popUpWrapper .popUpContent .rhsSection .closeWrapper .close::before, #contactUsPage .popUpWrapper .popUpContent .rhsSection .closeWrapper .close::after {
+            content: '';
+            width: 22px;
+            height: 2px;
+            background-color: #572359;
+            position: absolute;
+            right: 0;
+            top: 7px; }
+          #contactUsPage .popUpWrapper .popUpContent .rhsSection .closeWrapper .close::before {
+            transform: rotate(45deg); }
+          #contactUsPage .popUpWrapper .popUpContent .rhsSection .closeWrapper .close:after {
+            transform: rotate(-45deg); }
+  #contactUsPage::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    height: 100%;
+    content: '';
+    z-index: 12;
+    display: none; }
+  #contactUsPage.showPopUpSuccess::before, #contactUsPage.showPopUpSuccess .popUpWrapper {
+    display: block; }
+
+#contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 label {
+  top: auto;
+  bottom: 5px; }
+
+#contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 label {
+  top: auto;
+  bottom: 5px; }
+
+#contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 label.placeholder {
+  z-index: 5;
+  margin: 10px 0 0 10px;
+  cursor: text;
+  top: 20px;
+  bottom: unset; }
+
+#contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .errorMsg {
+  display: none; }
+
+#contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 select[name=queryType] ~ div {
+  font-family: "Montserrat-Bold", Helvetica, sans-serif;
+  font-size: 16px;
+  color: #bababa;
+  transition: 0.5s all ease;
+  align-self: flex-start; }
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 select[name=queryType] ~ div.selected {
+    color: #572359; }
+
+.floImg svg {
+  height: auto;
+  width: 100%; }
+
+.rhsImage.floImg {
+  position: fixed;
+  bottom: 40px;
+  right: 10%; }
+
+.lhsImage.floImg {
+  left: 19%;
+  bottom: 10px;
+  position: absolute;
+  z-index: 0; }
+
+@media (max-width: 1920px) and (min-width: 1441px) {
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs h1 span,
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs ul li,
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs h2 span {
+    font-size: 16px; } }
+
+@media (max-width: 1024px) {
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs .qrCode {
+    display: none; } }
+
+@media (max-width: 640px) {
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer {
+    overflow: hidden;
+    flex-direction: column; }
+    #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs {
+      width: 88%;
+      align-self: center;
+      border-radius: 10px;
+      padding: 25px; }
+      #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs h1 {
+        font-size: 9vw; }
+        #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs h1 span {
+          font-size: 4.5vw; }
+      #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs ul li {
+        font-size: 5vw;
+        line-height: 7vw;
+        margin-bottom: 12vw; }
+        #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs ul li:last-child {
+          margin-bottom: 0; }
+    #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs {
+      margin-top: 25px;
+      border-radius: 0;
+      padding: 25px; }
+      #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs h2 {
+        font-size: 9vw;
+        width: 70vw;
+        line-height: 11vw; }
+        #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs h2 span {
+          font-size: 4.5vw; }
+      #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper {
+        margin-top: 15px; }
+        #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row,
+        #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row {
+          margin: 0 0 10px 0; }
+          #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row label,
+          #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row label {
+            font-size: 4.8vw;
+            font-weight: bold; }
+          #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row .errorMsg,
+          #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row .errorMsg {
+            font-size: 3.5vw; }
+          #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row.fieldFocus label,
+          #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row.fieldFocus label {
+            font-size: 4.2vw; }
+          #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row select[name=queryType] ~ div,
+          #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row select[name=queryType] ~ div {
+            font-size: 4.8vw;
+            font-weight: bold; }
+          #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row textarea,
+          #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row textarea {
+            height: 200px;
+            margin-top: 10px; }
+            #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row textarea::placeholder,
+            #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row textarea::placeholder {
+              font-size: 4vw; }
+          #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row.customCheckbox label,
+          #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row.customCheckbox label {
+            font-weight: normal;
+            font-size: 3.8vw;
+            display: inline-block;
+            width: 90%; }
+          #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row.customCheckbox .checkmark,
+          #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row.customCheckbox .checkmark {
+            display: inline-block; }
+        #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 {
+          flex-direction: column; }
+          #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row {
+            width: 100%; }
+        #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .contactUs-form-btn {
+          width: 100%;
+          font-size: 4.4vw;
+          padding-top: 4vw;
+          padding-bottom: 4vw; }
+  #contactUsPage .contactFloatingMobile {
+    display: none !important; }
+  #contactUsPage .popUpWrapper .popUpContent {
+    display: block; }
+  #contactUsPage .popUpWrapper .popUpContent .rhsSection {
+    position: absolute;
+    top: 6px;
+    right: 8px; }
+  #contactUsPage .popUpWrapper .popUpContent .rhsSection .closeWrapper .close {
+    margin-right: 0 !important; } }
+
+@media (max-height: 900px) and (max-width: 1440px) {
+  .rhsImage.floImg {
+    right: 5%;
+    width: 13%; }
+  .lhsImage.floImg {
+    left: 14%;
+    bottom: 6px; } }
+
+@media (max-height: 768px) and (max-width: 1366px) {
+  .rhsImage.floImg {
+    right: 3%;
+    bottom: 10px;
+    width: 12%; }
+  .lhsImage.floImg {
+    width: 12%;
+    left: 15%; } }
+
+@media (max-height: 800px) and (max-width: 1280px) {
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs h2 {
+    font-size: 24px; }
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs h1 {
+    font-size: 24px; }
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 label,
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 label {
+    font-size: 14px;
+    top: unset; }
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .customCheckbox label,
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .customCheckbox label {
+    font-size: 12px; }
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row,
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row {
+    height: 45px; }
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row.autoHeight {
+    height: auto; }
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 select[name=queryType] ~ div {
+    font-size: 14px; } }
+
+@media (max-width: 1024px) {
+  .contactFloatingMobile {
+    display: none !important; }
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row label,
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row label,
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 select[name=queryType] ~ div,
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row select[name=queryType] ~ div,
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row select[name=queryType] ~ div {
+    font-size: 16px; }
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row.customCheckbox label,
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row.customCheckbox label {
+    font-size: 12px;
+    line-height: 1.2; }
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs ul li {
+    font-size: 14px;
+    margin: 0 0 30px 0; }
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row.fieldFocus label,
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row.fieldFocus label {
+    font-size: 14px; } }
+
+@media (max-height: 1024px) and (max-width: 768px) {
+  .lhsImage.floImg,
+  .rhsImage.floImg {
+    display: none; }
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs h1, #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs h2 {
+    font-size: 26px; }
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsLhs h1 span, #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs h2 span {
+    font-size: 14px; }
+  a.button {
+    font-size: 14px;
+    padding: 10px 15px; }
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 label, #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 label {
+    /*top: 25px;*/
+    bottom: 10px; }
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 .row, #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 .row {
+    height: 55px; }
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1.textarea .row {
+    height: 120px; }
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1.checkbox,
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1.checkbox .row {
+    height: auto; }
+  #contactUsPage .popUpWrapper .popUpContent .rhsSection .closeWrapper .close {
+    margin-right: 40px; } }
+
+@media (max-width: 767px) {
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1 label, #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_2 label {
+    top: unset; }
+  #contactUsPage .container #contactUsHolder .contactUsWrapper .contactUsContainer .contactUsRhs .formWrapper .col_1.checkbox .row {
+    margin-bottom: 20px; }
+  #contactUsPage .popUpWrapper .popUpContent {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+  #contactUsPage .popUpWrapper .popUpContent .rhsSection svg {
+    display: none; }
+  #contactUsPage .popUpWrapper .popUpContent .lhsSection {
+    width: 100%;
+    padding-right: 0; }
+  #contactUsPage .popUpWrapper .popUpContent .lhsSection svg {
+    width: 100%;
+    height: 100%; } }
+
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+  body.orientationChanged {
+    position: relative; }
+    body.orientationChanged:after {
+      z-index: 9999;
+      background: url("../../dist/images/rotation.gif") no-repeat 50% 50% #fff;
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      align-items: center;
+      justify-content: center;
+      font-family: inherit;
+      font-size: 22px; } }
+
+/*# sourceMappingURL=contactUs.css.map */

@@ -1,0 +1,291 @@
+#aboutPage #social .socialIcons {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg); }
+
+#aboutHolder {
+  width: 100%; }
+  #aboutHolder .sectionHolder {
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    margin: 0;
+    padding: get-vw(120px) 0 0 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../../dist/images/about-bg.jpg); }
+    #aboutHolder .sectionHolder .sectionContainer {
+      width: 100%;
+      position: relative; }
+      #aboutHolder .sectionHolder .sectionContainer .circle {
+        position: absolute;
+        left: get-vw(460px);
+        top: 30px;
+        width: get-vw(156px);
+        height: get-vw(156px);
+        background: url(../../dist/images/oval-5-copy.png) no-repeat 0 0;
+        background-size: 100%; }
+      #aboutHolder .sectionHolder .sectionContainer .dots-img {
+        position: absolute;
+        left: get-vw(560px);
+        top: 70px;
+        width: get-vw(460px);
+        height: get-vw(480px);
+        background: url(../../dist/images/group.png) no-repeat 0 0;
+        background-size: 100%; }
+      #aboutHolder .sectionHolder .sectionContainer .about-text {
+        position: absolute;
+        left: get-vw(384px);
+        top: 180px;
+        display: inline-block; }
+        #aboutHolder .sectionHolder .sectionContainer .about-text p {
+          margin: 0px;
+          padding: 0px;
+          line-height: normal;
+          color: #562459;
+          font-size: get-vw(96px);
+          font-family: 'MontserratExtBold';
+          font-weight: bold; }
+          #aboutHolder .sectionHolder .sectionContainer .about-text p ~ p {
+            color: #ca6c86; }
+      #aboutHolder .sectionHolder .sectionContainer .about-slider {
+        position: absolute;
+        width: get-vw(500px);
+        right: get-vw(440px);
+        top: 70px;
+        display: inline-block; }
+        #aboutHolder .sectionHolder .sectionContainer .about-slider .user-video {
+          display: block;
+          position: relative;
+          width: 100%;
+          text-align: center; }
+          #aboutHolder .sectionHolder .sectionContainer .about-slider .user-video .user-img {
+            display: inline-block;
+            max-width: 80%;
+            vertical-align: middle; }
+          #aboutHolder .sectionHolder .sectionContainer .about-slider .user-video .user-name {
+            position: absolute;
+            left: 100%;
+            display: inline-block;
+            top: 50%;
+            margin-top: -34px; }
+            #aboutHolder .sectionHolder .sectionContainer .about-slider .user-video .user-name .box-bg {
+              display: inline-block;
+              float: left;
+              width: 69px;
+              height: 68px;
+              background: url(../../dist/images/rectangle.png) no-repeat 0 0; }
+            #aboutHolder .sectionHolder .sectionContainer .about-slider .user-video .user-name p {
+              display: block;
+              white-space: nowrap;
+              font-size: 18px;
+              font-weight: bold;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: normal;
+              letter-spacing: normal;
+              text-align: center;
+              color: #60576e;
+              position: absolute;
+              left: 40px;
+              top: 50%;
+              margin-top: -10px; }
+        #aboutHolder .sectionHolder .sectionContainer .about-slider .about-user-description {
+          display: block;
+          width: 100%;
+          position: relative;
+          font-size: 16px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.3;
+          letter-spacing: normal;
+          color: #60576e;
+          padding-top: 10px; }
+          #aboutHolder .sectionHolder .sectionContainer .about-slider .about-user-description .left-icon {
+            display: inline-block;
+            position: absolute;
+            left: -8px;
+            top: -12px;
+            width: get-vw(91px);
+            height: get-vw(69px);
+            background: url(../../dist/images/left-icon.png) no-repeat 0 0;
+            background-size: 100%; }
+          #aboutHolder .sectionHolder .sectionContainer .about-slider .about-user-description .right-icon {
+            display: inline-block;
+            position: absolute;
+            right: 0px;
+            bottom: -18px;
+            width: get-vw(91px);
+            height: get-vw(69px);
+            background: url(../../dist/images/right-icon.png) no-repeat 0 0;
+            background-size: 100%; }
+    #aboutHolder .sectionHolder#section2 {
+      background: #ffffff; }
+      #aboutHolder .sectionHolder#section2 .o-image {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 30px; }
+      #aboutHolder .sectionHolder#section2 .overview-details {
+        position: absolute;
+        width: get-vw(850px);
+        left: get-vw(180px);
+        top: 20px; }
+        #aboutHolder .sectionHolder#section2 .overview-details .overviev-heading {
+          display: block;
+          border-left: 8px solid #c96b86;
+          padding-left: 30px;
+          margin-left: 62px; }
+          #aboutHolder .sectionHolder#section2 .overview-details .overviev-heading p {
+            font-size: 48px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            display: block;
+            margin: 0px;
+            padding: 0px;
+            color: #562359; }
+            #aboutHolder .sectionHolder#section2 .overview-details .overviev-heading p ~ p {
+              color: #c96b86; }
+        #aboutHolder .sectionHolder#section2 .overview-details .description {
+          font-size: 18px;
+          font-family: "Montserrat-Regular";
+          font-weight: 300;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.78;
+          letter-spacing: normal;
+          color: #333333;
+          display: block;
+          margin-top: 30px;
+          margin-left: 100px; }
+      #aboutHolder .sectionHolder#section2 .overview-image {
+        position: absolute;
+        width: get-vw(650px);
+        right: get-vw(120px);
+        top: 110px; }
+        #aboutHolder .sectionHolder#section2 .overview-image img {
+          vertical-align: middle;
+          max-width: 100%;
+          display: inline-block; }
+    #aboutHolder .sectionHolder#section3 {
+      background: #ffffff; }
+      #aboutHolder .sectionHolder#section3 .o-image {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 30px; }
+      #aboutHolder .sectionHolder#section3 .company-details {
+        position: absolute;
+        width: get-vw(850px);
+        right: get-vw(180px);
+        top: 20px; }
+        #aboutHolder .sectionHolder#section3 .company-details .overviev-heading {
+          display: block;
+          border-left: 8px solid #c96b86;
+          padding-left: 30px;
+          margin-left: 62px; }
+          #aboutHolder .sectionHolder#section3 .company-details .overviev-heading p {
+            font-size: 48px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            display: block;
+            margin: 0px;
+            padding: 0px;
+            color: #562359; }
+            #aboutHolder .sectionHolder#section3 .company-details .overviev-heading p ~ p {
+              color: #c96b86; }
+        #aboutHolder .sectionHolder#section3 .company-details .description {
+          font-size: 18px;
+          font-family: "Montserrat-Regular";
+          font-weight: 300;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.78;
+          letter-spacing: normal;
+          color: #333333;
+          display: block;
+          margin-top: 30px;
+          margin-left: 100px;
+          position: relative;
+          margin-bottom: 20px; }
+      #aboutHolder .sectionHolder#section3 .company-image {
+        position: absolute;
+        width: get-vw(700px);
+        left: get-vw(120px);
+        top: 50px; }
+        #aboutHolder .sectionHolder#section3 .company-image img {
+          vertical-align: middle;
+          max-width: 100%;
+          display: inline-block; }
+    #aboutHolder .sectionHolder#section4 {
+      background: #ffffff; }
+      #aboutHolder .sectionHolder#section4 .o-image {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 30px; }
+      #aboutHolder .sectionHolder#section4 .journey-details {
+        position: absolute;
+        width: get-vw(850px);
+        left: get-vw(180px);
+        top: 20px; }
+        #aboutHolder .sectionHolder#section4 .journey-details .overviev-heading {
+          display: block;
+          border-left: 8px solid #c96b86;
+          padding-left: 30px;
+          margin-left: 62px; }
+          #aboutHolder .sectionHolder#section4 .journey-details .overviev-heading p {
+            font-size: 48px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            display: block;
+            margin: 0px;
+            padding: 0px;
+            color: #562359; }
+            #aboutHolder .sectionHolder#section4 .journey-details .overviev-heading p ~ p {
+              color: #c96b86; }
+        #aboutHolder .sectionHolder#section4 .journey-details .description {
+          font-size: 18px;
+          font-family: "Montserrat-Regular";
+          font-weight: 300;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.78;
+          letter-spacing: normal;
+          color: #333333;
+          display: block;
+          margin-top: 30px;
+          margin-left: 100px;
+          position: relative;
+          padding-bottom: 80px; }
+          #aboutHolder .sectionHolder#section4 .journey-details .description .wave-img {
+            display: inline-block;
+            width: 100px;
+            position: absolute;
+            left: 50%;
+            margin-left: -50px;
+            bottom: 0px; }
+            #aboutHolder .sectionHolder#section4 .journey-details .description .wave-img img {
+              max-width: 100%;
+              vertical-align: middle; }
+      #aboutHolder .sectionHolder#section4 .journey-image {
+        position: absolute;
+        width: get-vw(650px);
+        right: get-vw(120px);
+        top: 80px; }
+        #aboutHolder .sectionHolder#section4 .journey-image img {
+          vertical-align: middle;
+          max-width: 100%;
+          display: inline-block; }
+
+/*# sourceMappingURL=about.css.map */

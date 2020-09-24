@@ -1,0 +1,97 @@
+[ {
+    "title": "1 title or heading of the post",
+    "body": "<p>contents of the post</p>",
+    "venueDate": "2019-04-11",
+    "sourceUrl": "www.google.com",
+    "imagesFolder": "1553771651888",
+    "category": "events",
+    "status": "Up Coming",
+    "venue": "Bangalore",
+    "publishedDate": "2019-03-28",
+    "imageList": [
+        "https://s3.eu-west-2.amazonaws.com/cgbo-bucket-prod/1553771651888/1553771651900.jpg",
+        "https://s3.eu-west-2.amazonaws.com/cgbo-bucket-prod/1553771651888/1553771651902.jpg",
+        "https://s3.eu-west-2.amazonaws.com/cgbo-bucket-prod/1553771651888/1553771651930.jpg"
+    ],
+    "articleType": "bigCard-img",
+    "headingTag": "UK Business Awards",
+    "venueTime": "19:32"
+},
+{
+    "title": "2 title or heading of the post",
+    "body": "<p>contents of the post</p>",
+    "venueDate": "2019-04-11",
+    "sourceUrl": "www.google.com",
+    "imagesFolder": "1553771651888",
+    "category": "events",
+    "status": "Up Coming",
+    "venue": "Bangalore",
+    "publishedDate": "2019-03-28",
+    "imageList": [
+        "https://s3.eu-west-2.amazonaws.com/cgbo-bucket-prod/1553771651888/1553771651900.jpg",
+        "https://s3.eu-west-2.amazonaws.com/cgbo-bucket-prod/1553771651888/1553771651902.jpg",
+        "https://s3.eu-west-2.amazonaws.com/cgbo-bucket-prod/1553771651888/1553771651930.jpg"
+    ],
+    "articleType": "smallCard-img",
+    "headingTag": "UK Business Awards",
+    "venueTime": "19:32"
+},
+{
+    "title": "3 title or heading of the post",
+    "body": "<p>contents of the post</p>",
+    "venueDate": "2019-04-11",
+    "sourceUrl": "www.google.com",
+    "imagesFolder": "1553771651888",
+    "category": "events",
+    "status": "Up Coming",
+    "venue": "Bangalore",
+    "publishedDate": "2019-03-28",
+    "imageList": [
+        "https://s3.eu-west-2.amazonaws.com/cgbo-bucket-prod/1553771651888/1553771651900.jpg",
+        "https://s3.eu-west-2.amazonaws.com/cgbo-bucket-prod/1553771651888/1553771651902.jpg",
+        "https://s3.eu-west-2.amazonaws.com/cgbo-bucket-prod/1553771651888/1553771651930.jpg"
+    ],
+    "articleType": "smallCard-img",
+    "headingTag": "UK Business Awards",
+    "venueTime": "19:32"
+},
+{
+    "title": "1 title or heading of the post",
+    "body": "<p>contents of the post</p>",
+    "venueDate": "2019-04-11",
+    "sourceUrl": "www.google.com",
+    "imagesFolder": "1553771651888",
+    "category": "events",
+    "status": "Up Coming",
+    "venue": "Bangalore",
+    "publishedDate": "2019-03-28",
+    "imageList": [
+        "https://s3.eu-west-2.amazonaws.com/cgbo-bucket-prod/1553771651888/1553771651900.jpg",
+        "https://www.w3schools.com/html/mov_bbb.mp4",
+        "https://s3.eu-west-2.amazonaws.com/cgbo-bucket-prod/1553771651888/1553771651902.jpg",
+        "https://s3.eu-west-2.amazonaws.com/cgbo-bucket-prod/1553771651888/1553771651930.jpg"
+    ],
+    "articleType": "bigCard-img",
+    "headingTag": "UK Business Awards",
+    "venueTime": "19:32"
+},
+{
+    "title": "1 title or heading of the post",
+    "body": "<p>contents of the post</p>",
+    "venueDate": "2019-04-11",
+    "sourceUrl": "www.google.com",
+    "imagesFolder": "1553771651888",
+    "category": "Press Release",
+    "status": "Up Coming",
+    "venue": "Bangalore",
+    "publishedDate": "2019-03-28",
+    "imageList": [
+        "https://s3.eu-west-2.amazonaws.com/cgbo-bucket-prod/1553771651888/1553771651900.jpg",
+        "https://s3.eu-west-2.amazonaws.com/cgbo-bucket-prod/1553771651888/1553771651902.jpg",
+        "https://s3.eu-west-2.amazonaws.com/cgbo-bucket-prod/1553771651888/1553771651930.jpg"
+    ],
+    "articleType": "bigCard-img",
+    "headingTag": "UK Business Awards",
+    "venueTime": "19:32"
+}
+]
