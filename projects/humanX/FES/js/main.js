@@ -1,8 +1,8 @@
 $(document).ready(function() {
-    
 
+    
     $('.inner-li-link').click(function(j) {
-        console.log('header inner-link');
+        //console.log('header inner-link');
          
         var dropDown = $(this).find('.inner-dropdown');
         $(this).closest('.dropdown').find('.inner-dropdown').not(dropDown).slideUp();
@@ -76,9 +76,9 @@ $(document).ready(function() {
 
 
     if ($(window).width() < 1025) {
-
+        
         $('header ul.menu > .li-link').click(function(e) {
-            console.log('header link');
+            //console.log('header link');
             e.preventDefault();
             $(this).siblings().removeClass('active');
             $(this).toggleClass('active')

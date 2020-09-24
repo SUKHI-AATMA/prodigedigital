@@ -187,36 +187,84 @@ section.sec-core-tab{
                 }
 
                 .infograph-wrap{
-                    svg{
-                        g.groupSVG{
-                            
-                            .front{
-                                z-index:1;
-                            }                            
-                            .back{
-                                opacity: 0;                                
-                                @include transition(.3s ease-in-out);
+                    position: relative;
 
+                    >img{
+                        display: block;
+                    }
+
+                    .icon-group-container{
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        .icon-group-wrap{
+                            position: relative;
+                            display: block;
+                            height: 256px;
+                            width: 100%;
+
+                            .item{
+                                position: absolute;
+
+                                img{
+                                    width: 70px;
+                                    height: auto;
+                                    display: block;
+                                }
+                                .item-box{
+                                    position: relative;
+                                    img{
+                                        position: absolute;
+                                        left: 0;
+                                        top: 0;
+
+                                        &:last-child{
+                                            opacity: 0;
+                                            @include transition(.3s ease-in-out);
+                                        }
+                                    }
+                                    &:hover{
+                                        @include transition(.5s ease-in-out);
+                                        img{
+                                            &:last-child{
+                                                @include transition(.5s ease-in-out);
+                                                opacity: 1;
+                                                transform: scale(2);
+                                                z-index: 2;
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                &.item1{
+                                    top: 0;
+                                    left: 14%;
+                                }
+                                &.item2{
+                                    top: 30%;
+                                    left: 20%;
+                                }
+                                &.item3{
+                                    top: 44%;
+                                    left: 34%;
+                                }
+                                &.item4{
+                                    top: 47%;
+                                    left: 50%;
+                                }
+                                &.item5{
+                                    top: 32%;
+                                    left: 66%;
+                                }
+                                &.item6{
+                                    top: 0;
+                                    right: 28%;
+                                }
                             }
-                            &:hover{
-                                z-index:3;
-                                .back{
-                                    @include transition(.7s ease-in-out);
-                                    opacity: 1;
-                                    width:309px;
-                                    height:309px;
-                                    z-index:22;
-                                }  
-                            }    
-                        }
-                        
-                        g#er_1:hover .back{
-                            transform:translate(220px,530px);
-                        }
-                        g#er_2:hover .back{
-                            transform:translate(310px,690px)
                         }
                     }
+
                 }
                 
                 .head-wrap{
