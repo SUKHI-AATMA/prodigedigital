@@ -508,6 +508,11 @@ button.mfp-close{
     }
 }
 
+@media screen and (max-width : 1440px){
+    .banner-circle .circle-container{
+        right: 90px;
+    }
+}
 @media screen and (max-width : 1280px){
     
     .banner-circle .circle-container{

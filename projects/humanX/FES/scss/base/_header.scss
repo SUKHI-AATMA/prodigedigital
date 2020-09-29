@@ -193,7 +193,7 @@ header{
                     color: #fff;
 
                     nav{
-                        max-width: 1024px;
+                        max-width: 1180px;
                         width: 100%;
                         margin: 0 auto;
 
@@ -201,10 +201,15 @@ header{
                             width: calc(100% / 5 - 24px) !important;
                             // width: 19%;
 
-                            // &:nth-child(2),
-                            // &:last-child{
-                            //     width: 21.5%;
-                            // }
+                            &:nth-child(2){
+                                width: 294px !important;
+
+                                ul.dropdown{
+                                    li{
+                                        width: 212px;
+                                    }
+                                }
+                            }
 
                             &.active{
                                 >a{
@@ -242,7 +247,7 @@ header{
                             }
                             >a {
                                 color: #fff;
-                                font-family: "Noto Serif JP";
+                                //font-family: "Noto Serif JP";
                                 font-size: 16px;
                                 font-weight: 600;
                                 letter-spacing: 0.23px;
@@ -258,7 +263,9 @@ header{
                                 display: block;
                                 background: no-repeat;
                                 box-shadow: none;
+                                padding-top: 24px;
                                 li {
+
                                     &.active{
                                         >a{
                                             color: #FFFFFF;
@@ -274,8 +281,8 @@ header{
                                     }
                                     a{
                                         color: #fff;
-                                        font-size: 16px;
-                                        line-height: 22px;
+                                        font-size: 15px;
+                                        line-height: 21px;
     
                                         // &:hover{
                                         //     color: #000000;
@@ -365,6 +372,12 @@ header{
                             }
                             &:nth-child(2){
                                 width: 90px;
+
+                                ul.dropdown{
+                                    li{
+                                        width: 244px;
+                                    }
+                                }
                             }
                             &:nth-child(3){
                                 width: 102px;
@@ -505,7 +518,7 @@ header{
                                             border-radius: 50%;
                                             position: absolute;
                                             top: 8px;
-                                            right: -20px;
+                                            right: -14px;
                                         }
                                         
                                         > a{
@@ -517,7 +530,8 @@ header{
                                     }
 
                                     &.inner-li-link{
-
+                                        width: 244px;
+                                        
                                         &.active,&:hover{
                                             &:before{
                                                 display: none;
@@ -530,7 +544,7 @@ header{
                                             border-right: 1px solid #000;
                                             border-bottom: 1px solid #000;
                                             position: absolute;
-                                            right: -22px;
+                                            right: -16px;
                                             content: " ";
                                             top: 7px;
                                             transform: rotate(45deg);
@@ -540,6 +554,8 @@ header{
                                             transform: rotate(-134deg);
                                             transition: all 0.2s ease-in-out;
                                         }
+
+
                                         &:last-child{
                                             ul{
                                                 li{
@@ -583,7 +599,7 @@ header{
                                                     border-radius: 50%;
                                                     position: absolute;
                                                     top: 8px;
-                                                    right: -20px;
+                                                    right: -14px;
                                                 }
                                                 
                                                 > a{
@@ -647,7 +663,8 @@ header{
 
 @media (min-height: 300px) and (max-height: 700px){
     header .container .flex-wrap .menu-wrap.open {
-        height: 500px;
+        // height: 500px;
+        height: 88vh;
         padding: 100px 50px 30px;
     }
     header .container .flex-wrap .menu-wrap.open nav ul.menu>li ul.dropdown{
@@ -760,6 +777,9 @@ header{
         display: inline;
         font-size: 18px;
         line-height: 26px;
+    }
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li:nth-child(2){
+        width: 100%!important;
     }
     header .container .flex-wrap .menu-wrap.open nav ul.menu>li:before{
         display: none;
