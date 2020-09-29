@@ -1,0 +1,49 @@
+main {
+    width: 100%;
+}
+
+.slick-slide img {
+    display: inline-block;
+}
+
+.slick-slide {
+    text-align: center;
+}
+
+.dyBan button {
+    border: none;
+    background: none;
+    text-indent: -999px;
+    overflow: hidden;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    margin: 0 5px;
+}
+
+
+.dyBan ul {
+    display: inline;
+    width: auto;
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.dyBan ul li {
+    display: inline-block;
+    /* background: #fff; */
+    /* border-radius: 50%; */
+    /* width: 10px; */
+    /* height: 10px; */
+}
+
+.dyBan {
+    position: relative;
+}
+
+.dyBan .slick-active button {
+    background: rgba(255, 255, 255, 1);
+}
