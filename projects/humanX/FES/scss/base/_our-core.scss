@@ -34,7 +34,7 @@ section.sec-core-bn{
                 font-size: 30px;
                 font-weight: 400;
                 letter-spacing: 0;
-                line-height: 36px;
+                line-height: 44px;
                 z-index: 44;
     
                 span{
@@ -86,7 +86,7 @@ section.sec-core-bn{
 
 
 section.sec-core-tab{
-    padding: 42px 0px 0;
+    padding: 30px 0px 0;
     z-index: 55;
     
     .container{
@@ -109,7 +109,7 @@ section.sec-core-tab{
         position: relative;
         z-index: 3;
         .tab-content {
-            padding-top: 48px;
+            padding-top: 30px;
             display: none;
 
             &.active {
@@ -239,27 +239,27 @@ section.sec-core-tab{
                                 
                                 &.item1{
                                     top: 0;
-                                    left: 14%;
+                                    left: 12%;
                                 }
                                 &.item2{
-                                    top: 30%;
-                                    left: 20%;
+                                    top: 31%;
+                                    left: 18%;
                                 }
                                 &.item3{
-                                    top: 44%;
+                                    top: 49%;
                                     left: 34%;
                                 }
                                 &.item4{
-                                    top: 47%;
+                                    top: 51%;
                                     left: 50%;
                                 }
                                 &.item5{
-                                    top: 32%;
-                                    left: 66%;
+                                    top: 36%;
+                                    left: 67%;
                                 }
                                 &.item6{
                                     top: 0;
-                                    right: 28%;
+                                    right: 26%;
                                 }
                             }
                         }
@@ -267,6 +267,10 @@ section.sec-core-tab{
 
                 }
                 
+                .infograph-mob{
+                    display: none
+                }
+
                 .head-wrap{
                     width: 100%;
                     h2{
@@ -292,13 +296,18 @@ section.sec-core-tab{
 
                 .core-tabs{
                     display: flex;
-                    justify-content: space-between;
-                    padding: 0 60px 0 125px;
+                    //justify-content: space-between;
+                    // padding: 0 60px 0 125px;
+                    padding: 0 0px 0 125px;
 
                     .col{
                         max-width: 520px;
                         width: 100%;      
                         padding-bottom: 100px;
+
+                        &:last-child{
+                            margin-left: 72px;
+                        }
 
                         h2{
                             color: #004950;
@@ -332,6 +341,7 @@ section.sec-core-tab{
                     max-width: 1280px;
                     width: 100%;
                     margin: 0 auto;
+                    
                 }
 
                 .core-overview{
@@ -350,13 +360,94 @@ section.sec-core-tab{
                         max-width: 924px;
                         width: 100%;
                         margin: 0 0 0 auto;
-                        padding-top: 90px;
+                        padding-top: 120px;
                         padding-bottom: 42px;
 
                         .inner-col{
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
+                            position: relative;
+
+                            &:first-child{                                
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                            }
+
+                            
+                            .tab-circle-container{
+                                position: relative;
+                                .circle-line-wrap{
+                                    position: absolute;
+                                    right: -42px;
+                                    bottom: -44px;
+                                    z-index: 45;
+                                    height: 501px;
+                                    width: 527px;
+                                    .circle-wrap{
+                                        position: relative;
+                            
+                                        .Oval_1, .Oval_2, .Oval_3 {
+                                            position: absolute;
+                                            width: 100%;
+                                            text-align: center;
+                                            left: 0;
+                                            svg {
+                                                position: absolute;
+                                                left: 0;
+                                                width: 100%;
+                                                height: auto;
+                                            }
+                                        }
+                            
+                                        .Oval_1 {
+                                            padding-top: 8px;
+                                            left: 8%;
+                                            svg:first-child {
+                                                animation: circular-animate-oval-reverse 70s linear infinite;
+                                            }
+                                        }
+                            
+                                        .Oval_2 {
+                                            padding-top: 0;
+                                            left: 8%;
+                                            svg:first-child {
+                                                animation: circular-animate-oval 70s linear infinite;
+                                            }
+                                        }
+                                        .Oval_3 {
+                                            padding-top: 0;
+                                            left: 7%;
+                                            svg:first-child {
+                                                animation: circular-animate-oval 70s linear infinite;
+                                            }
+                                        }
+                                    }
+                            
+                                    @keyframes circular-animate-oval {
+                                        0%   { transform: rotateZ(0deg); }
+                                        100% { transform: rotateZ(270deg); }
+                                    }
+                                
+                                    @keyframes circular-animate-oval-reverse {
+                                        0%   { transform: rotateZ(0deg); }
+                                        100% { transform: rotateZ(-270deg); }
+                                    }
+                        
+                                }
+                                
+                        
+                                .inner-wrap{
+                                    position: relative;
+                                    
+                                    .circle-img{
+                                        background: url(../../images/work/our-core/overview.png);
+                                        background-size: cover;
+                                        background-repeat: no-repeat;
+                                        width: 380px;
+                                        height: 382px;
+                                        //border-radius: 0;
+                                    }
+                                }
+                            }
 
                             .coll{
                                 &:last-child{
@@ -369,12 +460,12 @@ section.sec-core-tab{
 
                                     &.dark-red{
                                         p{
-                                            color: #8e0000;
+                                            color: #450000;
                                         }
                                     }
                                     &.bright-blue{
                                         p{
-                                            color: #5d9cb9;
+                                            color: #1C557B;
                                         }
                                     }
                                     &.dark-green{
@@ -410,6 +501,17 @@ section.sec-core-tab{
 
 }
 
+@media screen and (max-width : 1366px){
+    section.sec-core-tab .tab-container .tab-content .row .infograph-wrap{
+        width: 460px;
+    }
+    section.sec-core-tab .tab-container .tab-content .row .infograph-wrap .icon-group-container .icon-group-wrap{
+        height: 226px;
+    }
+    section.sec-core-tab .tab-container .tab-content .row .infograph-wrap .icon-group-container .icon-group-wrap .item img{
+        width: 64px;
+    }
+}
 
 @media screen and (max-width : 1280px){
     
@@ -591,6 +693,7 @@ section.sec-core-tab{
 
             &:last-child{
                 text-align: center;
+                margin-left: 0;
 
                 img{
                     width: 100%;
@@ -600,6 +703,11 @@ section.sec-core-tab{
     }
     section.sec-core-tab .tab-container .tab-content .row .core-tabs .col{
         padding-bottom: 72px;
+    }
+
+    section.sec-core-tab .tab-container .tab-content .row .infograph-wrap{
+        //width: 520px;
+        margin: 0 auto;
     }
 
 }
@@ -645,12 +753,17 @@ section.sec-core-tab{
     }
 
     section.sec-core-tab .tab-container .tab-content .row .core-tabs .col{
-        padding-bottom: 52px;
+        // padding-bottom: 52px;
+        padding-bottom: 72px;
 
         &:first-child{
-            padding-bottom: 32px;
+            // padding-bottom: 32px;
+            padding-bottom: 52px;
         }
     }
+    section.sec-core-tab .tab-container .tab-content{
+        padding-top: 124px;
+    } 
 
 }
 
@@ -706,6 +819,26 @@ section.sec-core-tab{
             margin-right: 0px;
         }
     }
+    section.sec-core-tab .tab-container .tab-content .row{
+        .infograph-wrap{
+            display: none;
+        }
+        .infograph-mob{
+            display: block;
+        }
+    }
+    section.sec-core-tab .tab-container .tab-content.active{
+        .core-tabs{
+            padding: 0 !important;
+
+            .col:first-child{
+                padding-left:30px;
+                padding-right:30px;
+            }
+        }
+    }
+
+
 }
 
 @media screen and (max-width : 480px){
@@ -769,6 +902,17 @@ section.sec-core-tab{
         width: 24px;
         img{
             width: 14px;
+        }
+    }
+
+    section.sec-core-tab .tab-container .tab-content.active{
+        .core-tabs{
+            padding: 0 !important;
+
+            .col:first-child{
+                padding-left:20px;
+                padding-right:20px;
+            }
         }
     }
 

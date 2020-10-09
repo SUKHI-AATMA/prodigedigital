@@ -106,10 +106,11 @@ header{
                 background: transparent;
 
                 &:before {
-                    transform: rotateZ(45deg) scaleX(1.2) translate(5px,6px);
+                    // transform: rotateZ(45deg) scaleX(1.2) translate(5px,6px);
+                    transform: rotateZ(45deg) scaleX(1.2) translate(4px,4px);
                 }
                 &:after {
-                    transform: rotateZ(-45deg) scaleX(1.2) translate(4px,-6px);
+                    transform: rotateZ(-45deg) scaleX(1.2) translate(5px,-6px);
                 }
             }
         }
@@ -118,7 +119,8 @@ header{
             -webkit-transition-duration: 0.3s;
             transition-duration: 0.3s;
             position: absolute;
-            height: 2px;
+            // height: 2px;
+            height: 0.104375rem;
             width: 22px;
             top: 20px;
             background-color: #212121;
@@ -130,10 +132,11 @@ header{
                 transition-duration: 0.3s;
                 position: absolute;
                 width: 22px;
-                height: 2px;
+                // height: 2px;
+                height: 0.104375rem;
                 background-color: #212121;
                 content: "";
-                top: -8px;
+                top: -7px;
                 border-radius: 4px;
               }
 
@@ -142,10 +145,11 @@ header{
                 transition-duration: 0.3s;
                 position: absolute;
                 width: 22px;
-                height: 2px;
+                // height: 2px;
+                height: 0.104375rem;
                 background-color: #212121;
                 content: "";
-                top: 8px;
+                top: 7px;
                 border-radius: 4px;
               }
           }
@@ -189,7 +193,7 @@ header{
                     background: #004950;
                     width: 100%;
                     padding: 150px 50px;
-                    height: 80vh;
+                    height: 90vh;
                     color: #fff;
 
                     nav{
@@ -230,7 +234,7 @@ header{
                                 position: absolute;
                                 bottom: 0;
                                 left: 0;
-                                opacity: .3;
+                                opacity: .7;
                             }
 
                             &.li-resources{
@@ -242,14 +246,15 @@ header{
                             &:hover{
                                 >a{
                                     color: #fff;
-                                    font-weight: 600;
+                                    //font-weight: 600;
+                                    font-weight: 400;
                                 }
                             }
                             >a {
                                 color: #fff;
                                 //font-family: "Noto Serif JP";
                                 font-size: 16px;
-                                font-weight: 600;
+                                //font-weight: 600;
                                 letter-spacing: 0.23px;
                                 line-height: 24px;
                                 opacity: 1;
@@ -257,6 +262,7 @@ header{
 
                                 &.active, &:hover{
                                     color: #fff;
+                                    
                                 }
                             }
                             ul.dropdown{
@@ -570,7 +576,7 @@ header{
 
                                     ul.inner-dropdown{
                                         display: none;
-                                        padding-top: 12px;
+                                        padding-top: 20px;
 
                                         &:hover > * {
                                             opacity: 0.4;
@@ -655,7 +661,7 @@ header{
         padding: 120px 50px 30px;
     }
     header .container .flex-wrap .menu-wrap.open{
-        height: 84vh;
+        height: 93vh;
     }
     
 }
@@ -769,6 +775,7 @@ header{
     }
     header .container .flex-wrap .menu-wrap.open nav ul.menu>li:hover>a{
         font-weight: normal;
+        display: block;
     }
     header .container .flex-wrap .menu-wrap.open nav ul.menu>li>a{
         font-weight: normal;
@@ -843,6 +850,9 @@ header{
 
     header .container .flex-wrap .menu-wrap.open nav ul.menu>li ul.dropdown li.inner-li-link:after{
         right: 10px;
+    }
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li:nth-child(2) ul.dropdown li{
+        width: 100%;
     }
 
 }
