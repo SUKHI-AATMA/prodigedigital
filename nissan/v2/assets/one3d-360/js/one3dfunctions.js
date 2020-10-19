@@ -964,7 +964,7 @@ $(function() {
             })
         }
 
-        $(".one3d-object-wrapper").css("height", screen.availHeight + "px");
+        //$(".one3d-object-wrapper").css("height", screen.availHeight + "px");
     }
 
     function one3d_ShowHideToogleViewBox(param) {
