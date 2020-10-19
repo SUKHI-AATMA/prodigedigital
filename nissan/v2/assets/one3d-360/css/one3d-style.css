@@ -1396,5 +1396,13 @@ body {
         width: 370px;
         margin: 0 auto;
     }
+
+    #loader_BG img {
+        top: 45% !important;
+    }
+
+    .one3d-loader-percentage {
+        top: 53%;
+    }
 }
 
