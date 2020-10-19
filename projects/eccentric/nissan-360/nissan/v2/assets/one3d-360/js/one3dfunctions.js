@@ -533,9 +533,6 @@ function loadui() {
         <a href="javascript:;" class="icon-variant"><span>Variant -&nbsp;</span><span class="one3d-variant-name"></span></a>
      
      </div>
-     // <div class="nissan-logo-inside">
-     //    <img src="`+nissanstaticfolder+`/assets/one3d-360/images/nissan-black-logo.svg">
-     // </div>
      <div class="one3d-toggle-view">
         <div class="one3d-row-block">
             <div class="one3d-toggle-view-box-interior one3d-align-item-center">
@@ -887,12 +884,14 @@ $(function() {
 
         $(".one3d-toggle-color .one3d-toggle-color-options ul").find("li").on("click", function() {
             //updatecolor('#193d73','NEXA Blue','grey');
-            
+            $(this).addClass("selected").siblings("li").removeClass("selected");
             updatecolor($(this).attr("data-swatch-image-name"), $(this).attr("title"), $(this).attr("data-color-shade"));
             // $(".one3d-toggle-color-selected .one3d-selected-color").css("background-color", $(this).css("background-color"));
             // $(".one3d-toggle-color-selected .one3d-selected-color-name").text($(this).attr("title"));
             // $(".one3d-toggle-color-options").slideUp('200');
         });
+
+        $(".one3d-toggle-color .one3d-toggle-color-options ul").find("li").eq(0).addClass("selected");
     }
     /** Color Swatches ends **/
 

@@ -630,6 +630,11 @@ body {
     background-size: cover !important;
 }
 
+.one3d-toggle-color-options ul li.selected {
+    border: 2px solid #b1b1b1;
+    border-radius: 50%;
+}
+
 .one3d-toggle-color-options ul li:first-child {
     margin-left: 0;
 }
