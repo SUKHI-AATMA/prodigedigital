@@ -958,7 +958,7 @@ $(function() {
     if($(window).width() <= 640) {
         if($(".one3d-toggle-view").length) {
             $(".one3d-toggle-view label").each(function() {
-                $(this).text($(this).text().substring(0,3));
+                //$(this).text($(this).text().substring(0,3));
             }).promise().done(function() {
                 $(".one3d-toggle-view").animate({"opacity": 1}, 500);
             })
