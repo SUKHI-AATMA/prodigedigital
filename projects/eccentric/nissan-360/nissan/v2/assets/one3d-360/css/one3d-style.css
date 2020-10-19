@@ -946,6 +946,10 @@ body {
     align-items: center;
 }
 
+.one3d-toggle-view-box-interior {
+    display: none;
+}
+
 @media only screen and (max-width: 1024px) {
     .one3d-main-section {
         margin-top: 131px;
@@ -1159,11 +1163,11 @@ body {
     }
 
     .one3d-toggle-view .icon-close:before {
-        left: 16px;
+        left: 18px;
     }
 
     .one3d-toggle-view .icon-close:after {
-        right: 16px;
+        right: 18px;
     }
     .one3d-toggle-view .one3d-toggle-view-box-interior .one3d-row label {
         height: 34px;
@@ -1370,9 +1374,7 @@ body {
     display: none;
   }
 
-  .one3d-toggle-view-box-interior {
-      display: none;
-  }
+  
 
   .one3d-toggle-view .icon-close {
       width: 40px;

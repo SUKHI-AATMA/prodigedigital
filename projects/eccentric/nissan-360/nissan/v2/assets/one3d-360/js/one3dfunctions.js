@@ -548,11 +548,11 @@ function loadui() {
             <div class="one3d-toggle-view-box one3d-align-item-center">
                 <div class="one3d-row">
                     <input type="radio" name="toggle-view" id="one3d-exterior" value="exterior" checked>
-                    <label for="one3d-exterior" class="exterior-icon-click background-color-red" style="background: url('`+nissanstaticfolder+`/assets/one3d-360/images/exterior-selected.png') no-repeat center center; width: 35px; height: 36px;"></label>
+                    <label for="one3d-exterior" class="exterior-icon-click background-color-red" style="background: url('`+nissanstaticfolder+`/assets/one3d-360/images/exterior-selected.svg') no-repeat center center; width: 35px; height: 36px;"></label>
                 </div>
                 <div class="one3d-row">
                     <input type="radio" name="toggle-view" id="one3d-interior" value="interior">
-                    <label for="one3d-interior" class="interior-icon-click" style="background: url('`+nissanstaticfolder+`/assets/one3d-360/images/interior.png') no-repeat center center; width: 35px; height: 36px;"></label>
+                    <label for="one3d-interior" class="interior-icon-click" style="background: url('`+nissanstaticfolder+`/assets/one3d-360/images/interior.svg') no-repeat center center; width: 35px; height: 36px;"></label>
                 </div>
             </div>
             <div class="icon-close"><a href="http://nissan-global.com"></a></div>
@@ -1086,13 +1086,14 @@ $(function() {
             one3dref._gotoBackSeat();
         });
         $(".interior-icon-click").click(function(){
-            $(this).css("background-image", "url('" +nissanstaticfolder+ "/assets/one3d-360/images/interior-selected.png')");
-            $(".one3d-toggle-color-options ul").hide();
+            $(".one3d-toggle-view-box-interior").css("display","inherit");
+            $(this).css("background-image", "url('" +nissanstaticfolder+ "/assets/one3d-360/images/interior-selected.svg')");
+            $(".one3d-toggle-color").hide();
             $(".interior-icon-click").addClass('background-color-red');
             $("#one3d-interior-front-text").addClass('background-color-red');
             $("#one3d-interior-back-text").removeClass('background-color-red');
             $(".exterior-icon-click").removeClass('background-color-red');
-            $(".exterior-icon-click").css("background-image", "url('" +nissanstaticfolder+ "/assets/one3d-360/images/exterior.png')");
+            $(".exterior-icon-click").css("background-image", "url('" +nissanstaticfolder+ "/assets/one3d-360/images/exterior.svg')");
         });
         $("#one3d-interior-back-text").click(function(){
             $("#one3d-interior-back-text").addClass('background-color-red');
@@ -1103,12 +1104,13 @@ $(function() {
             $("#one3d-interior-back-text").removeClass('background-color-red');
         });
         $(".exterior-icon-click").click(function(){
-            $(this).css("background-image", "url('" +nissanstaticfolder+ "/assets/one3d-360/images/exterior-selected.png')");
-            $(".one3d-toggle-color-options ul").show();
+            $(".one3d-toggle-view-box-interior").css("display","none");
+            $(this).css("background-image", "url('" +nissanstaticfolder+ "/assets/one3d-360/images/exterior-selected.svg')");
+            $(".one3d-toggle-color").show();
             $(".exterior-icon-click").addClass('background-color-red');
             $(".one3d-toggle-view-box-interior").removeClass('visiblenow');
             $(".interior-icon-click").removeClass('background-color-red');
-            $(".interior-icon-click").css("background-image", "url('" +nissanstaticfolder+ "/assets/one3d-360/images/interior.png')");
+            $(".interior-icon-click").css("background-image", "url('" +nissanstaticfolder+ "/assets/one3d-360/images/interior.svg')");
         });
 });
 
