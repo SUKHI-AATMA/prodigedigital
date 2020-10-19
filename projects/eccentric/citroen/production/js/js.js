@@ -32,25 +32,41 @@ $(function() {
     });
     /* to view in full screen mode ends */
 
-    $(".automobile-features-wrapper li").on("click", function() {
+    $(".automobile-features-wrapper > ul > li").on("click", function() {
         var $this = $(this);
-        $this.siblings("li").children("ul").slideUp();
+        $this.toggleClass("accordion-open").siblings("li").removeClass("accordion-open").children("ul").slideUp();
         $this.children("ul").slideToggle('slow');
     });
 
     $(".automobile-features-wrapper li").eq(1).click();
 
     $(".toggle-option-wrapper.vertical-aligned input[type=radio]").on("click", function() {
-        $(this).parents(".field-row").index() == 1 ? $(this).parents(".toggle-option-wrapper").addClass("last-option-selected") : $(this).parents(".toggle-option-wrapper").removeClass("last-option-selected");
+        $(this).parents(".field-row").index() == 1 ? $(this).parents(".toggle-option-container").addClass("last-option-selected") : $(this).parents(".toggle-option-container").removeClass("last-option-selected");
     });
 
     $(".toggle-switch").on("click", function() {
-        (!$(this).parents(".toggle-option-wrapper").hasClass("last-option-selected")) ? $(this).parents(".toggle-option-wrapper").find("input[type=radio]").eq(1).click() : $(this).parents(".toggle-option-wrapper").find("input[type=radio]").eq(0).click();
+        (!$(this).parents(".toggle-option-container").hasClass("last-option-selected")) ? $(this).parents(".toggle-option-container").find("input[type=radio]").eq(1).click() : $(this).parents(".toggle-option-container").find("input[type=radio]").eq(0).click();
     });
 
     $(".customized-options .field-row > span").on("click", function() {
-        $(this).parents(".field-row").find("label").click();
+        var $this = $(this);
+        
+        if($("#" + $this.parents(".field-row").find("input").attr("id")).prop("checked")) {
+            return false;
+        }
+
+        $this.parents(".customized-options.select-one-option").find(".field-row").each(function() {
+            if($(this).find("input").is(":checked")) {
+                $(this).find("input").prop("checked", false);
+            }
+        });
+        
+        $(this).parents(".field-row").find("input").prop("checked", true);
     });
+
+    $(".customized-options .field-row > label").on("click", function() {
+        $(this).siblings("span").click();
+    })
 
     var colorVariants = [
         "color-variant-1.svg",
@@ -77,8 +93,30 @@ $(function() {
     $(".color-variant-wrapper ul > li").eq(0).click();
 
     $(".main-tabs-container > ul > li").on("click", function() {
-        $(this).addClass("selected").siblings("li").removeClass("selected");
+        $("body").addClass("with-animation");
+        
+        var $this = $(this);
+        setTimeout(function() {
+            $this.addClass("selected").siblings("li").removeClass("selected");
+        
+            var removeLastClass = $('.main-content-wrapper').attr('class').split(' ').pop();
+            if(removeLastClass.indexOf("tab-") != -1) {
+                $('.main-content-wrapper').removeClass(removeLastClass);
+            }
+            $(".main-content-wrapper").addClass($this.attr("data-rel"));
+        }, 300);
+        
+        setTimeout(function() {
+            $("body").removeClass("with-animation");
+        }, 500);
     });
 
-    $(".main-tabs-container > ul > li").eq(1).click();
+    $(".main-tabs-container > ul > li").eq(0).click();
+
+    $(".automobile-versions-wrapper > ul > li").on("click", function() {
+        $(this).addClass("selected").siblings("li").removeClass("selected");
+        $(".versions-container").animate({
+            scrollTop: $(this).position().top + "px"
+        }, 500);
+    });
 });

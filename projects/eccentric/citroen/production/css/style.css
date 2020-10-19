@@ -218,11 +218,21 @@ th {
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'citroenblack';
+  src: url("../fonts/citroen-black-webfont.woff2") format("woff2"), url("../fonts/citroen-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
-  font-family: 'citroenregular';
+  font-family: 'citroenblack';
   color: #000;
   text-transform: uppercase;
   background-color: #fff; }
+  body.with-animation .col-1-3 .flip-in-out-container {
+    left: -350px; }
+  body.with-animation .col-3-3 .flip-in-out-container {
+    right: -350px; }
 
 input[type=checkbox] {
   -webkit-appearance: auto;
@@ -232,8 +242,10 @@ input[type=checkbox] {
 
 main {
   width: 1080px;
-  height: 810px;
-  margin: auto auto; }
+  height: 100%;
+  min-height: 810px;
+  margin: auto auto;
+  overflow: hidden; }
 
 .full-width {
   width: 100%; }
@@ -302,88 +314,262 @@ main {
 
 /* page css starts */
 .main-content-wrapper {
+  background-color: #f5f5f5;
   padding: 20px 0 25px 0;
   height: calc(810px - 151px);
   /* subtracted header+disclaimer+footer-tabs height */
   position: relative; }
-  .main-content-wrapper .canvas-3d {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background-color: #f5f5f5;
-    z-index: 1; }
-  .main-content-wrapper .col-1-2, .main-content-wrapper .col-2-2 {
-    width: 350px;
+  .main-content-wrapper .content-features, .main-content-wrapper .content-versions,
+  .main-content-wrapper .col-1-3 h1 span.content-features {
+    display: none; }
+  .main-content-wrapper.tab-features-content .content-features, .main-content-wrapper.tab-versions-content .content-versions,
+  .main-content-wrapper.tab-features-content .col-1-3 h1 span {
+    display: inherit; }
+  .main-content-wrapper > .fixed-wrapper {
+    overflow: hidden; }
+  .main-content-wrapper .col-1-3, .main-content-wrapper .col-3-3 {
+    width: 310px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden; }
+    .main-content-wrapper .col-1-3 > .flip-in-out-container, .main-content-wrapper .col-3-3 > .flip-in-out-container {
+      position: relative;
+      -webkit-transition: 0.5s all ease;
+      -o-transition: 0.5s all ease;
+      transition: 0.5s all ease;
+      height: 100%; }
+  .main-content-wrapper .col-1-3 .flip-in-out-container {
+    left: 0; }
+  .main-content-wrapper .col-3-3 .flip-in-out-container {
+    right: 0; }
+  .main-content-wrapper .col-2-3 {
+    width: 400px;
     position: relative;
     z-index: 2; }
-  .main-content-wrapper .col-1-2 h1 {
-    font-family: 'citroenbold';
+    .main-content-wrapper .col-2-3 .color-variant-wrapper {
+      background: #fff;
+      width: 378px;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      padding: 9px 12px;
+      border-radius: 70px;
+      overflow: auto;
+      margin: 0 auto;
+      position: absolute;
+      bottom: 0; }
+      .main-content-wrapper .col-2-3 .color-variant-wrapper ul li {
+        width: 42px;
+        height: 42px;
+        margin-left: 11px;
+        border-radius: 50%;
+        position: relative;
+        padding: 3px;
+        cursor: pointer;
+        border: 2px solid #fff;
+        -webkit-transition: 0.5 all ease;
+        -o-transition: 0.5 all ease;
+        transition: 0.5 all ease; }
+        .main-content-wrapper .col-2-3 .color-variant-wrapper ul li:first-child {
+          margin-left: 0; }
+        .main-content-wrapper .col-2-3 .color-variant-wrapper ul li.selected {
+          border-color: #9D0706; }
+        .main-content-wrapper .col-2-3 .color-variant-wrapper ul li > img {
+          width: 32px; }
+  .main-content-wrapper .col-1-3 h1 {
     font-weight: 900;
     font-size: 3rem;
     line-height: 36px;
     margin-bottom: 30px; }
-    .main-content-wrapper .col-1-2 h1 span {
+    .main-content-wrapper .col-1-3 h1 span {
+      font-family: 'citroenbold';
       display: block;
       font-size: 2.4rem;
       line-height: 26px; }
-  .main-content-wrapper .col-1-2 .automobile-features-wrapper {
+      .main-content-wrapper .col-1-3 h1 span a {
+        font-size: 1.6rem;
+        line-height: 18px;
+        color: #9D0605;
+        background: url("../images/icon-edit.svg") no-repeat 0 0;
+        padding-left: 30px; }
+  .main-content-wrapper .col-1-3 .automobile-features-wrapper, .main-content-wrapper .col-1-3 .automobile-versions-wrapper {
     max-width: 299px; }
-    .main-content-wrapper .col-1-2 .automobile-features-wrapper ul li {
-      margin-bottom: 20px;
-      cursor: pointer; }
-      .main-content-wrapper .col-1-2 .automobile-features-wrapper ul li span {
+  .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li {
+    margin-bottom: 20px;
+    cursor: pointer; }
+    .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li span {
+      font-weight: 900;
+      font-size: 2rem;
+      line-height: 24px;
+      display: block;
+      width: 100%;
+      position: relative;
+      border-bottom: 1px solid #000;
+      padding-bottom: 8px; }
+      .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li span:after {
+        content: '';
+        position: absolute;
+        top: 40%;
+        right: 20px;
+        width: 7px;
+        height: 7px;
+        border-top: 1px solid #000;
+        border-right: 1px solid #000;
+        -webkit-transform: translateY(-50%) rotate(45deg);
+        -ms-transform: translateY(-50%) rotate(45deg);
+        transform: translateY(-50%) rotate(45deg);
+        -webkit-transition: 0.5s all ease;
+        -o-transition: 0.5s all ease;
+        transition: 0.5s all ease; }
+    .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li > ul {
+      background-color: #fff;
+      max-height: 180px;
+      overflow: auto;
+      display: none; }
+      .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li > ul > li {
+        margin-bottom: 0; }
+        .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li > ul > li span {
+          font-family: 'citroenregular';
+          font-weight: normal;
+          font-size: 1.6rem;
+          line-height: 20px;
+          border-color: #e7e7e7;
+          padding: 12px 10px 12px 5px;
+          width: 95%;
+          margin: 0 auto; }
+          .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li > ul > li span:after {
+            right: 15px; }
+        .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li > ul > li:last-child span {
+          border-color: transparent; }
+    .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li.accordion-open > span:after {
+      -webkit-transform: translateY(-50%) rotate(135deg);
+      -ms-transform: translateY(-50%) rotate(135deg);
+      transform: translateY(-50%) rotate(135deg); }
+  .main-content-wrapper .col-1-3 .automobile-versions-wrapper {
+    position: relative; }
+    .main-content-wrapper .col-1-3 .automobile-versions-wrapper > .heading {
+      font-family: 'citroenblack';
+      font-weight: 900;
+      font-size: 2rem;
+      line-height: 24px;
+      margin-bottom: 9px; }
+      .main-content-wrapper .col-1-3 .automobile-versions-wrapper > .heading .info {
         font-family: 'citroenbold';
-        font-weight: 900;
-        font-size: 2rem;
-        line-height: 24px;
-        display: block;
-        width: 100%;
+        font-size: 1.6rem;
+        line-height: 18px;
+        color: #9D0605;
         position: relative;
-        border-bottom: 1px solid #000;
-        padding-bottom: 8px; }
-        .main-content-wrapper .col-1-2 .automobile-features-wrapper ul li span:after {
+        padding-left: 31px;
+        margin-left: 12px;
+        cursor: pointer; }
+        .main-content-wrapper .col-1-3 .automobile-versions-wrapper > .heading .info:before {
           content: '';
           position: absolute;
-          top: 40%;
-          right: 20px;
-          width: 7px;
-          height: 7px;
-          border-top: 1px solid #000;
-          border-right: 1px solid #000;
-          -webkit-transform: translateY(-50%) rotate(45deg);
-          -ms-transform: translateY(-50%) rotate(45deg);
-          transform: translateY(-50%) rotate(45deg);
+          top: -2px;
+          left: 0;
+          background: url("../images/icon-info.svg") no-repeat 0 0;
+          width: 24px;
+          height: 24px; }
+    .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container {
+      height: 490px;
+      overflow-y: auto; }
+      .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li {
+        background-color: #fff;
+        padding: 16px 20px;
+        font-family: 'citroenregular';
+        font-weight: bold;
+        border: 1px solid #000;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        height: 139px;
+        position: relative;
+        -webkit-transition: 0.5s all ease;
+        -o-transition: 0.5s all ease;
+        transition: 0.5s all ease;
+        cursor: pointer; }
+        .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li:before, .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li:after {
+          content: '';
+          position: absolute; }
+        .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li:before {
+          top: 0;
+          left: 0;
+          background-color: transparent;
+          width: 5px;
+          height: 100%;
           -webkit-transition: 0.5s all ease;
           -o-transition: 0.5s all ease;
           transition: 0.5s all ease; }
-      .main-content-wrapper .col-1-2 .automobile-features-wrapper ul li > ul {
-        background-color: #fff;
-        max-height: 180px;
-        overflow: hidden;
-        display: none; }
-        .main-content-wrapper .col-1-2 .automobile-features-wrapper ul li > ul > li {
-          margin-bottom: 0; }
-          .main-content-wrapper .col-1-2 .automobile-features-wrapper ul li > ul > li span {
-            font-family: 'citroenregular';
+        .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li:after {
+          top: 16px;
+          right: 9px;
+          background: url("../images/icon-check.svg") no-repeat 0 0;
+          width: 20px;
+          height: 20px;
+          opacity: 0;
+          -webkit-transition: 0.5s all ease;
+          -o-transition: 0.5s all ease;
+          transition: 0.5s all ease; }
+        .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li.selected {
+          border-color: #9D0605; }
+          .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li.selected:before {
+            background-color: #9D0605; }
+          .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li.selected:after {
+            opacity: 1; }
+        .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .heading {
+          font-size: 2rem;
+          line-height: 22px;
+          margin-bottom: 7px; }
+        .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .price-tag {
+          margin-bottom: 7px; }
+          .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .price-tag > * {
+            margin-right: 4px; }
+          .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .price-tag .discounted-price {
+            font-size: 2rem;
+            line-height: 22px;
+            margin-bottom: 7px; }
+          .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .price-tag .actual-price {
             font-weight: normal;
-            font-size: 1.6rem;
-            line-height: 20px;
-            border-color: #e7e7e7;
-            padding: 12px 10px 12px 5px;
-            width: 95%;
-            margin: 0 auto; }
-            .main-content-wrapper .col-1-2 .automobile-features-wrapper ul li > ul > li span:after {
-              right: 15px; }
-          .main-content-wrapper .col-1-2 .automobile-features-wrapper ul li > ul > li:last-child span {
-            border-color: transparent; }
-      .main-content-wrapper .col-1-2 .automobile-features-wrapper ul li.accordion-open > ul {
-        height: 100%;
-        overflow-y: auto; }
-  .main-content-wrapper .col-2-2 .automobile-accessories-wrapper .accessories-price {
+            font-size: 1.2rem;
+            line-height: 15px;
+            color: #828282;
+            text-decoration: line-through; }
+          .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .price-tag .discount-offered {
+            font-weight: normal;
+            font-size: 1.2rem;
+            line-height: 15px;
+            color: #9D0605; }
+        .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .offer {
+          background: url("../images/bg-factory-offer.svg") no-repeat 0 0;
+          font-weight: normal;
+          font-size: 1.2rem;
+          line-height: 15px;
+          color: #fff;
+          padding: 3px 17px 6px 14px;
+          margin-bottom: 10px; }
+        .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .automobile-variant {
+          height: 100%;
+          font-weight: normal;
+          font-size: 1.4rem;
+          line-height: 18px;
+          color: #3B3938;
+          padding: 3px 0; }
+          .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .automobile-variant > * {
+            position: relative;
+            border-left: 1px solid #adadad;
+            padding-left: 52px;
+            margin-left: 26px; }
+            .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .automobile-variant > *:first-child {
+              border-left: none;
+              padding-left: 26px;
+              margin-left: 0; }
+          .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .automobile-variant .engine-type {
+            background: url("../images/icon-engine-type.svg") no-repeat 0 0; }
+          .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .automobile-variant .automobile-type {
+            background: url("../images/icon-automobile-type.svg") no-repeat 23px 0; }
+  .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .accessories-price {
     margin-bottom: 24px; }
-    .main-content-wrapper .col-2-2 .automobile-accessories-wrapper .accessories-price p {
+    .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .accessories-price p {
       font-family: 'citroenbold';
       font-size: 1.2rem;
       line-height: 13px;
@@ -392,20 +578,22 @@ main {
       border-left: 1px solid #828282;
       padding-left: 21px;
       margin-left: 30px; }
-      .main-content-wrapper .col-2-2 .automobile-accessories-wrapper .accessories-price p:first-child {
+      .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .accessories-price p:first-child {
         border-left-color: transparent;
         padding-left: 0;
         margin-left: 0; }
-      .main-content-wrapper .col-2-2 .automobile-accessories-wrapper .accessories-price p span {
+      .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .accessories-price p span {
         display: block;
         font-weight: 900;
         font-size: 2.4rem;
         line-height: 29px;
         color: #000; }
-  .main-content-wrapper .col-2-2 .automobile-accessories-wrapper .toggle-option-wrapper {
+  .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .toggle-option-wrapper {
     padding-bottom: 14px;
     position: relative; }
-    .main-content-wrapper .col-2-2 .automobile-accessories-wrapper .toggle-option-wrapper:after {
+    .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .toggle-option-wrapper:last-child {
+      padding-bottom: 0; }
+    .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .toggle-option-wrapper:after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -413,141 +601,156 @@ main {
       width: 60%;
       height: 1px;
       background-color: #9D0605; }
-    .main-content-wrapper .col-2-2 .automobile-accessories-wrapper .toggle-option-wrapper .toggle-options {
-      border-left: 1px solid #D0CCCC;
-      padding-left: 20px;
-      margin-right: 15px; }
-      .main-content-wrapper .col-2-2 .automobile-accessories-wrapper .toggle-option-wrapper .toggle-options .field-row {
-        margin-top: 13px; }
-        .main-content-wrapper .col-2-2 .automobile-accessories-wrapper .toggle-option-wrapper .toggle-options .field-row:first-child {
-          margin-top: 0; }
-        .main-content-wrapper .col-2-2 .automobile-accessories-wrapper .toggle-option-wrapper .toggle-options .field-row label {
-          font-family: 'citroenbold';
-          font-size: 1.6rem;
-          line-height: 18px;
-          text-align: right;
-          color: #828282;
-          cursor: pointer;
-          -webkit-transition: 0.5s all ease;
-          -o-transition: 0.5s all ease;
-          transition: 0.5s all ease; }
-        .main-content-wrapper .col-2-2 .automobile-accessories-wrapper .toggle-option-wrapper .toggle-options .field-row > input[type=radio]:checked ~ label {
-          color: #9D0605; }
-    .main-content-wrapper .col-2-2 .automobile-accessories-wrapper .toggle-option-wrapper .toggle-switch {
-      display: inline-block;
-      background: #E4E2E2;
-      border: 2px solid #CBC7C6;
-      border-radius: 40px;
-      width: 24px;
-      height: 100%;
-      position: relative;
-      cursor: pointer; }
-      .main-content-wrapper .col-2-2 .automobile-accessories-wrapper .toggle-option-wrapper .toggle-switch:before {
-        content: '';
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        width: 24px;
-        height: 24px;
-        background-color: #9D0605;
-        border: 2px solid #D0CCCC;
-        border-radius: 50%;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        -webkit-transition: 0.3s all ease;
-        -o-transition: 0.3s all ease;
-        transition: 0.3s all ease; }
-    .main-content-wrapper .col-2-2 .automobile-accessories-wrapper .toggle-option-wrapper.last-option-selected .toggle-switch:before {
-      top: calc(100% - 24px); }
-  .main-content-wrapper .col-2-2 .customized-option-wrapper {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    position: relative; }
-    .main-content-wrapper .col-2-2 .customized-option-wrapper:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 60%;
-      height: 1px;
-      background-color: #D0CCCC; }
-    .main-content-wrapper .col-2-2 .customized-option-wrapper .customized-options .field-row {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      margin-top: 20px; }
-      .main-content-wrapper .col-2-2 .customized-option-wrapper .customized-options .field-row input[type=checkbox], .main-content-wrapper .col-2-2 .customized-option-wrapper .customized-options .field-row label {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex; }
-      .main-content-wrapper .col-2-2 .customized-option-wrapper .customized-options .field-row input[type=checkbox] {
-        display: none; }
-      .main-content-wrapper .col-2-2 .customized-option-wrapper .customized-options .field-row label {
-        font-family: 'citroenbold';
-        font-size: 1.6rem;
-        line-height: 18px;
-        color: #3B3938;
-        width: 60%;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
-        justify-content: flex-end;
-        margin-right: 15px;
-        cursor: pointer; }
-      .main-content-wrapper .col-2-2 .customized-option-wrapper .customized-options .field-row span {
-        display: block;
-        width: 48px;
-        height: 24px;
+    .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .toggle-option-wrapper.no-bottom-border:after {
+      background-color: transparent; }
+    .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .toggle-option-wrapper .toggle-option-container {
+      margin-left: 20px; }
+      .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .toggle-option-wrapper .toggle-option-container .toggle-options {
+        border-left: 1px solid #D0CCCC;
+        padding-left: 20px;
+        margin-right: 15px; }
+        .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .toggle-option-wrapper .toggle-option-container .toggle-options .field-row {
+          margin-top: 13px; }
+          .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .toggle-option-wrapper .toggle-option-container .toggle-options .field-row:first-child {
+            margin-top: 0; }
+          .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .toggle-option-wrapper .toggle-option-container .toggle-options .field-row label {
+            font-family: 'citroenbold';
+            font-size: 1.6rem;
+            line-height: 18px;
+            text-align: right;
+            color: #828282;
+            cursor: pointer;
+            -webkit-transition: 0.5s all ease;
+            -o-transition: 0.5s all ease;
+            transition: 0.5s all ease; }
+          .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .toggle-option-wrapper .toggle-option-container .toggle-options .field-row > input[type=radio]:checked ~ label {
+            color: #9D0605; }
+      .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .toggle-option-wrapper .toggle-option-container .toggle-switch {
+        display: inline-block;
         background: #E4E2E2;
         border: 2px solid #CBC7C6;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
         border-radius: 40px;
+        width: 24px;
+        height: 100%;
         position: relative;
-        -webkit-transition: 0.3s all ease;
-        -o-transition: 0.3s all ease;
-        transition: 0.3s all ease;
         cursor: pointer; }
-        .main-content-wrapper .col-2-2 .customized-option-wrapper .customized-options .field-row span:after {
+        .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .toggle-option-wrapper .toggle-option-container .toggle-switch:before {
           content: '';
           position: absolute;
-          left: calc(100% - 22px);
           top: -2px;
+          left: -2px;
           width: 24px;
           height: 24px;
-          background: #fff;
+          background-color: #9D0605;
           border: 2px solid #D0CCCC;
           border-radius: 50%;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
           -webkit-transition: 0.3s all ease;
           -o-transition: 0.3s all ease;
           transition: 0.3s all ease; }
-      .main-content-wrapper .col-2-2 .customized-option-wrapper .customized-options .field-row input[type=checkbox]:checked ~ span {
-        background-color: #9D0605; }
-        .main-content-wrapper .col-2-2 .customized-option-wrapper .customized-options .field-row input[type=checkbox]:checked ~ span:after {
-          left: -2px; }
-      .main-content-wrapper .col-2-2 .customized-option-wrapper .customized-options .field-row input[type=checkbox]:checked ~ label {
-        color: #9D0605; }
-  .main-content-wrapper .col-2-2 .background-option-wrapper .heading {
-    font-family: 'citroenbold';
+      .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .toggle-option-wrapper .toggle-option-container.last-option-selected .toggle-switch:before {
+        top: calc(100% - 24px); }
+      .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .toggle-option-wrapper .toggle-option-container:only-child, .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .toggle-option-wrapper .toggle-option-container:first-child {
+        margin-left: 0; }
+        .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .toggle-option-wrapper .toggle-option-container:only-child .toggle-options, .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .toggle-option-wrapper .toggle-option-container:first-child .toggle-options {
+          border-left-color: transparent; }
+  .main-content-wrapper .col-3-3 .customized-option-wrapper {
+    margin-bottom: 20px; }
+    .main-content-wrapper .col-3-3 .customized-option-wrapper .customized-option-container {
+      padding-top: 12px;
+      padding-bottom: 20px;
+      position: relative; }
+      .main-content-wrapper .col-3-3 .customized-option-wrapper .customized-option-container:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 60%;
+        height: 1px;
+        background-color: #D0CCCC; }
+      .main-content-wrapper .col-3-3 .customized-option-wrapper .customized-option-container > .heading {
+        font-family: 'citroenbold';
+        font-size: 1.4rem;
+        line-height: 15px; }
+      .main-content-wrapper .col-3-3 .customized-option-wrapper .customized-option-container .customized-options .field-row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-top: 20px; }
+        .main-content-wrapper .col-3-3 .customized-option-wrapper .customized-option-container .customized-options .field-row input[type=checkbox], .main-content-wrapper .col-3-3 .customized-option-wrapper .customized-option-container .customized-options .field-row label {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
+        .main-content-wrapper .col-3-3 .customized-option-wrapper .customized-option-container .customized-options .field-row input[type=checkbox] {
+          display: none; }
+        .main-content-wrapper .col-3-3 .customized-option-wrapper .customized-option-container .customized-options .field-row label {
+          font-family: 'citroenbold';
+          font-size: 1.6rem;
+          line-height: 18px;
+          color: #3B3938;
+          width: 60%;
+          -webkit-box-pack: end;
+          -ms-flex-pack: end;
+          justify-content: flex-end;
+          margin-right: 15px;
+          cursor: pointer; }
+        .main-content-wrapper .col-3-3 .customized-option-wrapper .customized-option-container .customized-options .field-row span {
+          display: block;
+          width: 48px;
+          height: 24px;
+          background: #E4E2E2;
+          border: 2px solid #CBC7C6;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          border-radius: 40px;
+          position: relative;
+          -webkit-transition: 0.3s all ease;
+          -o-transition: 0.3s all ease;
+          transition: 0.3s all ease;
+          cursor: pointer; }
+          .main-content-wrapper .col-3-3 .customized-option-wrapper .customized-option-container .customized-options .field-row span:after {
+            content: '';
+            position: absolute;
+            left: calc(100% - 22px);
+            top: -2px;
+            width: 24px;
+            height: 24px;
+            background: #fff;
+            border: 2px solid #D0CCCC;
+            border-radius: 50%;
+            -webkit-transition: 0.3s all ease;
+            -o-transition: 0.3s all ease;
+            transition: 0.3s all ease; }
+        .main-content-wrapper .col-3-3 .customized-option-wrapper .customized-option-container .customized-options .field-row input[type=checkbox]:checked ~ span {
+          background-color: #9D0605; }
+          .main-content-wrapper .col-3-3 .customized-option-wrapper .customized-option-container .customized-options .field-row input[type=checkbox]:checked ~ span:after {
+            left: -2px; }
+        .main-content-wrapper .col-3-3 .customized-option-wrapper .customized-option-container .customized-options .field-row input[type=checkbox]:checked ~ label {
+          color: #9D0605; }
+  .main-content-wrapper .col-3-3 .background-option-wrapper .heading {
+    font-family: 'citroenregular';
+    font-weight: bold;
     font-size: 1.6rem;
     line-height: 18px;
     color: #000000;
     margin-bottom: 7px;
     text-align: right; }
-  .main-content-wrapper .col-2-2 .background-option-wrapper ul {
+  .main-content-wrapper .col-3-3 .background-option-wrapper ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     background: #e4e2e2;
     border: 1px solid #d0cccc; }
-    .main-content-wrapper .col-2-2 .background-option-wrapper ul li input {
+    .main-content-wrapper .col-3-3 .background-option-wrapper ul li input {
       display: none; }
-    .main-content-wrapper .col-2-2 .background-option-wrapper ul li label {
+    .main-content-wrapper .col-3-3 .background-option-wrapper ul li label {
       font-family: 'citroenbold';
       font-size: 1.2rem;
       line-height: 13px;
@@ -560,7 +763,7 @@ main {
       transition: 0.5 all ease;
       position: relative;
       cursor: pointer; }
-      .main-content-wrapper .col-2-2 .background-option-wrapper ul li label:after {
+      .main-content-wrapper .col-3-3 .background-option-wrapper ul li label:after {
         content: '';
         position: absolute;
         width: 1px;
@@ -571,78 +774,87 @@ main {
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%); }
-      .main-content-wrapper .col-2-2 .background-option-wrapper ul li label:first-child:after {
+      .main-content-wrapper .col-3-3 .background-option-wrapper ul li label:first-child:after {
         background-color: transparent; }
-    .main-content-wrapper .col-2-2 .background-option-wrapper ul li input:checked ~ label {
+    .main-content-wrapper .col-3-3 .background-option-wrapper ul li input:checked ~ label {
       background-color: #9D0605;
       color: #fff; }
-      .main-content-wrapper .col-2-2 .background-option-wrapper ul li input:checked ~ label:after {
+      .main-content-wrapper .col-3-3 .background-option-wrapper ul li input:checked ~ label:after {
         background-color: transparent; }
-  .main-content-wrapper .color-variant-container {
-    position: relative;
-    z-index: 2; }
-    .main-content-wrapper .color-variant-container .color-variant-wrapper {
-      background: #fff;
-      width: 378px;
-      height: -webkit-fit-content;
-      height: -moz-fit-content;
-      height: fit-content;
-      padding: 9px 12px;
-      border-radius: 70px;
-      overflow: auto;
-      margin-right: 50px; }
-      .main-content-wrapper .color-variant-container .color-variant-wrapper ul li {
-        width: 42px;
-        height: 42px;
-        margin-left: 11px;
-        border-radius: 50%;
-        position: relative;
-        padding: 3px;
-        cursor: pointer;
-        border: 2px solid #fff;
-        -webkit-transition: 0.5 all ease;
-        -o-transition: 0.5 all ease;
-        transition: 0.5 all ease; }
-        .main-content-wrapper .color-variant-container .color-variant-wrapper ul li:first-child {
-          margin-left: 0; }
-        .main-content-wrapper .color-variant-container .color-variant-wrapper ul li.selected {
-          border-color: #9D0706; }
-        .main-content-wrapper .color-variant-container .color-variant-wrapper ul li > img {
-          width: 32px; }
-    .main-content-wrapper .color-variant-container .cta-wrapper .cta-button {
-      font-family: 'citroenbold';
-      background: #9D0605;
-      color: #f5f5f5;
+  .main-content-wrapper .col-3-3 .cta-wrapper {
+    margin-top: 30px; }
+    .main-content-wrapper .col-3-3 .cta-wrapper:last-child {
+      position: absolute;
+      bottom: 0;
+      right: 0; }
+    .main-content-wrapper .col-3-3 .cta-wrapper .cta-button {
+      font-family: 'citroenregular';
+      font-weight: bold;
       font-size: 1.4rem;
-      line-height: 17px;
-      padding: 15px 35px 15px 25px;
       height: -webkit-fit-content;
       height: -moz-fit-content;
       height: fit-content;
       position: relative; }
-      .main-content-wrapper .color-variant-container .cta-wrapper .cta-button:after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        right: 20px;
-        width: 8px;
-        height: 8px;
-        border-top: 2px solid #fff;
-        border-right: 2px solid #fff;
-        -webkit-transform: translateY(-50%) rotate(45deg);
-        -ms-transform: translateY(-50%) rotate(45deg);
-        transform: translateY(-50%) rotate(45deg); }
+      .main-content-wrapper .col-3-3 .cta-wrapper .cta-button.go-to-next-step {
+        background: #9D0605;
+        color: #f5f5f5;
+        line-height: 17px;
+        padding: 15px 60px 15px 25px; }
+        .main-content-wrapper .col-3-3 .cta-wrapper .cta-button.go-to-next-step:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 30px;
+          width: 8px;
+          height: 8px;
+          border-top: 2px solid #fff;
+          border-right: 2px solid #fff;
+          -webkit-transform: translateY(-50%) rotate(45deg);
+          -ms-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg); }
+      .main-content-wrapper .col-3-3 .cta-wrapper .cta-button.compare-btn {
+        border: 1px solid #d0cccc;
+        background: #fff;
+        padding: 13px 18px 12px 58px;
+        line-height: 15px;
+        color: #000; }
+        .main-content-wrapper .col-3-3 .cta-wrapper .cta-button.compare-btn:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 14px;
+          width: 30px;
+          height: 30px;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+          background: url("../images/icon-compare.svg") no-repeat 0 0; }
+  .main-content-wrapper .color-variant-container {
+    position: relative;
+    z-index: 2; }
 
 .disclaimer-text {
+  font-family: 'citroenregular';
   text-transform: none;
   font-size: 1rem;
   line-height: 11px;
   background-color: #f1f0f0;
-  padding: 2px 0; }
+  padding-top: 2px;
+  padding-bottom: 2px; }
 
 .main-tabs-container ul li {
   padding: 18px 0;
-  cursor: pointer; }
+  cursor: pointer;
+  position: relative;
+  width: 25%; }
+  .main-tabs-container ul li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fff; }
   .main-tabs-container ul li > div {
     margin-right: 12px;
     width: 30px;
@@ -656,7 +868,7 @@ main {
       -o-transition: 0.5s all ease;
       transition: 0.5s all ease; }
   .main-tabs-container ul li a {
-    font-family: 'citroenbold';
+    font-family: 'citroenblack';
     font-weight: 900;
     font-size: 2rem;
     line-height: 24px;
@@ -671,6 +883,8 @@ main {
     -webkit-transition: 0.5s all ease;
     -o-transition: 0.5s all ease;
     transition: 0.5s all ease; }
+  .main-tabs-container ul li.selected:before {
+    background-color: #9D0605; }
   .main-tabs-container ul li.selected > div > svg {
     -webkit-transform: translateY(-30px);
     -ms-transform: translateY(-30px);

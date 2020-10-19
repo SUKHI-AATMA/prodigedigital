@@ -20,65 +20,41 @@
             <div class="full-width fixed-wrapper display-flex justify-content-space-between flex-wrap">
                 <div class="canvas-3d"></div>
                 <section class="display-flex flex-direction-column col-1-3">
-                    <h1>C5 AIRCROSS SUV<span>FEEL</span></h1>
-                    <div class="display-flex flex-direction-column automobile-features-wrapper">
-                        <ul>
-                            <li>
-                                <span>Exterior Features</span>
-                                <ul>
-                                    <li>
-                                        <span>ESP</span>
-                                    </li>
-                                    <li>
-                                        <span>Airbags</span>
-                                    </li>
-                                    <li>
-                                        <span>Parking Assist</span>
-                                    </li>
-                                    <li>
-                                        <span>BLIS</span>
-                                    </li>
-                                </ul>
+                    <h1>C5 AIRCROSS SUV<span><a href="javascript:;">CHANGE MODEL</a></span></h1>
+                    <div class="display-flex flex-direction-column automobile-versions-wrapper">
+                        <p class="display-flex align-items-center heading">VERSIONS <span class="info">INFO</span></p>
+                        <ul class="versions-container">
+                            <li class="display-flex flex-direction-column">
+                                <p class="heading">FEEL</p>
+                                <p class="price-tag"><span class="discounted-price">₹11,320,00*</span><span class="actual-price">₹12,000,00</span><span class="discount-offered">(25% off)</span></p>
+                                <p class="offer">FACTORY OFFER</p>
+                                <p class="display-flex align-items-end automobile-variant"><span class="engine-type">PETROL</span><span class="automobile-type">AUTO</span></p>
                             </li>
-                            <li>
-                                <span>Interior Features</span>
-                                <ul>
-                                    <li>
-                                        <span>feature 1</span>
-                                    </li>
-                                    <li>
-                                        <span>feature 2</span>
-                                    </li>
-                                </ul>
+                            <li class="display-flex flex-direction-column selected">
+                                <p class="heading">SHINE</p>
+                                <p class="price-tag"><span class="discounted-price">₹11,320,00*</span></p>
+                                <p class="display-flex align-items-end automobile-variant"><span class="engine-type display-flex align-items-center">PETROL</span><span class="automobile-type display-flex align-items-center">AUTO</span></p>
                             </li>
-                            <li>
-                                <span>Safety Features</span>
-                                <ul>
-                                    <li>
-                                        <span>feature 1</span>
-                                    </li>
-                                    <li>
-                                        <span>feature 2</span>
-                                    </li>
-                                    <li>
-                                        <span>feature 3</span>
-                                    </li>
-                                    <li>
-                                        <span>feature 4</span>
-                                    </li>
-                                    <li>
-                                        <span>feature 5</span>
-                                    </li>
-                                    <li>
-                                        <span>feature 6</span>
-                                    </li>
-                                </ul>
+                            <li class="display-flex flex-direction-column">
+                                <p class="heading">SHINE</p>
+                                <p class="price-tag"><span class="discounted-price">₹15,320,00*</span></p>
+                                <p class="display-flex align-items-end automobile-variant"><span class="engine-type display-flex align-items-center">PETROL</span><span class="automobile-type display-flex align-items-center">AUTO</span></p>
+                            </li>
+                            <li class="display-flex flex-direction-column">
+                                <p class="heading">SHINE</p>
+                                <p class="price-tag"><span class="discounted-price">₹20,320,00*</span></p>
+                                <p class="display-flex align-items-end automobile-variant"><span class="engine-type display-flex align-items-center">PETROL</span><span class="automobile-type display-flex align-items-center">AUTO</span></p>
                             </li>
                         </ul>
-                    </div>
+                    </div>  
                 </section>
-                <section class="display-flex flex-direction-column align-items-center justify-content-end col-2-3">
+                <section class="display-flex flex-direction-column align-items-center justify-content-center col-2-3">
                     <img src="./images/gizmo-controller.svg" alt="Gizmo" title="Gizmo">
+                    <div class="display-flex align-items-center color-variant-wrapper">
+                        <ul class="display-flex">
+                            
+                        </ul>
+                    </div>
                 </section>
                 <section class="display-flex flex-direction-column align-items-end col-3-3">
                     <div class="display-flex flex-direction-column automobile-accessories-wrapper">
@@ -94,6 +70,19 @@
                             <div class="toggle-option-container display-flex align-items-center justify-content-end">
                                 <div class="toggle-options display-flex flex-direction-column">
                                     <div class="field-row">
+                                        <input type="radio" id="front" value="FRONT" name="automobile-view-1" checked>
+                                        <label for="front">FRONT</label>
+                                    </div>
+                                    <div class="field-row">
+                                        <input type="radio" id="back" value="BACK" name="automobile-view-1">
+                                        <label for="back">BACK</label>
+                                    </div>
+                                </div>
+                                <span class="toggle-switch"></span>
+                            </div>
+                            <div class="toggle-option-container display-flex align-items-center justify-content-end">
+                                <div class="toggle-options display-flex flex-direction-column">
+                                    <div class="field-row">
                                         <input type="radio" id="exterior" value="EXTERIOR" name="automobile-view" checked>
                                         <label for="exterior">EXTERIOR</label>
                                     </div>
@@ -105,72 +94,79 @@
                                 <span class="toggle-switch"></span>
                             </div>
                         </div>
-                        <div class="customized-option-wrapper display-flex align-items-center justify-content-end">
-                            <div class="customized-options display-flex flex-direction-column">
-                                <div class="field-row">
-                                    <input type="checkbox" id="headlights" value="HEADLIGHTS" name="customized-option" checked>
-                                    <label for="headlights">HEADLIGHTS</label>
-                                    <span></span>
+                        <div class="customized-option-wrapper display-flex flex-direction-column align-items-center justify-content-end">
+                            <div class="customized-option-container display-flex flex-direction-column align-items-end justify-content-end full-width">
+                                <p class="heading">FUEL TYPE</p>
+                                <div class="customized-options display-flex flex-direction-column">
+                                    <div class="field-row">
+                                        <input type="checkbox" id="petrol" value="PETROL" name="customized-option" checked>
+                                        <label for="petrol">PETROL</label>
+                                        <span></span>
+                                    </div>
+                                    <div class="field-row">
+                                        <input type="checkbox" id="diesel" value="DIESEL" name="customized-option">
+                                        <label for="diesel">DIESEL</label>
+                                        <span></span>
+                                    </div>
                                 </div>
-                                <div class="field-row">
-                                    <input type="checkbox" id="sunroof" value="SUNROOF" name="customized-option">
-                                    <label for="sunroof">SUNROOF</label>
-                                    <span></span>
-                                </div>
-                                <div class="field-row">
-                                    <input type="checkbox" id="open-doors" value="OPEN DOORS" name="customized-option">
-                                    <label for="open-doors">OPEN DOORS</label>
-                                    <span></span>
+                            </div>
+                            <div class="customized-option-container display-flex flex-direction-column align-items-end justify-content-end full-width">
+                                <p class="heading">TRANSMISSION</p>
+                                <div class="customized-options display-flex flex-direction-column">
+                                    <div class="field-row">
+                                        <input type="checkbox" id="automatic" value="AUTOMATIC" name="customized-option" checked>
+                                        <label for="automatic">AUTOMATIC</label>
+                                        <span></span>
+                                    </div>
+                                    <div class="field-row">
+                                        <input type="checkbox" id="manual" value="MANUAL" name="customized-option">
+                                        <label for="manual">MANUAL</label>
+                                        <span></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="background-option-wrapper display-flex align-items-center justify-content-end">
-                            <div class="background-options display-flex flex-direction-column">
-                                <p class="heading">BACKGROUNDS</p>
-                                <ul>
-                                    <li>
-                                        <div class="field-row">
-                                            <input type="radio" id="studio" value="STUDIO" name="background-option" checked>
-                                            <label for="studio">STUDIO</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="field-row">
-                                            <input type="radio" id="natural" value="NATURAL" name="background-option" checked>
-                                            <label for="natural">NATURAL</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="field-row">
-                                            <input type="radio" id="urban" value="URBAN" name="background-option" checked>
-                                            <label for="urban">URBAN</label>
-                                        </div>
-                                    </li>
-                                </ul>
+                        <div class="toggle-option-wrapper vertical-aligned display-flex justify-content-end no-bottom-border">
+                            <div class="toggle-option-container display-flex align-items-center justify-content-end">
+                                <div class="toggle-options display-flex flex-direction-column">
+                                    <div class="field-row">
+                                        <input type="radio" id="high-low" value="HIGH-LOW" name="automobile-view-1" checked>
+                                        <label for="high-low">₹ HIGH-LOW</label>
+                                    </div>
+                                    <div class="field-row">
+                                        <input type="radio" id="low-high" value="LOW-HIGH" name="automobile-view-1">
+                                        <label for="low-high">₹ LOW-HIGH</label>
+                                    </div>
+                                </div>
+                                <span class="toggle-switch"></span>
                             </div>
                         </div>
+                    </div>
+                    <div class="display-flex cta-wrapper">
+                        <a href="javascript:;" class="cta-button compare-btn">CAR COMPARISON</a>
+                    </div>
+                    <div class="display-flex cta-wrapper">
+                        <a href="javascript:;" class="cta-button go-to-next-step">NEXT STEP - FEATURES</a>
                     </div>
                 </section>
                 <section class="display-flex full-width justify-content-end align-items-center align-content-end flex-wrap color-variant-container">
-                    <div class="display-flex align-items-center color-variant-wrapper">
+                    <!-- <div class="display-flex align-items-center color-variant-wrapper">
                         <ul class="display-flex">
                             
                         </ul>
-                    </div>
-                    <div class="display-flex cta-wrapper">
-                        <a href="javascript:;" class="cta-button">NEXT STEP - ACCESSORIES</a>
-                    </div>
-                    
+                    </div> -->
+                    <!-- <div class="display-flex cta-wrapper">
+                        <a href="javascript:;" class="cta-button">NEXT STEP - FEATURES</a>
+                    </div> -->
                 </section>
-                
             </div>
         </section>
-        <p class="display-flex full-width justify-content-end disclaimer-text">
+        <p class="display-flex full-width justify-content-end disclaimer-text fixed-wrapper">
             ** The accessory prices shown are excluding any labour costs. | * The prices shown are ex-showroom for Maharashtra state, The car prices and information provided are only indicative.
         </p>
         <section class="display-flex full-width align-items-center flex-wrap main-tabs-container">
-            <ul class="display-flex full-width justify-content-space-around align-items-center">
-                <li class="display-flex align-items-center tab-versions">
+            <ul class="display-flex full-width justify-content-space-around align-items-center fixed-wrapper">
+                <li class="display-flex align-items-center justify-content-center tab-versions selected">
                     <div class="display-flex flex-wrap">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0)">
@@ -199,7 +195,7 @@
                     </div>
                     <a href="javascript:;">VERSIONS</a>
                 </li>
-                <li class="display-flex align-items-center tab-features selected">
+                <li class="display-flex align-items-center justify-content-center tab-features">
                     <div class="display-flex flex-wrap">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M14.5 6L17.4355 11.9243L24 12.8801L19.25 17.489L20.371 24L14.5 20.9243L8.629 24L9.75 17.489L5 12.8801L11.5645 11.9243L14.5 6Z" stroke="#3B3938" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -210,7 +206,7 @@
                     </div>
                     <a href="javascript:;">FEATURES</a>
                 </li>
-                <li class="display-flex align-items-center tab-accessorize">
+                <li class="display-flex align-items-center justify-content-center tab-accessorize">
                     <div class="display-flex flex-wrap">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0)">
@@ -243,7 +239,7 @@
                     </div>
                     <a href="javascript:;">ACCESSORIZE</a>
                 </li>
-                <li class="display-flex align-items-center tab-summary">
+                <li class="display-flex align-items-center justify-content-center tab-summary">
                     <div class="display-flex flex-wrap">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M22.7879 5.80957H8.59152C8.26484 5.80957 8 6.07441 8 6.40109V25.4085C8 25.7352 8.26484 26 8.59152 26H22.7879C23.1146 26 23.3795 25.7352 23.3795 25.4085V6.40109C23.3795 6.07441 23.1146 5.80957 22.7879 5.80957ZM13.3235 6.99261H18.0559V7.58412C18.0559 7.91029 17.8014 8.17564 17.4887 8.17564H13.8907C13.5779 8.17564 13.3235 7.91029 13.3235 7.58412V6.99261H13.3235ZM22.1964 24.817H9.18304V6.99261H12.1405V7.58412C12.1405 8.56261 12.9256 9.35868 13.8908 9.35868H17.4887C18.4538 9.35868 19.2389 8.56261 19.2389 7.58412V6.99261H22.1964V24.817Z" fill="#3B3938"/>
