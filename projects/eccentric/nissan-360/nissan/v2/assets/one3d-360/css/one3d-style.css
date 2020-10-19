@@ -1369,18 +1369,29 @@ body {
   .one3d-view-ar{
     display: none;
   }
+
+  .one3d-toggle-view-box-interior {
+      display: none;
+  }
+
+  .one3d-toggle-view .icon-close {
+      width: 40px;
+      height: 40px;
+  }
 }
 
 @media only screen and (max-width: 575px) {
     .one3d-toggle-color {
-        width: 90%;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        background-color: #fff;
+        border-top: 1px solid #dfdfdf;
         overflow-y: hidden;
     }
 
     .one3d-toggle-color .one3d-toggle-color-options {
         width: 370px;
     }
-
-    
 }
 
