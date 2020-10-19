@@ -119,4 +119,8 @@ $(function() {
             scrollTop: $(this).position().top + "px"
         }, 500);
     });
+
+    $(".go-to-next-step").on("click", function() {
+        $(".main-tabs-container > ul > li.selected").next("li").click();
+    })
 });
