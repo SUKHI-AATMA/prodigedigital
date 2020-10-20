@@ -219,7 +219,7 @@ section.sec-approach-bn{
 
 
 section.sec-approach-tab{
-    padding: 42px 0px 0;
+    padding: 30px 0px 0;
     z-index: 55;
     
     .container{
@@ -359,7 +359,7 @@ section.sec-approach-tab{
         position: relative;
         z-index: 3;
         .tab-content {
-            padding-top: 48px;
+            padding-top: 32px;
             display: none;
 
             &.active {
@@ -436,7 +436,8 @@ section.sec-approach-tab{
                 .core-tabs{
                     display: flex;
                     justify-content: space-between;
-                    padding: 0 60px 0 125px;
+                    // padding: 0 60px 0 125px;
+                    padding: 0 0px 0 125px;
 
                     .col{
                         max-width: 530px;
@@ -812,6 +813,10 @@ section.sec-approach-tab{
             padding-bottom: 32px;
         }
     }
+
+    section.sec-approach-tab .tab-container .tab-content{
+        padding-top: 1240px;
+    } 
 
 }
 

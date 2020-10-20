@@ -263,6 +263,12 @@ button.mfp-close{
 .our-approach-main{
     .dots-line-wrap{
         width: 144px;
+
+        ul.ul-line{
+            span.line{
+                background: url(../../images/about/line.png) no-repeat center;
+            }
+        }
     }
 }
 .dots-line-wrap{
@@ -423,6 +429,9 @@ button.mfp-close{
             -o-transition: 50ms ease-out;  
             width: 160px;
 
+            display: table-cell;
+            vertical-align: middle;
+
             &.width-168{
                 width: 168px;
             }
@@ -443,7 +452,7 @@ button.mfp-close{
                 cursor: pointer;
                 @include transition(.3s ease-in-out);
                 // padding: 0 20px 20px;
-                padding: 0 14px 20px;
+                padding: 0 14px 22px;
                 display: block;
                 text-align: center;
             }
@@ -613,7 +622,7 @@ button.mfp-close{
         }
     }
     .banner-circle .circle-container{
-        bottom: -52px;
+        bottom: -40px;
     }
     .banner-circle .circle-container .circle-line-wrap{
         right: -14px;
@@ -785,7 +794,7 @@ button.mfp-close{
     }
     
     .banner-circle .circle-container{
-        bottom: -50px;
+        bottom: -38px;
     }
     .banner-circle .circle-container .circle-line-wrap .circle-wrap .Oval_1{
         padding-top: 5px;
