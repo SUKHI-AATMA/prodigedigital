@@ -951,6 +951,10 @@ body {
     display: none;
 }
 
+.device-tooltip-content {
+    display: none;
+}
+
 @media only screen and (max-width: 1024px) {
     .one3d-main-section {
         margin-top: 131px;
@@ -988,6 +992,16 @@ body {
         line-height: 11px;
         font-family: 'Nissan Brand';
         border: none;
+    }
+
+    .device-tooltip-content {
+        display: flex;
+        width: 300px;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 0;
+        justify-content: center;
+        font-weight: bold;
     }
 }
 
@@ -1371,12 +1385,15 @@ body {
   .one3d-loader-logo{
     width: 133px;
   }
-  .one3d-toggle-color-options{
+  .one3d-toggle-color-options {
+      overflow: auto;
+  }
+  .one3d-toggle-color-options ul {
     width: 520px;
   }
   .one3d-toggle-color{
     transform: translateX(0);
-    overflow-x: auto;
+    /* overflow-x: auto; */
     max-width: initial !important;
   }
   .one3d-view-ar{
@@ -1398,10 +1415,10 @@ body {
         bottom: 0;
         background-color: #fff;
         border-top: 1px solid #dfdfdf;
-        overflow-y: hidden;
+        /* overflow-y: hidden; */
     }
 
-    .one3d-toggle-color .one3d-toggle-color-options {
+    .one3d-toggle-color .one3d-toggle-color-options ul {
         width: 370px;
         margin: 0 auto;
     }

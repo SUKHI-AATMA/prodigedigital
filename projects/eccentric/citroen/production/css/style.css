@@ -326,7 +326,8 @@ main {
   .main-content-wrapper.tab-features-content .col-1-3 h1 span {
     display: inherit; }
   .main-content-wrapper > .fixed-wrapper {
-    overflow: hidden; }
+    overflow: hidden;
+    position: relative; }
   .main-content-wrapper .col-1-3, .main-content-wrapper .col-3-3 {
     width: 310px;
     position: relative;
