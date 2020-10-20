@@ -292,7 +292,7 @@ body {
 .one3d-object-wrapper {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
     transition: 0.5s all ease;
 }
@@ -1200,11 +1200,11 @@ body {
     }
 
     .animationComplete .one3d-object-wrapper {
-        height: 93vh;
+        height: 100vh;
     }
 
     .canvas-full-height .one3d-object-wrapper {
-        height: 100%;
+        height: 100vh;
     }
 }
 
