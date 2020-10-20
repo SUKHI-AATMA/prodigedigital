@@ -615,6 +615,7 @@ function onLoadCarCompleteInterior() {
     // GA
     callGA('Loader', 'End');
     // get AR link and mount
+    $("body").addClass("animationComplete");
     UiToggle('visible');
     // getArlink('spunkyblue_blackroof');
     updatecolor('color-black-n-red', 'Flare Garnet Red & Onyx Black', 'flaregarnetred_onyxblack');
@@ -1061,6 +1062,7 @@ $(function () {
     });
     $(".interior-icon-click").click(function () {
         $(".one3d-toggle-view-box-interior").css("display", "inherit");
+        $("body").addClass("canvas-full-height");
         $(this).css("background-image", "url('" + nissanstaticfolder + "/assets/one3d-360/images/interior-selected.svg')");
         $(".one3d-toggle-color").hide();
         $(".interior-icon-click").addClass('background-color-red');
@@ -1079,6 +1081,7 @@ $(function () {
     });
     $(".exterior-icon-click").click(function () {
         $(".one3d-toggle-view-box-interior").css("display", "none");
+        $("body").removeClass("canvas-full-height");
         $(this).css("background-image", "url('" + nissanstaticfolder + "/assets/one3d-360/images/exterior-selected.svg')");
         $(".one3d-toggle-color").show();
         $(".exterior-icon-click").addClass('background-color-red');
