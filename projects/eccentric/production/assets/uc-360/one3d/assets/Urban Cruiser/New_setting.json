@@ -1,0 +1,210 @@
+{
+	"brand": "Toyota",
+	"car_name": "Urban Cruiser",
+	"email": "NO.MAIL",
+	"data": {
+		"scene": {
+			"compressTexture": true,
+			"Load": "All",
+			"showInterior": true,
+			"LoadPng": false,
+			"tss": true,
+			"camera": {
+				"type": "orbit",
+				"AutoStop": true,
+				"camKeyEvent": false,
+				"exterior": {
+					"position": [
+                        2.107,
+                        1.466,
+                        6.0
+                    ],
+                    "positionMob": [
+						2.107,
+                        1.466,
+                        7.387
+                    ],
+                    "target": [
+                        0,
+                        0.57,
+                        -1.79
+                    ],
+					"camBetaLimit": 1.5,
+					"camMinZ": 0.0,
+					"camEnablePanning": false,
+					"camZoomSpeed": 0.01,
+					"camZoomMin": 5.5,
+					"camZoomMax": 9,
+					"fov": 0.5,
+					"mobFov": 0.4,
+					"autoRotate": false,
+					"inertia": 0.8,
+					"portraidRadius": 5.5,
+					"portraidAdditionalFov": 0.5
+				},
+				"interior": {
+					"position": [
+						4.687,
+						1.063,
+						0
+					],
+					"target": [
+						0,
+						0.9,
+						-1.88
+					],
+					"camBetaLimit": 3.4,
+					"camMinZ": 0.01,
+					"camEnablePanning": false,
+					"camZoomSpeed": 0.01,
+					"camZoomMin": 0.01,
+					"camZoomMax": 0.01,
+					"fov": 1.0,
+					"mobFov": 1.3,
+					"minfov": 0.65
+				},
+				"backSeat": {
+					"position": [
+                        4.687,
+                        1.206,
+                        0
+                    ],
+                    "target": [
+                        0,
+                        0.98,
+                        -2.72
+                    ],
+                    "camBetaLimit": 3.4,
+                    "camMinZ": 0.01,
+                    "camEnablePanning": false,
+                    "camZoomSpeed": 0.01,
+                    "camZoomMin": 0.01,
+                    "camZoomMax": 0.01,
+                    "fov": "1.10",
+                    "mobFov": 1.4
+				}
+			},
+			"skyBox": {
+				"dayExterior": {
+					"enable": true,
+					"reflectionMap": "parking",
+					"reflectionMapRotationY": 170,
+					"exposure": 1.3,
+					"contrast": 2.5,
+					"hue": 30,
+					"density": 0,
+					"saturation": 0
+				},
+				"interior": {
+					"enable": true,
+					"reflectionMap": "parking",
+					"reflectionMapRotationY": 140,
+					"toneMapping":true,
+					"exposure": 1.5,
+					"contrast": 1.2,
+					"hue": 0,
+					"density": 0,
+					"saturation": 0
+				},
+				"nightExterior": {
+					"enable": false,
+					"reflectionMap": "parking",
+					"reflectionMapRotationY": 0,
+					"exposure": 3.7,
+					"contrast": 1.8,
+					"hue": 0,
+					"density": 0,
+					"saturation": 0
+				},
+				"carpaint": {
+					"enable": true,
+					"reflectionMap": "parking",
+					"reflectionMapRotationY": 0,
+					"exposure": 3.1,
+					"contrast": 1.1,
+					"hue": 30,
+					"density": 0,
+					"saturation": 0
+				},
+				"mainSkyBox": "parking",
+				"main_Rotation": 0,
+				"exposure": 18.6,
+				"contrast": 1.15
+			},
+			"Effects": {
+				"EffectsEnable": true,
+				"MultiSampleAntiAliasing": true,
+				"FXAA": true,
+				"toneMappingEnabled": false,
+				"Vignette": false,
+				"VignetteWeight": 10,
+				"glowTextureFixedSize": 512,
+				"glowkernel" : 16
+			},
+			"AutoStop": true
+		},
+		"hotspot": {
+			"exterior": {
+				"visible": false,
+				"position": [
+					-0.963,
+					0.615,
+					-1.830
+				],
+				"size": 0.5
+			},
+			"interior": {
+				"visible": false,
+				"position": [
+					-1,
+					0.63,
+					0.6
+				],
+				"size": 0.05
+			},
+			"interiorbackseat": {
+				"visible": true,
+				"position": [
+					-0.267,
+					0.690,
+					-2.878
+				],
+				"size": 0.05
+			},
+			"interiorfrontseat": {
+				"visible": true,
+				"position": [
+					-0.181,
+					0.809,
+					-2.060
+				],
+				"size": 0.075
+			},
+			"lastSeat": {
+			  "visible": true,
+			  "position": [-5.1, 1.3, 0],
+			  "size": 0.07
+			},
+			"AccSize":0.1
+		},
+		"other": {
+			"nightMat": [],
+			"hdrMat": [
+			
+			],
+			"alphaIndex": [],
+			"WindShield": [
+			
+			],
+			"defaultSeatTag": "IN_DEFAULT_SEAT",
+			"changeColorMat": {
+				"body": [
+					"URBAN_CRUISER_PM_EX_CARBODY_CARPAINT_TILE_MAT"
+				],
+				"roof": [
+					"URBAN_CRUISER_PM_EX_CARBODY_ROOF_CARPAINT_MAT"
+				]
+			}
+		}
+	}
+}
