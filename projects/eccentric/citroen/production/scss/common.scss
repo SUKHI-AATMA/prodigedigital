@@ -40,10 +40,13 @@ body {
         header {
             nav {
                 .hamburger-menu {
+                    opacity: 0;
                     display: none;
+                    
                 }
 
                 .go-back {
+                    opacity: 1;
                     display: block;
                 }
             }
@@ -161,6 +164,7 @@ main {
     & > .fixed-wrapper {
         overflow: hidden;
         position: relative;
+        height: 100%;
     }
 
     // .canvas-3d {
@@ -255,7 +259,7 @@ main {
 
                 a {
                     font-size: 1.6rem;
-                    line-height: 18px;
+                    line-height: 21px;
                     color: #9D0605;
                     background: url('../images/icon-edit.svg') no-repeat 0 0;
                     padding-left: 30px;
@@ -374,7 +378,7 @@ main {
             }
 
             .versions-container {
-                height: 490px;
+                height: 485px;
                 overflow-y: auto;
 
                 & > li {
@@ -814,7 +818,7 @@ main {
         }
 
         .cta-wrapper {
-            margin-top: 30px;
+            margin-top: 25px;
 
             &:last-child {
                 position: absolute;
@@ -1053,15 +1057,14 @@ main {
 
 .cta-wrapper {
     .cta-button {
-        font-family: 'citroenregular';
-        font-weight: bold;
+        font-family: 'citroenblack';
         font-size: 1.4rem;
         height: fit-content;
         position: relative;
         background: #9D0605;
         color: #f5f5f5;
         line-height: 17px;
-        padding: 11px 0;
+        padding: 9px 0;
         width: 100%;
         justify-content: center;
         transition: 0.5s all ease;

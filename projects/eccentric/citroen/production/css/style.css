@@ -234,8 +234,10 @@ body {
   body.with-animation .col-3-3 .flip-in-out-container {
     right: -350px; }
   body.popup-compare-visible header nav .hamburger-menu {
+    opacity: 0;
     display: none; }
   body.popup-compare-visible header nav .go-back {
+    opacity: 1;
     display: block; }
   body.popup-compare-visible .compare-wrapper {
     top: 0; }
@@ -341,7 +343,8 @@ main {
     display: inherit; }
   .main-content-wrapper > .fixed-wrapper {
     overflow: hidden;
-    position: relative; }
+    position: relative;
+    height: 100%; }
   .main-content-wrapper .col-1-3, .main-content-wrapper .col-3-3 {
     width: 310px;
     position: relative;
@@ -403,7 +406,7 @@ main {
       line-height: 26px; }
       .main-content-wrapper .col-1-3 h1 span a {
         font-size: 1.6rem;
-        line-height: 18px;
+        line-height: 21px;
         color: #9D0605;
         background: url("../images/icon-edit.svg") no-repeat 0 0;
         padding-left: 30px; }
@@ -486,7 +489,7 @@ main {
           width: 24px;
           height: 24px; }
     .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container {
-      height: 490px;
+      height: 485px;
       overflow-y: auto; }
       .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li {
         border: 1px solid #000;
@@ -710,7 +713,7 @@ main {
       .main-content-wrapper .col-3-3 .background-option-wrapper ul li input:checked ~ label:after {
         background-color: transparent; }
   .main-content-wrapper .col-3-3 .cta-wrapper {
-    margin-top: 30px; }
+    margin-top: 25px; }
     .main-content-wrapper .col-3-3 .cta-wrapper:last-child {
       position: absolute;
       bottom: 0;
@@ -818,8 +821,7 @@ main {
       color: #9D0605; }
 
 .cta-wrapper .cta-button {
-  font-family: 'citroenregular';
-  font-weight: bold;
+  font-family: 'citroenblack';
   font-size: 1.4rem;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -828,7 +830,7 @@ main {
   background: #9D0605;
   color: #f5f5f5;
   line-height: 17px;
-  padding: 11px 0;
+  padding: 9px 0;
   width: 100%;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -1022,7 +1024,10 @@ header {
     width: 30px;
     height: 40px;
     border-top: 3px solid #3B3938;
-    padding-bottom: 8px; }
+    padding-bottom: 8px;
+    -webkit-transition: 1s all ease;
+    -o-transition: 1s all ease;
+    transition: 1s all ease; }
     header nav .hamburger-menu:before, header nav .hamburger-menu:after {
       content: '';
       position: absolute;
@@ -1050,7 +1055,11 @@ header {
     color: #000;
     position: relative;
     padding-left: 20px;
-    display: none; }
+    opacity: 0;
+    display: none;
+    -webkit-transition: 1s all ease;
+    -o-transition: 1s all ease;
+    transition: 1s all ease; }
     header nav .go-back:before {
       content: '';
       position: absolute;
