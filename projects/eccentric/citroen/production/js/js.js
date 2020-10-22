@@ -110,7 +110,6 @@ $(function() {
         var $this = $(this);
         setTimeout(function() {
             $this.addClass("selected").siblings("li").removeClass("selected");
-            console.dir($this.position().left);
             $this.parents(".main-tabs-container").children("span").css("left", $this.position().left + "px");
         
             var removeLastClass = $('.main-content-wrapper').attr('class').split(' ').pop();
@@ -149,4 +148,18 @@ $(function() {
     $(".go-back").on("click", function() {
         $("body").removeClass("popup-compare-visible");
     });
+
+    $(".automobile-models-wrapper li").on("click", function() {
+        $(this).addClass("selected").siblings("li").removeClass("selected");
+    });
+
+    $(".change-model").on("click", function() {
+        $("body").addClass("popup-show");
+    });
+
+    $(".close-popup").on("click", function() {
+        $("body").removeClass("popup-show");
+    });
+
+    $(".change-model").click();
 });

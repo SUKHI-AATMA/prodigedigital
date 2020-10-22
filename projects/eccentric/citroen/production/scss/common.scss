@@ -63,6 +63,24 @@ body {
             display: none;
         }
     }
+
+    &.popup-show {
+        overflow: hidden;
+
+        main {
+            &:before {
+                height: 100%;
+                -webkit-backdrop-filter: blur(20px);
+                backdrop-filter: blur(20px);
+            }
+        }
+
+        .popup-wrapper {
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+    }
 }
 
 // input[type=radio] {
@@ -82,6 +100,20 @@ main {
     min-height: 810px;
     margin: auto auto;
     overflow: hidden;
+
+    &:before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(0, 0, 0, 0.7);
+        -webkit-backdrop-filter: blur(0);
+        backdrop-filter: blur(0);
+        z-index: 4;
+        transition: 0.5s all ease;
+    }
 }
 
 .full-width {
@@ -529,7 +561,7 @@ main {
                 margin-bottom: 24px;
 
                 p {
-                    font-family: 'citroenblack';
+                    font-family: 'citroenbold';
                     font-size: 1.2rem;
                     line-height: 13px;
                     text-align: right;
@@ -545,7 +577,7 @@ main {
                     }
 
                     span {
-                        font-family: 'citroenbold';
+                        font-family: 'citroenblack';
                         display: block;
                         font-weight: 900;
                         font-size: 2.4rem;
@@ -592,7 +624,7 @@ main {
                         .field-row {
                             margin-top: 13px;
     
-                            &:first-child {
+                            &:first-of-type {
                                 margin-top: 0;
                             }
     
@@ -1189,15 +1221,202 @@ main {
 
 .popup-wrapper {
     position: absolute;
-    top: 50%;
+    top: 100%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
     width: 690px;
     height: 507px;
     overflow: hidden;
     background-color: #fff;
-    z-index: 2;
-    display: none;
+    z-index: 4;
+    transition: 0.5s all ease;
+
+    .close-popup {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background-color: #000;
+            
+        }
+
+        &:before {
+            transform: rotate(45deg);
+        }
+ 
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    .heading {
+        font-family: 'citroenblack';
+        font-weight: 900;
+        font-size: 2.4rem;
+        line-height: 29px;
+        padding: 15px 30px;
+    }
+
+    .autmobile-model-details-wrapper {
+        border-top: 1px solid #D0CCCC;
+        flex: 1;
+
+        .col-1-2, .col-2-2 .automobile-models-wrapper {
+            padding: 20px;
+        }
+
+        .col-1-2 {
+            width: 190px;
+
+            .heading {
+                font-family: 'citroenbold';
+                font-size: 1.4rem;
+                line-height: 15px;
+                margin-bottom: 10px;
+                padding: 0;
+            }
+
+            .customized-option-wrapper {
+                .customized-option-container {
+                    padding: 0;
+
+                    &:after {
+                        display: none;
+                    }
+
+                    .customized-options {
+                        width: 100%;
+                        margin-bottom: 40px;
+
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+
+                        .field-row {
+                            margin-top: 15px;
+
+                            &:first-of-type {
+                                margin-top: 0;
+                            }
+
+                            label {
+                                order: 2;
+                                justify-content: flex-start;
+                                margin-left: 7px;
+                                color: #828282;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .col-2-2 {
+            &.automobile-models-container {
+                background-color: #f5f5f5;
+
+                .automobile-models-wrapper {
+                    padding-right: 10px;
+                    height: 398px;
+                    overflow-y: auto;
+
+                    ul {
+                        li {
+                            background-color: #fff;
+                            width: 220px;
+                            border: 1px solid #d0cccc;
+                            margin-top: 20px;
+                            padding: 10px;
+                            transition: 0.5s all ease;
+                            cursor: pointer;
+                            position: relative;
+
+                            &:first-child, &:nth-child(2) {
+                                margin-top: 0;
+                            }
+
+                            &.selected {
+                                border-color: #9D0605;
+                            }
+
+                            p {
+                                font-family: 'citroenblack';
+                                font-size: 1.4rem;
+                                line-height: 17px;
+                                text-align: center;
+                                margin-top: 5px;
+                                position: relative;
+                                z-index: 1;
+                            }
+
+                            .download-wrapper {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                background: rgba(255, 255, 255, 0.9);
+                                width: 100%;
+                                height: 100%;
+                                font-family: 'citroenbold';
+                                font-size: 1.4rem;
+                                line-height: 15px;
+                                color: #000;
+
+                                a {
+                                    color: #000;
+                                    background: url('../images/icon-download.svg') no-repeat 50% 0;
+                                    padding-top: 28px;
+                                }
+
+                                .downloading-text {
+                                    margin-bottom: 2px;
+                                }
+
+                                .downloading-time {
+                                    font-family: 'citroenregular';
+                                    font-size: 1.2rem;
+                                    text-transform: capitalize;
+                                    margin-bottom: 6px;
+                                }
+
+                                .download-progress {
+                                    background-color: #d0cccc;
+                                    height: 1px;
+                                    width: 120px;
+
+                                    span {
+                                        display: block;
+                                        background-color: #9D0605;
+                                        height: 1px;
+                                        width: 0;
+                                        transition: 0.5s all ease;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .cta-wrapper {
+                    text-align: center;
+
+                    a {
+                        font-weight: 900;
+                        font-size: 1.6rem;
+                        line-height: 19px;
+                        padding: 15px 0;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .customized-option-wrapper {
