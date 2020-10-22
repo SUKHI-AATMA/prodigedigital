@@ -1,7 +1,4 @@
-$(document).ready(function() {
-
-    
-   
+$(document).ready(function() {   
 
     // disable Scroll
     function disableScroll() {
@@ -59,7 +56,7 @@ $(document).ready(function() {
 
     if ($(window).width() < 1025) {
         $('header ul.menu > .li-link').removeClass('active');
-        $('header ul.menu > .li-link > a').on("click",function(e) {    
+        $('header ul.menu > .li-link > a, .plus').on("click",function(e) {    
             //console.log('header link');
             //e.preventDefault();
             $(this).parents("li").siblings().removeClass('active');
@@ -468,7 +465,6 @@ $(document).ready(function() {
     });
 
     if ($(window).width() < 1025) {
-
         $("ul.tabs").on("click", ".init", function() {
             $(this).closest("ul").children('li:not(.init)').toggle();
             $("ul.tabs").toggleClass('active');

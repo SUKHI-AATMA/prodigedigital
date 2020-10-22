@@ -395,14 +395,15 @@ button.mfp-close{
             width: 18px;
             height: 18px;
             display: none;
-
+            
             &.active{
                 img{
-                    transform: rotate(180deg);
+                    transform: rotate(0);
                 }
             }
 
             img{
+                transform: rotate(180deg);
                 width: 100%;
             }
         }
