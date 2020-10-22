@@ -160,6 +160,4 @@ $(function() {
     $(".close-popup").on("click", function() {
         $("body").removeClass("popup-show");
     });
-
-    $(".change-model").click();
 });
