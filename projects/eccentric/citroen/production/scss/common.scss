@@ -35,6 +35,34 @@ body {
     &.with-animation .col-3-3 .flip-in-out-container {
         right: -350px;
     }
+
+    &.popup-compare-visible {
+        header {
+            nav {
+                .hamburger-menu {
+                    opacity: 0;
+                    display: none;
+                    
+                }
+
+                .go-back {
+                    opacity: 1;
+                    display: block;
+                }
+            }
+        }
+        .compare-wrapper {
+            top: 0;
+        }
+
+        .main-content-wrapper {
+            height: calc(810px - 95px);
+        }
+
+        .main-tabs-container {
+            display: none;
+        }
+    }
 }
 
 // input[type=radio] {
@@ -118,8 +146,10 @@ main {
 .main-content-wrapper {
     background-color: #f5f5f5;
     padding: 20px 0 25px 0;
-    height: calc(810px - 151px); /* subtracted header+disclaimer+footer-tabs height */
+    height: calc(810px - 161px); /* subtracted header+disclaimer+footer-tabs height */
     position: relative;
+    transition: 0.5s all ease;
+    overflow: hidden;
 
     .content-features, .content-versions,
     .col-1-3 h1 span.content-features {
@@ -133,6 +163,8 @@ main {
 
     & > .fixed-wrapper {
         overflow: hidden;
+        position: relative;
+        height: 100%;
     }
 
     // .canvas-3d {
@@ -227,7 +259,7 @@ main {
 
                 a {
                     font-size: 1.6rem;
-                    line-height: 18px;
+                    line-height: 21px;
                     color: #9D0605;
                     background: url('../images/icon-edit.svg') no-repeat 0 0;
                     padding-left: 30px;
@@ -346,136 +378,145 @@ main {
             }
 
             .versions-container {
-                height: 490px;
+                height: 485px;
                 overflow-y: auto;
 
                 & > li {
-                    background-color: #fff;
-                    padding: 16px 20px;
-                    font-family: 'citroenregular';
-                    font-weight: bold;
                     border: 1px solid #000;
                     border-left-color: transparent;
                     border-right-color: transparent;
                     border-bottom-color: transparent;
+                    padding: 16px 20px;
                     height: 139px;
-                    position: relative;
-                    transition: 0.5s all ease;
-                    cursor: pointer;
+                }
 
-                    &:before, &:after {
-                        content: '';
-                        position: absolute;
-                    }
+                // & > li {
+                //     background-color: #fff;
+                //     padding: 16px 20px;
+                //     font-family: 'citroenregular';
+                //     font-weight: bold;
+                //     border: 1px solid #000;
+                //     border-left-color: transparent;
+                //     border-right-color: transparent;
+                //     border-bottom-color: transparent;
+                //     height: 139px;
+                //     position: relative;
+                //     transition: 0.5s all ease;
+                //     cursor: pointer;
 
-                    &:before {
-                        top: 0;
-                        left: 0;
-                        background-color: transparent;
-                        width: 5px;
-                        height: 100%;
-                        transition: 0.5s all ease;
-                    }
+                //     &:before, &:after {
+                //         content: '';
+                //         position: absolute;
+                //     }
 
-                    &:after {
-                        top: 16px;
-                        right: 9px;
-                        background: url('../images/icon-check.svg') no-repeat 0 0;
-                        width: 20px;
-                        height: 20px;
-                        opacity: 0;
-                        transition: 0.5s all ease;
-                    }
+                //     &:before {
+                //         top: 0;
+                //         left: 0;
+                //         background-color: transparent;
+                //         width: 5px;
+                //         height: 100%;
+                //         transition: 0.5s all ease;
+                //     }
 
-                    &.selected {
-                        border-color: #9D0605;
+                //     &:after {
+                //         top: 16px;
+                //         right: 9px;
+                //         background: url('../images/icon-check.svg') no-repeat 0 0;
+                //         width: 20px;
+                //         height: 20px;
+                //         opacity: 0;
+                //         transition: 0.5s all ease;
+                //     }
 
-                        &:before {
-                            background-color: #9D0605;
-                        }
+                //     &.selected {
+                //         border-color: #9D0605;
 
-                        &:after {
-                            opacity: 1;
-                        }
-                    }
+                //         &:before {
+                //             background-color: #9D0605;
+                //         }
 
-                    .heading {
-                        font-size: 2rem;
-                        line-height: 22px;
-                        margin-bottom: 7px;
-                    }
+                //         &:after {
+                //             opacity: 1;
+                //         }
+                //     }
 
-                    .price-tag {
-                        margin-bottom: 7px;
+                //     .heading {
+                //         font-size: 2rem;
+                //         line-height: 22px;
+                //         margin-bottom: 7px;
+                //     }
 
-                        & > * {
-                            margin-right: 4px;
-                        }
+                //     .price-tag {
+                //         margin-bottom: 7px;
+
+                //         & > * {
+                //             margin-right: 4px;
+                //         }
                         
-                        .discounted-price {
-                            font-size: 2rem;
-                            line-height: 22px;
-                            margin-bottom: 7px;
-                        }
+                //         .discounted-price {
+                //             font-size: 2rem;
+                //             line-height: 22px;
+                //             margin-bottom: 7px;
+                //         }
 
-                        .actual-price {
-                            font-weight: normal;
-                            font-size: 1.2rem;
-                            line-height: 15px;
-                            color: #828282;
-                            text-decoration: line-through;
-                        }
+                //         .actual-price {
+                //             font-weight: normal;
+                //             font-size: 1.2rem;
+                //             line-height: 15px;
+                //             color: #828282;
+                //             text-decoration: line-through;
+                //         }
 
-                        .discount-offered {
-                            font-weight: normal;
-                            font-size: 1.2rem;
-                            line-height: 15px;
-                            color: #9D0605;
-                        }
-                    }
+                //         .discount-offered {
+                //             font-weight: normal;
+                //             font-size: 1.2rem;
+                //             line-height: 15px;
+                //             color: #9D0605;
+                //         }
+                //     }
 
-                    .offer {
-                        background: url('../images/bg-factory-offer.svg') no-repeat 0 0;
-                        font-weight: normal;
-                        font-size: 1.2rem;
-                        line-height: 15px;
-                        color: #fff;
-                        padding: 3px 17px 6px 14px;
-                        margin-bottom: 10px;
-                    }
+                //     .offer {
+                //         background: url('../images/bg-factory-offer.svg') no-repeat 0 0;
+                //         font-weight: normal;
+                //         font-size: 1.2rem;
+                //         line-height: 15px;
+                //         color: #fff;
+                //         padding: 3px 17px 6px 14px;
+                //         margin-bottom: 10px;
+                //     }
 
-                    .automobile-variant {
-                        height: 100%;
-                        font-weight: normal;
-                        font-size: 1.4rem;
-                        line-height: 18px;
-                        color: #3B3938;
-                        padding: 3px 0;
+                //     .automobile-variant {
+                //         height: 100%;
+                //         font-weight: normal;
+                //         font-size: 1.4rem;
+                //         line-height: 18px;
+                //         color: #3B3938;
+                //         padding: 3px 0;
 
-                        & > * {
-                            position: relative;
-                            border-left: 1px solid #adadad;
-                            padding-left: 52px;
-                            margin-left: 26px;
+                //         & > * {
+                //             position: relative;
+                //             border-left: 1px solid #adadad;
+                //             padding-left: 52px;
+                //             margin-left: 26px;
 
-                            &:first-child {
-                                border-left: none;
-                                padding-left: 26px;
-                                margin-left: 0;
-                            }
-                        }
+                //             &:first-child {
+                //                 border-left: none;
+                //                 padding-left: 26px;
+                //                 margin-left: 0;
+                //             }
+                //         }
 
-                        .engine-type {
-                            background: url('../images/icon-engine-type.svg') no-repeat 0 0;
-                        }
+                //         .engine-type {
+                //             background: url('../images/icon-engine-type.svg') no-repeat 0 0;
+                //         }
 
-                        .automobile-type {
-                            background: url('../images/icon-automobile-type.svg') no-repeat 23px 0;
-                        }
-                    }
+                //         .automobile-type {
+                //             background: url('../images/icon-automobile-type.svg') no-repeat 23px 0;
+                //         }
+                //     }
 
                     
-                }
+                // }
             }
 
             
@@ -777,7 +818,7 @@ main {
         }
 
         .cta-wrapper {
-            margin-top: 30px;
+            margin-top: 25px;
 
             &:last-child {
                 position: absolute;
@@ -786,11 +827,11 @@ main {
             }
 
             .cta-button {
-                font-family: 'citroenregular';
-                font-weight: bold;
-                font-size: 1.4rem;
-                height: fit-content;
-                position: relative;
+                // font-family: 'citroenregular';
+                // font-weight: bold;
+                // font-size: 1.4rem;
+                // height: fit-content;
+                // position: relative;
 
                 &.go-to-next-step {
                     background: #9D0605;
@@ -817,6 +858,7 @@ main {
                     padding: 13px 18px 12px 58px;
                     line-height: 15px;
                     color: #000;
+                    width: fit-content;
 
                     &:after {
                         content: '';
@@ -913,6 +955,18 @@ main {
 }
 
 .main-tabs-container {
+    position: relative;
+
+    & > span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25%;
+        height: 4px;
+        background-color: #9D0605;
+        transition: 0.5s all ease;
+    }
+
     ul {
         li {
             padding: 18px 0;
@@ -920,15 +974,15 @@ main {
             position: relative;
             width: 25%;
 
-            &:before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 4px;
-                background-color: #fff;
-            }
+            // &:before {
+            //     content: '';
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 4px;
+            //     background-color: #fff;
+            // }
 
             & > div {
                 margin-right: 12px;
@@ -955,9 +1009,9 @@ main {
             }
 
             &.selected {
-                &:before {
-                    background-color: #9D0605;
-                }
+                // &:before {
+                //     background-color: #9D0605;
+                // }
 
                 & > div {
                     & > svg {
@@ -1000,6 +1054,266 @@ main {
         }
     }
 }
+
+.cta-wrapper {
+    .cta-button {
+        font-family: 'citroenblack';
+        font-size: 1.4rem;
+        height: fit-content;
+        position: relative;
+        background: #9D0605;
+        color: #f5f5f5;
+        line-height: 17px;
+        padding: 9px 0;
+        width: 100%;
+        justify-content: center;
+        transition: 0.5s all ease;
+    }
+}
+
+.compare-wrapper {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #f5f5f5;
+    padding: 20px 30px 35px 30px;
+    transition: 0.5s all ease;
+
+    .compare-column {
+        background-color: #fff;
+        padding: 15px 24px 0 24px;
+        margin-left: 20px;
+        min-width: 327px;
+        max-width: 327px;
+        border: 1px solid transparent;
+        transition: 0.5s all ease;
+        position: relative;
+        cursor: pointer;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:hover {
+            border-color: #9D0605;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 12px;
+            right: 10px;
+            background: url('../images/icon-check.svg') no-repeat 0 0;
+            width: 20px;
+            height: 20px;
+            opacity: 0;
+            transition: 0.5s all ease;
+        }
+
+        &.selected {
+            border-color: #9D0605;
+
+            &:after {
+                opacity: 1;
+            }
+
+            .cta-button {
+                background-color: #d0cccc;
+            }
+        }
+
+        .versions-container {
+            & > li {
+                margin-bottom: 16px;
+                height: 120px;
+            }
+        }
+
+        .cta-wrapper {
+            margin-bottom: 20px;
+        }
+
+        .automobile-features-wrapper {
+            padding-top: 20px;
+            font-family: 'citroenregular';
+            border-top: 1px solid #d0cccc;
+            
+            .scrollable-content-wrapper {
+                height: 410px;
+                overflow-y: auto;
+            }
+
+            .heading {
+                font-weight: 900;
+                font-size: 1.6rem;
+                line-height: 19px;
+                color: #000;
+                margin-bottom: 10px;
+
+                span {
+                    color: #9D0605;
+                }
+            }
+
+            ul {
+                li {
+                    font-size: 1.4rem;
+                    line-height: 15px;
+                    color: #3B3938;
+                    margin-top: 13px;
+                    position: relative;
+                    padding: 0 13px;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 8px;
+                        left: 0;
+                        width: 3px;
+                        height: 2px;
+                        background-color: #9D0605;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main-content-wrapper .col-1-3 .automobile-versions-wrapper, .compare-wrapper {
+    .versions-container {
+        & > li {
+            background-color: #fff;
+            font-family: 'citroenregular';
+            font-weight: bold;
+            
+            position: relative;
+            transition: 0.5s all ease;
+            cursor: pointer;
+    
+            &:before, &:after {
+                content: '';
+                position: absolute;
+            }
+    
+            &:before {
+                top: 0;
+                left: 0;
+                background-color: transparent;
+                width: 5px;
+                height: 100%;
+                transition: 0.5s all ease;
+            }
+    
+            &:after {
+                top: 16px;
+                right: 9px;
+                background: url('../images/icon-check.svg') no-repeat 0 0;
+                width: 20px;
+                height: 20px;
+                opacity: 0;
+                transition: 0.5s all ease;
+            }
+    
+            &.selected {
+                border-color: #9D0605;
+    
+                &:before {
+                    background-color: #9D0605;
+                }
+    
+                &:after {
+                    opacity: 1;
+                }
+            }
+    
+            .heading {
+                font-size: 2rem;
+                line-height: 22px;
+                margin-bottom: 7px;
+            }
+    
+            .price-tag {
+                margin-bottom: 7px;
+    
+                & > * {
+                    margin-right: 4px;
+                }
+                
+                .discounted-price {
+                    font-size: 2rem;
+                    line-height: 22px;
+                    margin-bottom: 7px;
+                }
+    
+                .actual-price {
+                    font-weight: normal;
+                    font-size: 1.2rem;
+                    line-height: 15px;
+                    color: #828282;
+                    text-decoration: line-through;
+                }
+    
+                .discount-offered {
+                    font-weight: normal;
+                    font-size: 1.2rem;
+                    line-height: 15px;
+                    color: #9D0605;
+                }
+            }
+    
+            .offer {
+                background: url('../images/bg-factory-offer.svg') no-repeat 0 0;
+                font-weight: normal;
+                font-size: 1.2rem;
+                line-height: 15px;
+                color: #fff;
+                padding: 3px 17px 6px 14px;
+                margin-bottom: 10px;
+            }
+    
+            .automobile-variant {
+                height: 100%;
+                font-weight: normal;
+                font-size: 1.4rem;
+                line-height: 18px;
+                color: #3B3938;
+                padding: 3px 0;
+    
+                & > * {
+                    position: relative;
+                    border-left: 1px solid #adadad;
+                    padding-left: 52px;
+                    margin-left: 26px;
+    
+                    &:first-child {
+                        border-left: none;
+                        padding-left: 26px;
+                        margin-left: 0;
+                    }
+                }
+    
+                .engine-type {
+                    background: url('../images/icon-engine-type.svg') no-repeat 0 0;
+                }
+    
+                .automobile-type {
+                    background: url('../images/icon-automobile-type.svg') no-repeat 23px 0;
+                }
+            }
+    
+            
+        }
+    }
+}
+
+
 
 /* page css ends */
 

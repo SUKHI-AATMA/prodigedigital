@@ -10,6 +10,7 @@ header {
             height: 40px;
             border-top: 3px solid #3B3938;
             padding-bottom: 8px;
+            transition: 1s all ease;
 
             &:before, &:after {
                 content: '';
@@ -37,6 +38,30 @@ header {
                 text-align: center;
                 font-size: 1rem;
                 color: #3B3938;
+            }
+        }
+
+        .go-back {
+            font-family: 'citroenbold';
+            font-size: 2rem;
+            line-height: 22px;
+            color: #000;
+            position: relative;
+            padding-left: 20px;
+            opacity: 0;
+            display: none;
+            transition: 1s all ease;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                border-top: 1px solid #000;
+                border-left: 1px solid #000;
+                width: 8px;
+                height: 8px;
+                transform: translateY(-50%) rotate(-45deg);
             }
         }
     }

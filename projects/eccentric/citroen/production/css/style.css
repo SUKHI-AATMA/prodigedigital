@@ -233,6 +233,18 @@ body {
     left: -350px; }
   body.with-animation .col-3-3 .flip-in-out-container {
     right: -350px; }
+  body.popup-compare-visible header nav .hamburger-menu {
+    opacity: 0;
+    display: none; }
+  body.popup-compare-visible header nav .go-back {
+    opacity: 1;
+    display: block; }
+  body.popup-compare-visible .compare-wrapper {
+    top: 0; }
+  body.popup-compare-visible .main-content-wrapper {
+    height: calc(810px - 95px); }
+  body.popup-compare-visible .main-tabs-container {
+    display: none; }
 
 input[type=checkbox] {
   -webkit-appearance: auto;
@@ -316,9 +328,13 @@ main {
 .main-content-wrapper {
   background-color: #f5f5f5;
   padding: 20px 0 25px 0;
-  height: calc(810px - 151px);
+  height: calc(810px - 161px);
   /* subtracted header+disclaimer+footer-tabs height */
-  position: relative; }
+  position: relative;
+  -webkit-transition: 0.5s all ease;
+  -o-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  overflow: hidden; }
   .main-content-wrapper .content-features, .main-content-wrapper .content-versions,
   .main-content-wrapper .col-1-3 h1 span.content-features {
     display: none; }
@@ -326,7 +342,9 @@ main {
   .main-content-wrapper.tab-features-content .col-1-3 h1 span {
     display: inherit; }
   .main-content-wrapper > .fixed-wrapper {
-    overflow: hidden; }
+    overflow: hidden;
+    position: relative;
+    height: 100%; }
   .main-content-wrapper .col-1-3, .main-content-wrapper .col-3-3 {
     width: 310px;
     position: relative;
@@ -388,7 +406,7 @@ main {
       line-height: 26px; }
       .main-content-wrapper .col-1-3 h1 span a {
         font-size: 1.6rem;
-        line-height: 18px;
+        line-height: 21px;
         color: #9D0605;
         background: url("../images/icon-edit.svg") no-repeat 0 0;
         padding-left: 30px; }
@@ -471,102 +489,15 @@ main {
           width: 24px;
           height: 24px; }
     .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container {
-      height: 490px;
+      height: 485px;
       overflow-y: auto; }
       .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li {
-        background-color: #fff;
-        padding: 16px 20px;
-        font-family: 'citroenregular';
-        font-weight: bold;
         border: 1px solid #000;
         border-left-color: transparent;
         border-right-color: transparent;
         border-bottom-color: transparent;
-        height: 139px;
-        position: relative;
-        -webkit-transition: 0.5s all ease;
-        -o-transition: 0.5s all ease;
-        transition: 0.5s all ease;
-        cursor: pointer; }
-        .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li:before, .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li:after {
-          content: '';
-          position: absolute; }
-        .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li:before {
-          top: 0;
-          left: 0;
-          background-color: transparent;
-          width: 5px;
-          height: 100%;
-          -webkit-transition: 0.5s all ease;
-          -o-transition: 0.5s all ease;
-          transition: 0.5s all ease; }
-        .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li:after {
-          top: 16px;
-          right: 9px;
-          background: url("../images/icon-check.svg") no-repeat 0 0;
-          width: 20px;
-          height: 20px;
-          opacity: 0;
-          -webkit-transition: 0.5s all ease;
-          -o-transition: 0.5s all ease;
-          transition: 0.5s all ease; }
-        .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li.selected {
-          border-color: #9D0605; }
-          .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li.selected:before {
-            background-color: #9D0605; }
-          .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li.selected:after {
-            opacity: 1; }
-        .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .heading {
-          font-size: 2rem;
-          line-height: 22px;
-          margin-bottom: 7px; }
-        .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .price-tag {
-          margin-bottom: 7px; }
-          .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .price-tag > * {
-            margin-right: 4px; }
-          .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .price-tag .discounted-price {
-            font-size: 2rem;
-            line-height: 22px;
-            margin-bottom: 7px; }
-          .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .price-tag .actual-price {
-            font-weight: normal;
-            font-size: 1.2rem;
-            line-height: 15px;
-            color: #828282;
-            text-decoration: line-through; }
-          .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .price-tag .discount-offered {
-            font-weight: normal;
-            font-size: 1.2rem;
-            line-height: 15px;
-            color: #9D0605; }
-        .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .offer {
-          background: url("../images/bg-factory-offer.svg") no-repeat 0 0;
-          font-weight: normal;
-          font-size: 1.2rem;
-          line-height: 15px;
-          color: #fff;
-          padding: 3px 17px 6px 14px;
-          margin-bottom: 10px; }
-        .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .automobile-variant {
-          height: 100%;
-          font-weight: normal;
-          font-size: 1.4rem;
-          line-height: 18px;
-          color: #3B3938;
-          padding: 3px 0; }
-          .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .automobile-variant > * {
-            position: relative;
-            border-left: 1px solid #adadad;
-            padding-left: 52px;
-            margin-left: 26px; }
-            .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .automobile-variant > *:first-child {
-              border-left: none;
-              padding-left: 26px;
-              margin-left: 0; }
-          .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .automobile-variant .engine-type {
-            background: url("../images/icon-engine-type.svg") no-repeat 0 0; }
-          .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .automobile-variant .automobile-type {
-            background: url("../images/icon-automobile-type.svg") no-repeat 23px 0; }
+        padding: 16px 20px;
+        height: 139px; }
   .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .accessories-price {
     margin-bottom: 24px; }
     .main-content-wrapper .col-3-3 .automobile-accessories-wrapper .accessories-price p {
@@ -782,53 +713,48 @@ main {
       .main-content-wrapper .col-3-3 .background-option-wrapper ul li input:checked ~ label:after {
         background-color: transparent; }
   .main-content-wrapper .col-3-3 .cta-wrapper {
-    margin-top: 30px; }
+    margin-top: 25px; }
     .main-content-wrapper .col-3-3 .cta-wrapper:last-child {
       position: absolute;
       bottom: 0;
       right: 0; }
-    .main-content-wrapper .col-3-3 .cta-wrapper .cta-button {
-      font-family: 'citroenregular';
-      font-weight: bold;
-      font-size: 1.4rem;
-      height: -webkit-fit-content;
-      height: -moz-fit-content;
-      height: fit-content;
-      position: relative; }
-      .main-content-wrapper .col-3-3 .cta-wrapper .cta-button.go-to-next-step {
-        background: #9D0605;
-        color: #f5f5f5;
-        line-height: 17px;
-        padding: 15px 60px 15px 25px; }
-        .main-content-wrapper .col-3-3 .cta-wrapper .cta-button.go-to-next-step:after {
-          content: '';
-          position: absolute;
-          top: 50%;
-          right: 30px;
-          width: 8px;
-          height: 8px;
-          border-top: 2px solid #fff;
-          border-right: 2px solid #fff;
-          -webkit-transform: translateY(-50%) rotate(45deg);
-          -ms-transform: translateY(-50%) rotate(45deg);
-          transform: translateY(-50%) rotate(45deg); }
-      .main-content-wrapper .col-3-3 .cta-wrapper .cta-button.compare-btn {
-        border: 1px solid #d0cccc;
-        background: #fff;
-        padding: 13px 18px 12px 58px;
-        line-height: 15px;
-        color: #000; }
-        .main-content-wrapper .col-3-3 .cta-wrapper .cta-button.compare-btn:after {
-          content: '';
-          position: absolute;
-          top: 50%;
-          left: 14px;
-          width: 30px;
-          height: 30px;
-          -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-          background: url("../images/icon-compare.svg") no-repeat 0 0; }
+    .main-content-wrapper .col-3-3 .cta-wrapper .cta-button.go-to-next-step {
+      background: #9D0605;
+      color: #f5f5f5;
+      line-height: 17px;
+      padding: 15px 60px 15px 25px; }
+      .main-content-wrapper .col-3-3 .cta-wrapper .cta-button.go-to-next-step:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        -webkit-transform: translateY(-50%) rotate(45deg);
+        -ms-transform: translateY(-50%) rotate(45deg);
+        transform: translateY(-50%) rotate(45deg); }
+    .main-content-wrapper .col-3-3 .cta-wrapper .cta-button.compare-btn {
+      border: 1px solid #d0cccc;
+      background: #fff;
+      padding: 13px 18px 12px 58px;
+      line-height: 15px;
+      color: #000;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content; }
+      .main-content-wrapper .col-3-3 .cta-wrapper .cta-button.compare-btn:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 14px;
+        width: 30px;
+        height: 30px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        background: url("../images/icon-compare.svg") no-repeat 0 0; }
   .main-content-wrapper .color-variant-container {
     position: relative;
     z-index: 2; }
@@ -842,55 +768,249 @@ main {
   padding-top: 2px;
   padding-bottom: 2px; }
 
-.main-tabs-container ul li {
-  padding: 18px 0;
-  cursor: pointer;
-  position: relative;
-  width: 25%; }
-  .main-tabs-container ul li:before {
-    content: '';
+.main-tabs-container {
+  position: relative; }
+  .main-tabs-container > span {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 25%;
     height: 4px;
-    background-color: #fff; }
-  .main-tabs-container ul li > div {
-    margin-right: 12px;
-    width: 30px;
-    height: 30px;
-    overflow: hidden; }
-    .main-tabs-container ul li > div > svg {
-      -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-      transform: translateY(0);
-      -webkit-transition: 0.5s all ease;
-      -o-transition: 0.5s all ease;
-      transition: 0.5s all ease; }
-  .main-tabs-container ul li a {
-    font-family: 'citroenblack';
-    font-weight: 900;
-    font-size: 2rem;
-    line-height: 24px;
-    color: #3B3938;
-    height: 30px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    background-color: #9D0605;
     -webkit-transition: 0.5s all ease;
     -o-transition: 0.5s all ease;
     transition: 0.5s all ease; }
-  .main-tabs-container ul li.selected:before {
-    background-color: #9D0605; }
-  .main-tabs-container ul li.selected > div > svg {
-    -webkit-transform: translateY(-30px);
-    -ms-transform: translateY(-30px);
-    transform: translateY(-30px); }
-  .main-tabs-container ul li.selected a {
-    color: #9D0605; }
+  .main-tabs-container ul li {
+    padding: 18px 0;
+    cursor: pointer;
+    position: relative;
+    width: 25%; }
+    .main-tabs-container ul li > div {
+      margin-right: 12px;
+      width: 30px;
+      height: 30px;
+      overflow: hidden; }
+      .main-tabs-container ul li > div > svg {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-transition: 0.5s all ease;
+        -o-transition: 0.5s all ease;
+        transition: 0.5s all ease; }
+    .main-tabs-container ul li a {
+      font-family: 'citroenblack';
+      font-weight: 900;
+      font-size: 2rem;
+      line-height: 24px;
+      color: #3B3938;
+      height: 30px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-transition: 0.5s all ease;
+      -o-transition: 0.5s all ease;
+      transition: 0.5s all ease; }
+    .main-tabs-container ul li.selected > div > svg {
+      -webkit-transform: translateY(-30px);
+      -ms-transform: translateY(-30px);
+      transform: translateY(-30px); }
+    .main-tabs-container ul li.selected a {
+      color: #9D0605; }
+
+.cta-wrapper .cta-button {
+  font-family: 'citroenblack';
+  font-size: 1.4rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  background: #9D0605;
+  color: #f5f5f5;
+  line-height: 17px;
+  padding: 9px 0;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 0.5s all ease;
+  -o-transition: 0.5s all ease;
+  transition: 0.5s all ease; }
+
+.compare-wrapper {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: #f5f5f5;
+  padding: 20px 30px 35px 30px;
+  -webkit-transition: 0.5s all ease;
+  -o-transition: 0.5s all ease;
+  transition: 0.5s all ease; }
+  .compare-wrapper .compare-column {
+    background-color: #fff;
+    padding: 15px 24px 0 24px;
+    margin-left: 20px;
+    min-width: 327px;
+    max-width: 327px;
+    border: 1px solid transparent;
+    -webkit-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    position: relative;
+    cursor: pointer; }
+    .compare-wrapper .compare-column:first-child {
+      margin-left: 0; }
+    .compare-wrapper .compare-column:hover {
+      border-color: #9D0605; }
+    .compare-wrapper .compare-column:after {
+      content: '';
+      position: absolute;
+      top: 12px;
+      right: 10px;
+      background: url("../images/icon-check.svg") no-repeat 0 0;
+      width: 20px;
+      height: 20px;
+      opacity: 0;
+      -webkit-transition: 0.5s all ease;
+      -o-transition: 0.5s all ease;
+      transition: 0.5s all ease; }
+    .compare-wrapper .compare-column.selected {
+      border-color: #9D0605; }
+      .compare-wrapper .compare-column.selected:after {
+        opacity: 1; }
+      .compare-wrapper .compare-column.selected .cta-button {
+        background-color: #d0cccc; }
+    .compare-wrapper .compare-column .versions-container > li {
+      margin-bottom: 16px;
+      height: 120px; }
+    .compare-wrapper .compare-column .cta-wrapper {
+      margin-bottom: 20px; }
+    .compare-wrapper .compare-column .automobile-features-wrapper {
+      padding-top: 20px;
+      font-family: 'citroenregular';
+      border-top: 1px solid #d0cccc; }
+      .compare-wrapper .compare-column .automobile-features-wrapper .scrollable-content-wrapper {
+        height: 410px;
+        overflow-y: auto; }
+      .compare-wrapper .compare-column .automobile-features-wrapper .heading {
+        font-weight: 900;
+        font-size: 1.6rem;
+        line-height: 19px;
+        color: #000;
+        margin-bottom: 10px; }
+        .compare-wrapper .compare-column .automobile-features-wrapper .heading span {
+          color: #9D0605; }
+      .compare-wrapper .compare-column .automobile-features-wrapper ul li {
+        font-size: 1.4rem;
+        line-height: 15px;
+        color: #3B3938;
+        margin-top: 13px;
+        position: relative;
+        padding: 0 13px; }
+        .compare-wrapper .compare-column .automobile-features-wrapper ul li:first-child {
+          margin-top: 0; }
+        .compare-wrapper .compare-column .automobile-features-wrapper ul li:before {
+          content: '';
+          position: absolute;
+          top: 8px;
+          left: 0;
+          width: 3px;
+          height: 2px;
+          background-color: #9D0605; }
+
+.main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li, .compare-wrapper .versions-container > li {
+  background-color: #fff;
+  font-family: 'citroenregular';
+  font-weight: bold;
+  position: relative;
+  -webkit-transition: 0.5s all ease;
+  -o-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  cursor: pointer; }
+  .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li:before, .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li:after, .compare-wrapper .versions-container > li:before, .compare-wrapper .versions-container > li:after {
+    content: '';
+    position: absolute; }
+  .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li:before, .compare-wrapper .versions-container > li:before {
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    width: 5px;
+    height: 100%;
+    -webkit-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    transition: 0.5s all ease; }
+  .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li:after, .compare-wrapper .versions-container > li:after {
+    top: 16px;
+    right: 9px;
+    background: url("../images/icon-check.svg") no-repeat 0 0;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    -webkit-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    transition: 0.5s all ease; }
+  .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li.selected, .compare-wrapper .versions-container > li.selected {
+    border-color: #9D0605; }
+    .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li.selected:before, .compare-wrapper .versions-container > li.selected:before {
+      background-color: #9D0605; }
+    .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li.selected:after, .compare-wrapper .versions-container > li.selected:after {
+      opacity: 1; }
+  .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .heading, .compare-wrapper .versions-container > li .heading {
+    font-size: 2rem;
+    line-height: 22px;
+    margin-bottom: 7px; }
+  .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .price-tag, .compare-wrapper .versions-container > li .price-tag {
+    margin-bottom: 7px; }
+    .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .price-tag > *, .compare-wrapper .versions-container > li .price-tag > * {
+      margin-right: 4px; }
+    .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .price-tag .discounted-price, .compare-wrapper .versions-container > li .price-tag .discounted-price {
+      font-size: 2rem;
+      line-height: 22px;
+      margin-bottom: 7px; }
+    .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .price-tag .actual-price, .compare-wrapper .versions-container > li .price-tag .actual-price {
+      font-weight: normal;
+      font-size: 1.2rem;
+      line-height: 15px;
+      color: #828282;
+      text-decoration: line-through; }
+    .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .price-tag .discount-offered, .compare-wrapper .versions-container > li .price-tag .discount-offered {
+      font-weight: normal;
+      font-size: 1.2rem;
+      line-height: 15px;
+      color: #9D0605; }
+  .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .offer, .compare-wrapper .versions-container > li .offer {
+    background: url("../images/bg-factory-offer.svg") no-repeat 0 0;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 15px;
+    color: #fff;
+    padding: 3px 17px 6px 14px;
+    margin-bottom: 10px; }
+  .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .automobile-variant, .compare-wrapper .versions-container > li .automobile-variant {
+    height: 100%;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 18px;
+    color: #3B3938;
+    padding: 3px 0; }
+    .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .automobile-variant > *, .compare-wrapper .versions-container > li .automobile-variant > * {
+      position: relative;
+      border-left: 1px solid #adadad;
+      padding-left: 52px;
+      margin-left: 26px; }
+      .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .automobile-variant > *:first-child, .compare-wrapper .versions-container > li .automobile-variant > *:first-child {
+        border-left: none;
+        padding-left: 26px;
+        margin-left: 0; }
+    .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .automobile-variant .engine-type, .compare-wrapper .versions-container > li .automobile-variant .engine-type {
+      background: url("../images/icon-engine-type.svg") no-repeat 0 0; }
+    .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li .automobile-variant .automobile-type, .compare-wrapper .versions-container > li .automobile-variant .automobile-type {
+      background: url("../images/icon-automobile-type.svg") no-repeat 23px 0; }
 
 /* page css ends */
 header {
@@ -904,7 +1024,10 @@ header {
     width: 30px;
     height: 40px;
     border-top: 3px solid #3B3938;
-    padding-bottom: 8px; }
+    padding-bottom: 8px;
+    -webkit-transition: 1s all ease;
+    -o-transition: 1s all ease;
+    transition: 1s all ease; }
     header nav .hamburger-menu:before, header nav .hamburger-menu:after {
       content: '';
       position: absolute;
@@ -925,3 +1048,27 @@ header {
       text-align: center;
       font-size: 1rem;
       color: #3B3938; }
+  header nav .go-back {
+    font-family: 'citroenbold';
+    font-size: 2rem;
+    line-height: 22px;
+    color: #000;
+    position: relative;
+    padding-left: 20px;
+    opacity: 0;
+    display: none;
+    -webkit-transition: 1s all ease;
+    -o-transition: 1s all ease;
+    transition: 1s all ease; }
+    header nav .go-back:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      border-top: 1px solid #000;
+      border-left: 1px solid #000;
+      width: 8px;
+      height: 8px;
+      -webkit-transform: translateY(-50%) rotate(-45deg);
+      -ms-transform: translateY(-50%) rotate(-45deg);
+      transform: translateY(-50%) rotate(-45deg); }
