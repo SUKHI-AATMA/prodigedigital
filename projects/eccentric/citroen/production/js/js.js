@@ -40,8 +40,19 @@ $(function() {
 
     $(".automobile-features-wrapper li").eq(1).click();
 
+    if($(".exterior-interior-view").find("input[type=radio]:checked").val() == "INTERIOR") {
+        $(".exterior-interior-view").addClass("last-option-selected");
+    }
+
     $(".toggle-option-wrapper.vertical-aligned input[type=radio]").on("click", function() {
         $(this).parents(".field-row").index() == 1 ? $(this).parents(".toggle-option-container").addClass("last-option-selected") : $(this).parents(".toggle-option-container").removeClass("last-option-selected");
+
+        if($(this).val() == "INTERIOR") {
+            $(".front-back-view").show();
+        }
+        else if($(this).val() == "EXTERIOR") {
+            $(".front-back-view").hide();
+        }
     });
 
     $(".toggle-switch").on("click", function() {
@@ -49,24 +60,25 @@ $(function() {
     });
 
     $(".customized-options .field-row > span").on("click", function() {
-        var $this = $(this);
+        $(this).siblings("label").click();
+        // var $this = $(this);
         
-        if($("#" + $this.parents(".field-row").find("input").attr("id")).prop("checked")) {
-            return false;
-        }
+        // if($("#" + $this.parents(".field-row").find("input").attr("id")).prop("checked")) {
+        //     return false;
+        // }
 
-        $this.parents(".customized-options.select-one-option").find(".field-row").each(function() {
-            if($(this).find("input").is(":checked")) {
-                $(this).find("input").prop("checked", false);
-            }
-        });
+        // $this.parents(".customized-options.select-one-option").find(".field-row").each(function() {
+        //     if($(this).find("input").is(":checked")) {
+        //         $(this).find("input").prop("checked", false);
+        //     }
+        // });
         
-        $(this).parents(".field-row").find("input").prop("checked", true);
+        //$(this).parents(".field-row").find("input").prop("checked", true);
     });
 
-    $(".customized-options .field-row > label").on("click", function() {
-        $(this).siblings("span").click();
-    })
+    // $(".customized-options .field-row > label").on("click", function() {
+    //     $(this).siblings("span").click();
+    // })
 
     var colorVariants = [
         "color-variant-1.svg",
@@ -130,7 +142,7 @@ $(function() {
         $(this).addClass("selected").siblings(".compare-column").removeClass("selected");
     });
 
-    $(".compare-btn").on("click", function() {
+    $(".automobile-versions-wrapper .heading .info").on("click", function() {
         $("body").addClass("popup-compare-visible");
     });
 

@@ -529,7 +529,7 @@ main {
                 margin-bottom: 24px;
 
                 p {
-                    font-family: 'citroenbold';
+                    font-family: 'citroenblack';
                     font-size: 1.2rem;
                     line-height: 13px;
                     text-align: right;
@@ -545,6 +545,7 @@ main {
                     }
 
                     span {
+                        font-family: 'citroenbold';
                         display: block;
                         font-weight: 900;
                         font-size: 2.4rem;
@@ -656,101 +657,101 @@ main {
             }
         }
 
-        .customized-option-wrapper {
-            margin-bottom: 20px;
+        // .customized-option-wrapper {
+        //     margin-bottom: 20px;
 
-            .customized-option-container {
-                padding-top: 12px;
-                padding-bottom: 20px;
-                position: relative;
+        //     .customized-option-container {
+        //         padding-top: 12px;
+        //         padding-bottom: 20px;
+        //         position: relative;
 
-                &:after {
-                    content: '';
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    width: 60%;
-                    height: 1px;
-                    background-color: #D0CCCC;
-                }
+        //         &:after {
+        //             content: '';
+        //             position: absolute;
+        //             bottom: 0;
+        //             right: 0;
+        //             width: 60%;
+        //             height: 1px;
+        //             background-color: #D0CCCC;
+        //         }
 
-                & > .heading {
-                    font-family: 'citroenbold';
-                    font-size: 1.4rem;
-                    line-height: 15px;
-                }
+        //         & > .heading {
+        //             font-family: 'citroenbold';
+        //             font-size: 1.4rem;
+        //             line-height: 15px;
+        //         }
 
-                .customized-options {
-                    .field-row {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        margin-top: 20px;
+        //         .customized-options {
+        //             .field-row {
+        //                 display: flex;
+        //                 justify-content: space-between;
+        //                 align-items: center;
+        //                 margin-top: 20px;
     
-                        input[type=checkbox], label {
-                            display: flex;
-                        }
+        //                 input[type=checkbox], label {
+        //                     display: flex;
+        //                 }
     
-                        input[type=checkbox] {
-                            display: none;
-                        }
+        //                 input[type=checkbox] {
+        //                     display: none;
+        //                 }
     
-                        label {
-                            font-family: 'citroenbold';
-                            font-size: 1.6rem;
-                            line-height: 18px;
-                            color: #3B3938;
-                            width: 60%;
-                            justify-content: flex-end;
-                            margin-right: 15px;
-                            cursor: pointer;
-                        }
+        //                 label {
+        //                     font-family: 'citroenbold';
+        //                     font-size: 1.6rem;
+        //                     line-height: 18px;
+        //                     color: #3B3938;
+        //                     width: 60%;
+        //                     justify-content: flex-end;
+        //                     margin-right: 15px;
+        //                     cursor: pointer;
+        //                 }
     
-                        span {
-                            display: block;
-                            width: 48px;
-                            height: 24px;
-                            background: #E4E2E2;
-                            border: 2px solid #CBC7C6;
-                            box-sizing: border-box;
-                            border-radius: 40px;
-                            position: relative;
-                            transition: 0.3s all ease;
-                            cursor: pointer;
+        //                 span {
+        //                     display: block;
+        //                     width: 48px;
+        //                     height: 24px;
+        //                     background: #E4E2E2;
+        //                     border: 2px solid #CBC7C6;
+        //                     box-sizing: border-box;
+        //                     border-radius: 40px;
+        //                     position: relative;
+        //                     transition: 0.3s all ease;
+        //                     cursor: pointer;
     
-                            &:after {
-                                content: '';
-                                position: absolute;
-                                left: calc(100% - 22px);
-                                top: -2px;
-                                width: 24px;
-                                height: 24px;
-                                background: #fff;
-                                border: 2px solid #D0CCCC;
-                                border-radius: 50%;
-                                transition: 0.3s all ease;
-                            }
-                        }
+        //                     &:after {
+        //                         content: '';
+        //                         position: absolute;
+        //                         left: calc(100% - 22px);
+        //                         top: -2px;
+        //                         width: 24px;
+        //                         height: 24px;
+        //                         background: #fff;
+        //                         border: 2px solid #D0CCCC;
+        //                         border-radius: 50%;
+        //                         transition: 0.3s all ease;
+        //                     }
+        //                 }
     
-                        input[type=checkbox] {
-                            &:checked {
-                                & ~ span {
-                                    background-color: #9D0605;
+        //                 input[type=checkbox] {
+        //                     &:checked {
+        //                         & ~ span {
+        //                             background-color: #9D0605;
             
-                                    &:after {
-                                        left: -2px;
-                                    }
-                                }
+        //                             &:after {
+        //                                 left: -2px;
+        //                             }
+        //                         }
     
-                                & ~ label {
-                                    color: #9D0605;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        //                         & ~ label {
+        //                             color: #9D0605;
+        //                         }
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
 
         .background-option-wrapper {
             .heading {
@@ -1179,6 +1180,115 @@ main {
                         width: 3px;
                         height: 2px;
                         background-color: #9D0605;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.popup-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 690px;
+    height: 507px;
+    overflow: hidden;
+    background-color: #fff;
+    z-index: 2;
+    display: none;
+}
+
+.customized-option-wrapper {
+    margin-bottom: 20px;
+
+    .customized-option-container {
+        padding-top: 12px;
+        padding-bottom: 20px;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 60%;
+            height: 1px;
+            background-color: #D0CCCC;
+        }
+
+        & > .heading {
+            font-family: 'citroenbold';
+            font-size: 1.4rem;
+            line-height: 15px;
+        }
+
+        .customized-options {
+            .field-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 20px;
+
+                input[type=checkbox], label {
+                    display: flex;
+                }
+
+                input[type=checkbox] {
+                    display: none;
+                }
+
+                label {
+                    font-family: 'citroenbold';
+                    font-size: 1.6rem;
+                    line-height: 18px;
+                    color: #3B3938;
+                    width: 60%;
+                    justify-content: flex-end;
+                    margin-right: 15px;
+                    cursor: pointer;
+                }
+
+                span {
+                    display: block;
+                    width: 48px;
+                    height: 24px;
+                    background: #E4E2E2;
+                    border: 2px solid #CBC7C6;
+                    box-sizing: border-box;
+                    border-radius: 40px;
+                    position: relative;
+                    transition: 0.3s all ease;
+                    cursor: pointer;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        left: calc(100% - 22px);
+                        top: -2px;
+                        width: 24px;
+                        height: 24px;
+                        background: #fff;
+                        border: 2px solid #D0CCCC;
+                        border-radius: 50%;
+                        transition: 0.3s all ease;
+                    }
+                }
+
+                input[type=checkbox] {
+                    &:checked {
+                        & ~ span {
+                            background-color: #9D0605;
+    
+                            &:after {
+                                left: -2px;
+                            }
+                        }
+
+                        & ~ label {
+                            color: #9D0605;
+                        }
                     }
                 }
             }

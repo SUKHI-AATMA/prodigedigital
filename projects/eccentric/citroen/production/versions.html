@@ -126,27 +126,27 @@
                                 </p>
                             </div>
                             <div class="toggle-option-wrapper vertical-aligned display-flex justify-content-end">
-                                <div class="toggle-option-container display-flex align-items-center justify-content-end">
+                                <div class="toggle-option-container display-flex align-items-center justify-content-end front-back-view">
                                     <div class="toggle-options display-flex flex-direction-column">
                                         <div class="field-row">
-                                            <input type="radio" id="front" value="FRONT" name="front-back-view" checked>
+                                            <input type="radio" id="front" value="FRONT" name="front-back-view-option" checked>
                                             <label for="front">FRONT</label>
                                         </div>
                                         <div class="field-row">
-                                            <input type="radio" id="back" value="BACK" name="front-back-view">
+                                            <input type="radio" id="back" value="BACK" name="front-back-view-option">
                                             <label for="back">BACK</label>
                                         </div>
                                     </div>
                                     <span class="toggle-switch"></span>
                                 </div>
-                                <div class="toggle-option-container display-flex align-items-center justify-content-end content-versions">
+                                <div class="toggle-option-container display-flex align-items-center justify-content-end exterior-interior-view">
                                     <div class="toggle-options display-flex flex-direction-column">
                                         <div class="field-row">
-                                            <input type="radio" id="exterior" value="EXTERIOR" name="automobile-view" checked>
+                                            <input type="radio" id="exterior" value="EXTERIOR" name="automobile-view">
                                             <label for="exterior">EXTERIOR</label>
                                         </div>
                                         <div class="field-row">
-                                            <input type="radio" id="interior" value="INTERIOR" name="automobile-view">
+                                            <input type="radio" id="interior" value="INTERIOR" name="automobile-view" checked>
                                             <label for="interior">INTERIOR</label>
                                         </div>
                                     </div>
@@ -329,6 +329,60 @@
                 </div>
             </div>
             <!-- compare screen ends -->
+            <!-- model selection screen starts -->
+            <div class="display-flex popup-wrapper">
+                <div class="display-flex full-width flex-direction-column">
+                    <p class="heading">SELECT A MODEL</p>
+                    <div class="display-flex full-width autmobile-model-details-wrapper">
+                        <div class="display-flex col-1-2">
+                            <div class="customized-option-wrapper display-flex align-items-center">
+                                <div class="customized-option-container display-flex flex-direction-column align-items-end justify-content-end full-width">
+                                    <div class="customized-options display-flex flex-direction-column">
+                                        <p class="heading">RANGE</p>
+                                        <div class="field-row">
+                                            <input type="checkbox" id="sedan" value="SEDAN" name="customized-option" checked>
+                                            <label for="sedan">SEDAN</label>
+                                            <span></span>
+                                        </div>
+                                        <div class="field-row">
+                                            <input type="checkbox" id="suv" value="SUV" name="customized-option">
+                                            <label for="suv">SUV</label>
+                                            <span></span>
+                                        </div>
+                                        <div class="field-row">
+                                            <input type="checkbox" id="hatchback" value="HATCHBACK" name="customized-option">
+                                            <label for="hatchback">HATCHBACK</label>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="customized-options display-flex flex-direction-column">
+                                        <p class="heading">FUEL TYPE</p>
+                                        <div class="field-row">
+                                            <input type="checkbox" id="petrol" value="PETROL" name="customized-option" checked>
+                                            <label for="petrol">PETROL</label>
+                                            <span></span>
+                                        </div>
+                                        <div class="field-row">
+                                            <input type="checkbox" id="diesel" value="DIESEL" name="customized-option">
+                                            <label for="diesel">DIESEL</label>
+                                            <span></span>
+                                        </div>
+                                        <div class="field-row">
+                                            <input type="checkbox" id="hybrid" value="HYBRID" name="customized-option">
+                                            <label for="hybrid">HYBRID</label>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display-flex col-2-2">
+                            abc
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- model selection screen ends -->
         </section>
         <p class="display-flex full-width justify-content-end disclaimer-text fixed-wrapper">
             ** The accessory prices shown are excluding any labour costs. | * The prices shown are ex-showroom for Maharashtra state, The car prices and information provided are only indicative.
