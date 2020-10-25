@@ -128,7 +128,7 @@ $(function() {
         }, 500);
     });
 
-    $(".main-tabs-container > ul > li").eq(2).click();
+    $(".main-tabs-container > ul > li").eq(0).click();
 
     $(".automobile-versions-wrapper > ul > li").on("click", function() {
         $(this).addClass("selected").siblings("li").removeClass("selected");
