@@ -32,13 +32,17 @@ $(function() {
     });
     /* to view in full screen mode ends */
 
-    $(".automobile-features-wrapper > ul > li").on("click", function() {
-        var $this = $(this);
+    $(".automobile-features-wrapper > ul > li span").on("click", function() {
+        var $this = $(this).parent("li");
         $this.toggleClass("accordion-open").siblings("li").removeClass("accordion-open").children("ul").slideUp();
         $this.children("ul").slideToggle('slow');
     });
 
-    $(".automobile-features-wrapper li").eq(1).click();
+    $(".automobile-features-wrapper").each(function() {
+        $(this).children("ul").children("li").eq(0).children("span").click();
+    })
+
+    //$(".automobile-features-wrapper > ul > li").eq(0).click();
 
     if($(".exterior-interior-view").find("input[type=radio]:checked").val() == "INTERIOR") {
         $(".exterior-interior-view").addClass("last-option-selected");
@@ -124,7 +128,7 @@ $(function() {
         }, 500);
     });
 
-    $(".main-tabs-container > ul > li").eq(0).click();
+    $(".main-tabs-container > ul > li").eq(2).click();
 
     $(".automobile-versions-wrapper > ul > li").on("click", function() {
         $(this).addClass("selected").siblings("li").removeClass("selected");
@@ -160,4 +164,14 @@ $(function() {
     $(".close-popup").on("click", function() {
         $("body").removeClass("popup-show");
     });
+
+    $(".cta-more-options").on("click", function() {
+        $(this).parents(".automobile-features-wrapper").addClass("display-more-options");
+        $(".all-accessories").addClass("hide-elem");
+    });
+
+    $(".more-options-container .go-back").on("click", function() {
+        $(this).parents(".automobile-features-wrapper").removeClass("display-more-options");
+        $(".all-accessories").removeClass("hide-elem");
+    })
 });
