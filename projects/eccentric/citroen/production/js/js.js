@@ -25,8 +25,6 @@
 // }
 
 $(function() {
-    alert(screen.availWidth);
-    alert(screen.availHeight);
     /* to view in full screen mode starts */
     $(".logo-cast").on("click", function() {
         var elemBody = document.getElementsByTagName("body")[0];
