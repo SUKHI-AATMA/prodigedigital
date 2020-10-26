@@ -27,6 +27,8 @@ body {
     color: #000;
     text-transform: uppercase;
     background-color: #fff;
+    height: 100vh;
+    overflow: hidden;
 
     &.with-animation .col-1-3 .flip-in-out-container {
         left: -350px;
@@ -78,6 +80,18 @@ body {
         .popup-wrapper {
             top: 50%;
             transform: translate(-50%, -50%);
+        }
+
+        &.display-change-model {
+            .autmobile-model-details-container {
+                display: block;
+            }
+        }
+
+        &.display-features {
+            .features-details-container {
+                display: block;
+            }
         }
         
     }
@@ -1399,6 +1413,11 @@ main {
     z-index: 4;
     transition: 0.5s all ease;
 
+    .autmobile-model-details-container,
+    .features-details-container {
+        display: none;
+    }
+
     .close-popup {
         position: absolute;
         top: 20px;
@@ -1583,6 +1602,12 @@ main {
                     }
                 }
             }
+        }
+    }
+
+    .features-details-container {
+        .features-model-details-wrapper {
+
         }
     }
 }
@@ -1813,10 +1838,3 @@ main {
 
 
 /* page css ends */
-
-@media only screen and (max-width: 1080px) and (min-height: 810px) {
-    body {
-        height: 100vh;
-        overflow: hidden;
-    }
-}
