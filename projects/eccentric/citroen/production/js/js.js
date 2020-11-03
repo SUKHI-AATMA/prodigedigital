@@ -63,6 +63,7 @@ $(function() {
         
         var $this = $(this);
         setTimeout(function() {
+            $("body").addClass("display-content-all");
             $this.addClass("selected").siblings("li").removeClass("selected");
             $this.parents(".main-tabs-container").children("span").css("left", $this.position().left + "px");
         
@@ -70,7 +71,8 @@ $(function() {
             if(removeLastClass.indexOf("tab-") != -1) {
                 $('.main-content-wrapper').removeClass(removeLastClass);
             }
-            $(".main-content-wrapper").addClass($this.attr("data-rel"));
+            $(".main-content-wrapper").addClass($this.attr("data-rel") + " content-all");
+            
         }, 300);
         
         setTimeout(function() {
@@ -78,7 +80,7 @@ $(function() {
         }, 500);
     });
 
-    $(document).find(".main-tabs-container > ul > li").eq(1).click();
+    //$(document).find(".main-tabs-container > ul > li").eq(0).click();
 
     $(document).on("click", ".automobile-versions-wrapper > ul > li", function() {
         $(this).addClass("selected").siblings("li").removeClass("selected");
@@ -207,5 +209,32 @@ $(function() {
                 $(this).addClass("disabled");
             }
         }
+    });
+
+    $(document).on("click", ".search-wrapper .form-wrapper .cta-button", function() {
+        if($(".search-wrapper .form-wrapper input").val() == "") {
+            return false;
+        }
+        $(".search-wrapper .form-wrapper .field-row").addClass("input-with-value");
+        $(".search-wrapper .form-wrapper input").val('9826963214');
+        $(".search-results-wrapper").slideDown();
+    });
+
+    $(document).on("click", ".search-wrapper .form-wrapper .field-row.input-with-value .remove-input-value", function() {
+        $(".search-wrapper .form-wrapper input").val('');
+        $(".search-wrapper .form-wrapper .field-row").removeClass("input-with-value");
+        $(".search-results-wrapper").slideUp();
+    });
+
+    $(document).on("click", "header .logo-cast", function() {
+        $("body").addClass("display-select-screen");
+    });
+
+    $(document).on("click", ".add-new-screen", function() {
+        $("body").addClass("add-new-screen-container");
+    });
+
+    $(document).on("click", ".add-new-screen-wrapper .cta-wrapper .cancel-screen", function() {
+        $("body").removeClass("display-select-screen add-new-screen-container");
     });
 });
