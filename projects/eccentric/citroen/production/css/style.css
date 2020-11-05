@@ -1919,6 +1919,90 @@ main {
       background: url("../images/icon-automobile-type.svg") no-repeat 23px 0; }
 
 /* page css ends */
+.tv-screens {
+  width: 3840px;
+  height: 2160px;
+  font-family: 'citroenblack';
+  color: #3B3938; }
+  .tv-screens .column-wrapper {
+    background-color: #F3F3F3; }
+    .tv-screens .column-wrapper .col-1-2 {
+      width: 2377px;
+      padding-top: 220px; }
+      .tv-screens .column-wrapper .col-1-2 .column-container {
+        margin: 0 auto;
+        width: 1300px; }
+        .tv-screens .column-wrapper .col-1-2 .column-container h1 {
+          font-size: 12rem;
+          line-height: 144px;
+          margin-bottom: 28px; }
+        .tv-screens .column-wrapper .col-1-2 .column-container h2 {
+          font-size: 5.6rem;
+          line-height: 62px;
+          margin-bottom: 165px;
+          font-family: 'citroenregular'; }
+        .tv-screens .column-wrapper .col-1-2 .column-container .video-wrapper {
+          font-family: 'citroenregular'; }
+          .tv-screens .column-wrapper .col-1-2 .column-container .video-wrapper .heading {
+            font-weight: bold;
+            font-size: 4.8rem;
+            line-height: 53px;
+            margin-bottom: 42px; }
+          .tv-screens .column-wrapper .col-1-2 .column-container .video-wrapper video {
+            width: 100%;
+            margin-bottom: 80px; }
+          .tv-screens .column-wrapper .col-1-2 .column-container .video-wrapper .steps-to-follow {
+            font-size: 3rem;
+            line-height: 38px; }
+            .tv-screens .column-wrapper .col-1-2 .column-container .video-wrapper .steps-to-follow li {
+              margin-bottom: 65px; }
+              .tv-screens .column-wrapper .col-1-2 .column-container .video-wrapper .steps-to-follow li:last-child {
+                margin-bottom: 0; }
+              .tv-screens .column-wrapper .col-1-2 .column-container .video-wrapper .steps-to-follow li > span {
+                width: 8%;
+                font-weight: bold; }
+              .tv-screens .column-wrapper .col-1-2 .column-container .video-wrapper .steps-to-follow li > p {
+                width: 92%; }
+                .tv-screens .column-wrapper .col-1-2 .column-container .video-wrapper .steps-to-follow li > p > span {
+                  font-weight: bold; }
+                .tv-screens .column-wrapper .col-1-2 .column-container .video-wrapper .steps-to-follow li > p .icon-cast-welcome-screen {
+                  display: inline-block;
+                  margin: 0 12px 0 5px;
+                  -webkit-transform: translateY(25%);
+                  -ms-transform: translateY(25%);
+                  transform: translateY(25%); }
+    .tv-screens .column-wrapper .col-2-2 {
+      width: 1463px;
+      background-color: #D1D1D1;
+      padding-top: 90px; }
+      .tv-screens .column-wrapper .col-2-2 .column-container {
+        width: 877px;
+        margin: 0 auto; }
+        .tv-screens .column-wrapper .col-2-2 .column-container .logo-citroen {
+          margin-bottom: 105px; }
+        .tv-screens .column-wrapper .col-2-2 .column-container .qr-code-wrapper {
+          padding: 102px;
+          background: url("../images/qr-code-frame.svg") no-repeat 0 0 #fff;
+          background-size: contain;
+          margin-bottom: 130px; }
+        .tv-screens .column-wrapper .col-2-2 .column-container .ip-details {
+          font-family: 'citroenblack';
+          font-size: 6.4rem;
+          line-height: 77px;
+          margin-bottom: 24px; }
+          .tv-screens .column-wrapper .col-2-2 .column-container .ip-details > span {
+            padding: 3px 0;
+            display: inline-block; }
+            .tv-screens .column-wrapper .col-2-2 .column-container .ip-details > span:first-child {
+              border-right: 5px solid #3B3938;
+              padding-right: 30px;
+              margin-right: 30px; }
+        .tv-screens .column-wrapper .col-2-2 .column-container .scan-text {
+          font-family: 'citroenregular';
+          font-size: 5rem;
+          line-height: 63px;
+          text-align: center; }
+
 header {
   height: -webkit-fit-content;
   height: -moz-fit-content;

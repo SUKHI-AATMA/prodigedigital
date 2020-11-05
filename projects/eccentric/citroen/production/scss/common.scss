@@ -2869,3 +2869,133 @@ main {
 
 
 /* page css ends */
+
+.tv-screens {
+    width: 3840px;
+    height: 2160px;
+    font-family: 'citroenblack';
+    color: #3B3938;
+
+    .column-wrapper {
+        background-color: #F3F3F3;
+
+        .col-1-2 {
+            width: 2377px;
+            padding-top: 220px;
+
+            .column-container {
+                margin: 0 auto;
+                width: 1300px;
+
+                h1 {
+                    font-size: 12rem;
+                    line-height: 144px;
+                    margin-bottom: 28px;
+                }
+
+                h2 {
+                    font-size: 5.6rem;
+                    line-height: 62px;
+                    margin-bottom: 165px;
+                    font-family: 'citroenregular';
+                }
+
+                .video-wrapper {
+                    font-family: 'citroenregular';
+
+                    .heading {
+                        font-weight: bold;
+                        font-size: 4.8rem;
+                        line-height: 53px;
+                        margin-bottom: 42px;
+                    }
+
+                    video {
+                        width: 100%;
+                        margin-bottom: 80px;
+                    }
+
+                    .steps-to-follow {
+                        font-size: 3rem;
+                        line-height: 38px;
+
+                        li {
+                            margin-bottom: 65px;
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+
+                            & > span {
+                                width: 8%;
+                                font-weight: bold;
+                            }
+
+                            & > p {
+                                width: 92%;
+
+                                & > span {
+                                    font-weight: bold;
+                                }
+
+                                .icon-cast-welcome-screen {
+                                    display: inline-block;
+                                    margin: 0 12px 0 5px;
+                                    transform: translateY(25%);
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+
+        .col-2-2 {
+            width: 1463px;
+            background-color: #D1D1D1;
+            padding-top: 90px;
+
+            .column-container {
+                width: 877px;
+                margin: 0 auto;
+
+                .logo-citroen {
+                    margin-bottom: 105px;
+                }
+
+                .qr-code-wrapper {
+                    padding: 102px;
+                    background: url('../images/qr-code-frame.svg') no-repeat 0 0 #fff;
+                    background-size: contain;
+                    margin-bottom: 130px;
+                }
+
+                .ip-details {
+                    font-family: 'citroenblack';
+                    font-size: 6.4rem;
+                    line-height: 77px;
+                    margin-bottom: 24px;
+
+                    & > span {
+                        padding: 3px 0;
+                        display: inline-block;
+
+                        &:first-child {
+                            border-right: 5px solid #3B3938;
+                            padding-right: 30px;
+                            margin-right: 30px;
+                        }
+                    }
+                }
+
+                .scan-text {
+                    font-family: 'citroenregular';
+                    font-size: 5rem;
+                    line-height: 63px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
