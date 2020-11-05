@@ -215,6 +215,8 @@ $(function() {
         if($(".search-wrapper .form-wrapper input").val() == "") {
             return false;
         }
+        
+        $(".main-content-wrapper").addClass("display-search-results");
         $(".search-wrapper .form-wrapper .field-row").addClass("input-with-value");
         $(".search-wrapper .form-wrapper input").val('9826963214');
         $(".search-results-wrapper").slideDown();
@@ -224,10 +226,17 @@ $(function() {
         $(".search-wrapper .form-wrapper input").val('');
         $(".search-wrapper .form-wrapper .field-row").removeClass("input-with-value");
         $(".search-results-wrapper").slideUp();
+        $(".main-content-wrapper").removeClass("display-search-results");
     });
 
     $(document).on("click", "header .logo-cast", function() {
-        $("body").addClass("display-select-screen");
+        !$("body").hasClass("screen-selected") ? $("body").addClass("screen-not-selected display-select-screen") : $("body").addClass("display-select-screen");
+        if($(".screen-list-wrapper").length <= 0) {
+            $("body").addClass("empty-screen-list");
+        }
+        else {
+            $("body").removeClass("empty-screen-list");
+        }
     });
 
     $(document).on("click", ".add-new-screen", function() {
@@ -235,6 +244,53 @@ $(function() {
     });
 
     $(document).on("click", ".add-new-screen-wrapper .cta-wrapper .cancel-screen", function() {
-        $("body").removeClass("display-select-screen add-new-screen-container");
+        $("body").removeClass("screen-not-selected display-select-screen add-new-screen-container empty-screen-list");
     });
+
+    $(document).on("click", ".screen-list-wrapper .delete-wrapper .icon-delete", function() {
+        $(this).parents("li").addClass("delete-this-record");
+    });
+
+    $(document).on("click", ".screen-list-wrapper .delete-wrapper .delete-confirm-box .option-cancel", function() {
+        $(this).parents("li").removeClass("delete-this-record");
+    });
+
+    $(document).on("click", ".screen-list-wrapper .delete-wrapper .delete-confirm-box .option-delete", function() {
+        $(this).parents("li").remove();
+    });
+
+    $(document).on("click", ".select-screen-wrapper .cta-wrapper .continue-screen", function() {
+        if($("body").hasClass("screen-not-selected")) {
+            return false;
+        }
+    });
+
+    $(document).on("click", ".screen-list-wrapper .screen-to-connect > a", function() {
+        if($(this).parents(".screen-list-wrapper").hasClass("connecting-wip")) {
+            return false;
+        }
+
+        displayConnectionLoader(this);
+    });
+
+    // $(document).on("click", ".screen-list-wrapper .screen-to-connect > .error-wrapper .option-retry", function() {
+    //     $(".screen-list-wrapper .screen-to-connect > a").click();
+    // });
+
+    //$("header .logo-cast").click();
 });
+
+function displayConnectionLoader(paramThis) {
+    $(paramThis).parents("li").addClass("connecting").parents(".screen-list-wrapper").addClass("connecting-wip");
+    $(paramThis).parents("li").find(".screen-to-connect > a > span:first-child > span:first-child").text("CONNECTING...");
+
+    setTimeout(function() {
+        hideConnectionLoader(paramThis);
+    }, 2000);
+}
+
+function hideConnectionLoader(paramThis) {
+    $(paramThis).parents("li").removeClass("connecting").addClass("connected").parents(".screen-list-wrapper").removeClass("connecting-wip");
+    $(paramThis).parents("li").find(".screen-to-connect > a > span:first-child > span:first-child").text("CONNECTED");
+    $("body").removeClass("screen-not-selected").addClass("screen-selected");
+}

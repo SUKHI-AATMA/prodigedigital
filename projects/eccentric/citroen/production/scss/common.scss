@@ -22,6 +22,11 @@
     font-style: normal;
 }
 
+@keyframes connecting-loader {
+    0%   { transform: translate(-50%, -50%) rotate(0deg) }
+    100% { transform: translate(-50%, -50%) rotate(360deg) }
+}
+
 body {
     font-family: 'citroenblack';
     color: #000;
@@ -132,6 +137,11 @@ body {
     &.add-new-screen-container {
         .cast-screen-wrapper {
             .select-screen-details-container {
+                .select-screen-wrapper {
+                    display: none;
+                    top: -100%;
+                }
+
                 .add-new-screen-wrapper {
                     display: inherit;
                     top: 0;
@@ -143,6 +153,67 @@ body {
         header {
             .logo-cast {
                 z-index: inherit;
+            }
+        }
+    }
+
+    &.screen-not-selected:not(.empty-screen-list) {
+        .cast-screen-wrapper {
+            .select-screen-wrapper {
+                .cta-wrapper {
+                    .cta-button {
+                        &.add-new-screen {
+                            background-color: #fff;
+                            color: #3B3938;
+        
+                            span {
+                                background-image: url('../images/icon-plus-black.svg');
+                            }
+                        }
+        
+                        &.continue-screen {
+                            background: #f1f0f0;
+                            color: #d0cccc;
+                            cursor: not-allowed;
+        
+                            span {
+                                border-top-color: #d0cccc;
+                                border-right-color: #d0cccc;                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    &.screen-selected {
+        header {
+            .logo-cast {
+                img {
+                    display: none;
+
+                    &.screen-connected {
+                        display: flex;
+                    }
+                }
+            }
+        }
+        .cast-screen-wrapper {
+            .select-screen-wrapper {
+                .cta-wrapper {
+                    .cta-button {
+                        &.add-new-screen {
+                            background-color: #fff;
+                            color: #3B3938;
+        
+                            span {
+                                background-image: url('../images/icon-plus-black.svg');
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -236,19 +307,247 @@ main {
 
                 .screen-details {
                     justify-content: flex-end;
-                    padding-right: 90px;
+                    padding: 0 90px 30px 0;
     
                     .column {
                         .description {
-                            display: inherit;
+                            display: flex;
                             color: #828282;
                         }
                     }
                 }
 
-                .cta-wrapper {
-                    margin-top: 30px;
+                .screen-list-wrapper {
+                    background-color: #fff;
+                    height: 380px;
+                    overflow: hidden;
+                    overflow-y: auto;
+
+                    &.connecting-wip {
+                        li {
+                            &:not(.connecting) {
+                                opacity: 0.2;
+                            }
+                        }
+                    }
+
+                    li {
+                        padding: 20px 32px;
+                        border-top: 1px solid #f5f5f5;
+                        position: relative;
+
+                        &:first-child {
+                            border-top-color: transparent;
+                        }
+
+                        .screen-to-connect {
+                            order: 2;
+
+                            & > a {
+                                color: #000;
+                                
+                                & > span {
+                                    font-family: 'citroenblack';
+                                    font-weight: bold;
+                                    font-size: 1.6rem;
+                                    line-height: 18px;
+                                    text-align: right;
+                                    width: fit-content;
+
+                                    &:first-child {
+                                        order: 2;
+                                        // background: url('../images/icon-monitor.svg') no-repeat 100% 0;
+                                        padding: 0 60px 0 10px;
+                                        margin-left: 10px;
+                                        position: relative;
+
+                                        & > span {
+                                            font-family: 'citroenregular';
+                                            font-size: 1.2rem;
+                                            line-height: 15px;
+                                            color: #828282;
+                                            margin-top: 4px;
+                                        }
+
+                                        &:before {
+                                            content: '';
+                                            width: 1px;
+                                            height: 20px;
+                                            background-color: rgba(0, 0, 0, 0.3);
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                        }
+
+                                        & > .icon-monitor {
+                                            position: absolute;
+                                            right: 0;
+                                            top: 0;
+                                            margin-top: 0;
+
+                                            & > svg {
+                                                fill: #d7d7d7;
+                                                transition: 0.5s all ease;
+                                            }
+
+                                            &:before {
+                                                content: '';
+                                                position: absolute;
+                                                top: 38%;
+                                                left: 50%;
+                                                background: url('../images/icon-connecting-loader.svg') no-repeat 0 0;
+                                                width: 14px;
+                                                height: 14px;
+                                                transform: translate(-50%, -50%) rotate(0deg);
+                                                opacity: 0;
+                                                transition: 0.5s all ease;
+                                            }
+
+                                        }
+                                    }
+
+                                    &.ip-address-details {
+                                        font-family: 'citroenbold';
+                                        font-size: 1.4rem;
+                                        line-height: 15px;
+                                        height: fit-content;
+                                    }
+                                }
+                            }
+
+                            & > .error-wrapper {
+                                font-family: 'citroenregular';
+                                font-size: 1.2rem;
+                                line-height: 15px;
+                                text-align: center;
+                                color: #9D0605;
+                                margin-top: 4px;
+
+                                & > .option-retry {
+                                    font-size: 1.4rem;
+                                    font-weight: bold;
+                                    margin-left: 15px;
+                                    background: url('../images/icon-refresh.svg') no-repeat 100% 50%;
+                                    padding-right: 15px;
+                                }
+                            }
+                        }
+
+                        .delete-wrapper {
+                            .icon-delete {
+                                background-color: #f5f5f5;
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 50%;
+                                position: relative;
+    
+                                &:before {
+                                    content: '';
+                                    width: 20px;
+                                    height: 20px;
+                                    background: url('../images/icon-trash.svg') no-repeat 0 0;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    transition: 0.5s all ease;
+                                }
+                            }
+    
+                            .delete-confirm-box {
+                                position: absolute;
+                                top: 0;
+                                left: -128px;
+                                width: 128px;
+                                height: 100%;
+                                background: #F1F0F0;
+                                transition: 0.5s all ease;
+
+                                & > a {
+                                    width: 50%;
+                                    height: 100%;
+                                    font-family: 'citroenregular';
+                                    font-size: 1.4rem;
+                                    line-height: 15px;
+                                    color: #3B3938;
+
+                                    &.option-delete {
+                                        background-color: #9D0605;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.delete-this-record {
+                            .delete-wrapper {
+                                .delete-confirm-box {
+                                    left: 0;
+                                }
+                            }
+                        }
+
+                        &.connecting {
+                            transition: 0.5s all ease;
+                            opacity: 1;
+                            
+                            .screen-to-connect {
+                                & > a {
+                                    & > span {
+                                        &:first-child {
+                                            & > .icon-monitor {
+                                                & > svg {
+                                                    fill: transparent;
+                                                    
+                                                }
+
+                                                &:before {
+                                                    animation: connecting-loader 1s infinite;
+                                                    opacity: 1;
+                                                }
+                                            }
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &.connected {
+                            .screen-to-connect {
+                                & > a {
+                                    & > span {
+                                        &:first-child {
+                                            & > .icon-monitor {
+                                                & > svg {
+                                                    fill: #9D0605;
+                                                    
+                                                }
+
+                                                &:before {
+                                                    opacity: 1;
+                                                    background-image: url('../images/icon-tick.svg');
+                                                    width: 12px;
+                                                    height: 9px;
+                                                }
+                                            }
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
                 }
+
+                // .cta-wrapper {
+                //     margin-top: 30px;
+                // }
+
+                
+
+                
             }
 
             .add-new-screen-wrapper {
@@ -327,7 +626,7 @@ main {
                         
                     }
 
-                    &.connect-screen {
+                    &.connect-screen, &.continue-screen {
                         span {
                             position: absolute;
                             border-top: 1px solid #fff;
@@ -339,6 +638,16 @@ main {
                             transform: translateY(-50%) rotate(45deg);
                         }
                     }
+
+                    // &.continue-screen {
+                    //     background: #f1f0f0;
+                    //     color: #d0cccc;
+
+                    //     span {
+                    //         border-top-color: #d0cccc;
+                    //         border-right-color: #d0cccc;
+                    //     }
+                    // }
 
                     &.cancel-screen {
                         background: #fff;
@@ -427,6 +736,7 @@ main {
 .main-content-wrapper {
     background-color: #f5f5f5;
     padding: 20px 0 25px 0;
+    // padding: 20px 0 0 0;
     // height: calc(810px - 161px); /* subtracted header+disclaimer+footer-tabs height */
     height: calc(810px - 94px); /* subtracted header+disclaimer height */
     position: relative;
@@ -436,6 +746,22 @@ main {
     .content-features, .content-versions, .content-accessories, .content-all,
     .col-1-3 h1 span.content-features {
         display: none;
+    }
+
+    &.display-search-results {
+        padding-bottom: 0;
+
+        .search-wrapper {
+            .search-results-wrapper {
+                .search-results {
+                    height: 545px;
+                }
+            }
+        }
+
+        .main-heading {
+            display: none;
+        }
     }
 
     &.tab-features-content .content-features, 
@@ -457,6 +783,8 @@ main {
 
     .search-wrapper {
         height: 100%;
+
+        
 
         .heading {
             font-family: 'citroenblack';
@@ -572,6 +900,10 @@ main {
                                 height: auto;
                                 align-items: normal;
                             }
+
+                            .heading {
+                                font-family: 'citroenbold';
+                            }
                         }
                     }
 
@@ -618,7 +950,7 @@ main {
                         }
 
                         .heading {
-                            font-family: 'citroenregular';
+                            font-family: 'citroenblack';
                             font-size: 1.6rem;
                             line-height: 19px;
                             margin-bottom: 0;

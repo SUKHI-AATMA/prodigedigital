@@ -224,6 +224,22 @@ th {
   font-weight: normal;
   font-style: normal; }
 
+@-webkit-keyframes connecting-loader {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg); }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg); } }
+
+@keyframes connecting-loader {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg); }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg); } }
+
 body {
   font-family: 'citroenblack';
   color: #000;
@@ -268,11 +284,37 @@ body {
       top: 0; }
   body.display-select-screen header .logo-cast {
     z-index: 5; }
+  body.add-new-screen-container .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper {
+    display: none;
+    top: -100%; }
   body.add-new-screen-container .cast-screen-wrapper .select-screen-details-container .add-new-screen-wrapper {
     display: inherit;
     top: 0; }
   body.add-new-screen-container header .logo-cast {
     z-index: inherit; }
+  body.screen-not-selected:not(.empty-screen-list) .cast-screen-wrapper .select-screen-wrapper .cta-wrapper .cta-button.add-new-screen {
+    background-color: #fff;
+    color: #3B3938; }
+    body.screen-not-selected:not(.empty-screen-list) .cast-screen-wrapper .select-screen-wrapper .cta-wrapper .cta-button.add-new-screen span {
+      background-image: url("../images/icon-plus-black.svg"); }
+  body.screen-not-selected:not(.empty-screen-list) .cast-screen-wrapper .select-screen-wrapper .cta-wrapper .cta-button.continue-screen {
+    background: #f1f0f0;
+    color: #d0cccc;
+    cursor: not-allowed; }
+    body.screen-not-selected:not(.empty-screen-list) .cast-screen-wrapper .select-screen-wrapper .cta-wrapper .cta-button.continue-screen span {
+      border-top-color: #d0cccc;
+      border-right-color: #d0cccc; }
+  body.screen-selected header .logo-cast img {
+    display: none; }
+    body.screen-selected header .logo-cast img.screen-connected {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+  body.screen-selected .cast-screen-wrapper .select-screen-wrapper .cta-wrapper .cta-button.add-new-screen {
+    background-color: #fff;
+    color: #3B3938; }
+    body.screen-selected .cast-screen-wrapper .select-screen-wrapper .cta-wrapper .cta-button.add-new-screen span {
+      background-image: url("../images/icon-plus-black.svg"); }
 
 input[type=checkbox] {
   -webkit-appearance: auto;
@@ -350,12 +392,166 @@ main {
           -webkit-box-pack: end;
           -ms-flex-pack: end;
           justify-content: flex-end;
-          padding-right: 90px; }
+          padding: 0 90px 30px 0; }
           main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-details .column .description {
-            display: inherit;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
             color: #828282; }
-        main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .cta-wrapper {
-          margin-top: 30px; }
+        main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper {
+          background-color: #fff;
+          height: 380px;
+          overflow: hidden;
+          overflow-y: auto; }
+          main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper.connecting-wip li:not(.connecting) {
+            opacity: 0.2; }
+          main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li {
+            padding: 20px 32px;
+            border-top: 1px solid #f5f5f5;
+            position: relative; }
+            main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li:first-child {
+              border-top-color: transparent; }
+            main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li .screen-to-connect {
+              -webkit-box-ordinal-group: 3;
+              -ms-flex-order: 2;
+              order: 2; }
+              main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li .screen-to-connect > a {
+                color: #000; }
+                main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li .screen-to-connect > a > span {
+                  font-family: 'citroenblack';
+                  font-weight: bold;
+                  font-size: 1.6rem;
+                  line-height: 18px;
+                  text-align: right;
+                  width: -webkit-fit-content;
+                  width: -moz-fit-content;
+                  width: fit-content; }
+                  main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li .screen-to-connect > a > span:first-child {
+                    -webkit-box-ordinal-group: 3;
+                    -ms-flex-order: 2;
+                    order: 2;
+                    padding: 0 60px 0 10px;
+                    margin-left: 10px;
+                    position: relative; }
+                    main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li .screen-to-connect > a > span:first-child > span {
+                      font-family: 'citroenregular';
+                      font-size: 1.2rem;
+                      line-height: 15px;
+                      color: #828282;
+                      margin-top: 4px; }
+                    main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li .screen-to-connect > a > span:first-child:before {
+                      content: '';
+                      width: 1px;
+                      height: 20px;
+                      background-color: rgba(0, 0, 0, 0.3);
+                      position: absolute;
+                      top: 0;
+                      left: 0; }
+                    main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li .screen-to-connect > a > span:first-child > .icon-monitor {
+                      position: absolute;
+                      right: 0;
+                      top: 0;
+                      margin-top: 0; }
+                      main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li .screen-to-connect > a > span:first-child > .icon-monitor > svg {
+                        fill: #d7d7d7;
+                        -webkit-transition: 0.5s all ease;
+                        -o-transition: 0.5s all ease;
+                        transition: 0.5s all ease; }
+                      main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li .screen-to-connect > a > span:first-child > .icon-monitor:before {
+                        content: '';
+                        position: absolute;
+                        top: 38%;
+                        left: 50%;
+                        background: url("../images/icon-connecting-loader.svg") no-repeat 0 0;
+                        width: 14px;
+                        height: 14px;
+                        -webkit-transform: translate(-50%, -50%) rotate(0deg);
+                        -ms-transform: translate(-50%, -50%) rotate(0deg);
+                        transform: translate(-50%, -50%) rotate(0deg);
+                        opacity: 0;
+                        -webkit-transition: 0.5s all ease;
+                        -o-transition: 0.5s all ease;
+                        transition: 0.5s all ease; }
+                  main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li .screen-to-connect > a > span.ip-address-details {
+                    font-family: 'citroenbold';
+                    font-size: 1.4rem;
+                    line-height: 15px;
+                    height: -webkit-fit-content;
+                    height: -moz-fit-content;
+                    height: fit-content; }
+              main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li .screen-to-connect > .error-wrapper {
+                font-family: 'citroenregular';
+                font-size: 1.2rem;
+                line-height: 15px;
+                text-align: center;
+                color: #9D0605;
+                margin-top: 4px; }
+                main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li .screen-to-connect > .error-wrapper > .option-retry {
+                  font-size: 1.4rem;
+                  font-weight: bold;
+                  margin-left: 15px;
+                  background: url("../images/icon-refresh.svg") no-repeat 100% 50%;
+                  padding-right: 15px; }
+            main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li .delete-wrapper .icon-delete {
+              background-color: #f5f5f5;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              position: relative; }
+              main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li .delete-wrapper .icon-delete:before {
+                content: '';
+                width: 20px;
+                height: 20px;
+                background: url("../images/icon-trash.svg") no-repeat 0 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                -webkit-transition: 0.5s all ease;
+                -o-transition: 0.5s all ease;
+                transition: 0.5s all ease; }
+            main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li .delete-wrapper .delete-confirm-box {
+              position: absolute;
+              top: 0;
+              left: -128px;
+              width: 128px;
+              height: 100%;
+              background: #F1F0F0;
+              -webkit-transition: 0.5s all ease;
+              -o-transition: 0.5s all ease;
+              transition: 0.5s all ease; }
+              main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li .delete-wrapper .delete-confirm-box > a {
+                width: 50%;
+                height: 100%;
+                font-family: 'citroenregular';
+                font-size: 1.4rem;
+                line-height: 15px;
+                color: #3B3938; }
+                main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li .delete-wrapper .delete-confirm-box > a.option-delete {
+                  background-color: #9D0605;
+                  color: #fff; }
+            main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li.delete-this-record .delete-wrapper .delete-confirm-box {
+              left: 0; }
+            main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li.connecting {
+              -webkit-transition: 0.5s all ease;
+              -o-transition: 0.5s all ease;
+              transition: 0.5s all ease;
+              opacity: 1; }
+              main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li.connecting .screen-to-connect > a > span:first-child > .icon-monitor > svg {
+                fill: transparent; }
+              main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li.connecting .screen-to-connect > a > span:first-child > .icon-monitor:before {
+                -webkit-animation: connecting-loader 1s infinite;
+                animation: connecting-loader 1s infinite;
+                opacity: 1; }
+            main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li.connected .screen-to-connect > a > span:first-child > .icon-monitor > svg {
+              fill: #9D0605; }
+            main .cast-screen-wrapper .select-screen-details-container .select-screen-wrapper .screen-list-wrapper li.connected .screen-to-connect > a > span:first-child > .icon-monitor:before {
+              opacity: 1;
+              background-image: url("../images/icon-tick.svg");
+              width: 12px;
+              height: 9px; }
       main .cast-screen-wrapper .select-screen-details-container .add-new-screen-wrapper .heading {
         padding: 32px 35px 20px 0; }
       main .cast-screen-wrapper .select-screen-details-container .add-new-screen-wrapper .description {
@@ -404,7 +600,7 @@ main {
             height: 15px;
             background: url("../images/icon-plus.svg") no-repeat center center;
             margin-left: 10px; }
-          main .cast-screen-wrapper .select-screen-details-container .cta-wrapper .cta-button.connect-screen span {
+          main .cast-screen-wrapper .select-screen-details-container .cta-wrapper .cta-button.connect-screen span, main .cast-screen-wrapper .select-screen-details-container .cta-wrapper .cta-button.continue-screen span {
             position: absolute;
             border-top: 1px solid #fff;
             border-right: 1px solid #fff;
@@ -508,6 +704,12 @@ main {
   .main-content-wrapper .content-features, .main-content-wrapper .content-versions, .main-content-wrapper .content-accessories, .main-content-wrapper .content-all,
   .main-content-wrapper .col-1-3 h1 span.content-features {
     display: none; }
+  .main-content-wrapper.display-search-results {
+    padding-bottom: 0; }
+    .main-content-wrapper.display-search-results .search-wrapper .search-results-wrapper .search-results {
+      height: 545px; }
+    .main-content-wrapper.display-search-results .main-heading {
+      display: none; }
   .main-content-wrapper.tab-features-content .content-features,
   .main-content-wrapper.tab-versions-content .content-versions,
   .main-content-wrapper.tab-accessories-content .content-accessories,
@@ -615,6 +817,8 @@ main {
                 -webkit-box-align: normal;
                 -ms-flex-align: normal;
                 align-items: normal; }
+              .main-content-wrapper .search-wrapper .search-results-wrapper .search-results .search-results-box.new-config .row .heading {
+                font-family: 'citroenbold'; }
           .main-content-wrapper .search-wrapper .search-results-wrapper .search-results .search-results-box .row {
             margin-bottom: 15px; }
             .main-content-wrapper .search-wrapper .search-results-wrapper .search-results .search-results-box .row:first-child {
@@ -653,7 +857,7 @@ main {
                 -ms-transform: translate(-50%, -50%) rotate(90deg);
                 transform: translate(-50%, -50%) rotate(90deg); }
             .main-content-wrapper .search-wrapper .search-results-wrapper .search-results .search-results-box .row .heading {
-              font-family: 'citroenregular';
+              font-family: 'citroenblack';
               font-size: 1.6rem;
               line-height: 19px;
               margin-bottom: 0;
@@ -1784,3 +1988,5 @@ header {
       width: -moz-fit-content;
       width: fit-content;
       max-width: 100%; }
+      header .logo-cast img.screen-connected {
+        display: none; }
