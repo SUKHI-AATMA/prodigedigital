@@ -80,7 +80,7 @@ $(function() {
         }, 500);
     });
 
-    $(document).find(".main-tabs-container > ul > li").eq(2).click();
+    //$(document).find(".main-tabs-container > ul > li").eq(2).click();
 
     $(document).on("click", ".automobile-versions-wrapper > ul > li", function() {
         $(this).addClass("selected").siblings("li").removeClass("selected");

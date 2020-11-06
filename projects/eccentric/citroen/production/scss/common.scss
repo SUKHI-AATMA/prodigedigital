@@ -784,7 +784,6 @@ main {
 
     .search-wrapper {
         height: 100%;
-        display: none;
         
 
         .heading {
@@ -2010,7 +2009,7 @@ main {
 
 .all-accessories-wrapper {
     position: absolute;
-    top: 0;
+    top: -100%;
     left: 0;
     width: 100%;
     height: 100%;

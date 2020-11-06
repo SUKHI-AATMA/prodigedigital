@@ -724,8 +724,7 @@ main {
     position: relative;
     height: 100%; }
   .main-content-wrapper .search-wrapper {
-    height: 100%;
-    display: none; }
+    height: 100%; }
     .main-content-wrapper .search-wrapper .heading {
       font-family: 'citroenblack';
       font-size: 3rem;
@@ -1281,7 +1280,7 @@ main {
 
 .all-accessories-wrapper {
   position: absolute;
-  top: 0;
+  top: -100%;
   left: 0;
   width: 100%;
   height: 100%;
