@@ -71,7 +71,7 @@ $(function() {
             if(removeLastClass.indexOf("tab-") != -1) {
                 $('.main-content-wrapper').removeClass(removeLastClass);
             }
-            $(".main-content-wrapper").addClass($this.attr("data-rel") + " content-all");
+            $(".main-content-wrapper").addClass("content-all " + $this.attr("data-rel"));
             
         }, 300);
         
@@ -80,7 +80,7 @@ $(function() {
         }, 500);
     });
 
-    //$(document).find(".main-tabs-container > ul > li").eq(0).click();
+    $(document).find(".main-tabs-container > ul > li").eq(2).click();
 
     $(document).on("click", ".automobile-versions-wrapper > ul > li", function() {
         $(this).addClass("selected").siblings("li").removeClass("selected");

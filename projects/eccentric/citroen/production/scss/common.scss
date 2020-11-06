@@ -347,7 +347,7 @@ main {
                                 color: #000;
                                 
                                 & > span {
-                                    font-family: 'citroenblack';
+                                    font-family: 'citroenbold';
                                     font-weight: bold;
                                     font-size: 1.6rem;
                                     line-height: 18px;
@@ -419,7 +419,8 @@ main {
                                 font-family: 'citroenregular';
                                 font-size: 1.2rem;
                                 line-height: 15px;
-                                text-align: center;
+                                text-align: right;
+                                padding-right: 60px;
                                 color: #9D0605;
                                 margin-top: 4px;
 
@@ -783,7 +784,7 @@ main {
 
     .search-wrapper {
         height: 100%;
-
+        display: none;
         
 
         .heading {
@@ -1165,63 +1166,8 @@ main {
                             }
 
                             .accessories-content {
-                                padding: 17px 15px 17px 10px;
-
-                                .col-1 {
-                                    width: 40%;
-
-                                    img {
-                                        width: fit-content;
-                                        max-width: 100%;
-                                    }
-                                }
-
                                 .col-2 {
-                                    width: 60%;
-                                    font-family: 'citroenregular';
                                     justify-content: flex-end;
-
-                                    .heading {
-                                        width: 100%;
-                                        font-weight: bold;
-                                        font-size: 1.2rem;
-                                        line-height: 13px;
-                                        text-transform: uppercase;
-                                    }
-
-                                    .price, .cta-button {
-                                        width: 50%;
-                                        display: flex;
-                                        align-self: flex-end;
-                                    }
-
-                                    .price {
-                                        font-size: 1.4rem;
-                                        line-height: 18px;
-                                        height: fit-content;
-                                        align-self: center;
-                                    }
-
-                                    .cta-button {
-                                        font-family: 'citroenbold';
-                                        font-size: 1.3rem;
-                                        line-height: 14px;
-                                        text-align: center;
-                                        text-transform: none;
-                                        color: #fff;
-                                        background-color: #9D0605;
-                                        padding: 8px;
-                                        height: fit-content;
-                                        width: fit-content;
-                                        min-width: 75px;
-                                        justify-content: center;
-
-                                        &.secondary-button {
-                                            color: #9D0605;
-                                            background-color: transparent;
-                                            border: 1px solid #9D0605;
-                                        }
-                                    }
                                 }
                             }
                         }
@@ -2062,6 +2008,30 @@ main {
     }
 }
 
+.all-accessories-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #fff;
+    padding: 20px 30px 35px 30px;
+    transition: 0.5s all ease;
+
+    .all-accessories-container {
+        li {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            height: fit-content;
+            width: 330px;
+
+            .accessories-content {
+
+            }
+        }
+    }
+}
+
 .compare-wrapper {
     position: absolute;
     top: 100%;
@@ -2866,6 +2836,66 @@ main {
     }
 }
 
+.accessories-content {
+    padding: 17px 15px 17px 10px;
+
+    .col-1 {
+        width: 40%;
+
+        img {
+            width: fit-content;
+            max-width: 100%;
+        }
+    }
+
+    .col-2 {
+        width: 60%;
+        font-family: 'citroenregular';
+
+        .heading {
+            width: 100%;
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 13px;
+            text-transform: uppercase;
+        }
+
+        .price, .cta-button {
+            width: 50%;
+            display: flex;
+            align-self: flex-end;
+        }
+
+        .price {
+            font-size: 1.4rem;
+            line-height: 18px;
+            height: fit-content;
+            align-self: center;
+        }
+
+        .cta-button {
+            font-family: 'citroenbold';
+            font-size: 1.3rem;
+            line-height: 14px;
+            text-align: center;
+            text-transform: none;
+            color: #fff;
+            background-color: #9D0605;
+            padding: 8px;
+            height: fit-content;
+            width: fit-content;
+            min-width: 75px;
+            justify-content: center;
+
+            &.secondary-button {
+                color: #9D0605;
+                background-color: transparent;
+                border: 1px solid #9D0605;
+            }
+        }
+    }
+}
+
 
 
 /* page css ends */
@@ -2928,14 +2958,14 @@ main {
 
                             & > span {
                                 width: 8%;
-                                font-weight: bold;
+                                font-family: 'citroenblack';
                             }
 
                             & > p {
                                 width: 92%;
 
                                 & > span {
-                                    font-weight: bold;
+                                    font-family: 'citroenblack';
                                 }
 
                                 .icon-cast-welcome-screen {
@@ -2969,6 +2999,7 @@ main {
                     background: url('../images/qr-code-frame.svg') no-repeat 0 0 #fff;
                     background-size: contain;
                     margin-bottom: 130px;
+                    box-shadow: 30px 50px 100px rgba(0, 0, 0, 0.2);
                 }
 
                 .ip-details {
