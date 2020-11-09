@@ -592,8 +592,8 @@
             <!-- compare screen ends -->
             <!-- view all accessories screen starts -->
             <div class="full-width display-flex all-accessories-wrapper">
-                <ul class="display-flex flex-wrap justify-content-space-between full-width all-accessories-container">
-                    <li>
+                <ul class="full-width all-accessories-container">
+                    <li data-rel="exterior-accessories-content">
                         <div class="display-flex accessories-content">
                             <div class="display-flex col-1">
                                 <img src="./images/accessories-dummy.png" alt="Car Cover" title="Car Cover">
@@ -605,26 +605,95 @@
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li data-rel="exterior-accessories-content">
                         <div class="display-flex accessories-content">
                             <div class="display-flex col-1">
                                 <img src="./images/accessories-dummy.png" alt="Set of 4 Cabochons Blaack for aluminium wheels" title="Set of 4 Cabochons Blaack for aluminium wheels">
                             </div>
                             <div class="display-flex flex-wrap col-2">
                                 <p class="heading">Set of 4 Cabochons Blaack for aluminium wheels</p>
-                                <p class="price">₹12,000**</p>
                                 <a href="javascript:;" class="cta-button">Add</a>
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li data-rel="interior-accessories-content">
+                        <div class="display-flex accessories-content">
+                            <div class="display-flex col-1">
+                                <img src="./images/accessories-dummy.png" alt="Slide Protection Taps" title="Slide Protection Taps">
+                            </div>
+                            <div class="display-flex flex-wrap col-2">
+                                <p class="heading">Slide Protection Taps</p>
+                                <p class="price">₹15,000**</p>
+                                <a href="javascript:;" class="cta-button">Add</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-rel="exterior-accessories-content">
                         <div class="display-flex accessories-content">
                             <div class="display-flex col-1">
                                 <img src="./images/accessories-dummy.png" alt="Set of 4 Cabochons Blaack for aluminium wheels" title="Set of 4 Cabochons Blaack for aluminium wheels">
                             </div>
                             <div class="display-flex flex-wrap col-2">
                                 <p class="heading">Set of 4 Cabochons Blaack for aluminium wheels</p>
+                                <p class="price">₹11,000**</p>
+                                <a href="javascript:;" class="cta-button">Add</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-rel="exterior-accessories-content">
+                        <div class="display-flex accessories-content">
+                            <div class="display-flex col-1">
+                                <img src="./images/accessories-dummy.png" alt="Set of 4 Cabochons Blaack for aluminium wheels" title="Set of 4 Cabochons Blaack for aluminium wheels">
+                            </div>
+                            <div class="display-flex flex-wrap col-2">
+                                <p class="heading">Set of 4 Cabochons Blaack for aluminium wheels</p>
+                                <p class="price">₹10,000**</p>
+                                <a href="javascript:;" class="cta-button">Add</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-rel="exterior-accessories-content">
+                        <div class="display-flex accessories-content">
+                            <div class="display-flex col-1">
+                                <img src="./images/accessories-dummy.png" alt="Car Cover" title="Car Cover">
+                            </div>
+                            <div class="display-flex flex-wrap col-2">
+                                <p class="heading">Car Cover</p>
                                 <p class="price">₹12,000**</p>
+                                <a href="javascript:;" class="cta-button secondary-button">Remove</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-rel="exterior-accessories-content">
+                        <div class="display-flex accessories-content">
+                            <div class="display-flex col-1">
+                                <img src="./images/accessories-dummy.png" alt="Set of 4 Cabochons Blaack for aluminium wheels" title="Set of 4 Cabochons Blaack for aluminium wheels">
+                            </div>
+                            <div class="display-flex flex-wrap col-2">
+                                <p class="heading">Set of 4 Cabochons Blaack for aluminium wheels</p>
+                                <a href="javascript:;" class="cta-button">Add</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-rel="interior-accessories-content">
+                        <div class="display-flex accessories-content">
+                            <div class="display-flex col-1">
+                                <img src="./images/accessories-dummy.png" alt="Car Cover" title="Car Cover">
+                            </div>
+                            <div class="display-flex flex-wrap col-2">
+                                <p class="heading">Car Cover</p>
+                                <p class="price">₹12,000**</p>
+                                <a href="javascript:;" class="cta-button secondary-button">Remove</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-rel="exterior-accessories-content">
+                        <div class="display-flex accessories-content">
+                            <div class="display-flex col-1">
+                                <img src="./images/accessories-dummy.png" alt="Set of 4 Cabochons Blaack for aluminium wheels" title="Set of 4 Cabochons Blaack for aluminium wheels">
+                            </div>
+                            <div class="display-flex flex-wrap col-2">
+                                <p class="heading">Set of 8 Cabochons Blaack for aluminium wheels</p>
                                 <a href="javascript:;" class="cta-button">Add</a>
                             </div>
                         </div>
@@ -733,6 +802,17 @@
                 </li>
             </ul>
         </section>
+        <section class="display-flex full-width align-items-center flex-wrap main-tabs-container all-accessories-tabs">
+            <span></span>
+            <ul class="display-flex full-width justify-content-space-around align-items-center fixed-wrapper">
+                <li class="display-flex align-items-center justify-content-center" data-rel="tab-exterior-accessories-content">
+                    <a href="javascript:;">EXTERIOR ACCESSORIES</a>
+                </li>
+                <li class="display-flex align-items-center justify-content-center" data-rel="tab-interior-accessories-content">
+                    <a href="javascript:;">INTERIOR ACCESSORIES</a>
+                </li>
+            </ul>
+        </section>            
         <!-- select a screen starts -->
         <div class="display-flex cast-screen-wrapper">
             <div class="display-flex full-width flex-direction-column select-screen-details-container">

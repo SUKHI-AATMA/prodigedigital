@@ -59,28 +59,61 @@ $(function() {
     $(document).find(".color-variant-wrapper ul > li").eq(0).click();
 
     $(document).on("click", ".main-tabs-container > ul > li", function() {
-        $("body").addClass("with-animation");
-        
         var $this = $(this);
+
         setTimeout(function() {
-            $("body").addClass("display-content-all");
             $this.addClass("selected").siblings("li").removeClass("selected");
             $this.parents(".main-tabs-container").children("span").css("left", $this.position().left + "px");
-        
-            var removeLastClass = $('.main-content-wrapper').attr('class').split(' ').pop();
-            if(removeLastClass.indexOf("tab-") != -1) {
-                $('.main-content-wrapper').removeClass(removeLastClass);
-            }
-            $(".main-content-wrapper").addClass("content-all " + $this.attr("data-rel"));
-            
-        }, 300);
-        
-        setTimeout(function() {
-            $("body").removeClass("with-animation");
         }, 500);
+
+        //console.log($(this).parents(".main-tabs-container").hasClass("content-all"));
+
+        if($(this).parents(".main-tabs-container").hasClass("content-all")) {
+            $("body").addClass("with-animation");
+        
+            
+            setTimeout(function() {
+                $("body").addClass("display-content-all");
+                // $this.addClass("selected").siblings("li").removeClass("selected");
+                // $this.parents(".main-tabs-container").children("span").css("left", $this.position().left + "px");
+            
+                var removeLastClass = $('.main-content-wrapper').attr('class').split(' ').pop();
+                if(removeLastClass.indexOf("tab-") != -1) {
+                    $('.main-content-wrapper').removeClass(removeLastClass);
+                }
+                $(".main-content-wrapper").addClass("content-all " + $this.attr("data-rel"));
+                
+            }, 300);
+            
+            setTimeout(function() {
+                $("body").removeClass("with-animation");
+            }, 500);
+        }
+        else if($(this).parents(".main-tabs-container").hasClass("all-accessories-tabs")) {
+            var removeLastClass = $('body').attr('class').split(' ').pop();
+            if(removeLastClass.indexOf("tab-") != -1) {
+                $('body').removeClass(removeLastClass);
+            }
+
+            $("body").addClass("popup-all-accessories-visible");
+            // console.log($this.attr("data-rel"));
+            // $(".popup-all-accessories-visible .all-accessories-container li:visible").slideUp('slow', function() {
+            //     $(".popup-all-accessories-visible .all-accessories-container").find("li[data-rel=" + $this.attr("data-rel").substring(4) + "]").slideDown('slow');
+            // });
+
+            $(".popup-all-accessories-visible .all-accessories-container li:visible").hide();
+            setTimeout(function() {
+                $(".popup-all-accessories-visible .all-accessories-container li[data-rel=" + $this.attr("data-rel").substring(4) + "]").show();
+                $("body").addClass($this.attr("data-rel"));
+            }, 200);
+
+
+            
+        }
+        
     });
 
-    //$(document).find(".main-tabs-container > ul > li").eq(2).click();
+    $(document).find(".main-tabs-container.content-all > ul > li").eq(2).click();
 
     $(document).on("click", ".automobile-versions-wrapper > ul > li", function() {
         $(this).addClass("selected").siblings("li").removeClass("selected");
@@ -101,8 +134,16 @@ $(function() {
         $("body").addClass("popup-compare-visible");
     });
 
+    $(document).on("click", ".all-accessories", function() {
+        $("body").addClass("popup-all-accessories-visible");
+        $(".main-tabs-container:not('.content-all') > ul > li").eq(0).click();
+    });
+
+    //$(".all-accessories").click();
+
     $(".go-back").on("click", function() {
-        $("body").removeClass("popup-compare-visible");
+        //$("body").removeClass("popup-compare-visible");
+        $("body").attr("class", "display-content-all");
     });
 
     $(".automobile-models-wrapper li").on("click", function() {
@@ -112,6 +153,8 @@ $(function() {
     $(".change-model").on("click", function() {
         $("body").addClass("popup-show display-change-model");
     });
+
+    
 
     $(".close-popup").on("click", function() {
         $("body").removeClass("popup-show");
