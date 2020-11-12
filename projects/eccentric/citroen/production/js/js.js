@@ -113,7 +113,7 @@ $(function() {
         
     });
 
-    $(document).find(".main-tabs-container.content-all > ul > li").eq(2).click();
+    //$(document).find(".main-tabs-container.content-all > ul > li").eq(3).click();
 
     $(document).on("click", ".automobile-versions-wrapper > ul > li", function() {
         $(this).addClass("selected").siblings("li").removeClass("selected");
@@ -142,8 +142,18 @@ $(function() {
     //$(".all-accessories").click();
 
     $(".go-back").on("click", function() {
-        //$("body").removeClass("popup-compare-visible");
-        $("body").attr("class", "display-content-all");
+        if($("body").hasClass("edit-summary-mode")) {
+            $("body").attr("class", "");
+            $(".main-content-wrapper").removeClass("content-all tab-summary-content");
+            
+            $("body").find(".search-wrapper").slideDown('slow', function() {
+                //$(".main-content-wrapper").addClass("display-search-results");
+            });
+        }
+        else {
+            //$("body").removeClass("popup-compare-visible");
+            $("body").attr("class", "display-content-all");
+        }
     });
 
     $(".automobile-models-wrapper li").on("click", function() {
@@ -314,6 +324,29 @@ $(function() {
         }
 
         displayConnectionLoader(this);
+    });
+
+    $(document).on("click", ".summary-detail-box > .summary-item.box-heading", function() {
+        var $this = $(this).parents(".summary-detail-box");
+        //$this.toggleClass("accordion-open").siblings(".summary-detail-box").removeClass("accordion-open").children(".summary-detail-box-content").slideUp();
+        $this.toggleClass("accordion-open").children(".summary-detail-box-content").slideToggle('slow');
+    });
+
+    $(document).on("click", ".search-results-box:not('.new-config')", function() {
+        $("body").addClass("edit-summary-mode");
+        //$(".main-content-wrapper").removeClass("display-search-results");
+        $("body").find(".search-wrapper").slideUp('slow', function() {
+            $(document).find(".main-tabs-container.content-all > ul > li").eq(3).click();
+        });
+    });
+
+    $(document).on("click", ".edit-summary-mode .tab-summary-content .btn-edit", function() {
+        $("body").removeClass("edit-summary-mode");
+        $(document).find(".main-tabs-container.content-all > ul > li").eq(3).click();
+        //$(".main-content-wrapper").removeClass("display-search-results");
+        // $("body").find(".search-wrapper").slideUp('slow', function() {
+        //     $(document).find(".main-tabs-container.content-all > ul > li").eq(3).click();
+        // });
     });
 
     // $(document).on("click", ".screen-list-wrapper .screen-to-connect > .error-wrapper .option-retry", function() {

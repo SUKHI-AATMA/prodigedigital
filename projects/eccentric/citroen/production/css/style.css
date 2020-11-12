@@ -248,9 +248,14 @@ body {
   height: 100vh;
   position: relative; }
   body.with-animation .col-1-3 .flip-in-out-container {
-    left: -350px; }
+    left: -120%; }
   body.with-animation .col-3-3 .flip-in-out-container {
-    right: -350px; }
+    right: -120%; }
+  body.with-animation .col-2-3 > img {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(50px); }
   body.popup-compare-visible header nav .hamburger-menu {
     opacity: 0;
     display: none; }
@@ -343,6 +348,18 @@ body {
     color: #3B3938; }
     body.screen-selected .cast-screen-wrapper .select-screen-wrapper .cta-wrapper .cta-button.add-new-screen span {
       background-image: url("../images/icon-plus-black.svg"); }
+  body.edit-summary-mode header nav .hamburger-menu {
+    opacity: 0;
+    display: none; }
+  body.edit-summary-mode header nav .go-back {
+    opacity: 1;
+    display: block; }
+  body.edit-summary-mode .tab-summary-content .btn-save {
+    opacity: 0; }
+  body.edit-summary-mode .main-tabs-container {
+    display: none; }
+  body.edit-summary-mode .main-content-wrapper {
+    height: calc(810px - 95px); }
 
 input[type=checkbox] {
   -webkit-appearance: auto;
@@ -730,7 +747,7 @@ main {
   -o-transition: 0.5s all ease;
   transition: 0.5s all ease;
   overflow: hidden; }
-  .main-content-wrapper .content-features, .main-content-wrapper .content-versions, .main-content-wrapper .content-accessories, .main-content-wrapper .content-all,
+  .main-content-wrapper .content-features, .main-content-wrapper .content-versions, .main-content-wrapper .content-accessories, .main-content-wrapper .content-all, .main-content-wrapper .content-summary,
   .main-content-wrapper .col-1-3 h1 span.content-features {
     display: none; }
   .main-content-wrapper.display-search-results {
@@ -745,6 +762,7 @@ main {
   .main-content-wrapper.tab-features-content .content-all,
   .main-content-wrapper.tab-versions-content .content-all,
   .main-content-wrapper.tab-accessories-content .content-all,
+  .main-content-wrapper.tab-summary-content .content-summary,
   .main-content-wrapper.tab-features-content .col-1-3 h1 span {
     display: inherit !important; }
   .main-content-wrapper > .fixed-wrapper {
@@ -752,8 +770,7 @@ main {
     position: relative;
     height: 100%; }
   .main-content-wrapper .search-wrapper {
-    height: 100%;
-    display: none; }
+    height: 100%; }
     .main-content-wrapper .search-wrapper .heading {
       font-family: 'citroenblack';
       font-size: 3rem;
@@ -832,7 +849,8 @@ main {
           border: 1px solid #bdbdbd;
           width: 249px;
           height: 310px;
-          margin-top: 40px; }
+          margin-top: 40px;
+          cursor: pointer; }
           .main-content-wrapper .search-wrapper .search-results-wrapper .search-results .search-results-box:nth-child(1), .main-content-wrapper .search-wrapper .search-results-wrapper .search-results .search-results-box:nth-child(2), .main-content-wrapper .search-wrapper .search-results-wrapper .search-results .search-results-box:nth-child(3) {
             margin-top: 0; }
           .main-content-wrapper .search-wrapper .search-results-wrapper .search-results .search-results-box.new-config {
@@ -926,6 +944,14 @@ main {
     width: 400px;
     position: relative;
     z-index: 2; }
+    .main-content-wrapper .col-2-3 > img {
+      opacity: 1;
+      -webkit-transition: 0.5s all ease;
+      -o-transition: 0.5s all ease;
+      transition: 0.5s all ease;
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0); }
     .main-content-wrapper .col-2-3 .color-variant-wrapper {
       background: #fff;
       width: 378px;
@@ -1222,6 +1248,163 @@ main {
     display: none; }
   .main-content-wrapper.tab-accessories-content .col-3-3 .toggle-option-wrapper:after {
     display: none; }
+  .main-content-wrapper.tab-summary-content {
+    padding-top: 0;
+    padding-bottom: 0; }
+    .main-content-wrapper.tab-summary-content > .full-width {
+      padding-left: 0; }
+    .main-content-wrapper.tab-summary-content .col-1-3 {
+      width: 620px;
+      background-color: #fff;
+      border-top: 1px solid #f5f5f5;
+      padding-top: 20px;
+      padding-left: 30px;
+      padding-right: 30px; }
+      .main-content-wrapper.tab-summary-content .col-1-3 .row-header {
+        border-bottom: 1px solid #3B3938;
+        padding-bottom: 15px; }
+        .main-content-wrapper.tab-summary-content .col-1-3 .row-header .heading {
+          font-family: 'citroenblack';
+          font-size: 2.4rem;
+          line-height: 29px; }
+        .main-content-wrapper.tab-summary-content .col-1-3 .row-header .cta-wrapper .cta-button {
+          font-size: 1.6rem;
+          line-height: 19px;
+          padding: 14px 26px; }
+          .main-content-wrapper.tab-summary-content .col-1-3 .row-header .cta-wrapper .cta-button.btn-save span {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-ordinal-group: 0;
+            -ms-flex-order: -1;
+            order: -1;
+            width: 24px;
+            height: 24px;
+            background: url("../images/icon-save.svg") no-repeat center center;
+            margin-right: 16px; }
+      .main-content-wrapper.tab-summary-content .col-1-3 .summary-detail-wrapper {
+        height: 558px;
+        overflow: auto;
+        border-bottom: 20px solid #fff; }
+        .main-content-wrapper.tab-summary-content .col-1-3 .summary-detail-wrapper .summary-detail-box {
+          border-bottom: 1px solid #d0cccc;
+          padding: 30px 0 20px 0; }
+          .main-content-wrapper.tab-summary-content .col-1-3 .summary-detail-wrapper .summary-detail-box.accordion-open .summary-item.box-heading .accordion-arrow {
+            top: 70%;
+            -webkit-transform: translateY(-50%) rotate(45deg);
+            -ms-transform: translateY(-50%) rotate(45deg);
+            transform: translateY(-50%) rotate(45deg); }
+          .main-content-wrapper.tab-summary-content .col-1-3 .summary-detail-wrapper .summary-detail-box .summary-item {
+            position: relative;
+            margin-bottom: 11px;
+            padding-right: 32px; }
+            .main-content-wrapper.tab-summary-content .col-1-3 .summary-detail-wrapper .summary-detail-box .summary-item:last-child {
+              margin-bottom: 0; }
+            .main-content-wrapper.tab-summary-content .col-1-3 .summary-detail-wrapper .summary-detail-box .summary-item.box-heading {
+              cursor: pointer; }
+              .main-content-wrapper.tab-summary-content .col-1-3 .summary-detail-wrapper .summary-detail-box .summary-item.box-heading .description {
+                font-family: 'citroenblack'; }
+              .main-content-wrapper.tab-summary-content .col-1-3 .summary-detail-wrapper .summary-detail-box .summary-item.box-heading .accordion-arrow {
+                position: absolute;
+                top: 50%;
+                right: 6px;
+                width: 10px;
+                height: 10px;
+                border-left: 2px solid #9D0605;
+                border-top: 2px solid #9D0605;
+                -webkit-transform: translateY(-50%) rotate(225deg);
+                -ms-transform: translateY(-50%) rotate(225deg);
+                transform: translateY(-50%) rotate(225deg);
+                -webkit-transition: 0.5s all ease;
+                -o-transition: 0.5s all ease;
+                transition: 0.5s all ease; }
+            .main-content-wrapper.tab-summary-content .col-1-3 .summary-detail-wrapper .summary-detail-box .summary-item.box-heading > .description, .main-content-wrapper.tab-summary-content .col-1-3 .summary-detail-wrapper .summary-detail-box .summary-item .heading {
+              font-size: 2rem;
+              line-height: 24px; }
+            .main-content-wrapper.tab-summary-content .col-1-3 .summary-detail-wrapper .summary-detail-box .summary-item.no-bottom-border {
+              border-bottom-color: transparent !important; }
+            .main-content-wrapper.tab-summary-content .col-1-3 .summary-detail-wrapper .summary-detail-box .summary-item .sub-heading {
+              font-family: 'citroenbold';
+              font-size: 1.5rem;
+              line-height: 16px; }
+            .main-content-wrapper.tab-summary-content .col-1-3 .summary-detail-wrapper .summary-detail-box .summary-item .item-name {
+              font-family: 'citroenregular';
+              font-size: 1.4rem;
+              line-height: 18px; }
+            .main-content-wrapper.tab-summary-content .col-1-3 .summary-detail-wrapper .summary-detail-box .summary-item .description {
+              font-family: 'citroenbold';
+              font-size: 1.6rem;
+              line-height: 18px; }
+            .main-content-wrapper.tab-summary-content .col-1-3 .summary-detail-wrapper .summary-detail-box .summary-item .remove-item {
+              width: 24px;
+              height: 24px;
+              background-color: #f5f5f5;
+              border-radius: 50%;
+              position: absolute;
+              top: -4px;
+              right: 0;
+              cursor: pointer; }
+              .main-content-wrapper.tab-summary-content .col-1-3 .summary-detail-wrapper .summary-detail-box .summary-item .remove-item:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                background: url("../images/icon-trash-red.svg") no-repeat 0 0;
+                width: 10px;
+                height: 14px; }
+          .main-content-wrapper.tab-summary-content .col-1-3 .summary-detail-wrapper .summary-detail-box .summary-detail-box-content {
+            margin-top: 18px;
+            display: none; }
+            .main-content-wrapper.tab-summary-content .col-1-3 .summary-detail-wrapper .summary-detail-box .summary-detail-box-content.with-gridlines {
+              margin-bottom: 15px; }
+              .main-content-wrapper.tab-summary-content .col-1-3 .summary-detail-wrapper .summary-detail-box .summary-detail-box-content.with-gridlines .summary-item {
+                border-bottom: 1px solid #f1f0f0;
+                margin-bottom: 15px;
+                padding-bottom: 11px; }
+                .main-content-wrapper.tab-summary-content .col-1-3 .summary-detail-wrapper .summary-detail-box .summary-detail-box-content.with-gridlines .summary-item:last-child {
+                  border-bottom-color: transparent; }
+    .main-content-wrapper.tab-summary-content .col-2-3, .main-content-wrapper.tab-summary-content .col-3-3 {
+      width: 400px; }
+    .main-content-wrapper.tab-summary-content .col-2-3 {
+      padding-bottom: 25px; }
+      .main-content-wrapper.tab-summary-content .col-2-3.content-summary {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end; }
+        .main-content-wrapper.tab-summary-content .col-2-3.content-summary .color-variant-wrapper {
+          display: none; }
+    .main-content-wrapper.tab-summary-content .col-3-3 {
+      position: absolute;
+      right: 30px;
+      top: 0; }
+      .main-content-wrapper.tab-summary-content .col-3-3 .flip-in-out-container {
+        width: 100%; }
+      .main-content-wrapper.tab-summary-content .col-3-3 .toggle-option-wrapper:after {
+        display: none; }
+      .main-content-wrapper.tab-summary-content .col-3-3 .content-summary.cta-wrapper {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin-top: 20px;
+        margin-bottom: 17px; }
+        .main-content-wrapper.tab-summary-content .col-3-3 .content-summary.cta-wrapper > .btn-edit {
+          padding: 14px 44px 14px 36px;
+          font-size: 1.6rem;
+          line-height: 19px; }
+          .main-content-wrapper.tab-summary-content .col-3-3 .content-summary.cta-wrapper > .btn-edit > span {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-ordinal-group: 0;
+            -ms-flex-order: -1;
+            order: -1;
+            width: 24px;
+            height: 24px;
+            background: url("../images/icon-edit-white.svg") no-repeat center center;
+            margin-right: 16px; }
 
 .disclaimer-text {
   font-family: 'citroenregular';
@@ -2078,6 +2261,60 @@ main {
           font-size: 5rem;
           line-height: 63px;
           text-align: center; }
+
+.login-wrapper {
+  height: 810px;
+  background: url("../images/bg-login-page.jpg") no-repeat center center;
+  background-size: cover; }
+  .login-wrapper .login-box {
+    width: 664px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    text-align: center; }
+    .login-wrapper .login-box .logo-wrapper {
+      margin-bottom: 85px; }
+      .login-wrapper .login-box .logo-wrapper img {
+        margin: 0 auto; }
+    .login-wrapper .login-box .heading {
+      font-family: 'citroenblack';
+      font-size: 3.6rem;
+      line-height: 43px;
+      margin-bottom: 39px; }
+    .login-wrapper .login-box .login-form {
+      width: 360px;
+      margin: 0 auto; }
+      .login-wrapper .login-box .login-form .row {
+        margin-bottom: 28px;
+        width: 100%; }
+        .login-wrapper .login-box .login-form .row > input {
+          background: #fff;
+          border: 1px solid #828282;
+          padding: 20px 23px;
+          font-family: 'citroenregular';
+          font-size: 1.6rem;
+          line-height: 20px;
+          width: 100%; }
+        .login-wrapper .login-box .login-form .row.cta-wrapper {
+          margin-top: 25px;
+          margin-bottom: 0; }
+          .login-wrapper .login-box .login-form .row.cta-wrapper button {
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+            background: #9D0605;
+            font-family: 'citroenbold';
+            font-size: 1.6rem;
+            line-height: 19px;
+            padding: 20px 51px;
+            color: #fff;
+            margin-bottom: 39px; }
+          .login-wrapper .login-box .login-form .row.cta-wrapper a {
+            font-family: 'citroenbold';
+            font-size: 2rem;
+            line-height: 22px;
+            color: #08A8B6; }
 
 header {
   height: -webkit-fit-content;
