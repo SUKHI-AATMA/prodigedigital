@@ -349,6 +349,21 @@ $(function() {
         // });
     });
 
+    $(document).on("click", ".show-password", function() {
+        if(!$(this).parents(".field-password").hasClass("display-password")) {
+            $(this).parents(".field-password").addClass("display-password");
+            $(this).siblings("input").attr("type", "text");
+        }
+        else {
+            $(this).parents(".field-password").removeClass("display-password");
+            $(this).siblings("input").attr("type", "password");
+        }
+    });
+
+    $(document).on("click", ".login-form button", function() {
+        $(".login-form").addClass("display-error");
+    });
+
     // $(document).on("click", ".screen-list-wrapper .screen-to-connect > .error-wrapper .option-retry", function() {
     //     $(".screen-list-wrapper .screen-to-connect > a").click();
     // });

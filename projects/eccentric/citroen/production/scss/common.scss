@@ -862,6 +862,12 @@ main {
         }
     }
 
+    &.tab-versions-content,
+    &.tab-features-content,
+    &.tab-accessories-content {
+        padding-bottom: 25px;
+    }
+
     &.tab-features-content .content-features, 
     &.tab-versions-content .content-versions,
     &.tab-accessories-content .content-accessories,
@@ -1468,7 +1474,7 @@ main {
     }
 
     .col-3-3 {
-        
+        height: 100%;
 
         .automobile-accessories-wrapper {
             // .accessories-price {
@@ -3431,21 +3437,33 @@ main {
             .row {
                 margin-bottom: 28px;
                 width: 100%;
+                position: relative;
+
+                &.no-margin-bottom {
+                    margin-bottom: 0;
+                }
 
                 & > input {
                     background: #fff;
                     border: 1px solid #828282;
-                    padding: 20px 23px;
+                    padding: 20px 53px 20px 23px;
                     font-family: 'citroenregular';
                     font-size: 1.6rem;
                     line-height: 20px;
                     width: 100%;
                 }
 
-                &.cta-wrapper {
-                    margin-top: 25px;
-                    margin-bottom: 0;
+                & > .errorMsg {
+                    width: 100%;
+                    font-family: 'citroenregular';
+                    font-size: 1.2rem;
+                    line-height: 15px;
+                    color: #D21414;
+                    text-transform: none;
+                    visibility: hidden;
+                }
 
+                &.cta-wrapper {
                     button {
                         width: fit-content;
                         background: #9D0605;
@@ -3464,6 +3482,33 @@ main {
                         color: #08A8B6;
                     }
                 }
+
+                &.field-password {
+                    .show-password {
+                        background: url('../images/icon-eye-off.svg') no-repeat 0 0;
+                        width: 24px;
+                        height: 24px;
+                        display: block;
+                        position: absolute;
+                        right: 15px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            &.display-error {
+                & > .row {
+                    & > input {
+                        border-color: #ff0000;
+                    }
+                    
+                    & > .errorMsg {
+                        visibility: visible;
+                    }
+                }
+                
             }
         }
     }
