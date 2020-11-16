@@ -132,12 +132,18 @@ body {
         }
     }
 
-    &.popup-show, &.display-select-screen {
+    &.popup-show, &.display-select-screen, &.site-navigation-display {
         main {
             &:before {
-                height: 100%;
+                // height: 100%;
                 -webkit-backdrop-filter: blur(20px);
                 backdrop-filter: blur(20px);
+                z-index: 4;
+                background: rgba(0, 0, 0, 0.7);
+            }
+
+            .popup-background {
+                z-index: 4;
             }
         }
     }
@@ -314,6 +320,12 @@ body {
 
         }
     }
+
+    &.site-navigation-display {
+        .site-navigation {
+            transform: translateX(0);
+        }
+    }
 }
 
 // input[type=radio] {
@@ -333,20 +345,21 @@ main {
     height: fit-content;
     min-height: 810px;
     margin: auto auto;
-    // overflow: hidden;
+    overflow: hidden;
     position: relative;
 
     &:before {
         content: '';
-        position: fixed;
+        // position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 0;
-        background: rgba(0, 0, 0, 0.7);
+        height: 100%;
+        background: rgba(0, 0, 0, 0);
         -webkit-backdrop-filter: blur(0);
         backdrop-filter: blur(0);
-        z-index: 4;
+        z-index: -1;
         transition: 0.5s all ease;
     }
 
@@ -3512,4 +3525,117 @@ main {
             }
         }
     }
+}
+
+.site-navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 295px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 5;
+    transform: translateX(-120%);
+    transition: 0.5s all ease;
+
+    .location-wrapper {
+        padding: 24px 17px 17px 9px;
+        .logo {
+            margin-right: 6px;
+
+            img {
+                width: 106px;
+                height: 89px;
+            }
+        }
+
+        .location-details {
+            font-family: 'citroenbold';
+            font-size: 1.6rem;
+            line-height: 18px;
+            color: #9D0605;
+        }
+    }
+
+    .nav-wrapper {
+        & > li {
+            border-top: 1px solid #d0cccc;
+            padding: 23px 26px;
+            width: 100%;
+            font-family: 'citroenbold';
+            font-size: 1.6rem;
+            line-height: 18px;
+            position: relative;
+            cursor: pointer;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                width: 7px;
+                height: 7px;
+                border-top: 1px solid #2d2d2d;
+                border-right: 1px solid #2d2d2d;
+                transform: translateY(-50%) rotate(45deg);
+                transition: 0.5s all ease;
+            }
+
+            a {
+                color: #3F3F3F;
+                background: url('../images/nav-search.svg') 0 0 no-repeat;
+                padding-left: 46px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 32px;
+
+                & > span {
+                    display: block;
+                    font-family: 'citroenregular';
+                    font-size: 1.2rem;
+                    line-height: 15px;
+                    color: #2D2D2D;
+                    opacity: 0.6;
+                    text-transform: none;
+                }
+
+                &.nav-car-compare {
+                    background-image: url('../images/nav-car-compare.svg');
+                }
+
+                &.nav-sync {
+                    background-image: url('../images/nav-sync.svg');
+                }
+
+                &.nav-support {
+                    background-image: url('../images/nav-support.svg');
+                }
+
+                &.nav-logout {
+                    background-image: url('../images/nav-logout.svg');
+                }
+            }
+        }
+    }
+
+    .app-details {
+        position: absolute;
+        bottom: 24px;
+        text-align: center;
+        width: 100%;
+        font-family: 'citroenbold';
+        font-size: 1.6rem;
+        line-height: 18px;
+        color: #d0cccc;
+    }
+}
+
+.popup-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }

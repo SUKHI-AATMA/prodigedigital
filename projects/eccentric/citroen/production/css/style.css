@@ -296,10 +296,13 @@ body {
     display: none; }
   body.popup-all-accessories-visible .main-tabs-container:not(.content-all) {
     display: block; }
-  body.popup-show main:before, body.display-select-screen main:before {
-    height: 100%;
+  body.popup-show main:before, body.display-select-screen main:before, body.site-navigation-display main:before {
     -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px); }
+    backdrop-filter: blur(20px);
+    z-index: 4;
+    background: rgba(0, 0, 0, 0.7); }
+  body.popup-show main .popup-background, body.display-select-screen main .popup-background, body.site-navigation-display main .popup-background {
+    z-index: 4; }
   body.popup-show {
     overflow: hidden; }
     body.popup-show .popup-wrapper {
@@ -360,6 +363,10 @@ body {
     display: none; }
   body.edit-summary-mode .main-content-wrapper {
     height: calc(810px - 95px); }
+  body.site-navigation-display .site-navigation {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0); }
 
 input[type=checkbox] {
   -webkit-appearance: auto;
@@ -374,18 +381,19 @@ main {
   height: fit-content;
   min-height: 810px;
   margin: auto auto;
+  overflow: hidden;
   position: relative; }
   main:before {
     content: '';
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 0;
-    background: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
     -webkit-backdrop-filter: blur(0);
     backdrop-filter: blur(0);
-    z-index: 4;
+    z-index: -1;
     -webkit-transition: 0.5s all ease;
     -o-transition: 0.5s all ease;
     transition: 0.5s all ease; }
@@ -2343,6 +2351,105 @@ main {
         border-color: #ff0000; }
       .login-wrapper .login-box .login-form.display-error > .row > .errorMsg {
         visibility: visible; }
+
+.site-navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 295px;
+  height: 100%;
+  background-color: #fff;
+  z-index: 5;
+  -webkit-transform: translateX(-120%);
+  -ms-transform: translateX(-120%);
+  transform: translateX(-120%);
+  -webkit-transition: 0.5s all ease;
+  -o-transition: 0.5s all ease;
+  transition: 0.5s all ease; }
+  .site-navigation .location-wrapper {
+    padding: 24px 17px 17px 9px; }
+    .site-navigation .location-wrapper .logo {
+      margin-right: 6px; }
+      .site-navigation .location-wrapper .logo img {
+        width: 106px;
+        height: 89px; }
+    .site-navigation .location-wrapper .location-details {
+      font-family: 'citroenbold';
+      font-size: 1.6rem;
+      line-height: 18px;
+      color: #9D0605; }
+  .site-navigation .nav-wrapper > li {
+    border-top: 1px solid #d0cccc;
+    padding: 23px 26px;
+    width: 100%;
+    font-family: 'citroenbold';
+    font-size: 1.6rem;
+    line-height: 18px;
+    position: relative;
+    cursor: pointer; }
+    .site-navigation .nav-wrapper > li:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      width: 7px;
+      height: 7px;
+      border-top: 1px solid #2d2d2d;
+      border-right: 1px solid #2d2d2d;
+      -webkit-transform: translateY(-50%) rotate(45deg);
+      -ms-transform: translateY(-50%) rotate(45deg);
+      transform: translateY(-50%) rotate(45deg);
+      -webkit-transition: 0.5s all ease;
+      -o-transition: 0.5s all ease;
+      transition: 0.5s all ease; }
+    .site-navigation .nav-wrapper > li a {
+      color: #3F3F3F;
+      background: url("../images/nav-search.svg") 0 0 no-repeat;
+      padding-left: 46px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      height: 32px; }
+      .site-navigation .nav-wrapper > li a > span {
+        display: block;
+        font-family: 'citroenregular';
+        font-size: 1.2rem;
+        line-height: 15px;
+        color: #2D2D2D;
+        opacity: 0.6;
+        text-transform: none; }
+      .site-navigation .nav-wrapper > li a.nav-car-compare {
+        background-image: url("../images/nav-car-compare.svg"); }
+      .site-navigation .nav-wrapper > li a.nav-sync {
+        background-image: url("../images/nav-sync.svg"); }
+      .site-navigation .nav-wrapper > li a.nav-support {
+        background-image: url("../images/nav-support.svg"); }
+      .site-navigation .nav-wrapper > li a.nav-logout {
+        background-image: url("../images/nav-logout.svg"); }
+  .site-navigation .app-details {
+    position: absolute;
+    bottom: 24px;
+    text-align: center;
+    width: 100%;
+    font-family: 'citroenbold';
+    font-size: 1.6rem;
+    line-height: 18px;
+    color: #d0cccc; }
+
+.popup-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
 
 header {
   height: -webkit-fit-content;

@@ -1,4 +1,7 @@
 $(function() {
+    /* added span tag for handling pop-up close when clicked anywhere outside on the body area */
+    $("body > main").append("<span class='popup-background'></span>");
+    /* added span tag for handling pop-up close when clicked anywhere outside on the body area ends */
     $(".automobile-features-wrapper > ul > li span").on("click", function() {
         var $this = $(this).parent("li");
         $this.toggleClass("accordion-open").siblings("li").removeClass("accordion-open").children("ul").slideUp();
@@ -362,6 +365,22 @@ $(function() {
 
     $(document).on("click", ".login-form button", function() {
         $(".login-form").addClass("display-error");
+    });
+
+    $(document).on("click", "header .hamburger-menu", function() {
+        $("body").addClass("site-navigation-display");
+    });
+
+    $(document).on("click", ".popup-background", function() {
+        if($("body").hasClass("site-navigation-display")) {
+            $("body").removeClass("site-navigation-display");
+        }
+        else if($("body").hasClass("display-select-screen")) {
+            $("body").removeClass("display-select-screen");
+        }
+        else if($("body").hasClass("popup-show")) {
+            $("body").removeClass("popup-show");
+        }
     });
 
     // $(document).on("click", ".screen-list-wrapper .screen-to-connect > .error-wrapper .option-retry", function() {
