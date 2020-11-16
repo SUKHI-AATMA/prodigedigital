@@ -167,12 +167,17 @@ $(function() {
         $("body").addClass("popup-show display-change-model");
     });
 
-    
+    $(document).on("click", ".tab-summary-content .btn-save", function() {
+        $("body").addClass("popup-show display-error-message");
+    });
 
     $(".close-popup").on("click", function() {
         $("body").removeClass("popup-show");
         if($("body").hasClass("display-change-model")) {
             $("body").removeClass("display-change-model"); 
+        }
+        else if($("body").hasClass("display-error-message")) {
+            $("body").removeClass("display-error-message"); 
         }
     });
 
@@ -352,7 +357,7 @@ $(function() {
         // });
     });
 
-    $(document).on("click", ".show-password", function() {
+    $(document).on("click touchstart", ".show-password", function() {
         if(!$(this).parents(".field-password").hasClass("display-password")) {
             $(this).parents(".field-password").addClass("display-password");
             $(this).siblings("input").attr("type", "text");
