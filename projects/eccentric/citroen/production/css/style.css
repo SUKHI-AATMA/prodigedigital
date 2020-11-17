@@ -318,6 +318,9 @@ body {
     body.popup-show.display-error-message .error-messages-container {
       display: inherit;
       text-align: center; }
+      body.popup-show.display-error-message .error-messages-container > div {
+        width: 80%;
+        margin: 0 auto; }
       body.popup-show.display-error-message .error-messages-container .close-popup {
         right: 20px; }
       body.popup-show.display-error-message .error-messages-container .heading {
@@ -334,13 +337,50 @@ body {
         line-height: 18px;
         color: #000;
         width: 350px; }
+      body.popup-show.display-error-message .error-messages-container .form-wrapper {
+        margin-top: 38px; }
+        body.popup-show.display-error-message .error-messages-container .form-wrapper .row {
+          position: relative;
+          padding-bottom: 20px; }
+          body.popup-show.display-error-message .error-messages-container .form-wrapper .row.error-display input {
+            border-color: #9D0605; }
+          body.popup-show.display-error-message .error-messages-container .form-wrapper .row.error-display .errorMsg {
+            display: block; }
+          body.popup-show.display-error-message .error-messages-container .form-wrapper .row input {
+            border: 1px solid rgba(130, 130, 130, 0.2);
+            padding: 10px;
+            font-family: 'citroenregular';
+            font-size: 1.4rem;
+            line-height: 18px;
+            color: #3B3938;
+            width: 100%;
+            -webkit-transition: 0.5s all ease;
+            -o-transition: 0.5s all ease;
+            transition: 0.5s all ease; }
+            body.popup-show.display-error-message .error-messages-container .form-wrapper .row input:focus {
+              border-color: #828282; }
+          body.popup-show.display-error-message .error-messages-container .form-wrapper .row .errorMsg {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            font-family: 'citroenregular';
+            font-size: 1.2rem;
+            line-height: 15px;
+            color: #9D0605;
+            text-align: left;
+            text-transform: none;
+            display: none; }
       body.popup-show.display-error-message .error-messages-container .cta-wrapper {
         margin-top: 51px; }
-        body.popup-show.display-error-message .error-messages-container .cta-wrapper a {
+        body.popup-show.display-error-message .error-messages-container .cta-wrapper .cta-button {
           width: 200px;
           padding: 14px 0;
           font-size: 1.6rem;
           line-height: 19px; }
+          body.popup-show.display-error-message .error-messages-container .cta-wrapper .cta-button.secondary-button {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background-color: transparent;
+            color: #3B3938; }
   body.display-select-screen .cast-screen-wrapper {
     top: 0;
     z-index: 4; }
@@ -762,6 +802,14 @@ main {
 .align-content-end {
   -ms-flex-line-pack: end;
   align-content: flex-end; }
+
+.display-none {
+  display: none; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
 
 /* page css starts */
 .content-all {

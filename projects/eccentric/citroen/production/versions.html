@@ -1138,20 +1138,67 @@
         <div class="display-flex full-width flex-direction-column justify-content-center error-messages-container">
             <span class="close-popup"></span>
             <div class="display-flex full-width flex-direction-column align-items-center config-unsaved">
-                <div class="error-logo"><img src="./images/config-unsaved.svg" alt="CONFIGURATION UNSAVED" title="CONFIGURATION UNSAVED"></div>
+                <div class="logo"><img src="./images/config-unsaved.svg" alt="CONFIGURATION UNSAVED" title="CONFIGURATION UNSAVED"></div>
                 <p class="heading">CONFIGURATION UNSAVED</p>
                 <p class="description">GOING BACK TO SEARCH WILL RESULT IN LOSS OF EXSITING CONFIGURATION.</p>
                 <div class="display-flex cta-wrapper">
                     <a href="javascript:;" class="display-flex align-items-center cta-button">SAVE CONFIG<span></span></a>
                 </div>
             </div>
-            <div class="display-flex full-width flex-direction-column align-items-center switching-variant">
-                <div class="error-logo"><img src="./images/switching-variant.svg" alt="SWITCHING VARIANT" title="SWITCHING VARIANT"></div>
+            <div class="display-flex full-width flex-direction-column align-items-center switching-variant display-none">
+                <div class="logo"><img src="./images/switching-variant.svg" alt="SWITCHING VARIANT" title="SWITCHING VARIANT"></div>
                 <p class="heading">SWITCHING VARIANT</p>
                 <p class="description">You are about to switch VARIANT. This will CREATE A NEW CONFIGURATION.</p>
                 <div class="display-flex cta-wrapper">
                     <a href="javascript:;" class="display-flex align-items-center cta-button">CONTINUE<span></span></a>
                 </div>
+            </div>
+            <div class="display-flex full-width flex-direction-column align-items-center save-configuration display-none">
+                <div class="logo"><img src="./images/save-configuration.svg" alt="SAVE CONFIGURATION" title="SAVE CONFIGURATION"></div>
+                <p class="heading">SAVE CONFIGURATION</p>
+                <div class="display-flex flex-direction-column full-width form-wrapper">
+                    <div class="display-flex row">
+                        <input type="number" placeholder="Enter your mobile number">
+                        <p class="errorMsg">Please enter the value</p>
+                    </div>
+                </div>
+                <div class="display-flex cta-wrapper">
+                    <a href="javascript:;" class="display-flex align-items-center cta-button">CONTINUE<span></span></a>
+                </div>
+            </div>
+            <div class="display-flex full-width flex-direction-column align-items-center save-configuration-success display-none">
+                <div class="logo"><img src="./images/save-configuration-success.svg" alt="CONFIGURATION SAVED" title="CONFIGURATION SAVED"></div>
+                <p class="heading">CONFIGURATION SAVED</p>
+                <p class="description">YOUR CONFIGURATION HAS BEEN SAVED. WOULD YOU  LIKE TO END THIS SESSION?</p>
+                <div class="display-flex cta-wrapper">
+                    <a href="javascript:;" class="display-flex align-items-center cta-button">YES<span></span></a>
+                </div>
+            </div>
+            <div class="display-flex full-width flex-direction-column align-items-center switching-color display-none">
+                <div class="logo"><img src="./images/switching-color.svg" alt="SWITCHING COLOR" title="SWITCHING COLOR"></div>
+                <p class="heading">SWITCHING COLOR</p>
+                <p class="description">You are about to switch car color. This will CREATE A NEW CONFIGURATION.</p>
+                <div class="display-flex cta-wrapper">
+                    <a href="javascript:;" class="display-flex align-items-center cta-button">CONTINUE<span></span></a>
+                </div>
+            </div>
+            <div class="display-flex full-width flex-direction-column align-items-center device-battery-status display-none">
+                <div class="logo"><img src="./images/device-battery-status.svg" alt="DEVICE BATTERY LOW" title="DEVICE BATTERY LOW"></div>
+                <p class="heading">DEVICE BATTERY LOW</p>
+                <p class="description">SAVE ALL RECENT PROGRESS AND PLUGIN POWER SOURCE TO CHARGE</p>
+                <div class="display-flex cta-wrapper">
+                    <a href="javascript:;" class="display-flex align-items-center cta-button secondary-button">PLUG-IN CHARGER<span></span></a>
+                </div>
+            </div>
+            <div class="display-flex full-width flex-direction-column align-items-center wifi-status display-none">
+                <div class="logo"><img src="./images/wifi-status.svg" alt="WIFI CONNECTIVITY LOST" title="WIFI CONNECTIVITY LOST"></div>
+                <p class="heading">WIFI CONNECTIVITY LOST</p>
+                <p class="description">THE DEVICE HAS LOST CONNECTION TO WIFI NETWORK. PLEASE CHECK DEVICE WIFI SETTINGS OR CONNECT WITH I.T. SUPPORT.</p>
+            </div>
+            <div class="display-flex full-width flex-direction-column align-items-center under-maintenance display-none">
+                <div class="logo"><img src="./images/under-maintenance.svg" alt="UNDER MAINTAINENCE" title="UNDER MAINTAINENCE"></div>
+                <p class="heading">UNDER MAINTAINENCE</p>
+                <p class="description">THE APP IS UNDER SERVER MAINTAINENCE.</p>
             </div>
         </div>
         <!-- popup for displaying error messages ends -->
