@@ -15,7 +15,12 @@ html {
 
 body {
     background-color: #dadada;
-    zoom: 75%;
+}
+
+@media only screen and (max-width: 1400px) {
+    body {
+        zoom: 75%;
+    }
 }
 /** default css ends **/
 
