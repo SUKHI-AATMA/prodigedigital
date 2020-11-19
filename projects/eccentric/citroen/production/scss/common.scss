@@ -978,6 +978,11 @@ input::-webkit-inner-spin-button {
             .search-results-wrapper {
                 .search-results {
                     height: 545px;
+                    display: grid;
+                    grid-template-columns: 249px 249px 249px;
+                    grid-column-gap: 30px;
+                    grid-row-gap: 40px;
+                    justify-content: normal;
                 }
             }
         }
@@ -1113,12 +1118,12 @@ input::-webkit-inner-spin-button {
                     border: 1px solid #bdbdbd;
                     width: 249px;
                     height: 310px;
-                    margin-top: 40px;
+                    // margin-top: 40px;
                     cursor: pointer;
 
-                    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
-                        margin-top: 0;
-                    }
+                    // &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+                    //     margin-top: 0;
+                    // }
 
                     &.new-config {
                         justify-content: center;
