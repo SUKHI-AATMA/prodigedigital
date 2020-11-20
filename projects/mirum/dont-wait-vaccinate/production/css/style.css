@@ -17,11 +17,7 @@ body {
     background-color: #dadada;
 }
 
-@media only screen and (max-width: 1400px) {
-    body {
-        zoom: 75%;
-    }
-}
+
 /** default css ends **/
 
 @font-face {
@@ -191,6 +187,11 @@ body {
     margin-bottom: 10px;
 }
 
+.pd-why-booster-wrapper-content > .pd-columnar-wrapper > .column > .pd-banner > img {
+    width: fit-content;
+    max-width: 100%;
+}
+
 .pd-why-booster-wrapper-content > .pd-columnar-wrapper > .column > .pd-heading {
     font-family: 'futura_bkbold';
     font-size: 2.917rem;
@@ -341,3 +342,303 @@ body {
     color: #231f20;
 }
 
+@media only screen and (max-width: 1400px) {
+    body {
+        zoom: 75%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        zoom: 100%;
+    }
+
+    .pd-banner-wrapper-bg {
+        background-image: url('../images/banner-bg-device.jpg');
+    }
+
+    .pd-banner-wrapper {
+        border-bottom-width: 42px;
+    }
+
+    .pd-banner-content {
+        width: 55%;
+    }
+
+    .pd-logo {
+        margin: 14px 15px 27px 0;
+        width: 70%;
+    }
+
+    .pd-banner-text {
+        margin: 0 15px 25px 0;
+        padding-left: 30px;
+        font-size: 4.5rem;
+    }
+
+    .pd-announcement-wrapper {
+        padding: 15px 15px 10px 15px;
+        width: 98%;
+        transform: translateY(-20px);
+        background-size: contain;
+    }
+    
+    .pd-announcement-wrapper > .pd-heading {
+        font-size: 3.2rem;
+        margin-bottom: 5px;
+    }
+
+    .pd-announcement-wrapper > .pd-description {
+        font-size: 2rem;
+        width: 70%;
+    }
+
+    .pd-get-booster-wrapper > .pd-dont-wait-vaccinate-wrapper {
+        width: 95%;
+        padding: 15px 0 10px 0;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+    }
+
+    .pd-get-booster-wrapper > .pd-dont-wait-vaccinate-wrapper > .pd-heading {
+        font-size: 5rem;
+        margin-bottom: 5px;
+    }
+
+    .pd-get-booster-wrapper > .pd-dont-wait-vaccinate-wrapper > .pd-description {
+        font-size: 3.5rem;
+        padding-top: 20px;
+    }
+
+    .pd-get-booster-wrapper > .pd-dont-wait-vaccinate-wrapper > .pd-description:before {
+        height: 8px;
+        background-size: 5%;
+    }
+
+    .pd-booster-guide-wrapper {
+        width: 350px;
+        height: 350px;
+        margin: -160px auto 100px auto;
+        border-width: 4px;
+        padding: 0 18px;
+    }
+
+    .pd-booster-guide-wrapper > a {
+        font-size: 2.5rem;
+        padding-top: 170px;
+        line-height: normal;
+    }
+
+    .pd-booster-guide-wrapper > a > span.pd-click-here {
+        font-size: 4rem;
+        line-height: normal;
+        margin-bottom: 5px;
+    }
+
+    .pd-get-booster-guide-wrapper {
+        padding: 20px 50px;
+        width: 90%;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        font-size: 3rem;
+        line-height: 4.5rem;
+    }
+
+    .pd-footer-wrapper {
+        padding: 20px 30px;
+    }
+
+    .pd-footer-wrapper .pd-heading {
+        font-size: 3.5rem;
+        margin-bottom: 15px;
+    }
+
+    .pd-footer-wrapper .pd-heading > img {
+        width: 25%;
+        transform: translateY(3px);
+    }
+
+    .pd-footer-wrapper > a {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    .pd-footer-wrapper .pd-description {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* .pd-banner-wrapper-bg {
+        background-image: url('../images/banner-bg-device.jpg');
+    } */
+
+    .pd-banner-wrapper {
+        border-bottom-width: 22px;
+    }
+
+    .pd-banner-content {
+        width: 62%;
+    }
+
+    .pd-logo {
+        margin: 14px 8px 27px 0;
+        /* width: 70%; */
+    }
+
+    .pd-banner-text {
+        /* margin: 0 15px 25px 0;
+        padding-left: 30px; */
+        font-size: 1.9rem;
+    }
+
+    .pd-announcement-wrapper {
+        padding: 5px 15px 5px 15px;
+        /* width: 98%; */
+        background-size: cover;
+        transform: translateY(-10px);
+    }
+    
+    .pd-announcement-wrapper > .pd-heading {
+        font-size: 1.498rem;
+        /* margin-bottom: 5px; */
+    }
+
+    .pd-announcement-wrapper > .pd-description {
+        font-size: 1.016rem;
+        /* width: 70%; */
+    }
+
+    .pd-note-wrapper {
+        margin-bottom: 33px;
+    }
+
+    .pd-note-wrapper > .pd-description {
+        font-size: 1.016rem;
+    }
+
+    .pd-why-booster-wrapper {
+        margin: 0 20px 30px 20px;
+    }
+
+    .pd-why-booster-wrapper-content {
+        padding: 17px 30px 10px 30px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin-bottom: 40px;
+    }
+
+    .pd-why-booster-wrapper-content > .pd-heading {
+        font-size: 1.875rem;
+    }
+
+    .pd-why-booster-wrapper-content > .pd-columnar-wrapper > .column {
+        width: 100%;
+    }
+
+    .pd-why-booster-wrapper-content > .pd-columnar-wrapper > .column > .pd-banner {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .pd-why-booster-wrapper-content > .pd-columnar-wrapper > .column > .pd-heading {
+        font-size: 1.072rem;
+        margin-bottom: 0;
+    }
+
+    .pd-why-booster-wrapper-content > .pd-columnar-wrapper > .column > .pd-description {
+        font-size: 1rem;
+    }
+
+    .pd-why-booster-wrapper-content > .pd-columnar-wrapper > .column > .pd-description > sup {
+        font-size: 0.8rem;
+    }
+
+    .pd-why-booster-wrapper-content > .pd-columnar-wrapper {
+        flex-direction: column;
+    }
+
+    .pd-get-booster-wrapper > .pd-dont-wait-vaccinate-wrapper {
+        width: 65%;
+        padding: 8px 0 4px 0;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .pd-get-booster-wrapper > .pd-dont-wait-vaccinate-wrapper > .pd-heading {
+        font-size: 1.594rem;
+        margin-bottom: 5px;
+    }
+
+    .pd-get-booster-wrapper > .pd-dont-wait-vaccinate-wrapper > .pd-description {
+        font-size: 1.313rem;
+        padding-top: 8px;
+    }
+
+    .pd-get-booster-wrapper > .pd-dont-wait-vaccinate-wrapper > .pd-description:before {
+        height: 3px;
+        background-size: 5%;
+    }
+
+    .pd-booster-guide-wrapper {
+        width: 140px;
+        height: 140px;
+        margin: -62px auto 20px auto;
+        border-width: 4px;
+        padding: 0 18px;
+    }
+
+    .pd-booster-guide-wrapper > a {
+        font-size: 1.032rem;
+        padding-top: 60px;
+        line-height: normal;
+    }
+
+    .pd-booster-guide-wrapper > a > span.pd-click-here {
+        font-size: 1.501rem;
+        line-height: normal;
+        margin-bottom: 5px;
+    }
+
+    .pd-get-booster-guide-wrapper {
+        padding: 10px 30px;
+        width: 90%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        font-size: 1.313rem;
+        line-height: 1.5rem;
+    }
+
+    .pd-footer-wrapper {
+        padding: 14px 20px;
+    }
+
+    .pd-footer-wrapper .pd-heading {
+        font-size: 1.116rem;
+        margin-bottom: 15px;
+    }
+
+    .pd-footer-wrapper .pd-heading > img {
+        width: 25%;
+        transform: translateY(3px);
+    }
+
+    .pd-footer-wrapper > a {
+        font-size: 1.16rem;
+        margin-bottom: 20px;
+    }
+
+    .pd-footer-wrapper .pd-description {
+        font-size: 0.563rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    body {
+        zoom: 90%;
+    }
+
+    .pd-announcement-wrapper {
+        background-size: contain;
+    }
+}
