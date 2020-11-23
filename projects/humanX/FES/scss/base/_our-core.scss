@@ -382,7 +382,7 @@ section.sec-core-tab{
                                     z-index: 45;
                                     height: 501px;
                                     width: 527px;
-                                    transform: rotate(16deg);
+                                    transform: rotate(14deg);
 
                                     .circle-wrap{
                                         position: relative;
@@ -402,7 +402,7 @@ section.sec-core-tab{
                             
                                         .Oval_1 {
                                             padding-top: 0px;
-                                            left: 5%;
+                                            left: 4%;
                                             svg:first-child {
                                                 animation: circular-animate-oval-reverse 70s linear infinite;
                                             }
@@ -410,7 +410,7 @@ section.sec-core-tab{
                             
                                         .Oval_2 {
                                             padding-top: 0;
-                                            left: 8%;
+                                            left:7.5%;
                                             svg:first-child {
                                                 animation: circular-animate-oval 70s linear infinite;
                                             }
