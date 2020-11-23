@@ -243,19 +243,19 @@ section.sec-core-tab{
                                 }
                                 &.item2{
                                     top: 31%;
-                                    left: 18%;
+                                    left: 19%;
                                 }
                                 &.item3{
                                     top: 49%;
                                     left: 34%;
                                 }
                                 &.item4{
-                                    top: 51%;
-                                    left: 50%;
+                                    top: 49%;
+                                    left: 53%;
                                 }
                                 &.item5{
-                                    top: 36%;
-                                    left: 67%;
+                                    top: 31%;
+                                    left: 68%;
                                 }
                                 &.item6{
                                     top: 0;
@@ -377,11 +377,13 @@ section.sec-core-tab{
                                 position: relative;
                                 .circle-line-wrap{
                                     position: absolute;
-                                    right: -42px;
-                                    bottom: -44px;
+                                    right: -22px;
+                                    bottom: -10px;
                                     z-index: 45;
                                     height: 501px;
                                     width: 527px;
+                                    transform: rotate(14deg);
+
                                     .circle-wrap{
                                         position: relative;
                             
@@ -399,8 +401,8 @@ section.sec-core-tab{
                                         }
                             
                                         .Oval_1 {
-                                            padding-top: 8px;
-                                            left: 8%;
+                                            padding-top: 0px;
+                                            left: 4%;
                                             svg:first-child {
                                                 animation: circular-animate-oval-reverse 70s linear infinite;
                                             }
@@ -408,14 +410,14 @@ section.sec-core-tab{
                             
                                         .Oval_2 {
                                             padding-top: 0;
-                                            left: 8%;
+                                            left:7.5%;
                                             svg:first-child {
                                                 animation: circular-animate-oval 70s linear infinite;
                                             }
                                         }
                                         .Oval_3 {
                                             padding-top: 0;
-                                            left: 7%;
+                                            left: 10%;
                                             svg:first-child {
                                                 animation: circular-animate-oval 70s linear infinite;
                                             }
@@ -442,8 +444,8 @@ section.sec-core-tab{
                                         background: url(../../images/work/our-core/overview.png);
                                         background-size: cover;
                                         background-repeat: no-repeat;
-                                        width: 380px;
-                                        height: 382px;
+                                        width: 420px;
+                                        height: 422px;
                                         //border-radius: 0;
                                     }
                                 }
@@ -669,10 +671,13 @@ section.sec-core-tab{
     }
     section.sec-core-tab .tab-container .tab-content .row .core-overview .inner-row .inner-col{
         flex-direction: column;
-
+        
+        &:first-child{
+            margin-bottom: 60px;
+        }
         .coll{
             display: flex;
-
+            
             &:last-child{
                 width: auto;
                 margin: 40px 0;
@@ -764,6 +769,17 @@ section.sec-core-tab{
     section.sec-core-tab .tab-container .tab-content{
         padding-top: 124px;
     } 
+
+    section.sec-core-tab .tab-container .tab-content .row .core-overview .inner-row .inner-col .tab-circle-container .circle-line-wrap{
+        right: -16px;
+        bottom: -24px;
+        height: 400px;
+        width: 402px;
+    }
+    section.sec-core-tab .tab-container .tab-content .row .core-overview .inner-row .inner-col .tab-circle-container .inner-wrap .circle-img{
+        width: 320px;
+        height: 322px;
+    }
 
 }
 
@@ -916,6 +932,17 @@ section.sec-core-tab{
         }
     }
 
+    section.sec-core-tab .tab-container .tab-content .row .core-overview .inner-row .inner-col .tab-circle-container .circle-line-wrap{
+        right: -6px;
+        bottom: -12px;
+        height: 294px;
+        width: 296px;
+    }
+    section.sec-core-tab .tab-container .tab-content .row .core-overview .inner-row .inner-col .tab-circle-container .inner-wrap .circle-img{
+        width: 242px;
+        height: 244px;
+    }
+
 }
 
 
@@ -928,5 +955,15 @@ section.sec-core-tab{
     section.sec-core-bn .container .content h1.bn-title{
         font-size: 18px;
         line-height: 24px;
+    }
+    section.sec-core-tab .tab-container .tab-content .row .core-overview .inner-row .inner-col .tab-circle-container .circle-line-wrap{
+        right: -6px;
+        bottom: -12px;
+        height: 294px;
+        width: 296px;
+    }
+    section.sec-core-tab .tab-container .tab-content .row .core-overview .inner-row .inner-col .tab-circle-container .inner-wrap .circle-img{
+        width: 242px;
+        height: 244px;
     }
 }
