@@ -240,6 +240,22 @@ th {
     -webkit-transform: translate(-50%, -50%) rotate(360deg);
     transform: translate(-50%, -50%) rotate(360deg); } }
 
+@-webkit-keyframes connecting-loader-tv {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes connecting-loader-tv {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
 body {
   font-family: 'citroenblack';
   color: #000;
@@ -2540,6 +2556,92 @@ input::-webkit-inner-spin-button {
   width: 100%;
   height: 100%;
   z-index: -1; }
+
+.loading-screen-wrapper {
+  background-color: #9D0605; }
+  .loading-screen-wrapper .loading-screen {
+    -webkit-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    transform: translateY(-50px); }
+    .loading-screen-wrapper .loading-screen .logo {
+      margin-bottom: 95px; }
+    .loading-screen-wrapper .loading-screen .loading-bar-wrapper {
+      width: 1680px;
+      margin: 0 auto; }
+      .loading-screen-wrapper .loading-screen .loading-bar-wrapper .loading-bar {
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 100%;
+        height: 10px;
+        position: relative;
+        margin-bottom: 31px; }
+        .loading-screen-wrapper .loading-screen .loading-bar-wrapper .loading-bar span {
+          background-color: #fff;
+          width: 76%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0; }
+      .loading-screen-wrapper .loading-screen .loading-bar-wrapper .loading-percentage {
+        font-family: 'citroenregular';
+        font-size: 6.4rem;
+        font-weight: 900;
+        line-height: 77px;
+        color: #fff;
+        text-align: center; }
+
+.screen-loaded-wrapper {
+  background: url("../images/bg-screen-loaded.jpg") no-repeat 0 0;
+  position: relative; }
+  .screen-loaded-wrapper .connection-status {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000000));
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    position: absolute;
+    bottom: 0;
+    padding: 254px 208px 216px 0; }
+    .screen-loaded-wrapper .connection-status .remote-connected {
+      font-family: 'citroenregular';
+      font-size: 6.4rem;
+      line-height: 80px;
+      color: #fff;
+      margin-right: 37px;
+      background: url("../images/icon-check-with-red-bg.svg") no-repeat 0 50%;
+      padding-left: 92px; }
+  .screen-loaded-wrapper .connection-status-disconnect {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff; }
+    .screen-loaded-wrapper .connection-status-disconnect .heading, .screen-loaded-wrapper .connection-status-disconnect .description {
+      line-height: 70px; }
+    .screen-loaded-wrapper .connection-status-disconnect .heading {
+      font-family: 'citroenbold';
+      font-size: 6.4rem;
+      margin-bottom: 20px; }
+      .screen-loaded-wrapper .connection-status-disconnect .heading.connection-lost {
+        background: url("../images/icon-connection-status.svg") no-repeat 50% 0;
+        padding-top: 216px; }
+    .screen-loaded-wrapper .connection-status-disconnect .description {
+      font-family: 'citroenregular';
+      font-size: 5.6rem; }
+    .screen-loaded-wrapper .connection-status-disconnect .connecting-status {
+      position: absolute;
+      bottom: 253px; }
+      .screen-loaded-wrapper .connection-status-disconnect .connecting-status p {
+        font-family: 'citroenregular';
+        font-size: 8rem;
+        line-height: 101px;
+        padding-left: 150px;
+        position: relative; }
+        .screen-loaded-wrapper .connection-status-disconnect .connecting-status p:before {
+          content: '';
+          width: 100px;
+          height: 100px;
+          background: url("../images/icon-retrying.svg") no-repeat 0 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          -webkit-animation: connecting-loader-tv 1s infinite;
+          animation: connecting-loader-tv 1s infinite; }
 
 header {
   height: -webkit-fit-content;
