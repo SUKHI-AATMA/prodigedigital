@@ -3,6 +3,8 @@ header {
     background-color: #fff;
 
     nav {
+        width: 67px;
+        
         .hamburger-menu {
             position: relative;
             display: inline-block;
@@ -62,6 +64,20 @@ header {
                 width: 8px;
                 height: 8px;
                 transform: translateY(-50%) rotate(-45deg);
+            }
+        }
+    }
+
+    .logo-cast {
+        width: 42px;
+        position: relative;
+
+        img {
+            width: fit-content;
+            max-width: 100%;
+
+            &.screen-connected {
+                display: none;
             }
         }
     }

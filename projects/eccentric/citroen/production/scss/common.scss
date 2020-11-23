@@ -22,18 +22,35 @@
     font-style: normal;
 }
 
+@keyframes connecting-loader {
+    0%   { transform: translate(-50%, -50%) rotate(0deg) }
+    100% { transform: translate(-50%, -50%) rotate(360deg) }
+}
+
 body {
     font-family: 'citroenblack';
     color: #000;
     text-transform: uppercase;
     background-color: #fff;
+    height: 100vh;
+    // overflow: hidden;
+    position: relative;
 
     &.with-animation .col-1-3 .flip-in-out-container {
-        left: -350px;
+        // left: -350px;
+        left: -120%;
     }
 
     &.with-animation .col-3-3 .flip-in-out-container {
-        right: -350px;
+        // right: -350px;
+        right: -120%;
+    }
+
+    &.with-animation .col-2-3 {
+        & > img {
+            opacity: 0;
+            transform: translateY(50px);
+        }
     }
 
     &.popup-compare-visible {
@@ -63,6 +80,356 @@ body {
             display: none;
         }
     }
+
+    &.popup-all-accessories-visible {
+        &.tab-exterior-accessories-content {
+            li[data-rel=exterior-accessories-content] {
+                transform: scale(1);
+            }
+
+            li[data-rel=interior-accessories-content] {
+                transform: scale(0);
+            }
+        }
+
+        &.tab-interior-accessories-content {
+            li[data-rel=exterior-accessories-content] {
+                transform: scale(0);
+            }
+
+            li[data-rel=interior-accessories-content] {
+                transform: scale(1);
+            }
+        }
+        
+        header {
+            nav {
+                .hamburger-menu {
+                    opacity: 0;
+                    display: none;
+                    
+                }
+
+                .go-back {
+                    opacity: 1;
+                    display: block;
+                }
+            }
+        }
+
+        .all-accessories-wrapper {
+            top: 0;
+        }
+
+        .main-tabs-container {
+            &.content-all {
+                display: none;
+            }
+
+            &:not(.content-all) {
+                display: block;
+            }
+        }
+    }
+
+    &.popup-show, &.display-select-screen, &.site-navigation-display {
+        main {
+            &:before {
+                // height: 100%;
+                -webkit-backdrop-filter: blur(20px);
+                backdrop-filter: blur(20px);
+                z-index: 4;
+                background: rgba(0, 0, 0, 0.7);
+            }
+
+            .popup-background {
+                z-index: 4;
+            }
+        }
+    }
+
+    &.popup-show {
+        overflow: hidden;
+
+        // main {
+        //     &:before {
+        //         height: 100%;
+        //         -webkit-backdrop-filter: blur(20px);
+        //         backdrop-filter: blur(20px);
+        //     }
+        // }
+
+        .popup-wrapper {
+            // top: 50%;
+            // transform: translate(-50%, -50%);
+            opacity: 1;
+            z-index: 4;
+        }
+
+        &.display-change-model {
+            .autmobile-model-details-container {
+                display: block;
+            }
+        }
+
+        &.display-features {
+            .features-details-container {
+                display: block;
+            }
+        }
+
+        &.display-error-message {
+
+            .popup-wrapper {
+                width: 526px;
+                height: 296px;
+            }
+
+            .error-messages-container {
+                display: inherit;
+                text-align: center;
+
+                & > div {
+                    width: 80%;
+                    margin: 0 auto;
+                }
+
+                .close-popup {
+                    right: 20px;
+                }
+
+                .heading {
+                    padding: 0;
+                    margin-top: 13px;
+                    font-size: 2rem;
+                    line-height: 24px;
+                    color: #2d2d2d;
+                }
+
+                .description {
+                    margin-top: 19px;
+                    font-family: 'citroenbold';
+                    text-transform: uppercase;
+                    font-size: 1.6rem;
+                    line-height: 18px;
+                    color: #000;
+                    width: 350px;
+                }
+
+                .form-wrapper {
+                    margin-top: 38px;
+
+                    .row {
+                        position: relative;
+                        padding-bottom: 20px;
+
+                        &.error-display {
+                            input {
+                                border-color: #9D0605;
+                            }
+
+                            .errorMsg {
+                                display: block;
+                            }
+                        }
+
+                        input {
+                            border: 1px solid rgba(130, 130, 130, 0.2);
+                            padding: 10px;
+                            font-family: 'citroenregular';
+                            font-size: 1.4rem;
+                            line-height: 18px;
+                            color: #3B3938;
+                            width: 100%;
+                            transition: 0.5s all ease;
+
+                            &:focus {
+                                border-color: rgba(130, 130, 130, 1);
+                            }
+                        }
+
+                        .errorMsg {
+                            position: absolute;
+                            bottom: 0;
+                            width: 100%;
+                            font-family: 'citroenregular';
+                            font-size: 1.2rem;
+                            line-height: 15px;
+                            color: #9D0605;
+                            text-align: left;
+                            text-transform: none;
+                            display: none;
+                        }
+                    }
+                }
+
+                .cta-wrapper {
+                    margin-top: 51px;
+                    
+                    .cta-button {
+                        width: 200px;
+                        padding: 14px 0;
+                        font-size: 1.6rem;
+                        line-height: 19px;
+
+                        &.secondary-button {
+                            border: 1px solid rgba(0, 0, 0, 0.1);
+                            background-color: transparent;
+                            color: #3B3938;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    &.display-select-screen {
+        .cast-screen-wrapper {
+            top: 0;
+            z-index: 4;
+
+            .select-screen-details-container {
+                .select-screen-wrapper {
+                    display: inherit;
+                    top: 0;
+                }
+            }
+        }
+
+        header {
+            .logo-cast {
+                z-index: 5;
+            }
+        }
+    }
+
+    &.add-new-screen-container {
+        .cast-screen-wrapper {
+            .select-screen-details-container {
+                .select-screen-wrapper {
+                    display: none;
+                    top: -100%;
+                }
+
+                .add-new-screen-wrapper {
+                    display: inherit;
+                    top: 0;
+                }
+            }
+        }
+        
+
+        header {
+            .logo-cast {
+                z-index: inherit;
+            }
+        }
+    }
+
+    &.screen-not-selected:not(.empty-screen-list) {
+        .cast-screen-wrapper {
+            .select-screen-wrapper {
+                .cta-wrapper {
+                    .cta-button {
+                        &.add-new-screen {
+                            background-color: #fff;
+                            color: #3B3938;
+        
+                            span {
+                                background-image: url('../images/icon-plus-black.svg');
+                            }
+                        }
+        
+                        &.continue-screen {
+                            background: #f1f0f0;
+                            color: #d0cccc;
+                            cursor: not-allowed;
+        
+                            span {
+                                border-top-color: #d0cccc;
+                                border-right-color: #d0cccc;                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    &.screen-selected {
+        header {
+            .logo-cast {
+                img {
+                    display: none;
+
+                    &.screen-connected {
+                        display: flex;
+                    }
+                }
+            }
+        }
+        .cast-screen-wrapper {
+            .select-screen-wrapper {
+                .cta-wrapper {
+                    .cta-button {
+                        &.add-new-screen {
+                            background-color: #fff;
+                            color: #3B3938;
+        
+                            span {
+                                background-image: url('../images/icon-plus-black.svg');
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.edit-summary-mode {
+        header {
+            nav {
+                .hamburger-menu {
+                    opacity: 0;
+                    display: none;
+                    
+                }
+
+                .go-back {
+                    opacity: 1;
+                    display: block;
+                }
+            }
+        }
+
+        .tab-summary-content {
+            .btn-save {
+                opacity: 0;
+            }
+
+            
+        }
+
+        .main-tabs-container {
+            display: none;
+        }
+
+        .main-content-wrapper {
+            height: calc(810px - 95px);
+        }
+
+        .search-wrapper {
+
+        }
+    }
+
+    &.site-navigation-display {
+        .site-navigation {
+            transform: translateX(0);
+        }
+    }
 }
 
 // input[type=radio] {
@@ -78,10 +445,433 @@ input[type=checkbox] {
 main {
     width: 1080px;
     //height: 810px;
-    height: 100%;
+    // height: 100%;
+    height: fit-content;
     min-height: 810px;
     margin: auto auto;
     overflow: hidden;
+    position: relative;
+
+    &:before {
+        content: '';
+        // position: fixed;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0);
+        -webkit-backdrop-filter: blur(0);
+        backdrop-filter: blur(0);
+        z-index: -1;
+        transition: 0.5s all ease;
+    }
+
+    .cast-screen-wrapper {
+        position: absolute;
+        width: 576px;
+        top: -100%;
+        right: 0;
+        
+        transition: 0.5s all ease;
+    
+        .select-screen-details-container {
+            font-family: 'citroenregular';
+
+            .select-screen-wrapper,
+            .add-new-screen-wrapper {
+                display: none;
+                position: absolute;
+                top: -100%;
+                background-color: #f5f5f5;
+                width: 100%;
+                transition: 0.5s all ease;
+
+                .heading {
+                    font-family: 'citroenblack';
+                    font-size: 1.8rem;
+                    font-weight: 900;
+                    line-height: 22px;
+                }
+
+                .description {
+                    font-size: 1.4rem;
+                    line-height: 18px;
+                    display: none;
+                }
+
+                &.with-error {
+                    .heading, .description {
+                        color: #9D0605;
+                    }
+
+                    .heading {
+                        padding-bottom: 0;
+                    }
+
+                    .description {
+                        display: inherit;
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+
+            .select-screen-wrapper {
+                padding-top: 23px;
+
+                .screen-details {
+                    justify-content: flex-end;
+                    padding: 0 90px 30px 0;
+    
+                    .column {
+                        .description {
+                            display: flex;
+                            color: #828282;
+                        }
+                    }
+                }
+
+                .screen-list-wrapper {
+                    background-color: #fff;
+                    height: 380px;
+                    overflow: hidden;
+                    overflow-y: auto;
+
+                    &.connecting-wip {
+                        li {
+                            &:not(.connecting) {
+                                opacity: 0.2;
+                            }
+                        }
+                    }
+
+                    li {
+                        padding: 20px 32px;
+                        border-top: 1px solid #f5f5f5;
+                        position: relative;
+
+                        &:first-child {
+                            border-top-color: transparent;
+                        }
+
+                        .screen-to-connect {
+                            order: 2;
+
+                            & > a {
+                                color: #000;
+                                
+                                & > span {
+                                    font-family: 'citroenbold';
+                                    font-weight: bold;
+                                    font-size: 1.6rem;
+                                    line-height: 18px;
+                                    text-align: right;
+                                    width: fit-content;
+
+                                    &:first-child {
+                                        order: 2;
+                                        // background: url('../images/icon-monitor.svg') no-repeat 100% 0;
+                                        padding: 0 60px 0 10px;
+                                        margin-left: 10px;
+                                        position: relative;
+
+                                        & > span {
+                                            font-family: 'citroenregular';
+                                            font-size: 1.2rem;
+                                            line-height: 15px;
+                                            color: #828282;
+                                            margin-top: 4px;
+                                        }
+
+                                        &:before {
+                                            content: '';
+                                            width: 1px;
+                                            height: 20px;
+                                            background-color: rgba(0, 0, 0, 0.3);
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                        }
+
+                                        & > .icon-monitor {
+                                            position: absolute;
+                                            right: 0;
+                                            top: 0;
+                                            margin-top: 0;
+
+                                            & > svg {
+                                                fill: #d7d7d7;
+                                                transition: 0.5s all ease;
+                                            }
+
+                                            &:before {
+                                                content: '';
+                                                position: absolute;
+                                                top: 38%;
+                                                left: 50%;
+                                                background: url('../images/icon-connecting-loader.svg') no-repeat 0 0;
+                                                width: 14px;
+                                                height: 14px;
+                                                transform: translate(-50%, -50%) rotate(0deg);
+                                                opacity: 0;
+                                                transition: 0.5s all ease;
+                                            }
+
+                                        }
+                                    }
+
+                                    &.ip-address-details {
+                                        font-family: 'citroenbold';
+                                        font-size: 1.4rem;
+                                        line-height: 15px;
+                                        height: fit-content;
+                                    }
+                                }
+                            }
+
+                            & > .error-wrapper {
+                                font-family: 'citroenregular';
+                                font-size: 1.2rem;
+                                line-height: 15px;
+                                text-align: right;
+                                padding-right: 60px;
+                                color: #9D0605;
+                                margin-top: 4px;
+
+                                & > .option-retry {
+                                    font-size: 1.4rem;
+                                    font-weight: bold;
+                                    margin-left: 15px;
+                                    background: url('../images/icon-refresh.svg') no-repeat 100% 50%;
+                                    padding-right: 15px;
+                                }
+                            }
+                        }
+
+                        .delete-wrapper {
+                            .icon-delete {
+                                background-color: #f5f5f5;
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 50%;
+                                position: relative;
+    
+                                &:before {
+                                    content: '';
+                                    width: 20px;
+                                    height: 20px;
+                                    background: url('../images/icon-trash.svg') no-repeat 0 0;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    transition: 0.5s all ease;
+                                }
+                            }
+    
+                            .delete-confirm-box {
+                                position: absolute;
+                                top: 0;
+                                left: -128px;
+                                width: 128px;
+                                height: 100%;
+                                background: #F1F0F0;
+                                transition: 0.5s all ease;
+
+                                & > a {
+                                    width: 50%;
+                                    height: 100%;
+                                    font-family: 'citroenregular';
+                                    font-size: 1.4rem;
+                                    line-height: 15px;
+                                    color: #3B3938;
+
+                                    &.option-delete {
+                                        background-color: #9D0605;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.delete-this-record {
+                            .delete-wrapper {
+                                .delete-confirm-box {
+                                    left: 0;
+                                }
+                            }
+                        }
+
+                        &.connecting {
+                            transition: 0.5s all ease;
+                            opacity: 1;
+                            
+                            .screen-to-connect {
+                                & > a {
+                                    & > span {
+                                        &:first-child {
+                                            & > .icon-monitor {
+                                                & > svg {
+                                                    fill: transparent;
+                                                    
+                                                }
+
+                                                &:before {
+                                                    animation: connecting-loader 1s infinite;
+                                                    opacity: 1;
+                                                }
+                                            }
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &.connected {
+                            .screen-to-connect {
+                                & > a {
+                                    & > span {
+                                        &:first-child {
+                                            & > .icon-monitor {
+                                                & > svg {
+                                                    fill: #9D0605;
+                                                    
+                                                }
+
+                                                &:before {
+                                                    opacity: 1;
+                                                    background-image: url('../images/icon-tick.svg');
+                                                    width: 12px;
+                                                    height: 9px;
+                                                }
+                                            }
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+
+                // .cta-wrapper {
+                //     margin-top: 30px;
+                // }
+
+                
+
+                
+            }
+
+            .add-new-screen-wrapper {
+                .heading {
+                    padding: 32px 35px 20px 0;
+                }
+
+                .description {
+                    padding-right: 35px;
+                }
+
+                .form-wrapper {
+                    background-color: #fff;
+                    padding: 20px 35px 30px 0;
+
+                    .field-row {
+                        margin-bottom: 15px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        label {
+                            font-size: 1.6rem;
+                            line-height: 20px;
+                            color: rgba(0, 0, 0, 0.6);
+                            margin-right: 20px;
+                        }
+
+                        input {
+                            border: 1px solid #3B3938;
+                            border-radius: 5px;
+                            padding: 10px;
+                            width: 216px;
+                            font-size: 1.6rem;
+                            line-height: 20px;
+                            color: #3B3938;
+                        }
+
+                        .errorMsg {
+                            width: 100%;
+                            font-size: 1.2rem;
+                            line-height: 15px;
+                            color: #9D0605;
+                            text-align: right;
+                            text-transform: none;
+                        }
+                    }
+                }
+            }
+            
+
+            .cta-wrapper {
+                text-align: center;
+                border-top: 1px solid #d0cccc;
+
+                .cta-button {
+                    font-family: 'citroenbold';
+                    font-size: 1.6rem;
+                    line-height: 19px;
+                    padding: 16px 0;
+                    position: relative;
+
+                    &:only-child {
+                        width: 100%;
+                    }
+
+                    &.add-new-screen {
+                        span {
+                            display: inline-block;
+                            width: 15px;
+                            height: 15px;
+                            background: url('../images/icon-plus.svg') no-repeat center center;
+                            margin-left: 10px;
+                        }
+                        
+                    }
+
+                    &.connect-screen, &.continue-screen {
+                        span {
+                            position: absolute;
+                            border-top: 1px solid #fff;
+                            border-right: 1px solid #fff;
+                            width: 8px;
+                            height: 8px;
+                            right: 25px;
+                            top: 50%;
+                            transform: translateY(-50%) rotate(45deg);
+                        }
+                    }
+
+                    // &.continue-screen {
+                    //     background: #f1f0f0;
+                    //     color: #d0cccc;
+
+                    //     span {
+                    //         border-top-color: #d0cccc;
+                    //         border-right-color: #d0cccc;
+                    //     }
+                    // }
+
+                    &.cancel-screen {
+                        background: #fff;
+                        color: #3B3938;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .full-width {
@@ -140,25 +930,84 @@ main {
     align-content: flex-end;
 }
 
+.display-none {
+    display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 /* page css starts */
+
+.content-all {
+    display: none;
+}
+
+.display-content-all {
+    .content-all {
+        display: inherit;
+    }
+    
+    .main-content-wrapper {
+        height: calc(810px - 161px); /* subtracted header+disclaimer+footer-tabs height */
+    }
+}
 
 .main-content-wrapper {
     background-color: #f5f5f5;
     padding: 20px 0 25px 0;
-    height: calc(810px - 161px); /* subtracted header+disclaimer+footer-tabs height */
+    // padding: 20px 0 0 0;
+    // height: calc(810px - 161px); /* subtracted header+disclaimer+footer-tabs height */
+    height: calc(810px - 94px); /* subtracted header+disclaimer height */
     position: relative;
     transition: 0.5s all ease;
     overflow: hidden;
 
-    .content-features, .content-versions,
+    .content-features, .content-versions, .content-accessories, .content-all, .content-summary,
     .col-1-3 h1 span.content-features {
         display: none;
     }
 
-    &.tab-features-content .content-features, &.tab-versions-content .content-versions,
+    &.display-search-results {
+        padding-bottom: 0;
+
+        .search-wrapper {
+            .search-results-wrapper {
+                .search-results {
+                    height: 545px;
+                    display: grid;
+                    grid-template-columns: 249px 249px 249px;
+                    grid-column-gap: 30px;
+                    grid-row-gap: 40px;
+                    justify-content: normal;
+                }
+            }
+        }
+
+        .main-heading {
+            display: none;
+        }
+    }
+
+    &.tab-versions-content,
+    &.tab-features-content,
+    &.tab-accessories-content {
+        padding-bottom: 25px;
+    }
+
+    &.tab-features-content .content-features, 
+    &.tab-versions-content .content-versions,
+    &.tab-accessories-content .content-accessories,
+    &.tab-features-content .content-all, 
+    &.tab-versions-content .content-all,
+    &.tab-accessories-content .content-all,
+    &.tab-summary-content .content-summary,
+
     &.tab-features-content .col-1-3 h1 span {
-        display: inherit;
+        display: inherit !important;
     }
 
     & > .fixed-wrapper {
@@ -167,15 +1016,212 @@ main {
         height: 100%;
     }
 
-    // .canvas-3d {
-    //     position: absolute;
-    //     width: 100%;
-    //     height: 100%;
-    //     left: 0;
-    //     top: 0;
-    //     background-color: #f5f5f5;
-    //     z-index: 1;
-    // }
+    .search-wrapper {
+        height: 100%;
+        // display: none;
+        
+
+        .heading {
+            font-family: 'citroenblack';
+            font-size: 3rem;
+            line-height: 36px;
+            margin-bottom: 50px;
+        }
+
+        .form-wrapper {
+            .field-row {
+                position: relative;
+                overflow: hidden;
+
+                input[type=text] {
+                    background: #fff;
+                    border: 1px solid #828282;
+                    width: 500px;
+                    font-family: 'citroenregular';
+                    font-size: 1.6rem;
+                    line-height: 20px;
+                    color: #828282;
+                    padding-top: 18px;
+                    padding-bottom: 18px;
+                    padding-left: 64px;
+                    padding-right: 54px;
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 14px;
+                    width: 30px;
+                    height: 30px;
+                    background: url('../images/icon-search.svg') no-repeat 0 0;
+                    transform: translateY(-50%);
+                }
+
+                .remove-input-value {
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 100%;
+                    width: 44px;
+                    height: 80%;
+                    transform: translateY(-50%);
+                    border-left: 1px solid #d0cccc;
+                    background: url('../images/icon-close.svg') no-repeat center center;
+                    cursor: pointer;
+                    transition: 0.5s all ease;
+                }
+
+                &.input-with-value {
+                    .remove-input-value {
+                        left: 90%;
+                    }
+                }
+            }
+            
+
+            .cta-button {
+                background: #9D0605;
+                font-family: 'citroenbold';
+                font-size: 1.6rem;
+                line-height: 19px;
+                color: #f5f5f5;
+                margin-left: 30px;
+                padding: 19px 45px;
+            }
+        }
+
+        .search-results-wrapper {
+            margin-top: 30px;
+            display: none;
+
+            .heading {
+                font-family: 'citroenregular';
+                font-size: 2rem;
+                line-height: 25px;
+                text-align: center;
+                margin-bottom: 35px;
+
+                span {
+                    font-family: 'citroenbold';
+                }
+            }
+
+            .search-results {
+                width: 847px;
+                height: 510px;
+                overflow: auto;
+
+                .search-results-box {
+                    padding: 15px;
+                    background-color: #fff;
+                    border: 1px solid #bdbdbd;
+                    width: 249px;
+                    height: 310px;
+                    // margin-top: 40px;
+                    cursor: pointer;
+
+                    // &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+                    //     margin-top: 0;
+                    // }
+
+                    &.new-config {
+                        justify-content: center;
+                        cursor: pointer;
+
+                        .row {
+                            margin-bottom: 0;
+
+                            &:first-child {
+                                height: auto;
+                                align-items: normal;
+                            }
+
+                            .heading {
+                                font-family: 'citroenbold';
+                            }
+                        }
+                    }
+
+                    .row {
+                        margin-bottom: 15px;
+
+                        &:first-child {
+                            height: 135px;
+                            align-items: center;
+
+                            img {
+                                height: fit-content;
+                            }
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        .icon-new-config {
+                            display: block;
+                            width: 50px;
+                            height: 50px;
+                            background-color: #9D0605;
+                            border-radius: 50%;
+                            position: relative;
+                            margin-bottom: 30px;
+
+                            &:before, &:after {
+                                content: '';
+                                position: absolute;
+                                height: 2px;
+                                width: 16px;
+                                border-radius: 4px;
+                                background-color: #fff;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+
+                            &:after {
+                                transform: translate(-50%, -50%) rotate(90deg);
+                            }
+                        }
+
+                        .heading {
+                            font-family: 'citroenblack';
+                            font-size: 1.6rem;
+                            line-height: 19px;
+                            margin-bottom: 0;
+                            text-align: left;
+                        }
+
+                        .heading > span, .column .description {
+                            font-family: 'citroenregular';
+                            display: block;
+                            font-size: 10px;
+                            line-height: 13px;
+                            color: #828282;
+                        }
+
+                        .column {
+                            width: 50%;
+
+                            .heading {
+                                font-family: 'citroenbold';
+                                font-size: 1.2rem;
+                                line-height: 13px;
+                                margin-bottom: 0;
+                            }
+
+                            .description {
+                                font-weight: normal;
+                            }
+                        }
+                    }
+
+                    
+                }
+            }
+        }
+    }
 
     .col-1-3, .col-3-3 {
         width: 310px;
@@ -204,6 +1250,12 @@ main {
         width: 400px;
         position: relative;
         z-index: 2;
+
+        & > img {
+            opacity: 1;
+            transition: 0.5s all ease;
+            transform: translateY(0);
+        }
 
         .color-variant-wrapper {
             background: #fff;
@@ -261,8 +1313,22 @@ main {
                     font-size: 1.6rem;
                     line-height: 21px;
                     color: #9D0605;
-                    background: url('../images/icon-edit.svg') no-repeat 0 0;
                     padding-left: 30px;
+
+                    &.change-model {
+                        background: url('../images/icon-edit.svg') no-repeat 0 0;
+                    }
+
+                    &.all-accessories {
+                        background: url('../images/icon-new-window.svg') no-repeat 0 0;
+                        margin-top: 17px;
+                        opacity: 1;
+                        transition: 0.5s all ease;
+
+                        &.hide-elem {
+                            opacity: 0;
+                        }
+                    }
                 }
             }
         }
@@ -272,10 +1338,18 @@ main {
         }
 
         .automobile-features-wrapper {
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+
             ul {
                 li {
                     margin-bottom: 20px;
                     cursor: pointer;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
 
                     span {
                         font-weight: 900;
@@ -331,6 +1405,12 @@ main {
                                     border-color: transparent;
                                 }
                             }
+
+                            // .accessories-content {
+                            //     .col-2 {
+                            //         justify-content: flex-end;
+                            //     }
+                            // }
                         }
                     }
 
@@ -524,233 +1604,236 @@ main {
     }
 
     .col-3-3 {
+        height: 100%;
+
         .automobile-accessories-wrapper {
-            .accessories-price {
-                margin-bottom: 24px;
+            // .accessories-price {
+            //     margin-bottom: 24px;
 
-                p {
-                    font-family: 'citroenbold';
-                    font-size: 1.2rem;
-                    line-height: 13px;
-                    text-align: right;
-                    color: #828282;
-                    border-left: 1px solid #828282;
-                    padding-left: 21px;
-                    margin-left: 30px;
+            //     p {
+            //         font-family: 'citroenbold';
+            //         font-size: 1.2rem;
+            //         line-height: 13px;
+            //         text-align: right;
+            //         color: #828282;
+            //         border-left: 1px solid #828282;
+            //         padding-left: 21px;
+            //         margin-left: 30px;
 
-                    &:first-child {
-                        border-left-color: transparent;
-                        padding-left: 0;
-                        margin-left: 0;
-                    }
+            //         &:first-child {
+            //             border-left-color: transparent;
+            //             padding-left: 0;
+            //             margin-left: 0;
+            //         }
 
-                    span {
-                        display: block;
-                        font-weight: 900;
-                        font-size: 2.4rem;
-                        line-height: 29px;
-                        color: #000;
-                    }
-                }
-            }
+            //         span {
+            //             font-family: 'citroenblack';
+            //             display: block;
+            //             font-weight: 900;
+            //             font-size: 2.4rem;
+            //             line-height: 29px;
+            //             color: #000;
+            //         }
+            //     }
+            // }
 
-            .toggle-option-wrapper {
-                padding-bottom: 14px;
-                position: relative;
+            // .toggle-option-wrapper {
+            //     padding-bottom: 14px;
+            //     position: relative;
 
-                &:last-child {
-                    padding-bottom: 0;
-                }
+            //     &:last-child {
+            //         padding-bottom: 0;
+            //     }
 
-                &:after {
-                    content: '';
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    width: 60%;
-                    height: 1px;
-                    background-color: #9D0605;
-                }
+            //     &:after {
+            //         content: '';
+            //         position: absolute;
+            //         bottom: 0;
+            //         right: 0;
+            //         width: 60%;
+            //         height: 1px;
+            //         background-color: #9D0605;
+            //     }
 
-                &.no-bottom-border {
-                    &:after {
-                        background-color: transparent;
-                    }
-                }
+            //     &.no-bottom-border {
+            //         &:after {
+            //             background-color: transparent;
+            //         }
+            //     }
 
-                .toggle-option-container {
-                    margin-left: 20px;
+            //     .toggle-option-container {
+            //         margin-left: 20px;
 
-                    .toggle-options {
-                        border-left: 1px solid #D0CCCC;
-                        padding-left: 20px;
-                        margin-right: 15px;
+            //         .toggle-options {
+            //             border-left: 1px solid #D0CCCC;
+            //             padding-left: 20px;
+            //             margin-right: 15px;
 
                         
     
-                        .field-row {
-                            margin-top: 13px;
+            //             .field-row {
+            //                 margin-top: 13px;
     
-                            &:first-child {
-                                margin-top: 0;
-                            }
+            //                 &:first-of-type {
+            //                     margin-top: 0;
+            //                 }
     
-                            label {
-                                font-family: 'citroenbold';
-                                font-size: 1.6rem;
-                                line-height: 18px;
-                                text-align: right;
-                                color: #828282;
-                                cursor: pointer;
-                                transition: 0.5s all ease;
-                            }
+            //                 label {
+            //                     font-family: 'citroenbold';
+            //                     font-size: 1.6rem;
+            //                     line-height: 18px;
+            //                     text-align: right;
+            //                     color: #828282;
+            //                     cursor: pointer;
+            //                     transition: 0.5s all ease;
+            //                 }
     
-                            & > input[type=radio]:checked ~ label {
-                                color: #9D0605;
-                            }
-                        }
-                    }
+            //                 & > input[type=radio]:checked ~ label {
+            //                     color: #9D0605;
+            //                 }
+            //             }
+            //         }
 
-                    .toggle-switch {
-                        display: inline-block;
-                        background: #E4E2E2;
-                        border: 2px solid #CBC7C6;
-                        border-radius: 40px;
-                        width: 24px;
-                        height: 100%;
-                        position: relative;
-                        cursor: pointer;
+            //         .toggle-switch {
+            //             display: inline-block;
+            //             background: #E4E2E2;
+            //             border: 2px solid #CBC7C6;
+            //             border-radius: 40px;
+            //             width: 24px;
+            //             height: 100%;
+            //             position: relative;
+            //             cursor: pointer;
     
-                        &:before {
-                            content: '';
-                            position: absolute;
-                            top: -2px;
-                            left: -2px;
-                            width: 24px;
-                            height: 24px;
-                            background-color: #9D0605;
-                            border: 2px solid #D0CCCC;
-                            border-radius: 50%;
-                            box-sizing: border-box;
-                            transition: 0.3s all ease;
-                        }
+            //             &:before {
+            //                 content: '';
+            //                 position: absolute;
+            //                 top: -2px;
+            //                 left: -2px;
+            //                 width: 24px;
+            //                 height: 24px;
+            //                 background-color: #9D0605;
+            //                 border: 2px solid #D0CCCC;
+            //                 border-radius: 50%;
+            //                 box-sizing: border-box;
+            //                 transition: 0.3s all ease;
+            //             }
     
-                    }
+            //         }
     
-                    &.last-option-selected {
-                        .toggle-switch {
-                            &:before {
-                                top: calc(100% - 24px);
-                            }
-                        }
-                    }
+            //         &.last-option-selected {
+            //             .toggle-switch {
+            //                 &:before {
+            //                     top: calc(100% - 24px);
+            //                 }
+            //             }
+            //         }
 
-                    &:only-child, &:first-child {
-                        margin-left: 0;
+            //         &:only-child, &:first-child {
+            //             margin-left: 0;
 
-                        .toggle-options {
-                            border-left-color: transparent;
-                        }
-                    }
-                }
-            }
+            //             .toggle-options {
+            //                 border-left-color: transparent;
+            //             }
+            //         }
+            //     }
+            // }
         }
 
-        .customized-option-wrapper {
-            margin-bottom: 20px;
+        // .customized-option-wrapper {
+        //     margin-bottom: 20px;
 
-            .customized-option-container {
-                padding-top: 12px;
-                padding-bottom: 20px;
-                position: relative;
+        //     .customized-option-container {
+        //         padding-top: 12px;
+        //         padding-bottom: 20px;
+        //         position: relative;
 
-                &:after {
-                    content: '';
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    width: 60%;
-                    height: 1px;
-                    background-color: #D0CCCC;
-                }
+        //         &:after {
+        //             content: '';
+        //             position: absolute;
+        //             bottom: 0;
+        //             right: 0;
+        //             width: 60%;
+        //             height: 1px;
+        //             background-color: #D0CCCC;
+        //         }
 
-                & > .heading {
-                    font-family: 'citroenbold';
-                    font-size: 1.4rem;
-                    line-height: 15px;
-                }
+        //         & > .heading {
+        //             font-family: 'citroenbold';
+        //             font-size: 1.4rem;
+        //             line-height: 15px;
+        //         }
 
-                .customized-options {
-                    .field-row {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        margin-top: 20px;
+        //         .customized-options {
+        //             .field-row {
+        //                 display: flex;
+        //                 justify-content: space-between;
+        //                 align-items: center;
+        //                 margin-top: 20px;
     
-                        input[type=checkbox], label {
-                            display: flex;
-                        }
+        //                 input[type=checkbox], label {
+        //                     display: flex;
+        //                 }
     
-                        input[type=checkbox] {
-                            display: none;
-                        }
+        //                 input[type=checkbox] {
+        //                     display: none;
+        //                 }
     
-                        label {
-                            font-family: 'citroenbold';
-                            font-size: 1.6rem;
-                            line-height: 18px;
-                            color: #3B3938;
-                            width: 60%;
-                            justify-content: flex-end;
-                            margin-right: 15px;
-                            cursor: pointer;
-                        }
+        //                 label {
+        //                     font-family: 'citroenbold';
+        //                     font-size: 1.6rem;
+        //                     line-height: 18px;
+        //                     color: #3B3938;
+        //                     width: 60%;
+        //                     justify-content: flex-end;
+        //                     margin-right: 15px;
+        //                     cursor: pointer;
+        //                 }
     
-                        span {
-                            display: block;
-                            width: 48px;
-                            height: 24px;
-                            background: #E4E2E2;
-                            border: 2px solid #CBC7C6;
-                            box-sizing: border-box;
-                            border-radius: 40px;
-                            position: relative;
-                            transition: 0.3s all ease;
-                            cursor: pointer;
+        //                 span {
+        //                     display: block;
+        //                     width: 48px;
+        //                     height: 24px;
+        //                     background: #E4E2E2;
+        //                     border: 2px solid #CBC7C6;
+        //                     box-sizing: border-box;
+        //                     border-radius: 40px;
+        //                     position: relative;
+        //                     transition: 0.3s all ease;
+        //                     cursor: pointer;
     
-                            &:after {
-                                content: '';
-                                position: absolute;
-                                left: calc(100% - 22px);
-                                top: -2px;
-                                width: 24px;
-                                height: 24px;
-                                background: #fff;
-                                border: 2px solid #D0CCCC;
-                                border-radius: 50%;
-                                transition: 0.3s all ease;
-                            }
-                        }
+        //                     &:after {
+        //                         content: '';
+        //                         position: absolute;
+        //                         left: calc(100% - 22px);
+        //                         top: -2px;
+        //                         width: 24px;
+        //                         height: 24px;
+        //                         background: #fff;
+        //                         border: 2px solid #D0CCCC;
+        //                         border-radius: 50%;
+        //                         transition: 0.3s all ease;
+        //                     }
+        //                 }
     
-                        input[type=checkbox] {
-                            &:checked {
-                                & ~ span {
-                                    background-color: #9D0605;
+        //                 input[type=checkbox] {
+        //                     &:checked {
+        //                         & ~ span {
+        //                             background-color: #9D0605;
             
-                                    &:after {
-                                        left: -2px;
-                                    }
-                                }
+        //                             &:after {
+        //                                 left: -2px;
+        //                             }
+        //                         }
     
-                                & ~ label {
-                                    color: #9D0605;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        //                         & ~ label {
+        //                             color: #9D0605;
+        //                         }
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
 
         .background-option-wrapper {
             .heading {
@@ -942,6 +2025,335 @@ main {
         //     }
         // }
     }
+
+    &.tab-accessories-content {
+        .col-1-3 {
+            h1 {
+                margin-bottom: 11px;
+            }
+
+            .automobile-features-wrapper {
+                ul {
+                    // transition: 0.5s all ease;
+                    li {
+                        & > ul {
+                            max-height: 400px;
+
+                            li {
+                                border-bottom: 1px solid #e7e7e7;
+
+                                &:last-child {
+                                    border-bottom-color: transparent;
+                                }
+                            }
+                        }
+                    }
+
+                    &.more-options-container {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 100%;
+                        transition: 0.5s all ease;
+
+                        .accordion-open {
+                            margin-bottom: 0;
+
+                            .go-back {
+                                font-size: 2rem;
+                                line-height: 24px;
+                                color: #9D0605;
+                                position: relative;
+                                padding: 0 0 9px 24px;
+                                border-bottom: 1px solid #000;
+                                display: block;
+                                width: 100%;
+    
+                                &:before {
+                                    content: '';
+                                    position: absolute;
+                                    top: 40%;
+                                    left: 5px;
+                                    width: 8px;
+                                    height: 8px;
+                                    border-left: 1px solid #9D0605;
+                                    border-top: 1px solid #9D0605;
+                                    transform: translateY(-50%) rotate(-45deg);
+                                }
+                            }
+
+                            & > ul {
+                                display: block;
+                                max-height: 455px;
+                            }
+                        }
+
+                        
+                    }
+                }
+
+                &.display-more-options {
+                    & > ul {
+                        &:first-child {
+                            transform: translateX(-100%);
+                        }
+                    }
+                    .more-options-container {
+                        left: 0;
+                    }
+                }
+            }
+        }
+
+        .col-2-3 {
+            .color-variant-wrapper {
+                display: none;
+            }
+        }
+
+        .col-3-3 {
+            .toggle-option-wrapper {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &.tab-summary-content {
+        padding-top: 0;
+        padding-bottom: 0;
+        
+
+        & > .full-width {
+            padding-left: 0;
+        }
+
+        .col-1-3 {
+            width: 620px;
+            background-color: #fff;
+            border-top: 1px solid #f5f5f5;
+            padding-top: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+
+            .row-header {
+                border-bottom: 1px solid #3B3938;
+                padding-bottom: 15px;
+
+                .heading {
+                    font-family: 'citroenblack';
+                    font-size: 2.4rem;
+                    line-height: 29px;
+                }
+
+                .cta-wrapper {
+                    .cta-button {
+                        font-size: 1.6rem;
+                        line-height: 19px;
+                        padding: 14px 26px;
+
+                        &.btn-save {
+                            span {
+                                display: flex;
+                                order: -1;
+                                width: 24px;
+                                height: 24px;
+                                background: url('../images/icon-save.svg') no-repeat center center;
+                                margin-right: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .summary-detail-wrapper {
+                height: 558px;
+                overflow: auto;
+                border-bottom: 20px solid #fff;
+
+                .summary-detail-box {
+                    border-bottom: 1px solid #d0cccc;
+                    padding: 30px 0 20px 0;
+
+                    &.accordion-open {
+                        .summary-item {
+                            &.box-heading {
+                                .accordion-arrow {
+                                    top: 70%;
+                                    transform: translateY(-50%) rotate(45deg);
+                                }
+                            }
+                            
+                            &.no-margin-bottom {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+
+                    .summary-item {
+                        position: relative;
+                        margin-bottom: 11px;
+                        padding-right: 32px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        &.box-heading {
+                            // margin-bottom: 18px;
+                            cursor: pointer;
+
+                            .description {
+                                font-family: 'citroenblack';
+                            }
+
+                            .accordion-arrow {
+                                position: absolute;
+                                top: 50%;
+                                right: 6px;
+                                width: 10px;
+                                height: 10px;
+                                border-left: 2px solid #9D0605;
+                                border-top: 2px solid #9D0605;
+                                transform: translateY(-50%) rotate(225deg);
+                                transition: 0.5s all ease;
+                                
+                            }
+                        }
+
+                        &.box-heading > .description, .heading {
+                            font-size: 2rem;
+                            line-height: 24px;
+                        }
+
+                        &.no-bottom-border {
+                            border-bottom-color: transparent !important;
+                        }
+
+                        .sub-heading {
+                            font-family: 'citroenbold';
+                            font-size: 1.5rem;
+                            line-height: 16px;
+                        }
+
+                        .item-name {
+                            font-family: 'citroenregular';
+                            font-size: 1.4rem;
+                            line-height: 18px;
+                        }
+
+                        .description {
+                            font-family: 'citroenbold';
+                            font-size: 1.6rem;
+                            line-height: 18px;
+                        }
+
+                        .remove-item {
+                            width: 24px;
+                            height: 24px;
+                            background-color: #f5f5f5;
+                            border-radius: 50%;
+                            position: absolute;
+                            top: -4px;
+                            right: 0;
+                            cursor: pointer;
+
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                background: url('../images/icon-trash-red.svg') no-repeat 0 0;
+                                width: 10px;
+                                height: 14px;
+                            }
+                        }
+                    }
+
+                    .summary-detail-box-content {
+                        margin-top: 10px;
+                        display: none;
+
+                        &.with-gridlines {
+                            margin-bottom: 20px;
+
+                            .summary-item {
+                                border-bottom: 1px solid #f1f0f0;
+                                margin-bottom: 15px;
+                                padding-bottom: 11px;
+
+                                &:last-child {
+                                    border-bottom-color: transparent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .col-2-3, .col-3-3 {
+            width: 400px;
+        }
+        
+        .col-2-3 {
+            padding-bottom: 25px;
+
+            &.content-summary {
+                justify-content: flex-end;
+
+                & > img {
+                    transform: translateY(-20px);
+                }
+
+                .color-variant-wrapper {
+                    display: none;
+                }
+            }
+        }
+
+        .col-3-3 {
+            position: absolute;
+            right: 30px;
+            top: 0;
+
+            .flip-in-out-container {
+                width: 100%;
+            }
+
+            .toggle-option-wrapper {
+                &:after {
+                    display: none;
+                }
+            }
+
+            .content-summary {
+                &.cta-wrapper {
+                    width: fit-content;
+                    margin-top: 20px;
+                    margin-bottom: 17px;
+
+                    & > .btn-edit {
+                        padding: 14px 44px 14px 36px;
+                        font-size: 1.6rem;
+                        line-height: 19px;
+
+                        & > span {
+                            display: flex;
+                            order: -1;
+                            width: 24px;
+                            height: 24px;
+                            background: url('../images/icon-edit-white.svg') no-repeat center center;
+                            margin-right: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .disclaimer-text {
@@ -965,6 +2377,20 @@ main {
         height: 4px;
         background-color: #9D0605;
         transition: 0.5s all ease;
+    }
+
+    &:not(.content-all) {
+        display: none;
+
+        & > span {
+            width: calc(50% - 30px);
+        }
+
+        ul {
+            li {
+                width: 50%;
+            }
+        }
     }
 
     ul {
@@ -1068,6 +2494,49 @@ main {
         width: 100%;
         justify-content: center;
         transition: 0.5s all ease;
+
+        
+    }
+}
+
+.all-accessories-wrapper {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #fff;
+    padding: 20px 30px 35px 30px;
+    transition: 0.5s all ease;
+
+    .all-accessories-container {
+        display: grid;
+        grid-template-columns: 330px 330px 330px;
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+        height: fit-content;
+
+        li {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            height: fit-content;
+            width: 330px;
+            transform: scale(0);
+            transition: 0.5s all ease;
+
+            // &:nth-child(3n+1) {
+            //     margin-left: 0;
+            // }
+
+            .accessories-content {
+                .col-2 {
+                    // justify-content: space-between;
+                    .price {
+                        width: 58%;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -1179,6 +2648,572 @@ main {
                         width: 3px;
                         height: 2px;
                         background-color: #9D0605;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.popup-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 690px;
+    height: 507px;
+    overflow: hidden;
+    background-color: #fff;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.5s all ease;
+
+    .autmobile-model-details-container,
+    .features-details-container {
+        display: none;
+    }
+
+    .close-popup {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background-color: #000;
+            
+        }
+
+        &:before {
+            transform: rotate(45deg);
+        }
+ 
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    .heading {
+        font-family: 'citroenblack';
+        font-weight: 900;
+        font-size: 2.4rem;
+        line-height: 29px;
+        padding: 15px 30px;
+    }
+
+    .autmobile-model-details-wrapper {
+        border-top: 1px solid #D0CCCC;
+        flex: 1;
+
+        .col-1-2, .col-2-2 .automobile-models-wrapper {
+            padding: 20px;
+        }
+
+        .col-1-2 {
+            width: 190px;
+
+            .heading {
+                font-family: 'citroenbold';
+                font-size: 1.4rem;
+                line-height: 15px;
+                margin-bottom: 10px;
+                padding: 0;
+            }
+
+            .customized-option-wrapper {
+                .customized-option-container {
+                    padding: 0;
+
+                    &:after {
+                        display: none;
+                    }
+
+                    .customized-options {
+                        width: 100%;
+                        margin-bottom: 40px;
+
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+
+                        .field-row {
+                            margin-top: 15px;
+
+                            &:first-of-type {
+                                margin-top: 0;
+                            }
+
+                            label {
+                                order: 2;
+                                justify-content: flex-start;
+                                margin-left: 7px;
+                                color: #828282;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .col-2-2 {
+            &.automobile-models-container {
+                background-color: #f5f5f5;
+
+                .automobile-models-wrapper {
+                    padding-right: 10px;
+                    height: 398px;
+                    overflow-y: auto;
+
+                    ul {
+                        li {
+                            background-color: #fff;
+                            width: 220px;
+                            border: 1px solid #d0cccc;
+                            margin-top: 20px;
+                            padding: 10px;
+                            transition: 0.5s all ease;
+                            cursor: pointer;
+                            position: relative;
+
+                            &:first-child, &:nth-child(2) {
+                                margin-top: 0;
+                            }
+
+                            &.selected {
+                                border-color: #9D0605;
+                            }
+
+                            p {
+                                font-family: 'citroenblack';
+                                font-size: 1.4rem;
+                                line-height: 17px;
+                                text-align: center;
+                                margin-top: 5px;
+                                position: relative;
+                                z-index: 1;
+                            }
+
+                            .download-wrapper {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                background: rgba(255, 255, 255, 0.9);
+                                width: 100%;
+                                height: 100%;
+                                font-family: 'citroenbold';
+                                font-size: 1.4rem;
+                                line-height: 15px;
+                                color: #000;
+
+                                a {
+                                    color: #000;
+                                    background: url('../images/icon-download.svg') no-repeat 50% 0;
+                                    padding-top: 28px;
+                                }
+
+                                .downloading-text {
+                                    margin-bottom: 2px;
+                                }
+
+                                .downloading-time {
+                                    font-family: 'citroenregular';
+                                    font-size: 1.2rem;
+                                    text-transform: capitalize;
+                                    margin-bottom: 6px;
+                                }
+
+                                .download-progress {
+                                    background-color: #d0cccc;
+                                    height: 1px;
+                                    width: 120px;
+
+                                    span {
+                                        display: block;
+                                        background-color: #9D0605;
+                                        height: 1px;
+                                        width: 0;
+                                        transition: 0.5s all ease;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .cta-wrapper {
+                    text-align: center;
+
+                    a {
+                        font-weight: 900;
+                        font-size: 1.6rem;
+                        line-height: 19px;
+                        padding: 15px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .features-details-container {
+        .features-model-details-wrapper {
+            border-top: 1px solid #D0CCCC;
+            flex: 1;
+
+            .col-1-2 {
+                min-width: 221px;
+
+                ul {
+                    width: 100%;
+
+                    li {
+                        padding: 16px 15px;
+                        position: relative;
+                        cursor: pointer;
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: -4px;
+                            width: 4px;
+                            height: 100%;
+                            background-color: #9D0605;
+                            transition: 0.5s all ease;
+                        }
+
+                        &.active {
+                            background: #F5F5F5;
+
+                            &:before {
+                                left: 0;
+                            }
+
+                            a {
+                                color: #000;
+                            }
+                        }
+
+                        a {
+                            font-family: 'citroenbold';
+                            font-size: 1.6rem;
+                            line-height: 18px;
+                            color: #828282;
+                        }
+                    }
+                }
+            }
+
+            .col-2-2 {
+                background-color: #f5f5f5;
+
+                .features-models-wrapper {
+                    height: 399px;
+                    overflow-y: auto;
+                    padding: 27px 20px 20px 20px;
+
+                    .pagination {
+                        font-family: 'citroenregular';
+                        font-size: 1.6rem;
+                        line-height: 20px;
+                        color: #3B3938;
+                        margin-bottom: 10px;
+                    }
+
+                    .pagination-content-wrapper {
+                        .pagination-content-container {
+                            display: none;
+                            
+                            .pagination-content {
+                                font-family: 'citroenregular';
+                                font-weight: bold;
+                                font-size: 2rem;
+                                line-height: 22px;
+                                color: #3B3938;
+                                text-transform: none;
+    
+                                .heading {
+                                    font-family: 'citroenblack';
+                                    font-size: 3rem;
+                                    line-height: 36px;
+                                    color: #9D0605;
+                                    padding: 0;
+                                    margin-bottom: 20px;
+                                }
+    
+                                .description {
+                                    margin-bottom: 10px;
+    
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+
+        .cta-wrapper {
+            text-align: center;
+
+            a {
+                font-weight: 900;
+                font-size: 1.6rem;
+                line-height: 19px;
+                padding: 15px 0;
+                border-left: 1px solid #f5f5f5;
+
+                &:first-child {
+                    border-left: none;
+                }
+
+                &.disabled {
+                    background-color: #d0cccc;
+                    color: #fff;
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+
+    .error-messages-container {
+
+    }
+}
+
+.accessories-price {
+    margin-bottom: 24px;
+
+    p {
+        font-family: 'citroenbold';
+        font-size: 1.2rem;
+        line-height: 13px;
+        text-align: right;
+        color: #828282;
+        border-left: 1px solid #828282;
+        padding-left: 21px;
+        margin-left: 30px;
+
+        &:first-child {
+            border-left-color: transparent;
+            padding-left: 0;
+            margin-left: 0;
+        }
+
+        span {
+            font-family: 'citroenblack';
+            display: block;
+            font-weight: 900;
+            font-size: 2.4rem;
+            line-height: 29px;
+            color: #000;
+        }
+    }
+}
+
+.toggle-option-wrapper {
+    padding-bottom: 14px;
+    position: relative;
+
+    &:last-child {
+        padding-bottom: 0;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 60%;
+        height: 1px;
+        background-color: #9D0605;
+    }
+
+    &.no-bottom-border {
+        &:after {
+            background-color: transparent;
+        }
+    }
+
+    .toggle-option-container {
+        margin-left: 20px;
+
+        .toggle-options {
+            border-left: 1px solid #D0CCCC;
+            padding-left: 20px;
+            margin-right: 15px;
+            transition: 0.5s all ease;
+
+            .field-row {
+                margin-top: 13px;
+
+                &:first-of-type {
+                    margin-top: 0;
+                }
+
+                label {
+                    font-family: 'citroenbold';
+                    font-size: 1.6rem;
+                    line-height: 18px;
+                    text-align: right;
+                    color: #828282;
+                    cursor: pointer;
+                    transition: 0.5s all ease;
+                }
+
+                & > input[type=radio]:checked ~ label {
+                    color: #9D0605;
+                }
+            }
+        }
+
+        .toggle-switch {
+            display: inline-block;
+            background: #E4E2E2;
+            border: 2px solid #CBC7C6;
+            border-radius: 40px;
+            width: 24px;
+            height: 100%;
+            position: relative;
+            cursor: pointer;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: -2px;
+                left: -2px;
+                width: 24px;
+                height: 24px;
+                background-color: #9D0605;
+                border: 2px solid #D0CCCC;
+                border-radius: 50%;
+                box-sizing: border-box;
+                transition: 0.3s all ease;
+            }
+
+        }
+
+        &.last-option-selected {
+            .toggle-switch {
+                &:before {
+                    top: calc(100% - 24px);
+                }
+            }
+        }
+
+        &:only-child, &:first-child {
+            margin-left: 0;
+
+            .toggle-options {
+                border-left-color: transparent;
+            }
+        }
+    }
+}
+
+.exterior-interior-view:not(.last-option-selected) {
+    .toggle-options {
+        border-left-color: transparent;
+    }
+}
+
+.customized-option-wrapper {
+    margin-bottom: 20px;
+
+    .customized-option-container {
+        padding-top: 12px;
+        padding-bottom: 20px;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 60%;
+            height: 1px;
+            background-color: #D0CCCC;
+        }
+
+        & > .heading {
+            font-family: 'citroenbold';
+            font-size: 1.4rem;
+            line-height: 15px;
+        }
+
+        .customized-options {
+            .field-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 20px;
+
+                input[type=checkbox], label {
+                    display: flex;
+                }
+
+                input[type=checkbox] {
+                    display: none;
+                }
+
+                label {
+                    font-family: 'citroenbold';
+                    font-size: 1.6rem;
+                    line-height: 18px;
+                    color: #3B3938;
+                    width: 96px;
+                    justify-content: flex-end;
+                    margin-right: 15px;
+                    cursor: pointer;
+                }
+
+                span {
+                    display: block;
+                    width: 48px;
+                    height: 24px;
+                    background: #E4E2E2;
+                    border: 2px solid #CBC7C6;
+                    box-sizing: border-box;
+                    border-radius: 40px;
+                    position: relative;
+                    transition: 0.3s all ease;
+                    cursor: pointer;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        left: calc(100% - 22px);
+                        top: -2px;
+                        width: 24px;
+                        height: 24px;
+                        background: #fff;
+                        border: 2px solid #D0CCCC;
+                        border-radius: 50%;
+                        transition: 0.3s all ease;
+                    }
+                }
+
+                input[type=checkbox] {
+                    &:checked {
+                        & ~ span {
+                            background-color: #9D0605;
+    
+                            &:after {
+                                left: -2px;
+                            }
+                        }
+
+                        & ~ label {
+                            color: #9D0605;
+                        }
                     }
                 }
             }
@@ -1313,7 +3348,425 @@ main {
     }
 }
 
+.accessories-content {
+    padding: 17px 15px 17px 10px;
+
+    .col-1 {
+        width: 40%;
+
+        img {
+            width: fit-content;
+            max-width: 100%;
+        }
+    }
+
+    .col-2 {
+        width: 60%;
+        font-family: 'citroenregular';
+        justify-content: flex-end;
+
+        .heading {
+            width: 100%;
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 13px;
+            text-transform: uppercase;
+        }
+
+        .price, .cta-button {
+            width: 50%;
+            display: flex;
+            align-self: flex-end;
+        }
+
+        .price {
+            font-size: 1.4rem;
+            line-height: 18px;
+            height: fit-content;
+            align-self: center;
+        }
+
+        .cta-button {
+            font-family: 'citroenbold';
+            font-size: 1.3rem;
+            line-height: 14px;
+            text-align: center;
+            text-transform: none;
+            color: #fff;
+            background-color: #9D0605;
+            padding: 8px;
+            height: fit-content;
+            width: fit-content;
+            min-width: 75px;
+            justify-content: center;
+
+            &.secondary-button {
+                color: #9D0605;
+                background-color: transparent;
+                border: 1px solid #9D0605;
+            }
+        }
+    }
+}
+
 
 
 /* page css ends */
+
+.tv-screens {
+    width: 3840px;
+    height: 2160px;
+    font-family: 'citroenblack';
+    color: #3B3938;
+
+    .column-wrapper {
+        background-color: #F3F3F3;
+
+        .col-1-2 {
+            width: 2377px;
+            padding-top: 220px;
+
+            .column-container {
+                margin: 0 auto;
+                width: 1300px;
+
+                h1 {
+                    font-size: 12rem;
+                    line-height: 144px;
+                    margin-bottom: 28px;
+                }
+
+                h2 {
+                    font-size: 5.6rem;
+                    line-height: 62px;
+                    margin-bottom: 165px;
+                    font-family: 'citroenregular';
+                }
+
+                .video-wrapper {
+                    font-family: 'citroenregular';
+
+                    .heading {
+                        font-weight: bold;
+                        font-size: 4.8rem;
+                        line-height: 53px;
+                        margin-bottom: 42px;
+                    }
+
+                    video {
+                        width: 100%;
+                        margin-bottom: 80px;
+                    }
+
+                    .steps-to-follow {
+                        font-size: 3rem;
+                        line-height: 38px;
+
+                        li {
+                            margin-bottom: 65px;
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+
+                            & > span {
+                                width: 8%;
+                                font-family: 'citroenblack';
+                            }
+
+                            & > p {
+                                width: 92%;
+
+                                & > span {
+                                    font-family: 'citroenblack';
+                                }
+
+                                .icon-cast-welcome-screen {
+                                    display: inline-block;
+                                    margin: 0 12px 0 5px;
+                                    transform: translateY(25%);
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+
+        .col-2-2 {
+            width: 1463px;
+            background-color: #D1D1D1;
+            padding-top: 90px;
+
+            .column-container {
+                width: 877px;
+                margin: 0 auto;
+
+                .logo-citroen {
+                    margin-bottom: 105px;
+                }
+
+                .qr-code-wrapper {
+                    padding: 102px;
+                    background: url('../images/qr-code-frame.svg') no-repeat 0 0 #fff;
+                    background-size: contain;
+                    margin-bottom: 130px;
+                    box-shadow: 30px 50px 100px rgba(0, 0, 0, 0.2);
+                }
+
+                .ip-details {
+                    font-family: 'citroenblack';
+                    font-size: 6.4rem;
+                    line-height: 77px;
+                    margin-bottom: 24px;
+
+                    & > span {
+                        padding: 3px 0;
+                        display: inline-block;
+
+                        &:first-child {
+                            border-right: 5px solid #3B3938;
+                            padding-right: 30px;
+                            margin-right: 30px;
+                        }
+                    }
+                }
+
+                .scan-text {
+                    font-family: 'citroenregular';
+                    font-size: 5rem;
+                    line-height: 63px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.login-wrapper {
+    height: 810px;
+    background: url('../images/bg-login-page.jpg') no-repeat center center;
+    background-size: cover;
+
+    .login-box {
+        width: 664px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.8);
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+        text-align: center;
+
+        .logo-wrapper {
+            margin-bottom: 85px;
+
+            img {
+                margin: 0 auto;
+            }
+        }
+
+        .heading {
+            font-family: 'citroenblack';
+            font-size: 3.6rem;
+            line-height: 43px;
+            margin-bottom: 39px;
+        }
+
+        .login-form {
+            width: 360px;
+            margin: 0 auto;
+
+            .row {
+                margin-bottom: 28px;
+                width: 100%;
+                position: relative;
+
+                &.no-margin-bottom {
+                    margin-bottom: 0;
+                }
+
+                & > input {
+                    background: #fff;
+                    border: 1px solid #828282;
+                    padding: 20px 53px 20px 23px;
+                    font-family: 'citroenregular';
+                    font-size: 1.6rem;
+                    line-height: 20px;
+                    width: 100%;
+                }
+
+                & > .errorMsg {
+                    width: 100%;
+                    font-family: 'citroenregular';
+                    font-size: 1.2rem;
+                    line-height: 15px;
+                    color: #D21414;
+                    text-transform: none;
+                    visibility: hidden;
+                    text-align: left;
+                }
+
+                &.cta-wrapper {
+                    button {
+                        width: fit-content;
+                        background: #9D0605;
+                        font-family: 'citroenbold';
+                        font-size: 1.6rem;
+                        line-height: 19px;
+                        padding: 20px 51px;
+                        color: #fff;
+                        margin-bottom: 39px;
+                    }
+
+                    a {
+                        font-family: 'citroenbold';
+                        font-size: 2rem;
+                        line-height: 22px;
+                        color: #08A8B6;
+                    }
+                }
+
+                &.field-password {
+                    .show-password {
+                        background: url('../images/icon-eye-off.svg') no-repeat 0 0;
+                        width: 24px;
+                        height: 24px;
+                        display: block;
+                        position: absolute;
+                        right: 15px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            &.display-error {
+                & > .row {
+                    & > input {
+                        border-color: #ff0000;
+                    }
+                    
+                    & > .errorMsg {
+                        visibility: visible;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+.site-navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 295px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 5;
+    transform: translateX(-120%);
+    transition: 0.5s all ease;
+
+    .location-wrapper {
+        padding: 24px 17px 17px 9px;
+        .logo {
+            margin-right: 6px;
+
+            img {
+                width: 106px;
+                height: 89px;
+            }
+        }
+
+        .location-details {
+            font-family: 'citroenbold';
+            font-size: 1.6rem;
+            line-height: 18px;
+            color: #9D0605;
+        }
+    }
+
+    .nav-wrapper {
+        & > li {
+            border-top: 1px solid #d0cccc;
+            padding: 23px 26px;
+            width: 100%;
+            font-family: 'citroenbold';
+            font-size: 1.6rem;
+            line-height: 18px;
+            position: relative;
+            cursor: pointer;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                width: 7px;
+                height: 7px;
+                border-top: 1px solid #2d2d2d;
+                border-right: 1px solid #2d2d2d;
+                transform: translateY(-50%) rotate(45deg);
+                transition: 0.5s all ease;
+            }
+
+            a {
+                color: #3F3F3F;
+                background: url('../images/nav-search.svg') 0 0 no-repeat;
+                padding-left: 46px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 32px;
+
+                & > span {
+                    display: block;
+                    font-family: 'citroenregular';
+                    font-size: 1.2rem;
+                    line-height: 15px;
+                    color: #2D2D2D;
+                    opacity: 0.6;
+                    text-transform: none;
+                }
+
+                &.nav-car-compare {
+                    background-image: url('../images/nav-car-compare.svg');
+                }
+
+                &.nav-sync {
+                    background-image: url('../images/nav-sync.svg');
+                }
+
+                &.nav-support {
+                    background-image: url('../images/nav-support.svg');
+                }
+
+                &.nav-logout {
+                    background-image: url('../images/nav-logout.svg');
+                }
+            }
+        }
+    }
+
+    .app-details {
+        position: absolute;
+        bottom: 24px;
+        text-align: center;
+        width: 100%;
+        font-family: 'citroenbold';
+        font-size: 1.6rem;
+        line-height: 18px;
+        color: #d0cccc;
+    }
+}
+
+.popup-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
 
