@@ -388,6 +388,13 @@ $(function() {
         }
     });
 
+    if($(".tv-screens .connection-status").length) {
+        $("body").addClass("display-connection-status");
+        setTimeout(function() {
+            $("body").removeClass("display-connection-status");
+        }, 3000);
+    }
+
     // $(document).on("click", ".screen-list-wrapper .screen-to-connect > .error-wrapper .option-retry", function() {
     //     $(".screen-list-wrapper .screen-to-connect > a").click();
     // });

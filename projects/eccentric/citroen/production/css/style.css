@@ -452,6 +452,11 @@ body {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0); }
+  body.display-connection-status .connection-status {
+    bottom: 0; }
+    body.display-connection-status .connection-status:before {
+      top: 0;
+      opacity: 1; }
 
 input[type=checkbox] {
   -webkit-appearance: auto;
@@ -2297,7 +2302,8 @@ input::-webkit-inner-spin-button {
   width: 3840px;
   height: 2160px;
   font-family: 'citroenblack';
-  color: #3B3938; }
+  color: #3B3938;
+  overflow: hidden; }
   .tv-screens .column-wrapper {
     background-color: #F3F3F3; }
     .tv-screens .column-wrapper .col-1-2 {
@@ -2593,13 +2599,30 @@ input::-webkit-inner-spin-button {
   background: url("../images/bg-screen-loaded.jpg") no-repeat 0 0;
   position: relative; }
   .screen-loaded-wrapper .connection-status {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000000));
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #000000 100%);
-    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #000000 100%);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
     position: absolute;
-    bottom: 0;
-    padding: 254px 208px 216px 0; }
+    bottom: -670px;
+    padding: 254px 208px 216px 0;
+    -webkit-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    transition: 0.5s all ease; }
+    .screen-loaded-wrapper .connection-status:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000000));
+      background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #000000 100%);
+      background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #000000 100%);
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+      position: absolute;
+      top: -100%;
+      left: 0;
+      opacity: 0;
+      -webkit-transition: 0.5s all ease;
+      -o-transition: 0.5s all ease;
+      transition: 0.5s all ease; }
+    .screen-loaded-wrapper .connection-status .remote-connected, .screen-loaded-wrapper .connection-status .logo {
+      position: relative;
+      z-index: 1; }
     .screen-loaded-wrapper .connection-status .remote-connected {
       font-family: 'citroenregular';
       font-size: 6.4rem;
