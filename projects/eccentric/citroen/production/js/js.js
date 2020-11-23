@@ -389,7 +389,10 @@ $(function() {
     });
 
     if($(".tv-screens .connection-status").length) {
-        $("body").addClass("display-connection-status");
+        setTimeout(function() {
+            $("body").addClass("display-connection-status");
+        }, 1000);
+        
         setTimeout(function() {
             $("body").removeClass("display-connection-status");
         }, 3000);
