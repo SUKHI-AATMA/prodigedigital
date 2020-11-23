@@ -395,7 +395,7 @@ $(document).ready(function() {
             items: 1,
             smartSpeed: 600,
             autoplaySpeed: 600,
-            autoplay: false,
+            autoplay: true,
             autoplayTimeout: 7000,
             mouseDrag: true,
 
