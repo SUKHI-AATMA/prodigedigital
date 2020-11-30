@@ -478,7 +478,8 @@ button, input {
     background-color: #97144d;
     padding: 15px 28px;
     border-radius: 12px;
-    margin-top: 55px;
+    max-width: 592px;
+    margin: 55px auto 0 auto;
 }
 
 .banner .pink-box p {
@@ -498,8 +499,9 @@ button, input {
 .banner .disclaimer {
     font-size: 12.37px;
     text-align: center;
-    margin-top: 5px;
+    margin: 5px auto 0 auto;
     color: #000;
+    max-width: 532px;
 }
 
 .banner .nfo-details p {
@@ -629,7 +631,7 @@ padding: 0px;
     }
 
     .banner .pink-box p span {
-        font-size: 18px;
+        font-size: 16.5px;
     }
         
     .pink-text1 {
