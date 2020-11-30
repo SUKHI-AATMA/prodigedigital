@@ -15,6 +15,7 @@ html {
 
 body {
     background-color: #dadada;
+    line-height: inherit;
 }
 
 
@@ -77,6 +78,17 @@ body {
     width: 100%;
     margin: 0 auto;
     background-color: #fff;
+}
+
+.pd-wrapper p {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    padding-bottom: 0;
+}
+
+.pd-wrapper img {
+    vertical-align: inherit;
 }
 
 .pd-banner-wrapper {
