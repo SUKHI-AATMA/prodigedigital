@@ -398,6 +398,22 @@ $(function() {
         }, 3000);
     }
 
+    /* Added for Sync and update screen starts */
+    $(".update-app-container .whats-new-wrapper > a").on("click", function() {
+        var $this = $(this).parent("div");
+        $this.toggleClass("accordion-open");
+        $this.children(".whats-new-details").slideToggle('slow');
+    });
+
+    $(".update-app-container .update-app-heading-wrapper .cta-button").on("click", function() {
+        var $this = $(this);
+        $(this).addClass("installing");
+        $this.children("span:first-child").animate({"width": "100%"}, 1000, function() {
+
+        });
+    });
+    /* Added for Sync and update screen ends */
+
     // $(document).on("click", ".screen-list-wrapper .screen-to-connect > .error-wrapper .option-retry", function() {
     //     $(".screen-list-wrapper .screen-to-connect > a").click();
     // });
