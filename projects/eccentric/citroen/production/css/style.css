@@ -308,6 +308,18 @@ body {
     height: calc(810px - 80px); }
   body.popup-support-visible .main-tabs-container, body.popup-support-visible .disclaimer-text {
     display: none; }
+  body.popup-all-accessories-visible.tab-accessory-pack-content .all-accessories-wrapper .accordion-header {
+    display: inherit; }
+  body.popup-all-accessories-visible.tab-accessory-pack-content .all-accessories-wrapper .accordion-content {
+    display: none; }
+  body.popup-all-accessories-visible.tab-accessory-pack-content li {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+  body.popup-all-accessories-visible.tab-exterior-accessories-content .all-accessories-wrapper .accordion-header, body.popup-all-accessories-visible.tab-interior-accessories-content .all-accessories-wrapper .accordion-header {
+    display: none; }
+  body.popup-all-accessories-visible.tab-exterior-accessories-content .all-accessories-wrapper .accordion-content, body.popup-all-accessories-visible.tab-interior-accessories-content .all-accessories-wrapper .accordion-content {
+    display: block !important; }
   body.popup-all-accessories-visible.tab-exterior-accessories-content li[data-rel=exterior-accessories-content] {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
@@ -911,7 +923,8 @@ input::-webkit-inner-spin-button {
     position: relative;
     height: 100%; }
   .main-content-wrapper .search-wrapper {
-    height: 100%; }
+    height: 100%;
+    display: none; }
     .main-content-wrapper .search-wrapper .heading {
       font-family: 'citroenblack';
       font-size: 3rem;
@@ -1145,7 +1158,9 @@ input::-webkit-inner-spin-button {
           -o-transition: 0.5s all ease;
           transition: 0.5s all ease; }
           .main-content-wrapper .col-1-3 h1 span a.all-accessories.hide-elem {
-            opacity: 0; }
+            opacity: 0;
+            position: relative;
+            z-index: -1; }
   .main-content-wrapper .col-1-3 .automobile-features-wrapper, .main-content-wrapper .col-1-3 .automobile-versions-wrapper {
     max-width: 299px; }
   .main-content-wrapper .col-1-3 .automobile-features-wrapper {
@@ -1576,9 +1591,9 @@ input::-webkit-inner-spin-button {
   .main-tabs-container:not(.content-all) {
     display: none; }
     .main-tabs-container:not(.content-all) > span {
-      width: calc(50% - 30px); }
+      width: calc(33% - 30px); }
     .main-tabs-container:not(.content-all) ul li {
-      width: 50%; }
+      width: 33%; }
   .main-tabs-container ul li {
     padding: 18px 0;
     cursor: pointer;
@@ -1650,6 +1665,52 @@ input::-webkit-inner-spin-button {
   -webkit-transition: 0.5s all ease;
   -o-transition: 0.5s all ease;
   transition: 0.5s all ease; }
+  .all-accessories-wrapper .accordion-header {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #000;
+    position: relative;
+    cursor: pointer;
+    display: none; }
+    .all-accessories-wrapper .accordion-header:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      -webkit-transform: translateY(-50%) rotate(45deg);
+      -ms-transform: translateY(-50%) rotate(45deg);
+      transform: translateY(-50%) rotate(45deg);
+      width: 10px;
+      height: 10px;
+      border-top: 1px solid #000;
+      border-right: 1px solid #000;
+      -webkit-transition: 0.5s all ease;
+      -o-transition: 0.5s all ease;
+      transition: 0.5s all ease; }
+    .all-accessories-wrapper .accordion-header.accordion-open:after {
+      -webkit-transform: translateY(-50%) rotate(135deg);
+      -ms-transform: translateY(-50%) rotate(135deg);
+      transform: translateY(-50%) rotate(135deg); }
+    .all-accessories-wrapper .accordion-header .heading, .all-accessories-wrapper .accordion-header .price {
+      font-family: 'citroenbold';
+      font-size: 2rem;
+      line-height: 22px;
+      color: #000000; }
+    .all-accessories-wrapper .accordion-header .heading {
+      margin-right: 50px; }
+    .all-accessories-wrapper .accordion-header .price {
+      margin-right: 15px; }
+    .all-accessories-wrapper .accordion-header .cta-wrapper .cta-button {
+      padding-left: 15px;
+      padding-right: 15px;
+      text-transform: none;
+      font-family: 'citroenbold';
+      font-size: 1.3rem;
+      line-height: 14px; }
+      .all-accessories-wrapper .accordion-header .cta-wrapper .cta-button.secondary-button {
+        color: #9D0605;
+        background-color: transparent;
+        border: 1px solid #9D0605; }
   .all-accessories-wrapper .all-accessories-container {
     display: -ms-grid;
     display: grid;
@@ -1934,8 +1995,6 @@ input::-webkit-inner-spin-button {
             font-size: 1.4rem;
             line-height: 15px;
             position: relative; }
-            .update-app-wrapper .update-app-container .box > .col-2 .update-app-heading-wrapper .col-2 .cta-button.installing > span:not(:first-child) > span {
-              display: inline-block; }
             .update-app-wrapper .update-app-container .box > .col-2 .update-app-heading-wrapper .col-2 .cta-button > span:first-child {
               position: absolute;
               top: 0;
@@ -2498,18 +2557,43 @@ input::-webkit-inner-spin-button {
 .accessories-content {
   padding: 17px 15px 17px 10px; }
   .accessories-content .col-1 {
-    width: 40%; }
+    width: 40%;
+    position: relative; }
     .accessories-content .col-1 img {
       width: -webkit-fit-content;
       width: -moz-fit-content;
       width: fit-content;
-      max-width: 100%; }
+      max-width: 100%;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content; }
+    .accessories-content .col-1 span {
+      position: absolute !important;
+      width: 100% !important;
+      height: 100%;
+      opacity: 0.8;
+      font-family: 'citroenbold' !important;
+      font-size: 1.2rem !important;
+      line-height: 13px !important;
+      text-align: center;
+      color: #9D0605;
+      background: url("../images/icon-tick-red.svg") no-repeat 50% 0 #fff;
+      padding-top: 20px !important; }
   .accessories-content .col-2 {
     width: 60%;
     font-family: 'citroenregular';
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end; }
+    .accessories-content .col-2:only-child {
+      width: 100%; }
+      .accessories-content .col-2:only-child .price {
+        width: 100%; }
+      .accessories-content .col-2:only-child .cta-button:not(:only-of-type):not(:first-of-type) {
+        margin-left: 15px; }
+      .accessories-content .col-2:only-child .cta-button:not(.secondary-button) {
+        padding-top: 9.2px;
+        padding-bottom: 9.2px; }
     .accessories-content .col-2 .heading {
       width: 100%;
       font-weight: bold;

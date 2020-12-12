@@ -99,24 +99,39 @@ $(function() {
             }
 
             $("body").addClass("popup-all-accessories-visible");
+            
             // console.log($this.attr("data-rel"));
             // $(".popup-all-accessories-visible .all-accessories-container li:visible").slideUp('slow', function() {
             //     $(".popup-all-accessories-visible .all-accessories-container").find("li[data-rel=" + $this.attr("data-rel").substring(4) + "]").slideDown('slow');
             // });
+            //$(".popup-all-accessories-visible .all-accessories-wrapper .accordion-content").slideDown();
 
-            $(".popup-all-accessories-visible .all-accessories-container li:visible").hide();
-            setTimeout(function() {
-                $(".popup-all-accessories-visible .all-accessories-container li[data-rel=" + $this.attr("data-rel").substring(4) + "]").show();
+            if($(this).attr("data-rel") == 'tab-accessory-pack-content') {
                 $("body").addClass($this.attr("data-rel"));
-            }, 200);
+            }
 
+            if(!$("body").hasClass("tab-accessory-pack-content")) {
+                $(".accordion-content").slideDown();
+                $(".popup-all-accessories-visible .all-accessories-container li:visible").hide();
+                setTimeout(function() {
+                    $(".popup-all-accessories-visible .all-accessories-container li[data-rel=" + $this.attr("data-rel").substring(4) + "]").show();
+                    $("body").addClass($this.attr("data-rel"));
+                }, 200);
+            }
+            else {
+                console.log($(".accordion-header").hasClass("accordion-open"));
+                if(!$(".accordion-header").hasClass("accordion-open")) {
+                    $(".accordion-content").slideUp();
+                }
 
-            
+                setTimeout(function() {
+                    $(".popup-all-accessories-visible .all-accessories-container li").show();
+                }, 200);
+            }
         }
-        
     });
 
-    //$(document).find(".main-tabs-container.content-all > ul > li").eq(3).click();
+    $(document).find(".main-tabs-container.content-all > ul > li").eq(2).click();
 
     $(document).on("click", ".automobile-versions-wrapper > ul > li", function() {
         $(this).addClass("selected").siblings("li").removeClass("selected");
@@ -404,15 +419,16 @@ $(function() {
         $this.toggleClass("accordion-open");
         $this.children(".whats-new-details").slideToggle('slow');
     });
-
-    $(".update-app-container .update-app-heading-wrapper .cta-button").on("click", function() {
-        var $this = $(this);
-        $(this).addClass("installing");
-        $this.children("span:first-child").animate({"width": "100%"}, 1000, function() {
-
-        });
-    });
     /* Added for Sync and update screen ends */
+
+    /* Click event added for accordion while viewing all accessories - convenience pack starts */
+    $(document).on("click", ".all-accessories-wrapper .accordion-header", function() {
+        var $this = $(this);
+        //console.log($this.next(".accordion-content").is(":visible"));
+        $this.next(".accordion-content").slideToggle('slow');
+        $this.toggleClass("accordion-open");
+    });
+    /* Click event added for accordion while viewing all accessories - convenience pack ends */
 
     // $(document).on("click", ".screen-list-wrapper .screen-to-connect > .error-wrapper .option-retry", function() {
     //     $(".screen-list-wrapper .screen-to-connect > a").click();

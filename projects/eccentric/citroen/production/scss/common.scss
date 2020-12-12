@@ -144,6 +144,34 @@ body {
     }
 
     &.popup-all-accessories-visible {
+        &.tab-accessory-pack-content {
+            .all-accessories-wrapper {
+                .accordion-header {
+                    display: inherit;
+                }
+
+                .accordion-content {
+                    display: none;
+                }
+            }
+            
+            li {
+                transform: scale(1);
+            }
+        }
+
+        &.tab-exterior-accessories-content, &.tab-interior-accessories-content {
+            .all-accessories-wrapper {
+                .accordion-header {
+                    display: none;
+                }
+
+                .accordion-content {
+                    display: block !important;
+                }
+            }
+        }
+
         &.tab-exterior-accessories-content {
             li[data-rel=exterior-accessories-content] {
                 transform: scale(1);
@@ -1091,7 +1119,7 @@ input::-webkit-inner-spin-button {
 
     .search-wrapper {
         height: 100%;
-        // display: none;
+        display: none;
         
 
         .heading {
@@ -1400,6 +1428,8 @@ input::-webkit-inner-spin-button {
 
                         &.hide-elem {
                             opacity: 0;
+                            position: relative;
+                            z-index: -1;
                         }
                     }
                 }
@@ -2456,12 +2486,12 @@ input::-webkit-inner-spin-button {
         display: none;
 
         & > span {
-            width: calc(50% - 30px);
+            width: calc(33% - 30px);
         }
 
         ul {
             li {
-                width: 50%;
+                width: 33%;
             }
         }
     }
@@ -2567,8 +2597,6 @@ input::-webkit-inner-spin-button {
         width: 100%;
         justify-content: center;
         transition: 0.5s all ease;
-
-        
     }
 }
 
@@ -2582,6 +2610,70 @@ input::-webkit-inner-spin-button {
     background-color: #fff;
     padding: 20px 30px 35px 30px;
     transition: 0.5s all ease;
+
+    .accordion-header {
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #000;
+        position: relative;
+        cursor: pointer;
+        display: none;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%) rotate(45deg);
+            width: 10px;
+            height: 10px;
+            border-top: 1px solid #000;
+            border-right: 1px solid #000;
+            transition: 0.5s all ease;
+        }
+
+        &.accordion-open {
+            &:after {
+                transform: translateY(-50%) rotate(135deg);
+            }
+        }
+
+        // &:not(.accordion-open) ~ .accordion-content {
+        //     display: none;
+        // }
+
+        .heading, .price {
+            font-family: 'citroenbold';
+            font-size: 2rem;
+            line-height: 22px;
+            color: #000000;
+        }
+
+        .heading {
+            margin-right: 50px;
+        }
+
+        .price {
+            margin-right: 15px;
+        }
+
+        .cta-wrapper {
+            .cta-button {
+                padding-left: 15px;
+                padding-right: 15px;
+                text-transform: none;
+                font-family: 'citroenbold';
+                font-size: 1.3rem;
+                line-height: 14px;
+
+                &.secondary-button {
+                    color: #9D0605;
+                    background-color: transparent;
+                    border: 1px solid #9D0605;
+                }
+            }
+        }
+    }
 
     .all-accessories-container {
         display: grid;
@@ -2956,16 +3048,6 @@ input::-webkit-inner-spin-button {
                             font-size: 1.4rem;
                             line-height: 15px;
                             position: relative;
-
-                            &.installing {
-                                & > span {
-                                    &:not(:first-child) {
-                                        & > span {
-                                            display: inline-block;
-                                        }
-                                    }
-                                }
-                            }
 
                             & > span {
                                 &:first-child {
@@ -3751,10 +3833,26 @@ input::-webkit-inner-spin-button {
 
     .col-1 {
         width: 40%;
+        position: relative;
 
         img {
             width: fit-content;
             max-width: 100%;
+            height: fit-content;
+        }
+
+        span {
+            position: absolute !important;
+            width: 100% !important;
+            height: 100%;
+            opacity: 0.8;
+            font-family: 'citroenbold' !important;
+            font-size: 1.2rem !important;
+            line-height: 13px !important;
+            text-align: center;
+            color: #9D0605;
+            background: url('../images/icon-tick-red.svg') no-repeat 50% 0 #fff;
+            padding-top: 20px !important;
         }
     }
 
@@ -3762,6 +3860,28 @@ input::-webkit-inner-spin-button {
         width: 60%;
         font-family: 'citroenregular';
         justify-content: flex-end;
+
+        &:only-child {
+            width: 100%;
+
+            .price {
+                width: 100%;
+            }
+
+            .cta-button {
+                &:not(:only-of-type) {
+                    &:not(:first-of-type) {
+                        margin-left: 15px;
+                    }
+                }
+
+                &:not(.secondary-button) {
+                    padding-top: 9.2px;
+                    padding-bottom: 9.2px;
+                }
+                
+            }
+        }
 
         .heading {
             width: 100%;
