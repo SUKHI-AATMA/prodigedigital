@@ -1221,8 +1221,14 @@ footer li {
     margin-right: 0;
   }
 
+  .banner-wrapper .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .banner-wrapper .banner {
     height: calc(80vh - 100px);
+    overflow: hidden;
   }
 
   .banner-wrapper .banner img {
@@ -1241,6 +1247,11 @@ footer li {
 
   .about-vitamin-wrapper {
     padding-bottom: 80px;
+  }
+
+  .about-vitamin-wrapper .cloud-sun-wrapper,
+  .about-vitamin-wrapper .about-vitamin-pros {
+    transform: translateX(0);
   }
 
   .about-vitamin-wrapper .col-12 > .col-12 {
