@@ -1,0 +1,1372 @@
+/* import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
+
+
+/* resetting starts */
+html {
+  font-family: 'Work Sans', sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  letter-spacing: -0.40px;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary,
+img {
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+  color: inherit;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: 500;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea,
+ul,
+li,
+p,
+h1, h2, h3, h4, h5, h6, a {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: 700;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  -webkit-text-size-adjust: none;
+  -webkit-appearance: none;
+}
+
+/** overwritting Bootstrap properties for the following Bootstrap classes starts **/
+.container, .row > * {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+/** overwritting Bootstrap properties for the following Bootstrap classes ends **/
+
+/* resetting ends */
+
+/* common css starts */
+body {
+    font-family: 'Noto Sans';
+}
+
+.full-width {
+    width: 100%;
+}
+
+.fixed-wrapper {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1190px;
+}
+
+.section-heading {
+    font-size: 4.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* common css ends */
+
+header > .container {
+    max-width: 100%;
+    padding: 15.03px 94px 25px 88.4px;
+}
+
+header > .container .logo, 
+header > .container .logo > img {
+  width: fit-content;
+  width: -moz-fit-content;
+  max-width: 100%;
+}
+
+
+header > .container .navigation {
+    font-size: 1.6rem;
+    height: fit-content;
+    height: -moz-fit-content;
+    justify-content: flex-end;
+    transform: translateY(10px);
+}
+
+header > .container .navigation > ul {
+    margin-right: 38px;
+    height: fit-content;
+    height: -moz-fit-content;
+}
+
+header > .container .navigation > ul > li:not(:first-child) {
+    position: relative;
+    padding-left: 12px;
+    margin-left: 12px;
+}
+
+header > .container .navigation > ul > li:not(:first-child):before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #333;
+}
+
+header > .container .navigation > ul > li > a {
+    color: #333;
+}
+
+.link-button {
+    border: 2px solid #6F2C91;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 8px 25px;
+    color: #6F2C91;
+}
+
+.banner-wrapper {
+    position: relative;
+}
+
+.banner-wrapper .container {
+    max-width: 100%;
+}
+
+.banner-wrapper .banner img {
+    width: fit-content;
+    width: -moz-fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.banner-wrapper .banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.banner-wrapper .banner-content .description {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.banner-wrapper .banner-content .cta-watch-video {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    background: url(../images/play-button.svg) no-repeat 100% 50%;
+    padding-right: 44px;
+    
+}
+
+.about-vitamin-wrapper {
+    padding: 80px 0;
+}
+
+.about-vitamin-wrapper h2 {
+    text-align: center;
+    font-weight: bold;
+    color: #6F2C91;
+    text-transform: uppercase;
+}
+
+.about-vitamin-wrapper .col-md-6 {
+  overflow: hidden;
+}
+
+.about-vitamin-wrapper .cloud-sun-wrapper {
+    position: relative;
+    padding-top: 70px;
+    transform: translateX(-100%);
+    transition: 0.5s all ease;
+}
+
+.about-vitamin-wrapper .cloud-sun-wrapper .img-sun {
+    width: 179px;
+    height: 179px;
+    position: absolute;
+    top:0;
+    left: 80px;
+    z-index: -1;
+}
+
+
+
+.about-vitamin-wrapper .cloud-sun-wrapper .img-cloud {
+    width: 163px;
+    height: 85px;
+    transform: translateX(0);
+}
+
+.about-vitamin-wrapper .cloud-sun-wrapper .img-sun > svg,
+.about-vitamin-wrapper .cloud-sun-wrapper .img-cloud > svg {
+    width: 100%;
+    height: 100%;
+}
+
+.about-vitamin-wrapper .family-wrapper {
+    margin-top: 50px;
+}
+
+.about-vitamin-wrapper .family-wrapper > img {
+    margin: 0 auto;
+}
+
+.about-vitamin-pros {
+    margin-top: 106px;
+    transform: translateX(100%);
+    transition: 0.5s all ease;
+}
+
+.about-vitamin-pros > li {
+    position: relative;
+    overflow: hidden;
+    padding-left: 205px;
+    margin-bottom: 48px;
+}
+
+.about-vitamin-pros > li:last-child {
+    margin-bottom: 0;
+}
+
+.about-vitamin-pros > li .heading {
+    font-size: 3.2rem;
+    color: #6F2C91;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.about-vitamin-pros > li .description {
+    font-size: 2rem;
+    color: #333333;
+}
+
+.about-vitamin-pros > li .description > strong {
+    font-weight: bold;
+}
+
+.about-vitamin-pros > li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 196px;
+    height: 196px;
+    transition: 0.5s all ease;
+    transform: scale(0);
+}
+
+
+
+.about-vitamin-pros > li.what-is-vitamin:before {
+    background: url('../images/icon-what-is-vitamin.svg') no-repeat 0 0;
+    background-size: 90%;
+}
+
+.about-vitamin-pros > li.why-take-vitamin:before {
+    background: url('../images/icon-why-take-vitamin.svg') no-repeat 0 0;
+    background-size: contain;
+}
+
+.about-vitamin-pros > li.how-do-we-get-vitamin:before {
+    background: url('../images/icon-how-do-we-get-vitamin.svg') no-repeat 0 0;
+    background-size: contain;
+}
+
+.boost-immunity-wrapper {
+    background-color: #00A99E;
+    padding: 25px 0 23px 0;
+    color: #fff;
+}
+
+.boost-immunity-wrapper .col-md-7 {
+    padding-right: 90px;
+}
+
+.boost-immunity-wrapper .col-md-5 > img {
+  width: fit-content;
+  width: -moz-fit-content;
+  max-width: 100%;
+}
+
+.boost-immunity-wrapper .heading {
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 48px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+}
+
+.boost-immunity-wrapper .col-md-7 .heading br {
+  display: none;
+}
+
+.boost-immunity-wrapper .description {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.boost-immunity-wrapper .description:last-child {
+    margin-bottom: 0;
+}
+
+.word-of-wisdom-wrapper {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.word-of-wisdom-wrapper > .container > .row > .section-heading {
+    color: #00A99E;
+    margin-bottom: 8px;
+}
+
+.word-of-wisdom-wrapper > .container > .row > .description {
+  font-size: 2rem;
+  color: #333333;
+  margin-bottom: 26px;
+}
+
+.word-of-wisdom-wrapper .wisdom-box-content-wrapper {
+    padding: 0 102.5px;
+}
+
+.word-of-wisdom-wrapper .wisdom-box-content {
+    width: 49.5%;
+    padding: 0 35px 41px 35px;
+    position: relative;
+    margin-top: 25px;
+}
+
+.word-of-wisdom-wrapper .wisdom-box-content:first-child,
+.word-of-wisdom-wrapper .wisdom-box-content:nth-child(2) {
+  margin-top: 0;
+} 
+
+.word-of-wisdom-wrapper .wisdom-box-content:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top:  63px;
+    width: 100%;
+    height: 85%;
+    border: 3px solid #00A99E;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.word-of-wisdom-wrapper .wisdom-box-content .person-image {
+    width: 127px;
+    height: 127px;
+    margin: 0 auto;
+}
+
+.word-of-wisdom-wrapper .wisdom-box-content .person-image img {
+    width: fit-content;
+    width: -moz-fit-content;
+    max-width: 100%;
+}
+
+.word-of-wisdom-wrapper .wisdom-box-content .person-name,
+.word-of-wisdom-wrapper .wisdom-box-content .heading {
+    margin-bottom: 32px;
+}
+
+.word-of-wisdom-wrapper .wisdom-box-content .person-name {
+    font-size: 2.4rem;
+    color: #00A99E;
+    font-weight: bold;
+}
+
+.word-of-wisdom-wrapper .wisdom-box-content .heading {
+    font-size: 3rem;
+    font-style: italic;
+    color:#333333;
+    position: relative;
+    width: fit-content;
+    width: -moz-fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 8px 0 39px;
+}
+
+.word-of-wisdom-wrapper .wisdom-box-content .heading:before,
+.word-of-wisdom-wrapper .wisdom-box-content .heading:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    background: url('../images/quote.svg') no-repeat 0 0;
+    width: 31px;
+    height: 26px;
+}
+
+.word-of-wisdom-wrapper .wisdom-box-content .heading:before {
+    top: 0;
+}
+
+.word-of-wisdom-wrapper .wisdom-box-content .heading:after {
+    bottom: 0;
+    left: 100%;
+    transform: rotate(180deg);
+}
+
+.word-of-wisdom-wrapper .wisdom-box-content .description {
+    font-size: 2rem;
+    color:#333333;
+}
+
+.eat-well-wrapper {
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.eat-well-wrapper .section-header {
+    margin-bottom: 23px;
+}
+
+.eat-well-wrapper .section-header > .section-heading {
+    color: #6F2C91;
+    margin-bottom: 17px;
+    line-height: 42px;
+}
+
+.eat-well-wrapper .section-header > .description {
+    color: #333333;
+    font-size: 2rem;
+}
+
+.eat-well-wrapper .col-lg-4,
+.eat-well-wrapper .col-md-6 {
+  padding-left: 16px;
+  padding-bottom: 16px;
+}
+
+
+
+.eat-well-wrapper .eat-well-box-content {
+    background-color: #FFF6EC;
+    font-size: 2rem;
+}
+
+.eat-well-wrapper .eat-well-box-content .eat-well-food-description {
+    padding: 43px 44px;
+    color: #333;
+    text-align: left;
+    height: 176px;
+}
+
+.eat-well-wrapper .eat-well-box-content .eat-well-food-details {
+    background-color: #F7941D;
+    padding: 22px;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #fff;
+}
+
+.eat-well-wrapper .eat-well-box-content .eat-well-food-description > p {
+    position: relative;
+}
+
+.eat-well-wrapper .eat-well-box-content .eat-well-food-description > p:before {
+  content: '';
+  height: 70px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: contain !important;
+}
+
+.eat-well-wrapper .eat-well-box-content.food-cod-liver-oil .eat-well-food-description > p {
+    padding-left: 90px;
+}
+
+.eat-well-wrapper .eat-well-box-content.food-cod-liver-oil .eat-well-food-description > p:before {
+    width: 75px;
+    background: url('../images/food-cod-liver-oil.png') no-repeat 0 0;
+}
+
+.eat-well-wrapper .eat-well-box-content.food-milk .eat-well-food-description > p {
+  padding-left: 70px;
+}
+
+.eat-well-wrapper .eat-well-box-content.food-milk .eat-well-food-description > p:before {
+  width: 55px;
+  background: url('../images/food-milk.png') no-repeat 0 0;
+}
+
+.eat-well-wrapper .eat-well-box-content.food-vitamin .eat-well-food-description > p {
+  padding-left: 82px;
+}
+
+.eat-well-wrapper .eat-well-box-content.food-vitamin .eat-well-food-description > p:before {
+  width: 67px;
+  background: url('../images/food-vitamin.png') no-repeat 0 0;
+}
+
+.eat-well-wrapper .eat-well-box-content.food-sardines .eat-well-food-description > p {
+  padding-left: 84px;
+}
+
+.eat-well-wrapper .eat-well-box-content.food-sardines .eat-well-food-description > p:before {
+  width: 49px;
+  background: url('../images/food-sardines.png') no-repeat 0 0;
+}
+
+.eat-well-wrapper .eat-well-box-content.food-egg .eat-well-food-description > p {
+  padding-left: 64px;
+}
+
+.eat-well-wrapper .eat-well-box-content.food-egg .eat-well-food-description > p:before {
+  width: 69px;
+  background: url('../images/food-egg.png') no-repeat 0 0;
+}
+
+.eat-well-wrapper .eat-well-box-content.food-tuna .eat-well-food-description > p {
+  padding-left: 70px;
+}
+
+.eat-well-wrapper .eat-well-box-content.food-tuna .eat-well-food-description > p:before {
+  width: 55px;
+  background: url('../images/food-tuna.png') no-repeat 0 0;
+}
+
+.eat-well-wrapper .disclaimer {
+  text-align: left;
+  font-size: 1.6rem;
+  color: #333;
+  font-style: italic;
+}
+
+.benefits-of-vitamin-wrapper {
+  background-color: rgba(235, 236, 245, 0.5);
+}
+
+.benefits-of-vitamin-wrapper .container {
+  padding: 60px 27px;
+}
+
+.benefits-of-vitamin-wrapper .section-header {
+  margin-bottom: 32px;
+}
+
+.benefits-of-vitamin-wrapper .section-heading {
+  color: #6F2C91;
+  font-size: 4rem;
+  line-height: 48px;
+  text-align: center;
+}
+
+.benefits-of-vitamin-wrapper .benefits-of-vitamin-details {
+  padding: 0 160px;
+  color: #333;
+}
+
+.benefits-of-vitamin-wrapper .benefits-of-vitamin-details .box {
+  border: 3px solid rgba(247, 148, 29, 1);
+  border-radius: 10px;
+  padding: 70px 45px;
+}
+
+.benefits-of-vitamin-wrapper .benefits-of-vitamin-details .box .col-md-9 {
+  padding-left: 24px;
+}
+
+.benefits-of-vitamin-wrapper .benefits-of-vitamin-details .box .col-md-9 .heading {
+  font-size: 3.2rem;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.benefits-of-vitamin-wrapper .benefits-of-vitamin-details .box .col-md-9 .description {
+  font-size: 2.4rem;
+  line-height: 30px;
+  font-style: italic;
+}
+
+.our-partners-wrapper {
+  padding: 94px 0;
+}
+
+.our-partners-wrapper .row > * {
+  width: auto;
+  margin-left: 77px;
+}
+
+.our-partners-wrapper .row > *:first-child {
+  margin-left: 0;
+}
+
+footer {
+  background-color: #70309F;
+  padding: 43px 0;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+footer .row > * {
+  width: auto;
+}
+
+footer li {
+  margin-left: 30px;
+}
+
+/* animation for the section starts */
+.about-vitamin-wrapper.in-view .cloud-sun-wrapper,
+.about-vitamin-wrapper.in-view .about-vitamin-pros {
+  transform: translateX(0);
+}
+
+.about-vitamin-wrapper.in-view .about-vitamin-pros > li.in-view:before {
+  transform: scale(1);
+}
+
+@keyframes moveCloud {
+  0%   {transform: translateX(0)}
+  50%  {transform: translateX(250%)}
+  100% {transform: translateX(0)}
+}
+
+@keyframes shineSun {
+  0%   {stroke-width: 1.964px}
+  50%  {stroke-width: 0.2px}
+  100% {stroke-width: 1.964px}
+}
+
+.about-vitamin-wrapper.in-view .cloud-sun-wrapper .img-cloud {
+  transform: translateX(0);
+  animation-name: moveCloud;
+  animation-duration: 30s;
+  animation-iteration-count: 1;
+}
+
+.about-vitamin-wrapper.in-view .cloud-sun-wrapper .img-sun > svg line {
+  stroke-width: 1.964px;
+  animation-name: shineSun;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+/* animation for the section ends */
+
+/* Media CSS starts */
+@media only screen and (min-width: 1024px) {
+  .eat-well-wrapper .col-lg-4:nth-child(3n+1) {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 641px) {
+  .benefits-of-vitamin-wrapper .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 684px;
+  }
+
+  header > .container {
+    padding: 26px 25px 25px 25px;
+  }
+
+  header > .container .navigation {
+    transform: translateY(5px);
+  }
+
+  header > .container .navigation > ul {
+    margin-right: 27px;
+  }
+
+  .section-heading {
+    font-size: 3.2rem;
+    line-height: 40px;
+  }
+
+  .banner-wrapper .banner-content .description {
+    font-size: 1.6rem;
+    line-height: 22px;
+    margin-bottom: 11px;
+  }
+
+  .banner-wrapper .banner-content .cta-watch-video {
+    font-size: 1.6rem;
+    line-height: 18px;
+    background-size: contain;
+    padding-right: 28px;
+  }
+
+  .about-vitamin-wrapper {
+    padding: 32px 0 65px 0;
+  }
+
+  .about-vitamin-wrapper .cloud-sun-wrapper .img-sun {
+    width: 100px;
+    height: 100px;
+    left: 45px;
+    top: 33px;
+  }
+
+  
+
+  .about-vitamin-wrapper .cloud-sun-wrapper .img-cloud {
+    width: 95px;
+    height: 50px;
+  }
+
+  .about-vitamin-wrapper .family-wrapper {
+    padding-left: 73px;
+    margin-top: 10px;
+  }
+
+  .about-vitamin-wrapper .family-wrapper > img {
+    width: fit-content;
+    width: -moz-fit-content;
+    max-width: 100%;
+  }
+
+  .about-vitamin-pros {
+    margin-top: 36px;
+    padding-left: 0;
+  }
+
+  .about-vitamin-pros > li {
+    padding-left: 100px;
+    margin-bottom: 25px;
+  }
+
+  .about-vitamin-pros > li .heading {
+    font-size: 2.4rem;
+    margin-bottom: 8px;
+  }
+
+  .about-vitamin-pros > li .description {
+    font-size: 1.6rem;
+    line-height: 22px;
+  }
+
+  .about-vitamin-pros > li:before {
+    width: 100px;
+    height: 100px;
+    background-position-y: -5px !important;
+    background-size: contain !important;
+  }
+
+  .boost-immunity-wrapper .col-md-7 {
+    padding-right: 20px;
+  }
+
+  .boost-immunity-wrapper .heading {
+    font-size: 3.2rem;
+    line-height: 38px;
+    margin-bottom: 16px;
+  }
+
+  .boost-immunity-wrapper .description {
+    font-size: 1.4rem;
+  }
+
+  .boost-immunity-wrapper .col-md-5 > img {
+    max-width: 87%;
+  }
+
+  .word-of-wisdom-wrapper > .container > .row > .description {
+    font-size: 1.4rem;
+    margin-bottom: 32px;
+  }
+
+  .word-of-wisdom-wrapper .wisdom-box-content-wrapper {
+    padding: 0;
+  }
+
+  .word-of-wisdom-wrapper .wisdom-box-content {
+    padding: 0 22px 31px 22px;
+    width: 48%;
+  }
+
+  .word-of-wisdom-wrapper .wisdom-box-content .person-image {
+    width: 90px;
+    height: 90px;
+  }
+
+  .word-of-wisdom-wrapper .wisdom-box-content .person-name {
+    font-size: 2rem;;
+  }
+
+  .word-of-wisdom-wrapper .wisdom-box-content .person-name,
+  .word-of-wisdom-wrapper .wisdom-box-content .heading {
+    margin-bottom: 22px;
+  }
+
+  .word-of-wisdom-wrapper .wisdom-box-content .heading {
+    font-size: 2.4rem;
+    padding-left: 32px;
+  }
+
+  .word-of-wisdom-wrapper .wisdom-box-content .heading::before,
+  .word-of-wisdom-wrapper .wisdom-box-content .heading::after {
+    width: 24px;
+    height: 20px;
+    background-size: contain;
+  }
+
+  .word-of-wisdom-wrapper .wisdom-box-content .description {
+    font-size: 1.6rem;
+    line-height: 22px;
+  }
+
+  .eat-well-wrapper .section-header > .section-heading {
+    margin-bottom: 8px;
+  }
+
+  .eat-well-wrapper .section-header > .description {
+    font-size: 1.4rem;
+  }
+
+  .eat-well-wrapper .section-header {
+    margin-bottom: 32px;
+  }
+
+  .eat-well-wrapper .col-md-6:nth-child(odd) {
+    padding-left: 0;
+  }
+
+  .eat-well-wrapper .eat-well-box-content {
+    font-size: 1.4rem;
+  }
+  
+  .eat-well-wrapper .eat-well-box-content .eat-well-food-description {
+    padding: 27px 32px;
+    height: 96px;
+  }
+
+  .eat-well-wrapper .eat-well-box-content .eat-well-food-description > p:before {
+    height: 37px;
+  }
+
+  .eat-well-wrapper .eat-well-box-content.food-cod-liver-oil .eat-well-food-description > p:before {
+    width: 40px;
+  }
+
+  .eat-well-wrapper .eat-well-box-content.food-cod-liver-oil .eat-well-food-description > p {
+    padding-left: 67px;
+  }
+
+  .eat-well-wrapper .eat-well-box-content.food-milk .eat-well-food-description > p:before {
+    width: 29px;
+  }
+
+  .eat-well-wrapper .eat-well-box-content.food-milk .eat-well-food-description > p {
+    padding-left: 56px;
+  }
+
+  .eat-well-wrapper .eat-well-box-content.food-vitamin .eat-well-food-description > p:before {
+    width: 36px;
+  }
+
+  .eat-well-wrapper .eat-well-box-content.food-vitamin .eat-well-food-description > p {
+    padding-left: 63px;
+  }
+
+  .eat-well-wrapper .eat-well-box-content.food-sardines .eat-well-food-description > p:before {
+    width: 39px;
+  }
+
+  .eat-well-wrapper .eat-well-box-content.food-sardines .eat-well-food-description > p {
+    padding-left: 66px;
+  }
+
+  .eat-well-wrapper .eat-well-box-content.food-egg .eat-well-food-description > p:before {
+    width: 26px;
+  }
+
+  .eat-well-wrapper .eat-well-box-content.food-egg .eat-well-food-description > p {
+    padding-left: 53px;
+  }
+
+  .eat-well-wrapper .eat-well-box-content.food-tuna .eat-well-food-description > p:before {
+    width: 30px;
+  }
+
+  .eat-well-wrapper .eat-well-box-content.food-tuna .eat-well-food-description > p {
+    padding-left: 57px;
+  }
+
+  .eat-well-wrapper .disclaimer {
+    font-size: 1.2rem;
+  }
+
+  
+  
+  .benefits-of-vitamin-wrapper .section-heading {
+    font-size: 2.4rem;
+    line-height: 30px;
+  }
+
+  .benefits-of-vitamin-wrapper .benefits-of-vitamin-details {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .benefits-of-vitamin-wrapper .benefits-of-vitamin-details .box {
+    padding: 69px 48px;
+  }
+
+  .benefits-of-vitamin-wrapper .benefits-of-vitamin-details .box .col-md-3 .logo > img {
+    width: fit-content;
+    width: -moz-fit-content;
+    max-width: 100%;
+  }
+
+  .benefits-of-vitamin-wrapper .benefits-of-vitamin-details .box .col-md-9 .heading {
+    font-size: 2.4rem;
+    line-height: 32px;
+    margin-bottom: 8px;
+  }
+
+  .benefits-of-vitamin-wrapper .benefits-of-vitamin-details .box .col-md-9 .description {
+    font-size: 1.6rem;
+    line-height: 22px;
+  }
+  
+  .our-partners-wrapper {
+    padding: 40px 0;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 100%;
+    padding: 0 28px;
+  }
+
+  header > .container {
+    padding: 14px 21px;
+  }
+
+  header .container .row > * {
+    width: 50%;
+  }
+
+  .link-button {
+    padding-left: 18px;
+    padding-right: 18px;
+    line-height: 15px;
+  }
+
+  header > .container .navigation > ul {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .banner-wrapper .banner {
+    height: calc(80vh - 100px);
+  }
+
+  .banner-wrapper .banner img {
+    width: auto;
+    max-width: none;
+    height: fit-content;
+    height: -moz-fit-content;
+    max-height: 100%;
+    transform: translateX(-160px);
+  }
+
+  .banner-content .section-heading {
+    font-size: 3.6rem;
+    line-height: 44px;
+  }
+
+  .about-vitamin-wrapper {
+    padding-bottom: 80px;
+  }
+
+  .about-vitamin-wrapper .col-12 > .col-12 {
+    order: 2;
+  }
+
+  .about-vitamin-wrapper .cloud-sun-wrapper {
+    order: 1;
+    padding-top: 38px;
+    margin-bottom: 31px;
+  }
+
+  .about-vitamin-wrapper .col-md-6:last-child {
+    order: 3;
+  }
+
+  .about-vitamin-wrapper .cloud-sun-wrapper .img-sun {
+    top: 0;
+  }
+
+  .about-vitamin-wrapper .family-wrapper {
+    padding: 0 10%;
+    width: 100%;
+  }
+
+  .about-vitamin-pros {
+    margin-top: 0;
+  }
+
+  .about-vitamin-pros > li {
+    padding-left: 0;
+    padding-top: 196px;
+    text-align: center;
+    margin-top: -12%;
+  }
+
+  .about-vitamin-pros > li:before {
+    width: 196px;
+    height: 196px;
+    left: 50%;
+    top: 12%;
+    transform: translateX(-50%);
+  }
+
+  .boost-immunity-wrapper {
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .boost-immunity-wrapper .col-md-5 {
+    order: -1;
+    margin-bottom: 16px;
+  }
+
+  .boost-immunity-wrapper .col-md-7 {
+    padding: 0 5%;
+  }
+
+  .boost-immunity-wrapper .col-md-7 .heading br {
+    display: block;
+  }
+
+  .boost-immunity-wrapper .col-md-5 > img {
+    margin: 0 auto;
+    max-width: 70%;
+  }
+
+  .word-of-wisdom-wrapper .wisdom-box-content {
+    width: 100%;
+  }
+
+  .word-of-wisdom-wrapper > .container > .row > .description,
+  .eat-well-wrapper .section-header > .description,
+  .eat-well-wrapper .eat-well-box-content {
+    font-size: 1.6rem;
+  }
+
+  .word-of-wisdom-wrapper .wisdom-box-content:nth-child(2),
+  .word-of-wisdom-wrapper .wisdom-box-content {
+    margin-top: 32px;
+  }
+
+  .eat-well-wrapper .col-lg-4, .eat-well-wrapper .col-md-6 {
+    padding-left: 0;
+    padding-bottom: 24px;
+  }
+
+  .eat-well-wrapper .disclaimer {
+    font-size: 1.4rem;
+  }
+
+  .benefits-of-vitamin-wrapper .benefits-of-vitamin-details {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .benefits-of-vitamin-wrapper .benefits-of-vitamin-details .box {
+    padding: 40px 25px;
+  }
+
+  .benefits-of-vitamin-wrapper .benefits-of-vitamin-details .box .col-md-9 {
+    padding-left: 0;
+    margin-top: 24px;
+  }
+
+  .benefits-of-vitamin-wrapper .benefits-of-vitamin-details .box .col-md-9 .heading {
+    font-size: 2.2rem;
+    line-height: 28px;
+    margin-bottom: 24px;
+  }
+  
+  .our-partners-wrapper .row {
+    justify-content: space-between !important;
+  }
+
+  .our-partners-wrapper .row > * {
+    width: 45%;
+    margin-left: 0;
+  }
+
+  .our-partners-wrapper .row > * > img {
+    width: fit-content;
+    width: -moz-fit-content;
+    max-width: 100%;
+  }
+  
+}
+
+/* Media CSS ends */
