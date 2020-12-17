@@ -45,7 +45,7 @@
                 </div>
             </div>
         </section>
-        <section class="about-vitamin-wrapper">
+        <section class="about-vitamin-wrapper" data-rel="About Vitamin D">
             <div class="container">
                 <div class="row">
                     <div class="col-12 display-flex flex-wrap">
@@ -97,7 +97,7 @@
                 </div>
             </div>
         </section>
-        <section class="word-of-wisdom-wrapper">
+        <section class="word-of-wisdom-wrapper" data-rel="Words of Wisdom">
             <div class="container">
                 <div class="row justify-content-center">
                     <p class="section-heading">Words of Wisdom</p>
@@ -147,7 +147,7 @@
                 </div>
             </div>
         </section>
-        <section class="eat-well-wrapper">
+        <section class="eat-well-wrapper" data-rel="Things to Note">
             <div class="container">
                 <div class="row section-header">
                     <p class="section-heading">Eat Well and Stay Healthy</p>
@@ -267,9 +267,9 @@
             <nav>
                 <p class="heading" role="heading">Jump to</p>
                 <ul>
-                    <li><a href="javascript:;">About Vitamin D</a></li>
-                    <li><a href="javascript:;">Words of Wisdom</a></li>
-                    <li><a href="javascript:;">Things to Note</a></li>
+                    <li><a href="javascript:;" rel="About Vitamin D">About Vitamin D</a></li>
+                    <li><a href="javascript:;" rel="Words of Wisdom">Words of Wisdom</a></li>
+                    <li><a href="javascript:;"rel="Things to Note">Things to Note</a></li>
                 </ul>
             </nav>
         </section>
@@ -346,7 +346,7 @@
                     if(scroll_ctr == new_scroll_ctr) {
                         paramTimeout = setTimeout(function() {
                             if(!$(".sticky-menu").hasClass("menu-open")) {
-                                $(".sticky-menu").removeClass("menu-visible");
+                                //$(".sticky-menu").removeClass("menu-visible");
                             }
                         }, 2000);
                     }
@@ -355,7 +355,16 @@
 
                 $(".sticky-menu > a").on("click", function() {
                     $(this).parent(".sticky-menu").toggleClass("menu-open");
+                    
                 });
+
+                $(".sticky-menu > nav a").on("click", function() {
+                    //console.log($(this).attr("rel"));
+                    $("html,body").animate({
+                        scrollTop: $("section[data-rel='" + $(this).attr("rel") + "']").offset().top
+                    }, 500);
+                })
+
             //}
         });
     </script>
