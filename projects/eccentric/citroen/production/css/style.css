@@ -1133,128 +1133,130 @@ input::-webkit-inner-spin-button {
           border-color: #9D0706; }
         .main-content-wrapper .col-2-3 .color-variant-wrapper ul li > img {
           width: 32px; }
-  .main-content-wrapper .col-1-3 h1 {
-    font-weight: 900;
-    font-size: 3rem;
-    line-height: 36px;
-    margin-bottom: 30px; }
-    .main-content-wrapper .col-1-3 h1 span {
-      font-family: 'citroenbold';
-      display: block;
-      font-size: 2.4rem;
-      line-height: 26px; }
-      .main-content-wrapper .col-1-3 h1 span a {
-        font-size: 1.6rem;
-        line-height: 21px;
-        color: #9D0605;
-        padding-left: 30px; }
-        .main-content-wrapper .col-1-3 h1 span a.change-model {
-          background: url("../images/icon-edit.svg") no-repeat 0 0; }
-        .main-content-wrapper .col-1-3 h1 span a.all-accessories {
-          background: url("../images/icon-new-window.svg") no-repeat 0 0;
-          margin-top: 17px;
-          opacity: 1;
-          -webkit-transition: 0.5s all ease;
-          -o-transition: 0.5s all ease;
-          transition: 0.5s all ease; }
-          .main-content-wrapper .col-1-3 h1 span a.all-accessories.hide-elem {
-            opacity: 0;
-            position: relative;
-            z-index: -1; }
-  .main-content-wrapper .col-1-3 .automobile-features-wrapper, .main-content-wrapper .col-1-3 .automobile-versions-wrapper {
-    max-width: 299px; }
-  .main-content-wrapper .col-1-3 .automobile-features-wrapper {
-    position: relative;
-    overflow: hidden;
+  .main-content-wrapper .col-1-3 {
     height: 100%; }
-    .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li {
-      margin-bottom: 20px;
-      cursor: pointer; }
-      .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li:last-child {
-        margin-bottom: 0; }
-      .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li span {
+    .main-content-wrapper .col-1-3 h1 {
+      font-weight: 900;
+      font-size: 3rem;
+      line-height: 36px;
+      margin-bottom: 30px; }
+      .main-content-wrapper .col-1-3 h1 span {
+        font-family: 'citroenbold';
+        display: block;
+        font-size: 2.4rem;
+        line-height: 26px; }
+        .main-content-wrapper .col-1-3 h1 span a {
+          font-size: 1.6rem;
+          line-height: 21px;
+          color: #9D0605;
+          padding-left: 30px; }
+          .main-content-wrapper .col-1-3 h1 span a.change-model {
+            background: url("../images/icon-edit.svg") no-repeat 0 0; }
+          .main-content-wrapper .col-1-3 h1 span a.all-accessories {
+            background: url("../images/icon-new-window.svg") no-repeat 0 0;
+            margin-top: 17px;
+            opacity: 1;
+            -webkit-transition: 0.5s all ease;
+            -o-transition: 0.5s all ease;
+            transition: 0.5s all ease; }
+            .main-content-wrapper .col-1-3 h1 span a.all-accessories.hide-elem {
+              opacity: 0;
+              position: relative;
+              z-index: -1; }
+    .main-content-wrapper .col-1-3 .automobile-features-wrapper, .main-content-wrapper .col-1-3 .automobile-versions-wrapper {
+      max-width: 299px; }
+    .main-content-wrapper .col-1-3 .automobile-features-wrapper {
+      position: relative;
+      overflow: hidden;
+      height: 100%; }
+      .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li {
+        margin-bottom: 20px;
+        cursor: pointer; }
+        .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li:last-child {
+          margin-bottom: 0; }
+        .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li span {
+          font-weight: 900;
+          font-size: 2rem;
+          line-height: 24px;
+          display: block;
+          width: 100%;
+          position: relative;
+          border-bottom: 1px solid #000;
+          padding-bottom: 8px; }
+          .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li span:after {
+            content: '';
+            position: absolute;
+            top: 40%;
+            right: 20px;
+            width: 7px;
+            height: 7px;
+            border-top: 1px solid #000;
+            border-right: 1px solid #000;
+            -webkit-transform: translateY(-50%) rotate(45deg);
+            -ms-transform: translateY(-50%) rotate(45deg);
+            transform: translateY(-50%) rotate(45deg);
+            -webkit-transition: 0.5s all ease;
+            -o-transition: 0.5s all ease;
+            transition: 0.5s all ease; }
+        .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li > ul {
+          background-color: #fff;
+          max-height: 180px;
+          overflow: auto;
+          display: none; }
+          .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li > ul > li {
+            margin-bottom: 0; }
+            .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li > ul > li span {
+              font-family: 'citroenregular';
+              font-weight: normal;
+              font-size: 1.6rem;
+              line-height: 20px;
+              border-color: #e7e7e7;
+              padding: 12px 10px 12px 5px;
+              width: 95%;
+              margin: 0 auto; }
+              .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li > ul > li span:after {
+                right: 15px; }
+            .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li > ul > li:last-child span {
+              border-color: transparent; }
+        .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li.accordion-open > span:after {
+          -webkit-transform: translateY(-50%) rotate(135deg);
+          -ms-transform: translateY(-50%) rotate(135deg);
+          transform: translateY(-50%) rotate(135deg); }
+    .main-content-wrapper .col-1-3 .automobile-versions-wrapper {
+      position: relative; }
+      .main-content-wrapper .col-1-3 .automobile-versions-wrapper > .heading {
+        font-family: 'citroenblack';
         font-weight: 900;
         font-size: 2rem;
         line-height: 24px;
-        display: block;
-        width: 100%;
-        position: relative;
-        border-bottom: 1px solid #000;
-        padding-bottom: 8px; }
-        .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li span:after {
-          content: '';
-          position: absolute;
-          top: 40%;
-          right: 20px;
-          width: 7px;
-          height: 7px;
-          border-top: 1px solid #000;
-          border-right: 1px solid #000;
-          -webkit-transform: translateY(-50%) rotate(45deg);
-          -ms-transform: translateY(-50%) rotate(45deg);
-          transform: translateY(-50%) rotate(45deg);
-          -webkit-transition: 0.5s all ease;
-          -o-transition: 0.5s all ease;
-          transition: 0.5s all ease; }
-      .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li > ul {
-        background-color: #fff;
-        max-height: 180px;
-        overflow: auto;
-        display: none; }
-        .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li > ul > li {
-          margin-bottom: 0; }
-          .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li > ul > li span {
-            font-family: 'citroenregular';
-            font-weight: normal;
-            font-size: 1.6rem;
-            line-height: 20px;
-            border-color: #e7e7e7;
-            padding: 12px 10px 12px 5px;
-            width: 95%;
-            margin: 0 auto; }
-            .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li > ul > li span:after {
-              right: 15px; }
-          .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li > ul > li:last-child span {
-            border-color: transparent; }
-      .main-content-wrapper .col-1-3 .automobile-features-wrapper ul li.accordion-open > span:after {
-        -webkit-transform: translateY(-50%) rotate(135deg);
-        -ms-transform: translateY(-50%) rotate(135deg);
-        transform: translateY(-50%) rotate(135deg); }
-  .main-content-wrapper .col-1-3 .automobile-versions-wrapper {
-    position: relative; }
-    .main-content-wrapper .col-1-3 .automobile-versions-wrapper > .heading {
-      font-family: 'citroenblack';
-      font-weight: 900;
-      font-size: 2rem;
-      line-height: 24px;
-      margin-bottom: 9px; }
-      .main-content-wrapper .col-1-3 .automobile-versions-wrapper > .heading .info {
-        font-family: 'citroenbold';
-        font-size: 1.6rem;
-        line-height: 18px;
-        color: #9D0605;
-        position: relative;
-        padding-left: 31px;
-        margin-left: 12px;
-        cursor: pointer; }
-        .main-content-wrapper .col-1-3 .automobile-versions-wrapper > .heading .info:before {
-          content: '';
-          position: absolute;
-          top: -2px;
-          left: 0;
-          background: url("../images/icon-info.svg") no-repeat 0 0;
-          width: 24px;
-          height: 24px; }
-    .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container {
-      height: 485px;
-      overflow-y: auto; }
-      .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li {
-        border: 1px solid #000;
-        border-left-color: transparent;
-        border-right-color: transparent;
-        border-bottom-color: transparent;
-        padding: 16px 20px;
-        height: 139px; }
+        margin-bottom: 9px; }
+        .main-content-wrapper .col-1-3 .automobile-versions-wrapper > .heading .info {
+          font-family: 'citroenbold';
+          font-size: 1.6rem;
+          line-height: 18px;
+          color: #9D0605;
+          position: relative;
+          padding-left: 31px;
+          margin-left: 12px;
+          cursor: pointer; }
+          .main-content-wrapper .col-1-3 .automobile-versions-wrapper > .heading .info:before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: 0;
+            background: url("../images/icon-info.svg") no-repeat 0 0;
+            width: 24px;
+            height: 24px; }
+      .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container {
+        height: 485px;
+        overflow-y: auto; }
+        .main-content-wrapper .col-1-3 .automobile-versions-wrapper .versions-container > li {
+          border: 1px solid #000;
+          border-left-color: transparent;
+          border-right-color: transparent;
+          border-bottom-color: transparent;
+          padding: 16px 20px;
+          height: 139px; }
   .main-content-wrapper .col-3-3 {
     height: 100%; }
     .main-content-wrapper .col-3-3 .background-option-wrapper .heading {

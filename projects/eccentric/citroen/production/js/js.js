@@ -111,6 +111,10 @@ $(function() {
             }
 
             if(!$("body").hasClass("tab-accessory-pack-content")) {
+                if(!$(".accordion-header").hasClass("accordion-open")) {
+                    $(".accordion-header").addClass("accordion-open");
+                }
+                
                 $(".accordion-content").slideDown();
                 $(".popup-all-accessories-visible .all-accessories-container li:visible").hide();
                 setTimeout(function() {
@@ -120,8 +124,10 @@ $(function() {
             }
             else {
                 console.log($(".accordion-header").hasClass("accordion-open"));
+                
                 if(!$(".accordion-header").hasClass("accordion-open")) {
-                    $(".accordion-content").slideUp();
+                    //$(".accordion-content").slideUp();
+                    $(".accordion-header").click();
                 }
 
                 setTimeout(function() {
