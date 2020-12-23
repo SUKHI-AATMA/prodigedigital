@@ -1,10 +1,12 @@
 /* import fonts */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
 
 
 /* resetting starts */
 html {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   letter-spacing: -0.40px;
@@ -274,7 +276,7 @@ th {
 
 /* common css starts */
 body {
-    font-family: 'Noto Sans';
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .full-width {
@@ -314,6 +316,10 @@ body {
     font-size: 4.8rem;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+.italic-text {
+  font-style: italic;
 }
 
 /* common css ends */
@@ -426,11 +432,17 @@ header > .container .navigation > ul > li > a {
     padding: 80px 0;
 }
 
+.about-vitamin-wrapper .col-12 > .col-12 {
+  overflow: hidden;
+}
+
 .about-vitamin-wrapper h2 {
     text-align: center;
     font-weight: bold;
     color: #6F2C91;
     text-transform: uppercase;
+    transform: translateY(100%);
+    transition: 0.5s all ease;
 }
 
 .about-vitamin-wrapper .col-md-6 {
@@ -440,8 +452,10 @@ header > .container .navigation > ul > li > a {
 .about-vitamin-wrapper .cloud-sun-wrapper {
     position: relative;
     padding-top: 70px;
-    transform: translateX(-100%);
+    /* transform: translateX(-100%); */
+    opacity: 0;
     transition: 0.5s all ease;
+    
 }
 
 .about-vitamin-wrapper .cloud-sun-wrapper .img-sun {
@@ -477,7 +491,7 @@ header > .container .navigation > ul > li > a {
 
 .about-vitamin-pros {
     margin-top: 106px;
-    transform: translateX(100%);
+    /* transform: translateX(100%); */
     transition: 0.5s all ease;
 }
 
@@ -497,11 +511,15 @@ header > .container .navigation > ul > li > a {
     color: #6F2C91;
     font-weight: bold;
     margin-bottom: 12px;
+    opacity: 0;
+    transition: 1.5s all ease;
 }
 
 .about-vitamin-pros > li .description {
     font-size: 2rem;
     color: #333333;
+    opacity: 0;
+    transition: 1.5s all ease;
 }
 
 .about-vitamin-pros > li .description > strong {
@@ -542,6 +560,10 @@ header > .container .navigation > ul > li > a {
     color: #fff;
 }
 
+.boost-immunity-wrapper .row > * {
+  overflow: hidden;
+}
+
 .boost-immunity-wrapper .col-md-7 {
     padding-right: 90px;
 }
@@ -550,6 +572,8 @@ header > .container .navigation > ul > li > a {
   width: fit-content;
   width: -moz-fit-content;
   max-width: 100%;
+  transform: translateX(150%);
+  transition: 0.5s all ease;
 }
 
 .boost-immunity-wrapper .heading {
@@ -558,6 +582,8 @@ header > .container .navigation > ul > li > a {
     line-height: 48px;
     margin-bottom: 24px;
     text-transform: uppercase;
+    transform: translateX(-100%);
+    transition: 0.5s all ease;
 }
 
 .boost-immunity-wrapper .col-md-7 .heading br {
@@ -567,6 +593,8 @@ header > .container .navigation > ul > li > a {
 .boost-immunity-wrapper .description {
     font-size: 2rem;
     margin-bottom: 16px;
+    transform: translateX(-100%);
+    transition: 0.5s all ease;
 }
 
 .boost-immunity-wrapper .description:last-child {
@@ -589,6 +617,25 @@ header > .container .navigation > ul > li > a {
   margin-bottom: 26px;
 }
 
+.word-of-wisdom-wrapper > .container > .row > .section-heading,
+.word-of-wisdom-wrapper > .container > .row > .description,
+.eat-well-wrapper > .container > .row > .section-heading,
+.eat-well-wrapper > .container > .row > .description,
+.benefits-of-vitamin-wrapper > .container > .row > .section-heading {
+  overflow: hidden;
+}
+
+.word-of-wisdom-wrapper > .container > .row > .section-heading > span,
+.word-of-wisdom-wrapper > .container > .row > .description > span,
+.eat-well-wrapper > .container > .row > .section-heading > span,
+.eat-well-wrapper > .container > .row > .description > span,
+.benefits-of-vitamin-wrapper > .container > .row > .section-heading > span {
+  display: block;
+  transform: translateY(100%);
+  transition: 0.5s all ease;
+}
+
+
 .word-of-wisdom-wrapper .wisdom-box-content-wrapper {
     padding: 0 102.5px;
 }
@@ -598,7 +645,17 @@ header > .container .navigation > ul > li > a {
     padding: 0 35px 41px 35px;
     position: relative;
     margin-top: 25px;
+    opacity: 0;
+    
 }
+
+/* .word-of-wisdom-wrapper .wisdom-box-content:nth-child(odd) {
+  transition: 0.5s all ease;
+}
+
+.word-of-wisdom-wrapper .wisdom-box-content:nth-child(even) {
+  transition: 1.5s all ease;
+} */
 
 .word-of-wisdom-wrapper .wisdom-box-content:first-child,
 .word-of-wisdom-wrapper .wisdom-box-content:nth-child(2) {
@@ -708,6 +765,9 @@ header > .container .navigation > ul > li > a {
 .eat-well-wrapper .eat-well-box-content {
     background-color: #FFF6EC;
     font-size: 2rem;
+    opacity: 0;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .eat-well-wrapper .eat-well-box-content .eat-well-food-description {
@@ -721,8 +781,8 @@ header > .container .navigation > ul > li > a {
     background-color: #F7941D;
     padding: 22px;
     text-align: center;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    /* border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; */
     color: #fff;
 }
 
@@ -734,9 +794,10 @@ header > .container .navigation > ul > li > a {
   content: '';
   height: 70px;
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
   background-size: contain !important;
+  transform: translateY(-50%);
 }
 
 .eat-well-wrapper .eat-well-box-content.food-cod-liver-oil .eat-well-food-description > p {
@@ -771,7 +832,7 @@ header > .container .navigation > ul > li > a {
 }
 
 .eat-well-wrapper .eat-well-box-content.food-sardines .eat-well-food-description > p:before {
-  width: 49px;
+  width: 69px;
   background: url('../images/food-sardines.png') no-repeat 0 0;
 }
 
@@ -822,6 +883,8 @@ header > .container .navigation > ul > li > a {
 .benefits-of-vitamin-wrapper .benefits-of-vitamin-details {
   padding: 0 160px;
   color: #333;
+  opacity: 0;
+  transition: 1s all ease;
 }
 
 .benefits-of-vitamin-wrapper .benefits-of-vitamin-details .box {
@@ -875,18 +938,117 @@ footer li {
   margin-left: 30px;
 }
 
+.contextual-pages .main-content-wrapper .container {
+  max-width: 984px;
+}
+
+.contextual-pages header {
+  margin-bottom: 80px;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row {
+  margin-bottom: 80px;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row h1 {
+  font-size: 4.8rem;
+  font-weight: bold;
+  color: #6F2C91;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 42px;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row h2 {
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #6F2C91;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row .heading {
+  font-size: 3.2rem;
+  font-weight: bold;
+  line-height: 42px;
+  color: #6F2C91;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row .heading,
+.contextual-pages .main-content-wrapper > .container > .row .description:not(:last-child),
+.contextual-pages .main-content-wrapper > .container > .row ol > li:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row .description.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row .description,
+.contextual-pages .main-content-wrapper > .container > .row ol {
+  font-size: 2rem;
+  color: #333333;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row ol {
+  margin-left: 50px;
+  margin-bottom: 0;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row ol > li {
+  list-style: decimal;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row .description a {
+  color: #00A99E;
+}
+
 /* animation for the section starts */
-.about-vitamin-wrapper.in-view .cloud-sun-wrapper,
+/* .about-vitamin-wrapper.in-view .cloud-sun-wrapper,
 .about-vitamin-wrapper.in-view .about-vitamin-pros {
   transform: translateX(0);
+} */
+
+.about-vitamin-wrapper.in-view h2 {
+  transform: translateY(0);
+}
+
+.about-vitamin-wrapper.in-view .cloud-sun-wrapper {
+  opacity: 1;
+}
+
+.boost-immunity-wrapper.in-view .heading,
+.boost-immunity-wrapper.in-view .description,
+.boost-immunity-wrapper.in-view .col-md-5 > img {
+  transform: translateX(0);
+}
+
+.word-of-wisdom-wrapper.in-view > .container > .row > .section-heading > span,
+.word-of-wisdom-wrapper.in-view > .container > .row > .description > span,
+.eat-well-wrapper.in-view > .container > .row > .section-heading > span,
+.eat-well-wrapper.in-view > .container > .row > .description > span,
+.benefits-of-vitamin-wrapper.in-view > .container > .row > .section-heading > span {
+  transform: translateY(0);
+}
+
+.benefits-of-vitamin-wrapper.in-view .benefits-of-vitamin-details {
+  opacity: 1;
+}
+
+.word-of-wisdom-wrapper.in-view .wisdom-box-content.in-view {
+  opacity: 1;
 }
 
 
 
 @keyframes moveCloud {
-  0%   {transform: translateX(0)}
-  50%  {transform: translateX(250%)}
-  100% {transform: translateX(0)}
+  0%   {transform: translateX(250%)}
+  100%  {transform: translateX(0%)}
 }
 
 @keyframes shineSun {
@@ -896,7 +1058,7 @@ footer li {
 }
 
 .about-vitamin-wrapper.in-view .cloud-sun-wrapper .img-cloud {
-  transform: translateX(0);
+  transform: translateX(0%);
   animation-name: moveCloud;
   animation-duration: 30s;
   animation-iteration-count: 1;
@@ -995,6 +1157,11 @@ footer li {
 @media only screen and (min-width: 768px) {
   .about-vitamin-wrapper.in-view .about-vitamin-pros > li.in-view:before {
     transform: scale(1);
+  }
+
+  .about-vitamin-wrapper.in-view .about-vitamin-pros > li.in-view .heading,
+  .about-vitamin-wrapper.in-view .about-vitamin-pros > li.in-view .description {
+    opacity: 1;
   }
 }
 
@@ -1360,10 +1527,10 @@ footer li {
     padding-bottom: 80px;
   }
 
-  .about-vitamin-wrapper .cloud-sun-wrapper,
+  /* .about-vitamin-wrapper .cloud-sun-wrapper,
   .about-vitamin-wrapper .about-vitamin-pros {
     transform: translateX(0);
-  }
+  } */
 
   .about-vitamin-wrapper .col-12 > .col-12 {
     order: 2;
@@ -1409,6 +1576,11 @@ footer li {
 
   .about-vitamin-wrapper.in-view .about-vitamin-pros > li.in-view:before {
     transform: scale(1) translateX(-50%);
+  }
+
+  .about-vitamin-wrapper.in-view .about-vitamin-pros > li.in-view .heading,
+  .about-vitamin-wrapper.in-view .about-vitamin-pros > li.in-view .description {
+    opacity: 1;
   }
 
   .boost-immunity-wrapper {

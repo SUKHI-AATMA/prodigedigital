@@ -1,0 +1,179 @@
+$(function() {
+    if($(window).width() >= 768) {
+        var what_is_vitamin = $(".what-is-vitamin").offset().top - 100;
+        var why_take_vitamin = $(".why-take-vitamin").offset().top - 100;
+        var how_do_we_get_vitamin = $(".how-do-we-get-vitamin").offset().top - 100;
+    }
+    else {
+        var what_is_vitamin = $(".what-is-vitamin").offset().top - 100;
+        var why_take_vitamin = $(".why-take-vitamin").offset().top - 100;
+        var how_do_we_get_vitamin = $(".how-do-we-get-vitamin").offset().top - 100;
+    }
+    var about_vitamin_wrapper = $(".about-vitamin-wrapper").offset().top - 100;
+    var boost_immunity_wrapper = $(".boost-immunity-wrapper").offset().top - 100;
+    var word_of_wisdom_wrapper = $(".word-of-wisdom-wrapper").offset().top - 100;
+    var eat_well_wrapper = $(".eat-well-wrapper").offset().top - 100;
+    var benefits_of_vitamin_wrapper = $(".benefits-of-vitamin-wrapper").offset().top - 100;
+    var scroll_ctr = 0;
+    var new_scroll_ctr = 0;
+    var paramTimeout = "";
+
+    if(window.scrollY > about_vitamin_wrapper) {
+        $(".about-vitamin-wrapper").addClass("in-view");
+        
+        $(".what-is-vitamin").addClass("in-view");
+
+        setTimeout(function() {
+            $(".why-take-vitamin").addClass("in-view");
+        }, 500);
+
+        setTimeout(function() {
+            $(".how-do-we-get-vitamin").addClass("in-view");
+        }, 800);
+    }
+
+    // if(window.scrollY > what_is_vitamin) {
+    //     $(".what-is-vitamin").addClass("in-view");
+    // }
+
+    // if(window.scrollY > why_take_vitamin) {
+    //     $(".why-take-vitamin").addClass("in-view");
+    // }
+
+    // if(window.scrollY > how_do_we_get_vitamin) {
+    //     $(".how-do-we-get-vitamin").addClass("in-view");
+    // }
+
+    if(window.scrollY > boost_immunity_wrapper) {
+        $(".boost-immunity-wrapper").addClass("in-view");
+    }
+
+    if(window.scrollY > word_of_wisdom_wrapper) {
+        $(".word-of-wisdom-wrapper").addClass("in-view");
+
+        $(".word-of-wisdom-wrapper .wisdom-box-content").eq(0).animate({"opacity": 1}, 500, function() {
+            $(".word-of-wisdom-wrapper .wisdom-box-content").eq(1).animate({"opacity": 1}, 500, function() {
+                $(".word-of-wisdom-wrapper .wisdom-box-content").eq(2).animate({"opacity": 1}, 500, function() {
+                    $(".word-of-wisdom-wrapper .wisdom-box-content").eq(3).animate({"opacity": 1}, 500);
+                });
+            });
+        });
+    }
+
+    if(window.scrollY > eat_well_wrapper) {
+        $(".eat-well-wrapper").addClass("in-view");
+
+        $(".eat-well-wrapper .eat-well-box-content").eq(0).animate({"opacity": 1}, 500, function() {
+            $(".eat-well-wrapper .eat-well-box-content").eq(1).animate({"opacity": 1}, 500, function() {
+                $(".eat-well-wrapper .eat-well-box-content").eq(2).animate({"opacity": 1}, 500, function() {
+                    $(".eat-well-wrapper .eat-well-box-content").eq(3).animate({"opacity": 1}, 500, function() {
+                        $(".eat-well-wrapper .eat-well-box-content").eq(4).animate({"opacity": 1}, 500, function() {
+                            $(".eat-well-wrapper .eat-well-box-content").eq(5).animate({"opacity": 1}, 500);
+                        });
+                    });
+                });
+            });
+        });
+    }
+
+    if(window.scrollY > benefits_of_vitamin_wrapper) {
+        $(".benefits-of-vitamin-wrapper").addClass("in-view");
+    }
+
+    $(document).on("scroll", function() {
+        /* display the respective sections on scroll when they come into view */
+        if(window.scrollY > about_vitamin_wrapper) {
+            $(".about-vitamin-wrapper").addClass("in-view");
+            
+            $(".what-is-vitamin").addClass("in-view");
+
+            setTimeout(function() {
+                $(".why-take-vitamin").addClass("in-view");
+            }, 500);
+
+            setTimeout(function() {
+                $(".how-do-we-get-vitamin").addClass("in-view");
+            }, 800);
+        }
+
+        // if(window.scrollY > why_take_vitamin) {
+        //     $(".why-take-vitamin").addClass("in-view");
+        // }
+
+        // if(window.scrollY > how_do_we_get_vitamin) {
+        //     $(".how-do-we-get-vitamin").addClass("in-view");
+        // }
+
+        if(window.scrollY > boost_immunity_wrapper) {
+            $(".boost-immunity-wrapper").addClass("in-view");
+        }
+
+        if(window.scrollY > word_of_wisdom_wrapper) {
+            $(".word-of-wisdom-wrapper").addClass("in-view");
+
+            $(".word-of-wisdom-wrapper .wisdom-box-content").eq(0).animate({"opacity": 1}, 500, function() {
+                $(".word-of-wisdom-wrapper .wisdom-box-content").eq(1).animate({"opacity": 1}, 500, function() {
+                    $(".word-of-wisdom-wrapper .wisdom-box-content").eq(2).animate({"opacity": 1}, 500, function() {
+                        $(".word-of-wisdom-wrapper .wisdom-box-content").eq(3).animate({"opacity": 1}, 500);
+                    });
+                });
+            });
+        }
+
+        if(window.scrollY > eat_well_wrapper) {
+            $(".eat-well-wrapper").addClass("in-view");
+
+            $(".eat-well-wrapper .eat-well-box-content").eq(0).animate({"opacity": 1}, 500, function() {
+                $(".eat-well-wrapper .eat-well-box-content").eq(1).animate({"opacity": 1}, 500, function() {
+                    $(".eat-well-wrapper .eat-well-box-content").eq(2).animate({"opacity": 1}, 500, function() {
+                        $(".eat-well-wrapper .eat-well-box-content").eq(3).animate({"opacity": 1}, 500, function() {
+                            $(".eat-well-wrapper .eat-well-box-content").eq(4).animate({"opacity": 1}, 500, function() {
+                                $(".eat-well-wrapper .eat-well-box-content").eq(5).animate({"opacity": 1}, 500);
+                            });
+                        });
+                    });
+                });
+            });
+        }
+
+        if(window.scrollY > benefits_of_vitamin_wrapper) {
+            $(".benefits-of-vitamin-wrapper").addClass("in-view");
+        }
+        /* display the respective sections on scroll when they come into view ends */
+
+        /* show sticky menu if open starts */
+        if(!$(".sticky-menu").hasClass("menu-visible")) {
+            $(".sticky-menu").addClass("menu-visible");
+        }
+
+        if($(".sticky-menu").hasClass("menu-open")) {
+            $(".sticky-menu > a").click();
+        }
+        /* show sticky menu if open ends */
+
+        /* hide sticky menu when scrolling is stopped */
+        scroll_ctr++;
+        new_scroll_ctr = scroll_ctr;
+        clearTimeout(paramTimeout);
+
+        if(scroll_ctr == new_scroll_ctr) {
+            paramTimeout = setTimeout(function() {
+                if(!$(".sticky-menu").hasClass("menu-open")) {
+                    $(".sticky-menu").removeClass("menu-visible");
+                }
+            }, 2000);
+        }
+        /* hide sticky menu when scrolling is stopped ends */
+    });
+
+    $(".sticky-menu > a").on("click", function() {
+        $(this).parent(".sticky-menu").toggleClass("menu-open");
+        
+    });
+
+    $(".sticky-menu > nav a").on("click", function() {
+        $("html,body").animate({
+            scrollTop: $("section[data-rel='" + $(this).attr("rel") + "']").offset().top
+        }, 500);
+    });
+});
