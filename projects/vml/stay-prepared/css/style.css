@@ -1044,7 +1044,21 @@ footer li {
   opacity: 1;
 }
 
+.faq-wrapper > .row {
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0;
+  font-size: 2.4rem;
+  color: #333;
+  line-height: 42px;
+}
 
+.faq-wrapper > .row > .question {
+  position: relative;
+}
+
+.faq-wrapper > .row > .question:after {
+  content: '';
+}
 
 @keyframes moveCloud {
   0%   {transform: translateX(250%)}
