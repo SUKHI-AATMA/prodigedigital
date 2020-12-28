@@ -944,6 +944,18 @@ footer li {
 
 .contextual-pages header {
   margin-bottom: 80px;
+  box-shadow: 0 5px 13px -1px #1B181B26;
+}
+
+.contextual-pages header .navigation > .link-button {
+  font-size: 1.6rem;
+  line-height: 42px;
+  border: none;
+  padding: 0;
+}
+
+.contextual-pages header .navigation > .link-button:not(:first-child) {
+  margin-left: 48px;
 }
 
 .contextual-pages .main-content-wrapper > .container > .row {
@@ -957,6 +969,11 @@ footer li {
   text-align: center;
   text-transform: uppercase;
   line-height: 42px;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row h1 > span {
+  text-transform: none;
+  font-size: 4rem;
 }
 
 .contextual-pages .main-content-wrapper > .container > .row h2 {
@@ -1046,18 +1063,87 @@ footer li {
 
 .faq-wrapper > .row {
   border-bottom: 1px solid #ccc;
-  padding: 15px 0;
+  padding: 20px 0;
   font-size: 2.4rem;
   color: #333;
   line-height: 42px;
 }
 
-.faq-wrapper > .row > .question {
-  position: relative;
+.faq-wrapper > .row.toggle-expand > a {
+  color: #00A99E;
+  font-size: 2rem;
+  line-height: 28px;
+  text-align: right;
+  padding-right: 30px;
 }
 
-.faq-wrapper > .row > .question:after {
+.faq-wrapper > .row.toggle-expand > a > span[data-rel=collapse-all] {
+  display: none;
+}
+
+.faq-wrapper > .row.toggle-expand > a,
+.faq-wrapper > .row > .question {
+  position: relative;
+  cursor: pointer;
+}
+
+.faq-wrapper > .row > .question {
+  width: 100%;
+}
+
+.faq-wrapper > .row.toggle-expand > a > span:last-child,
+.faq-wrapper > .row > .question > span {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  transform: translateY(-50%);
+}
+
+.faq-wrapper > .row.toggle-expand > a > span:last-child:before,
+.faq-wrapper > .row.toggle-expand > a > span:last-child:after,
+.faq-wrapper > .row > .question > span:before,
+.faq-wrapper > .row > .question > span:after {
   content: '';
+  position: absolute;
+  background-color: #00A99E;
+  transition: 0.5s all ease;
+}
+
+.faq-wrapper > .row.toggle-expand > a > span:last-child:after,
+.faq-wrapper > .row > .question > span:after {
+  width: 2px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+}
+
+.faq-wrapper > .row.toggle-expand > a > span:last-child:before,
+.faq-wrapper > .row > .question > span:before {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.faq-wrapper > .row.toggle-expand.toggle-open > a > span[data-rel=collapse-all] {
+  display: block;
+}
+
+.faq-wrapper > .row.toggle-expand.toggle-open > a > span[data-rel=expand-all] {
+  display: none;
+}
+
+.faq-wrapper > .row.toggle-expand.toggle-open > a > span:last-child:after,
+.faq-wrapper > .row > .question.toggle-open > span:after {
+  transform: translateX(-50%) rotate(90deg);
+}
+
+.faq-wrapper > .row > .answer {
+  display: none;
 }
 
 @keyframes moveCloud {
