@@ -169,7 +169,7 @@ $(function() {
     }
 
     
-
+    /* show/hide sticky menu on homepage starts */
     $(".sticky-menu > a").on("click", function() {
         $(this).parent(".sticky-menu").toggleClass("menu-open");
         
@@ -180,6 +180,7 @@ $(function() {
             scrollTop: $("section[data-rel='" + $(this).attr("rel") + "']").offset().top
         }, 500);
     });
+    /* show/hide sticky menu on homepage ends */
 
     /* expand-collapse of FAQ's starts */
     $(".faq-wrapper > .row > .question").on("click", function() {
@@ -208,4 +209,10 @@ $(function() {
         
     });
     /* expand-collapse of FAQ's ends */
+
+    /* show/hide menu on contextual pages starts */
+    $("header .hamburger-menu").on("click", function() {
+        $("body").toggleClass("menu-open");
+    });
+    /* show/hide menu on contextual pages ends */
 });

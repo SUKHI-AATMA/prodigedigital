@@ -5,6 +5,10 @@
 
 
 /* resetting starts */
+html, body {
+  overflow-x: hidden;
+}
+
 html {
   font-family: 'Noto Sans', sans-serif;
   -ms-text-size-adjust: 100%;
@@ -932,6 +936,7 @@ footer {
 
 footer .row > * {
   width: auto;
+  text-align: center;
 }
 
 footer li {
@@ -977,7 +982,7 @@ footer li {
 
 .contextual-pages .main-content-wrapper > .container > .row h1 > span {
   text-transform: none;
-  font-size: 4rem;
+  font-size: 1em;
 }
 
 .contextual-pages .main-content-wrapper > .container > .row h2 {
@@ -1017,7 +1022,7 @@ footer li {
 }
 
 .contextual-pages .main-content-wrapper > .container > .row ol {
-  margin-left: 50px;
+  padding-left: 50px;
   margin-bottom: 0;
 }
 
@@ -1066,7 +1071,7 @@ footer li {
 }
 
 .faq-wrapper > .row {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #707070;
   padding: 20px 0;
   font-size: 2.4rem;
   color: #333;
@@ -1093,6 +1098,7 @@ footer li {
 
 .faq-wrapper > .row > .question {
   width: 100%;
+  padding-right: 20px;
 }
 
 .faq-wrapper > .row.toggle-expand > a > span:last-child,
@@ -1553,9 +1559,161 @@ footer li {
     top: 25px;
     right: 0;
   }
+
+  .contextual-pages .main-content-wrapper .container {
+    max-width: 590px;
+    padding: 0 24px;
+  }
+
+  .contextual-pages .main-content-wrapper > .container > .row,
+  .contextual-pages .main-content-wrapper > .container > .row .heading,
+  .contextual-pages .main-content-wrapper > .container > .row .description:not(:last-child),
+  .contextual-pages .main-content-wrapper > .container > .row ol > li:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  .contextual-pages .main-content-wrapper > .container > .row h1 {
+    font-size: 3.2rem;
+    line-height: 42px;
+    margin-bottom: 40px;
+  }
+
+  .contextual-pages .main-content-wrapper > .container > .row .heading {
+    font-size: 2.4rem;
+    line-height: 42px;
+  }
+
+  .contextual-pages .main-content-wrapper > .container > .row .description,
+  .contextual-pages .main-content-wrapper > .container > .row ol {
+    font-size: 1.6rem;
+    line-height: 22px;
+  }
+
+  .contextual-pages .main-content-wrapper > .container > .row h2 {
+    font-size: 2.8rem;
+  }
+
+  .contextual-pages header > .container .navigation {
+    display: block;
+    position: fixed;
+    left: 100%;
+    top: 0;
+    padding: 60px 30px 30px 30px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: 0.5s all ease;
+  }
+
+  .menu-open {
+    overflow: hidden;
+  }
+
+  .menu-open.contextual-pages header {
+    z-index: 3;
+  }
+
+  .menu-open.contextual-pages header .hamburger-menu > span {
+    border-color: transparent;
+  }
+
+  .menu-open.contextual-pages header .hamburger-menu > span:before {
+    transform: translateY(-52%) rotate(45deg);
+  }
+
+  .menu-open.contextual-pages header .hamburger-menu > span:after {
+    transform: translateY(-12px) rotate(-47deg);
+  }
+  
+  .menu-open.contextual-pages header > .container .navigation {
+    left: 0;
+  }
+
+  .contextual-pages header .hamburger-menu {
+    display: block;
+    position: relative;
+    width: 34px;
+    height: 25px;
+  }
+
+  .contextual-pages header .hamburger-menu > span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 3px solid #6F2C91;
+    transition: 0.5s all ease;
+  }
+
+  .contextual-pages header .hamburger-menu > span:before,
+  .contextual-pages header .hamburger-menu > span:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #6F2C91;
+    border-radius: 10px;
+    transition: 0.5s all ease;
+  }
+
+  .contextual-pages header .hamburger-menu > span:before {
+    top: 50%;
+    transform: translateY(-52%) rotate(0deg);
+  }
+
+  .contextual-pages header .hamburger-menu > span:after {
+    top: 100%;
+    transform: translateY(0) rotate(0deg);
+  }
+
+  .contextual-pages header .container .row > :first-child ~ div {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .contextual-pages header .navigation > .link-button {
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .contextual-pages header .container .row > *:first-child {
+    width: 64%;
+  }
+
+  .contextual-pages header .container .row > *:first-child ~ div {
+    width: 36%;
+  }
+
+  .contextual-pages header .container {
+    padding: 33px 21px 33px 24px;
+  }
+
+  .contextual-pages header {
+    margin-bottom: 64px;
+  }
+
+  .contextual-pages .main-content-wrapper > .container > .row h1 {
+    line-height: 36px;
+  }
+
+  .contextual-pages .main-content-wrapper > .container > .row .heading {
+    line-height: 30px;
+  }
+
+  footer {
+    font-size: 1.6rem;
+  }
+
 }
 
 @media only screen and (max-width: 640px) {
+  
+
+
+
+
   .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 100%;
     padding: 0 28px;
@@ -1588,9 +1746,7 @@ footer li {
     max-width: 100%;
   }
 
-  .contextual-pages header > .container .navigation {
-    display: none;
-  }
+  
 
   .link-button {
     padding-left: 18px;
@@ -1613,10 +1769,10 @@ footer li {
     font-weight: bold;
   }
 
-  .contextual-pages header .hamburger-menu {
+  /* .contextual-pages header .hamburger-menu {
     display: block;
     position: relative;
-    width: 25px;
+    width: 34px;
     height: 25px;
   }
 
@@ -1626,25 +1782,36 @@ footer li {
     right: 0;
     width: 100%;
     height: 100%;
-    border-top: 2px solid #6F2C91;
-    border-bottom: 2px solid #6F2C91;
+    border-top: 3px solid #6F2C91;
+    transition: 0.5s all ease;
+  }
+
+  .contextual-pages header .hamburger-menu > span:before,
+  .contextual-pages header .hamburger-menu > span:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #6F2C91;
+    border-radius: 10px;
+    transition: 0.5s all ease;
   }
 
   .contextual-pages header .hamburger-menu > span:before {
-    content: '';
-    position: absolute;
     top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 100%;
-    height: 2px;
-    background-color: #6F2C91;
+    transform: translateY(-52%) rotate(0deg);
+  }
+
+  .contextual-pages header .hamburger-menu > span:after {
+    top: 100%;
+    transform: translateY(0) rotate(0deg);
   }
 
   .contextual-pages header .container .row > :first-child ~ div {
     display: flex;
     justify-content: flex-end;
-  }
+  } */
 
   .banner-wrapper .container {
     padding-left: 0;
@@ -1773,6 +1940,10 @@ footer li {
     padding-bottom: 24px;
   }
 
+  .eat-well-wrapper .eat-well-box-content .eat-well-food-description {
+    height: auto;
+  }
+
   .eat-well-wrapper .disclaimer {
     font-size: 1.4rem;
   }
@@ -1811,7 +1982,93 @@ footer li {
     width: -moz-fit-content;
     max-width: 100%;
   }
+
+
+  /* .contextual-pages header > .container .navigation {
+    display: block;
+    position: fixed;
+    left: 100%;
+    top: 0;
+    padding: 60px 30px 30px 30px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: 0.5s all ease;
+  }
+
+  .menu-open {
+    overflow: hidden;
+  }
+
+  .menu-open.contextual-pages header {
+    z-index: 3;
+  }
+
+  .menu-open.contextual-pages header .hamburger-menu > span {
+    border-color: transparent;
+  }
+
+  .menu-open.contextual-pages header .hamburger-menu > span:before {
+    transform: translateY(-52%) rotate(45deg);
+  }
+
+  .menu-open.contextual-pages header .hamburger-menu > span:after {
+    transform: translateY(-12px) rotate(-47deg);
+  }
   
+  .menu-open.contextual-pages header > .container .navigation {
+    left: 0;
+  }
+
+  .contextual-pages header .navigation > .link-button {
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .contextual-pages header .container .row > *:first-child {
+    width: 64%;
+  }
+
+  .contextual-pages header .container .row > *:first-child ~ div {
+    width: 36%;
+  }
+
+  .contextual-pages header .container {
+    padding: 33px 21px 33px 24px;
+  }
+
+  .contextual-pages header {
+    margin-bottom: 64px;
+  }
+
+  .contextual-pages .main-content-wrapper > .container > .row h1 {
+    line-height: 36px;
+  }
+
+  .contextual-pages .main-content-wrapper > .container > .row .heading {
+    line-height: 30px;
+  } */
+
+  
+
+  .faq-wrapper > .row {
+    font-size: 1.6rem;
+    line-height: 28px;
+  }
+
+  .faq-wrapper > .row.toggle-expand > a > span:last-child,
+  .faq-wrapper > .row > .question > span {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .faq-page .our-partners-wrapper {
+    margin-top: 62px;
+  }
+
+  footer li:first-child {
+    margin-left: 0;
+  }
 }
 
 /* Media CSS ends */
