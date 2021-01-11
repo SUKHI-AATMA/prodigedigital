@@ -14,6 +14,11 @@
     -webkit-text-size-adjust: none;
     -webkit-appearance: none;
     // @include transition(.3s ease-in-out);
+
+
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
 h1,h2,h3,h4,h5,a,p,span,input,button{
@@ -76,6 +81,10 @@ h1,h2,h3,h4,h5,a,p,span,input,button{
 //     background-color: #fff;
 // }
 
+
+html{
+    scroll-behavior: smooth;
+}
 
 body {
     position: relative;
