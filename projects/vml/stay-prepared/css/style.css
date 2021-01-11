@@ -318,7 +318,7 @@ body {
 
 .section-heading {
     font-size: 4.8rem;
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
@@ -352,6 +352,7 @@ header > .container .logo > img {
 
 header > .container .navigation {
     font-size: 1.6rem;
+    font-weight: 700;
     height: fit-content;
     height: -moz-fit-content;
     justify-content: flex-end;
@@ -359,9 +360,10 @@ header > .container .navigation {
 }
 
 header > .container .navigation > ul {
-    margin-right: 38px;
+    margin-right: 44px;
     height: fit-content;
     height: -moz-fit-content;
+    padding-left: 0;
 }
 
 header > .container .navigation > ul > li:not(:first-child) {
@@ -385,11 +387,8 @@ header > .container .navigation > ul > li > a {
 }
 
 .link-button {
-    border: 2px solid #6F2C91;
-    border-radius: 10px;
-    font-size: 1.4rem;
-    font-weight: bold;
-    padding: 8px 25px;
+    font-size: 1.6rem;
+    font-weight: 700;
     color: #6F2C91;
 }
 
@@ -411,25 +410,28 @@ header > .container .navigation > ul > li > a {
 .banner-wrapper .banner-content {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    left: 0;
+    transform: translateY(-50%);
     color: #fff;
+    padding-left: 128px;
 }
 
 .banner-wrapper .banner-content .description {
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 31px;
+    line-height: 28px;
 }
 
 .banner-wrapper .banner-content .cta-watch-video {
     font-size: 2.8rem;
-    font-weight: bold;
+    font-weight: 700;
     color: #fff;
     text-transform: uppercase;
     background: url(../images/play-button.svg) no-repeat 100% 50%;
     padding-right: 44px;
-    
+    width: fit-content;
+    width: -moz-fit-content;
+    line-height: 38px;
 }
 
 .about-vitamin-wrapper {
@@ -442,7 +444,7 @@ header > .container .navigation > ul > li > a {
 
 .about-vitamin-wrapper h2 {
     text-align: center;
-    font-weight: bold;
+    font-weight: 700;
     color: #6F2C91;
     text-transform: uppercase;
     transform: translateY(100%);
@@ -513,7 +515,8 @@ header > .container .navigation > ul > li > a {
 .about-vitamin-pros > li .heading {
     font-size: 3.2rem;
     color: #6F2C91;
-    font-weight: bold;
+    font-weight: 700;
+    line-height: 42px;
     margin-bottom: 12px;
     opacity: 0;
     transition: 1.5s all ease;
@@ -522,12 +525,13 @@ header > .container .navigation > ul > li > a {
 .about-vitamin-pros > li .description {
     font-size: 2rem;
     color: #333333;
+    line-height: 28px;
     opacity: 0;
     transition: 1.5s all ease;
 }
 
 .about-vitamin-pros > li .description > strong {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .about-vitamin-pros > li:before {
@@ -541,7 +545,13 @@ header > .container .navigation > ul > li > a {
     transform: scale(0);
 }
 
+.about-vitamin-pros > li.what-is-vitamin {
+  padding-right: 74px;
+}
 
+.about-vitamin-pros > li.how-do-we-get-vitamin {
+  padding-right: 30px;
+}
 
 .about-vitamin-pros > li.what-is-vitamin:before {
     background: url('../images/icon-what-is-vitamin.svg') no-repeat 0 0;
@@ -582,7 +592,7 @@ header > .container .navigation > ul > li > a {
 
 .boost-immunity-wrapper .heading {
     font-size: 4rem;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 48px;
     margin-bottom: 24px;
     text-transform: uppercase;
@@ -619,6 +629,7 @@ header > .container .navigation > ul > li > a {
   font-size: 2rem;
   color: #333333;
   margin-bottom: 26px;
+  line-height: 28px;
 }
 
 .word-of-wisdom-wrapper > .container > .row > .section-heading,
@@ -698,7 +709,7 @@ header > .container .navigation > ul > li > a {
 .word-of-wisdom-wrapper .wisdom-box-content .person-name {
     font-size: 2.4rem;
     color: #00A99E;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .word-of-wisdom-wrapper .wisdom-box-content .heading {
@@ -710,20 +721,20 @@ header > .container .navigation > ul > li > a {
     width: -moz-fit-content;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 8px 0 39px;
+    padding: 0 8px;
 }
 
 .word-of-wisdom-wrapper .wisdom-box-content .heading:before,
 .word-of-wisdom-wrapper .wisdom-box-content .heading:after {
     content: '';
     position: absolute;
-    left: 0;
     background: url('../images/quote.svg') no-repeat 0 0;
     width: 31px;
     height: 26px;
 }
 
 .word-of-wisdom-wrapper .wisdom-box-content .heading:before {
+    right: 100%;
     top: 0;
 }
 
@@ -758,10 +769,24 @@ header > .container .navigation > ul > li > a {
     font-size: 2rem;
 }
 
+.eat-well-wrapper .row:not(.section-header) {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 16px;
+  width: fit-content;
+  width: -moz-fit-content;
+  margin: 0 auto;
+}
+
+.eat-well-wrapper .row:last-child {
+  width: 1184px;
+}
+
 .eat-well-wrapper .col-lg-4,
 .eat-well-wrapper .col-md-6 {
-  padding-left: 16px;
+  /* padding-left: 16px; */
   padding-bottom: 16px;
+  width: 384px;
 }
 
 
@@ -774,11 +799,16 @@ header > .container .navigation > ul > li > a {
     overflow: hidden;
 }
 
+.eat-well-wrapper .eat-well-box-content > div {
+  display: flex;
+  align-items: center;
+}
+
 .eat-well-wrapper .eat-well-box-content .eat-well-food-description {
-    padding: 43px 44px;
+    padding: 39px 45px;
     color: #333;
     text-align: left;
-    height: 176px;
+    height: 156px;
 }
 
 .eat-well-wrapper .eat-well-box-content .eat-well-food-details {
@@ -790,8 +820,13 @@ header > .container .navigation > ul > li > a {
     color: #fff;
 }
 
+.eat-well-wrapper .eat-well-box-content .eat-well-food-details > p {
+  margin: 0 auto;
+}
+
 .eat-well-wrapper .eat-well-box-content .eat-well-food-description > p {
     position: relative;
+    line-height: 26px;
 }
 
 .eat-well-wrapper .eat-well-box-content .eat-well-food-description > p:before {
@@ -904,7 +939,7 @@ header > .container .navigation > ul > li > a {
 .benefits-of-vitamin-wrapper .benefits-of-vitamin-details .box .col-md-9 .heading {
   font-size: 3.2rem;
   margin-bottom: 16px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 40px;
 }
 
@@ -923,8 +958,15 @@ header > .container .navigation > ul > li > a {
   margin-left: 77px;
 }
 
+.our-partners-wrapper .row > * > img {
+  width: fit-content;
+  width: -moz-fit-content;
+  max-width: 100%;
+}
+
 .our-partners-wrapper .row > *:first-child {
   margin-left: 0;
+  width: 246px;
 }
 
 footer {
@@ -964,7 +1006,7 @@ footer li {
 }
 
 .contextual-pages header .navigation > .link-button:not(:first-child) {
-  margin-left: 48px;
+  margin-left: 41px;
 }
 
 .contextual-pages .main-content-wrapper > .container > .row {
@@ -973,7 +1015,7 @@ footer li {
 
 .contextual-pages .main-content-wrapper > .container > .row h1 {
   font-size: 4.8rem;
-  font-weight: bold;
+  font-weight: 700;
   color: #6F2C91;
   text-align: center;
   text-transform: uppercase;
@@ -987,7 +1029,7 @@ footer li {
 
 .contextual-pages .main-content-wrapper > .container > .row h2 {
   font-size: 3.2rem;
-  font-weight: bold;
+  font-weight: 700;
   color: #6F2C91;
   text-align: center;
   text-transform: uppercase;
@@ -1000,15 +1042,19 @@ footer li {
 
 .contextual-pages .main-content-wrapper > .container > .row .heading {
   font-size: 3.2rem;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 42px;
   color: #6F2C91;
 }
 
-.contextual-pages .main-content-wrapper > .container > .row .heading,
+.contextual-pages .main-content-wrapper > .container > .row .heading
+{
+  margin-bottom: 32px;
+}
+
 .contextual-pages .main-content-wrapper > .container > .row .description:not(:last-child),
 .contextual-pages .main-content-wrapper > .container > .row ol > li:not(:last-child) {
-  margin-bottom: 32px;
+  margin-bottom: 25px;
 }
 
 .contextual-pages .main-content-wrapper > .container > .row .description.no-margin-bottom {
@@ -1019,6 +1065,7 @@ footer li {
 .contextual-pages .main-content-wrapper > .container > .row ol {
   font-size: 2rem;
   color: #333333;
+  line-height: 28px;
 }
 
 .contextual-pages .main-content-wrapper > .container > .row ol {
@@ -1080,10 +1127,14 @@ footer li {
 
 .faq-wrapper > .row.toggle-expand > a {
   color: #00A99E;
-  font-size: 2rem;
-  line-height: 28px;
   text-align: right;
   padding-right: 30px;
+}
+
+.faq-wrapper > .row.toggle-expand > a,
+.faq-wrapper > .row > .answer {
+  font-size: 2rem;
+  line-height: 28px;
 }
 
 .faq-wrapper > .row.toggle-expand > a > span[data-rel=collapse-all] {
@@ -1099,6 +1150,7 @@ footer li {
 .faq-wrapper > .row > .question {
   width: 100%;
   padding-right: 20px;
+  font-weight: 700;
 }
 
 .faq-wrapper > .row.toggle-expand > a > span:last-child,
@@ -1123,17 +1175,17 @@ footer li {
 
 .faq-wrapper > .row.toggle-expand > a > span:last-child:after,
 .faq-wrapper > .row > .question > span:after {
-  width: 2px;
+  width: 3px;
   height: 100%;
   top: 0;
   left: 50%;
-  transform: translateX(-50%) rotate(0deg);
+  transform: translateX(-60%) rotate(0deg);
 }
 
 .faq-wrapper > .row.toggle-expand > a > span:last-child:before,
 .faq-wrapper > .row > .question > span:before {
   width: 100%;
-  height: 2px;
+  height: 3px;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
@@ -1154,6 +1206,17 @@ footer li {
 
 .faq-wrapper > .row > .answer {
   display: none;
+  padding-right: 100px;
+  padding-top: 13px;
+}
+
+.faq-wrapper > .row > .answer li {
+  list-style-type: disc;
+  margin-bottom: 20px;
+}
+
+.faq-wrapper > .row > .answer li:last-child {
+  margin-bottom: 0;
 }
 
 @keyframes moveCloud {
@@ -1207,7 +1270,7 @@ footer li {
 
 .sticky-menu > nav > .heading {
   font-size: 1.4rem;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: capitalize;
 }
 
@@ -1259,9 +1322,9 @@ footer li {
 
 /* Media CSS starts */
 @media only screen and (min-width: 1024px) {
-  .eat-well-wrapper .col-lg-4:nth-child(3n+1) {
+  /* .eat-well-wrapper .col-lg-4:nth-child(3n+1) {
     padding-left: 0;
-  }
+  } */
 }
 
 @media only screen and (min-width: 768px) {
@@ -1284,6 +1347,10 @@ footer li {
 }
 
 @media only screen and (max-width: 768px) {
+  .for-desktop {
+    display: none;
+  }
+
   .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 684px;
   }
@@ -1766,7 +1833,7 @@ footer li {
     padding: 10px;
     justify-content: center;
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 700;
   }
 
   /* .contextual-pages header .hamburger-menu {
