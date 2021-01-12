@@ -2321,17 +2321,24 @@ header .hamburger-menu {
     line-height: 30px;
   } */
 
-  
+  /* .contextual-pages .main-content-wrapper > .container > .row h1 {
+    margin-bottom: 0;
+  } */
 
   .faq-wrapper > .row {
-    font-size: 1.6rem;
-    line-height: 28px;
+    font-size: 2rem;
+    line-height: 26px;
   }
 
-  .faq-wrapper > .row.toggle-expand > a > span:last-child,
-  .faq-wrapper > .row > .question > span {
-    width: 10px;
-    height: 10px;
+  .faq-wrapper > .row > .answer {
+    padding-right: 0;
+    padding-top: 22px;
+  }
+
+  .faq-wrapper > .row.toggle-expand > a,
+  .faq-wrapper > .row > .answer {
+    font-size: 1.6rem;
+    line-height: 22px;
   }
   
   .faq-page .our-partners-wrapper {
