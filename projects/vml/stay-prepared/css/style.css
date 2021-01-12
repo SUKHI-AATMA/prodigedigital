@@ -347,10 +347,15 @@ header > .container {
 }
 
 header > .container .logo, 
-header > .container .logo > img {
+header > .container .logo img {
   width: fit-content;
   width: -moz-fit-content;
   max-width: 100%;
+}
+
+header > .container .logo img {
+  transform: translateY(0);
+  transition: 0.4s transform ease;
 }
 
 header > .container .navigation,
@@ -1596,6 +1601,10 @@ header .hamburger-menu {
     padding-left: 57px;
   }
 
+  .eat-well-wrapper .row:last-child {
+    width: 100%;
+  }
+
   .eat-well-wrapper .disclaimer {
     font-size: 1.2rem;
   }
@@ -1620,6 +1629,7 @@ header .hamburger-menu {
     width: fit-content;
     width: -moz-fit-content;
     max-width: 100%;
+    margin: 0 auto;
   }
 
   .benefits-of-vitamin-wrapper .benefits-of-vitamin-details .box .col-md-9 .heading {
@@ -1711,11 +1721,14 @@ header .hamburger-menu {
     left: 0;
   }
 
+  
+
   header .hamburger-menu {
     display: block;
     position: relative;
     width: 34px;
     height: 25px;
+    
   }
 
   header .hamburger-menu > span {
@@ -1801,6 +1814,37 @@ header .hamburger-menu {
     justify-content: center;
   }
 
+  header .navigation > .link-button {
+    position: relative;
+  }
+
+  header .navigation > .link-button:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #6F2C91;
+    border-right: 2px solid #6F2C91;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  
+  header .navigation > .link-button:not(:only-child) {
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+  }
+
+  header .navigation > .link-button:last-child {
+    border-bottom-color: transparent;
+  }
+
+  header .navigation > .link-button {
+    font-size: 2rem !important;
+    line-height: 26px !important;
+    padding-right: 80px !important;
+  }
+
   .banner-wrapper .banner-content {
     text-align: center;
     padding-left: 0;
@@ -1843,6 +1887,7 @@ header .hamburger-menu {
 
   .eat-well-wrapper .eat-well-box-content.food-milk .eat-well-food-description > p {
     padding-right: 50px;
+    line-height: 22px;
   }
 
   .eat-well-wrapper .eat-well-box-content.food-cod-liver-oil .eat-well-food-description > p:before {
@@ -1871,15 +1916,24 @@ header .hamburger-menu {
     height: 57px;
   }
 
+  .eat-well-wrapper .section-header > .section-heading {
+    font-size: 3.8rem;
+    line-height: 44px;
+  }
+
+  .eat-well-wrapper .eat-well-box-content .eat-well-food-details {
+    padding: 16px;
+  }
+
 
 
   .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 100%;
-    padding: 0 28px;
+    padding: 0 24px;
   }
 
   header > .container {
-    padding: 24px 33px 75px 24px;
+    padding: 33px 21px 85px 24px;
   }
 
   header .container .row > *:first-child {
@@ -1896,6 +1950,7 @@ header .hamburger-menu {
   }
 
   header > .container .navigation {
+    padding-top: 180px;
     transform: none;
   }
 
@@ -1906,10 +1961,11 @@ header .hamburger-menu {
   }
 
   .link-button {
-    padding-left: 18px;
-    padding-right: 18px;
-    line-height: 15px;
+    /* padding-left: 18px;
+    padding-right: 18px; */
+    line-height: 26px;
     width: min-content;
+    font-size: 2rem;
   }
 
   header > .container .navigation ~ ul {
@@ -1920,10 +1976,27 @@ header .hamburger-menu {
     left: 0;
     padding-left: 0;
     background-color: #ccc;
-    padding: 10px;
+    padding: 15px 10px;
     justify-content: center;
     font-size: 1.5rem;
     font-weight: 700;
+    opacity: 1;
+    transition: 0.2s all ease;
+  }
+
+  .menu-open header > .container .navigation ~ ul {
+    opacity: 0;
+  }
+
+  .menu-open header > .container .logo img {
+    width: 250px;
+    transform: translateY(60px);
+    max-width: none;
+  }
+
+  .menu-open header .container .row > :first-child {
+    position: relative;
+    z-index: 1;
   }
 
   /* .contextual-pages header .hamburger-menu {
@@ -2032,15 +2105,15 @@ header .hamburger-menu {
 
   .about-vitamin-pros > li {
     padding-left: 0;
-    padding-top: 150px;
+    padding-top: 206px;
     text-align: center;
     margin-top: -12%;
     margin-bottom: 10px;
   }
 
   .about-vitamin-pros > li:before {
-    width: 150px;
-    height: 150px;
+    width: 206px;
+    height: 206px;
     left: 50%;
     top: 12%;
     transform: scale(0) translateX(-50%);
@@ -2092,7 +2165,15 @@ header .hamburger-menu {
 
   .boost-immunity-wrapper .col-md-5 > img {
     margin: 0 auto;
-    max-width: 70%;
+    max-width: 100%;
+  }
+
+  .word-of-wisdom-wrapper > .container > .row > .section-heading {
+    margin-bottom: 16px;
+  }
+
+  .word-of-wisdom-wrapper > .container > .row > .description {
+    line-height: 22px;
   }
 
   .word-of-wisdom-wrapper .wisdom-box-content {
@@ -2116,11 +2197,22 @@ header .hamburger-menu {
   }
 
   .eat-well-wrapper .eat-well-box-content .eat-well-food-description {
-    height: auto;
+    padding: 24px 27px;
+    height: 114px;
   }
 
   .eat-well-wrapper .disclaimer {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+  }
+
+  .benefits-of-vitamin-wrapper .section-heading {
+    font-size: 2.8rem;
+    line-height: 36px;
+    padding: 0 11px;
+  }
+
+  .benefits-of-vitamin-wrapper .benefits-of-vitamin-details .box .col-md-3 .logo > img {
+    width: 55%;
   }
 
   .benefits-of-vitamin-wrapper .benefits-of-vitamin-details {
@@ -2142,11 +2234,16 @@ header .hamburger-menu {
     line-height: 28px;
     margin-bottom: 24px;
   }
+
+  .benefits-of-vitamin-wrapper .benefits-of-vitamin-details .box .col-md-9 .description {
+    font-size: 1.8rem;
+  }
   
   .our-partners-wrapper .row {
     justify-content: space-between !important;
   }
 
+  .our-partners-wrapper .row > :first-child,
   .our-partners-wrapper .row > * {
     width: 45%;
     margin-left: 0;
