@@ -129,7 +129,9 @@ $(function() {
                         $(".eat-well-wrapper .eat-well-box-content").eq(2).animate({"opacity": 1}, 500, function() {
                             $(".eat-well-wrapper .eat-well-box-content").eq(3).animate({"opacity": 1}, 500, function() {
                                 $(".eat-well-wrapper .eat-well-box-content").eq(4).animate({"opacity": 1}, 500, function() {
-                                    $(".eat-well-wrapper .eat-well-box-content").eq(5).animate({"opacity": 1}, 500);
+                                    $(".eat-well-wrapper .eat-well-box-content").eq(5).animate({"opacity": 1}, 500, function() {
+                                        $(".eat-well-wrapper .disclaimer").animate({"opacity": 1}, 500);
+                                    });
                                 });
                             });
                         });

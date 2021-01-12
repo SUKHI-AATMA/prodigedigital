@@ -308,6 +308,10 @@ body {
     justify-content: space-between;
 }
 
+.justify-content-end {
+  justify-content: flex-end;
+}
+
 .align-items-center {
     align-items: center;
 }
@@ -349,6 +353,10 @@ header > .container .logo > img {
   max-width: 100%;
 }
 
+header > .container .navigation,
+header > .container .navigation ~ ul {
+  transform: translateY(10px);
+}
 
 header > .container .navigation {
     font-size: 1.6rem;
@@ -356,23 +364,26 @@ header > .container .navigation {
     height: fit-content;
     height: -moz-fit-content;
     justify-content: flex-end;
-    transform: translateY(10px);
+    /* transform: translateY(10px); */
 }
 
-header > .container .navigation > ul {
+header > .container .navigation ~ ul {
     margin-right: 44px;
     height: fit-content;
     height: -moz-fit-content;
     padding-left: 0;
+    order: -1;
+    font-size: 1.6rem;
+    font-weight: 700;
 }
 
-header > .container .navigation > ul > li:not(:first-child) {
+header > .container .navigation ~ ul > li:not(:first-child) {
     position: relative;
     padding-left: 12px;
     margin-left: 12px;
 }
 
-header > .container .navigation > ul > li:not(:first-child):before {
+header > .container .navigation ~ ul > li:not(:first-child):before {
     content: '';
     position: absolute;
     top: 0;
@@ -382,7 +393,7 @@ header > .container .navigation > ul > li:not(:first-child):before {
     background-color: #333;
 }
 
-header > .container .navigation > ul > li > a {
+header > .container .navigation ~ ul > li > a {
     color: #333;
 }
 
@@ -587,7 +598,7 @@ header > .container .navigation > ul > li > a {
   width: -moz-fit-content;
   max-width: 100%;
   transform: translateX(150%);
-  transition: 0.5s all ease;
+  transition: 0.8s all ease;
 }
 
 .boost-immunity-wrapper .heading {
@@ -597,7 +608,7 @@ header > .container .navigation > ul > li > a {
     margin-bottom: 24px;
     text-transform: uppercase;
     transform: translateX(-100%);
-    transition: 0.5s all ease;
+    transition: 0.8s all ease;
 }
 
 .boost-immunity-wrapper .col-md-7 .heading br {
@@ -608,7 +619,7 @@ header > .container .navigation > ul > li > a {
     font-size: 2rem;
     margin-bottom: 16px;
     transform: translateX(-100%);
-    transition: 0.5s all ease;
+    transition: 0.8s all ease;
 }
 
 .boost-immunity-wrapper .description:last-child {
@@ -794,6 +805,7 @@ header > .container .navigation > ul > li > a {
 .eat-well-wrapper .eat-well-box-content {
     background-color: #FFF6EC;
     font-size: 2rem;
+    font-weight: 700;
     opacity: 0;
     border-radius: 10px;
     overflow: hidden;
@@ -805,7 +817,7 @@ header > .container .navigation > ul > li > a {
 }
 
 .eat-well-wrapper .eat-well-box-content .eat-well-food-description {
-    padding: 39px 45px;
+    padding: 39px 53px;
     color: #333;
     text-align: left;
     height: 156px;
@@ -898,6 +910,7 @@ header > .container .navigation > ul > li > a {
   font-size: 1.6rem;
   color: #333;
   font-style: italic;
+  opacity: 0;
 }
 
 .benefits-of-vitamin-wrapper {
@@ -994,7 +1007,7 @@ footer li {
   box-shadow: 0 5px 13px -1px #1B181B26;
 }
 
-.contextual-pages header .hamburger-menu {
+header .hamburger-menu {
   display: none;
 }
 
@@ -1052,9 +1065,12 @@ footer li {
   margin-bottom: 32px;
 }
 
-.contextual-pages .main-content-wrapper > .container > .row .description:not(:last-child),
-.contextual-pages .main-content-wrapper > .container > .row ol > li:not(:last-child) {
+.contextual-pages .main-content-wrapper > .container > .row .description:not(:last-child) {
   margin-bottom: 25px;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row ol > li:not(:last-child) {
+  margin-bottom: 15px;
 }
 
 .contextual-pages .main-content-wrapper > .container > .row .description.no-margin-bottom {
@@ -1212,7 +1228,7 @@ footer li {
 
 .faq-wrapper > .row > .answer li {
   list-style-type: disc;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .faq-wrapper > .row > .answer li:last-child {
@@ -1233,7 +1249,7 @@ footer li {
 .about-vitamin-wrapper.in-view .cloud-sun-wrapper .img-cloud {
   transform: translateX(0%);
   animation-name: moveCloud;
-  animation-duration: 30s;
+  animation-duration: 20s;
   animation-iteration-count: 1;
 }
 
@@ -1369,7 +1385,7 @@ footer li {
 
   .section-heading {
     font-size: 3.2rem;
-    line-height: 40px;
+    line-height: 36px;
   }
 
   .banner-wrapper .banner-content .description {
@@ -1452,7 +1468,7 @@ footer li {
   }
 
   .boost-immunity-wrapper .description {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   .boost-immunity-wrapper .col-md-5 > img {
@@ -1489,7 +1505,6 @@ footer li {
 
   .word-of-wisdom-wrapper .wisdom-box-content .heading {
     font-size: 2.4rem;
-    padding-left: 32px;
   }
 
   .word-of-wisdom-wrapper .wisdom-box-content .heading::before,
@@ -1623,7 +1638,7 @@ footer li {
   }
 
   .sticky-menu {
-    top: 25px;
+    top: 15px;
     right: 0;
   }
 
@@ -1660,7 +1675,7 @@ footer li {
     font-size: 2.8rem;
   }
 
-  .contextual-pages header > .container .navigation {
+  header > .container .navigation {
     display: block;
     position: fixed;
     left: 100%;
@@ -1672,38 +1687,38 @@ footer li {
     transition: 0.5s all ease;
   }
 
-  .menu-open {
+  .menu-open:not(.sticky-menu) {
     overflow: hidden;
   }
 
-  .menu-open.contextual-pages header {
+  .menu-open header {
     z-index: 3;
   }
 
-  .menu-open.contextual-pages header .hamburger-menu > span {
+  .menu-open header .hamburger-menu > span {
     border-color: transparent;
   }
 
-  .menu-open.contextual-pages header .hamburger-menu > span:before {
+  .menu-open header .hamburger-menu > span:before {
     transform: translateY(-52%) rotate(45deg);
   }
 
-  .menu-open.contextual-pages header .hamburger-menu > span:after {
+  .menu-open header .hamburger-menu > span:after {
     transform: translateY(-12px) rotate(-47deg);
   }
   
-  .menu-open.contextual-pages header > .container .navigation {
+  .menu-open header > .container .navigation {
     left: 0;
   }
 
-  .contextual-pages header .hamburger-menu {
+  header .hamburger-menu {
     display: block;
     position: relative;
     width: 34px;
     height: 25px;
   }
 
-  .contextual-pages header .hamburger-menu > span {
+  header .hamburger-menu > span {
     position: absolute;
     top: 0;
     right: 0;
@@ -1713,8 +1728,8 @@ footer li {
     transition: 0.5s all ease;
   }
 
-  .contextual-pages header .hamburger-menu > span:before,
-  .contextual-pages header .hamburger-menu > span:after {
+  header .hamburger-menu > span:before,
+  header .hamburger-menu > span:after {
     content: '';
     position: absolute;
     left: 0;
@@ -1725,31 +1740,31 @@ footer li {
     transition: 0.5s all ease;
   }
 
-  .contextual-pages header .hamburger-menu > span:before {
+  header .hamburger-menu > span:before {
     top: 50%;
     transform: translateY(-52%) rotate(0deg);
   }
 
-  .contextual-pages header .hamburger-menu > span:after {
+  header .hamburger-menu > span:after {
     top: 100%;
     transform: translateY(0) rotate(0deg);
   }
 
-  .contextual-pages header .container .row > :first-child ~ div {
+  header .container .row > :first-child ~ div {
     display: flex;
     justify-content: flex-end;
   }
 
-  .contextual-pages header .navigation > .link-button {
+  header .navigation > .link-button {
     width: 100%;
     margin: 0 !important;
   }
 
-  .contextual-pages header .container .row > *:first-child {
+  header .container .row > *:first-child {
     width: 64%;
   }
 
-  .contextual-pages header .container .row > *:first-child ~ div {
+  header .container .row > *:first-child ~ div {
     width: 36%;
   }
 
@@ -1776,8 +1791,85 @@ footer li {
 }
 
 @media only screen and (max-width: 640px) {
-  
+  header > .container .navigation ~ ul {
+    margin-right: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(0);
+    justify-content: center;
+  }
 
+  .banner-wrapper .banner-content {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .banner-wrapper .banner-content .cta-watch-video {
+    margin: 0 auto;
+  }
+
+  .banner-wrapper .banner-content .description {
+    padding: 0 30px;
+    margin-bottom: 17px;
+  }
+
+  .banner-wrapper .banner-content .description > br {
+    display: none;
+  }
+
+  .about-vitamin-pros > li.what-is-vitamin {
+    padding-right: 0;
+  }
+
+  .eat-well-wrapper .row:not(.section-header) {
+    grid-template-columns: auto;
+  }
+
+  .eat-well-wrapper .section-header > .section-heading {
+    width: 95%;
+    margin: 0 auto 16px auto;
+  }
+
+  .eat-well-wrapper .col-lg-4, .eat-well-wrapper .col-md-6 {
+    width: 100%;
+  }
+
+  .eat-well-wrapper .eat-well-box-content.food-cod-liver-oil .eat-well-food-description > p,
+  .eat-well-wrapper .eat-well-box-content.food-milk .eat-well-food-description > p {
+    padding-left: 68px;
+  }
+
+  .eat-well-wrapper .eat-well-box-content.food-milk .eat-well-food-description > p {
+    padding-right: 50px;
+  }
+
+  .eat-well-wrapper .eat-well-box-content.food-cod-liver-oil .eat-well-food-description > p:before {
+    width: 60px;
+    height: 55px;
+  }
+
+  .eat-well-wrapper .eat-well-box-content.food-milk .eat-well-food-description > p:before {
+    width: 43px;
+    height: 55px;
+  }
+
+  .eat-well-wrapper .eat-well-box-content.food-vitamin .eat-well-food-description > p:before,
+  .eat-well-wrapper .eat-well-box-content.food-sardines .eat-well-food-description > p:before {
+    width: 50px;
+    height: 51px;
+  }
+
+  .eat-well-wrapper .eat-well-box-content.food-egg .eat-well-food-description > p:before {
+    width: 40px;
+    height: 57px;
+  }
+
+  .eat-well-wrapper .eat-well-box-content.food-tuna .eat-well-food-description > p:before {
+    width: 45px;
+    height: 57px;
+  }
 
 
 
@@ -1787,7 +1879,7 @@ footer li {
   }
 
   header > .container {
-    padding: 14px 21px 50px 21px;
+    padding: 24px 33px 75px 24px;
   }
 
   header .container .row > *:first-child {
@@ -1813,8 +1905,6 @@ footer li {
     max-width: 100%;
   }
 
-  
-
   .link-button {
     padding-left: 18px;
     padding-right: 18px;
@@ -1822,7 +1912,7 @@ footer li {
     width: min-content;
   }
 
-  header > .container .navigation > ul {
+  header > .container .navigation ~ ul {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -1942,17 +2032,35 @@ footer li {
 
   .about-vitamin-pros > li {
     padding-left: 0;
-    padding-top: 196px;
+    padding-top: 150px;
     text-align: center;
     margin-top: -12%;
+    margin-bottom: 10px;
   }
 
   .about-vitamin-pros > li:before {
-    width: 196px;
-    height: 196px;
+    width: 150px;
+    height: 150px;
     left: 50%;
     top: 12%;
     transform: scale(0) translateX(-50%);
+  }
+
+  .about-vitamin-pros > li .heading {
+    line-height: 21px;
+  }
+
+  .about-vitamin-pros > li .description {
+    width: 77%;
+    margin: 0 auto;
+  }
+
+  .about-vitamin-pros > li.why-take-vitamin .description {
+    width: 87%;
+  }
+
+  .about-vitamin-pros > li.how-do-we-get-vitamin .description {
+    width: 94%;
   }
 
   .about-vitamin-wrapper.in-view .about-vitamin-pros > li.in-view:before {
