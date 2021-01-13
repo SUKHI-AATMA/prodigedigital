@@ -1,5 +1,14 @@
 $(function() {
     if($(".home-screen").length) {
+        /** Sun rays effect animation start  **/
+        // if($(".img-sun").length) {
+        //     var elem_svg = $(".img-sun > svg");
+        //     var elem_svg_width = $(elem_svg).width();
+        //     var elem_svg_height = $(elem_svg).height();
+        //     $(".img-sun").prepend("<span style='width: " + elem_svg_width + "px; height: " + elem_svg_height + "px;'></span>");
+        // }
+        /** Sun rays effect animation end  **/
+
         if($(window).width() >= 768) {
             var what_is_vitamin = $(".what-is-vitamin").offset().top - 100;
             var why_take_vitamin = $(".why-take-vitamin").offset().top - 100;
@@ -10,11 +19,16 @@ $(function() {
             var why_take_vitamin = $(".why-take-vitamin").offset().top - 100;
             var how_do_we_get_vitamin = $(".how-do-we-get-vitamin").offset().top - 100;
         }
-        var about_vitamin_wrapper = $(".about-vitamin-wrapper").offset().top - 100;
-        var boost_immunity_wrapper = $(".boost-immunity-wrapper").offset().top - 100;
-        var word_of_wisdom_wrapper = $(".word-of-wisdom-wrapper").offset().top - 100;
-        var eat_well_wrapper = $(".eat-well-wrapper").offset().top - 100;
-        var benefits_of_vitamin_wrapper = $(".benefits-of-vitamin-wrapper").offset().top - 100;
+        // var about_vitamin_wrapper = $(".about-vitamin-wrapper").offset().top - 100;
+        // var boost_immunity_wrapper = $(".boost-immunity-wrapper").offset().top - 100;
+        // var word_of_wisdom_wrapper = $(".word-of-wisdom-wrapper").offset().top - 100;
+        // var eat_well_wrapper = $(".eat-well-wrapper").offset().top - 100;
+        // var benefits_of_vitamin_wrapper = $(".benefits-of-vitamin-wrapper").offset().top - 100;
+        var about_vitamin_wrapper = $(".about-vitamin-wrapper").offset().top - $(".about-vitamin-wrapper").outerHeight(true);
+        var boost_immunity_wrapper = $(".boost-immunity-wrapper").offset().top - $(".boost-immunity-wrapper").outerHeight(true);
+        var word_of_wisdom_wrapper = $(".word-of-wisdom-wrapper").offset().top - $(".word-of-wisdom-wrapper").outerHeight(true);
+        var eat_well_wrapper = $(".eat-well-wrapper").offset().top - $(".eat-well-wrapper").outerHeight(true);
+        var benefits_of_vitamin_wrapper = $(".benefits-of-vitamin-wrapper").offset().top - $(".benefits-of-vitamin-wrapper").outerHeight(true);
         var scroll_ctr = 0;
         var new_scroll_ctr = 0;
         var paramTimeout = "";

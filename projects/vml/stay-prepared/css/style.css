@@ -333,6 +333,7 @@ body {
 /* common css ends */
 header {
   background-color: #fff;
+  z-index: 3 !important;
 }
 
 
@@ -488,6 +489,8 @@ header > .container .navigation ~ ul > li > a {
     left: 80px;
     z-index: -1;
 }
+
+
 
 
 
@@ -1246,9 +1249,33 @@ header .hamburger-menu {
 }
 
 @keyframes shineSun {
-  0%   {stroke-width: 1.964px}
+  /* 0%   {stroke-width: 1.964px}
   50%  {stroke-width: 0.2px}
-  100% {stroke-width: 1.964px}
+  100% {stroke-width: 1.964px} */
+  /* 0%   {border-width: 35px}
+  50%  {border-width: 0px}
+  100% {stroke-width: 35px} */
+  0%   {r: 90}
+  50%  {r: 0}
+  75%  {r: 65}
+  100% {r: 0}
+}
+
+/* .about-vitamin-wrapper .cloud-sun-wrapper .img-sun > span {
+  position: absolute;
+  top: 0.982px;
+  left: 0.982px;
+  border: 35px solid red;
+  border-radius: 50%;
+  animation-name: shineSun;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+} */
+
+.about-vitamin-wrapper .cloud-sun-wrapper .img-sun > svg circle {
+  animation-name: shineSun;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 
 .about-vitamin-wrapper.in-view .cloud-sun-wrapper .img-cloud {
@@ -1260,9 +1287,9 @@ header .hamburger-menu {
 
 .about-vitamin-wrapper.in-view .cloud-sun-wrapper .img-sun > svg line {
   stroke-width: 1.964px;
-  animation-name: shineSun;
+  /* animation-name: shineSun;
   animation-duration: 5s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
 }
 
 .sticky-menu {
@@ -1339,6 +1366,10 @@ header .hamburger-menu {
   fill: #fff;
 }
 
+.for-tablet {
+  display: none;
+}
+
 /* animation for the section ends */
 
 /* Media CSS starts */
@@ -1361,9 +1392,42 @@ header .hamburger-menu {
 
 
 @media only screen and (max-width: 768px) and (min-width: 641px) {
+  .menu-open header > .container .navigation {
+    padding-left: 117px;
+    padding-right: 117px;
+  }
+
   .benefits-of-vitamin-wrapper .container {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .banner-wrapper .banner-content {
+    padding-left: 62px;
+    width: 328px;
+  }
+
+  .about-vitamin-wrapper .col-md-6 {
+    width: 57%;
+  }
+
+  .about-vitamin-wrapper .col-md-6:nth-child(2) {
+    width: 43%;
+  }
+
+  .why-take-vitamin .description br.for-desktop,
+  .eat-well-wrapper .eat-well-box-content.food-milk .eat-well-food-description > p .for-desktop:first-child,
+  .eat-well-wrapper .eat-well-box-content.food-vitamin .eat-well-food-description > p .for-desktop,
+  .eat-well-wrapper .eat-well-box-content.food-sardines .eat-well-food-description > p .for-desktop,
+  .eat-well-wrapper .eat-well-box-content.food-egg .eat-well-food-description > p .for-desktop:first-child,
+  .eat-well-wrapper .eat-well-box-content.food-tuna .eat-well-food-description > p .for-tablet,
+  .benefits-of-vitamin-wrapper .section-heading .for-desktop {
+    display: block;
+  }
+
+  .eat-well-wrapper .disclaimer {
+    width: 93%;
+    margin: 0 auto;
   }
 }
 
@@ -1441,13 +1505,14 @@ header .hamburger-menu {
   }
 
   .about-vitamin-pros > li {
-    padding-left: 100px;
+    padding-left: 93px;
     margin-bottom: 25px;
   }
 
   .about-vitamin-pros > li .heading {
     font-size: 2.4rem;
     margin-bottom: 8px;
+    line-height: 38px;
   }
 
   .about-vitamin-pros > li .description {
@@ -1469,7 +1534,7 @@ header .hamburger-menu {
   .boost-immunity-wrapper .heading {
     font-size: 3.2rem;
     line-height: 38px;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   .boost-immunity-wrapper .description {
@@ -1541,12 +1606,16 @@ header .hamburger-menu {
   }
 
   .eat-well-wrapper .eat-well-box-content {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
   
   .eat-well-wrapper .eat-well-box-content .eat-well-food-description {
     padding: 27px 32px;
     height: 96px;
+  }
+
+  .eat-well-wrapper .eat-well-box-content .eat-well-food-description > p {
+    line-height: 22px;
   }
 
   .eat-well-wrapper .eat-well-box-content .eat-well-food-description > p:before {
@@ -1558,7 +1627,7 @@ header .hamburger-menu {
   }
 
   .eat-well-wrapper .eat-well-box-content.food-cod-liver-oil .eat-well-food-description > p {
-    padding-left: 67px;
+    padding-left: 55px;
   }
 
   .eat-well-wrapper .eat-well-box-content.food-milk .eat-well-food-description > p:before {
@@ -1574,15 +1643,15 @@ header .hamburger-menu {
   }
 
   .eat-well-wrapper .eat-well-box-content.food-vitamin .eat-well-food-description > p {
-    padding-left: 63px;
+    padding-left: 56px;
   }
 
   .eat-well-wrapper .eat-well-box-content.food-sardines .eat-well-food-description > p:before {
-    width: 39px;
+    width: 36px;
   }
 
   .eat-well-wrapper .eat-well-box-content.food-sardines .eat-well-food-description > p {
-    padding-left: 66px;
+    padding-left: 58px;
   }
 
   .eat-well-wrapper .eat-well-box-content.food-egg .eat-well-food-description > p:before {
@@ -1590,7 +1659,7 @@ header .hamburger-menu {
   }
 
   .eat-well-wrapper .eat-well-box-content.food-egg .eat-well-food-description > p {
-    padding-left: 53px;
+    padding-left: 50px;
   }
 
   .eat-well-wrapper .eat-well-box-content.food-tuna .eat-well-food-description > p:before {
@@ -1653,7 +1722,7 @@ header .hamburger-menu {
   }
 
   .contextual-pages .main-content-wrapper .container {
-    max-width: 590px;
+    max-width: 670px;
     padding: 0 24px;
   }
 
@@ -1677,8 +1746,13 @@ header .hamburger-menu {
 
   .contextual-pages .main-content-wrapper > .container > .row .description,
   .contextual-pages .main-content-wrapper > .container > .row ol {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 22px;
+  }
+
+  .contextual-pages .main-content-wrapper > .container > .row .description,
+  .contextual-pages .main-content-wrapper > .container > .row ol {
+    margin-bottom: 40px;
   }
 
   .contextual-pages .main-content-wrapper > .container > .row h2 {
@@ -1695,6 +1769,11 @@ header .hamburger-menu {
     height: 100%;
     background-color: #fff;
     transition: 0.5s all ease;
+  }
+  
+  .menu-open header > .container .navigation .stay-prepared-logo.for-tablet {
+    display: block;
+    margin-bottom: 115px;
   }
 
   .menu-open:not(.sticky-menu) {
@@ -1773,13 +1852,18 @@ header .hamburger-menu {
     margin: 0 !important;
   }
 
-  header .container .row > *:first-child {
-    width: 64%;
+  header > .container .navigation ~ ul {
+    transform: translateY(0);
+    line-height: 36px;
+  }
+
+  /* header .container .row > *:first-child {
+    width: 54%;
   }
 
   header .container .row > *:first-child ~ div {
     width: 36%;
-  }
+  } */
 
   .contextual-pages header .container {
     padding: 33px 21px 33px 24px;
@@ -1801,20 +1885,12 @@ header .hamburger-menu {
     font-size: 1.6rem;
   }
 
-}
 
-@media only screen and (max-width: 640px) {
-  header > .container .navigation ~ ul {
-    margin-right: 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    transform: translateY(0);
-    justify-content: center;
-  }
 
   header .navigation > .link-button {
+    font-size: 2rem !important;
+    line-height: 26px !important;
+    padding-right: 80px !important;
     position: relative;
   }
 
@@ -1829,21 +1905,98 @@ header .hamburger-menu {
     border-right: 2px solid #6F2C91;
     transform: translateY(-50%) rotate(45deg);
   }
+
+  /* .menu-open header > .container .logo img {
+    width: 334px;
+    transform: translateY(60px);
+    max-width: none;
+  }
+
+  .menu-open header .container .row > :first-child {
+    position: relative;
+    z-index: 1;
+  } */
+
+  header > .container .navigation {
+    padding-top: 96px;
+    transform: none;
+  }
   
+  .banner-wrapper .banner-content .description > br {
+    display: none;
+  }
+
+  .section-heading {
+    line-height: 40px;
+  }
+
+  .word-of-wisdom-wrapper {
+    padding: 75px 0;
+  }
+
+  .eat-well-wrapper .row:not(.section-header) {
+    grid-template-columns: auto auto;
+  }
+
+  .eat-well-wrapper .col-lg-4, .eat-well-wrapper .col-md-6 {
+    width: 314px;
+  }
+
+  .faq-wrapper > .row {
+    font-size: 2rem;
+    line-height: 26px;
+  }
+
+  .faq-wrapper > .row > .answer {
+    padding-right: 0;
+    padding-top: 22px;
+  }
+
+  .faq-wrapper > .row.toggle-expand > a,
+  .faq-wrapper > .row > .answer {
+    font-size: 1.6rem;
+    line-height: 22px;
+  }
+  
+  .faq-page .our-partners-wrapper {
+    margin-top: 62px;
+  }
+
   header .navigation > .link-button:not(:only-child) {
     border-bottom: 1px solid #ccc;
-    padding: 20px 0;
+    padding: 50px 0;
   }
 
   header .navigation > .link-button:last-child {
     border-bottom-color: transparent;
   }
 
-  header .navigation > .link-button {
-    font-size: 2rem !important;
-    line-height: 26px !important;
-    padding-right: 80px !important;
+}
+
+@media only screen and (max-width: 640px) {
+  header > .container .navigation ~ ul {
+    margin-right: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(0);
+    justify-content: center;
   }
+
+  header > .container .navigation {
+    padding-top: 86px;
+  }
+
+  .menu-open header > .container .navigation .stay-prepared-logo.for-tablet {
+    margin-bottom: 95px;
+  }
+  
+  header .navigation > .link-button:not(:only-child) {
+    padding: 28px 0;
+  }
+
+  
 
   .banner-wrapper .banner-content {
     text-align: center;
@@ -1859,13 +2012,9 @@ header .hamburger-menu {
     margin-bottom: 17px;
   }
 
-  .banner-wrapper .banner-content .description > br {
-    display: none;
-  }
+  
 
-  .about-vitamin-pros > li.what-is-vitamin {
-    padding-right: 0;
-  }
+  
 
   .eat-well-wrapper .row:not(.section-header) {
     grid-template-columns: auto;
@@ -1949,10 +2098,7 @@ header .hamburger-menu {
     justify-content: space-between;
   }
 
-  header > .container .navigation {
-    padding-top: 180px;
-    transform: none;
-  }
+  
 
   header > .container .logo img {
     width: fit-content;
@@ -1981,7 +2127,7 @@ header .hamburger-menu {
     font-size: 1.5rem;
     font-weight: 700;
     opacity: 1;
-    transition: 0.2s all ease;
+    transition: 1s all ease;
   }
 
   .menu-open header > .container .navigation ~ ul {
@@ -1990,14 +2136,10 @@ header .hamburger-menu {
 
   .menu-open header > .container .logo img {
     width: 250px;
-    transform: translateY(60px);
-    max-width: none;
+    
   }
 
-  .menu-open header .container .row > :first-child {
-    position: relative;
-    z-index: 1;
-  }
+  
 
   /* .contextual-pages header .hamburger-menu {
     display: block;
@@ -2069,6 +2211,10 @@ header .hamburger-menu {
 
   .about-vitamin-wrapper {
     padding-bottom: 80px;
+  }
+
+  .about-vitamin-pros > li.what-is-vitamin {
+    padding-right: 0;
   }
 
   /* .about-vitamin-wrapper .cloud-sun-wrapper,
@@ -2325,25 +2471,12 @@ header .hamburger-menu {
     margin-bottom: 0;
   } */
 
-  .faq-wrapper > .row {
-    font-size: 2rem;
-    line-height: 26px;
-  }
-
-  .faq-wrapper > .row > .answer {
-    padding-right: 0;
-    padding-top: 22px;
-  }
-
-  .faq-wrapper > .row.toggle-expand > a,
-  .faq-wrapper > .row > .answer {
+  .contextual-pages .main-content-wrapper > .container > .row .description,
+  .contextual-pages .main-content-wrapper > .container > .row ol {
     font-size: 1.6rem;
-    line-height: 22px;
   }
-  
-  .faq-page .our-partners-wrapper {
-    margin-top: 62px;
-  }
+
+ 
 
   footer li:first-child {
     margin-left: 0;
