@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay Prepared</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="contextual-pages faq-page">
+    <main>
+        <header>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-3 col-sm-6">
+                        <div class="display-flex logo"><a href="/"><img src="./images/sp-logo.svg" alt="Stay Prepared"></a></div>
+                    </div>
+                    <div class="col-lg-6 col-md-9">
+                        <div class="display-flex align-items-center navigation justify-content-end">
+                            <div class="stay-prepared-logo for-tablet">
+                                <img src="./images/sp-logo.svg" alt="Stay Prepared">
+                            </div>
+                            <a href="javascript:;" class="display-flex link-button" role="button">Learn More About Vitamin D</a>
+                            <a href="javascript:;" class="display-flex link-button" role="button">Vitamin D Collection Programme</a>
+                        </div>
+                        <a href="javascript:;" class="hamburger-menu"><span></span></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="display-flex flex-direction-column main-content-wrapper">
+            <div class="container">
+                <div class="row">
+                    <h1>FAQ</h1>
+                </div>
+                
+                <div class="collection-locations">
+                    <div class="fiter-wrapper"></div>
+                    <div class="filtered-data-wrapper"></div>
+                </div>
+        </section>
+        <section class="our-partners-wrapper">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="logo"><img src="./images/sp-logo.svg" alt="Stay Prepared"></div>
+                    <div class="logo"><img src="./images/temasek-logo.svg" alt="Temasek Foundation"></div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <p class="copyright-text">Copyright © 2020 Temasek Foundation</p>
+                    <ul class="display-flex flex-wrap justify-content-center">
+                        <li><a href="tnc.html">Terms of Use</a></li>
+                        <li><a href="accessibility.html">Accessibility</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy-statement.html">Privacy Statement</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/js.js"></script>
+    <script>
+        var jsonData = {
+                "watson" : [
+                    {
+                        "region": "East",
+                        "name": "Bedok Mall",
+                        "address": "311 New Upper Changi Road, #B2-12/13, Bedok Mall",
+                        "postal_code": "467360"
+                    },
+                    {
+                        "region": "Central",
+                        "name": "Bugis Junction",
+                        "address": "200 Victoria Street, #02-27 to 33/33A , Bugis Junction 1.0",
+                        "postal_code": "188021"
+                    },
+                    {
+                        "region": "West",
+                        "name": "Bukit Panjang Plaza",
+                        "address": "1 Jelebu Rd, #01-30/31, Bukit Panjang Plaza",
+                        "postal_code": "677743"
+                    },
+                    {
+                        "region": "North",
+                        "name": "Causeway Point",
+                        "address": "No.1 Woodlands Square, #B1-14/15, Causeway Point",
+                        "postal_code": "738099"
+                    },
+                    {
+                        "region": "Central",
+                        "name": "Augis Junction1",
+                        "address": "200 Victoria Street, #02-27 to 33/33A , Bugis Junction 1.1",
+                        "postal_code": "188021"
+                    },
+                    {
+                        "region": "Central",
+                        "name": "Abgis Junction1",
+                        "address": "300 Victoria Street, #02-27 to 33/33A , Bugis Junction 1.2",
+                        "postal_code": "188021"
+                    },
+                    {
+                        "region": "West",
+                        "name": "Bukit Panjang Plaza1",
+                        "address": "1 Jelebu Rd, #01-30/31, Bukit Panjang Plaza",
+                        "postal_code": "677743"
+                    }
+                ],
+                "watson1" : [
+                    {
+                        "region": "East",
+                        "name": "Bedok Mall",
+                        "address": "311 New Upper Changi Road, #B2-12/13, Bedok Mall",
+                        "postal_code": "467360X"
+                    },
+                    {
+                        "region": "Central",
+                        "name": "Bugis Junction",
+                        "address": "200 Victoria Street, #02-27 to 33/33A , Bugis Junction 2.0",
+                        "postal_code": "188021X"
+                    },
+                    {
+                        "region": "West",
+                        "name": "Bukit Panjang Plaza",
+                        "address": "1 Jelebu Rd, #01-30/31, Bukit Panjang Plaza",
+                        "postal_code": "677743X"
+                    },
+                    {
+                        "region": "North",
+                        "name": "Causeway Point",
+                        "address": "No.1 Woodlands Square, #B1-14/15, Causeway Point",
+                        "postal_code": "738099X"
+                    }
+                ]
+            }
+
+            var createElemSelectForRegion = "<select name='select-region'></select>";
+            var createElemSelectForPharmacy = "<select name='select-pharmacy'></select>";
+            $(".fiter-wrapper").append(createElemSelectForRegion);
+            $(".fiter-wrapper").append(createElemSelectForPharmacy);
+            $(".fiter-wrapper select[name='select-region']").append("<option>Select a Region</option>");
+            $(".fiter-wrapper select[name='select-pharmacy']").append("<option>Select a Pharmacy</option>");
+            $(".fiter-wrapper").append("<button>Submit</button>");
+            
+            var regionArr = [];
+            var newRegionArr = [];
+
+            for(var i=0; i<Object.keys(jsonData).length; i++) {
+                $(".fiter-wrapper select[name='select-pharmacy']").append("<option>" + Object.keys(jsonData)[i] + "</option>");
+                
+                for(var j=0; j<jsonData[Object.keys(jsonData)[i]].length; j++) {
+                    regionArr.push(jsonData[Object.keys(jsonData)[i]][j].region)
+                }
+            }
+
+            regionArr.sort();
+            regionArr = [...new Set(regionArr)];
+
+            regionArr.map(function(regionName) {
+                $(".fiter-wrapper select[name='select-region']").append("<option>" + regionName + "</option>");
+            });
+
+            cmp = function(x, y){
+                return x > y ? 1 : x < y ? -1 : 0;
+            };
+
+            var createObj = {};
+
+            $(".fiter-wrapper button").on("click", function() {
+                $(".filtered-data-wrapper").html('');
+                createObj = {};
+
+                var selectedDropDownVal = '';
+
+                if($(".fiter-wrapper select[name='select-region']").val() != "Select a Region" && $(".fiter-wrapper select[name='select-pharmacy']").val() != "Select a Pharmacy") {
+                    selectedDropDownVal = 'select-pharmacy';
+                    createObj[$(".fiter-wrapper select[name='select-pharmacy']").val()] = [];
+                    newRegionArr = [];
+                    newRegionArr.push($(".fiter-wrapper select[name='select-region']").val());
+                    jsonData[$(".fiter-wrapper select[name='select-pharmacy']").val()].map(function(data) {
+                        if(data.region == $(".fiter-wrapper select[name='select-region']").val()) {
+                            console.log(data);
+                            createObj[$(".fiter-wrapper select[name='select-pharmacy']").val()].push(data);
+                        }
+                    });
+                }
+                else {
+                    if($(".fiter-wrapper select[name='select-region']").val() != "Select a Region") {
+                        selectedDropDownVal = 'select-region';
+                        createObj[$(".fiter-wrapper select[name='select-region']").val()] = [];
+                        Object.keys(jsonData).map(function(data, i) {
+                            jsonData[Object.keys(jsonData)[i]].map(function(thisData) {
+                                if(thisData.region == $(".fiter-wrapper select[name='select-region']").val()) {
+                                    createObj[$(".fiter-wrapper select[name='select-region']").val()].push(thisData);
+                                }
+                            });
+                        });
+
+                        newRegionArr = [];
+                        newRegionArr.push($(".fiter-wrapper select[name='select-region']").val());
+                    }
+                    else if($(".fiter-wrapper select[name='select-pharmacy']").val() != "Select a Pharmacy") {
+                        selectedDropDownVal = 'select-pharmacy';
+                        createObj = jsonData;
+                        newRegionArr = [];
+                        newRegionArr = [...regionArr];
+                    }
+
+                    
+                }
+                
+                
+                createObj[$(".fiter-wrapper select[name='" + selectedDropDownVal + "']").val()].sort(function(a, b){
+                    //note the minus before -cmp, for descending order
+                    return cmp( 
+                        [cmp(a.name, b.name), cmp(a.address, b.address)], 
+                        [cmp(b.name, a.name), cmp(b.address, a.address)]
+                    );
+                });
+                
+
+                newRegionArr.map(function(regionName) {
+                    if($(".filtered-data-wrapper > div[data-rel='" + regionName + "']").length <= 0) {
+                        $(".filtered-data-wrapper").append("<div data-rel='" + regionName + "'><h2>" + regionName + "</h2></div>");
+                        $(".filtered-data-wrapper > div[data-rel='" + regionName + "']").append("<ul></ul>");
+                    }
+                    
+                    createObj[$(".fiter-wrapper select[name='" + selectedDropDownVal + "']").val()].map(function(data, i) {
+                        if(regionName == data.region) {
+                            $(".filtered-data-wrapper div[data-rel='" + regionName + "'] ul").append("<li></li>");
+                            $(".filtered-data-wrapper div[data-rel='" + regionName + "'] ul li:last").append("<p>" + data.name + "</p>");
+                            $(".filtered-data-wrapper div[data-rel='" + regionName + "'] ul li:last").append("<p>" + data.address + " - " + data.postal_code + "</p>");
+                        }
+                    });
+                });
+
+                // if($(".fiter-wrapper select[name='select-pharmacy']").val() != "Select a Pharmacy") {
+                //     createObj = jsonData;
+                //     createObj[$(".fiter-wrapper select[name='select-pharmacy']").val()].sort(function(a, b){
+                //         //note the minus before -cmp, for descending order
+                //         return cmp( 
+                //             [cmp(a.name, b.name), cmp(a.address, b.address)], 
+                //             [cmp(b.name, a.name), cmp(b.address, a.address)]
+                //         );
+                //     });
+
+                //     newRegionArr = [];
+                //     newRegionArr = [...regionArr];
+
+                //     newRegionArr.map(function(regionName) {
+                //         if($(".filtered-data-wrapper > div[data-rel='" + regionName + "']").length <= 0) {
+                //             $(".filtered-data-wrapper").append("<div data-rel='" + regionName + "'><h2>" + regionName + "</h2></div>");
+                //             $(".filtered-data-wrapper > div[data-rel='" + regionName + "']").append("<ul></ul>");
+                //         }
+                        
+                //         createObj[$(".fiter-wrapper select[name='select-pharmacy']").val()].map(function(data, i) {
+                //             if(regionName == data.region) {
+                //                 $(".filtered-data-wrapper div[data-rel='" + regionName + "'] ul").append("<li></li>");
+                //                 $(".filtered-data-wrapper div[data-rel='" + regionName + "'] ul li:last").append("<p>" + data.name + "</p>");
+                //                 $(".filtered-data-wrapper div[data-rel='" + regionName + "'] ul li:last").append("<p>" + data.address + " - " + data.postal_code + "</p>");
+                //             }
+                //         });
+                //     });
+                // }
+                
+            });
+
+            
+
+            
+    </script>
+</body>
+</html>
