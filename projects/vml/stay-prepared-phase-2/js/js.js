@@ -28,22 +28,34 @@ $(function() {
     /* expand-collapse of FAQ's ends */
 
     if($(".banner-section").length) {
+        var bannerSectionHeight = 658; // as per 1440px
+        var baseWidth = 1440;
+
+        if($(window).width() != baseWidth) {
+            console.log(123);
+            $(".banner-section .carousel-content").css("height", ($(window).width()*bannerSectionHeight)/baseWidth + "px");
+        }
+
         $(".banner-section .carousel-content").each(function() {
             $(this).css("background-image","url('" + $(this).attr('data-img-src') + "')");
+        }).promise().done(function() {
+            $(".banner-section.owl-carousel").owlCarousel({
+                dots: true,
+                nav: false,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                center: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    }
+                }
+            });
         });
 
-        $(".banner-section.owl-carousel").owlCarousel({
-            dots: false,
-            nav: false,
-            loop: true,
-            autoplay: true,
-            center: true,
-            responsive: {
-                0: {
-                    items: 1
-                }
-            }
-        });
+        
     }
 
     

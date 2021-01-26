@@ -375,7 +375,7 @@ header .button-wrapper {
 
 header .button-wrapper a {
     color: #FFFFFF;
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     font-weight: 700;
     line-height: 18px;
     letter-spacing: 0.25px;
@@ -390,6 +390,30 @@ header .button-wrapper a {
     /* height: 658px; */
     overflow: hidden;
     position: relative;
+}
+
+.banner-section.owl-carousel .owl-dots {
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    outline: none;
+}
+
+.banner-section.owl-carousel .owl-dots > .owl-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #CBCBCB;
+}
+
+.banner-section.owl-carousel .owl-dots > .owl-dot:not(:first-child) {
+    margin-left: 15px;
+}
+
+.banner-section.owl-carousel .owl-dots > .owl-dot.active {
+    background-color: #CBCBCB;
 }
 
 .banner-section .carousel-content {
@@ -440,11 +464,38 @@ header .button-wrapper a {
 
 .banner-section .container .heading {
     font-size: 5.6rem;
-    line-height: 72px;
+    line-height: 58px;
     font-weight: 700;
     color: #FFFFFF;
     position: relative;
     z-index: 1;
+    
+}
+
+.banner-section .container .heading:not(:only-child) {
+    margin-bottom: 13px;
+}
+
+.banner-section .container .description {
+    font-size: 3.2rem;
+    line-height: 40px;
+    margin-bottom: 49px;
+    color: #FFFFFF;
+}
+
+.banner-section .container .button-wrapper > a {
+    background-color: #FFFFFF;
+    color: #8A1454;
+    margin: 0;
+    border: none;
+    font-size: 1.6rem;
+    padding: 15px 80px;
+    transition: 0.5s all ease;
+}
+
+.banner-section .container .button-wrapper > a:hover {
+    background-color: #8A1454;
+    color: #FFFFFF;
 }
 
 .about-project-safeguard {
@@ -462,7 +513,7 @@ header .button-wrapper a {
 
 .covid-19-transmission {
     background-color: #002F85;
-    padding: 89px 0 106px 0;
+    padding: 83px 0 100px 0;
     color: #FFFFFF;
 }
 
@@ -496,6 +547,10 @@ header .button-wrapper a {
 .covid-19-transmission .transmission-causes > li {
     position: relative;
     padding-left: 152px;
+    min-height: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .covid-19-transmission .transmission-causes > li:before {
@@ -608,6 +663,12 @@ header .button-wrapper a {
     border: none;
     text-transform: uppercase;
     margin: 0 auto;
+    transition: 0.5s all ease;
+}
+
+.grid-structure .box .button-wrapper a:hover {
+  background-color: #FFFFFF;
+  color: #8A1454;
 }
 
 .grid-structure .box .box-content {
@@ -689,11 +750,18 @@ header .button-wrapper a {
 .grid-structure.how-it-works-grid .box > .box-content > .button-wrapper > a[data-enabled='yes'] {
   background-color: #FFFFFF;
   color: #8A1454;
+  transition: 0.5s all ease;
+}
+
+.grid-structure.how-it-works-grid .box > .box-content > .button-wrapper > a[data-enabled='yes']:hover {
+  background-color: #8A1454;
+  color: #FFFFFF;
 }
 
 .grid-structure.how-it-works-grid .box > .box-content > .button-wrapper > a[data-enabled='no'] {
 background-color: rgba(251,251,251,0.7);
 color: #333333;
+cursor: default;
 }
 
 .grid-structure.how-it-works-grid .box.hiw-fan-filters {
@@ -733,6 +801,12 @@ color: #333333;
     font-size: 2rem;
     border: none;
     padding: 21px 60px;
+    transition: 0.5s all ease;
+}
+
+.safeguard-our-community .button-wrapper > a:hover {
+  background-color: #002F85;
+  color: #FFFFFF;
 }
 
 .get-in-touch-section {
@@ -759,6 +833,10 @@ color: #333333;
 
 .get-in-touch-section .description > a {
     color: #002F85;
+}
+
+.get-in-touch-section .description > a:hover {
+    text-decoration: underline;
 }
 
 
@@ -919,6 +997,12 @@ color: #333333;
     width: fit-content;
     width: -moz-fit-content;
     max-width: 100%;
+    transform: translateY(0);
+    transition: 0.5s all ease;
+}
+
+.our-partners-section .row [class*='col-md'] > a:hover > img {
+  transform: translateY(-10px);
 }
 
 .brought-to-you-section .row [class*='col-md']:first-child > a {
