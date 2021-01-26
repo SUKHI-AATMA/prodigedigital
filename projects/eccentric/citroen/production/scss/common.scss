@@ -265,6 +265,20 @@ body {
         &.display-features {
             .features-details-container {
                 display: block;
+
+                .features-model-details-wrapper {
+                    display: flex;
+                }
+            }
+        }
+
+        &.display-advanced-comfort-feature {
+            .features-details-container {
+                display: block;
+
+                .advanced-comfort-features-wrapper {
+                    display: flex;
+                }
             }
         }
 
@@ -3343,9 +3357,10 @@ input::-webkit-inner-spin-button {
     }
 
     .features-details-container {
-        .features-model-details-wrapper {
+        .features-model-details-wrapper, .advanced-comfort-features-wrapper {
             border-top: 1px solid #D0CCCC;
             flex: 1;
+            display: none;
 
             .col-1-2 {
                 min-width: 221px;
@@ -3467,7 +3482,7 @@ input::-webkit-inner-spin-button {
     }
 
     .error-messages-container {
-
+        display: none;
     }
 }
 

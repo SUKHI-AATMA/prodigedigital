@@ -364,6 +364,16 @@ body {
       display: block; }
     body.popup-show.display-features .features-details-container {
       display: block; }
+      body.popup-show.display-features .features-details-container .features-model-details-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+    body.popup-show.display-advanced-comfort-feature .features-details-container {
+      display: block; }
+      body.popup-show.display-advanced-comfort-feature .features-details-container .advanced-comfort-features-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
     body.popup-show.display-error-message .popup-wrapper {
       width: 526px;
       height: 296px; }
@@ -2208,20 +2218,21 @@ input::-webkit-inner-spin-button {
           font-size: 1.6rem;
           line-height: 19px;
           padding: 15px 0; }
-  .popup-wrapper .features-details-container .features-model-details-wrapper {
+  .popup-wrapper .features-details-container .features-model-details-wrapper, .popup-wrapper .features-details-container .advanced-comfort-features-wrapper {
     border-top: 1px solid #D0CCCC;
     -webkit-box-flex: 1;
     -ms-flex: 1;
-    flex: 1; }
-    .popup-wrapper .features-details-container .features-model-details-wrapper .col-1-2 {
+    flex: 1;
+    display: none; }
+    .popup-wrapper .features-details-container .features-model-details-wrapper .col-1-2, .popup-wrapper .features-details-container .advanced-comfort-features-wrapper .col-1-2 {
       min-width: 221px; }
-      .popup-wrapper .features-details-container .features-model-details-wrapper .col-1-2 ul {
+      .popup-wrapper .features-details-container .features-model-details-wrapper .col-1-2 ul, .popup-wrapper .features-details-container .advanced-comfort-features-wrapper .col-1-2 ul {
         width: 100%; }
-        .popup-wrapper .features-details-container .features-model-details-wrapper .col-1-2 ul li {
+        .popup-wrapper .features-details-container .features-model-details-wrapper .col-1-2 ul li, .popup-wrapper .features-details-container .advanced-comfort-features-wrapper .col-1-2 ul li {
           padding: 16px 15px;
           position: relative;
           cursor: pointer; }
-          .popup-wrapper .features-details-container .features-model-details-wrapper .col-1-2 ul li:before {
+          .popup-wrapper .features-details-container .features-model-details-wrapper .col-1-2 ul li:before, .popup-wrapper .features-details-container .advanced-comfort-features-wrapper .col-1-2 ul li:before {
             content: '';
             position: absolute;
             top: 0;
@@ -2232,48 +2243,48 @@ input::-webkit-inner-spin-button {
             -webkit-transition: 0.5s all ease;
             -o-transition: 0.5s all ease;
             transition: 0.5s all ease; }
-          .popup-wrapper .features-details-container .features-model-details-wrapper .col-1-2 ul li.active {
+          .popup-wrapper .features-details-container .features-model-details-wrapper .col-1-2 ul li.active, .popup-wrapper .features-details-container .advanced-comfort-features-wrapper .col-1-2 ul li.active {
             background: #F5F5F5; }
-            .popup-wrapper .features-details-container .features-model-details-wrapper .col-1-2 ul li.active:before {
+            .popup-wrapper .features-details-container .features-model-details-wrapper .col-1-2 ul li.active:before, .popup-wrapper .features-details-container .advanced-comfort-features-wrapper .col-1-2 ul li.active:before {
               left: 0; }
-            .popup-wrapper .features-details-container .features-model-details-wrapper .col-1-2 ul li.active a {
+            .popup-wrapper .features-details-container .features-model-details-wrapper .col-1-2 ul li.active a, .popup-wrapper .features-details-container .advanced-comfort-features-wrapper .col-1-2 ul li.active a {
               color: #000; }
-          .popup-wrapper .features-details-container .features-model-details-wrapper .col-1-2 ul li a {
+          .popup-wrapper .features-details-container .features-model-details-wrapper .col-1-2 ul li a, .popup-wrapper .features-details-container .advanced-comfort-features-wrapper .col-1-2 ul li a {
             font-family: 'citroenbold';
             font-size: 1.6rem;
             line-height: 18px;
             color: #828282; }
-    .popup-wrapper .features-details-container .features-model-details-wrapper .col-2-2 {
+    .popup-wrapper .features-details-container .features-model-details-wrapper .col-2-2, .popup-wrapper .features-details-container .advanced-comfort-features-wrapper .col-2-2 {
       background-color: #f5f5f5; }
-      .popup-wrapper .features-details-container .features-model-details-wrapper .col-2-2 .features-models-wrapper {
+      .popup-wrapper .features-details-container .features-model-details-wrapper .col-2-2 .features-models-wrapper, .popup-wrapper .features-details-container .advanced-comfort-features-wrapper .col-2-2 .features-models-wrapper {
         height: 399px;
         overflow-y: auto;
         padding: 27px 20px 20px 20px; }
-        .popup-wrapper .features-details-container .features-model-details-wrapper .col-2-2 .features-models-wrapper .pagination {
+        .popup-wrapper .features-details-container .features-model-details-wrapper .col-2-2 .features-models-wrapper .pagination, .popup-wrapper .features-details-container .advanced-comfort-features-wrapper .col-2-2 .features-models-wrapper .pagination {
           font-family: 'citroenregular';
           font-size: 1.6rem;
           line-height: 20px;
           color: #3B3938;
           margin-bottom: 10px; }
-        .popup-wrapper .features-details-container .features-model-details-wrapper .col-2-2 .features-models-wrapper .pagination-content-wrapper .pagination-content-container {
+        .popup-wrapper .features-details-container .features-model-details-wrapper .col-2-2 .features-models-wrapper .pagination-content-wrapper .pagination-content-container, .popup-wrapper .features-details-container .advanced-comfort-features-wrapper .col-2-2 .features-models-wrapper .pagination-content-wrapper .pagination-content-container {
           display: none; }
-          .popup-wrapper .features-details-container .features-model-details-wrapper .col-2-2 .features-models-wrapper .pagination-content-wrapper .pagination-content-container .pagination-content {
+          .popup-wrapper .features-details-container .features-model-details-wrapper .col-2-2 .features-models-wrapper .pagination-content-wrapper .pagination-content-container .pagination-content, .popup-wrapper .features-details-container .advanced-comfort-features-wrapper .col-2-2 .features-models-wrapper .pagination-content-wrapper .pagination-content-container .pagination-content {
             font-family: 'citroenregular';
             font-weight: bold;
             font-size: 2rem;
             line-height: 22px;
             color: #3B3938;
             text-transform: none; }
-            .popup-wrapper .features-details-container .features-model-details-wrapper .col-2-2 .features-models-wrapper .pagination-content-wrapper .pagination-content-container .pagination-content .heading {
+            .popup-wrapper .features-details-container .features-model-details-wrapper .col-2-2 .features-models-wrapper .pagination-content-wrapper .pagination-content-container .pagination-content .heading, .popup-wrapper .features-details-container .advanced-comfort-features-wrapper .col-2-2 .features-models-wrapper .pagination-content-wrapper .pagination-content-container .pagination-content .heading {
               font-family: 'citroenblack';
               font-size: 3rem;
               line-height: 36px;
               color: #9D0605;
               padding: 0;
               margin-bottom: 20px; }
-            .popup-wrapper .features-details-container .features-model-details-wrapper .col-2-2 .features-models-wrapper .pagination-content-wrapper .pagination-content-container .pagination-content .description {
+            .popup-wrapper .features-details-container .features-model-details-wrapper .col-2-2 .features-models-wrapper .pagination-content-wrapper .pagination-content-container .pagination-content .description, .popup-wrapper .features-details-container .advanced-comfort-features-wrapper .col-2-2 .features-models-wrapper .pagination-content-wrapper .pagination-content-container .pagination-content .description {
               margin-bottom: 10px; }
-              .popup-wrapper .features-details-container .features-model-details-wrapper .col-2-2 .features-models-wrapper .pagination-content-wrapper .pagination-content-container .pagination-content .description:last-child {
+              .popup-wrapper .features-details-container .features-model-details-wrapper .col-2-2 .features-models-wrapper .pagination-content-wrapper .pagination-content-container .pagination-content .description:last-child, .popup-wrapper .features-details-container .advanced-comfort-features-wrapper .col-2-2 .features-models-wrapper .pagination-content-wrapper .pagination-content-container .pagination-content .description:last-child {
                 margin-bottom: 0; }
   .popup-wrapper .features-details-container .cta-wrapper {
     text-align: center; }
@@ -2289,6 +2300,8 @@ input::-webkit-inner-spin-button {
         background-color: #d0cccc;
         color: #fff;
         cursor: not-allowed; }
+  .popup-wrapper .error-messages-container {
+    display: none; }
 
 .accessories-price {
   margin-bottom: 24px; }

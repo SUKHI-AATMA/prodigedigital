@@ -137,7 +137,7 @@ $(function() {
         }
     });
 
-    $(document).find(".main-tabs-container.content-all > ul > li").eq(2).click();
+    $(document).find(".main-tabs-container.content-all > ul > li").eq(1).click();
 
     $(document).on("click", ".automobile-versions-wrapper > ul > li", function() {
         $(this).addClass("selected").siblings("li").removeClass("selected");
@@ -194,6 +194,14 @@ $(function() {
 
     $(".close-popup").on("click", function() {
         $("body").removeClass("popup-show");
+        if($("body").hasClass("display-features")) {
+            $("body").removeClass("display-features");
+        }
+        if($("body").hasClass("display-advanced-comfort-feature")) {
+            $("body").removeClass("display-advanced-comfort-feature");
+        }
+        
+        
         if($("body").hasClass("display-change-model")) {
             $("body").removeClass("display-change-model"); 
         }
@@ -215,79 +223,89 @@ $(function() {
     var currentNodeIndex = 0;
     var currentSubNodeIndex = 0;
     var initialPageNumber = 1;
+    var detectWhichFeature = '';
 
     $(document).on("click", ".tab-features-content .automobile-features-wrapper > ul > li > ul > li" , function() {
         $("body").addClass("popup-show display-features");
         currentNodeIndex = $(this).index();
         var parentNodeIndex = $(this).parents("li").index();
-        $(".popup-wrapper .features-model-details-wrapper .col-1-2 li").eq(parentNodeIndex).click();
+        //console.log(parentNodeIndex);
+        detectWhichFeature = "features-model-details-wrapper";
+        $(".popup-wrapper .features-details-container > div .col-1-2 li").eq(parentNodeIndex).click();
     });
 
-    $(document).on("click", ".popup-wrapper .features-model-details-wrapper .col-1-2 li" , function(e) {
+    $(document).on("click", ".tab-features-content .automobile-features-wrapper > .cta-advanced-comfort-feature" , function() {
+        $("body").addClass("popup-show display-advanced-comfort-feature");
+        detectWhichFeature = "advanced-comfort-features-wrapper";
+        $(".popup-wrapper .features-details-container > div .col-1-2 li").eq(0).click();
+    });
+
+    $(document).on("click", ".popup-wrapper .features-details-container > div .col-1-2 li" , function(e) {
         currentSubNodeIndex = $(this).index();
-        var lastPageNumber = $(".popup-wrapper .features-model-details-wrapper .col-2-2 .pagination-content-wrapper .pagination-content-container").eq(currentSubNodeIndex).children(".pagination-content").length;
+        var lastPageNumber = $(".popup-wrapper ." + detectWhichFeature + " .col-2-2 .pagination-content-wrapper .pagination-content-container").eq(currentSubNodeIndex).children(".pagination-content").length;
 
         e.originalEvent ? currentNodeIndex = 0 : currentNodeIndex;
-        currentNodeIndex > 0 ? $(this).parents(".features-model-details-wrapper").find(".col-2-2 .pagination .from-page").text(currentNodeIndex+1) : $(this).parents(".features-model-details-wrapper").find(".col-2-2 .pagination .from-page").text(initialPageNumber);
+        currentNodeIndex > 0 ? $(this).parents("." + detectWhichFeature + "").find(".col-2-2 .pagination .from-page").text(currentNodeIndex+1) : $(this).parents("." + detectWhichFeature + "").find(".col-2-2 .pagination .from-page").text(initialPageNumber);
         
-        $(this).parents(".features-model-details-wrapper").find(".col-2-2 .pagination .to-page").text(lastPageNumber);
+        $(this).parents("." + detectWhichFeature + "").find(".col-2-2 .pagination .to-page").text(lastPageNumber);
+        //$("." + detectWhichFeature).find(".col-1-2 > ul > li")
         $(this).addClass("active").siblings("li").removeClass("active");
-        $(".popup-wrapper .features-model-details-wrapper .col-2-2 .pagination-content-wrapper .pagination-content-container").eq(currentSubNodeIndex).show().siblings(".pagination-content-container").hide();
+        $(".popup-wrapper ." + detectWhichFeature + " .col-2-2 .pagination-content-wrapper .pagination-content-container").eq(currentSubNodeIndex).show().siblings(".pagination-content-container").hide();
 
-        $(".popup-wrapper .features-model-details-wrapper .col-2-2 .pagination-content-wrapper .pagination-content-container").eq(currentSubNodeIndex).children(".pagination-content").eq(currentNodeIndex).show().siblings(".pagination-content").hide();
+        $(".popup-wrapper ." + detectWhichFeature + " .col-2-2 .pagination-content-wrapper .pagination-content-container").eq(currentSubNodeIndex).children(".pagination-content").eq(currentNodeIndex).show().siblings(".pagination-content").hide();
 //console.dir(currentNodeIndex + "----" + initialPageNumber + "----" + lastPageNumber);
         if(currentNodeIndex+1 == lastPageNumber) {
-            $(".popup-wrapper .features-model-details-wrapper .col-2-2 .cta-wrapper .btn-next").addClass("disabled");
+            $(".popup-wrapper ." + detectWhichFeature + " .col-2-2 .cta-wrapper .btn-next").addClass("disabled");
             if(currentNodeIndex+1 > 1) {
-                $(".popup-wrapper .features-model-details-wrapper .col-2-2 .cta-wrapper .btn-prev").removeClass("disabled");
+                $(".popup-wrapper ." + detectWhichFeature + " .col-2-2 .cta-wrapper .btn-prev").removeClass("disabled");
             }
         }
         else if(currentNodeIndex+1 > initialPageNumber) {
-            $(".popup-wrapper .features-model-details-wrapper .col-2-2 .cta-wrapper .btn-prev").removeClass("disabled");
+            $(".popup-wrapper ." + detectWhichFeature + " .col-2-2 .cta-wrapper .btn-prev").removeClass("disabled");
         }
         else if(currentNodeIndex == initialPageNumber) {
-            $(".popup-wrapper .features-model-details-wrapper .col-2-2 .cta-wrapper .btn-next").addClass("disabled");
+            $(".popup-wrapper ." + detectWhichFeature + " .col-2-2 .cta-wrapper .btn-next").addClass("disabled");
         }
         else if(currentNodeIndex+1 < lastPageNumber) {
-            $(".popup-wrapper .features-model-details-wrapper .col-2-2 .cta-wrapper .btn-prev").addClass("disabled");
-            $(".popup-wrapper .features-model-details-wrapper .col-2-2 .cta-wrapper .btn-next").removeClass("disabled");
+            $(".popup-wrapper ." + detectWhichFeature + " .col-2-2 .cta-wrapper .btn-prev").addClass("disabled");
+            $(".popup-wrapper ." + detectWhichFeature + " .col-2-2 .cta-wrapper .btn-next").removeClass("disabled");
         }
 
     });
 
-    $(".popup-wrapper .features-model-details-wrapper .col-2-2 .cta-wrapper .btn-next").on("click", function() {
+    $(".popup-wrapper .features-details-container .col-2-2 .cta-wrapper .btn-next").on("click", function() {
         if($(this).hasClass("disabled")) {
             return false;
         }
         
         $(this).siblings(".btn-prev").removeClass("disabled");
-        if($(".popup-wrapper .features-model-details-wrapper .col-2-2 .pagination-content-wrapper .pagination-content-container").eq(currentSubNodeIndex).children(".pagination-content").eq(currentNodeIndex).next(".pagination-content").length) {
+        if($(".popup-wrapper ." + detectWhichFeature + " .col-2-2 .pagination-content-wrapper .pagination-content-container").eq(currentSubNodeIndex).children(".pagination-content").eq(currentNodeIndex).next(".pagination-content").length) {
             currentNodeIndex += 1;
-            $(".popup-wrapper .features-model-details-wrapper .col-2-2 .pagination-content-wrapper .pagination-content-container").eq(currentSubNodeIndex).children(".pagination-content").eq(currentNodeIndex).show().siblings(".pagination-content").hide();
+            $(".popup-wrapper ." + detectWhichFeature + " .col-2-2 .pagination-content-wrapper .pagination-content-container").eq(currentSubNodeIndex).children(".pagination-content").eq(currentNodeIndex).show().siblings(".pagination-content").hide();
 
-            $(this).parents(".features-model-details-wrapper").find(".col-2-2 .pagination .from-page").text(currentNodeIndex+1);
+            $(this).parents("." + detectWhichFeature + "").find(".col-2-2 .pagination .from-page").text(currentNodeIndex+1);
 
-            if($(".popup-wrapper .features-model-details-wrapper .col-2-2 .pagination-content-wrapper .pagination-content-container").eq(currentSubNodeIndex).children(".pagination-content").eq(currentNodeIndex).next(".pagination-content").length <= 0) {
+            if($(".popup-wrapper ." + detectWhichFeature + " .col-2-2 .pagination-content-wrapper .pagination-content-container").eq(currentSubNodeIndex).children(".pagination-content").eq(currentNodeIndex).next(".pagination-content").length <= 0) {
                 $(this).addClass("disabled");
             }
         }
     });
 
-    $(".popup-wrapper .features-model-details-wrapper .col-2-2 .cta-wrapper .btn-prev").on("click", function() {
+    $(".popup-wrapper .features-details-container .col-2-2 .cta-wrapper .btn-prev").on("click", function() {
         if($(this).hasClass("disabled")) {
             return false;
         }
         
         $(this).siblings(".btn-next").removeClass("disabled");
-        if($(".popup-wrapper .features-model-details-wrapper .col-2-2 .pagination-content-wrapper .pagination-content-container").eq(currentSubNodeIndex).children(".pagination-content").eq(currentNodeIndex).prev(".pagination-content").length) {
-            $(this).parents(".features-model-details-wrapper").find(".col-2-2 .pagination .from-page").text(currentNodeIndex);
+        if($(".popup-wrapper ." + detectWhichFeature + " .col-2-2 .pagination-content-wrapper .pagination-content-container").eq(currentSubNodeIndex).children(".pagination-content").eq(currentNodeIndex).prev(".pagination-content").length) {
+            $(this).parents("." + detectWhichFeature + "").find(".col-2-2 .pagination .from-page").text(currentNodeIndex);
 
             currentNodeIndex -= 1;
-            $(".popup-wrapper .features-model-details-wrapper .col-2-2 .pagination-content-wrapper .pagination-content-container").eq(currentSubNodeIndex).children(".pagination-content").eq(currentNodeIndex).show().siblings(".pagination-content").hide();
+            $(".popup-wrapper ." + detectWhichFeature + " .col-2-2 .pagination-content-wrapper .pagination-content-container").eq(currentSubNodeIndex).children(".pagination-content").eq(currentNodeIndex).show().siblings(".pagination-content").hide();
 
             
 
-            if($(".popup-wrapper .features-model-details-wrapper .col-2-2 .pagination-content-wrapper .pagination-content-container").eq(currentSubNodeIndex).children(".pagination-content").eq(currentNodeIndex).prev(".pagination-content").length <= 0) {
+            if($(".popup-wrapper ." + detectWhichFeature + " .col-2-2 .pagination-content-wrapper .pagination-content-container").eq(currentSubNodeIndex).children(".pagination-content").eq(currentNodeIndex).prev(".pagination-content").length <= 0) {
                 $(this).addClass("disabled");
             }
         }
