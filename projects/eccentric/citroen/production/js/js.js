@@ -231,17 +231,22 @@ $(function() {
         var parentNodeIndex = $(this).parents("li").index();
         //console.log(parentNodeIndex);
         detectWhichFeature = "features-model-details-wrapper";
-        $(".popup-wrapper .features-details-container > div .col-1-2 li").eq(parentNodeIndex).click();
+        $(".popup-wrapper .features-details-container > ."+ detectWhichFeature +" .col-1-2 li").eq(parentNodeIndex).click();
     });
 
     $(document).on("click", ".tab-features-content .automobile-features-wrapper > .cta-advanced-comfort-feature" , function() {
         $("body").addClass("popup-show display-advanced-comfort-feature");
         detectWhichFeature = "advanced-comfort-features-wrapper";
-        $(".popup-wrapper .features-details-container > div .col-1-2 li").eq(0).click();
+        currentNodeIndex = 0;
+        initialPageNumber = 1;
+        $(".popup-wrapper .features-details-container > ."+ detectWhichFeature +" .col-1-2 li").eq(0).click();
     });
 
     $(document).on("click", ".popup-wrapper .features-details-container > div .col-1-2 li" , function(e) {
         currentSubNodeIndex = $(this).index();
+        //console.log($(this).text());
+        $(this).text() == "TECHNOLOGY" ? $(".advanced-comfort-features-wrapper .features-models-wrapper .pagination > p").show() : $(".advanced-comfort-features-wrapper .features-models-wrapper .pagination > p").hide();
+
         var lastPageNumber = $(".popup-wrapper ." + detectWhichFeature + " .col-2-2 .pagination-content-wrapper .pagination-content-container").eq(currentSubNodeIndex).children(".pagination-content").length;
 
         e.originalEvent ? currentNodeIndex = 0 : currentNodeIndex;

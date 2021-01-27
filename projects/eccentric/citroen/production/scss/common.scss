@@ -266,6 +266,10 @@ body {
             .features-details-container {
                 display: block;
 
+                .heading-advanced-comfort {
+                    display: none;
+                }
+
                 .features-model-details-wrapper {
                     display: flex;
                 }
@@ -276,8 +280,44 @@ body {
             .features-details-container {
                 display: block;
 
+                & > .heading:not(.heading-advanced-comfort) {
+                    display: none;
+                }
+
                 .advanced-comfort-features-wrapper {
                     display: flex;
+
+                    .col-1-2 {
+                        ul {
+                            li {
+                                &.active {
+                                    &:before {
+                                        background-color: #2B3B45;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .col-2-2 {
+                        .features-models-wrapper {
+                            .pagination-content-wrapper {
+                                .pagination-content-container {
+                                    .pagination-content {
+                                        .heading {
+                                            color: #2B3B45;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .cta-wrapper {
+                        .cta-button:not(.disabled) {
+                            background-color: #2B3B45;
+                        }
+                    }
                 }
             }
         }
@@ -1460,6 +1500,40 @@ input::-webkit-inner-spin-button {
             position: relative;
             overflow: hidden;
             height: 100%;
+
+            .cta-advanced-comfort-feature {
+                background-color: #2B3B45;
+                border: 1px solid #F37032;
+                box-sizing: border-box;
+                border-radius: 64px;
+                padding: 16px 17px 16px 9px;
+                margin-bottom: 16px;
+
+                a {
+                    color: #fff;
+                    background: url('../images/icon-advanced-comfort-feature.svg') no-repeat 0 0;
+                    padding-left: 47px;
+                    padding-right: 47px;
+                    font-size: 1.5rem;
+                    display: flex;
+                    align-items: center;
+                    line-height: 90%;
+                    height: 41px;
+                    position: relative;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        width: 8px;
+                        height: 8px;
+                        border-top: 1px solid #fff;
+                        border-right: 1px solid #fff;
+                        transform: translateY(-50%) rotate(45deg);
+                    }
+                }
+            }
 
             ul {
                 li {
@@ -3197,7 +3271,7 @@ input::-webkit-inner-spin-button {
 
     .heading {
         font-family: 'citroenblack';
-        font-weight: 900;
+        // font-weight: 900;
         font-size: 2.4rem;
         line-height: 29px;
         padding: 15px 30px;
@@ -3420,6 +3494,26 @@ input::-webkit-inner-spin-button {
                         line-height: 20px;
                         color: #3B3938;
                         margin-bottom: 10px;
+                        display: flex;
+
+                        & > p {
+                            font-family: 'citroenbold';
+                            margin-left: 10px;
+                            padding-left: 10px;
+                            position: relative;
+                            color: #000;
+                            display: none;
+
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 1px;
+                                height: 21px;
+                                background-color: #2B3B45;
+                            }
+                        }
                     }
 
                     .pagination-content-wrapper {
