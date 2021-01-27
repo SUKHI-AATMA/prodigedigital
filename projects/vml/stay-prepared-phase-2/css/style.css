@@ -562,6 +562,7 @@ header .button-wrapper a {
     height: 120px;
     background-repeat: no-repeat;
     background-position: top left;
+    background-size: cover;
 }
 
 .covid-19-transmission .transmission-causes .contact-transmission:before {
@@ -692,6 +693,7 @@ header .button-wrapper a {
     height: 100%;
     transform: translateX(-50%);
     width: 120px;
+    background-size: contain !important;
 }
 
 .grid-structure .box.sanitising-surfaces .box-content > span:before {
@@ -1047,4 +1049,545 @@ footer li {
 
 .copyright-text > span {
     margin-left: 30px;
+}
+
+.contextual-pages .main-content-wrapper .container {
+  max-width: 984px;
+}
+
+.contextual-pages header {
+  padding-bottom: 0;
+  margin-bottom: 80px;
+  box-shadow: 0 5px 13px -1px #1B181B26;
+}
+
+.contextual-pages header .navigation > .link-button {
+  font-size: 1.6rem;
+  line-height: 42px;
+  border: none;
+  padding: 0;
+}
+
+.contextual-pages header .navigation > .link-button:not(:first-child) {
+  margin-left: 41px;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row {
+  margin-bottom: 80px;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row h1 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  color: #6F2C91;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 42px;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row h1 > span {
+  text-transform: none;
+  font-size: 1em;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #6F2C91;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row .heading {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 42px;
+  color: #6F2C91;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row .heading
+{
+  margin-bottom: 32px;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row .description:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row ol > li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row .description.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row .description,
+.contextual-pages .main-content-wrapper > .container > .row ol {
+  font-size: 2rem;
+  color: #333333;
+  line-height: 28px;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row ol {
+  padding-left: 50px;
+  margin-bottom: 0;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row ol > li {
+  list-style: decimal;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row .description a {
+  color: #00A99E;
+}
+
+.contextual-pages .our-partners-section .container {
+  padding: 0 200px;
+}
+
+.for-tablet {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .for-tablet {
+    display: block;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  header > .container,
+  .button-wrapper > .container,
+  .banner-section .container,
+  .covid-19-transmission .container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  header {
+    padding-bottom: 56px;
+  }
+
+  header > .container {
+    padding-top: 18px;
+    padding-bottom: 21px;
+  }
+
+  header > .container .row > .col-md-6:first-child a {
+    max-width: 192px;
+  }
+
+  header > .container .row > .col-md-6 a {
+    max-width: 128px;
+  }
+
+  header > .container .row > .col-md-6 a {
+    display: block;
+  }
+
+  header > .container .row > .col-md-6 a img {
+    width: fit-content;
+    width: -moz-fit-content;
+    max-width: 100%;
+  }
+
+  header .button-wrapper {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  header .button-wrapper a {
+    font-size: 1.6rem;
+    letter-spacing: 0.8px;
+    width: 100%;
+    background-size: auto;
+  }
+
+  .banner-section .container {
+    padding-right: 402px;
+  }
+
+  .banner-section .container .heading {
+    font-size: 2.8rem;
+    line-height: 36px;
+  }
+
+  .banner-section .container .description {
+    font-size: 1.8rem;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  .banner-section .container .button-wrapper > a {
+    font-size: 1.4rem;
+    padding: 12px 40px;
+  }
+
+  .banner-section.owl-carousel .owl-dots {
+    bottom: 21px;
+  }
+
+  .banner-section.owl-carousel .owl-dots > .owl-dot {
+    width: 10px;
+    height: 10px;
+    border-width: 1px;
+  }
+
+  .banner-section.owl-carousel .owl-dots > .owl-dot:not(:first-child) {
+    margin-left: 10px;
+  }
+
+  .about-project-safeguard,
+  .covid-19-transmission {
+    padding: 70px 0 80px 0;
+  }
+
+  .about-project-safeguard h1,
+  .covid-19-transmission h2,
+  .research-findings h2,
+  .safeguard-our-community h2,
+  .get-in-touch-section h2,
+  .faq-section h2 {
+    font-size: 3.2rem;
+  }
+
+  .about-project-safeguard h1 {
+    margin-bottom: 20px;
+  }
+
+  .container .description {
+    font-size: 1.6rem;
+    line-height: 24px;
+  }
+
+  .covid-19-transmission .description {
+    padding: 0;
+  }
+
+  .covid-19-transmission .row > .description {
+    font-size: 1.8rem;
+    line-height: 26px;
+  }
+
+  .covid-19-transmission .transmission-causes {
+    max-width: 548px;
+    margin: 33px auto 0 auto;
+    padding: 40px 45px;
+  }
+
+  .covid-19-transmission .transmission-causes > li:before {
+    width: 100px;
+    height: 100px;
+  }
+
+  .covid-19-transmission .transmission-causes > li {
+    padding-left: 126px;
+    min-height: auto;
+  }
+
+  .covid-19-transmission .transmission-causes .heading {
+    font-size: 1.8rem;
+    line-height: 26px;
+  }
+
+  .covid-19-transmission .transmission-causes > li:not(:last-child) {
+    margin-bottom: 34px;
+  }
+  
+  .covid-19-transmission .transmission-causes .description,
+  
+  .grid-structure .box .description {
+    font-size: 1.6rem;
+    line-height: 24px;
+  }
+
+  .research-findings {
+    padding: 80px 0 70px 0;
+  }
+
+  .research-findings .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .research-findings h2 {
+    line-height: 40px;
+    margin-bottom: 32px;
+  }
+
+  .grid-structure:not(.how-it-works-grid) {
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  .grid-structure:not(.how-it-works-grid) .box {
+    width: 354px;
+    padding: 30px;
+    padding-right: 20px;
+  }
+
+  .grid-structure:not(.how-it-works-grid) .box .heading {
+    font-size: 2rem;
+    margin-bottom: 6px;
+  }
+
+  .grid-structure .box .box-content {
+      padding-left: 137px;
+  }
+
+  .grid-structure .box .box-content > span {
+    width: 117px;
+  }
+
+  .grid-structure .box .box-content > span:before {
+    width: 110px;
+  }
+
+  .grid-structure:not(.how-it-works-grid) .box .box-content {
+    height: 150px;
+  }
+
+  .grid-structure .box .description > br:not(.for-tablet) {
+    display: none;
+  }
+
+  .grid-structure.research-findings-grid {
+    margin-bottom: 70px;
+  }
+
+  .grid-structure.how-it-works-grid {
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+  }
+
+  .grid-structure.how-it-works-grid .box {
+    height: 280px;
+    width: 234px;
+    padding: 18px;
+    position: relative;
+  }
+
+  .grid-structure.how-it-works-grid .box > .box-content {
+    position: static;
+  }
+  
+  .grid-structure.how-it-works-grid .box > .box-content > .heading {
+    font-size: 2.4rem;
+    line-height: 26px;
+  }
+
+  .grid-structure.how-it-works-grid .box > .box-content > .button-wrapper {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+  }
+
+  .grid-structure.how-it-works-grid .box .button-wrapper a {
+    max-width: 199px;
+  }
+
+  .safeguard-our-community {
+    padding: 50px 0;
+  }
+
+  .safeguard-our-community h2 {
+    line-height: 48px;
+    margin-bottom: 20px;
+  }
+
+  .safeguard-our-community .description {
+    font-size: 1.8rem;
+    line-height: 26px;
+  }
+
+  .safeguard-our-community .button-wrapper > a {
+    font-size: 1.7rem;
+    padding: 15px 54px;
+  }
+
+  .get-in-touch-section {
+    padding: 70px 55px;
+  }
+
+  .get-in-touch-section .general-enquiry-section {
+    padding-bottom: 70px;
+    margin-bottom: 70px;
+  }
+
+  .get-in-touch-section h2 {
+    margin-bottom: 20px;
+  }
+
+  .get-in-touch-section .description {
+    font-size: 1.8rem;
+    line-height: 34px;
+  }
+
+  .get-in-touch-section .container > .row:last-child .description {
+    font-size: 1.6rem;
+    line-height: 28px;
+  }
+
+  .get-in-touch-section .container > .row:last-child .description > br {
+    display: none;
+  }
+
+  .our-partners-section .heading {
+    font-size: 1.6rem;
+    line-height: 20px;
+    margin-bottom: 50px;
+  }
+
+  .brought-to-you-section .row [class*="col-md"]:first-child > a,
+  .brought-to-you-section .row [class*="col-md"]:nth-child(2) > a {
+    max-width: 172px;
+  }
+
+  .brought-to-you-section .row [class*="col-md"]:last-child > a {
+    max-width: 164px;
+  }
+
+  .our-partners-section .container {
+    padding: 0 63px;
+  }
+
+  .our-partners-section .container .row:nth-child(2) {
+    flex-wrap: wrap;
+  }
+
+  /* .our-partners-section .row .col-md-3:first-child,
+  .our-partners-section .row .col-md-3:nth-child(2),
+  .our-partners-section .row .col-md-3:nth-child(3) {
+    max-width: 172px;
+  }
+
+  .our-partners-section .row .col-md-3:last-child {
+    max-width: 124px;
+  } */
+
+  .our-partners-section .row .col-md-3 {
+    width: 50%;
+    max-width: 100% !important;
+    margin-top: 36px;
+  }
+
+  .our-partners-section .row .col-md-3:first-child,
+  .our-partners-section .row .col-md-3:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .our-partners-section .row .col-md-3:first-child > a,
+  .our-partners-section .row .col-md-3:nth-child(2) > a,
+  .our-partners-section .row .col-md-3:nth-child(3) > a {
+    max-width: 172px;
+  }
+
+  .our-partners-section .row .col-md-3:last-child > a {
+    max-width: 124px;
+  }
+
+  /* styling for contextual pages starts */
+  .contextual-pages .main-content-wrapper .container {
+    max-width: 670px;
+    padding: 0 24px;
+  }
+
+  .contextual-pages .main-content-wrapper > .container > .row,
+  .contextual-pages .main-content-wrapper > .container > .row .heading,
+  .contextual-pages .main-content-wrapper > .container > .row .description:not(:last-child),
+  .contextual-pages .main-content-wrapper > .container > .row ol > li:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  .contextual-pages .main-content-wrapper > .container > .row h1 {
+    font-size: 3.2rem;
+    line-height: 42px;
+    margin-bottom: 40px;
+  }
+
+  .contextual-pages .main-content-wrapper > .container > .row .heading {
+    font-size: 2.4rem;
+    line-height: 42px;
+  }
+
+  .contextual-pages .main-content-wrapper > .container > .row .description,
+  .contextual-pages .main-content-wrapper > .container > .row ol {
+    font-size: 1.4rem;
+    line-height: 22px;
+  }
+
+  .contextual-pages .main-content-wrapper > .container > .row .description,
+  .contextual-pages .main-content-wrapper > .container > .row ol {
+    margin-bottom: 40px;
+  }
+
+  .contextual-pages .main-content-wrapper > .container > .row h2 {
+    font-size: 2.8rem;
+  }
+
+  .contextual-pages header .container {
+    padding: 33px 21px 33px 24px;
+  }
+
+  .contextual-pages header {
+    margin-bottom: 64px;
+  }
+
+  .contextual-pages .main-content-wrapper > .container > .row h1 {
+    line-height: 36px;
+  }
+
+  .contextual-pages .main-content-wrapper > .container > .row .heading {
+    line-height: 30px;
+  }
+  /* styling for contextual pages ends */
+}
+
+@media only screen and (max-width: 640px) {
+  header > .container,
+  .button-wrapper > .container,
+  .banner-section .container,
+  .covid-19-transmission .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  header {
+    padding-bottom: 84px;
+  }
+
+  header > .container .row > .col-md-6 {
+    width: 50%;
+  }
+
+  header .button-wrapper {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  header .button-wrapper a {
+    font-size: 1.2rem;
+    letter-spacing: 0;
+  }
+
+  header .button-wrapper a > br {
+    display: none;
+  }
+
+
+  /* styling for contextual pages starts */
+  .contextual-pages .main-content-wrapper > .container > .row .description,
+  .contextual-pages .main-content-wrapper > .container > .row ol {
+    font-size: 1.6rem;
+  }
+  /* styling for contextual pages ends */
 }

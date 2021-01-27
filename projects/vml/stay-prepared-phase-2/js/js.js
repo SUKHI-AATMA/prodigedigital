@@ -43,9 +43,9 @@ $(function() {
                 dots: true,
                 nav: false,
                 loop: true,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                autoplayHoverPause: true,
+                //autoplay: true,
+                //autoplayTimeout: 5000,
+                //autoplayHoverPause: true,
                 center: true,
                 responsive: {
                     0: {
