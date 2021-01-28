@@ -30,10 +30,14 @@ $(function() {
     if($(".banner-section").length) {
         var bannerSectionHeight = 658; // as per 1440px
         var baseWidth = 1440;
+        var bannerSectionHeight_mobile = 375; // as per 375px
+        var baseWidth_mobile = 375;
 
-        if($(window).width() != baseWidth) {
-            console.log(123);
+        if($(window).width() >= 640 && $(window).width() != baseWidth) {
             $(".banner-section .carousel-content").css("height", ($(window).width()*bannerSectionHeight)/baseWidth + "px");
+        }
+        else {
+            $(".banner-section .carousel-content").css("height", ($(window).width()*bannerSectionHeight_mobile)/baseWidth_mobile + "px");
         }
 
         $(".banner-section .carousel-content").each(function() {
