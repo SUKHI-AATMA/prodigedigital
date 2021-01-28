@@ -377,11 +377,11 @@ header .button-wrapper a {
     color: #FFFFFF;
     font-size: 1.7rem;
     font-weight: 700;
-    line-height: 18px;
-    letter-spacing: 0.25px;
+    line-height: 20px;
+    letter-spacing: 1.2px;
     background: url('../images/icon-arrow-white-circle.svg') no-repeat 100% 50%;
     background-size: contain;
-    padding-right: 28px;
+    padding-right: 33px;
 }
 
 .banner-section {
@@ -479,7 +479,7 @@ header .button-wrapper a {
 .banner-section .container .description {
     font-size: 3.2rem;
     line-height: 40px;
-    margin-bottom: 49px;
+    /* margin-bottom: 49px; */
     color: #FFFFFF;
 }
 
@@ -491,6 +491,8 @@ header .button-wrapper a {
     font-size: 1.6rem;
     padding: 15px 80px;
     transition: 0.5s all ease;
+    display: none;
+    margin-top: 49px;
 }
 
 .banner-section .container .button-wrapper > a:hover {
@@ -651,7 +653,7 @@ header .button-wrapper a {
 
 .grid-structure:not(.how-it-works-grid) .box .box-content {
     margin-bottom: 31px;
-    height: 164px;
+    height: 190px;
 }
 
 .grid-structure .box .button-wrapper a {
@@ -1003,14 +1005,23 @@ cursor: default;
     transition: 0.5s all ease;
 }
 
+.our-partners-section.brought-to-you-section .row:nth-child(2) {
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.our-partners-section.brought-to-you-section .row [class*="col-md"] {
+  align-items: center;
+}
+
 
 
 .brought-to-you-section .row [class*='col-md']:first-child > a {
-  max-width: 246px;
+  max-width: 217px;
 }
 
 .brought-to-you-section .row [class*='col-md']:last-child > a {
-    max-width: 218px;
+    max-width: 249px;
 }
 
 .our-partners-section .row .col-md-3:first-child {
@@ -1142,7 +1153,11 @@ footer li {
 }
 
 .contextual-pages .main-content-wrapper > .container > .row .description a {
-  color: #00A99E;
+  color: #002F85;
+}
+
+.contextual-pages .main-content-wrapper > .container > .row .description a:hover {
+  text-decoration: underline;
 }
 
 .contextual-pages .our-partners-section .container {
@@ -1363,7 +1378,7 @@ footer li {
   }
 
   .grid-structure:not(.how-it-works-grid) .box .box-content {
-    height: 150px;
+    height: 155px;
   }
 
   .grid-structure .box .description > br:not(.for-tablet) {
