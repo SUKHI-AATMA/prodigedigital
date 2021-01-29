@@ -831,7 +831,7 @@ cursor: default;
 }
 
 .get-in-touch-section .description {
-    font-size: 2.4rem;
+    font-size: 2.3rem;
     line-height: 38px;
 }
 
@@ -1104,7 +1104,7 @@ footer li {
   font-weight: 700;
   color: #6F2C91;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin-bottom: 20px;
 }
 
@@ -1479,7 +1479,7 @@ footer li {
   }
 
   .brought-to-you-section .row [class*="col-md"]:last-child > a {
-    max-width: 164px;
+    max-width: 198px;
   }
 
   .our-partners-section .container {
@@ -1521,6 +1521,14 @@ footer li {
     max-width: 124px;
   }
 
+  footer ul {
+    width: 100% !important;
+  }
+  
+  footer li:first-child {
+    margin-left: 0;
+  }
+
   /* styling for contextual pages starts */
   .contextual-pages .main-content-wrapper .container {
     max-width: 670px;
@@ -1560,9 +1568,9 @@ footer li {
     font-size: 2.8rem;
   }
 
-  .contextual-pages header .container {
+  /* .contextual-pages header .container {
     padding: 33px 21px 33px 24px;
-  }
+  } */
 
   .contextual-pages header {
     margin-bottom: 64px;
@@ -1574,6 +1582,10 @@ footer li {
 
   .contextual-pages .main-content-wrapper > .container > .row .heading {
     line-height: 30px;
+  }
+
+  .contextual-pages .our-partners-section .container {
+      padding: 0 80px;
   }
   /* styling for contextual pages ends */
 }
@@ -1609,7 +1621,7 @@ footer li {
   }
 
   header .button-wrapper a {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     letter-spacing: 0;
   }
 
@@ -1699,7 +1711,13 @@ footer li {
   }
 
   .grid-structure:not(.how-it-works-grid) .box .box-content {
-    height: 153px;
+    /* height: 153px; */
+    height: auto;
+  }
+
+  .grid-structure .box.air-filters .box-content .heading > br,
+  .grid-structure .box.plant-natural-fibre .box-content .heading > br {
+    display: none;
   }
 
   .grid-structure .box .box-content {
@@ -1794,11 +1812,61 @@ footer li {
     padding-bottom: 48px;
   }
 
+  footer ul {
+    width: 95% !important;
+  }
+  
+  footer li:first-child {
+    width: 100%;
+  }
+  
+  footer li:nth-child(2), footer li:last-child {
+    margin-left: 0;
+  }
+
 
   /* styling for contextual pages starts */
   .contextual-pages .main-content-wrapper > .container > .row .description,
   .contextual-pages .main-content-wrapper > .container > .row ol {
     font-size: 1.6rem;
   }
+
+  .contextual-pages .our-partners-section .container .col-md-6:first-child {
+    margin-bottom: 30px;
+  }
+
+  .contextual-pages .our-partners-section .row [class*="col-md"] > a {
+    width: 150px;
+  }
+
   /* styling for contextual pages ends */
 }
+
+@media only screen and (min-width: 768px) {
+  .covid-19-transmission .transmission-causes > li:before {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .contextual-pages .our-partners-section .row [class*="col-md"] > a {
+    width: 200px;
+  }
+}
+
+
+@media only screen and (max-width: 360px) {
+  .grid-structure.how-it-works-grid .box {
+    width: 310px;
+    height: 276px;
+  }
+
+  .safeguard-our-community {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .safeguard-our-community .description > .for-tablet {
+    display: none;
+  }
+}
+
