@@ -8,6 +8,9 @@ $(function() {
         if($(window).width() >= 640 && $(window).width() != baseWidth) {
             $(".banner-section .carousel-content").css("height", ($(window).width()*bannerSectionHeight)/baseWidth + "px");
         }
+        else if($(window).width() == baseWidth) {
+            $(".banner-section .carousel-content").css("height", bannerSectionHeight + "px");
+        }
         else {
             $(".banner-section .carousel-content").css("height", ($(window).width()*bannerSectionHeight_mobile)/baseWidth_mobile + "px");
         }
@@ -15,6 +18,9 @@ $(function() {
         $(window).resize(function(){
             if($(window).width() >= 640 && $(window).width() != baseWidth) {
                 $(".banner-section .carousel-content").css("height", ($(window).width()*bannerSectionHeight)/baseWidth + "px");
+            }
+            else if($(window).width() == baseWidth) {
+                $(".banner-section .carousel-content").css("height", bannerSectionHeight + "px");
             }
             else {
                 $(".banner-section .carousel-content").css("height", ($(window).width()*bannerSectionHeight_mobile)/baseWidth_mobile + "px");
