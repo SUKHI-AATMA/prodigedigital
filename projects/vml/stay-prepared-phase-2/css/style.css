@@ -2020,6 +2020,10 @@ footer li {
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: landscape) {
+  header .button-wrapper .for-tablet {
+    display: none;
+  }
+  
   .covid-19-transmission .transmission-causes {
     max-width: 80%;
   }
@@ -2035,7 +2039,24 @@ footer li {
   }
 }
 
+@media only screen and (max-width: 900px) and (min-width: 768px) and (orientation: landscape) {
+  .grid-structure:not(.how-it-works-grid) {
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  
+}
+
 @media only screen and (max-width: 767px) and (orientation: landscape) {
+  
+
+  .covid-19-transmission .transmission-causes > li:before {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   .about-project-safeguard .for-tablet,
   .covid-19-transmission .for-tablet:first-child {
     display: none;
@@ -2062,6 +2083,11 @@ footer li {
 
   .our-partners-section.brought-to-you-section .row [class*="col-md"] {
     width: 50%;
+  }
+
+  .grid-structure.how-it-works-grid .box .button-wrapper a {
+    max-width: 80%;
+    padding: 8px 0;
   }
 }
 
