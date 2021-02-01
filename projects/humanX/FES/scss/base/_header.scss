@@ -205,12 +205,13 @@ header{
                             width: calc(100% / 5 - 24px) !important;
                             // width: 19%;
 
-                            &:nth-child(2){
+                            &:nth-child(2),
+                            &:nth-child(4){
                                 width: 294px !important;
 
                                 ul.dropdown{
                                     li{
-                                        width: 212px;
+                                        width: 222px;
                                     }
                                 }
                             }
@@ -389,7 +390,12 @@ header{
                                 width: 102px;
                             }
                             &:nth-child(4){
-                                width: 94px;
+                                width: 125px;
+                                ul.dropdown{
+                                    li{
+                                        width: 210px;
+                                    }
+                                }
                             }
                             &:last-child{
                                 padding-right: 0;
@@ -484,7 +490,7 @@ header{
                                 box-shadow: 0 5px 10px 0 rgba(206,206,206,0.3);
 
                                 &:hover > * {
-                                    opacity: 0.4;
+                                    opacity: 0.6;
                                 }
                                 &:hover > *:hover {
                                     opacity: 1;
@@ -785,7 +791,8 @@ header{
         font-size: 18px;
         line-height: 26px;
     }
-    header .container .flex-wrap .menu-wrap.open nav ul.menu>li:nth-child(2){
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li:nth-child(2),
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li:nth-child(4){
         width: 100%!important;
     }
     header .container .flex-wrap .menu-wrap.open nav ul.menu>li:before{
