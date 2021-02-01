@@ -924,17 +924,17 @@ if ($('.sec-map').length) {
 
     window.onload = function() {
         var svgHotSpotId = "";
-        document.addEventListener("click", function(e) {
-            var getParentNode = e.target.nodeName;
+        // document.addEventListener("click", function(e) {
+        //     var getParentNode = e.target.nodeName;
 
-            if (getParentNode.indexOf("polygon") == -1) {
-                if (e.target.id == "Stroke-26" || e.target.id == "Combined-Shape") {
-                    return false;
-                }
-                document.querySelectorAll(".mapData")[0].style.opacity = 0;
-                document.querySelectorAll(".mapData")[0].style.zIndex = "0";
-            }
-        });
+        //     if (getParentNode.indexOf("polygon") == -1) {
+        //         if (e.target.id == "Stroke-26" || e.target.id == "Combined-Shape") {
+        //             return false;
+        //         }
+        //         document.querySelectorAll(".mapData")[0].style.opacity = 0;
+        //         document.querySelectorAll(".mapData")[0].style.zIndex = "0";
+        //     }
+        // });
 
         document.querySelectorAll(".map-wrapper")[0].getElementsByTagName("svg")[0].addEventListener("click", function(e) {
             console.log(e.target.id + "|||" + e.target.parentNode.id);
@@ -944,14 +944,14 @@ if ($('.sec-map').length) {
             } else {
                 return false;
             }
-            // console.log(svgHotSpotId);
-            //console.log(targetId);
+            console.log(svgHotSpotId);
+            console.log(targetId);
             //console.log(e.clientX);
             var hotspotClickData = "";
             hotspotClickData = jsonData.filter(function(i) {
                 return i.id == targetId;
             });
-            // console.log(hotspotClickData);
+            console.log(hotspotClickData);
             if (hotspotClickData == "") {
                 document.querySelectorAll(".mapData")[0].style.opacity = 0;
                 return false;

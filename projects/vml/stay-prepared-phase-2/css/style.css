@@ -1176,7 +1176,7 @@ footer li {
 } */
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1199px) and (min-width: 1025px) {
   .for-tablet {
     display: block;
   }
@@ -1204,6 +1204,155 @@ footer li {
   header > .container {
     padding-top: 18px;
     padding-bottom: 21px;
+  }
+
+  header > .container .row > .col-md-6 {
+    width: 50%;
+  }
+
+  header > .container .row > .col-md-6:first-child a {
+    max-width: 192px;
+  }
+
+  header > .container .row > .col-md-6 a {
+    max-width: 128px;
+  }
+
+  header > .container .row > .col-md-6 a {
+    display: block;
+  }
+
+  header > .container .row > .col-md-6 a img {
+    width: fit-content;
+    width: -moz-fit-content;
+    max-width: 100%;
+  }
+
+  header .button-wrapper {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  header .button-wrapper a {
+    font-size: 1.6rem;
+    letter-spacing: 0.8px;
+    width: 100%;
+    background-size: auto;
+  }
+
+  .research-findings .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .grid-structure:not(.how-it-works-grid) {
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  .grid-structure:not(.how-it-works-grid) .box {
+    width: auto;
+    padding: 30px;
+    padding-right: 20px;
+  }
+
+  .grid-structure:not(.how-it-works-grid) .box .heading {
+    font-size: 2rem;
+    margin-bottom: 6px;
+  }
+
+  .grid-structure .box .box-content {
+      padding-left: 137px;
+  }
+
+  .grid-structure .box .box-content > span {
+    width: 117px;
+  }
+
+  .grid-structure .box .box-content > span:before {
+    width: 110px;
+  }
+
+  .grid-structure:not(.how-it-works-grid) .box .box-content {
+    height: 155px;
+  }
+
+  .grid-structure .box .description > br:not(.for-tablet) {
+    display: none;
+  }
+
+  .grid-structure.research-findings-grid {
+    margin-bottom: 70px;
+  }
+
+  .grid-structure.how-it-works-grid {
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+  }
+
+  .grid-structure.how-it-works-grid .box {
+    height: 280px;
+    width: auto;
+    padding: 18px;
+    position: relative;
+  }
+
+  .grid-structure.how-it-works-grid .box > .box-content {
+    position: static;
+  }
+  
+  .grid-structure.how-it-works-grid .box > .box-content > .heading {
+    font-size: 2.4rem;
+    line-height: 26px;
+    /* margin-bottom: 0; */
+  }
+
+  .grid-structure.how-it-works-grid .box > .box-content > .button-wrapper {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+  }
+
+  .grid-structure.how-it-works-grid .box .button-wrapper a {
+    max-width: 199px;
+  }
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+  .for-tablet {
+    display: block;
+  }
+
+  .for-mobile {
+    display: none;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  header > .container,
+  .button-wrapper > .container,
+  .banner-section .container,
+  .covid-19-transmission .container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  header {
+    padding-bottom: 56px;
+  }
+
+  header > .container {
+    padding-top: 18px;
+    padding-bottom: 21px;
+  }
+
+  header > .container .row > .col-md-6 {
+    width: 50%;
   }
 
   header > .container .row > .col-md-6:first-child a {
@@ -1355,7 +1504,7 @@ footer li {
   }
 
   .grid-structure:not(.how-it-works-grid) .box {
-    width: 354px;
+    width: auto;
     padding: 30px;
     padding-right: 20px;
   }
@@ -1611,9 +1760,9 @@ footer li {
     padding-bottom: 84px;
   }
 
-  header > .container .row > .col-md-6 {
+  /* header > .container .row > .col-md-6 {
     width: 50%;
-  }
+  } */
 
   header .button-wrapper {
     padding-top: 15px;
@@ -1870,7 +2019,54 @@ footer li {
   }
 }
 
-@media only screen and (max-width: 1024px) and (min-width: 768px) {
+@media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: landscape) {
+  .covid-19-transmission .transmission-causes {
+    max-width: 80%;
+  }
+
+  .grid-structure:not(.how-it-works-grid) {
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  .grid-structure:not(.how-it-works-grid) .box {
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  .about-project-safeguard .for-tablet,
+  .covid-19-transmission .for-tablet:first-child {
+    display: none;
+  }
+
+  .for-mobile {
+    display: block !important;
+  }
+
+  .grid-structure .box.air-filters .box-content .heading > br,
+  .grid-structure .box.plant-natural-fibre .box-content .heading > br {
+    display: none;
+  }
+
+  .grid-structure:not(.how-it-works-grid) {
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  .grid-structure:not(.how-it-works-grid) .box {
+    width: auto;
+  }
+
+  .our-partners-section.brought-to-you-section .row [class*="col-md"] {
+    width: 50%;
+  }
+}
+
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: portrait) {
   .grid-structure.how-it-works-grid .box.hiw-fan-filters {
     background-image: url('../images/hiw-fan-filters-tablet.jpg');
   }
