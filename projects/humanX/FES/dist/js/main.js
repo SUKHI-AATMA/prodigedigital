@@ -937,21 +937,22 @@ if ($('.sec-map').length) {
         // });
 
         document.querySelectorAll(".map-wrapper")[0].getElementsByTagName("svg")[0].addEventListener("click", function(e) {
-            console.log(e.target.id + "|||" + e.target.parentNode.id);
+            //console.log(e);
+            //console.log(e.target.id + "|||" + e.target.parentNode.id);
             var targetId = e.target.parentNode.id;
             if (svgHotSpotId != targetId) {
                 svgHotSpotId = targetId;
             } else {
                 return false;
             }
-            console.log(svgHotSpotId);
-            console.log(targetId);
+            //console.log(svgHotSpotId);
+            //console.log(targetId);
             //console.log(e.clientX);
             var hotspotClickData = "";
             hotspotClickData = jsonData.filter(function(i) {
                 return i.id == targetId;
             });
-            console.log(hotspotClickData);
+            //console.log(hotspotClickData);
             if (hotspotClickData == "") {
                 document.querySelectorAll(".mapData")[0].style.opacity = 0;
                 return false;
@@ -987,9 +988,10 @@ if ($('.sec-map').length) {
 
             }
 
-            // console.log(e);
+            console.log(e);
             document.querySelectorAll(".mapData")[0].style.opacity = 1;
-            document.querySelectorAll(".mapData")[0].style.top = e.offsetY - document.querySelectorAll(".mapData")[0].clientHeight - 15 + "px";
+            // document.querySelectorAll(".mapData")[0].style.top = e.offsetY - document.querySelectorAll(".mapData")[0].clientHeight - 15 + "px";
+            document.querySelectorAll(".mapData")[0].style.top = e.layerY - document.querySelectorAll(".mapData")[0].clientHeight - 15 + "px";
             // console.log(e);
             // console.log(window.innerWidth + "||||" + e.clientX + "|||" + document.querySelectorAll(".mapData")[0].offsetWidth);
 
@@ -998,11 +1000,12 @@ if ($('.sec-map').length) {
             var mapdataWidth = document.querySelectorAll(".mapData")[0].offsetWidth;
 
             if ((winWidth - clientx) > mapdataWidth) {
-                document.querySelectorAll(".mapData")[0].style.left = e.offsetX - 24 + "px";
+                document.querySelectorAll(".mapData")[0].style.left = e.layerX - 24 + "px";
                 document.querySelectorAll(".mapData")[0].style.zIndex = "2";
                 document.querySelectorAll(".mapData")[0].classList.remove("mystyle");
             } else {
-                document.querySelectorAll(".mapData")[0].style.left = (e.offsetX - mapdataWidth) + 24 + "px";
+                // document.querySelectorAll(".mapData")[0].style.left = (e.offsetX - mapdataWidth) + 24 + "px";
+                document.querySelectorAll(".mapData")[0].style.left = (e.layerX - mapdataWidth) + 24 + "px";
                 document.querySelectorAll(".mapData")[0].style.zIndex = "2";
                 document.querySelectorAll(".mapData")[0].classList.add("mystyle");
             }

@@ -364,7 +364,7 @@ section.sec-map{
         }
         .content-wrap{
             // max-width: 460px;
-            max-width: 590px;
+            max-width: 540px;
             width: 100%;
             display: flex;
             flex-wrap: wrap;
@@ -372,8 +372,8 @@ section.sec-map{
 
             .col{
                 border-left: 3px solid #004950;
-                padding-left: 20px;
-                padding-right: 30px;
+                padding-left: 15px;
+                padding-right: 15px;
                 margin-bottom: 40px;
                 width: calc(100% / 2);
 
@@ -394,25 +394,46 @@ section.sec-map{
                     line-height: 24px;
                 }
 
-                .stats-info-wrapper {
-                    display: flex;
+                // .stats-info-wrapper {
+                //     display: flex;
+                //     border-top: 1px dashed #004950;
+                //     padding-top: 15px;
+                //     margin-top: 18px;
 
-                    .counter-value {
-                        font-size: 18px;
-                        line-height: 25px;
-                        letter-spacing: 0.225px;
-                        font-weight: 600;
-                        color: #000;
-                    }
+                //     & > div {
+                //         position: relative;
+                        
+                //         &:not(:first-child) {
+                //             &:before {
+                //                 content: '';
+                //                 position: absolute;
+                //                 top: 9px;
+                //                 left: 0;
+                //                 background: url('../../images/icon-plus.svg') no-repeat 0 0;
+                //                 width: 13px;
+                //                 height: 13px;
+                //             }
 
-                    p {
-                        font-weight: 300;
-                        font-size: 12px;
-                        line-height: 16px;
-                        letter-spacing: 0.225px;
-                        color: #000000;
-                    }
-                }
+                //             padding-left: 21px;
+                //         }
+                //     }
+
+                //     .counter-value {
+                //         font-size: 18px;
+                //         line-height: 25px;
+                //         letter-spacing: 0.225px;
+                //         font-weight: 600;
+                //         color: #000;
+                //     }
+
+                //     p {
+                //         font-weight: 300;
+                //         font-size: 12px;
+                //         line-height: 16px;
+                //         letter-spacing: 0.225px;
+                //         color: #000000;
+                //     }
+                // }
             }
         }
         
