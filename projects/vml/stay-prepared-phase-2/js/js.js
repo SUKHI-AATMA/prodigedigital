@@ -27,7 +27,22 @@ $(function() {
 
         $("header").css("padding-bottom",$("header .button-wrapper").outerHeight(true) + "px");
 
-        $(window).resize(function(){
+        if($(window).width() <= 640) {
+            var maxBoxHeight = 0;
+            $(".research-findings-grid .box").each(function() {
+                console.log($(this).find(".box-content").height());
+                if(maxBoxHeight != $(this).find(".box-content").height()) {
+                    maxBoxHeight = $(this).find(".box-content").height();
+                }
+            }).promise().done(function() {
+                $(".research-findings-grid .box .box-content").css("height", maxBoxHeight + "px");
+            });
+        }
+        else {
+            $(".research-findings-grid .box .box-content").removeAttr("style");
+        }
+
+        $(window).resize(function() {
             if($(window).width() >= 640 && $(window).width() != baseWidth) {
                 $(".banner-section .carousel-content").css("height", ($(window).width()*bannerSectionHeight)/baseWidth + "px");
             }
@@ -52,6 +67,21 @@ $(function() {
             else {
                 $(".how-it-works-grid .box").removeAttr("style");
                 $("header").css("padding-bottom",$("header .button-wrapper").outerHeight(true) + "px");
+            }
+
+            if($(window).width() <= 640) {
+                var maxBoxHeight = 0;
+                $(".research-findings-grid .box").each(function() {
+                    console.log($(this).find(".box-content").height());
+                    if(maxBoxHeight != $(this).find(".box-content").height()) {
+                        maxBoxHeight = $(this).find(".box-content").height();
+                    }
+                }).promise().done(function() {
+                    $(".research-findings-grid .box .box-content").css("height", maxBoxHeight + "px");
+                });
+            }
+            else {
+                $(".research-findings-grid .box .box-content").removeAttr("style");
             }
         });
         // if($(window).width() >= 640 && $(window).width() != baseWidth) {
