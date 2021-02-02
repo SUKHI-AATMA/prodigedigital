@@ -339,7 +339,8 @@ header{
 
                                             &:last-child{
                                                 padding-bottom: 12px;
-                                                border-bottom: 1px solid rgb(255 255 255 / .3);
+                                                // border-bottom: 1px solid rgb(255 255 255 / .3);
+                                                border-bottom: 1px solid rgba(255,255,255,0.3);
                                             }
 
                                             &.active,&:hover{
@@ -598,7 +599,8 @@ header{
 
                                             &:last-child{
                                                 padding-bottom: 12px;
-                                                border-bottom: 1px solid rgb(151 151 151 / .3);
+                                                // border-bottom: 1px solid rgb(151 151 151 / .3);
+                                                border-bottom: 1px solid rgba(151,151,151,0.3);
                                             }
 
                                             &.active,&:hover{

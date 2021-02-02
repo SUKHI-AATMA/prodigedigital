@@ -148,7 +148,7 @@ section.sec-slider{
             height: 10px;
             border-radius: 50%;
             display: inline-block;
-            background: rgba(255, 255, 255);
+            background: rgb(255, 255, 255);
             margin: 0 5px;
         }
         .owl-dots button.owl-dot.active {
@@ -363,7 +363,8 @@ section.sec-map{
             text-align: left;
         }
         .content-wrap{
-            max-width: 460px;
+            // max-width: 460px;
+            max-width: 590px;
             width: 100%;
             display: flex;
             flex-wrap: wrap;
@@ -371,7 +372,8 @@ section.sec-map{
 
             .col{
                 border-left: 3px solid #004950;
-                padding-left: 30px;
+                padding-left: 20px;
+                padding-right: 30px;
                 margin-bottom: 40px;
                 width: calc(100% / 2);
 
@@ -390,6 +392,26 @@ section.sec-map{
                     font-weight: 600;
                     letter-spacing: 0.23px;
                     line-height: 24px;
+                }
+
+                .stats-info-wrapper {
+                    display: flex;
+
+                    .counter-value {
+                        font-size: 18px;
+                        line-height: 25px;
+                        letter-spacing: 0.225px;
+                        font-weight: 600;
+                        color: #000;
+                    }
+
+                    p {
+                        font-weight: 300;
+                        font-size: 12px;
+                        line-height: 16px;
+                        letter-spacing: 0.225px;
+                        color: #000000;
+                    }
                 }
             }
         }
