@@ -394,46 +394,46 @@ section.sec-map{
                     line-height: 24px;
                 }
 
-                // .stats-info-wrapper {
-                //     display: flex;
-                //     border-top: 1px dashed #004950;
-                //     padding-top: 15px;
-                //     margin-top: 18px;
+                .stats-info-wrapper {
+                    display: flex;
+                    border-top: 1px dashed #004950;
+                    padding-top: 15px;
+                    margin-top: 18px;
 
-                //     & > div {
-                //         position: relative;
+                    & > div {
+                        position: relative;
                         
-                //         &:not(:first-child) {
-                //             &:before {
-                //                 content: '';
-                //                 position: absolute;
-                //                 top: 9px;
-                //                 left: 0;
-                //                 background: url('../../images/icon-plus.svg') no-repeat 0 0;
-                //                 width: 13px;
-                //                 height: 13px;
-                //             }
+                        &:not(:first-child) {
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                top: 9px;
+                                left: 0;
+                                background: url('../../images/icon-plus.svg') no-repeat 0 0;
+                                width: 13px;
+                                height: 13px;
+                            }
 
-                //             padding-left: 21px;
-                //         }
-                //     }
+                            padding-left: 21px;
+                        }
+                    }
 
-                //     .counter-value {
-                //         font-size: 18px;
-                //         line-height: 25px;
-                //         letter-spacing: 0.225px;
-                //         font-weight: 600;
-                //         color: #000;
-                //     }
+                    .counter-value {
+                        font-size: 18px;
+                        line-height: 25px;
+                        letter-spacing: 0.225px;
+                        font-weight: 600;
+                        color: #000;
+                    }
 
-                //     p {
-                //         font-weight: 300;
-                //         font-size: 12px;
-                //         line-height: 16px;
-                //         letter-spacing: 0.225px;
-                //         color: #000000;
-                //     }
-                // }
+                    p {
+                        font-weight: 300;
+                        font-size: 12px;
+                        line-height: 16px;
+                        letter-spacing: 0.225px;
+                        color: #000000;
+                    }
+                }
             }
         }
         

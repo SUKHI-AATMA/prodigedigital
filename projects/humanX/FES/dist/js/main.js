@@ -988,7 +988,7 @@ if ($('.sec-map').length) {
 
             }
 
-            console.log(e);
+            //console.log(e);
             document.querySelectorAll(".mapData")[0].style.opacity = 1;
             // document.querySelectorAll(".mapData")[0].style.top = e.offsetY - document.querySelectorAll(".mapData")[0].clientHeight - 15 + "px";
             document.querySelectorAll(".mapData")[0].style.top = e.layerY - document.querySelectorAll(".mapData")[0].clientHeight - 15 + "px";
