@@ -1,7 +1,7 @@
 footer {
     background-color: #004950;
-    padding: 70px 55px;
-    height: 213px;
+    padding: 44px 55px;
+    height: 160px;
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -19,7 +19,7 @@ footer {
                     }
                 }
                 &.link-wrap {
-                    max-width: 446px;
+                    max-width: 486px;
                     width: 100%;
                     .row {
                         &:first-child {
@@ -61,7 +61,7 @@ footer {
                                 }
                                 a {
                                     color: #FFFFFF;
-                                    font-size: 14px;
+                                    font-size: 16px;
                                     line-height: 19px;
                                     position: relative;
                                     display: block;
@@ -94,7 +94,7 @@ footer {
                             display: flex;
                             align-items: center;
                             p {
-                                font-size: 14px;
+                                font-size: 16px;
                                 line-height: 19px;
                                 color: #FFFFFF;
                                 margin-right: 16px;
@@ -109,6 +109,7 @@ footer {
                                         display: block;
                                         line-height: 0;
                                         img {
+                                            width: 32px;
                                             @include transition(.3s ease-in-out);
                                             &:hover {
                                                 transform: scale(1.2);
@@ -119,7 +120,7 @@ footer {
                             }
                         }
                         .humanx {
-                            font-size: 12px;
+                            font-size: 14px;
                             line-height: 16px;
                             color: #fff;
                             opacity: 0.4;
@@ -176,13 +177,15 @@ footer {
 
 @media screen and (max-width: 1199px) {
     footer {
-        padding: 70px 0px;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
 @media screen and (max-width: 1024px) {
     footer {
         position: relative;
+        z-index: 1;
         .container {
             padding-right: 30px;
             padding-left: 30px;
@@ -193,6 +196,16 @@ footer {
         img {
             width: 100%;
         }
+    }
+    footer .container .inner-wrap .col.link-wrap {
+        width: 442px;
+    }
+    footer .container .inner-wrap .col.link-wrap .row>ul li a,
+    footer .container .inner-wrap .col.link-wrap .row .follow-wrap p {
+        font-size: 14px;
+    }
+    footer .container .inner-wrap .col.link-wrap .row .follow-wrap ul>li a img {
+        width: 28px;
     }
 }
 
