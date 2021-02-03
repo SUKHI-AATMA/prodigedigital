@@ -406,6 +406,7 @@ header .button-wrapper a {
     height: 14px;
     border-radius: 50%;
     border: 2px solid #CBCBCB;
+    outline: none;
 }
 
 .banner-section.owl-carousel .owl-dots > .owl-dot:not(:first-child) {
@@ -1741,6 +1742,26 @@ footer li {
       padding: 0 80px;
   }
   /* styling for contextual pages ends */
+}
+
+@media only screen and (max-width: 767px) and (min-width: 575px) {
+  .brought-to-you-section .row .col-md-6 {
+    width: 50%;
+  }
+
+  .brought-to-you-section .row [class*="col-md"]:not(:last-child) {
+    margin-bottom: 0 !important;
+  }
+
+  .brought-to-you-section .row [class*="col-md"]:first-child > a,
+  .brought-to-you-section .row [class*="col-md"]:nth-child(2) > a,
+  .brought-to-you-section .row [class*="col-md"]:last-child > a {
+    max-width: 150px !important;
+  }
+
+  .banner-section .container {
+    padding-right: 200px;
+  }
 }
 
 @media only screen and (max-width: 640px) {
