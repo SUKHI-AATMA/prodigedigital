@@ -1,5 +1,5 @@
 $(function() {
-    console.log($(".banner-section").length));
+    console.log($(".banner-section").length);
     if($(".banner-section").length) {
         var bannerSectionHeight = 658; // as per 1440px
         var baseWidth = 1440;
