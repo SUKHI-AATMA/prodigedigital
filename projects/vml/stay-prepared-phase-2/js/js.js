@@ -1,4 +1,5 @@
 $(function() {
+    console.log($(".banner-section").length));
     if($(".banner-section").length) {
         var bannerSectionHeight = 658; // as per 1440px
         var baseWidth = 1440;
@@ -14,6 +15,32 @@ $(function() {
         else {
             $(".banner-section .carousel-content").css("height", ($(window).width()*bannerSectionHeight_mobile)/baseWidth_mobile + "px");
         }
+
+        $(".banner-section .carousel-content").each(function() {
+            if($(window).width() >= 768) {
+                $(this).css("background-image","url('" + $(this).attr('data-img-src') + "')");
+            }
+            else {
+                $(this).css("background-image","url('" + $(this).attr('data-img-src-mobile') + "')");
+            }
+            
+            
+        }).promise().done(function() {
+            $(".banner-section.owl-carousel").owlCarousel({
+                dots: true,
+                nav: false,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                center: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    }
+                }
+            });
+        });
 
         if(screen.orientation.type.indexOf("landscape") >= 0) {
             if($(window).width() >= 575 && $(window).width() <= 1199) {
@@ -91,31 +118,7 @@ $(function() {
         //     $(".banner-section .carousel-content").css("height", ($(window).width()*bannerSectionHeight_mobile)/baseWidth_mobile + "px");
         // }
 
-        $(".banner-section .carousel-content").each(function() {
-            if($(window).width() >= 768) {
-                $(this).css("background-image","url('" + $(this).attr('data-img-src') + "')");
-            }
-            else {
-                $(this).css("background-image","url('" + $(this).attr('data-img-src-mobile') + "')");
-            }
-            
-            
-        }).promise().done(function() {
-            $(".banner-section.owl-carousel").owlCarousel({
-                dots: true,
-                nav: false,
-                loop: true,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                autoplayHoverPause: true,
-                center: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    }
-                }
-            });
-        });
+        
 
         
     }
