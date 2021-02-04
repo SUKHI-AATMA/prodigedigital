@@ -973,6 +973,7 @@ if ($('.sec-map').length) {
             //console.log(hotspotClickData);
             if (hotspotClickData == "") {
                 document.querySelectorAll(".mapData")[0].style.opacity = 0;
+                $(".map-inner-wrap > svg").find(".mapHighlight").removeClass("mapHighlight");
                 return false;
             }
 
@@ -1028,6 +1029,7 @@ if ($('.sec-map').length) {
                 document.querySelectorAll(".mapData")[0].classList.add("mystyle");
             }
 
+            $(".map-inner-wrap > svg").find("#" + e.target.parentNode.id).addClass("mapHighlight").siblings("g").removeClass("mapHighlight");
         });
     }
 }
