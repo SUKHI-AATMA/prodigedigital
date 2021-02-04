@@ -1313,11 +1313,11 @@ section.sec-timeline {
     section.sec-map,
     section.sec-map .container {
         // height: 100vh;
-        height: 1200px;
+        height: 1320px;
     }
     section.sec-map:before {
         width: 100%;
-        height: 60%;
+        height: 100%;
     }
     section.sec-map .container {
         padding-left: 100px;
@@ -1325,16 +1325,17 @@ section.sec-timeline {
     section.sec-map .container .content-wrap {
         padding-top: 0;
         max-width: 100%;
-        margin-bottom: 48px;
+        // margin-bottom: 48px;
     }
     section.sec-map .container .content-wrap .col {
         width: 33%;
     }
     section.sec-map .container .figure-info {
         padding-top: 0px;
-        position: absolute;
-        bottom: 72px;
-        left: 100px;
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin-bottom: 32px;
     }
     section.sec-map .container p.caption {
         padding: 0;
@@ -1443,7 +1444,7 @@ section.sec-timeline {
     section.sec-partners .container .inner-wrap .partners-wrap .owl-carousel .owl-stage:hover .item:not(:hover) {
         opacity: 1;
     }
-    .bigCunter {
+    section.sec-map .container .content-wrap .col .bigCunter {
         &::after {
             width: 12px;
             height: 12px;
@@ -1461,7 +1462,7 @@ section.sec-timeline {
             transition: all 0.2s ease-in-out;
         }
     }
-    .stats-container {
+    section.sec-map .container .content-wrap .col .stats-container {
         display: none;
     }
 }
@@ -1489,9 +1490,9 @@ section.sec-timeline {
     section.sec-map .container {
         padding-left: 30px;
     }
-    section.sec-map .container .figure-info {
-        left: 30px;
-    }
+    // section.sec-map .container .figure-info {
+    //     left: 30px;
+    // }
     section.sec-video {
         .container .inner-wrap {
             .wrapper {
@@ -1614,11 +1615,11 @@ section.sec-timeline {
     }
     section.sec-map,
     section.sec-map .container {
-        height: 1260px;
+        height: 1200px;
     }
-    section.sec-map:before {
-        height: 57%;
-    }
+    // section.sec-map:before {
+    //     height: 57%;
+    // }
     section.sec-map .container .content-wrap {
         // justify-content: flex-end;
         justify-content: flex-start;
@@ -1642,7 +1643,6 @@ section.sec-timeline {
         width: 120px;
     }
     section.sec-map .container .figure-info {
-        bottom: 70px;
         .inner-wrap {
             max-width: calc(100% - 30px);
         }
@@ -1873,11 +1873,11 @@ section.sec-timeline {
     }
     section.sec-map,
     section.sec-map .container {
-        height: 1050px;
+        height: 990px;
     }
-    section.sec-map:before {
-        height: 58%;
-    }
+    // section.sec-map:before {
+    //     height: 58%;
+    // }
     section.sec-map .container .map-block {
         width: 420px;
     }
@@ -1940,12 +1940,12 @@ section.sec-timeline {
     section.sec-map {
         padding: 60px 0;
     }
-    section.sec-map:before {
-        height: 56%;
-    }
+    // section.sec-map:before {
+    //     height: 56%;
+    // }
     section.sec-map,
     section.sec-map .container {
-        height: 960px;
+        height: 1200px;
     }
     section.sec-map .container .title-wrap,
     section.sec-map .container .map-block {
@@ -1964,6 +1964,12 @@ section.sec-timeline {
     }
     section.sec-map .container p.caption {
         top: 24%;
+    }
+    section.sec-map .container .figure-info {
+        margin-top: 32px;
+    }
+    section.sec-map .container .figure-info .note {
+        margin-bottom: 24px;
     }
     section.sec-news .container .inner-wrap>.flex-wrap,
     section.sec-partners .container .inner-wrap>.flex-wrap,
@@ -2071,7 +2077,7 @@ section.sec-timeline {
     // }
     section.sec-map,
     section.sec-map .container {
-        height: 920px;
+        height: 1200px;
     }
     section.sec-map .container .figure-info .inner-wrap .coll {
         // width: 100%;
@@ -2084,9 +2090,9 @@ section.sec-timeline {
         //     height: 200px;
         // }
     }
-    section.sec-map .container .figure-info {
-        bottom: 90px;
-    }
+    // section.sec-map .container .figure-info {
+    //     bottom: 90px;
+    // }
     section.sec-partners .container .inner-wrap .partners-wrap .owl-carousel .owl-stage .owl-item .item {
         width: 160px;
     }
@@ -2104,16 +2110,16 @@ section.sec-timeline {
             height: 180px;
         }
     }
-    section.sec-map,
-    section.sec-map .container {
-        height: 880px;
-    }
-    section.sec-map .container .figure-info {
-        bottom: 70px;
-    }
-    section.sec-map:before {
-        height: 54%;
-    }
+    // section.sec-map,
+    // section.sec-map .container {
+    //     height: 1000px;
+    // }
+    // section.sec-map .container .figure-info {
+    //     bottom: 70px;
+    // }
+    // section.sec-map:before {
+    //     height: 54%;
+    // }
     section.sec-map .container .content-wrap .col span {
         font-size: 30px;
         line-height: 40px;
