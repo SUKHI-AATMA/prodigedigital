@@ -349,10 +349,10 @@ section.sec-map {
                 span {
                     font-family: 'Noto Serif JP', serif;
                     color: #004950;
-                    font-size: 48px;
+                    font-size: 42px;
                     font-weight: 900;
-                    letter-spacing: 0.6px;
-                    line-height: 69px;
+                    letter-spacing: 0.4px;
+                    line-height: 60px;
                 }
                 p {
                     margin-top: 8px;
@@ -401,7 +401,7 @@ section.sec-map {
             }
         }
         .figure-info {
-            padding-top: 48px;
+            padding-top: 36px;
             .note {
                 margin-bottom: 36px;
                 p {
@@ -428,7 +428,7 @@ section.sec-map {
                         color: #004950;
                         font-size: 12px;
                         letter-spacing: 0.15px;
-                        line-height: 17px;
+                        line-height: 16px;
                         padding-left: 10px;
                     }
                 }
@@ -443,7 +443,7 @@ section.sec-map {
         }
         .map-wrapper {
             position: absolute;
-            top: 0;
+            top: 148px;
             right: 0;
             .map-inner-wrap {
                 position: relative;
@@ -1310,10 +1310,13 @@ section.sec-timeline {
     section.sec-mission .container .inner-wrap {
         padding: 100px 100px;
     }
+    section.sec-map {
+        padding: 110px 0 40px;
+    }
     section.sec-map,
     section.sec-map .container {
         // height: 100vh;
-        height: 1320px;
+        height: auto;
     }
     section.sec-map:before {
         width: 100%;
@@ -1349,11 +1352,13 @@ section.sec-timeline {
         // padding-top: 80px;
         display: block;
         width: 100%;
-        height: 100%;
+        //height: 100%;
     }
     section.sec-map .container .map-wrapper {
         right: auto;
         left: 0;
+        top: 0;
+        position: relative;
     }
     section.sec-map .container .map-wrapper .map-inner-wrap {
         width: auto;
@@ -1365,6 +1370,9 @@ section.sec-timeline {
     }
     section.sec-core .container .circle-bg {
         display: none;
+    }
+    section.sec-partners {
+        padding: 80px 0 100px;
     }
     section.sec-partners .container .inner-wrap,
     section.sec-news .container .inner-wrap {
@@ -1613,10 +1621,10 @@ section.sec-timeline {
     section.sec-map {
         padding: 48px 0;
     }
-    section.sec-map,
-    section.sec-map .container {
-        height: 1200px;
-    }
+    // section.sec-map,
+    // section.sec-map .container {
+    //     height: 1200px;
+    // }
     // section.sec-map:before {
     //     height: 57%;
     // }
@@ -1871,10 +1879,10 @@ section.sec-timeline {
     section.sec-slider {
         height: calc(100vh - 65px);
     }
-    section.sec-map,
-    section.sec-map .container {
-        height: 990px;
-    }
+    // section.sec-map,
+    // section.sec-map .container {
+    //     height: 990px;
+    // }
     // section.sec-map:before {
     //     height: 58%;
     // }
@@ -1943,10 +1951,10 @@ section.sec-timeline {
     // section.sec-map:before {
     //     height: 56%;
     // }
-    section.sec-map,
-    section.sec-map .container {
-        height: 1200px;
-    }
+    // section.sec-map,
+    // section.sec-map .container {
+    //     height: 1200px;
+    // }
     section.sec-map .container .title-wrap,
     section.sec-map .container .map-block {
         width: 100%;
@@ -2075,10 +2083,10 @@ section.sec-timeline {
     // section.sec-map:before{
     //     height: 54%;
     // }
-    section.sec-map,
-    section.sec-map .container {
-        height: 1200px;
-    }
+    // section.sec-map,
+    // section.sec-map .container {
+    //     height: 1200px;
+    // }
     section.sec-map .container .figure-info .inner-wrap .coll {
         // width: 100%;
         padding-right: 12px;
