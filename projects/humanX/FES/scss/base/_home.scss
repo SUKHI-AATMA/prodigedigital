@@ -459,7 +459,7 @@ section.sec-map {
             max-width: 400px;
             width: 100%;
             padding: 30px 30px;
-            box-shadow: 0 5px 10px 0 rgba(206, 206, 206, 0.7);
+            box-shadow: 0 5px 10px 0 rgba(206, 206, 206, 0.2);
             opacity: 0;
             &.mystyle {
                 &:before {
@@ -476,7 +476,7 @@ section.sec-map {
                 width: 20px;
                 height: 20px;
                 transform: rotate(45deg);
-                box-shadow: 0 5px 10px 0 rgba(206, 206, 206, 0.3);
+                box-shadow: 0 5px 10px 0 rgba(206, 206, 206, 0.2);
             }
             .flex-box {
                 display: flex;
@@ -683,8 +683,8 @@ section.sec-partners {
                                 content: '';
                                 box-sizing: border-box;
                                 height: 80px;
-                                width: 1px;
-                                border: 0.5px solid rgba(151, 151, 151, .5);
+                                width: 0.1em;
+                                border-right: 1px solid rgba(151, 151, 151, .5);
                                 // border: 1px solid rgba(255, 0, 0, .5);
                                 -webkit-background-clip: padding-box;
                                 /* for Safari */
