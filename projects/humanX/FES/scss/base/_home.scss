@@ -2091,6 +2091,20 @@ section.sec-timeline {
         // width: 100%;
         padding-right: 12px;
     }
+    section.sec-map .container .mapData {
+        width: 200px;
+        padding: 12px 12px;
+    }
+    section.sec-map .container .mapData .btn-read a span {
+        font-size: 13px!important;
+    }
+    section.sec-map .container .mapData .flex-box div {
+        //flex-direction: column;
+        margin-bottom: 10px;
+    }
+    section.sec-map .container .mapData .flex-box div span:first-child {
+        width: 50%;
+    }
     section.sec-news .container .inner-wrap .partners-wrap .owl-carousel .owl-stage .owl-item .item .box.rect-box,
     section.sec-news .container .inner-wrap .partners-wrap .owl-carousel .owl-stage .owl-item .item .box {
         width: 272px;
