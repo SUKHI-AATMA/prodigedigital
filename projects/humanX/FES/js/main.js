@@ -99,11 +99,13 @@ $(document).ready(function() {
     // map counter dropdown
     if ($(window).width() < 1025) {
         // var allPanels = $('.content-wrap .col .stats-container').hide();
-        $('.content-wrap .col .bigCunter').on("click", function() {
+        $('.content-wrap .col .bigCounter').on("click", function() {
             if ($(this).hasClass('active')) {
                 $(this).removeClass('active');
+                $(this).siblings('.arrow').removeClass('active');
                 $(this).siblings('.stats-container').slideUp();
             } else {
+                $(this).siblings('.arrow').addClass('active');
                 $(this).siblings('.stats-container').slideDown();
                 $(this).addClass('active');
             }
