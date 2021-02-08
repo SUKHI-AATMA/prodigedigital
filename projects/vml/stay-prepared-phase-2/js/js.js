@@ -123,5 +123,17 @@ $(function() {
         
     }
 
+    if($(".error-404").length) {
+        var mainContentWrapperH = $("header").outerHeight(true)+$("footer").outerHeight(true);
+        $(".error-404 .main-content-wrapper").css("height","calc(100vh - " + mainContentWrapperH + "px)");
+    }
+
+    $(window).resize(function() {
+        if($(".error-404").length) {
+            var mainContentWrapperH = $("header").outerHeight(true)+$("footer").outerHeight(true);
+            $(".error-404 .main-content-wrapper").css("height","calc(100vh - " + mainContentWrapperH + "px)");
+        }
+    });
+
     
 })

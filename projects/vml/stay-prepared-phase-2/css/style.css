@@ -704,7 +704,7 @@ header .button-wrapper a {
 }
 
 .grid-structure .box.safe-distancing .box-content > span:before {
-    background: url('../images/icon-safe-distancing.svg') no-repeat 0 50%;
+    background: url('../images/icon-ventilation.svg') no-repeat 0 50%;
 }
 
 .grid-structure .box.table-top .box-content > span:before {
@@ -1168,6 +1168,28 @@ footer li {
 .for-tablet,
 .for-mobile {
   display: none;
+}
+
+.contextual-pages.error-404 .main-content-wrapper > .container > .row {
+  margin-bottom: 32px;
+}
+
+
+.contextual-pages.error-404 header,
+.contextual-pages.error-404 .main-content-wrapper > .container > .row > h1,
+.contextual-pages.error-404 .main-content-wrapper > .container > .row:last-child,
+.contextual-pages.error-404 .main-content-wrapper > .container > .row:last-child > p {
+  margin-bottom: 0;
+}
+
+.contextual-pages.error-404 .main-content-wrapper > .container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.contextual-pages.error-404 .main-content-wrapper > .container > .row > .description {
+  text-align: center;
 }
 
 /* @media only screen and (min-width: 1200px) {
