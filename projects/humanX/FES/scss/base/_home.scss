@@ -1283,9 +1283,9 @@ section.sec-timeline {
 // }
 // media query
 @media screen and (max-width: 1680px) {
-    section.sec-map:before {
-        width: 63.2%;
-    }
+    // section.sec-map:before {
+    //     width: 63.2%;
+    // }
     .owl-carousel .owl-item img {
         width: auto;
         height: 100%;
@@ -1299,9 +1299,9 @@ section.sec-timeline {
 }
 
 @media screen and (max-width: 1600px) {
-    section.sec-map:before {
-        width: 64%;
-    }
+    // section.sec-map:before {
+    //     width: 64%;
+    // }
     .owl-carousel .owl-item img {
         width: 100%;
         height: auto;
