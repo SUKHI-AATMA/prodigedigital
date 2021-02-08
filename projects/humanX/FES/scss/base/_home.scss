@@ -318,15 +318,16 @@ section.sec-map {
     padding: 110px 0;
     position: relative;
     display: block;
-    &:before {
-        content: '';
-        background-color: rgba(232, 245, 238, .5);
-        width: 62%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
+    background-color: rgba(232, 245, 238, .5);
+    // &:before {
+    //     content: '';
+    //     background-color: rgba(232, 245, 238, .5);
+    //     width: 62%;
+    //     height: 100%;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    // }
     .container {
         padding-left: 125px;
         .title-wrap {
@@ -401,15 +402,26 @@ section.sec-map {
             }
         }
         .figure-info {
-            padding-top: 36px;
+            padding-top: 20px;
             .note {
-                margin-bottom: 36px;
-                p {
-                    font-style: italic;
-                    font-weight: normal;
-                    font-size: 14px;
-                    line-height: 19px;
-                    color: #004950;
+                margin-bottom: 24px;
+                display: flex;
+                align-items: center;
+                .coll {
+                    img {
+                        display: block;
+                        margin-right: 10px;
+                    }
+                    p {
+                        font-style: italic;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 19px;
+                        color: #345153;
+                        &:last-child {
+                            font-weight: 400;
+                        }
+                    }
                 }
             }
             .inner-wrap {
@@ -853,6 +865,7 @@ section.sec-news {
                                         letter-spacing: 0.2px;
                                         line-height: 22px;
                                         padding: 8px 0 0;
+                                        text-transform: capitalize;
                                     }
                                     span {
                                         padding-top: 16px;
@@ -1324,21 +1337,28 @@ section.sec-timeline {
     }
     section.sec-map .container {
         padding-left: 100px;
+        display: flex;
+        flex-direction: column;
+    }
+    section.sec-map .container .title-wrap {
+        order: 1;
     }
     section.sec-map .container .content-wrap {
         padding-top: 0;
         max-width: 100%;
         // margin-bottom: 48px;
+        order: 2;
     }
     section.sec-map .container .content-wrap .col {
         width: 33%;
     }
     section.sec-map .container .figure-info {
-        padding-top: 0px;
+        padding-top: 42px;
         position: relative;
         bottom: auto;
         left: auto;
-        margin-bottom: 32px;
+        margin-bottom: 20px;
+        order: 4;
     }
     section.sec-map .container p.caption {
         padding: 0;
@@ -1349,10 +1369,11 @@ section.sec-timeline {
     section.sec-map .container .map-block {
         position: relative;
         text-align: center;
-        // padding-top: 80px;
+        padding-top: 40px;
         display: block;
         width: 100%;
         //height: 100%;
+        order: 2;
     }
     section.sec-map .container .map-wrapper {
         right: auto;
@@ -1654,6 +1675,13 @@ section.sec-timeline {
         .inner-wrap {
             max-width: calc(100% - 30px);
         }
+    }
+    section.sec-map .container .figure-info .note .coll img {
+        width: 18px;
+    }
+    section.sec-map .container .figure-info .note .coll p {
+        font-size: 12px;
+        line-height: 16px;
     }
     section.sec-map .container .content-wrap .col {
         padding-left: 20px;
@@ -1972,9 +2000,6 @@ section.sec-timeline {
     }
     section.sec-map .container p.caption {
         top: 24%;
-    }
-    section.sec-map .container .figure-info {
-        margin-top: 32px;
     }
     section.sec-map .container .figure-info .note {
         margin-bottom: 24px;
