@@ -25,7 +25,7 @@
                 }
                 else {
                     if(numbersOnly.indexOf(e.target.value.charAt(e.target.value.length - 1)) == -1) {
-                        $(this).value.substr(0, e.target.value - 1);
+                        $(this).val($(this).val().substr(0, $(this).val().length - 1));
                         return false;
                     }
                 }
