@@ -20,6 +20,7 @@
                 var numbersOnly = "0123456789";
                 if(navigator.userAgent.indexOf("Android") == -1) {
                     if(numbersOnly.indexOf(e.key) == -1) {
+                        $(this).val($(this).val().substr(0, $(this).val().length - 1));
                         return false;
                     }
                 }
