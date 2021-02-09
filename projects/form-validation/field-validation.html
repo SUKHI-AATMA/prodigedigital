@@ -14,8 +14,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
         $(function() {
-            //console.log(123);
-            $("input[data-validation]").on("keydown", function(e) {
+            $("input[data-validation]").on("keydown keypress", function(e) {
                 var numbersOnly = "0123456789";
                 if(numbersOnly.indexOf(e.key) == -1) {
                     return false;
