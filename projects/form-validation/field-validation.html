@@ -15,6 +15,7 @@
     <script>
         $(function() {
             $("input[data-validation]").on("keyup", function(e) {
+                console.log($(this));
                 console.log(e);
                 var numbersOnly = "0123456789";
                 if(navigator.userAgent.indexOf("Android") == -1) {
@@ -24,7 +25,7 @@
                 }
                 else {
                     if(numbersOnly.indexOf(e.target.value.charAt(e.target.value.length - 1)) == -1) {
-                        e.target.value.substr(0, e.target.value - 1);
+                        $(this).value.substr(0, e.target.value - 1);
                         return false;
                     }
                 }
