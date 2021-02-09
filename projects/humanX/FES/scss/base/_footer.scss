@@ -66,35 +66,17 @@ footer {
                                     position: relative;
                                     display: block;
                                     @include transition(.3s ease-in-out);
-                                    div {
-                                        position: absolute;
-                                        right: -16px;
-                                        top: 50%;
-                                        margin-top: -2px;
-                                        span {
-                                            display: none;
-                                            position: relative;
-                                            height: 4px;
-                                            width: 4px;
-                                            background-color: #fff;
-                                            border-radius: 50%;
-                                            &:before {
-                                                position: absolute;
-                                                content: '';
-                                                height: calc(100% + 6px);
-                                                width: calc(100% + 6px);
-                                                border: 1px solid#fff;
-                                                top: -3px;
-                                                left: -3px;
-                                                border-radius: inherit;
-                                            }
-                                        }
-                                    }
                                     &:hover {
-                                        div {
-                                            span {
-                                                display: block;
-                                            }
+                                        @include transition(.3s ease-in-out);
+                                        &:before {
+                                            content: '';
+                                            background-color: #fff;
+                                            width: 6px;
+                                            height: 6px;
+                                            border-radius: 50%;
+                                            position: absolute;
+                                            top: 7px;
+                                            right: -16px;
                                         }
                                     }
                                 }

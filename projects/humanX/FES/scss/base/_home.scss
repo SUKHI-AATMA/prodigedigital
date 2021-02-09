@@ -355,6 +355,24 @@ section.sec-map {
                     letter-spacing: 0.4px;
                     line-height: 60px;
                 }
+                .arrow {
+                    position: absolute;
+                    top: 7px;
+                    right: 18px;
+                    z-index: 2;
+                    width: 18px;
+                    height: 18px;
+                    display: none;
+                    img {
+                        transform: rotate(0);
+                        width: 100%;
+                    }
+                    &.active {
+                        img {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
                 p {
                     margin-top: 8px;
                     color: #004950;
@@ -401,6 +419,27 @@ section.sec-map {
                 }
             }
         }
+        .note-wrap {
+            display: none;
+            .note {
+                margin-bottom: 24px;
+                display: flex;
+                align-items: center;
+                .coll {
+                    img {
+                        display: block;
+                        margin-right: 10px;
+                    }
+                    p {
+                        font-style: italic;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 19px;
+                        color: #345153;
+                    }
+                }
+            }
+        }
         .figure-info {
             padding-top: 20px;
             .note {
@@ -418,9 +457,6 @@ section.sec-map {
                         font-size: 14px;
                         line-height: 19px;
                         color: #345153;
-                        &:last-child {
-                            font-weight: 400;
-                        }
                     }
                 }
             }
@@ -1247,9 +1283,9 @@ section.sec-timeline {
 // }
 // media query
 @media screen and (max-width: 1680px) {
-    section.sec-map:before {
-        width: 63.2%;
-    }
+    // section.sec-map:before {
+    //     width: 63.2%;
+    // }
     .owl-carousel .owl-item img {
         width: auto;
         height: 100%;
@@ -1263,9 +1299,9 @@ section.sec-timeline {
 }
 
 @media screen and (max-width: 1600px) {
-    section.sec-map:before {
-        width: 64%;
-    }
+    // section.sec-map:before {
+    //     width: 64%;
+    // }
     .owl-carousel .owl-item img {
         width: 100%;
         height: auto;
@@ -1358,7 +1394,18 @@ section.sec-timeline {
         bottom: auto;
         left: auto;
         margin-bottom: 20px;
-        order: 4;
+        order: 5;
+    }
+    section.sec-map .container .note-wrap {
+        display: block;
+        order: 3;
+        .note {
+            margin-top: 32px;
+            margin-bottom: 0;
+        }
+    }
+    section.sec-map .container .figure-info .note {
+        display: none;
     }
     section.sec-map .container p.caption {
         padding: 0;
@@ -1373,7 +1420,7 @@ section.sec-timeline {
         display: block;
         width: 100%;
         //height: 100%;
-        order: 2;
+        order: 3;
     }
     section.sec-map .container .map-wrapper {
         right: auto;
@@ -1473,23 +1520,8 @@ section.sec-timeline {
     section.sec-partners .container .inner-wrap .partners-wrap .owl-carousel .owl-stage:hover .item:not(:hover) {
         opacity: 1;
     }
-    section.sec-map .container .content-wrap .col .bigCunter {
-        &::after {
-            width: 12px;
-            height: 12px;
-            border-right: 1px solid #000;
-            border-bottom: 1px solid #000;
-            position: absolute;
-            right: 20px;
-            content: " ";
-            top: 10px;
-            transform: rotate(45deg);
-            transition: all 0.2s ease-in-out;
-        }
-        &.active::after {
-            transform: rotate(-134deg);
-            transition: all 0.2s ease-in-out;
-        }
+    section.sec-map .container .content-wrap .col .arrow {
+        display: block;
     }
     section.sec-map .container .content-wrap .col .stats-container {
         display: none;
@@ -1709,7 +1741,7 @@ section.sec-timeline {
         margin-bottom: 2px;
     }
     section.sec-map .container .mapData .flex-box div span:first-child {
-        // width: 68px;
+        width: 78px;
         text-align: left;
         padding-right: 8px;
     }
@@ -1986,6 +2018,9 @@ section.sec-timeline {
     section.sec-map .container .title-wrap,
     section.sec-map .container .map-block {
         width: 100%;
+    }
+    section.sec-map .container .mapData .flex-box div span:first-child {
+        font-size: 15px;
     }
     section.sec-map .container .content-wrap .col {
         width: 100%;
