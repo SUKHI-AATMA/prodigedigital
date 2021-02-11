@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>Number validation</p>
+        <input type="text" data-validation="numeric">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function() {
+            $("input[data-validation]").on("keyup", function(e) {
+                console.log($(this));
+                console.log(e);
+                var numbersOnly = "0123456789";
+                if(navigator.userAgent.indexOf("Android") == -1) {
+                    if(numbersOnly.indexOf(e.key) == -1) {
+                        $(this).val($(this).val().substr(0, $(this).val().length - 1));
+                        return false;
+                    }
+                }
+                else {
+                    if(numbersOnly.indexOf(e.target.value.charAt(e.target.value.length - 1)) == -1) {
+                        $(this).val($(this).val().substr(0, $(this).val().length - 1));
+                        return false;
+                    }
+                }
+                
+            })
+        });
+    </script>
+</body>
+</html>
