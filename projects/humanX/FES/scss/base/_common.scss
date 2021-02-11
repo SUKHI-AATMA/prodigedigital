@@ -175,7 +175,7 @@ button.mfp-close {
 .banner-circle {
     position: relative;
     display: block;
-    height: 700px;
+    height: 640px;
     width: 100%;
     z-index: 3;
     .overlay {
@@ -193,7 +193,7 @@ button.mfp-close {
     .circle-container {
         position: absolute;
         right: 144px;
-        bottom: -60px;
+        bottom: -48px;
         z-index: 44;
         .circle-line-wrap {
             position: absolute;
@@ -485,26 +485,33 @@ button.mfp-close {
 // media query
 @media screen and (max-width: 1680px) {
     .banner-circle {
-        height: 640px;
+        height: 580px;
     }
 }
 
 @media screen and (max-width: 1440px) {
     .banner-circle {
-        height: 564px;
+        height: 500px;
     }
-}
-
-@media screen and (max-width: 1440px) {
     .banner-circle .circle-container {
         right: 90px;
+    }
+    .banner-circle .circle-container .circle-line-wrap {
+        right: -28px;
+        bottom: -28px;
+        width: 440px;
+        height: 440px;
+    }
+    .banner-circle .circle-container .inner-wrap .circle-img {
+        width: 375px;
+        height: 375px;
     }
 }
 
 @media screen and (max-width: 1280px) {
     .banner-circle .circle-container {
         right: 100px;
-        bottom: -70px;
+        //bottom: -52px;
         // .circle-line-wrap{
         //     right: -26px;
         //     bottom: -26px;
@@ -527,18 +534,18 @@ button.mfp-close {
 @media screen and (max-width: 1279px) {
     .banner-circle .circle-container {
         right: 100px;
-        bottom: -70px;
-        .circle-line-wrap {
-            right: -26px;
-            bottom: -26px;
-            z-index: 45;
-            height: 460px;
-            width: 460px;
-        }
-        .inner-wrap .circle-img {
-            width: 400px;
-            height: 400px;
-        }
+        //bottom: -70px;
+        // .circle-line-wrap {
+        //     right: -26px;
+        //     bottom: -26px;
+        //     z-index: 45;
+        //     height: 460px;
+        //     width: 460px;
+        // }
+        // .inner-wrap .circle-img {
+        //     width: 400px;
+        //     height: 400px;
+        // }
     }
     .tab-drop-wrap {
         ul.tabs {

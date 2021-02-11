@@ -201,6 +201,29 @@ section.sec-core {
     background-color: rgba(219, 169, 96, .1);
     padding: 100px 0 200px;
     .container {
+        text-align: center;
+        .title-wrap {
+            display: inline-block;
+            margin: 0 auto;
+            margin-bottom: 60px;
+            padding-bottom: 0;
+            position: relative;
+            h2 {
+                line-height: 1;
+            }
+            img {
+                opacity: 0;
+                position: absolute;
+                top: 4px;
+                right: -36px;
+                @include transition(.3s ease-in-out);
+            }
+            &:hover {
+                img {
+                    opacity: 1;
+                }
+            }
+        }
         .circle-wrap {
             position: relative;
             .Oval_1,
@@ -250,12 +273,13 @@ section.sec-core {
             padding-bottom: 0px;
             position: relative;
             z-index: 1;
+            text-align: left;
             .row {
                 max-width: 720px;
                 width: 100%;
                 margin: 0 auto;
                 justify-content: space-evenly;
-                padding-bottom: 48px;
+                padding-bottom: 40px;
                 &:last-child {
                     padding-bottom: 0;
                 }
@@ -306,6 +330,36 @@ section.sec-core {
                         line-height: 19px;
                         max-width: 300px;
                         width: 100%;
+                    }
+                    .btn-read {
+                        width: 110px;
+                        margin-top: 12px;
+                        span {
+                            text-transform: capitalize;
+                            padding-right: 10px;
+                            color: #004950;
+                            font-size: 14px;
+                            font-weight: 600;
+                            line-height: 22px;
+                            cursor: pointer;
+                            width: auto;
+                            justify-content: flex-start;
+                        }
+                        img,
+                        svg {
+                            display: block;
+                            width: 24px;
+                            margin: 0;
+                            height: auto;
+                            @include transition(all .3s ease);
+                        }
+                        &:hover {
+                            img,
+                            svg {
+                                transform: translateX(10px);
+                                @include transition(all .3s ease);
+                            }
+                        }
                     }
                 }
             }
@@ -1627,6 +1681,9 @@ section.sec-timeline {
     section.sec-core {
         padding: 48px 0 80px;
     }
+    section.sec-core .container .title-wrap img {
+        top: 0;
+    }
     section.sec-core .container .inner-wrap {
         max-width: 100%;
         padding-top: 0;
@@ -1669,6 +1726,9 @@ section.sec-timeline {
             p {
                 max-width: 100%;
             }
+            .btn-read {
+                margin: 24px auto 0;
+            }
         }
     }
     section.sec-map {
@@ -1703,11 +1763,11 @@ section.sec-timeline {
         top: 24%;
         width: 120px;
     }
-    section.sec-map .container .figure-info {
-        .inner-wrap {
-            max-width: calc(100% - 30px);
-        }
-    }
+    // section.sec-map .container .figure-info {
+    //     .inner-wrap {
+    //         max-width: calc(100% - 30px);
+    //     }
+    // }
     section.sec-map .container .figure-info .note .coll img {
         width: 18px;
     }
@@ -1769,7 +1829,8 @@ section.sec-timeline {
     // section.sec-partners .container .inner-wrap .partners-wrap .owl-carousel .owl-stage .owl-item:after{
     //     display: none;
     // }
-    section.sec-partners .container .inner-wrap .title-wrap {
+    section.sec-partners .container .inner-wrap .title-wrap,
+    section.sec-news .container .inner-wrap .title-wrap {
         padding-bottom: 16px
     }
     section.sec-partners .container .inner-wrap .partners-wrap .owl-carousel .owl-prev {
@@ -1792,12 +1853,9 @@ section.sec-timeline {
     section.sec-news .container .inner-wrap>.flex-wrap,
     section.sec-partners .container .inner-wrap>.flex-wrap,
     section.sec-testimonials .container .inner-wrap>.flex-wrap {
+        flex-direction: column;
         justify-content: center;
         padding-bottom: 40px;
-        .btn-read {
-            position: absolute;
-            bottom: -50px;
-        }
     }
     section.sec-news {
         padding: 60px 0;
@@ -1807,6 +1865,10 @@ section.sec-timeline {
     }
     section.sec-news .container .inner-wrap .partners-wrap .owl-carousel .owl-stage .owl-item .item {
         margin-right: 30px;
+    }
+    section.sec-news .container .inner-wrap .partners-wrap .owl-carousel .owl-stage .owl-item .item:hover .box p,
+    section.sec-news .container .inner-wrap .partners-wrap .owl-carousel .owl-stage .owl-item .item:hover .box span {
+        color: inherit;
     }
     section.sec-timeline {
         padding: 48px 0;
@@ -2006,7 +2068,7 @@ section.sec-timeline {
         line-height: 26px;
     }
     section.sec-map {
-        padding: 60px 0;
+        padding: 48px 0;
     }
     // section.sec-map:before {
     //     height: 56%;
@@ -2036,27 +2098,33 @@ section.sec-timeline {
     section.sec-map .container p.caption {
         top: 24%;
     }
+    section.sec-map .container .figure-info {
+        margin-bottom: 0;
+    }
     section.sec-map .container .figure-info .note {
         margin-bottom: 24px;
     }
-    section.sec-news .container .inner-wrap>.flex-wrap,
-    section.sec-partners .container .inner-wrap>.flex-wrap,
-    section.sec-testimonials .container .inner-wrap>.flex-wrap {
-        justify-content: center;
-        padding-bottom: 32px;
-        .btn-read {
-            position: absolute;
-            bottom: -30px;
-        }
+    // section.sec-news .container .inner-wrap>.flex-wrap,
+    // section.sec-partners .container .inner-wrap>.flex-wrap,
+    // section.sec-testimonials .container .inner-wrap>.flex-wrap {
+    //     justify-content: center;
+    //     padding-bottom: 32px;
+    //     .btn-read {
+    //         position: absolute;
+    //         bottom: -30px;
+    //     }
+    // }
+    section.sec-partners .container .inner-wrap {
+        padding-top: 0;
     }
     section.sec-partners {
-        padding: 60px 0 60px;
+        padding: 48px 0 48px;
         .container {
             padding: 0;
             .inner-wrap {
-                .title-wrap {
-                    padding-bottom: 36px
-                }
+                // .title-wrap {
+                //     padding-bottom: 36px
+                // }
                 .flex-wrap {
                     padding: 0 20px;
                 }
@@ -2064,7 +2132,7 @@ section.sec-timeline {
         }
     }
     section.sec-news {
-        padding: 60px 0;
+        padding: 48px 0;
     }
     section.sec-news .container .inner-wrap {
         padding-top: 0;
@@ -2110,10 +2178,10 @@ section.sec-timeline {
         height: 250px;
     }
     section.sec-timeline {
-        padding: 60px 0;
+        padding: 48px 0;
     }
     section.sec-testimonials {
-        padding: 70px 0 24px;
+        padding: 48px 0 32px;
     }
     section.sec-testimonials .container .inner-wrap .testimonials-wrap {
         max-width: 100%;

@@ -1,12 +1,11 @@
-section.sec-funders-bn{
+section.sec-funders-bn {
     background: url('../../images/inner-banner/funders-bn.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-
-    .container{
+    .container {
         z-index: 44;
-        .content{
+        .content {
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
@@ -16,7 +15,7 @@ section.sec-funders-bn{
             max-width: 531px;
             width: 100%;
             margin-left: 125px;
-            h1{
+            h1 {
                 color: #FFFFFF;
                 font-family: 'Noto Serif JP', serif;
                 // text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.55);
@@ -25,31 +24,30 @@ section.sec-funders-bn{
                 letter-spacing: 0;
                 line-height: 36px;
                 z-index: 44;
-    
-                span{
+                span {
                     font-size: 30px;
                     font-weight: 600;
                     line-height: 44px;
                 }
             }
-            .btn-read{
+            .btn-read {
                 margin-top: 30px;
-                a{
+                a {
                     font-size: 16px;
                     line-height: 20px;
                     color: #fff;
-
-                    span{
+                    span {
                         padding-right: 12px;
                     }
-                    img, svg{
+                    img,
+                    svg {
                         display: block;
                         height: auto;
                         @include transition(all .3s ease);
                     }
-
-                    &:hover{
-                        img, svg{
+                    &:hover {
+                        img,
+                        svg {
                             transform: translateX(10px);
                             @include transition(all .3s ease);
                         }
@@ -58,10 +56,8 @@ section.sec-funders-bn{
             }
         }
     }
-        
-    .inner-wrap{
-        
-        .circle-img{
+    .inner-wrap {
+        .circle-img {
             background: url(../../images/inner-banner/funders-bn.jpg);
             background-size: 256%;
             background-position: 34% center;
@@ -69,49 +65,40 @@ section.sec-funders-bn{
     }
 }
 
-
-section.sec-funders-tab{
+section.sec-funders-tab {
     padding: 30px 0px 0;
-
-    .container{
-
+    .container {
         // .tab-drop-wrap ul.tabs{
         //     max-width: 420px;
         // }
-        .dots-line-wrap ul.ul-line span.line{
+        .dots-line-wrap ul.ul-line span.line {
             width: 60px;
         }
-        .wrapper{
+        .wrapper {
             padding: 10px 125px 110px 125px;
             position: relative;
         }
-        
-        .tab-container{
+        .tab-container {
             position: relative;
             z-index: 3;
-
             .tab-content {
                 padding-top: 42px;
                 display: none;
-
                 &.active {
                     display: block;
                 }
-
                 // tab content 1
-                &#tab-1{
-                    .row{
-                        .head-wrap{
+                &#tab-1 {
+                    .row {
+                        .head-wrap {
                             max-width: 700px;
                         }
                     }
                 }
-
-                .row{
-                    
-                    .head-wrap{
+                .row {
+                    .head-wrap {
                         width: 100%;
-                        h2{
+                        h2 {
                             color: #004950;
                             font-family: 'Noto Serif JP', serif;
                             font-size: 24px;
@@ -122,25 +109,23 @@ section.sec-funders-tab{
                             padding-bottom: 40px;
                         }
                     }
-
                     // funder-wrap
-                    .funder-wrap{
-                        .search-wrap{
-                            position: relative; 
+                    .funder-wrap {
+                        .search-wrap {
+                            position: relative;
                             width: 400px;
                             display: block;
                             margin-top: 32px;
-                            .search-icon{
+                            .search-icon {
                                 position: absolute;
                                 width: 24px;
                                 height: 24px;
                                 top: 14px;
                                 right: 30px;
                             }
-
-                            input{    
+                            input {
                                 width: 100%;
-                                border: 1px solid rgba(0,73,80,0.3);
+                                border: 1px solid rgba(0, 73, 80, 0.3);
                                 border-radius: 5px;
                                 background-color: #FFFFFF;
                                 // box-shadow: 0 5px 5px 0 rgba(206,206,206,0.3);     
@@ -149,8 +134,7 @@ section.sec-funders-tab{
                                 font-size: 14px;
                                 letter-spacing: 0;
                                 line-height: 18px;
-
-                                &::-webkit-input-placeholder { 
+                                &::-webkit-input-placeholder {
                                     color: #252525;
                                     opacity: .5;
                                     font-family: 'Open Sans', sans-serif;
@@ -160,28 +144,26 @@ section.sec-funders-tab{
                                     opacity: .5;
                                     font-family: 'Open Sans', sans-serif;
                                 }
-                                &:-ms-input-placeholder{
+                                &:-ms-input-placeholder {
                                     color: #252525;
                                     opacity: .5;
                                     font-family: 'Open Sans', sans-serif;
                                 }
-                                &:-moz-placeholder{
+                                &:-moz-placeholder {
                                     color: #252525;
                                     opacity: .5;
                                     font-family: 'Open Sans', sans-serif;
                                 }
                             }
                         }
-
-                        .funders-block{
+                        .funders-block {
                             margin-top: 60px;
-
-                            ul.funders-list{
+                            ul.funders-list {
                                 display: flex;
                                 justify-content: flex-start;
                                 align-items: center;
                                 flex-wrap: wrap;
-                                li{
+                                li {
                                     width: calc(100% / 4);
                                     padding: 32px;
                                     height: 250px;
@@ -190,39 +172,69 @@ section.sec-funders-tab{
                                     justify-content: center;
                                     @include transition(.3s ease-in-out);
                                     cursor: pointer;
-
-                                    &:hover{
+                                    position: relative;
+                                    &:hover {
                                         background-color: #E8F5EE;
+                                        .box-hover {
+                                            opacity: 1;
+                                        }
                                     }
-
-                                    img{
+                                    img {
                                         width: 100%;
                                         height: auto;
                                     }
                                     &.hidden {
                                         display: none;
                                     }
+                                    .box-hover {
+                                        @include transition(.3s ease-in-out);
+                                        opacity: 0;
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        top: 0;
+                                        left: 0;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        padding: 30px;
+                                        h4 {
+                                            font-family: 'Noto Serif JP', serif;
+                                            font-weight: normal;
+                                            font-weight: 500;
+                                            font-size: 12px;
+                                            line-height: 17px;
+                                            text-align: center;
+                                            color: #000000;
+                                            opacity: 0.8;
+                                        }
+                                        p {
+                                            font-weight: 600;
+                                            font-size: 11px;
+                                            line-height: 15px;
+                                            text-align: center;
+                                            color: #004950;
+                                        }
+                                    }
                                 }
                             }
                         }
                     }
-
                     // funders container
-                    .funders-container{
+                    .funders-container {
                         position: fixed;
-                        z-index: 0; /* 1 */
+                        z-index: 0;
+                        /* 1 */
                         top: 0px;
                         left: 0;
                         visibility: hidden;
                         width: 100%;
                         height: 100%;
-
                         &.is-visible {
                             visibility: visible;
                             z-index: 99990;
-                
                         }
-
                         .modal-overlay {
                             position: fixed;
                             z-index: 0;
@@ -230,20 +242,18 @@ section.sec-funders-tab{
                             left: 0;
                             width: 100%;
                             height: 100%;
-                            background: rgba(0,0,0,0.4);
+                            background: rgba(0, 0, 0, 0.4);
                             visibility: hidden;
                             opacity: 0;
                             transition: visibility 0s linear 0.3s, opacity 0.3s;
-                          }
-                        
+                        }
                         &.is-visible .modal-overlay {
                             opacity: 1;
                             visibility: visible;
                             transition-delay: 0s;
                             z-index: 0;
                         }
-
-                        ul.funders-content{
+                        ul.funders-content {
                             position: relative;
                             max-width: 830px;
                             width: 100%;
@@ -252,14 +262,12 @@ section.sec-funders-tab{
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            
-                            .inner-wrap{
+                            .inner-wrap {
                                 position: relative;
                                 max-height: 531px;
                                 min-height: auto;
                                 width: 100%;
                             }
-
                             .close {
                                 display: block;
                                 position: absolute;
@@ -268,7 +276,8 @@ section.sec-funders-tab{
                                 width: 16px;
                                 height: 16px;
                             }
-                            .close:before, .close:after {
+                            .close:before,
+                            .close:after {
                                 position: absolute;
                                 left: 15px;
                                 content: ' ';
@@ -281,10 +290,8 @@ section.sec-funders-tab{
                             }
                             .close:after {
                                 transform: rotate(-45deg);
-                            } 
-
-
-                            .btn-popup-group{
+                            }
+                            .btn-popup-group {
                                 animation-delay: 2s;
                                 display: block;
                                 position: absolute;
@@ -293,34 +300,29 @@ section.sec-funders-tab{
                                 margin-top: -20px;
                                 z-index: 44;
                                 width: 100%;
-
-                                .wrap{
+                                .wrap {
                                     display: flex;
                                     justify-content: space-between;
                                     align-items: center;
                                     width: 1000px;
                                     margin: 0 auto;
                                 }
-                                .btn-popup{
-                                    
+                                .btn-popup {
                                     width: auto;
                                     @include transition(all .3s ease);
-    
-                                    a{
+                                    a {
                                         justify-content: flex-start;
                                     }
-    
-                                    &.btn-prev{
-                                        a{
+                                    &.btn-prev {
+                                        a {
                                             flex-direction: row-reverse;
-                                            span{
+                                            span {
                                                 padding-right: 0;
                                                 padding-left: 12px;
                                             }
                                         }
                                     }
-                
-                                    span{
+                                    span {
                                         display: none;
                                         text-transform: capitalize;
                                         padding-right: 10px;
@@ -332,28 +334,25 @@ section.sec-funders-tab{
                                         width: auto;
                                         justify-content: flex-start;
                                     }
-                                    img, svg{
+                                    img,
+                                    svg {
                                         display: block;
                                         width: 60px;
                                         height: auto;
                                         @include transition(all .3s ease);
-
-                                        &.mob{
+                                        &.mob {
                                             display: none;
                                         }
                                     }
                                 }
                             }
-
-                            li{
+                            li {
                                 display: none;
                                 height: 100%;
-
-                                &.active{
+                                &.active {
                                     display: block;
-                                }                                
-
-                                .inner-block{                                    
+                                }
+                                .inner-block {
                                     width: 100%;
                                     padding: 60px 24px;
                                     display: flex;
@@ -365,33 +364,30 @@ section.sec-funders-tab{
                                     height: 100%;
                                     position: relative;
                                     overflow: hidden;
-
-                                    .col{
+                                    .col {
                                         height: 100%;
-                                        &:first-child{
+                                        &:first-child {
                                             max-width: 260px;
                                             width: 100%;
                                             text-align: center;
                                             margin: 0 auto;
-    
-                                            .row{
+                                            .row {
                                                 height: 100%;
                                                 display: flex;
                                                 flex-direction: column;
                                                 align-items: center;
                                                 justify-content: center;
-                                                .coll:first-child{
+                                                .coll:first-child {
                                                     width: 200px;
                                                     margin: 0 auto;
                                                     padding: 30px;
-    
-                                                    img{
+                                                    img {
                                                         width: 100%;
                                                     }
                                                 }
                                             }
                                         }
-                                        &:last-child{
+                                        &:last-child {
                                             max-width: calc(100% - 260px);
                                             width: 100%;
                                             padding-left: 42px;
@@ -401,24 +397,22 @@ section.sec-funders-tab{
                                             min-height: auto;
                                             overflow-y: auto;
                                         }
-                                        p{
+                                        p {
                                             opacity: 0.8;
                                             color: #4A4A4A;
                                             font-size: 14px;
                                             letter-spacing: 0;
                                             line-height: 19px;
                                             padding-bottom: 30px;
-    
-                                            &.title{
+                                            &.title {
                                                 font-weight: bold;
                                                 padding-bottom: 16px;
                                             }
-    
-                                            &:last-child{
+                                            &:last-child {
                                                 padding-bottom: 0;
                                             }
                                         }
-                                        h3{
+                                        h3 {
                                             opacity: 0.8;
                                             color: #000000;
                                             font-family: 'Noto Serif JP', serif;
@@ -428,7 +422,7 @@ section.sec-funders-tab{
                                             line-height: 26px;
                                             text-align: center;
                                         }
-                                        a{
+                                        a {
                                             color: #004950;
                                             font-size: 16px;
                                             font-weight: 600;
@@ -446,11 +440,9 @@ section.sec-funders-tab{
             }
         }
     }
-    
 }
 
-
-@media screen and (max-width : 1280px){
+@media screen and (max-width: 1280px) {
     section.sec-funders-bn .container .content {
         margin-left: 100px;
     }
@@ -459,145 +451,127 @@ section.sec-funders-tab{
     }
 }
 
-@media screen and (max-width : 1199px){
-
+@media screen and (max-width: 1199px) {
     section.sec-funders-bn .container .content {
         margin-left: 30px;
     }
     section.sec-funders-tab .container .wrapper {
         padding: 10px 30px 110px 30px;
     }
-
 }
 
-@media screen and (max-width : 1024px){
-
+@media screen and (max-width: 1024px) {
     section.sec-funders-bn .container .content {
         max-width: 360px;
         margin: 0;
-        h1{
+        h1 {
             font-size: 16px;
             line-height: 26px;
-    
-            span{
+            span {
                 font-size: 24px;
                 line-height: 36px;
             }
         }
         .btn-read {
             margin-top: 16px;
-
-            img,svg{
+            img,
+            svg {
                 width: 18px;
             }
         }
     }
-    section.sec-funders-tab .container{
-        .tab-drop-wrap ul.tabs li a{
+    section.sec-funders-tab .container {
+        .tab-drop-wrap ul.tabs li a {
             // width: 240px;
             width: 100%;
         }
-        .wrapper{
+        .wrapper {
             padding: 0px 0px 110px 0px;
-
-            .dots-line-wrap{
+            .dots-line-wrap {
                 margin: 0 0 0 10px;
             }
         }
     }
-
-    section.sec-funders-tab .container .tab-container .tab-content .row .head-wrap h2{
+    section.sec-funders-tab .container .tab-container .tab-content .row .head-wrap h2 {
         font-size: 18px;
         line-height: 22px;
     }
     section.sec-funders-tab .container .tab-container .tab-content {
         padding-top: 124px;
     }
-
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container.is-visible{
+    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container.is-visible {
         background-color: #fff;
     }
-
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container .modal-overlay{
+    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container .modal-overlay {
         display: none;
     }
-
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content li{
+    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content li {
         transition: 0.9s all ease;
         opacity: 0;
         background-color: #fff;
-
-        &.active{
+        &.active {
             display: block;
             transform: translateY(0px);
             opacity: 1;
         }
     }
-
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content .btn-popup-group .btn-popup img.desk, section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content .btn-popup-group .btn-popup svg.desk{
+    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content .btn-popup-group .btn-popup img.desk,
+    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content .btn-popup-group .btn-popup svg.desk {
         display: none;
     }
-
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content .btn-popup-group .btn-popup img.mob, section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content .btn-popup-group .btn-popup svg.mob{
+    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content .btn-popup-group .btn-popup img.mob,
+    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content .btn-popup-group .btn-popup svg.mob {
         display: block;
         width: 24px;
     }
-
-
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content{
+    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content {
         max-width: 100%;
-
-        .inner-wrap{
+        .inner-wrap {
             max-height: 100%;
             height: 100%;
         }
-        .btn-popup-group{
+        .btn-popup-group {
             left: 0;
             top: auto;
             bottom: 30px;
-            
-            .wrap{
+            .wrap {
                 width: 80%;
                 padding: 0 20px;
             }
-            .btn-popup a span{
+            .btn-popup a span {
                 display: block;
             }
-            .btn-prev{
-                img,svg{
+            .btn-prev {
+                img,
+                svg {
                     transform: rotate(180deg);
                 }
             }
-            
         }
-
-        li{
-            .inner-block{
+        li {
+            .inner-block {
                 border: none;
                 border-radius: 0;
                 flex-direction: column;
                 justify-content: flex-start;
-
-                .col{
-                    
-                    &:first-child{
+                .col {
+                    &:first-child {
                         max-width: 80%;
                         height: auto;
-                        .row{
+                        .row {
                             height: auto;
                             flex-direction: row;
                             width: 500px;
-
-                            .coll:first-child{
+                            .coll:first-child {
                                 width: 50%;
                                 padding: 16px;
                             }
-                            .coll:last-child{
+                            .coll:last-child {
                                 width: 50%;
                             }
                         }
                     }
-                    &:last-child{
+                    &:last-child {
                         max-width: 80%;
                         padding: 0;
                         margin-top: 32px;
@@ -608,130 +582,131 @@ section.sec-funders-tab{
     }
 }
 
-@media screen and (max-width : 768px){
-    section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .funders-block ul.funders-list li{
+@media screen and (max-width: 768px) {
+    section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .funders-block ul.funders-list li {
         width: calc(100% / 3);
         height: 180px;
         padding: 20px;
     }
-    section.sec-funders-tab .container .wrapper{
+    section.sec-funders-tab .container .wrapper {
         padding: 0px 0px 72px 0px;
     }
 }
 
-
-@media screen and (max-width: 650px){
-    section.sec-funders-bn .container .content{
+@media screen and (max-width: 650px) {
+    section.sec-funders-bn .container .content {
         padding-top: 44px;
         justify-content: flex-start;
     }
-    section.sec-funders-tab .container .tab-container .tab-content .row .head-wrap h2{
+    section.sec-funders-tab .container .tab-container .tab-content .row .head-wrap h2 {
         font-size: 16px;
         line-height: 22px;
     }
-    section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .search-wrap{
+    section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .search-wrap {
         margin-top: 0;
     }
-
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content .btn-popup-group{
+    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content .btn-popup-group {
         bottom: 14px;
     }
-
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content li .inner-block .col{
-        &:first-child{
+    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content li .inner-block .col {
+        &:first-child {
             max-width: 100%;
-            
-            .row{
+            .row {
                 width: 100%;
-
-                .coll{
-
-                    &:first-child{
+                .coll {
+                    &:first-child {
                         width: 200px;
                         padding: 0;
                     }
-                    &:last-child{
+                    &:last-child {
                         width: calc(100% - 200px);
                         padding-left: 24px;
                         text-align: left;
-                        
-                        h3,a{
+                        h3,
+                        a {
                             text-align: left;
                         }
                     }
                 }
             }
         }
-        &:last-child{
+        &:last-child {
             max-width: 100%;
         }
-        
     }
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content .btn-popup-group .wrap{
+    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content .btn-popup-group .wrap {
         width: 100%;
     }
-
 }
 
-
-@media screen and (max-width: 480px){
-    section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .search-wrap{
+@media screen and (max-width: 480px) {
+    section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .search-wrap {
         width: 100%;
-
-        input{
+        input {
             padding: 16px 42px 16px 20px;
         }
-        .search-icon{
+        .search-icon {
             right: 12px;
         }
     }
-    section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .funders-block ul.funders-list li{
+    section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .funders-block ul.funders-list li {
         width: calc(100% / 2);
-        height: 160px;
+        //height: 160px;
+        height: 190px;
+        a {
+            display: flex;
+            flex-direction: column;
+            .img-box {
+                height: 120px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .box-hover {
+                opacity: 1;
+                position: relative;
+                left: auto;
+                top: auto;
+                padding: 0;
+            }
+        }
     }
-
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content li .inner-block .col{
-        &:first-child{
-            
-            .row{
+    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content li .inner-block .col {
+        &:first-child {
+            .row {
                 width: 100%;
-
-                .coll{
-
-                    &:first-child{
+                .coll {
+                    &:first-child {
                         width: 145px;
                     }
-                    &:last-child{
+                    &:last-child {
                         width: calc(100% - 145px);
                         padding-left: 20px;
                         text-align: left;
-                        
-                        h3{
+                        h3 {
                             font-size: 16px;
                             line-height: 22px;
                         }
-                        a{
+                        a {
                             font-size: 14px;
                             line-height: 19px;
                         }
                     }
                 }
             }
-        }        
-        
+        }
     }
 }
 
-@media screen and (max-width: 360px){
-    section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .funders-block ul.funders-list li{
+@media screen and (max-width: 360px) {
+    section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .funders-block ul.funders-list li {
         padding: 14px;
         height: 140px;
     }
-
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content li .inner-block .col:first-child .row .coll:first-child{
+    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content li .inner-block .col:first-child .row .coll:first-child {
         width: 120px;
     }
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content li .inner-block .col:first-child .row .coll:last-child{
+    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content li .inner-block .col:first-child .row .coll:last-child {
         width: calc(100% - 120px);
         padding-left: 12px;
     }

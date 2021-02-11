@@ -463,9 +463,10 @@ $(document).ready(function() {
         var tab_id = $(this).attr('data-tab');
         var tabLink = $(this).attr('data-link');
         //console.log('tabLink', tabLink);
-        var imgPath = 'https://prodigedigital.com/projects/humanx/FES/images/inner-banner/';
-        //var imgPath = '../../images/inner-banner/';
+        //var imgPath = 'https://prodigedigital.com/projects/humanx/FES/images/inner-banner/';
+        var imgPath = '../../images/inner-banner/';
         var imgURL = imgPath + tabLink + "-bn.jpg";
+        var circleimgURL = imgPath + tabLink + "-small.png";
         //console.log(imgURL);
 
         $('ul.tabs li').removeClass('active');
@@ -473,6 +474,7 @@ $(document).ready(function() {
         $('.dots-line-wrap ul.ul-line li').removeClass('active');
         $('.bgImg .container .content #bn-' + tab_id).removeClass('active');
         $(".bgImg").css("background-image", "url(" + imgURL + ")");
+        $(".smallImg").css("background-image", "url(" + circleimgURL + ")");
 
         $(this).addClass('active');
         $('.dots-line-wrap ul.ul-line #line-' + tab_id).addClass('active');
