@@ -1,27 +1,24 @@
 // header
-header{
+header {
     // display: none;
     padding: 0px 55px;
     z-index: 9999;
     width: 100%;
     // @include transition(.3s ease-in-out);
     background-color: #fff;
-
     position: fixed;
     top: 0;
     left: 0;
     z-index: 998;
     width: 100%;
-    box-shadow: 0 5px 10px 0 rgba(88,88,88,0.3);
+    box-shadow: 0 5px 10px 0 rgba(88, 88, 88, 0.3);
     transition: .9s all ease;
-
-    &.active{
+    &.active {
         z-index: 0;
         display: none;
     }
-
-    .hamburger-logo{
-        &.active{
+    .hamburger-logo {
+        &.active {
             display: block;
         }
         display: none;
@@ -29,18 +26,15 @@ header{
         top: 0;
         left: 50px;
         margin-top: 20px;
-        a{
+        a {
             display: block;
-            line-height:0;
-
-            img{
+            line-height: 0;
+            img {
                 width: 170px;
                 height: auto;
             }
         }
     }
-
-
     .hamburger {
         display: none;
         position: absolute;
@@ -50,71 +44,59 @@ header{
         right: 10%;
         -webkit-transition-duration: 0.3s;
         transition-duration: 0.3s;
-        background-color:#fff;
-        box-shadow: 0 4px 9px 0 rgba(128, 128, 128, 0.2);                
+        background-color: #fff;
+        box-shadow: 0 4px 9px 0 rgba(128, 128, 128, 0.2);
         border-radius: 50%;
         margin-top: 40px;
         // @include transition(.3s ease-in-out);
-
         &:hover {
             -webkit-transition-duration: 0.3s;
             transition-duration: 0.3s;
             background: #004950;
             cursor: pointer;
-
-            @media screen and (min-width:1025px) {
-                .icon{
+            @media screen and (min-width: 1025px) {
+                .icon {
                     background-color: #FFFFFF;
-
                     &:before,
-                    &:after{
+                    &:after {
                         background-color: #FFFFFF;
                     }
                 }
             }
         }
-
-        &.active{
+        &.active {
             display: block;
         }
-
-        &.open{
+        &.open {
             // right: 11%;
-
-            @media screen and (min-width:1025px) {
-
+            @media screen and (min-width: 1025px) {
                 &:hover {
                     -webkit-transition-duration: 0.3s;
                     transition-duration: 0.3s;
                     background: #fff;
                     cursor: pointer;
-
-                    .icon{
+                    .icon {
                         // background-color: #212121;
-        
                         &:before,
-                        &:after{
+                        &:after {
                             background-color: #212121;
                         }
                     }
                 }
             }
-
             .icon {
                 -webkit-transition-duration: 0.3s;
                 transition-duration: 0.3s;
                 background: transparent;
-
                 &:before {
                     // transform: rotateZ(45deg) scaleX(1.2) translate(5px,6px);
-                    transform: rotateZ(45deg) scaleX(1.2) translate(4px,4px);
+                    transform: rotateZ(45deg) scaleX(1.2) translate(4px, 4px);
                 }
                 &:after {
-                    transform: rotateZ(-45deg) scaleX(1.2) translate(5px,-6px);
+                    transform: rotateZ(-45deg) scaleX(1.2) translate(5px, -6px);
                 }
             }
         }
-
         .icon {
             -webkit-transition-duration: 0.3s;
             transition-duration: 0.3s;
@@ -126,7 +108,6 @@ header{
             background-color: #212121;
             border-radius: 4px;
             left: 9px;
-
             &:before {
                 -webkit-transition-duration: 0.3s;
                 transition-duration: 0.3s;
@@ -138,9 +119,8 @@ header{
                 content: "";
                 top: -7px;
                 border-radius: 4px;
-              }
-
-              &:after {
+            }
+            &:after {
                 -webkit-transition-duration: 0.3s;
                 transition-duration: 0.3s;
                 position: absolute;
@@ -151,41 +131,36 @@ header{
                 content: "";
                 top: 7px;
                 border-radius: 4px;
-              }
-          }
-      }
-      
- 
-    .container{
+            }
+        }
+    }
+    .container {
         position: unset;
-
-        &.active{
+        &.active {
             @include transition(.3s ease-in-out);
         }
-
-        .flex-wrap{
+        .flex-wrap {
             // position: relative;
-
-            .logo{
+            .logo {
                 padding: 10px 0;
-                &.active{
+                &.active {
                     display: none;
                 }
-                a{
+                a {
                     display: block;
                     line-height: 0;
-                    img{
+                    img {
                         width: 170px;
                         height: auto;
                     }
                 }
             }
-            .menu-wrap{
+            .menu-wrap {
                 padding: 15px 0;
-                &.active{
+                &.active {
                     display: none;
                 }
-                &.open{
+                &.open {
                     display: block !important;
                     position: absolute;
                     top: 0;
@@ -195,33 +170,27 @@ header{
                     padding: 150px 50px;
                     height: 90vh;
                     color: #fff;
-
-                    nav{
+                    nav {
                         max-width: 1180px;
                         width: 100%;
                         margin: 0 auto;
-
-                        ul.menu>li{
+                        ul.menu>li {
                             width: calc(100% / 5 - 24px) !important;
                             // width: 19%;
-
                             &:nth-child(2),
-                            &:nth-child(4){
+                            &:nth-child(4) {
                                 width: 294px !important;
-
-                                ul.dropdown{
-                                    li{
+                                ul.dropdown {
+                                    li {
                                         width: 222px;
                                     }
                                 }
                             }
-
-                            &.active{
-                                >a{
+                            &.active {
+                                >a {
                                     color: #FFFFFF;
                                 }
                             }
-
                             &:after {
                                 content: '';
                                 display: none;
@@ -237,15 +206,13 @@ header{
                                 left: 0;
                                 opacity: .7;
                             }
-
-                            &.li-resources{
-                                ul.dropdown{
+                            &.li-resources {
+                                ul.dropdown {
                                     left: -30px;
                                 }
                             }
-
-                            &:hover{
-                                >a{
+                            &:hover {
+                                >a {
                                     color: #fff;
                                     //font-weight: 600;
                                     font-weight: 400;
@@ -260,59 +227,53 @@ header{
                                 line-height: 24px;
                                 opacity: 1;
                                 @include transition(.3s ease-in-out);
-
-                                &.active, &:hover{
+                                &.active,
+                                &:hover {
                                     color: #fff;
-                                    
                                 }
                             }
-                            ul.dropdown{
+                            ul.dropdown {
                                 display: block;
                                 background: no-repeat;
                                 box-shadow: none;
                                 padding-top: 24px;
                                 li {
-
-                                    &.active{
-                                        >a{
+                                    &.active {
+                                        >a {
                                             color: #FFFFFF;
                                         }
                                     }
-                                    &:hover{
-                                        &:before{
+                                    &:hover {
+                                        &:before {
                                             background-color: #fff;
                                         }
-                                        a{
+                                        a {
                                             color: #fff;
                                         }
                                     }
-                                    a{
+                                    a {
                                         color: #fff;
                                         font-size: 15px;
                                         line-height: 21px;
-    
                                         // &:hover{
                                         //     color: #000000;
                                         // }
                                     }
-
-                                    &.inner-li-link{
-
-                                        &.active,&:hover{
-                                            &:before{
+                                    &.inner-li-link {
+                                        &.active,
+                                        &:hover {
+                                            &:before {
                                                 display: none;
                                             }
                                         }
-
                                         &::after {
                                             border-right: 1px solid #ffffff;
                                             border-bottom: 1px solid #ffffff;
                                         }
-
-                                        &:last-child{
-                                            ul{
-                                                li{
-                                                    &:last-child{
+                                        &:last-child {
+                                            ul {
+                                                li {
+                                                    &:last-child {
                                                         padding-bottom: 0px;
                                                         border-bottom: none;
                                                     }
@@ -320,94 +281,84 @@ header{
                                             }
                                         }
                                     }
-
-                                    ul.inner-dropdown{
+                                    ul.inner-dropdown {
                                         display: none;
                                         padding-top: 12px;
-
-                                        &:hover > * {
+                                        &:hover>* {
                                             opacity: 0.4;
                                         }
-                                        &:hover > *:hover {
+                                        &:hover>*:hover {
                                             opacity: 1;
                                         }
-
-                                        li{
+                                        li {
                                             position: relative;
                                             width: 100%;
                                             padding-bottom: 10px;
-
-                                            &:last-child{
+                                            &:last-child {
                                                 padding-bottom: 12px;
                                                 // border-bottom: 1px solid rgb(255 255 255 / .3);
-                                                border-bottom: 1px solid rgba(255,255,255,0.3);
+                                                border-bottom: 1px solid rgba(255, 255, 255, 0.3);
                                             }
-
-                                            &.active,&:hover{
-                                                @include transition(.3s ease-in-out); 
-                                                &:before{
+                                            &.active,
+                                            &:hover {
+                                                @include transition(.3s ease-in-out);
+                                                &:before {
                                                     background-color: #fff;
                                                 }
-                                                
-                                                > a{
-                                                    color: #fff;                  
+                                                >a {
+                                                    color: #fff;
                                                 }
                                             }
                                         }
                                     }
                                 }
                             }
-                        }                        
+                        }
                     }
                 }
-                
-                nav{
-                    ul.menu{
-                        > li{
+                nav {
+                    ul.menu {
+                        >li {
                             padding-top: 12px;
                             padding-bottom: 12px;
                             position: relative;
-                            padding-right: 40px; 
+                            padding-right: 40px;
                             // width: 80px;
                             transition: 50ms ease-out;
                             -webkit-transition: 50ms ease-out;
                             -moz-transition: 50ms ease-out;
                             -ms-transition: 50ms ease-out;
-                            -o-transition: 50ms ease-out;                       
-    
-                            &:first-child{
+                            -o-transition: 50ms ease-out;
+                            &:first-child {
                                 width: 98px;
                             }
-                            &:nth-child(2){
+                            &:nth-child(2) {
                                 width: 90px;
-
-                                ul.dropdown{
-                                    li{
-                                        width: 244px;
-                                    }
-                                }
+                                // ul.dropdown {
+                                //     li {
+                                //         width: 244px;
+                                //     }
+                                // }
                             }
-                            &:nth-child(3){
+                            &:nth-child(3) {
                                 width: 102px;
                             }
-                            &:nth-child(4){
+                            &:nth-child(4) {
                                 width: 125px;
-                                ul.dropdown{
-                                    li{
-                                        width: 210px;
-                                    }
-                                }
+                                // ul.dropdown {
+                                //     li {
+                                //         width: 210px;
+                                //     }
+                                // }
                             }
-                            &:last-child{
+                            &:last-child {
                                 padding-right: 0;
                                 width: 98px;
                             }
-
-                            span.plus{
-                                display:none;
+                            span.plus {
+                                display: none;
                             }
-    
-                            > a{
+                            >a {
                                 text-transform: uppercase;
                                 color: #000000;
                                 font-family: "Open Sans";
@@ -416,23 +367,22 @@ header{
                                 line-height: 19px;
                                 cursor: pointer;
                                 opacity: .7;
-                                @include transition(.3s ease-in-out);;
+                                @include transition(.3s ease-in-out);
+                                ;
                             }
-                            &.active, &:hover{
+                            &.active,
+                            &:hover {
                                 transition: 50ms ease-out;
                                 -webkit-transition: 50ms ease-out;
                                 -moz-transition: 50ms ease-out;
                                 -ms-transition: 50ms ease-out;
                                 -o-transition: 50ms ease-out;
-    
-                                > a{
+                                >a {
                                     color: #004950;
                                     font-weight: bold;
                                     opacity: 1;
                                 }
                             }
-                            
-        
                             &:after {
                                 content: '';
                                 display: block;
@@ -445,7 +395,6 @@ header{
                                 background: #004950;
                                 transition: width 350ms ease-out;
                             }
-            
                             &:hover:after {
                                 width: calc(100% - 20px);
                                 transition: width 350ms ease-out;
@@ -453,34 +402,29 @@ header{
                             &.active:after {
                                 width: calc(100% - 20px);
                             }
-    
                             &:last-child:after {
                                 width: 0%;
                             }
-            
                             &:last-child:hover:after {
                                 width: 100%;
                             }
                             &:last-child.active:after {
                                 width: 100%;
                             }
-    
-                            &:hover{
-                                ul.dropdown{
+                            &:hover {
+                                ul.dropdown {
                                     display: block;
                                 }
                             }
-
-                            &.li-resources{
-                                ul.dropdown{
-                                    li{
+                            &.li-resources {
+                                ul.dropdown {
+                                    li {
                                         // width: 164px;
-                                        width: 180px;
+                                        //width: 180px;
                                     }
                                 }
                             }
-                            
-                            ul.dropdown{
+                            ul.dropdown {
                                 padding: 42px 38px 20px 30px;
                                 display: none;
                                 position: absolute;
@@ -488,26 +432,22 @@ header{
                                 left: -30px;
                                 border-radius: 0 0 5px 5px;
                                 background-color: #FFFFFF;
-                                box-shadow: 0 5px 10px 0 rgba(206,206,206,0.3);
-
-                                &:hover > * {
+                                box-shadow: 0 5px 10px 0 rgba(206, 206, 206, 0.3);
+                                &:hover>* {
                                     opacity: 0.6;
                                 }
-                                &:hover > *:hover {
+                                &:hover>*:hover {
                                     opacity: 1;
                                 }
-                                
-                                > li{
+                                >li {
                                     width: 148px;
                                     padding-bottom: 12px;
                                     position: relative;
-                                    @include transition(.3s ease-in-out); 
-
-                                    &:last-child{
+                                    @include transition(.3s ease-in-out);
+                                    &:last-child {
                                         padding-bottom: 0px;
                                     }
-    
-                                    a{
+                                    a {
                                         color: #000000;
                                         font-family: "Open Sans";
                                         font-size: 14px;
@@ -519,11 +459,11 @@ header{
                                         display: block;
                                         text-transform: capitalize;
                                     }
-    
                                     // &.active,&:hover{
-                                    &.active,&:hover{
-                                        @include transition(.3s ease-in-out); 
-                                        &:before{
+                                    &.active,
+                                    &:hover {
+                                        @include transition(.3s ease-in-out);
+                                        &:before {
                                             content: '';
                                             background-color: #11555c;
                                             width: 6px;
@@ -533,24 +473,21 @@ header{
                                             top: 8px;
                                             right: -14px;
                                         }
-                                        
-                                        > a{
+                                        >a {
                                             //font-weight: bold;
                                             color: #004950;
                                             // transition: 50ms ease-out; 
                                             // @include transition(.3s ease-in-out);                   
                                         }
                                     }
-
-                                    &.inner-li-link{
-                                        width: 244px;
-                                        
-                                        &.active,&:hover{
-                                            &:before{
+                                    &.inner-li-link {
+                                        width: 148px;
+                                        &.active,
+                                        &:hover {
+                                            &:before {
                                                 display: none;
                                             }
                                         }
-
                                         &::after {
                                             width: 8px;
                                             height: 8px;
@@ -567,12 +504,10 @@ header{
                                             transform: rotate(-134deg);
                                             transition: all 0.2s ease-in-out;
                                         }
-
-
-                                        &:last-child{
-                                            ul{
-                                                li{
-                                                    &:last-child{
+                                        &:last-child {
+                                            ul {
+                                                li {
+                                                    &:last-child {
                                                         padding-bottom: 0px;
                                                         border-bottom: none;
                                                     }
@@ -580,32 +515,28 @@ header{
                                             }
                                         }
                                     }
-
-                                    ul.inner-dropdown{
+                                    ul.inner-dropdown {
                                         display: none;
                                         padding-top: 20px;
-
-                                        &:hover > * {
+                                        &:hover>* {
                                             opacity: 0.4;
                                         }
-                                        &:hover > *:hover {
+                                        &:hover>*:hover {
                                             opacity: 1;
                                         }
-
-                                        li{
+                                        li {
                                             position: relative;
                                             width: 100%;
                                             padding-bottom: 10px;
-
-                                            &:last-child{
+                                            &:last-child {
                                                 padding-bottom: 12px;
                                                 // border-bottom: 1px solid rgb(151 151 151 / .3);
-                                                border-bottom: 1px solid rgba(151,151,151,0.3);
+                                                border-bottom: 1px solid rgba(151, 151, 151, 0.3);
                                             }
-
-                                            &.active,&:hover{
-                                                @include transition(.3s ease-in-out); 
-                                                &:before{
+                                            &.active,
+                                            &:hover {
+                                                @include transition(.3s ease-in-out);
+                                                &:before {
                                                     content: '';
                                                     background-color: #11555c;
                                                     width: 6px;
@@ -615,15 +546,13 @@ header{
                                                     top: 8px;
                                                     right: -14px;
                                                 }
-                                                
-                                                > a{
-                                                    color: #004950;                  
+                                                >a {
+                                                    color: #004950;
                                                 }
                                             }
                                         }
                                     }
                                 }
-    
                             }
                         }
                     }
@@ -631,90 +560,73 @@ header{
             }
         }
     }
-
 }
-
-
-
 
 // media query
-@media screen and (max-width : 1680px){
+@media screen and (max-width: 1680px) {}
 
-}
-
-
-@media screen and (max-width : 1600px){
-    
-    header .container .flex-wrap .menu-wrap nav ul.menu>li ul.dropdown li ul.dropdown{
+@media screen and (max-width: 1600px) {
+    header .container .flex-wrap .menu-wrap nav ul.menu>li ul.dropdown li ul.dropdown {
         width: 120px;
     }
-    header .container .flex-wrap .menu-wrap nav ul.menu>li:last-child ul.dropdown{
-        left: -100px;
+    header .container .flex-wrap .menu-wrap nav ul.menu>li:last-child ul.dropdown {
+        // left: -100px;
+        left: -72px;
     }
 }
 
-@media screen and (max-width : 1440px){
-    
-}
+@media screen and (max-width: 1440px) {}
 
+@media screen and (max-width: 1400px) {}
 
-@media screen and (max-width : 1400px){
-    
-}
-
-
-@media screen and (max-width : 1366px){
-
-    header .container .flex-wrap .menu-wrap.open{
+@media screen and (max-width: 1366px) {
+    header .container .flex-wrap .menu-wrap.open {
         padding: 120px 50px 30px;
     }
-    header .container .flex-wrap .menu-wrap.open{
+    header .container .flex-wrap .menu-wrap.open {
         height: 93vh;
     }
-    
 }
 
-
-@media (min-height: 300px) and (max-height: 700px){
+@media (min-height: 300px) and (max-height: 700px) {
     header .container .flex-wrap .menu-wrap.open {
         // height: 500px;
         height: 88vh;
         padding: 100px 50px 30px;
     }
-    header .container .flex-wrap .menu-wrap.open nav ul.menu>li ul.dropdown{
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li ul.dropdown {
         padding: 20px 20px 20px 30px;
     }
-    header .container .flex-wrap .menu-wrap nav ul.menu>li ul.dropdown li{
+    header .container .flex-wrap .menu-wrap nav ul.menu>li ul.dropdown li {
         padding-bottom: 10px;
     }
 }
 
-
-@media screen and (max-width : 1199px){
-    header{
+@media screen and (max-width: 1199px) {
+    header {
         padding: 0px;
     }
-    header .container .flex-wrap .menu-wrap nav ul.menu>li:last-child ul.dropdown{
-        left:-130px
+    header .container .flex-wrap .menu-wrap nav ul.menu>li:last-child ul.dropdown {
+        left: -130px
     }
-    header .hamburger{
+    header .hamburger {
         right: 30px;
     }
 }
 
-@media screen and (max-width : 1024px){
-    header{
+@media screen and (max-width: 1024px) {
+    header {
         padding: 0 30px;
         box-shadow: 0 3px 10px 0 rgba(88, 88, 88, 0.14);
     }
-    header .container{
+    header .container {
         padding: 0 0;
     }
-    header .hamburger-logo{
+    header .hamburger-logo {
         left: 30px;
         display: none;
     }
-    header .hamburger-logo.active{
+    header .hamburger-logo.active {
         display: none;
     }
     // header .hamburger:hover {
@@ -727,28 +639,24 @@ header{
     // header .hamburger:hover .icon:before{
     //     background: #212121;
     // }
-    header .hamburger{
+    header .hamburger {
         display: block;
         top: 12px;
         right: 30px;
         margin-top: 12px;
-        box-shadow:none;
-
-        &:hover{
+        box-shadow: none;
+        &:hover {
             background: #fff;
         }
     }
-    
-    header .container .flex-wrap .menu-wrap{
+    header .container .flex-wrap .menu-wrap {
         display: none;
     }
-
-    header .container .flex-wrap .menu-wrap.open{
+    header .container .flex-wrap .menu-wrap.open {
         height: 100vh;
         padding: 70px 0px 20px 0px;
         margin-bottom: 24px;
-        
-        nav{
+        nav {
             margin-top: 52px;
             display: block;
             position: relative;
@@ -756,36 +664,32 @@ header{
             height: calc(100% - 50px);
         }
     }
-
-    header .container .flex-wrap .menu-wrap .menu.flex-wrap{
+    header .container .flex-wrap .menu-wrap .menu.flex-wrap {
         flex-direction: column;
     }
-
-    header .container .flex-wrap .menu-wrap.open nav{
+    header .container .flex-wrap .menu-wrap.open nav {
         padding: 0 40px;
     }
-    header .container .flex-wrap .menu-wrap.open nav ul.menu>li{
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li {
         cursor: pointer;
         padding: 0;
         margin-bottom: 24px;
         width: 100% !important;
         border-bottom: 1px solid;
         padding-bottom: 24px;
-
-        &:last-child{
+        &:last-child {
             border-bottom: 0;
         }
     }
-
     header .container .flex-wrap .menu-wrap nav ul.menu>li.active>a,
-    header .container .flex-wrap .menu-wrap nav ul.menu>li:hover>a{
+    header .container .flex-wrap .menu-wrap nav ul.menu>li:hover>a {
         color: #fff;
     }
-    header .container .flex-wrap .menu-wrap.open nav ul.menu>li:hover>a{
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li:hover>a {
         font-weight: normal;
         display: block;
     }
-    header .container .flex-wrap .menu-wrap.open nav ul.menu>li>a{
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li>a {
         font-weight: normal;
         z-index: 0;
         width: auto;
@@ -794,117 +698,105 @@ header{
         line-height: 26px;
     }
     header .container .flex-wrap .menu-wrap.open nav ul.menu>li:nth-child(2),
-    header .container .flex-wrap .menu-wrap.open nav ul.menu>li:nth-child(4){
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li:nth-child(4) {
         width: 100%!important;
     }
-    header .container .flex-wrap .menu-wrap.open nav ul.menu>li:before{
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li:before {
         display: none;
     }
-    header .container .flex-wrap .menu-wrap.open nav ul.menu>li span.plus{
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li span.plus {
         display: block;
-        border:1px solid #fff;
+        border: 1px solid #fff;
         width: 24px;
         height: 24px;
-        border-radius:50%;        
+        border-radius: 50%;
         position: absolute;
         top: 0;
         right: 0px;
         z-index: 0;
     }
-    header .container .flex-wrap .menu-wrap.open nav ul.menu>li span.plus:before{
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li span.plus:before {
         content: '+';
         display: block;
-        font-size:20px;
+        font-size: 20px;
         line-height: 22px;
-        font-weight:200;
+        font-weight: 200;
         padding-left: 5px;
     }
-    header .container .flex-wrap .menu-wrap.open nav ul.menu>li.active span.plus:before{
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li.active span.plus:before {
         content: '-';
         padding-left: 7px;
         font-size: 22px;
         line-height: 18px;
     }
-
-    header .container .flex-wrap .menu-wrap.open nav ul.menu>li.li-resources ul.dropdown{
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li.li-resources ul.dropdown {
         left: 0;
     }
-    
-    header .container .flex-wrap .menu-wrap.open nav ul.menu>li.li-resources ul.dropdown li{
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li.li-resources ul.dropdown li {
         width: 184px;
     }
-    header .container .flex-wrap .menu-wrap.open nav ul.menu>li ul.dropdown{
-        display:none;
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li ul.dropdown {
+        display: none;
         padding: 0;
         position: relative;
         left: auto;
         top: auto;
         padding-top: 30px;
     }
-    header .container .flex-wrap .menu-wrap nav ul.menu>li ul.dropdown li{
+    header .container .flex-wrap .menu-wrap nav ul.menu>li ul.dropdown li {
         cursor: none;
         width: 100%;
         padding-bottom: 16px;
     }
-    header .container .flex-wrap .menu-wrap nav ul.menu>li ul.dropdown li a{
+    header .container .flex-wrap .menu-wrap nav ul.menu>li ul.dropdown li a {
         font-size: 16px;
         line-height: 22px;
     }
-    header .container .flex-wrap .menu-wrap nav ul.menu>li.li-resources ul.dropdown li{
+    header .container .flex-wrap .menu-wrap nav ul.menu>li.li-resources ul.dropdown li {
         width: auto;
     }
-    header .container .flex-wrap .menu-wrap.open nav ul.menu>li ul.dropdown li:hover:before{
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li ul.dropdown li:hover:before {
         display: none;
     }
-
-    header .container .flex-wrap .menu-wrap.open nav ul.menu>li ul.dropdown li.inner-li-link:after{
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li ul.dropdown li.inner-li-link:after {
         right: 10px;
     }
-    header .container .flex-wrap .menu-wrap.open nav ul.menu>li:nth-child(2) ul.dropdown li{
+    header .container .flex-wrap .menu-wrap.open nav ul.menu>li:nth-child(2) ul.dropdown li {
         width: 100%;
     }
-
 }
 
-
-@media screen and (max-width : 650px){
-    header{
+@media screen and (max-width: 650px) {
+    header {
         padding: 0px 20px;
     }
-    header .container .flex-wrap .logo{
+    header .container .flex-wrap .logo {
         width: 148px;
         padding: 8px 0;
-        a{
-            img{
+        a {
+            img {
                 width: 100%;
                 height: auto;
             }
         }
     }
-    
-    
-    header .container .flex-wrap .menu-wrap.open nav{
+    header .container .flex-wrap .menu-wrap.open nav {
         height: calc(100% - 20px);
     }
-    header .hamburger-logo{
+    header .hamburger-logo {
         width: 88px;
         left: 20px;
-        margin-top:15px;
-
-        a{
-            img{
+        margin-top: 15px;
+        a {
+            img {
                 width: 100%;
             }
         }
     }
-    header .hamburger{
-        top:3px;
-        right:16px;
+    header .hamburger {
+        top: 3px;
+        right: 16px;
     }
-
-    
 }
 
-@media screen and (max-width : 360px){
-    
-}
+@media screen and (max-width: 360px) {}
