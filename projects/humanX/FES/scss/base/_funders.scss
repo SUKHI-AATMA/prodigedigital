@@ -113,7 +113,7 @@ section.sec-funders-tab {
                     .funder-wrap {
                         
                         .funders-block {
-                            margin-top: 60px;
+                            margin-top: 0px;
                             ul.funders-list {
                                 display: flex;
                                 justify-content: flex-start;
@@ -123,9 +123,9 @@ section.sec-funders-tab {
                                     width: calc(100% / 4);
                                     padding: 32px;
                                     height: 250px;
-                                    align-items: center;
-                                    display: flex;
-                                    justify-content: center;
+                                    // align-items: center;
+                                    // display: flex;
+                                    // justify-content: center;
                                     @include transition(.3s ease-in-out);
                                     cursor: pointer;
                                     position: relative;
@@ -154,7 +154,7 @@ section.sec-funders-tab {
                                         flex-direction: column;
                                         justify-content: space-between;
                                         align-items: center;
-                                        padding: 30px;
+                                        padding: 20px 30px;
                                         h4 {
                                             font-family: 'Noto Serif JP', serif;
                                             font-weight: normal;
@@ -171,6 +171,7 @@ section.sec-funders-tab {
                                             line-height: 15px;
                                             text-align: center;
                                             color: #004950;
+                                            word-break: break-all;
                                         }
                                     }
                                 }
@@ -253,8 +254,40 @@ section.sec-funders-tab {
     section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .funders-block ul.funders-list li {
         width: calc(100% / 3);
         height: 180px;
-        position: relative;
+        position: relative;     
+        padding: 24px;
+    }
+    section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .funders-block ul.funders-list li .box-hover{
+        padding: 12px 20px;
+    }
+    section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .funders-block ul.funders-list li .box-hover h4{
+        font-size: 11px;
+        line-height: 14px;
+    }
+    section.sec-funders-tab .container .wrapper {
+        padding: 0px 0px 72px 0px;
+    }
+}
 
+@media screen and (max-width: 650px) {
+    section.sec-funders-bn .container .content {
+        padding-top: 44px;
+        justify-content: flex-start;
+    }
+    section.sec-funders-tab .container .tab-container .tab-content .row .head-wrap h2 {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    
+    section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .funders-block ul.funders-list li {
+        width: calc(100% / 2);
+        //height: 160px;
+        height: 225px;
+        
         &:nth-child(odd){
             padding: 0 20px 0 0;
             &:after{
@@ -291,33 +324,14 @@ section.sec-funders-tab {
                 background-color: #000;
             }
         }
-    }
-    section.sec-funders-tab .container .wrapper {
-        padding: 0px 0px 72px 0px;
-    }
-}
 
-@media screen and (max-width: 650px) {
-    section.sec-funders-bn .container .content {
-        padding-top: 44px;
-        justify-content: flex-start;
-    }
-    section.sec-funders-tab .container .tab-container .tab-content .row .head-wrap h2 {
-        font-size: 16px;
-        line-height: 22px;
-    }
-    
-}
-
-@media screen and (max-width: 480px) {
-    
-    section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .funders-block ul.funders-list li {
-        width: calc(100% / 2);
-        //height: 160px;
-        height: 190px;
         a {
             display: flex;
             flex-direction: column;
+
+            height: 100%;
+            justify-content: center;
+
             .img-box {
                 height: 120px;
                 display: flex;
@@ -330,8 +344,34 @@ section.sec-funders-tab {
                 left: auto;
                 top: auto;
                 padding: 0;
+                margin-top: 8px;
+                height: auto;            
             }
         }
     }
     
+}
+
+@media screen and (max-width: 350px) {
+    section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .funders-block ul.funders-list li {
+        width: 100%;
+        height: auto;
+
+        &:nth-child(2n){
+            padding: 20px 0;
+        }
+
+        &:nth-child(odd){
+            padding: 20px 0;
+            &:before{
+                display: none;
+            }
+        }
+
+        img{
+            width: auto;
+            height: 100%;
+        }
+    
+    }
 }
