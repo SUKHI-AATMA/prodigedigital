@@ -20,7 +20,23 @@ h5,
 p {
     margin: 0;
 }
+a{
+    text-decoration: none;
+}
 
+
+main{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+.container{
+    display: block; 
+    padding: 0 90px;
+}
+.form-style{
+    position: relative;
+}
 .form-style ::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
     font-family: 'Space Mono', monospace;
@@ -46,7 +62,7 @@ p {
 }
 
 .form-style .form-group .form-field {
-    position: relative;
+    /* position: relative; */
     margin-bottom: 30px;
 }
 
@@ -63,6 +79,15 @@ p {
     color: #fff;
     width: 100%;
 }
+
+/* .form-style input[type="radio"]{
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 1rem;
+    height: 1.25rem;
+    opacity: 0;
+} */
 
 .form-style .form-btn {
     margin-top: 98px;
@@ -88,13 +113,69 @@ p {
     background-color: #fff;
 }
 
+.form-style form .error-msg{
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    text-decoration-line: underline;
+    color: #C4C4C4;
+}
+.form-style form .group-radio .error-msg{
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    text-align: center;
+}
+.form-style form .num-field .error-msg{
+    position: absolute;
+    bottom: -32px;
+    left: 0;
+}
+.form-style form .shirtSize-group .error-msg{
+    position: absolute;
+    bottom: 24px;
+    left: 0;
+    text-align: left;
+    transform: none;
+}
+.form-style form .fitting-group .error-msg{
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    text-align: left;
+    transform: none;
+}
+.form-style .button-group a{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+.form-style .button-group .arrow{
+    position:absolute;
+    top:200px;
+}
+.form-style .button-group .previous{
+    left:0;
+}
+.form-style .button-group .next{
+    right: 0;
+}
+
 .form-style .formCommon {
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
     padding-bottom: 72px;
 }
-
 .form-style .content h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -140,7 +221,6 @@ p {
     text-align: center;
     padding: 9px 30px;
     color: #fff;
-    text-decoration: none;
     border: 1px solid #fff;
 }
 
@@ -177,7 +257,7 @@ p {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    11111
+
 }
 
 
@@ -203,6 +283,52 @@ p {
     margin: 0 auto;
 }
 
+.group-radio .form-field {
+    margin-bottom: 20px;
+}
+.group-radio .form-field:last-child{
+    margin-bottom: 0px;
+}
+.group-radio .form-field label {
+    display: inline-block;
+    width: 100%;
+    padding: 8px 36px;
+    border: solid 1px #fff;
+    transition: all 0.3s;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    cursor: pointer;
+}
+.group-radio .form-field input[type="radio"] {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 1rem;
+    height: 1.25rem;
+    opacity: 0;
+}
+/* .group-radio .form-field label:hover,
+.group-radio .form-field label.active {
+    background-color: #fff;
+    color: #000;
+} */
+
+
+.form-style .form5 .radio-field .radio-box>label:hover,
+.form-style .form5 .radio-field .radio-box>label.active,
+.form-style .form6 .radio-field>label:hover,
+.form-style .form6 .radio-field>label.active,
+.form-style .form7 .radio-field>label:hover,
+.form-style .form7 .radio-field>label.active,
+.form-style .form8 .radio-field>label:hover,
+.form-style .form8 .radio-field>label.active {
+    border: 1px solid #fff;
+    background-color: transparent;
+    transition: all 0.3s;
+    color: #fff;
+}
 
 /* form 2 */
 
@@ -235,13 +361,16 @@ p {
 }
 
 .form-style .form3 .form-group {
-    width: 534px;
+    width: 462px;
     margin: 0 auto;
     padding-top: 30px;
 }
 
-.form-style .form3 .form-field {
+/* .form-style .form3 .form-field {
     margin-bottom: 20px;
+}
+.form-style .form3 .form-field:last-child{
+    margin-bottom: 0px;
 }
 
 .form-style .form3 label {
@@ -258,14 +387,25 @@ p {
 }
 
 .form-style .form3 input[type="radio"] {
-    display: none;
-}
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 1rem;
+    height: 1.25rem;
+    opacity: 0;
+} */
 
-.form-style .form3 input[type="radio"]:checked+label,
+/* .form-style .form3 input[type="radio"]:checked+label,
 .form-style .form3 input[type="radio"]:hover+label {
     background-color: #fff;
     color: #000;
-}
+} */
+
+/* .form-style .form3 label:hover,
+.form-style .form3 label.active {
+    background-color: #fff;
+    color: #000;
+} */
 
 
 /* form 4 */
@@ -301,6 +441,7 @@ p {
 }
 
 .form-style .form4 .form-field {
+    position: relative;
     margin-bottom: 24px;
 }
 
@@ -332,7 +473,7 @@ p {
     padding-left: 38px;
 }
 
-.form-style .form4 .col .form-field span {
+.form-style .form4 .col .form-field .mobplus {
     position: absolute;
     left: 0;
     top: 0;
@@ -366,12 +507,16 @@ p {
 }
 
 .form-style .form5 .form-group .flex-wrap {
+    position: relative;
     display: flex;
     /* justify-content: space-between; */
 }
 
 .form-style .form5 .form-group .flex-wrap label {
     margin-right: 12px;
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
+    line-height: 27px;
 }
 
 .form-style .form5 .form-group .flex-wrap input {
@@ -384,39 +529,43 @@ p {
 }
 
 .form-style .form5 .form-group .col:nth-child(2) {
+    position: relative;
     width: 224px;
     margin-right: 114px;
 }
 
 .form-style .form5 .form-group .col:nth-child(3) {
+    position: relative;
     width: 237px;
 }
 
 .form-style .form5 .form-group .col:nth-child(4) {
+    position: relative;
     width: 192px;
     margin-right: 80px;
     padding-top: 90px;
 }
 
 .form-style .form5 .form-group .col:nth-child(5) {
+    position: relative;
     width: 250px;
     padding-top: 90px;
 }
 
-.form-style .form5 .form-group .col label {
+/* .form-style .form5 .form-group .col label {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 18px;
     line-height: 27px;
     padding-bottom: 4px;
-}
+} */
 
 .form-style .form5 .form-group .title {
     display: flex;
     align-items: flex-end;
 }
 
-.form-style .form5 .form-group .title label {
+.form-style .form5 .form-group .title p {
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -492,15 +641,15 @@ p {
     transition: all 0.3s;
 }
 
-.form-style .form5 .radio-field .radio-box input[type="radio"] {
+/* .form-style .form5 .radio-field .radio-box input[type="radio"] {
     display: none;
-}
+} */
 
-.form-style .form5 .radio-field .radio-box input[type="radio"]:checked+label,
+/* .form-style .form5 .radio-field .radio-box input[type="radio"]:checked+label,
 .form-style .form5 .radio-field .radio-box input[type="radio"]:hover+label {
     border-color: #fff;
     transition: all 0.3s;
-}
+} */
 
 .form-style .chart-popup {
     position: absolute;
@@ -599,14 +748,14 @@ p {
     cursor: pointer;
 }
 
-.form-style .form6 input[type="radio"] {
+/* .form-style .form6 input[type="radio"] {
     display: none;
 }
 
 .form-style .form6 input[type="radio"]:checked+label,
 .form-style .form6 input[type="radio"]:hover+label {
     border: solid 1px #fff;
-}
+} */
 
 
 /* form 7 */
@@ -675,14 +824,14 @@ p {
     text-align: center;
 }
 
-.form-style .form7 input[type="radio"] {
+/* .form-style .form7 input[type="radio"] {
     display: none;
 }
 
 .form-style .form7 input[type="radio"]:checked+label,
 .form-style .form7 input[type="radio"]:hover+label {
     border: solid 1px #fff;
-}
+} */
 
 
 /* form 8 */
@@ -701,33 +850,6 @@ p {
     width: 334px;
     margin: 0 auto;
     padding-top: 30px;
-}
-
-.form-style .form8 .form-field {
-    margin-bottom: 20px;
-}
-
-.form-style .form8 label {
-    display: inline-block;
-    width: 100%;
-    padding: 8px 36px;
-    border: solid 1px #fff;
-    transition: all 0.3s;
-    font-family: 'Space Mono', monospace;
-    font-size: 24px;
-    line-height: 36px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.form-style .form8 input[type="radio"] {
-    display: none;
-}
-
-.form-style .form8 input[type="radio"]:checked+label,
-.form-style .form8 input[type="radio"]:hover+label {
-    background-color: #fff;
-    color: #000;
 }
 
 
