@@ -1,5 +1,5 @@
 section.sec-funders-bn {
-    background: url('../../images/inner-banner/funders-bn.jpg');
+    background: url("../../images/inner-banner/funders-bn.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -16,8 +16,8 @@ section.sec-funders-bn {
             width: 100%;
             margin-left: 125px;
             h1 {
-                color: #FFFFFF;
-                font-family: 'Noto Serif JP', serif;
+                color: #ffffff;
+                font-family: "Noto Serif JP", serif;
                 // text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.55);
                 font-size: 24px;
                 font-weight: 400;
@@ -43,13 +43,13 @@ section.sec-funders-bn {
                     svg {
                         display: block;
                         height: auto;
-                        @include transition(all .3s ease);
+                        @include transition(all 0.3s ease);
                     }
                     &:hover {
                         img,
                         svg {
                             transform: translateX(10px);
-                            @include transition(all .3s ease);
+                            @include transition(all 0.3s ease);
                         }
                     }
                 }
@@ -72,7 +72,7 @@ section.sec-funders-tab {
         //     max-width: 420px;
         // }
         .dots-line-wrap ul.ul-line span.line {
-            width: 60px;
+            width: 90px;
         }
         .wrapper {
             padding: 10px 125px 110px 125px;
@@ -87,28 +87,13 @@ section.sec-funders-tab {
                 &.active {
                     display: block;
                 }
-                // tab content 1
-                &#tab-1 {
-                    .row {
-                        .head-wrap {
-                            max-width: 700px;
-                        }
-                    }
-                }
-                // tab content 4
-                &#tab-4 {
-                    .row {
-                        .head-wrap {
-                            max-width: 800px;
-                        }
-                    }
-                }
                 .row {
                     .head-wrap {
+                        max-width: 800px;
                         width: 100%;
                         h2 {
                             color: #004950;
-                            font-family: 'Noto Serif JP', serif;
+                            font-family: "Noto Serif JP", serif;
                             font-size: 24px;
                             font-weight: 600;
                             letter-spacing: 0;
@@ -119,9 +104,18 @@ section.sec-funders-tab {
                     }
                     // funder-wrap
                     .funder-wrap {
-                        
                         .funders-block {
                             margin-top: 0px;
+
+                            h2 {
+                                font-family: "Noto Serif JP", serif;
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 24px;
+                                line-height: 34px;
+                                color: #004950;
+                                margin: 100px 0 60px;
+                            }
                             ul.funders-list {
                                 display: flex;
                                 justify-content: flex-start;
@@ -134,11 +128,11 @@ section.sec-funders-tab {
                                     // align-items: center;
                                     // display: flex;
                                     // justify-content: center;
-                                    @include transition(.3s ease-in-out);
+                                    @include transition(0.3s ease-in-out);
                                     cursor: pointer;
                                     position: relative;
                                     &:hover {
-                                        background-color: #E8F5EE;
+                                        background-color: #e8f5ee;
                                         .box-hover {
                                             opacity: 1;
                                         }
@@ -151,7 +145,7 @@ section.sec-funders-tab {
                                         display: none;
                                     }
                                     .box-hover {
-                                        @include transition(.3s ease-in-out);
+                                        @include transition(0.3s ease-in-out);
                                         opacity: 0;
                                         position: absolute;
                                         width: 100%;
@@ -164,7 +158,7 @@ section.sec-funders-tab {
                                         align-items: center;
                                         padding: 20px 30px;
                                         h4 {
-                                            font-family: 'Noto Serif JP', serif;
+                                            font-family: "Noto Serif JP", serif;
                                             font-weight: normal;
                                             font-weight: 500;
                                             font-size: 12px;
@@ -255,20 +249,38 @@ section.sec-funders-tab {
     section.sec-funders-tab .container .tab-container .tab-content .row .funders-container .modal-overlay {
         display: none;
     }
-    
 }
 
 @media screen and (max-width: 768px) {
     section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .funders-block ul.funders-list li {
         width: calc(100% / 3);
         height: 180px;
-        position: relative;     
+        position: relative;
         padding: 24px;
     }
-    section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .funders-block ul.funders-list li .box-hover{
+    section.sec-funders-tab
+        .container
+        .tab-container
+        .tab-content
+        .row
+        .funder-wrap
+        .funders-block
+        ul.funders-list
+        li
+        .box-hover {
         padding: 12px 20px;
     }
-    section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .funders-block ul.funders-list li .box-hover h4{
+    section.sec-funders-tab
+        .container
+        .tab-container
+        .tab-content
+        .row
+        .funder-wrap
+        .funders-block
+        ul.funders-list
+        li
+        .box-hover
+        h4 {
         font-size: 11px;
         line-height: 14px;
     }
@@ -286,20 +298,23 @@ section.sec-funders-tab {
         font-size: 16px;
         line-height: 22px;
     }
-    
 }
 
 @media screen and (max-width: 480px) {
-    
     section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .funders-block ul.funders-list li {
         width: calc(100% / 2);
         //height: 160px;
         height: 225px;
-        
-        &:nth-child(odd){
+
+        img {
+            width: auto;
+            height: 130px;
+        }
+
+        &:nth-child(odd) {
             padding: 0 20px 0 0;
-            &:after{
-                content: '';
+            &:after {
+                content: "";
                 position: absolute;
                 left: 0;
                 bottom: 0;
@@ -308,8 +323,8 @@ section.sec-funders-tab {
                 opacity: 0.1;
                 background-color: #000;
             }
-            &::before{
-                content: '';
+            &::before {
+                content: "";
                 position: absolute;
                 right: 0;
                 bottom: 20px;
@@ -319,10 +334,10 @@ section.sec-funders-tab {
                 background-color: #000;
             }
         }
-        &:nth-child(even){
+        &:nth-child(even) {
             padding: 0 0 0 20px;
-            &:after{
-                content: '';
+            &:after {
+                content: "";
                 position: absolute;
                 right: 0;
                 bottom: 0;
@@ -352,12 +367,15 @@ section.sec-funders-tab {
                 left: auto;
                 top: auto;
                 padding: 0;
-                margin-top: 8px;
-                height: auto;            
+                margin-top: 12px;
+                height: auto;
+
+                h4 {
+                    margin-bottom: 6px;
+                }
             }
         }
     }
-    
 }
 
 @media screen and (max-width: 350px) {
@@ -365,21 +383,20 @@ section.sec-funders-tab {
         width: 100%;
         height: auto;
 
-        &:nth-child(2n){
+        &:nth-child(2n) {
             padding: 20px 0;
         }
 
-        &:nth-child(odd){
+        &:nth-child(odd) {
             padding: 20px 0;
-            &:before{
+            &:before {
                 display: none;
             }
         }
 
-        img{
+        img {
             width: auto;
             height: 100%;
         }
-    
     }
 }
