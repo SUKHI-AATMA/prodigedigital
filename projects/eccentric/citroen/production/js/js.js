@@ -464,9 +464,9 @@ $(function() {
         $("body").addClass("popup-compare-visible car-comparator-visible");
     });
 
-    setTimeout(function() {
-        $(".tab-versions-content .compare-btn").click();
-    }, 500);
+    // setTimeout(function() {
+    //     $(".tab-versions-content .compare-btn").click();
+    // }, 500);
 
     $(document).on("click", ".comparison-details-row .heading", function() {
         $(this).parents(".comparison-details-row").children(".full-width:last-child").slideToggle();
@@ -474,7 +474,6 @@ $(function() {
     });
 
     $(".car-comparator-wrapper").scroll(function() {
-        //console.log($(".car-comparator-wrapper").scrollTop());
         if($(".car-comparator-wrapper").scrollTop() >= 174) {
             $(".car-comparator-wrapper .pd-row.box-car-model-wrapper .box-car-model > .full-width").addClass("display-car-model");
         }
