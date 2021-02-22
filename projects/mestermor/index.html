@@ -15,7 +15,9 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
-
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css" /> -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/calendar.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 
@@ -57,7 +59,7 @@
                     </div>
                 </div>
 
-                <form action="" method="post" id="formQuiz">
+                <form action="" method="post" id="formQuiz" autocomplete="off">
                     
                     <!-- form 1 -->
                     <div class="formCommon form1">
@@ -83,7 +85,8 @@
                         </div>
                         <div class="form-group">
                             <div class="form-field">
-                                <input type="text" id="date" name="date"  placeholder="Date">
+                                <!-- <input type="text" id="date" name="date"  placeholder="Date"> -->
+                                <input type="text" id="date" name="date"  placeholder="Birth Date" class="datePickerMonthYear" >
                             </div>
                         </div>
                     </div>
@@ -227,7 +230,12 @@
                                     <a href="javascript:;" id="chartClick2">SIZE CHART</a>
                                 </div>
                                 <div class="form-field">
-                                    <input type="text" id="waistSize" name="waistSize" placeholder="5" data-validation="numeric">
+                                    <div class="waist-group">
+                                        <p>24</p>
+                                        <input type="range" id="waistSize" name="waistSize" value="32" min="24" max="40">
+                                        <p>40</p>
+                                    </div>
+                                    <span id="sliderOutput"></span>
                                 </div>
                             </div>
                             <div class="col">
@@ -518,6 +526,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
 <!-- <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
 <script src="js/main.js"></script>
 
 

@@ -16,11 +16,9 @@ $(document).ready(function() {
         if($('.form-style input').is(':checked')) { 
           $(this).addClass('active')
          } 
-     });
+    });
 
-    //====== quiz page - end
-
-    
+    // onclick of start
     $("#start").click(function(){
         $('.screen1').hide();
         $('.formCommon').first().show();
@@ -33,10 +31,34 @@ $(document).ready(function() {
         if (e != 0){
             $(this).hide();
         }   
-        //console.log(e,'e num')
-        
+        //console.log(e,'e num')        
     });  
 
+
+
+     // range slider
+    var slider = document.getElementById("waistSize");
+    var sliderOutput = document.getElementById("sliderOutput");
+    sliderOutput.innerHTML = slider.value;
+
+    slider.oninput = function() {
+        sliderOutput.innerHTML = this.value;
+    }
+
+    // datepicker
+    $(".datePickerMonthYear").datepicker({
+        changeMonth: true,
+        changeYear: true,
+        dateFormat: 'dd-mm-yy',
+        beforeShow: function (input, inst) {
+            setTimeout(function() {
+                inst.dpDiv.find('a.ui-state-highlight').removeClass('ui-state-highlight');
+            }, 100);
+        }
+    });
+
+    
+   
 
     // Custom method to validate username
     // $.validator.addMethod("usernameRegex", function(value, element) {
@@ -256,13 +278,16 @@ $(document).ready(function() {
                 else if ( element.is("#ft") ) {
                     error.appendTo( element.parents('.num-field') );
                 }
+                // else if ( element.is(":range") ) {
+                //     error.appendTo( element.parents('.waist-group') );
+                // }
                 else { 
                     // This is the default behavior 
                     error.insertAfter( element );
                 }
             },
             submitHandler: function () {
-                alert('form submit');
+                //alert('form submit');
             }
         });
 
@@ -371,6 +396,8 @@ $(document).ready(function() {
         
 	});
 
+    
+    //====== quiz page - end
     
 
 })();
