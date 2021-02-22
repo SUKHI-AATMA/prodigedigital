@@ -1829,6 +1829,9 @@ section.sec-timeline {
     // section.sec-partners .container .inner-wrap .partners-wrap .owl-carousel .owl-stage .owl-item:after{
     //     display: none;
     // }
+    section.sec-partners {
+        padding: 48px 0;
+    }
     section.sec-partners .container .inner-wrap .title-wrap,
     section.sec-news .container .inner-wrap .title-wrap {
         padding-bottom: 16px
@@ -1949,14 +1952,16 @@ section.sec-timeline {
     }
     section.sec-testimonials .container .inner-wrap .testimonials-wrap .bg-box {
         width: 100%;
-        height: 100%;
-        top: 30px;
+        height: 60%;
+        top: auto;
+        bottom: 0;
     }
     section.sec-testimonials .container .inner-wrap .testimonials-wrap span {
-        top: 300px;
-        left: 50%;
-        margin-left: -40px;
-        display: none;
+        top: -40px;
+        left: auto;
+        margin-left: 0px;
+        //display: none;
+        right: 0;
     }
     section.sec-testimonials .container .inner-wrap .owl-carousel .owl-item .item {
         max-width: 480px;
@@ -1976,7 +1981,7 @@ section.sec-timeline {
     section.sec-testimonials .container .inner-wrap .owl-carousel {
         .owl-next,
         .owl-prev {
-            bottom: 50%;
+            bottom: 66%;
         }
         .owl-next {
             left: auto;
@@ -2048,6 +2053,7 @@ section.sec-timeline {
     section.sec-news .container .inner-wrap .btn-read a {
         font-size: 14px;
         line-height: 19px;
+        margin-bottom: 20px;
         img,
         svg {
             width: 20px;
@@ -2077,6 +2083,9 @@ section.sec-timeline {
     // section.sec-map .container {
     //     height: 1200px;
     // }
+    section.sec-map .container .title-wrap {
+        margin-bottom: 32px;
+    }
     section.sec-map .container .title-wrap,
     section.sec-map .container .map-block {
         width: 100%;
@@ -2103,6 +2112,11 @@ section.sec-timeline {
     }
     section.sec-map .container .figure-info .note {
         margin-bottom: 24px;
+    }
+    section.sec-map .container .note-wrap .note .coll p {
+        width: 220px;
+        font-size: 12px;
+        line-height: 16px;
     }
     // section.sec-news .container .inner-wrap>.flex-wrap,
     // section.sec-partners .container .inner-wrap>.flex-wrap,
@@ -2189,11 +2203,28 @@ section.sec-timeline {
     section.sec-testimonials .container .inner-wrap .owl-carousel .owl-item .item {
         max-width: 90%;
     }
+    section.sec-testimonials .container .inner-wrap .testimonials-wrap span {
+        background-size: contain;
+        width: 50px;
+        height: 50px;
+        top: -25px;
+    }
+    section.sec-testimonials .container .inner-wrap .owl-carousel .owl-item .item .row .right p.desc {
+        font-size: 14px;
+        padding-bottom: 20px;
+    }
+    section.sec-testimonials .container .inner-wrap .owl-carousel .owl-item .item .row .right h4 {
+        padding-bottom: 6px;
+    }
+    section.sec-testimonials .container .inner-wrap .owl-carousel .owl-item .item .row .right p {
+        font-size: 12px;
+        line-height: 16px;
+    }
     section.sec-testimonials .container .inner-wrap .owl-carousel {
         .owl-next,
         .owl-prev {
             bottom: auto;
-            top: 40%;
+            top: 25%;
         }
         .owl-next {
             right: -20px;
@@ -2203,7 +2234,8 @@ section.sec-timeline {
         }
     }
     section.sec-testimonials .container .inner-wrap .owl-carousel .owl-item .item .row .right {
-        padding: 20px;
+        padding: 10px 0;
+        margin: 0;
     }
 }
 

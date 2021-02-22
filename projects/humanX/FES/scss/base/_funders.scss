@@ -1,5 +1,5 @@
 section.sec-funders-bn {
-    background: url('../../images/inner-banner/funders-bn.jpg');
+    background: url("../../images/inner-banner/funders-bn.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -16,8 +16,8 @@ section.sec-funders-bn {
             width: 100%;
             margin-left: 125px;
             h1 {
-                color: #FFFFFF;
-                font-family: 'Noto Serif JP', serif;
+                color: #ffffff;
+                font-family: "Noto Serif JP", serif;
                 // text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.55);
                 font-size: 24px;
                 font-weight: 400;
@@ -43,13 +43,13 @@ section.sec-funders-bn {
                     svg {
                         display: block;
                         height: auto;
-                        @include transition(all .3s ease);
+                        @include transition(all 0.3s ease);
                     }
                     &:hover {
                         img,
                         svg {
                             transform: translateX(10px);
-                            @include transition(all .3s ease);
+                            @include transition(all 0.3s ease);
                         }
                     }
                 }
@@ -72,7 +72,7 @@ section.sec-funders-tab {
         //     max-width: 420px;
         // }
         .dots-line-wrap ul.ul-line span.line {
-            width: 60px;
+            width: 90px;
         }
         .wrapper {
             padding: 10px 125px 110px 125px;
@@ -87,20 +87,13 @@ section.sec-funders-tab {
                 &.active {
                     display: block;
                 }
-                // tab content 1
-                &#tab-1 {
-                    .row {
-                        .head-wrap {
-                            max-width: 700px;
-                        }
-                    }
-                }
                 .row {
                     .head-wrap {
+                        max-width: 800px;
                         width: 100%;
                         h2 {
                             color: #004950;
-                            font-family: 'Noto Serif JP', serif;
+                            font-family: "Noto Serif JP", serif;
                             font-size: 24px;
                             font-weight: 600;
                             letter-spacing: 0;
@@ -111,53 +104,18 @@ section.sec-funders-tab {
                     }
                     // funder-wrap
                     .funder-wrap {
-                        .search-wrap {
-                            position: relative;
-                            width: 400px;
-                            display: block;
-                            margin-top: 32px;
-                            .search-icon {
-                                position: absolute;
-                                width: 24px;
-                                height: 24px;
-                                top: 14px;
-                                right: 30px;
-                            }
-                            input {
-                                width: 100%;
-                                border: 1px solid rgba(0, 73, 80, 0.3);
-                                border-radius: 5px;
-                                background-color: #FFFFFF;
-                                // box-shadow: 0 5px 5px 0 rgba(206,206,206,0.3);     
-                                padding: 16px 62px 16px 30px;
-                                color: #252525;
-                                font-size: 14px;
-                                letter-spacing: 0;
-                                line-height: 18px;
-                                &::-webkit-input-placeholder {
-                                    color: #252525;
-                                    opacity: .5;
-                                    font-family: 'Open Sans', sans-serif;
-                                }
-                                &::-moz-placeholder {
-                                    color: #252525;
-                                    opacity: .5;
-                                    font-family: 'Open Sans', sans-serif;
-                                }
-                                &:-ms-input-placeholder {
-                                    color: #252525;
-                                    opacity: .5;
-                                    font-family: 'Open Sans', sans-serif;
-                                }
-                                &:-moz-placeholder {
-                                    color: #252525;
-                                    opacity: .5;
-                                    font-family: 'Open Sans', sans-serif;
-                                }
-                            }
-                        }
                         .funders-block {
-                            margin-top: 60px;
+                            margin-top: 0px;
+
+                            h2 {
+                                font-family: "Noto Serif JP", serif;
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 24px;
+                                line-height: 34px;
+                                color: #004950;
+                                margin: 100px 0 60px;
+                            }
                             ul.funders-list {
                                 display: flex;
                                 justify-content: flex-start;
@@ -167,14 +125,14 @@ section.sec-funders-tab {
                                     width: calc(100% / 4);
                                     padding: 32px;
                                     height: 250px;
-                                    align-items: center;
-                                    display: flex;
-                                    justify-content: center;
-                                    @include transition(.3s ease-in-out);
+                                    // align-items: center;
+                                    // display: flex;
+                                    // justify-content: center;
+                                    @include transition(0.3s ease-in-out);
                                     cursor: pointer;
                                     position: relative;
                                     &:hover {
-                                        background-color: #E8F5EE;
+                                        background-color: #e8f5ee;
                                         .box-hover {
                                             opacity: 1;
                                         }
@@ -187,7 +145,7 @@ section.sec-funders-tab {
                                         display: none;
                                     }
                                     .box-hover {
-                                        @include transition(.3s ease-in-out);
+                                        @include transition(0.3s ease-in-out);
                                         opacity: 0;
                                         position: absolute;
                                         width: 100%;
@@ -198,9 +156,9 @@ section.sec-funders-tab {
                                         flex-direction: column;
                                         justify-content: space-between;
                                         align-items: center;
-                                        padding: 30px;
+                                        padding: 20px 30px;
                                         h4 {
-                                            font-family: 'Noto Serif JP', serif;
+                                            font-family: "Noto Serif JP", serif;
                                             font-weight: normal;
                                             font-weight: 500;
                                             font-size: 12px;
@@ -215,220 +173,6 @@ section.sec-funders-tab {
                                             line-height: 15px;
                                             text-align: center;
                                             color: #004950;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    // funders container
-                    .funders-container {
-                        position: fixed;
-                        z-index: 0;
-                        /* 1 */
-                        top: 0px;
-                        left: 0;
-                        visibility: hidden;
-                        width: 100%;
-                        height: 100%;
-                        &.is-visible {
-                            visibility: visible;
-                            z-index: 99990;
-                        }
-                        .modal-overlay {
-                            position: fixed;
-                            z-index: 0;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            background: rgba(0, 0, 0, 0.4);
-                            visibility: hidden;
-                            opacity: 0;
-                            transition: visibility 0s linear 0.3s, opacity 0.3s;
-                        }
-                        &.is-visible .modal-overlay {
-                            opacity: 1;
-                            visibility: visible;
-                            transition-delay: 0s;
-                            z-index: 0;
-                        }
-                        ul.funders-content {
-                            position: relative;
-                            max-width: 830px;
-                            width: 100%;
-                            height: 100%;
-                            margin: 0 auto;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            .inner-wrap {
-                                position: relative;
-                                max-height: 531px;
-                                min-height: auto;
-                                width: 100%;
-                            }
-                            .close {
-                                display: block;
-                                position: absolute;
-                                right: 50px;
-                                top: 24px;
-                                width: 16px;
-                                height: 16px;
-                            }
-                            .close:before,
-                            .close:after {
-                                position: absolute;
-                                left: 15px;
-                                content: ' ';
-                                height: 16px;
-                                width: 2px;
-                                background-color: rgba(0, 0, 0, 0.7);
-                            }
-                            .close:before {
-                                transform: rotate(45deg);
-                            }
-                            .close:after {
-                                transform: rotate(-45deg);
-                            }
-                            .btn-popup-group {
-                                animation-delay: 2s;
-                                display: block;
-                                position: absolute;
-                                left: -86px;
-                                top: 50%;
-                                margin-top: -20px;
-                                z-index: 44;
-                                width: 100%;
-                                .wrap {
-                                    display: flex;
-                                    justify-content: space-between;
-                                    align-items: center;
-                                    width: 1000px;
-                                    margin: 0 auto;
-                                }
-                                .btn-popup {
-                                    width: auto;
-                                    @include transition(all .3s ease);
-                                    a {
-                                        justify-content: flex-start;
-                                    }
-                                    &.btn-prev {
-                                        a {
-                                            flex-direction: row-reverse;
-                                            span {
-                                                padding-right: 0;
-                                                padding-left: 12px;
-                                            }
-                                        }
-                                    }
-                                    span {
-                                        display: none;
-                                        text-transform: capitalize;
-                                        padding-right: 10px;
-                                        color: #004950;
-                                        font-size: 16px;
-                                        font-weight: 600;
-                                        line-height: 22px;
-                                        cursor: pointer;
-                                        width: auto;
-                                        justify-content: flex-start;
-                                    }
-                                    img,
-                                    svg {
-                                        display: block;
-                                        width: 60px;
-                                        height: auto;
-                                        @include transition(all .3s ease);
-                                        &.mob {
-                                            display: none;
-                                        }
-                                    }
-                                }
-                            }
-                            li {
-                                display: none;
-                                height: 100%;
-                                &.active {
-                                    display: block;
-                                }
-                                .inner-block {
-                                    width: 100%;
-                                    padding: 60px 24px;
-                                    display: flex;
-                                    justify-content: space-between;
-                                    align-items: center;
-                                    border: 1px solid #979797;
-                                    border-radius: 10px;
-                                    background-color: #FFFFFF;
-                                    height: 100%;
-                                    position: relative;
-                                    overflow: hidden;
-                                    .col {
-                                        height: 100%;
-                                        &:first-child {
-                                            max-width: 260px;
-                                            width: 100%;
-                                            text-align: center;
-                                            margin: 0 auto;
-                                            .row {
-                                                height: 100%;
-                                                display: flex;
-                                                flex-direction: column;
-                                                align-items: center;
-                                                justify-content: center;
-                                                .coll:first-child {
-                                                    width: 200px;
-                                                    margin: 0 auto;
-                                                    padding: 30px;
-                                                    img {
-                                                        width: 100%;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                        &:last-child {
-                                            max-width: calc(100% - 260px);
-                                            width: 100%;
-                                            padding-left: 42px;
-                                            padding-right: 32px;
-                                            // height: calc(100vh - 560px);
-                                            max-height: 410px;
-                                            min-height: auto;
-                                            overflow-y: auto;
-                                        }
-                                        p {
-                                            opacity: 0.8;
-                                            color: #4A4A4A;
-                                            font-size: 14px;
-                                            letter-spacing: 0;
-                                            line-height: 19px;
-                                            padding-bottom: 30px;
-                                            &.title {
-                                                font-weight: bold;
-                                                padding-bottom: 16px;
-                                            }
-                                            &:last-child {
-                                                padding-bottom: 0;
-                                            }
-                                        }
-                                        h3 {
-                                            opacity: 0.8;
-                                            color: #000000;
-                                            font-family: 'Noto Serif JP', serif;
-                                            font-size: 18px;
-                                            font-weight: 500;
-                                            letter-spacing: 0;
-                                            line-height: 26px;
-                                            text-align: center;
-                                        }
-                                        a {
-                                            color: #004950;
-                                            font-size: 16px;
-                                            font-weight: 600;
-                                            letter-spacing: 0;
-                                            line-height: 22px;
-                                            text-align: center;
                                             word-break: break-all;
                                         }
                                     }
@@ -505,88 +249,40 @@ section.sec-funders-tab {
     section.sec-funders-tab .container .tab-container .tab-content .row .funders-container .modal-overlay {
         display: none;
     }
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content li {
-        transition: 0.9s all ease;
-        opacity: 0;
-        background-color: #fff;
-        &.active {
-            display: block;
-            transform: translateY(0px);
-            opacity: 1;
-        }
-    }
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content .btn-popup-group .btn-popup img.desk,
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content .btn-popup-group .btn-popup svg.desk {
-        display: none;
-    }
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content .btn-popup-group .btn-popup img.mob,
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content .btn-popup-group .btn-popup svg.mob {
-        display: block;
-        width: 24px;
-    }
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content {
-        max-width: 100%;
-        .inner-wrap {
-            max-height: 100%;
-            height: 100%;
-        }
-        .btn-popup-group {
-            left: 0;
-            top: auto;
-            bottom: 30px;
-            .wrap {
-                width: 80%;
-                padding: 0 20px;
-            }
-            .btn-popup a span {
-                display: block;
-            }
-            .btn-prev {
-                img,
-                svg {
-                    transform: rotate(180deg);
-                }
-            }
-        }
-        li {
-            .inner-block {
-                border: none;
-                border-radius: 0;
-                flex-direction: column;
-                justify-content: flex-start;
-                .col {
-                    &:first-child {
-                        max-width: 80%;
-                        height: auto;
-                        .row {
-                            height: auto;
-                            flex-direction: row;
-                            width: 500px;
-                            .coll:first-child {
-                                width: 50%;
-                                padding: 16px;
-                            }
-                            .coll:last-child {
-                                width: 50%;
-                            }
-                        }
-                    }
-                    &:last-child {
-                        max-width: 80%;
-                        padding: 0;
-                        margin-top: 32px;
-                    }
-                }
-            }
-        }
-    }
 }
 
 @media screen and (max-width: 768px) {
     section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .funders-block ul.funders-list li {
         width: calc(100% / 3);
         height: 180px;
-        padding: 20px;
+        position: relative;
+        padding: 24px;
+    }
+    section.sec-funders-tab
+        .container
+        .tab-container
+        .tab-content
+        .row
+        .funder-wrap
+        .funders-block
+        ul.funders-list
+        li
+        .box-hover {
+        padding: 12px 20px;
+    }
+    section.sec-funders-tab
+        .container
+        .tab-container
+        .tab-content
+        .row
+        .funder-wrap
+        .funders-block
+        ul.funders-list
+        li
+        .box-hover
+        h4 {
+        font-size: 11px;
+        line-height: 14px;
     }
     section.sec-funders-tab .container .wrapper {
         padding: 0px 0px 72px 0px;
@@ -602,60 +298,63 @@ section.sec-funders-tab {
         font-size: 16px;
         line-height: 22px;
     }
-    section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .search-wrap {
-        margin-top: 0;
-    }
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content .btn-popup-group {
-        bottom: 14px;
-    }
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content li .inner-block .col {
-        &:first-child {
-            max-width: 100%;
-            .row {
-                width: 100%;
-                .coll {
-                    &:first-child {
-                        width: 200px;
-                        padding: 0;
-                    }
-                    &:last-child {
-                        width: calc(100% - 200px);
-                        padding-left: 24px;
-                        text-align: left;
-                        h3,
-                        a {
-                            text-align: left;
-                        }
-                    }
-                }
-            }
-        }
-        &:last-child {
-            max-width: 100%;
-        }
-    }
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content .btn-popup-group .wrap {
-        width: 100%;
-    }
 }
 
 @media screen and (max-width: 480px) {
-    section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .search-wrap {
-        width: 100%;
-        input {
-            padding: 16px 42px 16px 20px;
-        }
-        .search-icon {
-            right: 12px;
-        }
-    }
     section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .funders-block ul.funders-list li {
         width: calc(100% / 2);
         //height: 160px;
-        height: 190px;
+        height: 225px;
+
+        img {
+            width: auto;
+            height: 130px;
+        }
+
+        &:nth-child(odd) {
+            padding: 0 20px 0 0;
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: calc(100% - 20px);
+                height: 1px;
+                opacity: 0.1;
+                background-color: #000;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                right: 0;
+                bottom: 20px;
+                width: 1px;
+                height: calc(100% - 40px);
+                opacity: 0.1;
+                background-color: #000;
+            }
+        }
+        &:nth-child(even) {
+            padding: 0 0 0 20px;
+            &:after {
+                content: "";
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: calc(100% - 20px);
+                height: 1px;
+                opacity: 0.1;
+                background-color: #000;
+            }
+        }
+
         a {
             display: flex;
             flex-direction: column;
+
+            height: 100%;
+            justify-content: center;
+
             .img-box {
                 height: 120px;
                 display: flex;
@@ -668,46 +367,36 @@ section.sec-funders-tab {
                 left: auto;
                 top: auto;
                 padding: 0;
-            }
-        }
-    }
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content li .inner-block .col {
-        &:first-child {
-            .row {
-                width: 100%;
-                .coll {
-                    &:first-child {
-                        width: 145px;
-                    }
-                    &:last-child {
-                        width: calc(100% - 145px);
-                        padding-left: 20px;
-                        text-align: left;
-                        h3 {
-                            font-size: 16px;
-                            line-height: 22px;
-                        }
-                        a {
-                            font-size: 14px;
-                            line-height: 19px;
-                        }
-                    }
+                margin-top: 12px;
+                height: auto;
+
+                h4 {
+                    margin-bottom: 6px;
                 }
             }
         }
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 350px) {
     section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .funders-block ul.funders-list li {
-        padding: 14px;
-        height: 140px;
-    }
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content li .inner-block .col:first-child .row .coll:first-child {
-        width: 120px;
-    }
-    section.sec-funders-tab .container .tab-container .tab-content .row .funders-container ul.funders-content li .inner-block .col:first-child .row .coll:last-child {
-        width: calc(100% - 120px);
-        padding-left: 12px;
+        width: 100%;
+        height: auto;
+
+        &:nth-child(2n) {
+            padding: 20px 0;
+        }
+
+        &:nth-child(odd) {
+            padding: 20px 0;
+            &:before {
+                display: none;
+            }
+        }
+
+        img {
+            width: auto;
+            height: 100%;
+        }
     }
 }

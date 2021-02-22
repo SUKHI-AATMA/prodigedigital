@@ -1,0 +1,535 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mestermor</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css" /> -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+    <header>
+        <img src="img/Mestermor-Quixx-Logo.svg" alt="">
+    </header>
+
+    <main>
+        <div class="container ">
+            <div class="form-style">
+
+                <div class="screen screen1">
+                    <div class="content">
+                        <h2>We’re so happy to have you on board.</h2>
+                        <p>Before we send out your very first subscription box, we’d like to get to know a few things about you.</p>
+                        <div class="cta-box">
+                            <a href="javascript:;" id="start" >Let’s start</a>
+                        </div>
+                    </div>
+                    <div class="quiz-gallery-container">
+                        <div class="quiz-gallery">
+                            <div class="img-box">
+                                <img src="img/quiz-img-1.png" alt="">
+                            </div>
+                            <div class="img-box">
+                                <img src="img/quiz-img-2.png" alt="">
+                            </div>
+                            <div class="img-box">
+                                <img src="img/quiz-img-3.png" alt="">
+                            </div>
+                            <div class="img-box logo">
+                                <img src="img/quiz-Box_MR.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="" method="post" id="formQuiz" autocomplete="off">
+                    
+                    <!-- form 1 -->
+                    <div class="formCommon form1">
+                        <div class="content">
+                            <h2>First things first.</h2>
+                            <p>We haven’t been introduced. Could you tell us your name?</p>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-field">
+                                <input type="text" id="firstname" name="firstname" placeholder="First Name" data-validation="alphabet">
+                            </div>
+                            <div class="form-field">
+                                <input type="text" id="lastname" name="lastname" placeholder="Last Name" data-validation="alphabet">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- form 2 -->
+                    <div class="formCommon form2">
+                        <div class="content">
+                            <h2>We love birthdays.</h2>
+                            <p>And we would never want to forget yours. Tell us when it is?</p>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-field">
+                                <!-- <input type="text" id="date" name="date"  placeholder="Date"> -->
+                                <input type="text" id="date" name="date"  placeholder="Birth Date" class="datePickerMonthYear" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- form 3 -->
+                    <div class="formCommon form3">
+                        <div class="content">
+                            <h2>Tell us why?</h2>
+                            <p>We’re curious to find out what made you sign up for our subscription box?</p>
+                        </div>
+                        <div class="form-group  group-radio">
+                            <div class="form-field">
+                                <label for="radio1">
+                                    <input type="radio" id="radio1" name="subscription" value="To go beyond the comfort zone in terms of style.">
+                                    To go beyond the comfort zone in terms of style.
+                                </label>
+                            </div>
+                            <div class="form-field">
+                                <label for="radio2">
+                                    <input type="radio" id="radio2" name="subscription" value="To save time from endless scrolling and crowded malls.">
+                                    To save time from endless scrolling and crowded malls.
+                                </label>
+                            </div>
+                            <div class="form-field">
+                                <label for="radio3">
+                                    <input type="radio" id="radio3" name="subscription" value="To discover unique brands which were under your radar.">To discover unique brands which were under your radar.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- form 4 -->
+                    <div class="formCommon form4">
+                        <div class="content">
+                            <h2>Tell us a bit more</h2>
+                            <p>A couple more things which can help our team in getting these boxes to you?</p>
+                        </div>
+                        <div class="form-group">
+                            <div class="col">
+                                <div class="form-field">
+                                    <label for="Address">Address</label>
+                                </div>
+                                <div class="form-field">
+                                    <input type="text" id="add1" name="add1" placeholder="Address Line 1" data-validation="alphanumeric">
+                                </div>
+                                <div class="form-field">
+                                    <input type="text" id="add2" name="add2" placeholder="Address Line 2" data-validation="alphanumeric">
+                                </div>
+                                <div class="form-field">
+                                    <input type="text" id="add3" name="add3" placeholder="Address Line 3" data-validation="alphanumeric">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <input type="text" id="city" name="city" placeholder="City" data-validation="alphabet">
+                                    </div>
+                                    <div class="form-col">
+                                        <input type="text" id="state" name="state"  placeholder="State" data-validation="alphabet">
+                                    </div>
+                                </div>
+                                <div class="form-field">
+                                    <input type="text" id="pincode" name="pincode" placeholder="Pin Code" data-validation="numeric">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-field">
+                                    <label for="Mobile">Mobile No.</label>
+                                </div>
+                                <div class="form-field">
+                                    <span class="mobplus">+91</span>
+                                    <input type="tel" id="mobile" name="mobile" placeholder="" data-validation="numeric">
+                                </div>
+                                <div class="form-field">
+                                    <label for="Email">Email</label>
+                                </div>
+                                <div class="form-field">
+                                    <input type="text" id="email" name="email" placeholder="johndoe@gmail.com">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- form 5 -->
+                    <div class="formCommon form5">
+                        <div class="content">
+                            <h2>Size Matters.</h2>
+                            <p>We’d like for our colection to fit you perfectly.<br>Fill this out and we’re there.</p>
+                        </div>
+                        <div class="form-group">
+                            <div class="col">
+                                <div class="form-field title">
+                                    <p>Height</p>
+                                </div>
+                                <div class="form-field flex-wrap num-field">
+                                    <input type="text" id="ft" name="ft" placeholder="5" data-validation="numeric" maxlength="1">
+                                    <label for="ft">Ft.</label>
+                                    <input type="text" id="inches" name="inches" data-validation="numeric"  placeholder="10" maxlength="2">
+                                    <label for="inches">inches</label>
+                                </div>
+                            </div>
+                            <div class="col group-radio shirtSize-group">
+                                <div class="form-field title">
+                                    <p>Shirt Size</p>
+                                    <a href="javascript:;" id="chartClick1">SIZE CHART</a>
+                                </div>
+                                <div class="form-field radio-field">
+                                    <div class="radio-box">
+                                        <label for="chart1">
+                                            <input type="radio" id="chart1" name="shirtSize" value="XS">XS
+                                        </label>
+                                    </div>
+                                    <div class="radio-box">
+                                        <label for="chart2">
+                                            <input type="radio" id="chart2" name="shirtSize" value="S">S
+                                        </label>
+                                    </div>
+                                    <div class="radio-box">
+                                        <label for="chart3">
+                                            <input type="radio" id="chart3" name="shirtSize" value="M">M
+                                        </label>
+                                    </div>
+                                    <div class="radio-box">
+                                        <label for="chart4">
+                                            <input type="radio" id="chart4" name="shirtSize" value="L">L
+                                        </label>
+                                    </div>
+                                    <div class="radio-box">
+                                        <label for="chart5">
+                                            <input type="radio" id="chart5" name="shirtSize" value="XL">XL
+                                        </label>
+                                    </div>
+                                    <div class="radio-box">
+                                        <label for="chart6">
+                                            <input type="radio" id="chart6" name="shirtSize" value="XXL">XXL
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-field title">
+                                    <p>Waist Size</p>
+                                    <a href="javascript:;" id="chartClick2">SIZE CHART</a>
+                                </div>
+                                <div class="form-field">
+                                    <div class="waist-group">
+                                        <p>24</p>
+                                        <input type="range" id="waistSize" name="waistSize" value="32" min="24" max="40">
+                                        <p>40</p>
+                                    </div>
+                                    <span id="sliderOutput"></span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-field title">
+                                    <p>Weight</p>
+                                </div>
+                                <div class="form-field flex-wrap num-field">
+                                    <input type="text" id="kg" name="kg" placeholder="50" data-validation="numeric">
+                                    <label for="kgs">KGs</label>
+                                </div>
+                            </div>
+                            <div class="col group-radio fitting-group">
+                                <div class="form-field title">
+                                    <p>Preferred Fitting</p>
+                                </div>
+                                <div class="form-field radio-field">
+                                    <div class="radio-box">
+                                        <input type="radio" id="fit1" name="shirtFitting" value="Slim Fit">
+                                        <label for="fit1">Slim Fit</label>
+                                    </div>
+                                    <div class="radio-box">
+                                        <input type="radio" id="fit2" name="shirtFitting" value="Regular Fit">
+                                        <label for="fit2">Regular Fit</label>
+                                    </div>
+                                    <div class="radio-box">
+                                        <input type="radio" id="fit3" name="shirtFitting" value="Large Fit">
+                                        <label for="fit3">Large Fit</label>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="chart-popup" id="chartPopup1">
+                                <table>
+                                    <tr>
+                                        <th>Shirt Size</th>
+                                        <th>Chest</th>
+                                        <th>Waist</th>
+                                        <th>Neck</th>
+                                    </tr>
+                                    <tr>
+                                        <td>XS</td>
+                                        <td>32-34</td>
+                                        <td>26-28</td>
+                                        <td>14.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>S</td>
+                                        <td>35-37</td>
+                                        <td>29-31</td>
+                                        <td>15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>M</td>
+                                        <td>38-40</td>
+                                        <td>32-34</td>
+                                        <td>15.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>L</td>
+                                        <td>41-43</td>
+                                        <td>35-36</td>
+                                        <td>16.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>XL</td>
+                                        <td>44-46</td>
+                                        <td>37-40</td>
+                                        <td>17.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>XXL</td>
+                                        <td>48-52</td>
+                                        <td>41-44</td>
+                                        <td>18.5</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="chart-popup" id="chartPopup2">
+                                <table>
+                                    <tr>
+                                        <th>Size</th>
+                                        <th>Waist</th>
+                                    </tr>
+                                    <tr>
+                                        <td>XS</td>
+                                        <td>28-29</td>
+                                    </tr>
+                                    <tr>
+                                        <td>S</td>
+                                        <td>30-31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>M</td>
+                                        <td>32-34</td>
+                                    </tr>
+                                    <tr>
+                                        <td>L</td>
+                                        <td>34-36</td>
+                                    </tr>
+                                    <tr>
+                                        <td>XL</td>
+                                        <td>38-40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>XXL</td>
+                                        <td>42-44</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+        
+                    </div>
+        
+                    <!-- form 6 -->
+                    <div class="formCommon form6">
+                        <div class="content">
+                            <h2>Body Type</h2>
+                            <p>This gives us a better clarity for what fitting will suit best.</p>
+                        </div>
+                        <div class="form-group group-radio">
+                            <div class="form-field radio-field">
+                                <label for="bodytype1">
+                                    <input type="radio" id="bodytype1" name="bodytype" value="slim">
+                                    <img src="img/body-slim.svg" alt="">
+                                </label>
+                            </div>
+                            <div class="form-field radio-field">
+                                <label for="bodytype2">
+                                    <img src="img/body-typical.svg" alt="">
+                                    <input type="radio" id="bodytype2" name="bodytype" value="typical">
+                                </label>
+                            </div>
+                            <div class="form-field radio-field">
+                                <label for="bodytype3">
+                                    <img src="img/body-athletic.svg" alt="">
+                                    <input type="radio" id="bodytype3" name="bodytype" value="athletic">
+                                </label>
+                            </div>
+                            <div class="form-field radio-field">
+                                <label for="bodytype4">
+                                    <img src="img/body-heavyset.svg" alt="">
+                                    <input type="radio" id="bodytype4" name="bodytype" value="heavyset">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- form 7 -->
+                    <div class="formCommon form7">
+                        <div class="content">
+                            <h2>Pick one.</h2>
+                            <p>It’s as simple as that.</p>
+                        </div>
+                        <div class="form-group group-radio">
+                            <div class="form-field radio-field">
+                                <input type="radio" id="box1" name="box" value="Essentials Box">
+                                <label for="box1">
+                                    <img src="img/box-essentials .png" alt="Essentials Box">
+                                    <div class="text">
+                                        <h3>Essentials Box</h3>
+                                        <p>You’ll receive a monthly package of five hand-picked items that cater to the everyday.</p>
+                                        <p>Rs. 1,999</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form-field radio-field">
+                                <input type="radio" id="box2" name="box" value="Indulgence Box">
+                                <label for="box2">
+                                    <img src="img/box-indulgence.png" alt="Indulgence Box">
+                                    <div class="text">
+                                        <h3>Essentials Box</h3>
+                                        <p>You’ll receive a monthly package of five hand-picked items that cater to the everyday.</p>
+                                        <p>Rs. 1,999</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- form 8 -->
+                    <div class="formCommon form8">
+                        <div class="content">
+                            <h2>How often?</h2>
+                            <p>Tell us how often you’d like to receive this box. We leave it totally upto you. But someone once said, ‘The more, the merrier.’</p>
+                        </div>
+                        <div class="form-group group-radio">
+                            <div class="form-field radio-field">
+                                <label for="month1">
+                                    <input type="radio" id="month1" name="month" value="Once a month">Once a month</label>
+                            </div>
+                            <div class="form-field radio-field">
+                                <label for="month2">
+                                    <input type="radio" id="month2" name="month" value="Once in 2 months">Once in 2 months </label>
+                            </div>
+                            <div class="form-field radio-field">
+                                <label for="month3"><input type="radio" id="month3" name="month" value="Once in 3 months">Once in 3 months</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- form 9 -->
+                    <div class="formCommon form9">
+                        <div class="content row">
+                            <div class="col">
+                                <h2>Let’s summarize</h2>
+                                <p>According to our notes, you should be receiving one Essentials box every month.</p>
+                                <p>Let’s review the information you’ve shared with us, to make sure everything is just right.</p>
+                            </div>
+                            <div class="col">
+                                <img src="img/box-summarize.png" alt="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col">
+                                <h3>Personal Details </h3>
+                                <div class="field-box">
+                                    <p>Name</p>
+                                    <input type="text" value="Aritro Mukherjee" disabled>
+                                </div>
+                                <div class="field-box">
+                                    <p>Birthday</p>
+                                    <input type="text" value="01/03/1997 " disabled>
+                                </div>
+                                <div class="field-box">
+                                    <p>Address</p>
+                                    <textarea disabled col="4">14/702 NRI Complex                                Sec: 54, 56, 58                                Navi Mumbai</textarea>
+                                </div>
+                                <div class="field-box">
+                                    <p>Email</p>
+                                    <input type="text" value="aritrom2@gmail.com" disabled>
+                                </div>
+                                <div class="field-box">
+                                    <p>Phone no.</p>
+                                    <input type="text" value="+91 9876788446" disabled>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <h3>Sizing Information </h3>
+                                <div class="field-box">
+                                    <p>Height</p>
+                                    <input type="text" value="5 Ft 10 Inches " disabled>
+                                </div>
+                                <div class="field-box">
+                                    <p>Weight</p>
+                                    <input type="text" value="70 KGs" disabled>
+                                </div>
+                                <div class="field-box">
+                                    <p>Shirt Size</p>
+                                    <input type="text" value="M" disabled>
+                                </div>
+                                <div class="field-box">
+                                    <p>Waist Size</p>
+                                    <input type="text" value="32" disabled>
+                                </div>
+                                <div class="field-box">
+                                    <p>Preferred Fitting</p>
+                                    <input type="text" value="Slim Fit " disabled>
+                                </div>
+                                <div class="field-box">
+                                    <p>Body Type</p>
+                                    <input type="text" value="Average" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-btn">
+                            <input type="submit" value="SUBMIT" class="btnSubmit">
+                        </div>
+                        <!-- <pre id="output"></pre> -->
+                    </div>
+                </form>
+                
+                <div class="button-group">
+                    <a href="javascript:;" class="arrow previous" id="previous">previous</a>
+                    <a href="javascript:;" class="arrow next" id="next">next</a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<!-- <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+<!-- <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<script src="js/main.js"></script>
+
+
+</html>
