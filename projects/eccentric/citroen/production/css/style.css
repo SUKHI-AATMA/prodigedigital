@@ -1803,7 +1803,7 @@ input::-webkit-inner-spin-button {
   height: 100%;
   z-index: 2;
   background-color: #fff;
-  padding: 20px 30px 35px 30px;
+  padding: 20px 10px 35px 30px;
   -webkit-transition: 0.5s all ease;
   -o-transition: 0.5s all ease;
   transition: 0.5s all ease;
@@ -1814,7 +1814,7 @@ input::-webkit-inner-spin-button {
   .car-comparator-wrapper .pd-row.box-car-model-wrapper {
     margin-top: 16px;
     padding-bottom: 30px;
-    padding-left: 172px;
+    padding-left: 192px;
     position: sticky;
     position: -webkit-sticky;
     top: -134px;
@@ -1901,8 +1901,8 @@ input::-webkit-inner-spin-button {
     .car-comparator-wrapper .comparison-details-row .display-grid {
       display: -ms-grid;
       display: grid;
-      -ms-grid-columns: 172px 208px 208px 208px 202px;
-      grid-template-columns: 172px 208px 208px 208px 202px;
+      -ms-grid-columns: 192px 208px 208px 208px 202px;
+      grid-template-columns: 192px 208px 208px 208px 202px;
       border-top: 1px solid #D0CCCC;
       background-color: #f7f7f7;
       text-transform: none; }
