@@ -1026,7 +1026,7 @@ header .hamburger-menu {
   padding: 0;
 }
 
-.contextual-pages header .navigation > .link-button:not(:first-child) {
+.contextual-pages header .navigation > .link-button:not(:first-of-type) {
   margin-left: 41px;
 }
 
@@ -1369,6 +1369,227 @@ header .hamburger-menu {
 .for-tablet {
   display: none;
 }
+
+.collections-page .main-content-wrapper {
+  margin-bottom: 100px;
+}
+
+.collections-page .main-content-wrapper .container,
+.collections-page section .container {
+  max-width: 1184px;
+}
+
+.collections-page .main-content-wrapper > .container > .row {
+  margin-bottom: 0;
+}
+
+.collections-page .main-content-wrapper > .container > .row > .col-md-5 {
+  padding-left: 45px;
+}
+
+.collections-page .main-content-wrapper > .container > .row h1 {
+  text-align: left;
+  line-height: 56px;
+  margin-bottom: 8px;
+}
+
+.cards-collection-wrapper > img {
+  width: 343px;
+  max-width: 100%;
+}
+
+.collections-page .main-content-wrapper > .container > .row .heading {
+  font-size: 2.4rem;
+  line-height: 36px;
+  margin-bottom: 8px;
+}
+
+.collections-page .main-content-wrapper > .container > .row > .col-md-7 .row:not(:last-child) {
+  margin-bottom: 48px;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper {
+  border: 3px solid #6F2C91;
+  border-radius: 10px;
+  padding: 33px 63px 42px 63px;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row > .heading,
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row > .sub-heading {
+  text-align: center;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: #6F2C91;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row > .heading {
+  font-size: 2.6rem;
+  margin-bottom: 0;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row > .sub-heading {
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row:not(:last-child) {
+  margin-bottom: 34px;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row:first-child {
+  margin-bottom: 24px;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row .description > span {
+  font-size: 1.6rem;
+  display: block;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row .date-wrapper > span {
+  display: block;
+  text-align: center;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row .date-wrapper > span.month {
+  font-size: 2.4rem;
+  line-height: 29px;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row .date-wrapper > span.date {
+  font-size: 4.7rem;
+  line-height: 57px;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row .date-wrapper > span.day {
+  font-size: 1.8rem;
+  line-height: 21px;
+}
+
+.collections-page .banner-wrapper {
+  margin-bottom: 99px;
+}
+
+.collections-page .collection-locations-wrapper {
+  margin-bottom: 100px;
+}
+
+.collections-page .collection-locations-wrapper .section-heading {
+  text-align: center;
+  color: #00A99E;
+  margin-bottom: 43px;
+}
+
+.collections-page .learn-more-about-vitamin-wrapper {
+  background-color: rgba(247, 148, 29, 0.1);
+  padding: 71px 0 60px 0;
+}
+
+.collections-page .learn-more-about-vitamin-wrapper .section-heading {
+  font-size: 4rem;
+  line-height: 48px;
+  color: #6F2C91;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.collections-page .learn-more-about-vitamin-wrapper .button-link {
+  background-color: #F7941D;
+  border-radius: 10px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  width: auto;
+  padding: 15px 40px;
+  border: 1px solid transparent;
+  transition: 0.5s all ease;
+}
+
+.collections-page .learn-more-about-vitamin-wrapper .button-link:hover {
+  background-color: transparent;
+  color: #F7941D;
+  border-color: #F7941D;
+}
+
+.collections-page .how-to-collect {
+  padding: 59px 0 78px 0;
+  background-color: #F7941D;
+  margin-bottom: 100px;
+  color: #fff;
+}
+
+.collections-page .how-to-collect .section-heading {
+  text-align: center;
+  line-height: 58px;
+  margin-bottom: 40px;
+}
+
+.collections-page .how-to-collect .section-heading > span {
+  font-size: 3.8rem;
+}
+
+.collections-page .how-to-collect ul.row {
+  padding-left: 0;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.collections-page .how-to-collect ul.row > li:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.collections-page .how-to-collect ul.row > li:not(:last-child) p {
+  margin-bottom: 5px;
+}
+
+.collections-page .how-to-collect ul.row > li {
+  position: relative;
+  padding-left: 156px;
+}
+
+.collections-page .how-to-collect ul.row > li.hero-img {
+  
+}
+
+.collections-page .how-to-collect ul.row > li:before,
+.collections-page .how-to-collect ul.row > li:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.collections-page .how-to-collect ul.row > li:before {
+  width: 106px;
+  height: 106px;
+}
+
+.collections-page .how-to-collect ul.row > li:not(.to-be-noted):before {
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.collections-page .how-to-collect ul.row > li .heading {
+  font-size: 3.2rem;
+  line-height: 32px;
+  text-transform: uppercase;
+}
+
+.collections-page .how-to-collect ul.row > li:not(.to-be-noted) .description {
+  font-size: 2rem;
+  line-height: 28px;
+}
+
+.collections-page .how-to-collect ul.row > li.to-be-noted .description {
+  font-size: 1.8rem;
+  line-height: 26px;
+}
+
+.collections-page .how-to-collect ul.row > li.step-3:after {
+  background: url('../images/how-to-collect-step-3.svg') no-repeat 50% 50%;
+  width: 59px;
+  height: 64px;
+}
+
 
 /* animation for the section ends */
 
