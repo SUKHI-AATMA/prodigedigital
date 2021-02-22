@@ -1533,7 +1533,7 @@ header .hamburger-menu {
   margin: 0 auto;
 }
 
-.collections-page .how-to-collect ul.row > li:not(:last-child) {
+.collections-page .how-to-collect ul.row > li {
   margin-bottom: 30px;
 }
 
@@ -1588,6 +1588,11 @@ header .hamburger-menu {
   background: url('../images/how-to-collect-step-3.svg') no-repeat 50% 50%;
   width: 59px;
   height: 64px;
+}
+
+.collections-page .get-your-bottle-from-partners {
+  background-color: #fff;
+  border-radius: 10px;
 }
 
 

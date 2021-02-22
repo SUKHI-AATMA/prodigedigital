@@ -1872,9 +1872,9 @@ input::-webkit-inner-spin-button {
     .car-comparator-wrapper .comparison-details-row.details-collapsed {
       border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
       .car-comparator-wrapper .comparison-details-row.details-collapsed .heading > span {
-        -webkit-transform: translateY(-50%) rotate(-45deg);
-        -ms-transform: translateY(-50%) rotate(-45deg);
-        transform: translateY(-50%) rotate(-45deg); }
+        -webkit-transform: translateY(-50%) rotate(45deg);
+        -ms-transform: translateY(-50%) rotate(45deg);
+        transform: translateY(-50%) rotate(45deg); }
     .car-comparator-wrapper .comparison-details-row .heading {
       font-family: 'citroenbold';
       font-size: 1.4rem;
