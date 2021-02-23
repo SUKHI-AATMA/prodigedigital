@@ -1738,11 +1738,11 @@ header .hamburger-menu {
   line-height: 26px;
 }
 
-.collections-page .how-to-collect ul.row > li.step-3:after {
+/* .collections-page .how-to-collect ul.row > li.step-3:after {
   background: url('../images/how-to-collect-step-3.svg') no-repeat 50% 50%;
   width: 59px;
   height: 64px;
-}
+} */
 
 .collections-page .get-your-bottle-from-partners {
   background-color: #fff;
