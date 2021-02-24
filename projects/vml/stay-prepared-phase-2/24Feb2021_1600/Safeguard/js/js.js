@@ -53,6 +53,7 @@ $(function() {
 
         if($(window).width() <= 640) {
             var maxBoxHeight = 0;
+            console.log(123);
             $(".research-findings-grid .box").each(function() {
                 console.log($(this).find(".box-content").height());
                 if(maxBoxHeight < $(this).find(".box-content").height()) {
