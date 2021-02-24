@@ -608,12 +608,10 @@ header .button-wrapper a {
     margin-bottom: 83px;
     display: flex;
     grid-row-gap: normal;
+    grid-column-gap: normal;
 }
 
-.grid-structure.research-findings-grid > div {
-  margin-bottom: 16px;
-  
-}
+
 
 .grid-structure .box {
     padding: 42px 29px 42px 25px;
@@ -2026,6 +2024,16 @@ footer li {
 @media only screen and (min-width: 768px) {
   .contextual-pages .our-partners-section .row [class*="col-md"] > a {
     width: 200px;
+  }
+
+  .grid-structure.research-findings-grid > div {
+    margin-bottom: 16px;
+    margin-left: 16px;
+  }
+  
+  .grid-structure.research-findings-grid > div:first-child,
+  .grid-structure.research-findings-grid > div:nth-child(4) {
+    margin-left: 0px;
   }
 }
 
