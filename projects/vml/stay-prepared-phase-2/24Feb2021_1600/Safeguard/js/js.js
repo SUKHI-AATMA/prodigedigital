@@ -39,15 +39,30 @@ $(function() {
             });
         });
 
-        if(screen.orientation.type.indexOf("landscape") >= 0) {
-            if($(window).width() >= 575 && $(window).width() <= 1199) {
-                var hiw_banner_width = 384; // as per 1440px
-                var hiw_baseWidth = 1180;
-                var hiw_banner_height = 339; // as per 1440px
-
-                $(".how-it-works-grid .box").css({"width": ($(".grid-structure.how-it-works-grid").width()*hiw_banner_width)/hiw_baseWidth + "px", "height": (($(".grid-structure.how-it-works-grid").width()*hiw_banner_width)/hiw_baseWidth * hiw_banner_height)/hiw_banner_width + "px"});
+        if(navigator.userAgent.indexOf("AppleWebKit") >= 0) {
+            if(window.orientation == 90) {
+                if($(window).width() >= 575 && $(window).width() <= 1199) {
+                    var hiw_banner_width = 384; // as per 1440px
+                    var hiw_baseWidth = 1180;
+                    var hiw_banner_height = 339; // as per 1440px
+    
+                    $(".how-it-works-grid .box").css({"width": ($(".grid-structure.how-it-works-grid").width()*hiw_banner_width)/hiw_baseWidth + "px", "height": (($(".grid-structure.how-it-works-grid").width()*hiw_banner_width)/hiw_baseWidth * hiw_banner_height)/hiw_banner_width + "px"});
+                }
+            } 
+        }
+        else {
+            if(screen.orientation.type.indexOf("landscape") >= 0) {
+                if($(window).width() >= 575 && $(window).width() <= 1199) {
+                    var hiw_banner_width = 384; // as per 1440px
+                    var hiw_baseWidth = 1180;
+                    var hiw_banner_height = 339; // as per 1440px
+    
+                    $(".how-it-works-grid .box").css({"width": ($(".grid-structure.how-it-works-grid").width()*hiw_banner_width)/hiw_baseWidth + "px", "height": (($(".grid-structure.how-it-works-grid").width()*hiw_banner_width)/hiw_baseWidth * hiw_banner_height)/hiw_banner_width + "px"});
+                }
             }
         }
+
+        
 
         // $("header").css("padding-bottom",$("header .button-wrapper").outerHeight(true) + "px");
 
@@ -78,7 +93,7 @@ $(function() {
                 $(".banner-section .carousel-content").css("height", ($(window).width()*bannerSectionHeight_mobile)/baseWidth_mobile + "px");
             }
 
-            
+
             if(navigator.userAgent.indexOf("AppleWebKit") >= 0) {
                 if(window.orientation == 90) {
                     if($(window).width() >= 575 && $(window).width() <= 1199) {
