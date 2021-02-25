@@ -189,6 +189,13 @@ section.sec-strag-tab{
         max-width: 100%;
         padding: 0 30px;
     }
+    section.sec-strag-tab .container .wrapper.drop-wrapper{
+        padding: 0;
+    }
+    section.sec-strag-tab .container .tab-drop-wrap ul.tabs li:nth-child(4),
+    section.sec-strag-tab .container .tab-drop-wrap ul.tabs li:nth-child(5){
+        width:100%;
+    }
 }
 
 

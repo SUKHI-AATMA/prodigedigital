@@ -689,11 +689,18 @@ button.mfp-close {
                         color: #004950;
                         font-weight: bold;
                         font-size: 18px;
-                        line-height: 26px;
+                        //line-height: 26px;
                         padding:0px 40px 0px 20px;
                         height: 54px;
                         display: flex;
                         align-items: center;
+
+                        display:block;
+                        line-height:3;
+                        white-space: nowrap; 
+                        width: 80vw; 
+                        overflow: hidden;
+                        text-overflow: ellipsis; 
 
                         br{
                             display: none;
@@ -842,7 +849,7 @@ button.mfp-close {
     }
     .tab-drop-wrap ul.tabs li.init a {
         font-size: 16px;
-        line-height: 21px;
+        //line-height: 21px;
         height: 48px;
     }
     .tab-drop-wrap ul.tabs span.line {
