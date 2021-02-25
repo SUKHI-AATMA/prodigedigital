@@ -451,6 +451,12 @@ $(document).ready(function() {
             $('.sec-abt-bn .content').hide();
         }
 
+        if ($(window).width() > 1024) {
+            $('#tab-1.active .svg-desktop').load('../../images/work/our-approach/overview-infographic.svg');
+        } else {
+            $('#tab-1.active .svg-mobile').load('../../images/work/our-approach/overview-infographic-mob.svg');
+        }
+
         var tabName = $(this).attr('data-name');
         //console.log('tabName', tabName);
         $('.bgImg .tab1').removeClass('active');
@@ -648,8 +654,12 @@ $(window).load(function() {
 
     });
 
+    if ($(window).width() > 1024) {
+        $('#tab-1.active .svg-desktop').load('../../images/work/our-approach/overview-infographic.svg');
+    } else {
+        $('#tab-1.active .svg-mobile').load('../../images/work/our-approach/overview-infographic-mob.svg');
+    }
     
-    // $('#tab-1.active .desktop').load('../../images/work/our-approach/overview-infographic.svg');
 
     $(document).on("click", ".leaf", function() {
         var datalink = $(this).attr('data-link');
