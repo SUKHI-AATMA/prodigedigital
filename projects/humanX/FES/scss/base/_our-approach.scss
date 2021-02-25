@@ -821,6 +821,14 @@ section.sec-approach-tab{
     }
     section.sec-approach-tab .tab-container .tab-content#tab-1 .row .row-wrap .inner-container .svg-mobile{
         display:block;
+
+        svg {
+            width:100%;
+            height:100%;
+            .leaf{
+                cursor:pointer;
+            }
+        }
     }
     section.sec-approach-tab .tab-container .tab-content .row .core-overview .inner-row{
         max-width: 100%;
