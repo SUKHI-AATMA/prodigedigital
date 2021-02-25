@@ -1026,7 +1026,7 @@ header .hamburger-menu {
   padding: 0;
 }
 
-.contextual-pages header .navigation > .link-button:not(:first-child) {
+.contextual-pages header .navigation > .link-button:not(:first-of-type) {
   margin-left: 41px;
 }
 
@@ -1369,6 +1369,404 @@ header .hamburger-menu {
 .for-tablet {
   display: none;
 }
+
+.collections-page .main-content-wrapper {
+  margin-bottom: 100px;
+}
+
+.collections-page .main-content-wrapper .container,
+.collections-page section .container {
+  max-width: 1184px;
+}
+
+.collections-page .main-content-wrapper > .container > .row {
+  margin-bottom: 0;
+}
+
+.collections-page .main-content-wrapper > .container > .row > .col-md-5 {
+  padding-left: 45px;
+}
+
+.collections-page .main-content-wrapper > .container > .row h1 {
+  text-align: left;
+  line-height: 56px;
+  margin-bottom: 8px;
+}
+
+.cards-collection-wrapper > img {
+  width: 343px;
+  max-width: 100%;
+}
+
+.collections-page .main-content-wrapper > .container > .row .heading {
+  font-size: 2.4rem;
+  line-height: 36px;
+  margin-bottom: 8px;
+}
+
+.collections-page .main-content-wrapper > .container > .row > .col-md-7 .row:not(:last-child) {
+  margin-bottom: 48px;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper {
+  border: 3px solid #6F2C91;
+  border-radius: 10px;
+  padding: 33px 63px 42px 63px;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row > .heading,
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row > .sub-heading {
+  text-align: center;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: #6F2C91;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row > .heading {
+  font-size: 2.6rem;
+  margin-bottom: 0;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row > .sub-heading {
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row:not(:last-child) {
+  margin-bottom: 34px;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row:first-child {
+  margin-bottom: 24px;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row .description > span {
+  font-size: 1.6rem;
+  display: block;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row .date-wrapper > span {
+  display: block;
+  text-align: center;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row .date-wrapper > span.month {
+  font-size: 2.4rem;
+  line-height: 29px;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row .date-wrapper > span.date {
+  font-size: 4.7rem;
+  line-height: 57px;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row .date-wrapper > span.day {
+  font-size: 1.8rem;
+  line-height: 21px;
+}
+
+.collections-page .banner-wrapper {
+  margin-bottom: 99px;
+}
+
+.collections-page .collection-locations-wrapper {
+  margin-bottom: 100px;
+}
+
+.collections-page .collection-locations-wrapper .section-heading {
+  text-align: center;
+  color: #00A99E;
+  margin-bottom: 43px;
+}
+
+.collections-page .collection-locations-wrapper .fiter-wrapper,
+.collections-page .collection-locations-wrapper .filtered-data-wrapper {
+  padding: 0 182px;
+}
+
+.collections-page .collection-locations-wrapper .fiter-wrapper > div:not(.button-wrapper) {
+  width: 375px;
+  position: relative;
+}
+
+/* .collections-page .collection-locations-wrapper .fiter-wrapper > div.button-wrapper {
+  margin-top: 20px;
+  width: 100%;
+} */
+
+/* .collections-page .collection-locations-wrapper .fiter-wrapper > div.button-wrapper > button {
+  background-color: #00A99E;
+  color: #fff;
+  padding: 8px 10px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border: 1px solid #fff;
+  transition: 0.5s all ease;
+}
+
+.collections-page .collection-locations-wrapper .fiter-wrapper > div.button-wrapper > button:hover {
+  border-color: #00A99E;
+  color: #00A99E;
+  background-color: #fff;
+} */
+
+.collections-page .collection-locations-wrapper .fiter-wrapper > div.button-wrapper > a {
+  display: block;
+  text-indent: -10000px;
+  position: relative;
+  width: 35px;
+  height: 100%;
+}
+
+.collections-page .collection-locations-wrapper .fiter-wrapper > div.button-wrapper > a:before,
+.collections-page .collection-locations-wrapper .fiter-wrapper > div.button-wrapper > a:after {
+  content: '';
+  position: absolute;
+}
+
+.collections-page .collection-locations-wrapper .fiter-wrapper > div.button-wrapper > a:before {
+  top: 50%;
+  left: 0;
+  width: 90%;
+  height: 2px;
+  background-color: #00A99E;
+}
+
+.collections-page .collection-locations-wrapper .fiter-wrapper > div.button-wrapper > a:after {
+  border-top: 3px solid #00A99E;
+  border-right: 3px solid #00A99E;
+  width: 12px;
+  height: 12px;
+  top: 51%;
+  right: 2px;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.collections-page .collection-locations-wrapper .fiter-wrapper > div > select {
+  /* border: 3px solid #333333;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 36px;
+  color: #333333; */
+  display: none;
+}
+
+.collections-page .collection-locations-wrapper .fiter-wrapper > div > span {
+  display: block;
+  border-radius: 10px;
+  padding: 18px 21px;
+  cursor: pointer;
+}
+
+.collections-page .collection-locations-wrapper .fiter-wrapper > div > span,
+.collections-page .collection-locations-wrapper .fiter-wrapper > div > ul {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #333333;
+  width: 100%;
+  border: 3px solid #333333;
+  /* transition: 0.5s all ease; */
+}
+
+.collections-page .collection-locations-wrapper .fiter-wrapper > div.dd-open > span,
+.collections-page .collection-locations-wrapper .fiter-wrapper > div.dd-open > ul {
+  border-color: #00A99E;
+}
+
+.collections-page .collection-locations-wrapper .fiter-wrapper > div > ul {
+  position: absolute;
+  top: 88%;
+  left: 0;
+  background-color: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top: none;
+  z-index: 1;
+  padding-left: 0;
+  display: none;
+}
+
+.collections-page .collection-locations-wrapper .fiter-wrapper > div > ul > li {
+  padding: 15px 21px;
+}
+
+.collections-page .collection-locations-wrapper .fiter-wrapper > div > ul > li:hover {
+  cursor: pointer;
+  background-color: rgba(0, 169, 158, 0.1);
+}
+
+.collections-page .collection-locations-wrapper .filtered-data-wrapper {
+  margin-top: 40px;
+}
+
+.collections-page .collection-locations-wrapper .filtered-data-wrapper h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #00A99E;
+  margin-bottom: 20px;
+}
+
+.collections-page .collection-locations-wrapper .filtered-data-wrapper ul {
+  display: grid;
+  grid-template-columns: 47% 47%;
+  grid-column-gap: 49px;
+  grid-row-gap: 40px;
+  padding-left: 0;
+}
+
+.collections-page .collection-locations-wrapper .filtered-data-wrapper li > h3,
+.collections-page .collection-locations-wrapper .filtered-data-wrapper li > p {
+  color: #333333;
+}
+
+.collections-page .collection-locations-wrapper .filtered-data-wrapper li > h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 16px;
+}
+
+.collections-page .collection-locations-wrapper .filtered-data-wrapper li > p {
+  font-size: 2rem;
+  line-height: 32px;
+}
+
+
+.collections-page .learn-more-about-vitamin-wrapper {
+  background-color: rgba(247, 148, 29, 0.1);
+  padding: 71px 0 60px 0;
+}
+
+.collections-page .learn-more-about-vitamin-wrapper .section-heading {
+  font-size: 4rem;
+  line-height: 48px;
+  color: #6F2C91;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.collections-page .learn-more-about-vitamin-wrapper .button-link {
+  background-color: #F7941D;
+  border-radius: 10px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  width: auto;
+  padding: 15px 40px;
+  border: 1px solid transparent;
+  transition: 0.5s all ease;
+}
+
+.collections-page .learn-more-about-vitamin-wrapper .button-link:hover {
+  background-color: transparent;
+  color: #F7941D;
+  border-color: #F7941D;
+}
+
+.collections-page .how-to-collect {
+  padding: 59px 0 78px 0;
+  background-color: #F7941D;
+  margin-bottom: 100px;
+  color: #fff;
+}
+
+.collections-page .how-to-collect .section-heading {
+  text-align: center;
+  line-height: 58px;
+  margin-bottom: 40px;
+}
+
+.collections-page .how-to-collect .section-heading > span {
+  font-size: 3.8rem;
+}
+
+.collections-page .how-to-collect ul.row {
+  padding-left: 0;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.collections-page .how-to-collect ul.row > li {
+  margin-bottom: 30px;
+}
+
+.collections-page .how-to-collect ul.row > li:not(:last-child) p {
+  margin-bottom: 5px;
+}
+
+.collections-page .how-to-collect ul.row > li {
+  position: relative;
+  padding-left: 156px;
+}
+
+.collections-page .how-to-collect ul.row > li.hero-img {
+  
+}
+
+.collections-page .how-to-collect ul.row > li:before,
+.collections-page .how-to-collect ul.row > li:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.collections-page .how-to-collect ul.row > li:before {
+  width: 106px;
+  height: 106px;
+}
+
+.collections-page .how-to-collect ul.row > li:not(.to-be-noted):before {
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.collections-page .how-to-collect ul.row > li .heading {
+  font-size: 3.2rem;
+  line-height: 32px;
+  text-transform: uppercase;
+}
+
+.collections-page .how-to-collect ul.row > li:not(.to-be-noted) .description {
+  font-size: 2rem;
+  line-height: 28px;
+}
+
+.collections-page .how-to-collect ul.row > li.to-be-noted .description {
+  font-size: 1.8rem;
+  line-height: 26px;
+}
+
+/* .collections-page .how-to-collect ul.row > li.step-3:after {
+  background: url('../images/how-to-collect-step-3.svg') no-repeat 50% 50%;
+  width: 59px;
+  height: 64px;
+} */
+
+.collections-page .get-your-bottle-from-partners {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 45px 250px;
+}
+
+.collections-page .get-your-bottle-from-partners .heading {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.05px;
+  color: #F7941D;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.collections-page .get-your-bottle-from-partners > ul > li {
+  width: 150px;
+  height: 80px;
+  background-color: #ccc;
+}
+
 
 /* animation for the section ends */
 

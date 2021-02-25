@@ -137,7 +137,7 @@ $(function() {
         }
     });
 
-    $(document).find(".main-tabs-container.content-all > ul > li").eq(1).click();
+    $(document).find(".main-tabs-container.content-all > ul > li").eq(0).click();
 
     $(document).on("click", ".automobile-versions-wrapper > ul > li", function() {
         $(this).addClass("selected").siblings("li").removeClass("selected");
@@ -458,6 +458,31 @@ $(function() {
         $this.toggleClass("accordion-open");
     });
     /* Click event added for accordion while viewing all accessories - convenience pack ends */
+
+    /* Car Comparator starts */
+    $(document).on("click", ".tab-versions-content .compare-btn", function() {
+        $("body").addClass("popup-compare-visible car-comparator-visible");
+    });
+
+    // setTimeout(function() {
+    //     $(".tab-versions-content .compare-btn").click();
+    // }, 500);
+
+    $(document).on("click", ".comparison-details-row .heading", function() {
+        $(this).parents(".comparison-details-row").children(".full-width:last-child").slideToggle();
+        $(this).parents(".comparison-details-row").toggleClass("details-collapsed");
+    });
+
+    $(".car-comparator-wrapper").scroll(function() {
+        if($(".car-comparator-wrapper").scrollTop() >= 174) {
+            $(".car-comparator-wrapper .pd-row.box-car-model-wrapper .box-car-model > .full-width").addClass("display-car-model");
+        }
+        else {
+            $(".car-comparator-wrapper .pd-row.box-car-model-wrapper .box-car-model > .full-width").removeClass("display-car-model");
+        }
+    })
+    
+    /* Car Comparator ends */
 
     // $(document).on("click", ".screen-list-wrapper .screen-to-connect > .error-wrapper .option-retry", function() {
     //     $(".screen-list-wrapper .screen-to-connect > a").click();
