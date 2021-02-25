@@ -59,7 +59,8 @@ section.sec-funders-bn {
     .inner-wrap {
         .circle-img {
             background: url(../../images/inner-banner/funders-bn.jpg);
-            background-size: 256%;
+            //background-size: 256%;
+            background-size: cover;
             background-position: 34% center;
         }
     }
@@ -132,7 +133,8 @@ section.sec-funders-tab {
                                     cursor: pointer;
                                     position: relative;
                                     &:hover {
-                                        background-color: #e8f5ee;
+                                        // background-color: #e8f5ee;
+                                        background-color: #f3faf6;
                                         .box-hover {
                                             opacity: 1;
                                         }
@@ -241,13 +243,22 @@ section.sec-funders-tab {
         line-height: 22px;
     }
     section.sec-funders-tab .container .tab-container .tab-content {
-        padding-top: 124px;
+        padding-top: 140px;
     }
     section.sec-funders-tab .container .tab-container .tab-content .row .funders-container.is-visible {
         background-color: #fff;
     }
     section.sec-funders-tab .container .tab-container .tab-content .row .funders-container .modal-overlay {
         display: none;
+    }
+    section.sec-funders-tab .container .tab-container .tab-content .row .funder-wrap .funders-block h2{
+        margin: 52px 0 24px;
+        font-size: 18px;
+        line-height: 22px;
+
+        &:first-child{
+            margin-top: 12px;
+        }
     }
 }
 

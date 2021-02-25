@@ -463,8 +463,8 @@ $(document).ready(function() {
         var tab_id = $(this).attr('data-tab');
         var tabLink = $(this).attr('data-link');
         //console.log('tabLink', tabLink);
-        var imgPath = 'https://prodigedigital.com/projects/humanx/FES/images/inner-banner/';
-        //var imgPath = '../../images/inner-banner/';
+        //var imgPath = 'https://prodigedigital.com/projects/humanx/FES/images/inner-banner/';
+        var imgPath = '../../images/inner-banner/';
         var imgURL = imgPath + tabLink + "-bn.jpg";
         var circleimgURL = imgPath + tabLink + "-small.png";
         //console.log(imgURL);
@@ -705,6 +705,10 @@ if ($('#counter').length) {
         }
 
     });
+
+    // $('.leaf-3-main').click(function(){
+    //     window.location.href='https://www.google.co.in/';
+    //  })
 }
 
 // Map 
@@ -778,7 +782,7 @@ if ($('.sec-map').length) {
             'secondBlockText': 'Thousand lives impacted',
             'thirdBlockFigure': '63',
             'thirdBlockText': 'Villages strengthened',
-            'fourthBlockFigure': 'Go to Nagaland',
+            'fourthBlockFigure': 'Go to The North East',
             'fourthBlockText': 'javascript:;',
         },
         {
@@ -825,7 +829,7 @@ if ($('.sec-map').length) {
             'secondBlockText': 'Thousand lives impacted',
             'thirdBlockFigure': '3,399',
             'thirdBlockText': 'Villages strengthened',
-            'fourthBlockFigure': 'Go to Himachal',
+            'fourthBlockFigure': 'Go to Himachal Pradesh',
             'fourthBlockText': 'javascript:;',
         },
 

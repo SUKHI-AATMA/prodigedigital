@@ -175,6 +175,7 @@ section.sec-abt-tab {
                 }
                 .head-wrap {
                     width: 100%;
+                    padding-bottom: 42px;
                     h2 {
                         color: #004950;
                         font-family: 'Noto Serif JP', serif;
@@ -193,7 +194,6 @@ section.sec-abt-tab {
                         line-height: 26px;
                         padding-bottom: 30px;
                     }
-                    padding-bottom: 42px;
                 }
                 .inner-container {
                     padding: 80px 125px;
@@ -840,7 +840,7 @@ section.sec-abt-tab {
                         .inner-row {
                             flex-direction: column;
                             padding: 0;
-                            margin-top: 40px;
+                            margin-top: 20px;
                             height: 100%;
                             overflow-y: scroll;
                         }
@@ -848,6 +848,9 @@ section.sec-abt-tab {
                 }
             }
         }
+    }
+    section.sec-abt-tab .tab-container .tab-content .board-wrap .desktopPop-wrap ul.desktopPop li.memberData .col:last-child .ColRow{
+        margin-top: 20px;
     }
     // .modal-overlay {
     //     position: fixed;
@@ -961,9 +964,9 @@ section.sec-abt-tab {
     section.sec-abt-tab .tab-container .tab-content .row .form-wrap {
         margin-bottom: 0;
     }
-    section.sec-abt-tab .tab-container .tab-content {
-        padding-top: 124px;
-    }
+    // section.sec-abt-tab .tab-container .tab-content {
+    //     padding-top: 124px;
+    // }
 }
 
 @media screen and (max-width: 650px) {
@@ -1143,7 +1146,7 @@ section.sec-abt-tab {
     section.sec-abt-tab .tab-container .tab-content .board-wrap .desktopPop-wrap ul.desktopPop li.memberData {
         padding-top: 62px;
         .col:last-child {
-            height: calc(100vh - 320px);
+            height: calc(100vh - 260px);
         }
     }
     section.sec-abt-tab .tab-container .tab-content .row .form-wrap {
@@ -1152,8 +1155,9 @@ section.sec-abt-tab {
     section.sec-abt-tab .tab-container .tab-content .board-wrap .desktopPop-wrap ul.desktopPop li.memberData .inner-col {
         .col {
             &:last-child {
-                height: calc(100vh - 320px);
+                height: calc(100vh - 260px);
                 overflow: hidden;
+                padding-bottom: 30px;
             }
         }
     }
@@ -1176,6 +1180,35 @@ section.sec-abt-tab {
             margin-right: 0;
         }
     }
+    section.sec-abt-tab .tab-container .tab-content .board-wrap .desktopPop-wrap ul.desktopPop li.memberData {
+        padding-top: 62px;
+        .col:last-child {
+            height: calc(100vh - 270px);
+        }
+    }
+    section.sec-abt-tab .tab-container .tab-content .board-wrap .desktopPop-wrap ul.desktopPop li.memberData .inner-col {
+        .col {
+            &:last-child {
+                height: calc(100vh - 270px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 414px) {
+    section.sec-abt-tab .tab-container .tab-content .board-wrap .desktopPop-wrap ul.desktopPop li.memberData {
+        padding-top: 62px;
+        .col:last-child {
+            height: calc(100vh - 260px);
+        }
+    }
+    section.sec-abt-tab .tab-container .tab-content .board-wrap .desktopPop-wrap ul.desktopPop li.memberData .inner-col {
+        .col {
+            &:last-child {
+                height: calc(100vh - 260px);
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 360px) {
@@ -1194,5 +1227,21 @@ section.sec-abt-tab {
     }
     section.sec-abt-tab .container .tab-container .tab-content .board-wrap .desktopPop-wrap.is-visible .btn-popup-group {
         bottom: 16px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    section.sec-abt-tab .tab-container .tab-content .board-wrap .desktopPop-wrap ul.desktopPop li.memberData {
+        padding-top: 62px;
+        .col:last-child {
+            height: calc(100vh - 228px);
+        }
+    }
+    section.sec-abt-tab .tab-container .tab-content .board-wrap .desktopPop-wrap ul.desktopPop li.memberData .inner-col {
+        .col {
+            &:last-child {
+                height: calc(100vh - 228px);
+            }
+        }
     }
 }

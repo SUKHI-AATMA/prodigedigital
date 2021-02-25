@@ -482,6 +482,8 @@ button.mfp-close {
     }
 }
 
+
+
 // media query
 @media screen and (max-width: 1680px) {
     .banner-circle {
@@ -617,7 +619,7 @@ button.mfp-close {
     .tab-drop-wrap {
         position: absolute;
         // top: 36px;
-        top: 40px;
+        top: 60px;
         left: 0;
         z-index: 11;
         display: block;
@@ -627,20 +629,24 @@ button.mfp-close {
             display: none;
         }
         ul.tabs {
+            margin-bottom: 0;
             margin: 0 30px;
             overflow: hidden;
             position: relative;
             display: block;
-            margin-bottom: 0;
             height: inherit;
-            padding-bottom: 20px;
+            //padding-bottom: 20px;
             background-color: #fff;
+            border: 1px solid #D1EEDF;
+            border-radius: 5px;
+
             span.arrow {
                 display: block;
             }
             span.line {
                 bottom: auto;
                 top: 53px;
+                display: none;
             }
             &.active {
                 box-shadow: 0 7px 14px rgba(0, 73, 80, 0.1), 0 3px 6px rgba(0, 73, 80, 0.1);
@@ -654,6 +660,9 @@ button.mfp-close {
                         display: none;
                     }
                 }
+                span.line{
+                    display:block;
+                }
             }
             li {
                 display: block;
@@ -665,22 +674,30 @@ button.mfp-close {
                 &:not(.init) {
                     display: none;
                 }
+                &:nth-child(3){
+                    margin-top: 12px;
+                }
                 &.init {
                     display: block;
                     border-bottom: none;
                     position: sticky;
                     top: 0px;
-                    margin-bottom: 12px;
+                    //margin-bottom: 12px;
+                    
                     a {
                         opacity: 1;
                         color: #004950;
                         font-weight: bold;
-                        font-size: 21px;
-                        line-height: 30px;
-                        padding: 0px 12px 0px 12px;
+                        font-size: 18px;
+                        line-height: 26px;
+                        padding:0px 40px 0px 20px;
                         height: 54px;
                         display: flex;
                         align-items: center;
+
+                        br{
+                            display: none;
+                        }
                     }
                 }
                 // &.selected{
@@ -788,13 +805,14 @@ button.mfp-close {
     // tab drop
     .tab-drop-wrap {
         ul.tabs {
-            margin: 0 12px;
+            margin: 0 20px;
             // span.arrow {
             //     left: 8px;
             // }
             // li a{
             //     padding: 12px 24px 12px 8px;
             // }
+          
         }
     }
 }
@@ -823,8 +841,8 @@ button.mfp-close {
         height: 230px;
     }
     .tab-drop-wrap ul.tabs li.init a {
-        font-size: 18px;
-        line-height: 24px;
+        font-size: 16px;
+        line-height: 21px;
         height: 48px;
     }
     .tab-drop-wrap ul.tabs span.line {
