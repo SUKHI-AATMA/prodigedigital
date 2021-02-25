@@ -1,5 +1,6 @@
 $(document).ready(function() {
-
+     
+    
     // disable Scroll
     function disableScroll() {
         // Get the current page scroll position 
@@ -451,10 +452,10 @@ $(document).ready(function() {
         }
 
         var tabName = $(this).attr('data-name');
-        console.log('tabName', tabName);
+        //console.log('tabName', tabName);
         $('.bgImg .tab1').removeClass('active');
         if (index = 1 && tabName === 'our-approach') {
-            console.log('hi, our-approach');
+            //console.log('hi, our-approach');
             $('.bgImg .tab1').addClass('active');
         }
 
@@ -463,8 +464,8 @@ $(document).ready(function() {
         var tab_id = $(this).attr('data-tab');
         var tabLink = $(this).attr('data-link');
         //console.log('tabLink', tabLink);
-        //var imgPath = 'https://prodigedigital.com/projects/humanx/FES/images/inner-banner/';
-        var imgPath = '../../images/inner-banner/';
+        var imgPath = 'https://prodigedigital.com/projects/humanx/FES/images/inner-banner/';
+        //var imgPath = '../../images/inner-banner/';
         var imgURL = imgPath + tabLink + "-bn.jpg";
         var circleimgURL = imgPath + tabLink + "-small.png";
         //console.log(imgURL);
@@ -510,7 +511,7 @@ $(document).ready(function() {
             }
             //$('.tab-content').removeClass('active');
             var tab_id = $(this).attr('data-list');
-            console.log(tab_id);
+            //console.log(tab_id);
             $(this).removeClass('active').removeAttr("style");
             //$('.tab-content').removeClass('active').removeAttr("style");
             $(this).addClass('active');
@@ -647,6 +648,23 @@ $(window).load(function() {
 
     });
 
+    
+    // $('#tab-1.active .desktop').load('../../images/work/our-approach/overview-infographic.svg');
+
+    $(document).on("click", ".leaf", function() {
+        var datalink = $(this).attr('data-link');
+        var tabUrl = window.location.href;
+        var tabHref = tabUrl.split("?").shift();
+        //console.log(datalink, 'svg url', tabUrl, 'tabHref', tabHref);
+        window.location = tabHref + '?' + datalink;
+    });
+    
+
+    
+
+    
+
+
 
 
 });
@@ -705,10 +723,8 @@ if ($('#counter').length) {
         }
 
     });
+    
 
-    // $('.leaf-3-main').click(function(){
-    //     window.location.href='https://www.google.co.in/';
-    //  })
 }
 
 // Map 
@@ -860,6 +876,7 @@ if ($('.sec-map').length) {
         //         document.querySelectorAll(".mapData")[0].style.zIndex = "0";
         //     }
         // });
+
 
         document.querySelectorAll(".map-wrapper")[0].getElementsByTagName("svg")[0].addEventListener("click", function(e) {
             //console.log(e);

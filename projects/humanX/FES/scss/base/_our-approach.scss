@@ -398,18 +398,28 @@ section.sec-approach-tab{
                     }
                     .row-wrap{
                         .inner-container{
-                            .desktop{
-                                .leaf-1{
-                                    .leaf-1-hover{
-                                        opacity: 0;
-                                        @include transition(.3s ease-in-out);
-                                    }
-                                    &:hover{
-                                        .leaf-1-hover{
-                                            opacity: 1;
+                            .svg-desktop{
+                                svg{
+                                    width: 100%;
+                                    height: 100%;
+                                    .leaf{
+                                        z-index: 3;
+                                        cursor: pointer;
+                                        .leaf-hover{
+                                            z-index: 1;
+                                            opacity: 0;
+                                            @include transition(.3s ease-in-out);
+                                        }
+                                        &:hover{
+                                            .leaf-hover{
+                                                opacity: 1;
+                                            }
                                         }
                                     }
                                 }
+                            }
+                            .svg-mobile{
+                                display:none
                             }
                         }
                     }
@@ -746,6 +756,7 @@ section.sec-approach-tab{
             height: 100%;
         }
     }
+    
     section.sec-approach-tab .tab-container .tab-content .row .head-wrap h2,
     section.sec-approach-tab .tab-container .tab-content .row .core-tabs .col h2{
         font-size: 18px;
@@ -798,12 +809,18 @@ section.sec-approach-tab{
 
         img{
             &.desk{
-                display: none;
+                display: none !important;
             }
             &.mob{
                 display: block;
             }
         }
+    }
+    section.sec-approach-tab .tab-container .tab-content#tab-1 .row .row-wrap .inner-container .svg-desktop{
+        display:none;
+    }
+    section.sec-approach-tab .tab-container .tab-content#tab-1 .row .row-wrap .inner-container .svg-mobile{
+        display:block;
     }
     section.sec-approach-tab .tab-container .tab-content .row .core-overview .inner-row{
         max-width: 100%;
