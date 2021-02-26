@@ -452,11 +452,11 @@ $(document).ready(function() {
         }
 
         if ($(window).width() > 1024) {
-            $('#tab-1.active .svg-desktop').load('../../images/work/our-approach/overview-infographic.svg');
+            $('#tab-1.active .svg-desktop').load('../images/work/our-approach/overview-infographic.svg');
         } else {
             $(".tab-drop-wrap ul.tabs span.line").remove();
 
-            $('#tab-1.active .svg-mobile').load('../../images/work/our-approach/overview-infographic-mob.svg');
+            $('#tab-1.active .svg-mobile').load('../images/work/our-approach/overview-infographic-mob.svg');
         }
 
         var tabName = $(this).attr('data-name');
@@ -657,9 +657,9 @@ $(window).load(function() {
     });
 
     if ($(window).width() > 1024) {
-        $('#tab-1.active .svg-desktop').load('../../images/work/our-approach/overview-infographic.svg');
+        $('#tab-1.active .svg-desktop').load('../images/work/our-approach/overview-infographic.svg');
     } else {
-        $('#tab-1.active .svg-mobile').load('../../images/work/our-approach/overview-infographic-mob.svg');
+        $('#tab-1.active .svg-mobile').load('../images/work/our-approach/overview-infographic-mob.svg');
     }
     
 
