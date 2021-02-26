@@ -642,6 +642,8 @@ button.mfp-close {
 
             span.arrow {
                 display: block;
+                right: 20px;
+                z-index: 1;
             }
             span.line {
                 bottom: auto;
@@ -651,6 +653,9 @@ button.mfp-close {
             &.active {
                 box-shadow: 0 7px 14px rgba(0, 73, 80, 0.1), 0 3px 6px rgba(0, 73, 80, 0.1);
                 border-radius: 8px;
+                .init{
+                    border-bottom: 1px solid rgb(0 0 0 / 10%);
+                }
                 a {
                     position: relative;
                     display: block;
@@ -660,9 +665,9 @@ button.mfp-close {
                         display: none;
                     }
                 }
-                span.line{
-                    display:block;
-                }
+                // span.line{
+                //     display:block;
+                // }
             }
             li {
                 display: block;
@@ -677,11 +682,17 @@ button.mfp-close {
                 &:nth-child(3){
                     margin-top: 12px;
                 }
+                &:last-child{
+                    a{
+                        padding-bottom: 24px;
+                    }
+                }
                 &.init {
                     display: block;
                     border-bottom: none;
                     position: sticky;
                     top: 0px;
+                    z-index: 2;
                     //margin-bottom: 12px;
                     
                     a {
@@ -690,7 +701,7 @@ button.mfp-close {
                         font-weight: bold;
                         font-size: 18px;
                         //line-height: 26px;
-                        padding:0px 40px 0px 20px;
+                        padding:0px 0px 0px 20px;
                         height: 54px;
                         display: flex;
                         align-items: center;
@@ -698,7 +709,7 @@ button.mfp-close {
                         display:block;
                         line-height:3;
                         white-space: nowrap; 
-                        width: 80vw; 
+                        // width: 80vw; 
                         overflow: hidden;
                         text-overflow: ellipsis; 
 
@@ -764,6 +775,9 @@ button.mfp-close {
     .banner-circle .circle-container {
         right: -30px;
     }
+    .tab-drop-wrap ul.tabs li.init a{
+        width: 80vw;
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -813,12 +827,10 @@ button.mfp-close {
     .tab-drop-wrap {
         ul.tabs {
             margin: 0 20px;
-            // span.arrow {
-            //     left: 8px;
-            // }
-            // li a{
-            //     padding: 12px 24px 12px 8px;
-            // }
+
+            li.init a{
+                width: 74vw;
+            }
           
         }
     }

@@ -119,8 +119,8 @@ section.sec-strag-tab{
                         padding-bottom: 20px;
                     }
                     p {
-                        opacity: 0.8;
-                        color: #000000;
+                        //opacity: 0.8;
+                        color: rgb(0 0 0 / 80%);
                         font-size: 18px;
                         letter-spacing: 0.26px;
                         line-height: 26px;
@@ -128,6 +128,27 @@ section.sec-strag-tab{
 
                         &.pb-10{
                             padding-bottom:10px;
+                        }
+                        a{
+                            color: #004950;
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 22px;
+                            cursor: pointer;
+                            position: relative;
+                            @include transition(all .3s ease);
+                            
+                            img{
+                                transform: translateY(5px);
+                                @include transition(all .3s ease);
+                            }
+    
+                            &:hover {
+                                img,
+                                svg {
+                                    transform:translate(10px,5px);
+                                }
+                            }
                         }
                     }
                 }
@@ -196,6 +217,10 @@ section.sec-strag-tab{
     section.sec-strag-tab .container .tab-drop-wrap ul.tabs li:nth-child(5){
         width:100%;
     }
+    section.sec-strag-tab .tab-container .tab-content .row .head-wrap p{
+        font-size: 16px;
+        line-height: 22px;
+    }
 }
 
 
@@ -207,6 +232,10 @@ section.sec-strag-tab{
     section.sec-strag-tab .tab-container .tab-content .row .head-wrap h2 {
         font-size: 16px;
         line-height: 22px;
+    }
+    section.sec-strag-tab .tab-container .tab-content .row .head-wrap p{
+        font-size: 14px;
+        line-height: 19px;
     }
 }
 

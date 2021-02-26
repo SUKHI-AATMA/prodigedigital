@@ -804,9 +804,11 @@ section.sec-approach-tab{
     section.sec-approach-tab .tab-circle-container{
         display: none;
     }
+    section.sec-approach-tab .tab-container .tab-content .row .core-tabs .col:last-child{
+        display: none;
+    }
     section.sec-approach-tab .tab-container .tab-content .row .inner-container{
-        //padding: 72px 0 0;
-
+        padding: 0px 0 0;
         img{
             &.desk{
                 display: none !important;

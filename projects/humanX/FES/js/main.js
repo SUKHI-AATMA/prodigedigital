@@ -454,6 +454,8 @@ $(document).ready(function() {
         if ($(window).width() > 1024) {
             $('#tab-1.active .svg-desktop').load('https://prodigedigital.com/projects/humanx/fes/images/work/our-approach/overview-infographic.svg');
         } else {
+            $(".tab-drop-wrap ul.tabs span.line").remove();
+
             $('#tab-1.active .svg-mobile').load('https://prodigedigital.com/projects/humanx/fes/images/work/our-approach/overview-infographic-mob.svg');
         }
 
