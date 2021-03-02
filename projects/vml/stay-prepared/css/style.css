@@ -1393,9 +1393,18 @@ header .hamburger-menu {
   margin-bottom: 8px;
 }
 
-.cards-collection-wrapper > img {
-  width: 343px;
-  max-width: 100%;
+.cards-collection-wrapper > span {
+  display: flex;
+  width: 100%;
+  max-width: 105px;
+}
+
+.cards-collection-wrapper > span:not(:first-child) {
+  margin-left: 17px;
+}
+
+.cards-collection-wrapper > span > img {
+  width: 100%;
 }
 
 .collections-page .main-content-wrapper > .container > .row .heading {
@@ -1412,6 +1421,11 @@ header .hamburger-menu {
   border: 3px solid #6F2C91;
   border-radius: 10px;
   padding: 33px 63px 42px 63px;
+}
+
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row > div {
+  display: flex;
+  align-items: center;
 }
 
 .collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row > .heading,
@@ -1445,6 +1459,12 @@ header .hamburger-menu {
   display: block;
 }
 
+.collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row .date-wrapper > img {
+  width: fit-content;
+  width: -moz-fit-content;
+  max-width: 100%;
+}
+
 .collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row .date-wrapper > span {
   display: block;
   text-align: center;
@@ -1469,6 +1489,12 @@ header .hamburger-menu {
   margin-bottom: 99px;
 }
 
+.collections-page .banner-wrapper .row > picture > img {
+  width: fit-content;
+  width: -moz-fit-content;
+  max-width: 100%;
+}
+
 .collections-page .collection-locations-wrapper {
   margin-bottom: 100px;
 }
@@ -1487,6 +1513,24 @@ header .hamburger-menu {
 .collections-page .collection-locations-wrapper .fiter-wrapper > div:not(.button-wrapper) {
   width: 375px;
   position: relative;
+}
+
+.collections-page .collection-locations-wrapper .fiter-wrapper > div:not(.button-wrapper):after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+  transform: translateY(-75%) rotate(135deg);
+  transition: 0.5s all ease;
+  z-index: -1;
+}
+
+.collections-page .collection-locations-wrapper .fiter-wrapper > div.dd-open:after {
+  transform: translateY(-35%) rotate(-45deg);
 }
 
 /* .collections-page .collection-locations-wrapper .fiter-wrapper > div.button-wrapper {
@@ -1510,8 +1554,11 @@ header .hamburger-menu {
   background-color: #fff;
 } */
 
+.collections-page .collection-locations-wrapper .fiter-wrapper > div.button-wrapper {
+  display: none;
+}
+
 .collections-page .collection-locations-wrapper .fiter-wrapper > div.button-wrapper > a {
-  display: block;
   text-indent: -10000px;
   position: relative;
   width: 35px;
@@ -1569,6 +1616,10 @@ header .hamburger-menu {
   /* transition: 0.5s all ease; */
 }
 
+.collections-page .collection-locations-wrapper .fiter-wrapper > div > span.dd-default-value {
+  color: rgba(51, 51, 51, 0.6)
+}
+
 .collections-page .collection-locations-wrapper .fiter-wrapper > div.dd-open > span,
 .collections-page .collection-locations-wrapper .fiter-wrapper > div.dd-open > ul {
   border-color: #00A99E;
@@ -1597,6 +1648,7 @@ header .hamburger-menu {
 }
 
 .collections-page .collection-locations-wrapper .filtered-data-wrapper {
+  display: none;
   margin-top: 40px;
 }
 
@@ -1646,6 +1698,10 @@ header .hamburger-menu {
   margin-bottom: 40px;
 }
 
+.collections-page .learn-more-about-vitamin-wrapper .section-heading > br {
+  display: none;
+}
+
 .collections-page .learn-more-about-vitamin-wrapper .button-link {
   background-color: #F7941D;
   border-radius: 10px;
@@ -1692,7 +1748,7 @@ header .hamburger-menu {
 }
 
 .collections-page .how-to-collect ul.row > li:not(:last-child) p {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .collections-page .how-to-collect ul.row > li {
@@ -1728,6 +1784,10 @@ header .hamburger-menu {
   text-transform: uppercase;
 }
 
+.collections-page .how-to-collect ul.row > li .heading > br {
+  display: none;
+}
+
 .collections-page .how-to-collect ul.row > li:not(.to-be-noted) .description {
   font-size: 2rem;
   line-height: 28px;
@@ -1761,11 +1821,57 @@ header .hamburger-menu {
   margin-bottom: 36px;
 }
 
-.collections-page .get-your-bottle-from-partners > ul > li {
+.collections-page .get-your-bottle-from-partners > ul > li.logo-guardian,
+.collections-page .get-your-bottle-from-partners > ul > li.logo-unity,
+.collections-page .get-your-bottle-from-partners > ul > li.logo-watsons {
+  width: 100%;
+}
+
+.collections-page .get-your-bottle-from-partners > ul > li.logo-guardian {
+  max-width: 126px;
+}
+
+.collections-page .get-your-bottle-from-partners > ul > li.logo-unity {
+  max-width: 121px;
+}
+
+.collections-page .get-your-bottle-from-partners > ul > li.logo-watsons {
+  max-width: 211px;
+}
+
+.collections-page .get-your-bottle-from-partners > ul > li > img {
+  width: fit-content;
+  width: -moz-fit-content;
+  max-width: 100%;
+}
+
+.contextual-pages.error-404 .main-content-wrapper > .container > .row {
+  margin-bottom: 32px;
+}
+
+
+.contextual-pages.error-404 header,
+.contextual-pages.error-404 .main-content-wrapper > .container > .row > h1,
+.contextual-pages.error-404 .main-content-wrapper > .container > .row:last-child,
+.contextual-pages.error-404 .main-content-wrapper > .container > .row:last-child > p {
+  margin-bottom: 0;
+}
+
+.contextual-pages.error-404 .main-content-wrapper > .container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.contextual-pages.error-404 .main-content-wrapper > .container > .row > .description {
+  text-align: center;
+}
+
+/* .collections-page .get-your-bottle-from-partners > ul > li {
   width: 150px;
   height: 80px;
   background-color: #ccc;
-}
+} */
 
 
 /* animation for the section ends */
@@ -1826,6 +1932,67 @@ header .hamburger-menu {
   .eat-well-wrapper .disclaimer {
     width: 93%;
     margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  header > .container,
+  .collections-page .main-content-wrapper .container,
+  .collections-page section .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  header > .container > .row > .col-lg-6:first-child {
+    width: 35%;
+  }
+
+  header > .container > .row > .col-lg-6:last-child {
+    width: 65%;
+  }
+
+  .collections-page .main-content-wrapper .container,
+  .collections-page section .container {
+    max-width: 100%;
+  }
+
+  .collections-page .how-to-collect .section-heading {
+    font-size: 3.2rem;
+    line-height: 40px;
+  }
+
+  .collections-page .get-your-bottle-from-partners {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .collections-page .get-your-bottle-from-partners {
+    padding: 30px 82px;
+  }
+
+  .collections-page .get-your-bottle-from-partners .heading {
+    font-size: 2.4rem;
+    letter-spacing: -0.02px;
+  }
+
+  .collections-page .get-your-bottle-from-partners > ul > li.logo-guardian {
+    max-width: 95px;
+  }
+
+  .collections-page .get-your-bottle-from-partners > ul > li.logo-unity {
+    max-width: 92px;
+  }
+
+  .collections-page .get-your-bottle-from-partners > ul > li.logo-watsons {
+    max-width: 162px;
+  }
+
+  .collections-page .collection-locations-wrapper .fiter-wrapper, .collections-page .collection-locations-wrapper .filtered-data-wrapper {
+    padding: 0 68px;
+  }
+
+  .collections-page .collection-locations-wrapper .fiter-wrapper > div:not(.button-wrapper) {
+    width: 48%;
   }
 }
 
@@ -2369,6 +2536,217 @@ header .hamburger-menu {
     border-bottom-color: transparent;
   }
 
+  header > .container,
+  .collections-page .main-content-wrapper .container,
+  .collections-page section .container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .collections-page header {
+    margin-bottom: 48px;
+  }
+
+  .collections-page .main-content-wrapper .container {
+    padding: 0;
+  }
+
+  .collections-page .main-content-wrapper > .container > .row > .col-md-7 {
+    width: 64%;
+  }
+  
+  .collections-page .main-content-wrapper > .container > .row > .col-md-5 {
+    padding-left: 17px;
+    width: 36%;
+  }
+
+  .collections-page .main-content-wrapper > .container > .row h1 {
+    line-height: 42px;
+    margin-bottom: 15px;
+  }
+
+  .collections-page .main-content-wrapper > .container > .row .description {
+    font-size: 1.6rem;
+    letter-spacing: -0.02px;
+    margin-bottom: 0;
+  }
+
+  .collections-page .main-content-wrapper > .container > .row > .col-md-7 .row:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .cards-collection-wrapper > span {
+    max-width: 71px;
+  }
+
+  .cards-collection-wrapper > span:not(:first-child) {
+    margin-left: 12px;
+  }
+
+  .collections-page .main-content-wrapper > .container > .row .heading {
+    line-height: 36px;
+    margin-bottom: 12px;
+  }
+
+  .collections-page .main-content-wrapper > .container .free-collection-detail-wrapper {
+    padding: 22px 19px 20px 19px;
+  }
+
+  .collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row > .heading,
+  .collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row > .sub-heading {
+    line-height: 22px;
+  }
+  
+  .collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row > .heading {
+    font-size: 1.6rem;
+    
+  }
+
+  .collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row > .sub-heading {
+    font-size: 1.3rem;
+  }
+
+  .collections-page .main-content-wrapper > .container > .row .description {
+    font-size: 1.4rem;
+    line-height: 20px;
+    letter-spacing: normal;
+  }
+
+  .collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row .description > span {
+    font-size: 1.1rem;
+  }
+
+  .collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row > div:last-child {
+    padding-left: 15px;
+  }
+
+  .collections-page .banner-wrapper > .container {
+    padding: 0 35px;
+  }
+
+  .collections-page .how-to-collect {
+    padding: 28px 0 44px 0;
+  }
+
+  .collections-page .how-to-collect > .container {
+    max-width: 645px;
+  }
+
+  .collections-page .how-to-collect .section-heading {
+    line-height: 48px;
+    margin-bottom: 30px;
+  }
+
+  .collections-page .how-to-collect .section-heading > span {
+    font-size: 2.8rem;
+  }
+
+  .collections-page .how-to-collect ul.row {
+    max-width: 100%;
+  }
+
+  .collections-page .how-to-collect ul.row > li {
+    padding-left: 100px;
+    margin-bottom: 20px;
+  }
+
+  .collections-page .how-to-collect ul.row > li:before {
+    width: 78px;
+    height: 78px;
+  }
+
+  .collections-page .how-to-collect ul.row > li .heading {
+    font-size: 2.4rem;
+  }
+
+  .collections-page .how-to-collect ul.row > li:not(.to-be-noted) .description {
+    font-size: 1.6rem;
+    line-height: 20px;
+  }
+
+  .collections-page .how-to-collect ul.row > li.to-be-noted .description {
+    font-size: 1.4rem;
+    line-height: 20px;
+  }
+
+  .collections-page .get-your-bottle-from-partners {
+    padding: 30px 82px;
+    max-width: 100%;
+  }
+
+  .collections-page .get-your-bottle-from-partners .heading {
+    font-size: 2.4rem;
+    letter-spacing: -0.02px;
+  }
+
+  .collections-page .get-your-bottle-from-partners > ul > li.logo-guardian {
+    max-width: 95px;
+  }
+
+  .collections-page .get-your-bottle-from-partners > ul > li.logo-unity {
+    max-width: 92px;
+  }
+
+  .collections-page .get-your-bottle-from-partners > ul > li.logo-watsons {
+    max-width: 162px;
+  }
+
+  .collections-page .how-to-collect,
+  .collections-page .collection-locations-wrapper {
+    margin-bottom: 80px;
+  }
+
+  .collections-page .collection-locations-wrapper .section-heading {
+    margin-bottom: 23px
+  }
+
+  .collections-page .collection-locations-wrapper .filtered-data-wrapper h2 {
+    font-size: 2.4rem;
+  }
+
+  .collections-page .collection-locations-wrapper .filtered-data-wrapper li > h3,
+  .collections-page .collection-locations-wrapper .filtered-data-wrapper li > p {
+    font-size: 1.6rem;
+  }
+
+  .collections-page .collection-locations-wrapper .filtered-data-wrapper li > p {
+    line-height: 28px;
+  }
+
+  /* .collections-page .collection-locations-wrapper .fiter-wrapper, .collections-page .collection-locations-wrapper .filtered-data-wrapper {
+    padding: 0 68px;
+  }
+
+  .collections-page .collection-locations-wrapper .fiter-wrapper > div:not(.button-wrapper) {
+    width: 48%;
+  } */
+
+  .collections-page .learn-more-about-vitamin-wrapper {
+    padding-top: 44px;
+    padding-bottom: 51px;
+  }
+
+  .collections-page .learn-more-about-vitamin-wrapper .section-heading {
+    font-size: 2.4rem;
+    line-height: 30px;
+    margin-bottom: 32px;
+  }
+
+  .collections-page .learn-more-about-vitamin-wrapper .button-link {
+    padding: 14px 22px;
+    font-size: 2.1rem;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .collections-page .main-content-wrapper .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row > * {
+    width: 50%;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -2874,11 +3252,222 @@ header .hamburger-menu {
     font-size: 1.6rem;
   }
 
- 
+  .collections-page .main-content-wrapper .container,
+  .collections-page .collection-locations-wrapper .container,
+  .collections-page .learn-more-about-vitamin-wrapper .container {
+    padding-left: 24px;
+    padding-right: 21px;
+  }
+
+  .collections-page .main-content-wrapper > .container > .row > * {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  .collections-page .main-content-wrapper > .container > .row > .col-md-7 {
+    margin-bottom: 40px;
+  }
+
+  .collections-page .main-content-wrapper > .container > .row h1 {
+    text-align: center;
+    line-height: 36px;
+  }
+
+  .collections-page .main-content-wrapper > .container > .row > .col-md-7 .row:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .cards-collection-wrapper {
+    justify-content: center;
+  }
+
+  .collections-page .main-content-wrapper > .container > .row .heading {
+    line-height: 28px;
+    margin-bottom: 16px;
+  }
+
+  .collections-page .main-content-wrapper > .container > .row .description {
+    line-height: 24px;
+  }
+
+  .collections-page .main-content-wrapper > .container .free-collection-detail-wrapper {
+    padding: 28px 50px 35px 50px;
+  }
+
+  .collections-page .main-content-wrapper > .container > .row > .col-md-5 {
+    padding-left: 0;
+  }
+
+  .collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row > .heading {
+    font-size: 2.4rem;
+    line-height: 32px;
+  }
+
+  .collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row > .sub-heading {
+    font-size: 2.2rem;
+    line-height: 32px;
+  }
+
+  /* .collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row > * {
+    width: 50%;
+  } */
+
+  .collections-page .main-content-wrapper > .container > .row .description {
+    font-size: 1.4rem;
+    line-height: 20px;
+  }
+
+  .collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row > div:last-child {
+    padding-left: 30px;
+  }
+
+  .collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row:not(:last-child) {
+    margin-bottom: 26px;
+  }
+
+  .collections-page .main-content-wrapper,
+  .collections-page .banner-wrapper {
+    margin-bottom: 80px;
+  }
+
+  .collections-page .how-to-collect {
+    padding: 63px 24px 78px 24px;
+  }
+
+  .collections-page .how-to-collect .section-heading {
+    line-height: 36px;
+  }
+
+  .collections-page .how-to-collect .section-heading > br {
+    display: none;
+  }
+
+  .collections-page .how-to-collect .section-heading > span {
+    display: block;
+    margin: 8px 0;
+  }
+
+  .collections-page .how-to-collect .section-heading > span > span {
+    display: none;
+  }
+
+  .collections-page .how-to-collect .section-heading {
+    margin-bottom: 40px;
+  }
+
+  .collections-page .how-to-collect ul.row > li {
+    padding-left: 0;
+    
+    text-align: center;
+  }
+
+  .collections-page .how-to-collect ul.row > li:not(.to-be-noted) {
+    padding-top: 136px;
+  }
+
+  .collections-page .how-to-collect ul.row > li:before {
+    width: 120px;
+    height: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .collections-page .how-to-collect ul.row > li .heading {
+    font-weight: 700;
+  }
+
+  .collections-page .how-to-collect ul.row > li .heading > br {
+    display: block;
+  }
+
+  .collections-page .how-to-collect ul.row > li:not(.to-be-noted) .description {
+    line-height: 22px;
+  }
+
+  .collections-page .how-to-collect ul.row > li.to-be-noted {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .collections-page .how-to-collect ul.row > li.to-be-noted .description {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+
+  .collections-page .get-your-bottle-from-partners {
+    padding: 30px 34px 36px 34px;
+  }
+
+  .collections-page .get-your-bottle-from-partners .heading {
+    line-height: 28px;
+  }
+
+  .collections-page .get-your-bottle-from-partners > ul {
+    flex-direction: column;
+  }
+
+  .collections-page .get-your-bottle-from-partners > ul > li {
+    margin: 0 auto;
+  }
+
+  .collections-page .get-your-bottle-from-partners > ul > li:not(:last-child) {
+    margin-bottom: 30px;  
+  }
+
+  .collections-page .get-your-bottle-from-partners > ul > li.logo-guardian {
+    max-width: 108px;
+  }
+
+  .collections-page .collection-locations-wrapper .section-heading {
+    margin-bottom: 31px;
+  }
+
+  .collections-page .collection-locations-wrapper .fiter-wrapper,
+  .collections-page .collection-locations-wrapper .filtered-data-wrapper {
+    padding: 0;
+  }
+
+  .collections-page .collection-locations-wrapper .fiter-wrapper > div:not(.button-wrapper) {
+    width: 100%;
+  }
+
+  .collections-page .collection-locations-wrapper .fiter-wrapper > .dd-select-region-wrapper {
+    margin-bottom: 16px;
+  }
+
+  .collections-page .collection-locations-wrapper .fiter-wrapper > div:not(.button-wrapper):after {
+    width: 15px;
+    height: 15px;
+  }
+
+  .collections-page .learn-more-about-vitamin-wrapper {
+    padding-top: 48px;
+    padding-bottom: 56px;
+  }
+
+  .collections-page .learn-more-about-vitamin-wrapper .section-heading {
+    font-size: 2.8rem;
+    line-height: 36px;
+  }
+
+  .collections-page .learn-more-about-vitamin-wrapper .section-heading > br {
+    display: block;
+  }
+
+  .collections-page .learn-more-about-vitamin-wrapper .button-link {
+    font-size: 1.8rem;
+  }
+
+  .our-partners-wrapper > .container {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
 
   footer li:first-child {
     margin-left: 0;
   }
+
+
 }
 
 /* Media CSS ends */
