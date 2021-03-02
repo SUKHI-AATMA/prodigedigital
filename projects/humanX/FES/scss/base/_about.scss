@@ -280,10 +280,12 @@ section.sec-abt-tab {
                         width: 100%;
                         padding-bottom: 24px;
                         li {
+                            //position: relative;
                             &:before {
                                 content: "-";
                                 position: absolute;
                                 margin-left: 0px;
+                                margin-top: -3px;
                             }
                             p {
                                 margin-left: 12px;
@@ -1096,6 +1098,9 @@ section.sec-abt-tab {
                 line-height: 52px;
             }
         }
+    }
+    section.sec-abt-tab .tab-container .tab-content .row .journey-wrap ul li:before{
+        margin-top: -5px;
     }
     section.sec-abt-tab .tab-container .tab-content .row .journey-wrap p {
         font-size: 14px;

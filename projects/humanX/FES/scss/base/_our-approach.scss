@@ -56,10 +56,10 @@ section.sec-approach-bn{
                 color: #FFFFFF;
                 font-family: 'Noto Serif JP', serif;
                 // text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.55);
-                font-size: 30px;
+                font-size: 24px;
                 font-weight: 400;
                 letter-spacing: 0.44px;
-                line-height: 40px;
+                line-height: 34px;
                 z-index: 44;
     
                 span{
@@ -398,18 +398,28 @@ section.sec-approach-tab{
                     }
                     .row-wrap{
                         .inner-container{
-                            .desktop{
-                                .leaf-1{
-                                    .leaf-1-hover{
-                                        opacity: 0;
-                                        @include transition(.3s ease-in-out);
-                                    }
-                                    &:hover{
-                                        .leaf-1-hover{
-                                            opacity: 1;
+                            .svg-desktop{
+                                svg{
+                                    width: 100%;
+                                    height: 100%;
+                                    .leaf{
+                                        z-index: 3;
+                                        cursor: pointer;
+                                        .leaf-hover{
+                                            z-index: 1;
+                                            opacity: 0;
+                                            @include transition(.3s ease-in-out);
+                                        }
+                                        &:hover{
+                                            .leaf-hover{
+                                                opacity: 1;
+                                            }
                                         }
                                     }
                                 }
+                            }
+                            .svg-mobile{
+                                display:none
                             }
                         }
                     }
@@ -436,7 +446,7 @@ section.sec-approach-tab{
                     &:last-child{
                         padding-left: 0;
                         padding-right: 0;
-                        background-color: rgba(232, 245, 238, .5);
+                        //background-color: rgba(232, 245, 238, .5);
                     }                    
 
                 }
@@ -741,11 +751,18 @@ section.sec-approach-tab{
         transform: translateX(-50%) translateY(-40px);
     }
     section.sec-approach-bn .tab1 .banner-wrap .owl-carousel .item{
+        // &.item1{
+        //     img{
+        //         position: absolute;
+        //         right: -240px;
+        //     }
+        // }
         img{
             width: auto;
             height: 100%;
         }
     }
+    
     section.sec-approach-tab .tab-container .tab-content .row .head-wrap h2,
     section.sec-approach-tab .tab-container .tab-content .row .core-tabs .col h2{
         font-size: 18px;
@@ -793,15 +810,31 @@ section.sec-approach-tab{
     section.sec-approach-tab .tab-circle-container{
         display: none;
     }
+    section.sec-approach-tab .tab-container .tab-content .row .core-tabs .col:last-child{
+        display: none;
+    }
     section.sec-approach-tab .tab-container .tab-content .row .inner-container{
-        //padding: 72px 0 0;
-
+        padding: 0px 0 0;
         img{
             &.desk{
-                display: none;
+                display: none !important;
             }
             &.mob{
                 display: block;
+            }
+        }
+    }
+    section.sec-approach-tab .tab-container .tab-content#tab-1 .row .row-wrap .inner-container .svg-desktop{
+        display:none;
+    }
+    section.sec-approach-tab .tab-container .tab-content#tab-1 .row .row-wrap .inner-container .svg-mobile{
+        display:block;
+
+        svg {
+            width:100%;
+            height:100%;
+            .leaf{
+                cursor:pointer;
             }
         }
     }
