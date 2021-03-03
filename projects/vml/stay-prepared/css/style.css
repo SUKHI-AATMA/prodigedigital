@@ -1894,6 +1894,17 @@ header .hamburger-menu {
   }
 }
 
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .about-vitamin-wrapper .col-md-6 {
+    width: 65%;
+  }
+
+  .about-vitamin-wrapper .col-md-6:nth-child(2) {
+    width: 35%;
+  }
+
+  
+}
 
 @media only screen and (max-width: 768px) and (min-width: 641px) {
   .menu-open header > .container .navigation {
@@ -1936,6 +1947,10 @@ header .hamburger-menu {
 }
 
 @media only screen and (max-width: 1024px) {
+  .for-desktop {
+    display: none;
+  }
+
   header > .container,
   .collections-page .main-content-wrapper .container,
   .collections-page section .container {
@@ -1987,7 +2002,49 @@ header .hamburger-menu {
     line-height: 25px;
   }
 
-  
+  .word-of-wisdom-wrapper .wisdom-box-content-wrapper {
+    padding: 0;
+  }
+
+  .word-of-wisdom-wrapper .wisdom-box-content {
+    padding: 0 22px 31px 22px;
+    width: 48%;
+  }
+
+  .eat-well-wrapper .row:not(.section-header) {
+    grid-template-columns: auto auto;
+  }
+
+  .about-vitamin-wrapper .family-wrapper > img {
+    width: fit-content;
+    width: -moz-fit-content;
+    max-width: 100%;
+  }
+
+  .about-vitamin-wrapper .cloud-sun-wrapper .img-cloud {
+    width: 150px;
+    height: 78px;
+  }
+
+  .about-vitamin-wrapper .cloud-sun-wrapper .img-sun {
+    width: 150px;
+    height: 150px;
+    left: 75px;
+    top: 23px;
+  }
+
+  .about-vitamin-wrapper .family-wrapper {
+    padding-left: 53px;
+  }
+
+  .about-vitamin-pros > li .heading {
+    font-size: 3rem;
+  }
+
+  .about-vitamin-pros > li .description {
+    font-size: 1.8rem;
+  }
+
 
   /* Collections page starts here */
   .collections-page .main-content-wrapper .container,
@@ -2037,9 +2094,9 @@ header .hamburger-menu {
 }
 
 @media only screen and (max-width: 768px) {
-  .for-desktop {
+  /* .for-desktop {
     display: none;
-  }
+  } */
 
   .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 684px;
@@ -2098,11 +2155,11 @@ header .hamburger-menu {
     margin-top: 10px;
   }
 
-  .about-vitamin-wrapper .family-wrapper > img {
+  /* .about-vitamin-wrapper .family-wrapper > img {
     width: fit-content;
     width: -moz-fit-content;
     max-width: 100%;
-  }
+  } */
 
   .about-vitamin-pros {
     margin-top: 36px;
@@ -2155,14 +2212,14 @@ header .hamburger-menu {
     margin-bottom: 32px;
   }
 
-  .word-of-wisdom-wrapper .wisdom-box-content-wrapper {
+  /* .word-of-wisdom-wrapper .wisdom-box-content-wrapper {
     padding: 0;
   }
 
   .word-of-wisdom-wrapper .wisdom-box-content {
     padding: 0 22px 31px 22px;
     width: 48%;
-  }
+  } */
 
   .word-of-wisdom-wrapper .wisdom-box-content .person-image {
     width: 90px;
@@ -2538,9 +2595,9 @@ header .hamburger-menu {
     padding: 75px 0;
   }
 
-  .eat-well-wrapper .row:not(.section-header) {
+  /* .eat-well-wrapper .row:not(.section-header) {
     grid-template-columns: auto auto;
-  }
+  } */
 
   .eat-well-wrapper .col-lg-4, .eat-well-wrapper .col-md-6 {
     width: 314px;
@@ -2575,12 +2632,12 @@ header .hamburger-menu {
     border-bottom-color: transparent;
   }
 
-  header > .container,
+  /* header > .container,
   .collections-page .main-content-wrapper .container,
   .collections-page section .container {
     padding-left: 0px;
     padding-right: 0px;
-  }
+  } */
 
   .collections-page header {
     margin-bottom: 48px;
