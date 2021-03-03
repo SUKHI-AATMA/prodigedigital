@@ -1951,6 +1951,45 @@ header .hamburger-menu {
     width: 65%;
   }
 
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 912px;
+  }
+
+  .benefits-of-vitamin-wrapper .section-heading {
+    font-size: 3rem;
+    line-height: 38px;
+  }
+
+  .benefits-of-vitamin-wrapper .benefits-of-vitamin-details {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .benefits-of-vitamin-wrapper .benefits-of-vitamin-details .box {
+    padding: 69px 48px;
+  }
+
+  .benefits-of-vitamin-wrapper .benefits-of-vitamin-details .box .col-md-3 .logo > img {
+    width: fit-content;
+    width: -moz-fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .benefits-of-vitamin-wrapper .benefits-of-vitamin-details .box .col-md-9 .heading {
+    font-size: 3rem;
+    line-height: 38px;
+    margin-bottom: 8px;
+  }
+
+  .benefits-of-vitamin-wrapper .benefits-of-vitamin-details .box .col-md-9 .description {
+    font-size: 2rem;
+    line-height: 25px;
+  }
+
+  
+
+  /* Collections page starts here */
   .collections-page .main-content-wrapper .container,
   .collections-page section .container {
     max-width: 100%;
@@ -1994,6 +2033,7 @@ header .hamburger-menu {
   .collections-page .collection-locations-wrapper .fiter-wrapper > div:not(.button-wrapper) {
     width: 48%;
   }
+  /* Collections page ends here */
 }
 
 @media only screen and (max-width: 768px) {
@@ -2250,7 +2290,7 @@ header .hamburger-menu {
     line-height: 30px;
   }
 
-  .benefits-of-vitamin-wrapper .benefits-of-vitamin-details {
+  /* .benefits-of-vitamin-wrapper .benefits-of-vitamin-details {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -2264,12 +2304,11 @@ header .hamburger-menu {
     width: -moz-fit-content;
     max-width: 100%;
     margin: 0 auto;
-  }
+  } */
 
   .benefits-of-vitamin-wrapper .benefits-of-vitamin-details .box .col-md-9 .heading {
     font-size: 2.4rem;
     line-height: 32px;
-    margin-bottom: 8px;
   }
 
   .benefits-of-vitamin-wrapper .benefits-of-vitamin-details .box .col-md-9 .description {

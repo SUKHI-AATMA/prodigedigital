@@ -192,8 +192,14 @@ $(function() {
     });
 
     $(".sticky-menu > nav a").on("click", function() {
+        var spaceAbove = 0;
+
+        if($(this).text() == "Things to Note") {
+            spaceAbove = parseInt($(".word-of-wisdom-wrapper").css("padding-bottom"));
+        }
+        
         $("html,body").animate({
-            scrollTop: $("section[data-rel='" + $(this).attr("rel") + "']").offset().top
+            scrollTop: $("section[data-rel='" + $(this).attr("rel") + "']").offset().top - spaceAbove
         }, 500);
     });
     /* show/hide sticky menu on homepage ends */
