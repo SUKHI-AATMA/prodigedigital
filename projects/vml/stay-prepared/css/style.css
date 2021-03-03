@@ -1883,7 +1883,7 @@ header .hamburger-menu {
   } */
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 700px) {
   .about-vitamin-wrapper.in-view .about-vitamin-pros > li.in-view:before {
     transform: scale(1);
   }
@@ -1902,8 +1902,6 @@ header .hamburger-menu {
   .about-vitamin-wrapper .col-md-6:nth-child(2) {
     width: 35%;
   }
-
-  
 }
 
 @media only screen and (max-width: 768px) and (min-width: 641px) {
@@ -1944,6 +1942,28 @@ header .hamburger-menu {
     width: 93%;
     margin: 0 auto;
   }
+
+  .col-md-7, .col-md-5, .col-md-3 {
+    flex: 0 0 auto;
+  }
+  
+  .col-md-7 {
+    width: 58.3333333333%;
+  }
+
+  .col-md-5 {
+    width: 41.6666666667%;
+  }
+
+  .col-md-3 {
+    width: 25%;
+  }
+
+  .col-md-9 {
+    width: 75%;
+  }
+
+
 }
 
 @media only screen and (max-width: 1024px) {
@@ -2044,6 +2064,18 @@ header .hamburger-menu {
   .about-vitamin-pros > li .description {
     font-size: 1.8rem;
   }
+
+  .contextual-pages:not(.collections-page) .main-content-wrapper .container {
+    max-width: 80%;
+  }
+
+  .contextual-pages .main-content-wrapper > .container > .row,
+  .contextual-pages .main-content-wrapper > .container > .row .heading,
+  .contextual-pages .main-content-wrapper > .container > .row .description:not(:last-child),
+  .contextual-pages .main-content-wrapper > .container > .row ol > li:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  
 
 
   /* Collections page starts here */
@@ -2387,12 +2419,12 @@ header .hamburger-menu {
     padding: 0 24px;
   }
 
-  .contextual-pages .main-content-wrapper > .container > .row,
+  /* .contextual-pages .main-content-wrapper > .container > .row,
   .contextual-pages .main-content-wrapper > .container > .row .heading,
   .contextual-pages .main-content-wrapper > .container > .row .description:not(:last-child),
   .contextual-pages .main-content-wrapper > .container > .row ol > li:not(:last-child) {
     margin-bottom: 24px;
-  }
+  } */
 
   .contextual-pages .main-content-wrapper > .container > .row h1 {
     font-size: 3.2rem;
@@ -2854,6 +2886,8 @@ header .hamburger-menu {
     width: 100%;
     transform: translateY(0);
     justify-content: center;
+    line-height: normal;
+    height: auto;
   }
 
   header > .container .navigation {
