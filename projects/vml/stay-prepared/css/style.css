@@ -743,6 +743,22 @@ header > .container .navigation ~ ul > li > a {
     padding: 0 8px;
 }
 
+.word-of-wisdom-wrapper .wisdom-box-content .heading > span {
+  display: inline-block;
+  background: url('../images/quote.svg') no-repeat 0 0;
+  width: 31px;
+  height: 26px;
+  background-size: contain;
+}
+
+.word-of-wisdom-wrapper .wisdom-box-content .heading > span:first-child {
+  transform: translate(-5px, -5px);
+}
+
+.word-of-wisdom-wrapper .wisdom-box-content .heading > span:last-child {
+  transform: rotate(180deg) translate(-5px, -10px);
+}
+
 .word-of-wisdom-wrapper .wisdom-box-content .heading:before,
 .word-of-wisdom-wrapper .wisdom-box-content .heading:after {
     content: '';
@@ -750,6 +766,7 @@ header > .container .navigation ~ ul > li > a {
     background: url('../images/quote.svg') no-repeat 0 0;
     width: 31px;
     height: 26px;
+    display: none;
 }
 
 .word-of-wisdom-wrapper .wisdom-box-content .heading:before {
@@ -2271,8 +2288,13 @@ header .hamburger-menu {
     font-size: 2.4rem;
   }
 
-  .word-of-wisdom-wrapper .wisdom-box-content .heading::before,
-  .word-of-wisdom-wrapper .wisdom-box-content .heading::after {
+  .word-of-wisdom-wrapper .wisdom-box-content .heading > span {
+    width: 24px;
+    height: 20px;
+  }
+
+  .word-of-wisdom-wrapper .wisdom-box-content .heading:before,
+  .word-of-wisdom-wrapper .wisdom-box-content .heading:after {
     width: 24px;
     height: 20px;
     background-size: contain;

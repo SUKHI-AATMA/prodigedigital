@@ -243,6 +243,11 @@ $(function() {
         $(".error-404 .main-content-wrapper").css("height","calc(100vh - " + mainContentWrapperH + "px)");
     }
 
+    if($(".word-of-wisdom-wrapper").length) {
+        $(".word-of-wisdom-wrapper .wisdom-box-content .heading").prepend("<span></span>");
+        $(".word-of-wisdom-wrapper .wisdom-box-content .heading").append("<span></span>");
+    }
+
     $(window).resize(function() {
         if($(".error-404").length) {
             var mainContentWrapperH = $("header").outerHeight(true)+$("footer").outerHeight(true);
