@@ -3585,6 +3585,10 @@ header .hamburger-menu {
     background-position: -25% -25% !important;
   }
 
+  .collections-page .how-to-collect ul.row > li.to-be-noted {
+    padding-left: 0;
+  }
+
   .collections-page .how-to-collect ul.row > li:before {
     width: 120px;
     height: 120px;
