@@ -1919,6 +1919,10 @@ header .hamburger-menu {
   .about-vitamin-wrapper .col-md-6:nth-child(2) {
     width: 35%;
   }
+
+  .collections-page .main-content-wrapper > .container .free-collection-detail-wrapper {
+    padding: 20px 30px;
+  }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 641px) {
@@ -1978,6 +1982,10 @@ header .hamburger-menu {
 
   .col-md-9 {
     width: 75%;
+  }
+
+  .col-md-6 {
+    width: 50%;
   }
 
 
