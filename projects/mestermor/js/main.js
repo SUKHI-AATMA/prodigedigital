@@ -10,40 +10,41 @@ $(document).ready(function() {
     $('#chartClick2').on("click", function() {
         $('#chartPopup2').toggleClass("active");
     });
+
+    if ($('#formQuiz').length) {
+        // onclick of start
+        $("#start").click(function(){
+            $('.screen1').hide();
+            $('.formCommon').first().show();
+            $('.button-group').show();
+        });
+        
+        $('.button-group').hide();
+
+        $("form .formCommon").each(function(e) {
+            if (e != 0){
+                $(this).hide();
+            }      
+        });  
+
+        // range slider
+        var slider = document.getElementById("waistSize");
+        var sliderOutput = document.getElementById("sliderOutput");
+        sliderOutput.innerHTML = slider.value;
+
+        slider.oninput = function() {
+            sliderOutput.innerHTML = this.value;
+        }
+    }
     
     $('.form-style label').click(function() {
-        $('label').removeClass('active');
-        if($('.form-style input').is(':checked')) { 
+        //$('label').removeClass('active');
+        if($('.form-style label input').is(':checked')) { 
           $(this).addClass('active')
          } 
     });
 
-    // onclick of start
-    $("#start").click(function(){
-        $('.screen1').hide();
-        $('.formCommon').first().show();
-        $('.button-group').show();
-    });
     
-    $('.button-group').hide();
-
-    $("form .formCommon").each(function(e) {
-        if (e != 0){
-            $(this).hide();
-        }   
-        //console.log(e,'e num')        
-    });  
-
-
-
-     // range slider
-    var slider = document.getElementById("waistSize");
-    var sliderOutput = document.getElementById("sliderOutput");
-    sliderOutput.innerHTML = slider.value;
-
-    slider.oninput = function() {
-        sliderOutput.innerHTML = this.value;
-    }
 
     // datepicker
     $(".datePickerMonthYear").datepicker({
@@ -359,45 +360,184 @@ $(document).ready(function() {
     });
 
 
+    // redeem page
+    $("#formGiftRedeem").validate({
+        errorElement: 'span',
+        errorClass: 'error-msg',
+        highlight: function(element, errorClass, validClass) {
+            $(element).closest('.form-field').addClass("has-error");
+        },
+        unhighlight: function(element, errorClass, validClass) {
+            $(element).closest('.form-field').removeClass("has-error");
+        },
+        rules: {
+            yourname: {
+                required: true,
+                firstname: true,
+            },
+            tellPincode: {
+                required: true,
+                pincodenumber: true,
+            }            
+            
+        },
+        messages: {
+            yourname: {
+                required: "Your Name required",
+                minlength: "Kindly provide a Your Name"
+            },
+            tellPincode: {
+                required: "Pincode required",
+                minlength: "Kindly provide a valid pincode",
+            }
+        },
+        submitHandler: function () {
+            alert('form submit');
+        }
+    });
+
+
+    // gift redeem
+    $("#getGift").click(function(){
+        $('.gifting-start').hide();
+        $('.gifting-type').first().show();
+    });
+
+    $(".giftNext").click(function(){
+        var form = $("#formGifting");
+        form.validate({
+            errorElement: 'span',
+            errorClass: 'error-msg',
+            highlight: function(element, errorClass, validClass) {
+                $(element).closest('.form-field').addClass("has-error");
+            },
+            unhighlight: function(element, errorClass, validClass) {
+                $(element).closest('.form-field').removeClass("has-error");
+            },
+            rules: {
+                sendBox: {
+                    required: true,
+                },
+                giftBox: {
+                    required: true,
+                },
+                giftCard: {
+                    required: false,
+                },
+                toEmail: {
+                    required: true,
+                    emailadd: true,
+                },
+                fromEmail: {
+                    required: true,
+                    emailadd: true,
+                },
+                giftCardAmount: {
+                    required: true,
+                },
+                specailMsg: {
+                    required: false,
+                },
+                date: {
+                    required: true,
+                }               
+                
+            },
+            messages: {                
+                sendBox: {
+                    required: "select any one send box required",
+                },
+                giftBox: {
+                    required: "select any one gift box required",
+                },
+                giftCard: {
+                    required: "select any one gift card required"
+                },
+                toEmail: {
+                    required: "To Email required",
+                    minlength: "Kindly provide a valid email address",
+                },
+                fromEmail: {
+                    required: "From Email required",
+                    minlength: "Kindly provide a valid email address",
+                },
+                giftCardAmount: {
+                    required: "select gift card amount required"
+                },
+                date: {
+                    required: "Date required",
+                }
+            },
+            errorPlacement: function(error, element) {
+                if ( element.is(":radio") ) {
+                    error.appendTo( element.parents('.group-radio') );
+                } else if ( element.is("select") ) {
+                    error.appendTo( element.parents('.select-field') );
+                } else { 
+                    // This is the default behavior 
+                    error.insertAfter( element );
+                }
+            },
+            submitHandler: function () {
+                alert('form submit');
+            }
+        });
+
+        if (form.valid() === true){
+            if ($('.screen').is(":visible")){
+                current_fs = $('.screen');
+                
+                $("input[type=radio]").each(function(i,o){
+                    if($(this).is(":checked"))
+                        //alert(i);
+                        if(i == 0){
+                            next_fs = $('.screen2');
+                        } else if(i == 1){
+                            next_fs = $('.screen3');
+                        }
+                });
+               
+            } else if($('.screen2').is(":visible")){
+                current_fs = $('.screen2');
+                next_fs = $('.screen4');
+            } else if($('.screen3').is(":visible")){
+                current_fs = $('.screen3');
+                next_fs = $('.screen4');
+            } 
+            
+            next_fs.show();
+            current_fs.hide();
+        }
+
+    });
+
+    $('.giftPrevious').click(function(){
+        if($('.screen').is(":visible")){
+            current_fs = $('.screen');
+            next_fs = $('.gifting-start');
+        }else if ($('.screen2').is(":visible")){
+            current_fs = $('.screen2');
+            next_fs = $('.screen');
+        } else if ($('.screen3').is(":visible")){
+            current_fs = $('.screen3');
+            next_fs = $('.screen');
+        } else if ($('.screen4').is(":visible")){
+            current_fs = $('.screen4');
+            next_fs = $('.screen3');
+        }
+
+        next_fs.show();
+        current_fs.hide();
+    });
+
+    
+
+
+
+    
 
 
 
 
 });
 
-
-// json
-(function() {
-    function toJSONString( form ) {
-		var obj = {};
-		var elements = form.querySelectorAll( "input" );
-		for( var i = 0; i < elements.length; ++i ) {
-			var element = elements[i];
-			var name = element.name;
-			var value = element.value;
-
-			if( name ) {
-				obj[ name ] = value;
-			}
-		}
-
-		return JSON.stringify( obj );
-	}
-
-	document.addEventListener( "DOMContentLoaded", function() {
-		var form = document.getElementById( "formQuiz" );
-		var output = document.getElementById( "output" );
-		form.addEventListener( "submit", function( e ) {
-			e.preventDefault();
-			var json = toJSONString( this );
-			output.innerHTML = json;
-
-		}, false);
-        
-	});
-
-    
-    //====== quiz page - end
-    
-
-})();
