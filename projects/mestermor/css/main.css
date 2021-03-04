@@ -11,6 +11,9 @@ header {
     text-align: center;
     padding: 40px 0;
 }
+header img{
+    margin: 0 auto;
+}
 
 h1,
 h2,
@@ -35,6 +38,8 @@ main {
 }
 .form-style {
     position: relative;
+    margin-top: 32px;
+    margin-bottom: 132px;
 }
 .form-style ::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
@@ -59,6 +64,12 @@ main {
     font-family: "Space Mono", monospace;
     color: #7c7c7c;
 }
+.form-style input,
+.form-style label,
+.form-style select,
+.form-style textarea{
+    outline: none;
+}
 
 .form-style .form-group .form-field {
     /* position: relative; */
@@ -79,19 +90,13 @@ main {
     width: 100%;
 }
 
-/* .form-style input[type="radio"]{
-    position: absolute;
-    left: 0;
-    z-index: -1;
-    width: 1rem;
-    height: 1.25rem;
-    opacity: 0;
-} */
-
 .form-style .form-btn {
-    margin-top: 98px;
+    margin-top: 82px;
     text-align: center;
     width: 100%;
+}
+.form-style .form-btn > .submit{
+    border:none !important;
 }
 
 .form-style .btnSubmit {
@@ -129,6 +134,9 @@ main {
     width: 100%;
     text-align: center;
 }
+/* .form-style form .group-radio #subscription-error{
+    bottom: -50px;
+} */
 .form-style form .num-field .error-msg {
     position: absolute;
     bottom: -32px;
@@ -160,7 +168,7 @@ main {
 }
 .form-style .button-group .arrow {
     position: absolute;
-    top: 200px;
+    top: 255px;
 }
 .form-style .button-group .previous {
     left: 0;
@@ -169,12 +177,15 @@ main {
     right: 0;
 }
 
-.
+.form-style form{
+    position: relative;
+}
 
 .form-style .formCommon {
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
+    /* padding-top: 72px; */
     padding-bottom: 72px;
 }
 .form-style .content h2 {
@@ -195,6 +206,44 @@ main {
     text-align: center;
     color: #ffffff;
 }
+.scroll-discover{
+    position: absolute;
+    bottom: 0;
+    left: 0;    
+    color: #FFFFFF;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 3.2px;
+    text-align: center;
+    width: 100%;
+}
+
+
+.btn-container {
+    display: flex;
+}
+.btn-container a {
+    font-family: "Montserrat", Sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #ffffff;
+    padding: 12px 0px;
+    text-align: center;
+    width: 187px;
+    border: 1px solid #ffffff;
+}
+.btn-container a:first-child {
+    margin-right: 24px;
+}
+.btn-container a:hover {
+    background-color: #fff;
+    color: #000000 !important;
+}
+
+
 
 /* screen 1 */
 
@@ -268,6 +317,7 @@ main {
     max-width: 500px;
     width: 100%;
     margin: 0 auto;
+    padding-top: 52px;
     margin-bottom: 32px;
 }
 
@@ -297,6 +347,7 @@ main {
     line-height: 36px;
     text-align: center;
     cursor: pointer;
+    margin: 0;
 }
 .group-radio .form-field label:hover,
 .group-radio .form-field label.active {
@@ -329,6 +380,10 @@ main {
     color: #fff;
 }
 
+.ui-datepicker .ui-datepicker-title select{
+    appearance: auto;
+}
+
 /* form 2 */
 
 .form-style .form2 {
@@ -339,10 +394,11 @@ main {
     max-width: 574px;
     width: 100%;
     margin: 0 auto;
+    padding-top: 52px;
 }
 
 .form-style .form2 .form-group {
-    width: 306px;
+    width: 186px;
     margin: 0 auto;
     padding-top: 30px;
 }
@@ -360,51 +416,10 @@ main {
 }
 
 .form-style .form3 .form-group {
-    width: 462px;
+    width: 534px;
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 60px;
 }
-
-/* .form-style .form3 .form-field {
-    margin-bottom: 20px;
-}
-.form-style .form3 .form-field:last-child{
-    margin-bottom: 0px;
-}
-
-.form-style .form3 label {
-    display: inline-block;
-    width: 100%;
-    padding: 8px 36px;
-    border: solid 1px #fff;
-    transition: all 0.3s;
-    font-family: 'Space Mono', monospace;
-    font-size: 24px;
-    line-height: 36px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.form-style .form3 input[type="radio"] {
-    position: absolute;
-    left: 0;
-    z-index: -1;
-    width: 1rem;
-    height: 1.25rem;
-    opacity: 0;
-} */
-
-/* .form-style .form3 input[type="radio"]:checked+label,
-.form-style .form3 input[type="radio"]:hover+label {
-    background-color: #fff;
-    color: #000;
-} */
-
-/* .form-style .form3 label:hover,
-.form-style .form3 label.active {
-    background-color: #fff;
-    color: #000;
-} */
 
 /* form 4 */
 
@@ -421,7 +436,7 @@ main {
 .form-style .form4 .form-group {
     width: 738px;
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 44px;
     display: flex;
     justify-content: space-between;
 }
@@ -436,6 +451,7 @@ main {
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
+    color: #fff;
 }
 
 .form-style .form4 .form-field {
@@ -453,9 +469,9 @@ main {
 }
 
 .form-style .form4 input {
-    font-size: 18px;
+    font-size: 18px !important;
     line-height: 27px;
-    padding-bottom: 4px;
+    padding-bottom: 4px !important;
 }
 
 .form-style .form4 .form-row .form-col {
@@ -468,17 +484,16 @@ main {
 }
 
 .form-style .form4 .col:last-child .form-field:nth-child(2) input {
-    padding-left: 38px;
+    padding-left: 38px !important;
 }
 
 .form-style .form4 .col .form-field .mobplus {
     position: absolute;
     left: 0;
-    top: 0;
+    bottom: 5px;
     font-family: "Space Mono", monospace;
     font-size: 18px;
     line-height: 27px;
-    padding-bottom: 4px;
     color: #7c7c7c;
 }
 
@@ -564,14 +579,14 @@ main {
 
 .form-style .form5 .form-group .col input {
     font-family: "Space Mono", monospace;
-    font-size: 18px;
-    line-height: 27px;
-    padding-bottom: 4px;
+    font-size: 18px !important;
+    line-height: 27px !important;
+    padding-bottom: 4px !important;
 }
 
 .form-style .form5 .form-group .col:first-child input,
 .form-style .form5 .form-group .col:nth-child(4) input {
-    width: 24px;
+    width: 24px !important;
     text-align: center;
 }
 
@@ -597,15 +612,15 @@ main {
 }
 
 .form-style .form5 .col:nth-child(5) .radio-field .radio-box:first-child {
-    width: 45px;
+    width: 62px;
 }
 
 .form-style .form5 .col:nth-child(5) .radio-field .radio-box:nth-child(2) {
-    width: 80px;
+    width: 92px;
 }
 
 .form-style .form5 .col:nth-child(5) .radio-field .radio-box:nth-child(3) {
-    width: 68px;
+    width: 72px;
 }
 
 .form-style .form5 .col:nth-child(5) .radio-field .radio-box label {
@@ -642,14 +657,14 @@ main {
     color: #fff;
 }
 .form-style .form-group .form-field .waist-group input {
-    -webkit-appearance: none;
-    appearance: none;
+    -webkit-appearance: none !important;
+    appearance: none !important;
     height: 0px !important;
-    width: 140px;
-    border-radius: 10em;
-    background-color: #fff;
-    outline: none;
-    padding: 0;
+    width: 140px !important;
+    border-radius: 10em !important;
+    background-color: #fff !important;
+    outline: none !important;
+    padding: 0 !important;
 }
 
 .form-style .form-group .form-field .waist-group input::-webkit-slider-thumb {
@@ -757,8 +772,8 @@ main {
 }
 
 .form-style .form6 .form-group {
-    width: 800px;
-    padding-top: 70px;
+    width: 816px;
+    padding-top: 62px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -772,7 +787,7 @@ main {
 .form-style .form6 label {
     display: inline-block;
     width: 100%;
-    padding: 12px 4px;
+    padding: 12px 6px;
     border: solid 1px #000;
     transition: all 0.3s;
     text-align: center;
@@ -828,10 +843,8 @@ main {
 }
 
 .form-style .form7 label .text {
-    padding: 0px 8px;
-    max-width: 384px;
+    max-width: 320px;
     width: 100%;
-    margin: 0 auto;
     padding-top: 24px;
 }
 
@@ -878,7 +891,7 @@ main {
 .form-style .form8 .form-group {
     width: 334px;
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 60px;
 }
 
 /* form 9 */
@@ -896,11 +909,11 @@ main {
 .form-style .form9 .row .col:first-child {
     max-width: 490px;
     width: 100%;
-    margin-right: 144px;
+    margin-right: 134px;
 }
 
 .form-style .form9 .row .col:last-child {
-    max-width: 390px;
+    max-width: 400px;
     width: 100%;
 }
 
@@ -964,25 +977,551 @@ main {
 
 .form-style .form9 .form-group .field-box input,
 .form-style .form9 .form-group .field-box textarea {
-    font-size: 18px;
-    line-height: 27px;
-    padding-bottom: 12px;
+    font-size: 18px !important;
+    line-height: 27px !important;
+    padding-bottom: 12px !important;
 }
 
 .form-style .form9 .form-group .col:first-child .field-box p {
-    width: calc(100% - 278px);
+    width: calc(100% - 278px) !important;
 }
 
 .form-style .form9 .form-group .col:last-child .field-box p {
-    width: calc(100% - 186px);
+    width: calc(100% - 186px) !important;
 }
 
 .form-style .form9 .form-group .col:first-child .field-box input,
 .form-style .form9 .form-group .col:first-child .field-box textarea {
-    width: 278px;
+    width: 278px !important;
 }
 
 .form-style .form9 .form-group .col:last-child .field-box input,
 .form-style .form9 .form-group .col:last-child .field-box textarea {
-    width: 186px;
+    width: 186px !important;
+}
+.form-style .form9 .form-group .col:first-child .field-box textarea {
+    padding: 0;
+}
+
+/* payment gateway */
+.title-wrap h1 {
+    text-align: center;
+}
+
+/* Quiz Page Order Confirmation and Order Details */
+.quiz-order {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+}
+.quiz-order .left {
+    max-width: 462px;
+    width: 100%;
+}
+.quiz-order .right {
+    max-width: 620px;
+    width: 100%;
+}
+.quiz-order .col h2 {
+    color: #ffffff;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 67px;
+    margin-bottom: 20px;
+}
+.quiz-order .col p {
+    color: #ffffff;
+    font-family: "Space Mono", Sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 40px;
+}
+
+
+.order-detail-block table .coll{
+    display: flex;
+}
+.order-detail-block table .coll p:first-child{
+    width: 120px;
+    margin-right: 16px;
+}
+.quiz-order .col .order-detail-block table p{
+    font-family: "Montserrat", Sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 620px;
+}
+.tg td {
+    text-align: left;
+    width: 50%;
+    border: 1px solid #fff;
+    overflow: hidden;
+    padding: 24px 16px 20px;
+    word-break: normal;
+}
+.tg th {
+    text-align: left;
+    width: 50%;
+    border: 1px solid #fff;
+    overflow: hidden;
+    padding: 15px 15px;
+    word-break: normal;
+}
+
+
+
+/* gifting redeem page */
+.form-style .redeem-screen .content{
+    max-width: 830px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 48px;
+}
+.form-style .redeem-screen .content p span{
+    color: #000;
+    background-color: #fff;
+    padding: 0 1.5px;
+}
+
+.redeem-form form .form-group{
+    max-width: 287px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 38px;
+}
+.redeem-form form .form-group .form-field input{
+    font-size: 18px;
+    line-height: 27px;
+}
+.gift-redeem-container {
+    max-width: 954px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.gift-redeem-container .gift-redeem {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.gift-redeem-container .gift-redeem .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* gifting page */
+.gifting-start{
+    padding:90px 0 200px;
+   
+}
+.gifting-start .gifting-best{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 82px;
+    margin-bottom: 215px;
+    position: relative;
+}
+.gifting-start .left {
+    max-width: 564px;
+    width: 100%;
+}
+.gifting-start .right {
+    max-width: 632px;
+    width: 100%;
+}
+.title-block h2 {
+    color: #ffffff;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 67px;
+    margin-bottom: 20px;
+}
+.title-block p {
+    color: #ffffff;
+    font-family: "Space Mono", Sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 40px;
+}
+
+.gifting-recc h2{
+    font-family: "Montserrat", Sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 43px;
+    color: #FFFFFF;
+    margin-bottom: 82px;
+    text-align: center;
+}
+.gifting-recc .recc-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.gifting-recc .recc-box .recc-item{
+    display: flex;
+    max-width: 360px;
+    width: 100%;
+}
+.gifting-recc .recc-box .recc-item span{
+    font-family: "Montserrat", Sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 55px;
+    color: #898989;
+    margin-right: 24px;
+}
+.gifting-recc .recc-box .recc-item .content h4{
+    font-family: "Montserrat", Sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 37px;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+}
+.gifting-recc .recc-box .recc-item .content p{
+    font-family: "Space Mono", Sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+/* gifting type */
+.gifting-type .gifttype-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 32px;
+}
+.gifting-type.screen{
+    display: none;
+}
+.gifting-type .left{
+    max-width: 448px;
+    width: 100%;
+    position: relative;
+}
+.gifting-type .right{
+    max-width: 732px;
+    width: 100%;
+    position: relative;
+}
+
+.gifting-type .right .form-group {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.gifting-type .right .form-field:first-child{
+    width: 373px;
+    margin: 0;
+}
+.gifting-type .right .form-field:last-child{
+    width: 328px;
+    margin: 0;
+}
+.gifting-type .right label {
+    display: inline-block;
+    width: 100%;
+    padding: 28px 0;
+    border: solid 1px #000;
+    transition: all 0.3s;
+    text-align: center;
+    cursor: pointer;
+}
+.gifting-type .right label img {
+    padding: 0 18px;
+    height: 294px;
+}
+.gifting-type .right label .text {
+    padding: 0px 8px;
+    max-width: 286px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 24px;
+}
+.gifting-type .right label .text h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+.gifting-type .right label .text p {
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+}
+.gifting-type.screen3 .right .form-field input{
+    border-bottom:none;
+}
+.gifting-type .right  .radio-field > label:hover,
+.gifting-type .right  .radio-field > label.active {
+    border: 1px solid #fff;
+    background: #000;
+    transition: all 0.3s;
+    color: #fff;
+}
+
+.giftingForm .button-group{
+    position: absolute;
+    left: 0;
+    bottom: 52px;
+}
+.giftingForm .button-group .arrow{
+    position: relative;
+    left: auto;
+    top: auto;
+    font-family: "Montserrat", Sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.2em;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+}
+.giftingForm .button-group .arrow:first-child{
+    margin-right: 24px;
+}
+
+
+/* screen screenCom */
+.gifting-type.screenCom .left{
+    max-width: 397px;
+    padding-top: 120px;
+}
+.gifting-type.screenCom .right{
+    max-width: 764px;
+}
+.gifting-type.screenCom .right .form-field:first-child{
+    width: 371px;
+}
+.gifting-type.screenCom .right .form-field:last-child{
+    width: 373px;
+}
+
+/* screen screen 2 */
+.gifting-type.screen2{
+    display: none;
+}
+
+/* screen screen 3 */
+.gifting-type.screen3{
+    display: none;
+}
+.gifting-type.screen3 .right{
+    max-width: 790px;
+}
+.gifting-type.screen3 .right .form-field:first-child{
+    width: 371px;
+}
+.gifting-type.screen3 .right .form-field:last-child{
+    width: 410px;
+}
+.gifting-type.screen3 .right label img{
+    height: auto;
+}
+
+/* screen screen 4 */
+.gifting-type.screen4{
+    display: none;
+    padding-top: 132px;
+}
+.gifting-type.screen4 .left{
+    max-width: 474px;
+}
+.gifting-type.screen4 .left p{
+    max-width: 396px;
+}
+.gifting-type.screen4 .right{
+    max-width: 710px;
+}
+.gifting-type.screen4 .right .details-block{
+    display: flex;
+    justify-content: space-between;
+}
+.gifting-type.screen4 .right .details-block .coll{
+    max-width: 291px;
+    width: 100%;
+    display: block;
+}
+.gifting-type.screen4 .right .details-block .coll:last-child{
+    max-width: 302px;
+}
+.gifting-type.screen4 .right .details-block .coll .form-group:first-child{
+    margin-bottom: 44px;
+}
+.gifting-type.screen4 .right .details-block .coll .form-group{
+    margin-bottom: 22px;
+    display: block;
+}
+.gifting-type.screen4 .right .details-block .coll .form-field{
+    width: 100%;
+}
+.gifting-type.screen4 .right .details-block .coll .form-field input{
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    padding: 0 0 8px 0;
+}
+.gifting-type.screen4 .right .details-block .coll .form-field textarea {
+    background: transparent;
+    font-family: "Space Mono", monospace;
+    font-weight: normal;
+    border: none;
+    outline: none;
+    border: 1px solid #fff;
+    color: #fff;
+    width: 285px;
+    height: 113px;
+    font-size: 15px;
+    line-height: 22px;
+}
+.gifting-type.screen4 .right .details-block .coll .select-field{
+    position: relative;
+} 
+
+
+
+.gifting-type.screen4 .right .details-block .coll .form-btn{
+    text-align: left;
+    /* margin-top: 72px; */
+}
+.gifting-type.screen4 .right .details-block .coll a {
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: #ffffff;
+    padding: 0px 12px 2px;
+    text-align: center;
+    border: 1px solid #ffffff;
+    display: inline-block;
+}
+.gifting-type.screen4 .right .details-block .coll a:first-child {
+    margin-right: 24px;
+}
+.gifting-type.screen4 .right .details-block .coll a:hover {
+    background-color: #fff;
+    color: #000000 !important;
+}
+
+.gifting-type.screen4 .right .details-block .coll p{
+    font-family: "Montserrat", Sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.form-style .custom-select {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    background-color: #000; 
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+}
+.form-style .custom-select.selectAmount{
+    width: 100px !important;
+}
+.form-style .custom-select select {
+    padding: 5px 8px;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #fff;
+    font-size: 16px;
+}
+.form-style .custom-select.selectAmount select {
+    width: 74px;
+}
+.form-style .custom-select select option {
+    background-color: #000;
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+.form-style .custom-select select option:hover,
+.form-style .custom-select select option:focus,
+.form-style .custom-select select option:active,
+.form-style .custom-select select option:checked {
+  background: #000;
+}
+.form-style .custom-select:after {
+    content: " ";
+    display: block;
+    right: 12px;
+    top: 16px;
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-top: 5px solid #fff;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    pointer-events: none;
+}
+.form-style .custom-select.selectAmount:after {
+    right: 0;
+    top: 12px;
+}
+
+.gifting-type .right .group-radio .error-msg{
+    bottom:0;
+    left: 0;
+    transform: none;
+}
+.gifting-type .right #giftCardAmount-error{
+    position: absolute;
+    left: 0;
+    bottom: -22px;
 }
