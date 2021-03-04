@@ -1525,3 +1525,77 @@ main {
     left: 0;
     bottom: -22px;
 }
+
+
+/* login page */
+.signing-container .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.signing-container .wrapper .col{
+    width: 50%;
+    border: 1px solid #FFFFFF;
+    padding: 82px 100px 48px 110px;
+}
+.signing-container .wrapper .col .content{
+    max-width: 500px;
+    margin-bottom: 32px;
+}
+.signing-container .wrapper .col .content h2{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 67px;
+    color: #ffffff;
+    text-align: left;
+    margin-bottom: 15px;
+}
+.signing-container .wrapper .col .content p {
+    font-family: "Space Mono", monospace;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: left;
+    color: #ffffff;
+}
+.signing-container .wrapper .col p span{
+    padding: 0 2px;
+    background-color: #fff;
+    color: #000;
+}
+.signing-container .wrapper .col .caption{
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+    margin-top: 50px;
+}
+.form-style.signing-container .wrapper .col form .form-group{
+    display: flex;
+}
+.form-style.signing-container .wrapper .col form .form-field{
+    width: 187px;
+    margin-right: 24px;
+}
+.form-style.signing-container .wrapper .col form input{
+    font-size: 24px;
+    line-height: 36px;
+    padding-bottom: 4px;
+}
+.form-style.signing-container .wrapper .col form .form-btn{
+    text-align: left;
+    margin-top: 12px;
+}
+.form-style.signing-container .wrapper .col:last-child form .form-btn{
+    margin-top: 60px;
+}
+.form-style.signing-container .wrapper .col form input.btnSubmit{
+    font-size: 15px;
+    line-height: 18px;
+    padding: 15px 0;
+    text-align: center;
+    width: 187px;
+}

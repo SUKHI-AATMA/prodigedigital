@@ -88,9 +88,16 @@ $(document).ready(function() {
     
     //pincode
     $.validator.addMethod("pincodenumber", function (value, element) {
-        return this.optional(element) || value == value.match(/^[0-9]{6}$/);
+        return /^[A-Za-z0-9\d=!\-@._*]*$/.test(value) // consists of only these
+        && /[a-z]/.test(value) // has a lowercase letter
+        && /\d/.test(value) // has a digit
     }, "Kindly provide a valid pincode");
     
+    // password
+    $.validator.addMethod("passwordCheck", function(value, element) {
+        return /^[A-Za-z0-9\d=!\-@._*]+$/.test(value);
+    }, "Kindly provide a valid password");
+
     $(".form-style input[type=text], .form-style input[type=tel]").on("keydown", function(e) {
         if ($(this).attr("data-validation")) {
             if ($(this).attr("data-validation").indexOf("alphanumeric") != -1) {
@@ -532,7 +539,93 @@ $(document).ready(function() {
 
     
 
+    // signup form
+    $("#formSignup").validate({
+        errorElement: 'span',
+        errorClass: 'error-msg',
+        highlight: function(element, errorClass, validClass) {
+            $(element).closest('.form-field').addClass("has-error");
+        },
+        unhighlight: function(element, errorClass, validClass) {
+            $(element).closest('.form-field').removeClass("has-error");
+        },
+        rules: {
+            firstname: {
+                required: true,
+                firstname: true,
+            },
+            lastname: {
+                required: true,
+                lastname: true,
+            },
+            password: {
+                required: true,
+                minlength: 8,
+            },
+            email: {
+                required: true,
+                emailadd: true,
+            }
+            
+        },
+        messages: {
+            firstname: {
+                required: "First Name required",
+                minlength: "Kindly provide a First Name"
+            },
+            lastname: {
+                required: "Last Name required",
+                minlength: "Kindly provide a Last Name"
+            },
+            password: {
+                required: "Password required",
+                minlength: "Kindly provide a password"
+            },
+            email: {
+                required: "Email required",
+                minlength: "Kindly provide a valid email address",
+            }
+        },
+        submitHandler: function () {
+            alert('form submit');
+        }
+    });
 
+    // login form
+    $("#formLogin").validate({
+        errorElement: 'span',
+        errorClass: 'error-msg',
+        highlight: function(element, errorClass, validClass) {
+            $(element).closest('.form-field').addClass("has-error");
+        },
+        unhighlight: function(element, errorClass, validClass) {
+            $(element).closest('.form-field').removeClass("has-error");
+        },
+        rules: {
+            password: {
+                required: true,
+                minlength: 8,
+            },
+            email: {
+                required: true,
+                emailadd: true,
+            }
+            
+        },
+        messages: {
+            password: {
+                required: "Password required",
+                minlength: "Kindly provide a password"
+            },
+            email: {
+                required: "Email required",
+                minlength: "Kindly provide a valid email address",
+            }
+        },
+        submitHandler: function () {
+            alert('form submit');
+        }
+    });
 
     
 
