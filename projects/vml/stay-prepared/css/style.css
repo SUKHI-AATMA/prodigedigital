@@ -1416,6 +1416,10 @@ header .hamburger-menu {
   max-width: 105px;
 }
 
+.device-ios .cards-collection-wrapper > span {
+  display: inline-block;
+}
+
 .cards-collection-wrapper > span:not(:first-child) {
   margin-left: 17px;
 }
@@ -1639,6 +1643,12 @@ header .hamburger-menu {
   /* transition: 0.5s all ease; */
 }
 
+.collections-page .collection-locations-wrapper .fiter-wrapper > div > span,
+.collections-page .collection-locations-wrapper .fiter-wrapper > div > ul > li,
+.collections-page .collection-locations-wrapper .filtered-data-wrapper h2 {
+  text-transform: capitalize;
+}
+
 .collections-page .collection-locations-wrapper .fiter-wrapper > div > span.dd-default-value {
   color: rgba(51, 51, 51, 0.6)
 }
@@ -1663,6 +1673,10 @@ header .hamburger-menu {
 
 .collections-page .collection-locations-wrapper .fiter-wrapper > div > ul > li {
   padding: 15px 21px;
+}
+
+.collections-page .collection-locations-wrapper .fiter-wrapper > div > ul > li.selected-value {
+  color: #00A99E;
 }
 
 .collections-page .collection-locations-wrapper .fiter-wrapper > div > ul > li:hover {
@@ -1921,6 +1935,10 @@ header .hamburger-menu {
 
 .contextual-pages.error-404 .main-content-wrapper > .container > .row > .description {
   text-align: center;
+}
+
+.faq-page .main-content-wrapper > .container > .row h1 {
+  margin-bottom: 0;
 }
 
 /* .collections-page .get-your-bottle-from-partners > ul > li {
@@ -3493,6 +3511,10 @@ header .hamburger-menu {
     padding: 28px 50px 35px 50px;
   }
 
+  .collections-page .main-content-wrapper > .container .free-collection-detail-wrapper > .row > * {
+    width: 100%;
+  }
+
   .collections-page .main-content-wrapper > .container > .row > .col-md-5 {
     padding-left: 0;
   }
@@ -3651,6 +3673,10 @@ header .hamburger-menu {
     padding: 0;
   }
 
+  .collections-page .collection-locations-wrapper .filtered-data-wrapper {
+    width: 90%;
+  }
+
   .collections-page .collection-locations-wrapper .fiter-wrapper > div:not(.button-wrapper) {
     width: 100%;
   }
@@ -3691,6 +3717,9 @@ header .hamburger-menu {
     margin-left: 0;
   }
 
+  .faq-page .main-content-wrapper .container {
+    max-width: 100%;
+  }
 
 }
 
