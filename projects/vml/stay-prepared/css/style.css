@@ -574,7 +574,8 @@ header > .container .navigation ~ ul > li > a {
 
 .about-vitamin-pros > li.what-is-vitamin:before {
     background: url('../images/icon-what-is-vitamin.svg') no-repeat 0 0;
-    background-size: 90%;
+    /* background-size: 90%; */
+    background-size: 86%;
 }
 
 .about-vitamin-pros > li.why-take-vitamin:before {
