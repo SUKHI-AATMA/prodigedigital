@@ -580,12 +580,14 @@ header > .container .navigation ~ ul > li > a {
 
 .about-vitamin-pros > li.why-take-vitamin:before {
     background: url('../images/icon-why-take-vitamin.svg') no-repeat 0 0;
-    background-size: contain;
+    /* background-size: contain; */
+    background-size: 90%;
 }
 
 .about-vitamin-pros > li.how-do-we-get-vitamin:before {
     background: url('../images/icon-how-do-we-get-vitamin.svg') no-repeat 0 0;
-    background-size: contain;
+    /* background-size: contain; */
+    background-size: 90%;
 }
 
 .boost-immunity-wrapper {
