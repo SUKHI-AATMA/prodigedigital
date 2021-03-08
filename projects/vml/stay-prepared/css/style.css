@@ -3189,12 +3189,12 @@ header .hamburger-menu {
   }
 
   .banner-wrapper .banner img {
-    width: auto;
+    /* width: auto;
     max-width: none;
     height: fit-content;
     height: -moz-fit-content;
     max-height: 100%;
-    transform: translateX(-160px);
+    transform: translateX(-40px); */
   }
 
   .banner-content .section-heading {
