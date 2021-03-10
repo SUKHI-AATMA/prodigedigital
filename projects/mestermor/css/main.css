@@ -7,7 +7,7 @@ body {
     color: #fff;
 }
 
-header {
+header.myheader{
     text-align: center;
     padding: 40px 0;
 }
@@ -25,6 +25,14 @@ p {
 }
 a {
     text-decoration: none;
+}
+
+
+/* common code */
+.page-id-1210  header,
+.page-id-1211 header,
+.page-id-1218 header{
+    padding: 0;
 }
 
 main {
@@ -110,11 +118,13 @@ main {
     padding: 14px 26px;
     width: auto;
     cursor: pointer;
+    background-color: #000 !important;
+    color: #fff !important;
 }
 
 .form-style .btnSubmit:hover {
-    color: #000;
-    background-color: #fff;
+    color: #000 !important;
+    background-color: #fff !important;
 }
 
 .form-style form .error-msg {
@@ -349,11 +359,16 @@ main {
     cursor: pointer;
     margin: 0;
 }
-.group-radio .form-field label:hover,
-.group-radio .form-field label.active {
+.group-radio .form-field label:hover{
     background: #fff;
     color: #000;
 }
+.group-radio .form-field input[type="radio"]:checked+label{
+    border: 1px solid #fff;
+    background-color: transparent;
+    transition: all 0.3s;
+    color: #fff;
+} 
 .group-radio .form-field input[type="radio"] {
     position: absolute;
     left: 0;
@@ -362,27 +377,19 @@ main {
     height: 1.25rem;
     opacity: 0;
 }
-/* .group-radio .form-field label:hover,
-.group-radio .form-field label.active {
-    background-color: #fff;
-    color: #000;
-} */
 
-.form-style .form5 .radio-field .radio-box > label:hover,
-.form-style .form5 .radio-field .radio-box > label.active,
-.form-style .form6 .radio-field > label:hover,
-.form-style .form6 .radio-field > label.active,
-.form-style .form7 .radio-field > label:hover,
-.form-style .form7 .radio-field > label.active {
-    border: 1px solid #fff;
-    background-color: transparent;
-    transition: all 0.3s;
-    color: #fff;
+.form-style .form3 .form-field [type="radio"]:checked+label,
+.form-style .form3 .form-field [type="radio"]:hover+label,
+.form-style .form8 .form-field [type="radio"]:checked+label,
+.form-style .form8 .form-field [type="radio"]:hover+label {
+    background: #fff;
+    color: #000;
 }
 
 .ui-datepicker .ui-datepicker-title select{
     appearance: auto;
 }
+
 
 /* form 2 */
 
@@ -490,7 +497,7 @@ main {
 .form-style .form4 .col .form-field .mobplus {
     position: absolute;
     left: 0;
-    bottom: 5px;
+    top: 0px;
     font-family: "Space Mono", monospace;
     font-size: 18px;
     line-height: 27px;
@@ -628,7 +635,7 @@ main {
 }
 
 .form-style .form5 .col:nth-child(5) .radio-field .radio-box label {
-    padding: 0 8px;
+    padding: 0 2px 0 8px;
 }
 
 .form-style .form5 .radio-field .radio-box > label {
@@ -1012,14 +1019,15 @@ main {
 .quiz-order {
     display: flex;
     justify-content: space-between;
-    margin-top: 90px;
+    margin-top: 32px;
+    margin-bottom: 72px;
 }
 .quiz-order .left {
     max-width: 462px;
     width: 100%;
 }
 .quiz-order .right {
-    max-width: 620px;
+    max-width: 660px;
     width: 100%;
 }
 .quiz-order .col h2 {
@@ -1032,21 +1040,19 @@ main {
 }
 .quiz-order .col p {
     color: #ffffff;
-    font-family: "Space Mono", Sans-serif;
+    font-family: "Space Mono", Sans-serif !important;
     font-size: 18px;
     line-height: 27px;
     font-weight: 400;
     font-style: normal;
     margin-bottom: 40px;
 }
-
-
 .order-detail-block table .coll{
     display: flex;
 }
 .order-detail-block table .coll p:first-child{
-    width: 120px;
-    margin-right: 16px;
+    width: 136px;
+    margin-right: 12px;
 }
 .quiz-order .col .order-detail-block table p{
     font-family: "Montserrat", Sans-serif;
@@ -1057,21 +1063,29 @@ main {
     color: #FFFFFF;
     margin-bottom: 0;
 }
+.quiz-order .col .order-detail-block table h3{
+    font-family: "Montserrat", Sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
 
-.tg {
+.quiz-order .col .order-detail-block  .tg {
     border-collapse: collapse;
     border-spacing: 0;
-    width: 620px;
+    width: 100%;
 }
-.tg td {
+.quiz-order .col .order-detail-block  .tg td {
     text-align: left;
     width: 50%;
     border: 1px solid #fff;
     overflow: hidden;
-    padding: 24px 16px 20px;
+    padding: 20px 16px 20px;
     word-break: normal;
 }
-.tg th {
+.quiz-order .col .order-detail-block  .tg th {
     text-align: left;
     width: 50%;
     border: 1px solid #fff;
@@ -1079,7 +1093,236 @@ main {
     padding: 15px 15px;
     word-break: normal;
 }
+.quiz-order  .woocommerce-Price-currencySymbol{
+    margin-right: 4px;
+    font-family: initial;
+}
 
+.woocommerce-order .container{
+    padding: 0;
+}
+.woocommerce .woocommerce-MyAccount-content > p{
+    font-family: "Space Mono", Sans-serif !important;
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+}
+.woocommerce-order-details .woocommerce-order-details__title,
+.woocommerce-customer-details .woocommerce-column__title{
+    font-family: "Montserrat", Sans-serif !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px !important;
+    line-height: 43px !important;
+    padding-bottom: 24px !important;
+}
+
+.woocommerce-customer-details address{
+    font-family: "Space Mono", Sans-serif !important;
+    font-size: 16px;
+    line-height: 1.2;
+}
+.woocommerce-customer-details address p{
+    font-family: "Space Mono", Sans-serif !important;
+    font-size: 16px !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    padding-top: 12px;
+}
+.woocommerce-breadcrumb{
+    display: none;
+}
+.actionbutton .return{
+    margin: 12px 0;
+}
+.actionbutton a{
+    font-family: "Montserrat", Sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #ffffff;
+    padding: 12px 0px;
+    text-align: center;
+    width: 187px;
+    border: 1px solid #ffffff;
+    display: block;
+}
+.actionbutton a:hover {
+    background-color: #fff;
+    color: #000000 !important;
+}
+.ajax-loader{
+    width: auto !important;
+}
+.page-id-1218 main{
+    max-width: 1440px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 0 90px;
+}
+.site-main .woocommerce h1{
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 43px;
+    margin-bottom: 27px;
+}
+.site-main .woocommerce h1::after{
+    display: none;
+}
+.site-main .woocommerce hr{
+    display: none;
+}
+
+.tableCommon,
+.shop_table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+.tableCommon td,
+.shop_table  td{
+    text-align: left;
+    width: 70%;
+    border: 1px solid #fff !important;
+    overflow: hidden;
+    padding: 20px 16px 20px;
+    word-break: normal;
+
+    font-family: "Space Mono", Sans-serif !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF !important;
+    background-color: #000 !important;
+}
+.tableCommon th,
+.shop_table th{
+    text-align: left;
+    width: 30%;
+    border: 1px solid #fff !important;
+    overflow: hidden;
+    padding: 15px 15px !important;
+    word-break: normal;
+
+    font-family: "Montserrat", Sans-serif !important;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF !important;
+    background-color: #000 !important;
+}
+
+
+.ced_rnx_product_table td,
+.ced_rnx_total_amount_wrap{
+    background-color: #000 !important;
+}
+.shop_table{
+    margin-bottom: 48px;
+}
+.shop_table  td:first-child{
+    width: 50%;
+}
+.shop_table  td{
+    width: 25%;
+}
+.shop_table th:first-child{
+    width: 50%;
+}
+.shop_table th{
+    width: 25%;
+}
+.shop_table  td.product-quantity  input{
+    background: #000;
+    color: #fff;
+    border: none;
+}
+
+.ced_rnx_note_tag_wrapper{
+    max-width: 600px;
+    width: 100%;
+    margin-top: 52px;
+}
+.ced_rnx_note_tag_wrapper label{
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 27px;
+    margin-bottom: 24px !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+.ced_rnx_note_tag_wrapper input,
+.ced_rnx_note_tag_wrapper textarea{
+    background: transparent !important;
+    padding: 0 0 8px 0 !important;
+    font-family: "Space Mono", monospace;
+    font-weight: normal;
+    font-size: 18px !important;
+    line-height: 22px !important;
+    border: none;
+    outline: none;
+    border: none !important;
+    border-bottom: 1px solid #fff !important;
+    color: #fff !important;
+    width: 100%;
+    box-shadow: none !important;
+    margin-bottom: 32px !important;
+}
+.ced_rnx_note_tag_wrapper textarea{
+    height: 120px !important;
+}
+
+#ced_rnx_return_request_form .ced_rnx_return_request_morefiles{
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px !important;
+    line-height: 22px !important;
+    letter-spacing: 0.2em;
+    border: 1px solid #ffffff !important;
+    padding: 8px 16px !important;
+    width: auto;
+    cursor: pointer;
+}
+#ced_rnx_return_request_form i{
+    font-size: 12px;
+    margin-left: 16px;
+}
+#ced_rnx_return_request_form input[type=file]{
+    border: none !important;
+}
+
+#ced_rnx_return_request_form input[type=submit]{
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px !important;
+    line-height: 22px !important;
+    letter-spacing: 0.2em;
+    border: 1px solid #ffffff !important;
+    padding: 12px 26px !important;
+    width: auto;
+    cursor: pointer;
+    margin-top: 32px !important;
+}
+
+#ced_rnx_return_request_form .ced_rnx_return_request_morefiles:hover,
+#ced_rnx_return_request_form input[type=submit]:hover{
+    color: #000 !important;
+    background: #fff !important;
+}
+
+.ced-rnx_customer_detail{
+    margin-bottom: 52px;
+}
 
 
 /* gifting redeem page */
@@ -1207,6 +1450,7 @@ main {
     font-size: 20px;
     line-height: 30px;
     color: #FFFFFF;
+    text-align: left;
 }
 
 /* gifting type */
@@ -1251,6 +1495,14 @@ main {
     transition: all 0.3s;
     text-align: center;
     cursor: pointer;
+}
+
+.gifting-type .right input:checked+label,
+.gifting-type .right input:hover+label{
+    border: 1px solid #fff;
+    background: #000;
+    transition: all 0.3s;
+    color: #fff;
 }
 .gifting-type .right label img {
     padding: 0 18px;
@@ -1353,7 +1605,7 @@ main {
 /* screen screen 4 */
 .gifting-type.screen4{
     display: none;
-    padding-top: 132px;
+    padding-top: 32px;
 }
 .gifting-type.screen4 .left{
     max-width: 474px;
@@ -1483,7 +1735,7 @@ main {
     width: 74px;
 }
 .form-style .custom-select select option {
-    background-color: #000;
+    background-color: #000 !important;
     font-family: "Space Mono", monospace;
     font-style: normal;
     font-weight: normal;
@@ -1598,4 +1850,581 @@ main {
     padding: 15px 0;
     text-align: center;
     width: 187px;
+}
+
+
+@media screen and (max-width: 1366px) {
+    /*  gifting start  */
+    .gifting-start .left {
+        max-width: 530px;
+    }
+    .gifting-start .right {
+        max-width: 600px;
+    }
+    .gifting-start .left img{
+        width: 100%;
+    }
+    .gifting-type.screen4 .right{
+        max-width: 660px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .container{
+        padding: 0 40px;
+    }
+    .gifting-start{
+        padding: 52px 0 200px;
+    }
+}
+
+
+@media screen and (max-width: 1199px) {
+    .form-style .content h2,
+    .title-block h2{
+        font-size: 44px;
+        line-height: 56px;
+    }
+    .form-style .screen .content{
+        max-width: 576px;
+    }
+    .form-style input{
+        padding: 0 0 10px 0;
+        font-size: 24px;
+        line-height: 24px;
+    }
+    .form-style .form-group .form-field{
+        margin-bottom: 20px;
+    }
+    .form-style .form2 .form-group{
+        width: 148px;
+    }
+    .group-radio .form-field label,
+    .form-style .form4 .form-group .col .form-field label,
+    .form-style .form5 .form-group .title p{
+        font-size: 21px;
+        line-height: 32px;
+    }
+
+    .form-style .form4 .form-group,
+    .form-style .form6 .form-group,
+    .form-style .form7 .form-group{
+        max-width: 700px;
+        width: 100%;
+    }
+    .form-style .form4 .form-group .col{
+        overflow: hidden;
+    }
+
+    .form-style .form5 .form-group{
+        max-width: 700px;
+        justify-content: space-between;
+    }
+    .form-style .form5 .form-group .col{
+        margin-bottom: 52px;
+        width: 300px !important;
+        margin-right: 0 !important;
+        padding-top: 0 !important;
+    }
+    .form-style .form-group .form-field .waist-group input{
+        width: 200px !important;
+    }
+
+    .form-style .form6 label img{
+        height: 200px;
+    }
+
+    .form-style .form7 label .text h3{
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 24px;
+    }
+    
+    .form-style .form9 .row .col:first-child h2{
+        text-align: left;
+    }
+    .form-style .form9 .form-group h3{
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .form-style .form9 .form-group .field-box input,
+    .form9 .form-group .col:first-child .field-box textarea {
+        padding-bottom: 6px !important;
+    }
+    .form9 .form-group .col:first-child .field-box textarea {
+        height: 84px;
+    }
+
+
+    /*  gifting start  */
+    .gifting-start .left {
+        max-width: 42%;
+    }
+    .gifting-start .right {
+        width: 50%;
+    }
+    .gifting-recc h2{
+        margin-bottom: 52px;
+    }
+    .gifting-recc .recc-box .recc-item .content h4{
+        font-size: 24px;
+        line-height: 30px;
+    }
+      
+
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .container{
+        padding: 0 20px;
+    }
+    .form-style #chartPopup1 {
+        top: 170px;
+        left: 10%;
+    }
+    .form-style #chartPopup2 {
+        top: 250px;
+        right: -60px;
+    }
+    .form-style .content h2,
+    .title-block h2{
+        font-size: 32px;
+        line-height: 44px;
+    }
+    .title-block h2 br{
+        display: none;
+    }
+    .form-style .content p,
+    .title-block p,
+    .gifting-recc .recc-box .recc-item .content p{
+        font-size: 16px;
+        line-height: 21px;
+    }
+    .form-style input{
+        padding: 0 0 6px 0;
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .group-radio .form-field label,
+    .form-style .form4 .form-group .col .form-field label, .form-style .form5 .form-group .title p{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box {
+        width: calc(100% / 3);
+    }
+    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box:nth-child(2) {
+        margin: 0 16px;
+    }
+    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box img{
+        width: 100%;
+    }
+    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box.logo {
+        max-width: 200px;
+    }
+    .form-style .form3 .form-group{
+        max-width: 400px;
+    }
+    .group-radio .form-field label{
+        padding: 8px 20px;
+    }
+    .form-style .form4 .form-group{
+        max-width: 600px;
+        width: 100%;
+    }
+    .form-style .form4 .form-group{
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-style .form5 .form-group {
+        max-width: 600px;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-style .form5 .form-group .col{
+        margin-bottom: 32px;
+    }
+    .form-style .form6 .form-group {
+        max-width: 420px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .form-style .form6 .form-group .form-field {
+        margin-bottom: 20px;
+        width: 170px;
+    }
+    .form-style .form6 .form-group .form-field label{
+        width: auto;
+    }
+
+    .form-style .form7 .form-group {
+        max-width: 520px;
+    }
+    .form-style .form7 .form-field{
+        width: 240px;
+    }
+    .form-style .form7 label img{
+        width: 180px;
+    }
+    .form-style .form7 label .text h3{
+        font-size: 20px;
+        line-height: 4px;
+        margin-bottom: 20px;
+    }
+    .form-style .form7 label .text p, .form-style .form7 label .text h4{           
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .form-style .form9 .content .col p{
+        padding-bottom: 16px;
+    }
+    .form-style .form9 .form-group h3{
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .form-style .form9 .row .col:first-child {
+        max-width: 350px;
+        width: 100%;
+        margin-right: 52px;
+    }
+    .form-style .form9 .row .col:last-child {
+        max-width: 350px;
+        width: 100%;
+    }
+    .form-style .form9 .form-group .field-box p{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .form-style .form9 .form-group .col:first-child .field-box p {
+        width: calc(100% - 200px) !important;
+    }
+    .form-style .form9 .form-group .col:first-child .field-box input, .form-style .form9 .form-group .col:first-child .field-box textarea {
+        width: 200px !important;
+    }
+    .form-style .form9 .form-group .col:last-child .field-box p {
+        width: calc(100% - 160px) !important;
+    }
+    .form-style .form9 .form-group .col:last-child .field-box input, .form-style .form9 .form-group .col:last-child .field-box textarea {
+        width: 160px !important;
+    }
+
+    /*  gifting start  */
+    .gifting-start{
+        padding: 52px 0 0px;
+    }
+    .gifting-start .gifting-best{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+    .gifting-start .gifting-best .col{
+        max-width: 80%;
+        width: 100%;
+    }
+    .gifting-start .gifting-best .left .order-detail-block{
+        max-width: 460px;
+        margin: 0 auto;
+    }
+    .gifting-start .right{
+        margin-top: 32px;
+        text-align: center;
+    }
+    .gifting-start .right .btn-container{
+        justify-content: center;
+    }
+    .gifting-recc h2{
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .gifting-recc{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .gifting-recc .recc-box{
+        flex-direction: column;
+    }
+    .gifting-recc .recc-box .recc-item{
+        max-width: 100%;
+        margin-bottom: 32px;
+    }
+    .gifting-recc .recc-box .recc-item span{
+        font-size: 44px;
+        line-height: 40px;
+        width: 26px;
+        margin-right: 16px;
+    }
+    .gifting-recc .recc-box .recc-item .content h4{
+        font-size: 21px;
+        line-height: 24px;
+        margin-bottom: 12px;
+    }
+    .gifting-type .gifttype-container{
+        flex-direction: column;
+    }
+    .gifting-type .left,
+    .gifting-type.screenCom .left,
+    .gifting-type.screen4 .left{
+        max-width: 100%;
+        padding: 0;
+        padding-bottom: 52px;
+    }
+    .gifting-type .right{
+        margin-top: 52px;
+    }
+    .giftingForm .button-group{
+        bottom: 0;
+    }
+    .title-block p,
+    .gifting-type.screen4 .left p{
+        margin-bottom:24px;
+        max-width: 100%;
+    }
+    .gifting-type.screen4 .right {
+        max-width: 700px;
+    }
+    .gifting-type .right label{
+        padding: 16px 0 !important;
+    }
+    .gifting-type .right label .text h3{
+
+    }
+    .gifting-type.screen4 .right .details-block .coll p{
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 16px;
+    }
+    .gifting-type.screen4 .right .details-block .coll .form-field input{
+        font-size: 16px !important;
+        line-height: 24px !important;
+    }
+    .form-style .btnSubmit{
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .form-style .chart-popup table tr th, .form-style .chart-popup table tr td{
+        font-size: 16px;
+        line-height: 20px;
+        padding: 4px 12px;
+    }
+    .form-style #chartPopup1 {
+        top: 170px;
+        left: 0;
+    }
+    .form-style #chartPopup2 {
+        top: 300px;
+        right: 27%;
+    }
+    .form-style .button-group .arrow{
+        top: auto;
+        bottom: 0;
+    }
+    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box.logo {
+        max-width: 120px;
+    }
+    .group-radio .form-field label{
+        padding: 8px 0;
+    }
+
+    .form-style .form3 .form-group {
+        max-width: 340px;
+    }
+    .form-style .form5 .form-group{
+        max-width: 100%;
+    }
+
+    .form-style .form7 .form-group{
+        max-width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-style .form7 .form-field{
+        width: 360px;
+    }
+    .form-style .form7 label{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 4px;
+    }
+    .form-style .form7 label img {
+        width: auto;
+        height: 120px;
+        padding: 0;
+    }
+    .form-style .form7 label .text{
+        margin-left: 12px;
+        padding-top: 0;
+    }
+    .form-style .form7 label .text h3{
+        font-size: 18px;
+        line-height: 20px;
+        margin-bottom: 12px;
+        text-align: left;
+    }
+    .form-style .form7 label .text p, .form-style .form7 label .text h4 {
+        text-align: left;
+    }
+
+    .form-style .form8 .form-group{
+        max-width: 250px;
+    }
+
+    .form-style .form9 .row{
+        flex-direction: column;
+    }
+    .form-style .form9 .row .col:first-child{
+        max-width: 100%;
+        margin: 0;
+    }
+    .form-style .form9 .row .col:last-child {
+        max-width: 100%;
+        margin-top: 32px;
+    }
+    .form-style .form9 .form-group .col:first-child .field-box p {
+        width: calc(100% - 250px) !important;
+    }
+    .form-style .form9 .form-group .col:first-child .field-box input, .form-style .form9 .form-group .col:first-child .field-box textarea {
+        width: 250px !important;
+    }
+    .form-style .form9 .form-group .col:last-child .field-box p {
+        width: calc(100% - 250px) !important;
+    }
+    .form-style .form9 .form-group .col:last-child .field-box input, .form-style .form9 .form-group .col:last-child .field-box textarea {
+        width: 250px !important;
+    }
+    
+    /* gifting start */
+    .gifting-type .right .form-group{
+        flex-direction: column;
+    }
+    .gifting-type .right .form-field:first-child,
+    .gifting-type .right .form-field:last-child{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .gifting-type .right label{
+        display: flex;
+        justify-content: space-between;
+    }
+    .gifting-type .right label img {
+        padding: 0 12px;
+        height: 160px;
+    }
+    .gifting-type .right label .text{
+        padding: 0 12px 0 8px;
+        max-width: 286px;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 0;
+    }
+    .gifting-type .right label .text h3{
+        font-size: 24px;
+        line-height: 28px;
+        text-align: left;
+    }
+    .gifting-type .right label .text p{
+        text-align: left;
+    }
+
+
+}
+
+
+@media screen and (max-width: 480px) {
+    .form-style .content h2,
+    .title-block h2{
+        font-size: 27px !important;
+        line-height: 32px !important;
+        margin-bottom: 20px;
+    }
+    .form-style input{
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .form-style .form1 .content p{
+        padding: 0;
+    }
+    .ui-datepicker{
+        width: 300px !important;
+        margin-left: -5% !important;
+    }
+    .ui-datepicker td span, .ui-datepicker td a{
+        width: 25px !important;
+    }
+    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box:nth-child(2) {
+        margin: 0 8px;
+    }
+    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box.logo {
+        max-width: 90px;
+    }
+    .form-style .form3 .form-group{
+        max-width: 100%;
+    }
+    .form-style .form6 .form-group{
+        max-width: 300px;
+    }
+    .form-style .form6 .form-group .form-field {
+        margin: 0 auto 20px;
+        width: 120px;
+    }
+    .form-style .form6 .form-group .form-field label{
+        padding: 8px 4px;
+    }
+    .form-style .form6 label img {
+        height: 160px;
+    }
+
+    .form-style .form7 .form-field{
+        width: 100%;
+    }
+    .form-style .form7 label img{
+        height: 90px;
+    }
+    .form-style .form7 label .text h3{
+        font-size: 16px;
+        line-height: 18px;
+        margin-bottom: 8px;    
+    }
+    .form-style .form9 .form-group .field-box{
+        flex-direction: column;
+        margin-bottom: 24px;
+    }
+    .form-style .form9 .form-group .field-box p{
+        margin-bottom: 8px;
+    }
+    .form-style .form9 .form-group .col:first-child .field-box p {
+        width: 100% !important;
+    }
+    .form-style .form9 .form-group .col:first-child .field-box input, .form-style .form9 .form-group .col:first-child .field-box textarea {
+        width: 100% !important;
+    }
+    .form-style .form9 .form-group .col:last-child .field-box p {
+        width: 100% !important;
+    }
+    .form-style .form9 .form-group .col:last-child .field-box input, .form-style .form9 .form-group .col:last-child .field-box textarea {
+        width: 100% !important;
+    }
+
+    /* gifting start */
+    .gifting-start .gifting-best .col{
+        max-width: 100%;
+    }
+
+    .gifting-recc{
+        width: 100%;
+    }
+    .gifting-recc h2{
+        font-size: 24px;
+        line-height: 28px;
+    }
+
 }

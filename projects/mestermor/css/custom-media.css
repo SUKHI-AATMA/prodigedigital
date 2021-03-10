@@ -1,0 +1,611 @@
+@media screen and (max-width: 1366px) {
+    .oc-row .oc-coll{
+        margin-right: 0 !important;
+    }
+    .club-top-gallery #gallery-1,
+    .club-bottom-gallery #gallery-4{
+        display: flex;
+        justify-content: space-between;
+    }
+    .club-top-gallery #gallery-1 figure,
+    .club-bottom-gallery #gallery-4 figure{
+        width: 32%;
+    }
+    
+}
+
+@media screen and (max-width: 1280px) {
+  
+    /* header */
+    #masthead .header-column > .elementor-element-populated{
+        padding: 24px 40px 24px;
+    }
+    /* footer */
+    .footer-top-sec .footer-top-column > .elementor-element-populated,
+    .footer-bottom-sec .footer-bottom-column > .elementor-element-populated{
+        padding: 0 40px !important;
+    }
+
+    /* homepage */
+    .sec-discovery-column > .elementor-element-populated,
+    .how-top,
+    .how-bottom,
+    .brands-column > .elementor-element-populated,
+    .brands-logo-sec .brands-logo-column > .elementor-element-populated,
+    .join-club-column > .elementor-element-populated,
+    .essentials-column > .elementor-element-populated,
+    .indulgence-column > .elementor-element-populated,
+    .thegiftbox-column > .elementor-element-populated,
+    .join-club-column > .elementor-element-populated,
+    .essentials-column > .elementor-element-populated,
+    .indulgence-column > .elementor-element-populated,
+    .thegiftbox-column > .elementor-element-populated,
+    .contact-sec .contact-column > .elementor-element-populated,
+    .collaborators-top-sec .collaborators-top-column > .elementor-element-populated,
+    .collaborators-logo-sec .collaborators-logo-column > .elementor-element-populated,
+    .collaborators-bottom-sec .collaborators-bottom > .elementor-element-populated,
+    .faq-sec .faq-column > .elementor-element-populated{
+        padding: 0 40px !important;
+    }
+    .how-bottom{
+        margin-top: 52px;
+    }
+    .whats-box-sec .whats-box-column > .elementor-element-populated{
+        padding: 0 0 0 40px !important;
+    }
+    .box-container .roww .item-box .title-wrap h2{
+        font-size: 24px !important;
+        line-height: 28px !important;
+    }
+    .box-container .roww .item-box .content-overlay{
+        width: auto !important;
+        height: auto !important;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .banner-top-left h2,
+    .how-top .middle-title h2,
+    .whats-box-left h2,
+    .brands-title h2,
+    .join-club-column h2,
+    .contact-sec .contact-column .contact-top .coll h2,
+    .collaborators-top-sec .collaborators-top-column h2,
+    .faq-sec .faq-column h2{
+        font-size: 44px !important;
+        line-height: 56px !important;
+    }
+    .how-top .elementor-row .elementor-column{
+        width: 35.255%;
+    }
+    .how-top .elementor-row .elementor-column:nth-child(2){
+        width: 28.048%;
+    }
+    .work-container p {
+        font-size: 24px !important;
+        line-height: 52px !important;
+    }
+
+    /* membersship */
+    .essentials-innerSection .col-content{
+        width: 540px !important;
+    }
+    
+}
+
+
+@media screen and (max-width: 1024px) {
+  
+    /* header */
+    #masthead .hfe-nav-menu-icon i{
+        color: #fff;
+    }
+    #masthead .header-column > .elementor-element-populated{
+        padding: 24px 20px 24px;
+    }
+    header .elementor-18 .elementor-element.elementor-element-23c176d{
+        width: 20% !important;
+    }
+    header .elementor-18 .elementor-element.elementor-element-8b55f04{
+        width: 80%;
+    }
+    header .elementor-18 .elementor-element.elementor-element-06a4f2d .hfe-nav-menu__toggle{
+        margin: 0 0 0 auto !important;
+    }
+
+    /* footer */
+    .footer-top-sec .footer-top-column > .elementor-element-populated,
+    .footer-bottom-sec .footer-bottom-column > .elementor-element-populated{
+        padding: 0 20px !important;
+    }
+    .footer-top-sec section .elementor-row .elementor-column:first-child .elementor-image{
+        text-align: center;
+        margin-bottom: 52px;
+    }
+    .footer-top-sec section > .elementor-container > .elementor-row{
+        display: flex;
+    }
+    .footer-top-sec section > .elementor-container > .elementor-row > .elementor-column {
+        width: 100%;
+    }
+    .footer-top-sec .footer-top-innerSec > .elementor-container > .elementor-row > .elementor-column {
+        width: 33.33%;
+    }
+
+    /* homepage */
+    .sec-discovery-column > .elementor-element-populated,
+    .how-top,
+    .how-bottom,
+    .brands-column > .elementor-element-populated,
+    .brands-logo-sec .brands-logo-column > .elementor-element-populated,
+    .join-club-column > .elementor-element-populated,
+    .essentials-column > .elementor-element-populated,
+    .indulgence-column > .elementor-element-populated,
+    .thegiftbox-column > .elementor-element-populated,
+    .contact-sec .contact-column > .elementor-element-populated,
+    .collaborators-top-sec .collaborators-top-column > .elementor-element-populated,
+    .collaborators-logo-sec .collaborators-logo-column > .elementor-element-populated,
+    .collaborators-bottom-sec .collaborators-bottom > .elementor-element-populated,
+    .faq-sec .faq-column  > .elementor-element-populated {
+        padding: 0 20px !important;
+    }
+    .whats-box-sec .whats-box-column > .elementor-element-populated{
+        padding: 0 20px !important;
+    }
+
+    .banner-top-left h2,
+    .how-top .middle-title h2,
+    .whats-box-left h2,
+    .brands-title h2,
+    .join-club-column h2,
+    .contact-sec .contact-column .contact-top .coll h2,
+    .collaborators-top-sec .collaborators-top-column h2,
+    .faq-sec .faq-column h2{
+        font-size: 32px !important;
+        line-height: 44px !important;
+    }
+    .banner-top-left h2 br,
+    .how-top .middle-title h2 br,
+    .whats-box-left h2 br,
+    .brands-title h2 br,
+    .contact-sec .contact-column .contact-top .coll h2 br,
+    .faq-sec .faq-column h2 br{
+        display: none;
+    }
+    .hm-content .elementor-text-editor {
+        font-size: 16px !important;
+    }
+    .hm-content .elementor-text-editor br {
+        display: none;
+    }    
+    .text-editor-block .elementor-text-editor,
+    .work-brand-container p{
+        font-size: 16px !important;
+        line-height: 21px !important;
+    }
+
+    .sec-discovery-column section{
+        margin-top: 32px;
+    }
+    .sec-discovery-column section .elementor-row,
+    .whats-box-sec section .elementor-row{
+        flex-direction: column;
+    }
+    .sec-discovery-column section .elementor-row .elementor-column,
+    .whats-box-sec section .elementor-row .elementor-column{
+        width: 100%;
+    }
+    .sec-discovery-column section .elementor-row .elementor-column:last-child{
+        max-width: 610px;
+        margin: 52px auto 0;
+    }
+    .sec-discovery-column section .elementor-row .elementor-column:last-child .elementor-element-populated{
+        padding: 0 !important;
+    }
+    .sec-discovery-column section .elementor-row .elementor-column .elementor-element-populated{
+        padding: 0px 0px 72px 0px !important;
+    }
+    .box-container .roww .item-box .title-wrap h2,
+    .faq-innerSection div .elementor-row .faq-left p{
+        font-size: 18px !important;
+        line-height: 24px !important;
+    }
+        
+    .how-works-sec{
+        padding: 72px 0 !important;
+    }
+    .how-works-sec .elementor-row .elementor-column > .elementor-element-populated{
+        padding: 0 !important;
+    }
+    .how-top .elementor-row .elementor-column{
+        width: 35.255%;
+    }
+    .how-top .elementor-row .elementor-column:nth-child(2){
+        width: 28.048%;
+    }
+
+    .whats-box-sec section .elementor-row .elementor-column:first-child{
+        margin-bottom: 52px;
+    }
+    .whats-box-sec section .elementor-row .elementor-column:first-child .elementor-element-populated{
+        margin: 0;
+    }
+    .whats-box-sec section .elementor-row .elementor-column:first-child .elementor-element-populated p{
+        line-height: 22px;
+    }
+    
+    .brands.elementor-element.elementor-element-027a868{
+        padding: 72px 0 0 0 !important;
+    }
+    .brands-logo-sec{
+        margin-bottom: 72px !important;
+    }
+    .work-container p {
+        font-size: 20px !important;
+        line-height: 36px !important;
+    }
+    .work-container p a{
+        font-size: 24px !important; 
+        line-height: 30px !important; 
+        width: 260px !important; 
+    }
+    .brands-title h2{
+        padding-bottom: 20px !important;
+    }
+    .brands-column .elementor-column-gap-default>.elementor-row>.elementor-column>.elementor-element-populated{
+        padding: 0 !important;
+    }
+
+
+     /* membersship */
+    .join-club-sec,
+    .essentials-sec{
+        padding: 0px 0px 72px 0px !important;
+    }
+    .essentials-innerSection .col-content h2,
+    .thegiftbox-column .elementor-widget-container h2{
+        font-size: 27px !important;
+        line-height: 35px !important;
+    }
+    .join-club-box .col-left,
+    .join-club-box .col-right{
+        margin: 0 auto;
+    }
+    .join-club-box .col-left img,
+    .join-club-box .col-right img{
+        max-width: 90px !important;
+        height: auto !important;
+    }    
+    .join-club-box .col-center{
+        margin: 20px 40px !important;
+    }
+    .join-club-box .col-center p,
+    .essentials-innerSection .col-content .elementor-text-editor,
+    .thegiftbox-column .gift-box .elementor-text-editor,
+    .contact-p .content p,
+    .contact-bottom .content p{
+        font-size: 16px !important;
+        line-height: 21px !important;
+    }      
+    #essentialsBOX .elementor-row .col-img{
+        order: 2;
+    }
+    .essentials-innerSection .col-img {
+        width: 394px;
+        margin: 0 auto;
+    }
+    .essentials-innerSection .col-content {
+        width: 80% !important;
+        margin: 0 auto;
+        padding-bottom: 72px;
+    }
+    .essentials-innerSection .col-content h2,
+    .essentials-innerSection .col-content .elementor-text-editor,
+    .essentials-innerSection .col-content p,
+    .essentials-innerSection .col-content .btn-subscribe{
+        text-align: center !important;
+    }
+
+
+    /* contact */
+    .contact-sec .contact-column .contact-top .coll h2 {
+        margin-bottom: 20px;
+    }
+    .contact-sec .contact-column .contact-top .coll:first-child{
+        width: 100% !important;
+        margin-bottom: 24px;
+    }
+    .contact-top .coll:last-child{
+        width: auto !important;
+    }
+    .contact-sec .contact-column .contact-top .coll > div,
+    .contact-sec .contact-column .contact-bottom .coll > div{
+        padding: 0 !important;
+    }
+    .contact-bottom .coll h4{
+        font-size: 21px !important;
+        line-height: 26px !important;
+    }
+    .contact-bottom .coll .email a{
+        font-size: 16px !important;
+        line-height: 16px !important;
+    }
+    .contact-bottom .coll .content a{
+        font-size: 16px !important;
+    }
+
+    /* faq */
+    .faq-innerSection div .elementor-row .faq-left{
+        margin-bottom: 32px;
+    }
+    .faq-innerSection div .elementor-row .faq-left,
+    .faq-innerSection div .elementor-row .faq-right{
+        width: 100% !important;
+    }
+    .elementor-865 .elementor-element.elementor-element-982b25f .elementor-accordion .elementor-accordion-title{
+        font-size: 24px !important;
+        line-height: 30px !important;
+    }
+    .faq-innerSection div .elementor-row .faq-right .elementor-accordion .elementor-tab-content {
+        padding: 24px 0 !important;
+    }
+    .faq-innerSection div .elementor-row .faq-right .elementor-accordion .elementor-tab-content .question {
+        font-size: 20px !important;
+        line-height: 25px !important;
+        padding-bottom: 20px !important;
+    }
+    .faq-innerSection div .elementor-row .faq-right .elementor-accordion .elementor-tab-content .ans {
+        font-size: 16px !important;
+        line-height: 21px !important;
+        padding-bottom: 32px !important;
+    }
+
+    /* our collaborators */
+    .oc-row .elementor-container .elementor-row{
+        max-width: 730px;
+        margin: 0 auto;
+    }
+    .oc-coll .elementor-widget-text-editor,
+    .collaborators-bottom .content p{
+        font-size: 16px !important;
+        line-height: 21px !important;
+        margin-top: 12px;
+    }
+    .oc-row .oc-coll{
+        width:45% !important;
+        margin-bottom: 52px !important;
+    }
+    .oc-row .oc-coll-2,
+    .oc-row .oc-coll-5,
+    .oc-row .oc-coll-8{
+        width:45% !important;
+     }
+    .oc-row .oc-coll-3,
+    .oc-row .oc-coll-6,
+    .oc-row .oc-coll-9{
+        width:45% !important;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    /* header */
+    header .elementor-18 .elementor-element.elementor-element-23c176d>.elementor-element-populated img,
+    footer .elementor-widget-image .elementor-image img{
+        width: auto !important;
+        height: 52px !important;
+    }
+    /* footer */
+    .footer-top-sec section > .elementor-container > .elementor-row {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-top-sec .footer-top-innerSec > .elementor-container > .elementor-row > .elementor-column {
+        width: 33.33%;
+    }
+    .footer-top-sec .footer-top-innerSec > .elementor-container > .elementor-row > .elementor-column {
+        width: 200px;
+        overflow: hidden;
+        margin-bottom: 32px;
+    }
+    footer .elementor-social-icon{
+        margin-top: 12px !important;
+    }
+    footer .ft-bt-link{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 24px !important;
+    }
+    .footer-bottom-sec section .elementor-element-populated{
+        padding: 10px 0 !important;
+    }
+    footer .ft-bt-link li{
+        padding-bottom: 6px;
+    }
+    footer .ft-bt-link li:before{
+        display: none !important;
+    }
+
+    .box-container .roww .item-box .title-wrap h2{
+        font-size: 14px !important;
+        line-height: 18px !important;
+    }
+
+     /* membersship */
+     .essentials-innerSection .col-img .essentials-gallery figure:nth-child(2){
+        left: 0 !important;
+        top: 50px !important;
+        transform: none !important;
+     }
+     .essentials-innerSection .col-img .essentials-gallery figure:last-child{
+         margin: 140px 0 0 0 !important;
+     }
+     .essentials-innerSection .col-img .essentials-gallery figure:last-child img{
+         margin: 0 0 0 auto !important;
+     }
+    
+}
+
+
+@media screen and (max-width: 480px) {
+    .banner-top-left h2,
+    .how-top .middle-title h2,
+    .whats-box-left h2,
+    .brands-title h2,
+    .join-club-column h2,
+    .contact-sec .contact-column .contact-top .coll h2,
+    .collaborators-top-sec .collaborators-top-column h2,
+    .faq-sec .faq-column h2{
+        font-size: 27px !important;
+        line-height: 32px !important;
+    }
+    
+    /* footer */
+    .footer-top-sec section .elementor-row .elementor-column:first-child .elementor-image{
+        text-align: left;
+    }
+    .footer-top-sec .footer-top-innerSec > .elementor-container > .elementor-row > .elementor-column{
+        width: 100%;
+    }
+    .footer-top-sec .footer-top-innerSec > .elementor-container > .elementor-row > .elementor-column .elementor-element-populated{
+        padding: 0 !important;
+    }
+    footer .elementor-divider{
+        width: 100% !important;
+    }
+
+    /* homepage */
+    .box-gallery .gallery-item:first-child {
+        transform: translate(-18px, 30%) !important;
+    }
+    .box-gallery .gallery-item img {
+        max-width: 235px !important;
+    }
+    .box-gallery .gallery-item:nth-child(3) {
+        padding-left: 110px !important;
+    }
+
+    .how-top .elementor-row{
+        flex-direction: column;
+    }
+    .how-top .elementor-row .elementor-column{
+        order: 2;
+        width: 100%;
+    }
+    .how-top .elementor-row .elementor-column:nth-child(2) {
+        width: 100%;
+        order: 1;
+    }
+    .how-top .elementor-row .elementor-column .elementor-text-editor {
+        text-align: left;
+    }
+    .work-container p{
+        text-align:left;
+    }
+
+    .whats-box-sec section .elementor-row .elementor-column:first-child .elementor-element-populated{
+        padding: 0 !important;
+    }
+    .box-container .roww .item-box{
+        margin: 2px !important;
+    }
+    .box-container .roww .item-box .title-wrap h2{
+        font-size: 12px !important;
+        line-height: 15px !important;
+    }
+
+    /* membersship */
+    .thegiftbox-sec{
+        padding: 52px 0px 12px 0px !important;
+    }
+    .join-club-box .col-left img, .join-club-box .col-right img {
+        max-width: 64px !important;
+        height: auto !important;
+    }
+    .join-club-box .col-center{
+        margin: 20px 0 !important;
+    }
+    .essentials-innerSection .col-content{
+        width: 100% !important;
+    }
+    .essentials-innerSection .col-img{
+        width: 320px !important;
+    }
+    .indulgence-gallery figure:first-child{
+        max-width: 96px !important;
+        margin-right: 24px !important;
+    }
+    .indulgence-gallery figure:nth-child(2){
+        max-width: 200px !important;
+    }
+    .indulgence-gallery figure:nth-child(3){
+        max-width: 220px !important;
+    }
+    .indulgence-gallery figure:nth-child(4){
+        margin-top: 30px !important;
+        max-width: 210px !important;
+    }
+    .indulgence-gallery figure:last-child{
+        max-width: 86px !important;
+        margin-left: 24px !important;
+    }
+
+    /* contact */
+    .contact-sec .contact-column .contact-top {
+        padding: 0px 0px 32px 0px !important;
+    }
+    .contact-sec .contact-column .contact-bottom{
+        padding: 0px 0px 52px 0px !important;
+    }
+    .contact-bottom .coll .content:first-child,
+    .contact-bottom .coll .email:first-child{
+        margin-bottom: 20px !important;
+    }
+    .contact-bottom .coll .content:last-child{
+        margin-bottom: 0px !important;
+    }
+    
+    .contact-sec .contact-column .contact-bottom .coll:first-child{
+        margin-bottom: 24px;
+    }
+    .contact-bottom .coll h4 {
+        font-size: 18px !important;
+        line-height: 24px !important;
+    }
+
+    /* faq */
+    .elementor-865 .elementor-element.elementor-element-982b25f .elementor-accordion .elementor-accordion-title{
+        font-size: 21px !important;
+        line-height: 24px !important;
+    }
+    .faq-innerSection div .elementor-row .faq-right .elementor-accordion .elementor-tab-content .question {
+        font-size: 18px !important;
+        line-height: 22px !important;
+    }
+
+    /* our-collaborators */
+    .oc-row .oc-coll{
+        width:100% !important;
+        margin-bottom: 52px !important;
+    }
+    .oc-row .oc-coll-2,
+    .oc-row .oc-coll-5,
+    .oc-row .oc-coll-8{
+        width:100% !important;
+     }
+    .oc-row .oc-coll-3,
+    .oc-row .oc-coll-6,
+    .oc-row .oc-coll-9{
+        width:100% !important;
+    }
+}
+
+
+@media screen and (max-width: 360px) {
+    .btn-subscribe a{
+        font-size: 13px !important;
+        line-height: 16px !important;
+    }
+}
