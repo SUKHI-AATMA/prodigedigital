@@ -2170,6 +2170,7 @@ header .hamburger-menu {
 
 .annoucement-wrapper {
     background-color: #EC008C;
+    cursor: pointer;
 }
 
 .annoucement-wrapper p {

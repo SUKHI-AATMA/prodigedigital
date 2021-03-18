@@ -680,4 +680,8 @@ $(function() {
     });
 
     /* Watch Video display in overlay ends */
+
+    $(document).on("click", ".annoucement-wrapper", function(e) {
+        window.location.href = "./collection.html"
+    });
 });
