@@ -350,7 +350,8 @@ section.sec-approach-tab{
                         position: absolute;
                         top: 16px;
                         left: 0;
-                        background-color: rgb(137 201 168 / 50%);
+                        // background-color: rgb(137 201 168 / 50%);
+                        background-color: rgba(137,201,168,0.5);
                         width: 15px;
                         height: 15px;
                         border-radius: 9999px;

@@ -630,8 +630,20 @@ $(document).ready(function() {
 
     }
 
+    /* filter functionality for resources page starts */
+    if($(".filter-box").length) {
+        $(".filter-box ul > li").each(function() {
+            if($(this).children("ul").length) {
+                $(this).addClass("has-child");
+            }
+        });
 
-
+        $(document).on("click", ".filter-box ul > li > span", function() {
+            $(this).parent("li").toggleClass("display-children");
+            $(this).parent("li").children("ul").slideToggle();
+        })
+    }
+    /* filter functionality for resources page ends */
 });
 
 

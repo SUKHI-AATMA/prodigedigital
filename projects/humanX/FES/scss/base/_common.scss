@@ -654,7 +654,8 @@ button.mfp-close {
                 box-shadow: 0 7px 14px rgba(0, 73, 80, 0.1), 0 3px 6px rgba(0, 73, 80, 0.1);
                 border-radius: 8px;
                 .init{
-                    border-bottom: 1px solid rgb(0 0 0 / 10%);
+                    // border-bottom: 1px solid rgb(0 0 0 / 10%);
+                    border-bottom: 1px solid rgba(0,0,0,0.1);
                 }
                 a {
                     position: relative;

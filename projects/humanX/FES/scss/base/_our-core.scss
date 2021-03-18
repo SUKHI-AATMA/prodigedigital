@@ -219,7 +219,8 @@ section.sec-core-tab {
                         }
                         .tooltip p {
                             display: none;
-                            background: none repeat scroll 0 0 rgb(209 238 223 / 56%); 
+                            // background: none repeat scroll 0 0 rgb(209 238 223 / 56%);
+                            background: none repeat scroll 0 0 rgba(209,238,223,0.56);
                             color: #000;
                             font-style: italic;
                             font-size: 14px;
@@ -242,7 +243,8 @@ section.sec-core-tab {
                             transition: all 0.3s ease-in-out;
                         }
                         .tooltip p:after {
-                            border-color: rgb(209 238 223 / 56%) rgba(0,0,0,0);
+                            // border-color: rgb(209 238 223 / 56%) rgba(0,0,0,0);
+                            border-color: rgba(209,238,223,0.56) rgba(0,0,0,0);
                             border-style: solid;
                             border-width: 12px 12px 0;
                             bottom: -12px;
