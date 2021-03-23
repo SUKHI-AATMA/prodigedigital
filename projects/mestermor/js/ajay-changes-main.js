@@ -70,7 +70,6 @@ $(document).ready(function() {
             $('.screen1').hide();
             $('.formCommon').first().show();
             $('.button-group').show();
-            $('.form-style .button-group .previous').addClass('disable');
         });
         
         $('.button-group').hide();
@@ -78,7 +77,7 @@ $(document).ready(function() {
         $("form .formCommon").each(function(e) {
             if (e != 0){
                 $(this).hide();
-            }
+            }      
         });  
 
         // range slider
@@ -209,7 +208,6 @@ $(document).ready(function() {
         }
     });
 
-  
 
     $(".next").click(function(){
         var form = $("#formQuiz");
@@ -383,7 +381,6 @@ $(document).ready(function() {
 
         if (form.valid() === true){
             if ($('.form1').is(":visible")){
-                $('.form-style .button-group .previous').removeClass('disable');
                 current_fs = $('.form1');
                 next_fs = $('.form2');
             } else if($('.form2').is(":visible")){
@@ -410,8 +407,8 @@ $(document).ready(function() {
                 next_fs = $('.form9');
             }
             
-            next_fs.fadeIn("slow");
-            current_fs.fadeOut();
+            next_fs.show();
+            current_fs.hide();
         }
 
     });
@@ -419,7 +416,6 @@ $(document).ready(function() {
     
     $('.previous').click(function(){
         if($('.form2').is(":visible")){
-            $('.form-style .button-group .previous').addClass('disable');
             current_fs = $('.form2');
             next_fs = $('.form1');
         }else if ($('.form3').is(":visible")){
@@ -511,6 +507,10 @@ $(document).ready(function() {
         $("#getGift").click(function(){
             $('.gifting-start').hide();
             $('.gifting-type').first().show();
+        });
+        $("#redeemGift").click(function(){
+            $('.gifting-start').hide();
+            $('.screen2').show();
         });
     
         $(".giftNext").click(function(){
@@ -747,7 +747,6 @@ $(document).ready(function() {
             }
         });
     }
-    
 
 });
 
