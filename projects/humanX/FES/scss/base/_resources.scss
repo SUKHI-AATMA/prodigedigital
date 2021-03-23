@@ -297,6 +297,10 @@ section.sec-resources-filter{
                                     border-bottom: none;
                                 }
 
+                                &.hide-box {
+                                    display: none !important;
+                                }
+
                                 .img-box {
                                     margin-bottom: 20px;
                                 }
