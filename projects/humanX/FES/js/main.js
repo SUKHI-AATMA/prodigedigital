@@ -630,20 +630,8 @@ $(document).ready(function() {
 
     }
 
-    /* filter functionality for resources page starts */
-    if($(".filter-box").length) {
-        $(".filter-box ul > li").each(function() {
-            if($(this).children("ul").length) {
-                $(this).addClass("has-child");
-            }
-        });
 
-        $(document).on("click", ".filter-box ul > li > span", function() {
-            $(this).parent("li").toggleClass("display-children");
-            $(this).parent("li").children("ul").slideToggle();
-        })
-    }
-    /* filter functionality for resources page ends */
+
 });
 
 
@@ -677,10 +665,11 @@ $(window).load(function() {
 
     $(document).on("click", ".leaf", function() {
         var datalink = $(this).attr('data-link');
-        var tabUrl = window.location.href;
-        var tabHref = tabUrl.split("?").shift();
+        // var tabUrl = window.location.href;
+        // var tabHref = tabUrl.split("?").shift();
         //console.log(datalink, 'svg url', tabUrl, 'tabHref', tabHref);
-        window.location = tabHref + '?' + datalink;
+        //window.location = tabHref + '?' + datalink;
+        window.location = datalink + '.html';
     });
     
 
