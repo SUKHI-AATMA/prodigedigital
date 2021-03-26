@@ -638,6 +638,12 @@ $(document).ready(function() {
         //     }
         // });
 
+        $(document).on("click", ".filter-box .has-child > span" ,function() {
+            $(this).siblings("ul").slideToggle();
+        })
+
+    };
+
 
 });
 
