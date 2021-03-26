@@ -12,10 +12,15 @@
     <link rel="stylesheet" href="dist/css/animate.css">
 
     <title>Resources | Foundation for Ecological Security</title>
+    <style>
+    .page-resources footer {
+        position: relative;
+    }
+    </style>
 
 </head>
 
-<body>
+<body class="page-resources">
     <div class="overlay-body"></div>
 
     <header>
@@ -263,10 +268,10 @@
                     <div class="filter-wrapper">
                         <div class="filter-wrapper-container">
                             <div class="filter-col-1">
-                                <h3>Filter by</h3>
+                                <h3>Filter by <a href="javascript:;" class="cta-clear-filter">Clear all</a></h3>
                                 <div class="filter-box">
                                     <ul>
-                                        <li class="main-filter category-filter">
+                                        <li class="main-filter category-filter has-child display-children">
                                             <label>Category</label>
                                             <span></span>
                                             <ul>
@@ -397,22 +402,27 @@
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li>
-                                                    <input type="checkbox" name="category" id="category-8">
-                                                    <label for="category-8" data-value="annual-reports">Annual Reports<i></i></label>
-                                                    <span></span>
-                                                </li>
                                             </ul>
+                                        </li>
+                                        <li class="main-filter state-filter">
+                                            <label>State</label>
+                                            <span></span>
                                         </li>
                                         <li class="main-filter date-filter">
                                             <label>Date</label>
                                             <span></span>
-                                            
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="filter-col-2">
+                                <!-- filtered value wrapper starts -->
+                                <div class="filtered-value-wrapper">
+                                    <ul>
+
+                                    </ul>
+                                </div>
+                                <!-- filtered value wrapper ends -->
                                 <!-- grid starts -->
                                 <div class="display-grid">
                                     <!-- <div class="box">
@@ -486,17 +496,26 @@
                                     </div> -->
                                 </div>
                                 <!-- grid ends -->
+                                <div class="no-records-to-display-wrapper">
+                                    <p>No records to display</p>
+                                </div>
                                 <div class="pagination-wrapper">
                                     <div class="pagination-count-wrapper">
                                         Page <span class="start-page">1</span> of <span class="end-page">30</span>
                                     </div>
-                                    <div class="pagination-pages">
-                                        <!-- <div class="page active">1</div>
-                                        <div class="page">2</div>
-                                        <div class="page">3</div>
-                                        <div class="page">4</div>
-                                        <div class="page">5</div> -->
+                                    <div class="pagination-box">
+                                        <div class="pagination-pages">
+                                            <div class="owl-carousel">
+
+                                            </div>
+                                            <!-- <div class="page active">1</div>
+                                            <div class="page">2</div>
+                                            <div class="page">3</div>
+                                            <div class="page">4</div>
+                                            <div class="page">5</div> -->
+                                        </div>
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -600,6 +619,7 @@
         var finalarray = "";
         var maxNumberOfRecordsToBeDisplayed = 9;
         var date_filter = [];
+        var state_filter = [];
 
         /* uncheck all checkboxes on refresh of the page */
         $('.filter-box ').find("input").prop("checked", false);
@@ -614,10 +634,23 @@
                 $(jsonData).each(function(i) {
                     arr_category.push(jsonData[i].category);
                     date_filter.push(jsonData[i].year);
+                    state_filter.push(jsonData[i].location);
 
-
-                    var createBox = $("<div class='box' data-id=" + i + " data-parent='" + jsonData[i].category.toLowerCase().replace(/ /gi, "-") + "' data-filter='" + jsonData[i].datafilter + "' data-year='" + jsonData[i].year + "'></div>");
-                    var createImgBox = $("<div class='img-box'><img src='./images/resources/dummy-image.jpg' alt=''></div>");
+                    if(jsonData[i].datafilter.split(' ')[0] != "") {
+                        var createBox = $("<div class='box hide-box' data-id=" + i + " data-value='" + jsonData[i].datafilter.split(' ')[0] + "' data-parent='" + jsonData[i].category.toLowerCase().replace(/ /gi, "-") + "' data-filter='" + jsonData[i].datafilter + "' data-year='" + jsonData[i].year + "' data-location='" + jsonData[i].location + "'></div>");
+                    }
+                    else 
+                    {
+                        var createBox = $("<div class='box hide-box' data-id=" + i + " data-value='" + jsonData[i].category.toLowerCase().replace(/ /gi, "-") + "' data-parent='" + jsonData[i].category.toLowerCase().replace(/ /gi, "-") + "' data-filter='" + jsonData[i].datafilter + "' data-year='" + jsonData[i].year + "' data-location='" + jsonData[i].location + "'></div>");
+                    }
+                    
+                    if(jsonData[i].imgname == "") {
+                        var createImgBox = $("<div class='img-box'><img src='./images/resources/dummy-image.jpg' alt=''></div>");
+                    }
+                    else {
+                        var createImgBox = $("<div class='img-box'><img src='" + jsonData[i].foldername + jsonData[i].imgname + "' alt=''></div>");
+                    }
+                    
                     var createDescBox = $("<p class='description'>" + jsonData[i].content + "</p><p class='description'>" + jsonData[i].datafilter + "</p>");
                     var createLocationYearReadMoreBox = $("<div class='location-year-readmore-wrapper'></div>");
                     var createLocation = $("<ul class='location'></ul>");
@@ -631,7 +664,13 @@
                     var createYear = $("<ul class='year'><li>" + jsonData[i].year + "</li></ul>");
                     createLocationYearReadMoreBox.append(createYear);
 
-                    var createLink = $("<a href='" + jsonData[i].link + "' class='cta-read-more'>Read more<span></span></a>");
+                    if(jsonData[i].link.indexOf(".pdf") >= 0) {
+                        var createLink = $("<a href='" + jsonData[i].foldername + jsonData[i].link + "' class='cta-read-more' target='_blank'>Read more<span></span></a>");
+                    }
+                    else {
+                        var createLink = $("<a href='" + jsonData[i].foldername + jsonData[i].link + "' class='cta-read-more' data-rel='popup'>Read more<span></span></a>");
+                    }
+                    
                     createLocationYearReadMoreBox.append(createLink);
                     
                     createBox.append(createImgBox);
@@ -643,66 +682,397 @@
 
                     $(".display-grid").append(createBox);
                 }).promise().done(function() {
-                    //arr_category = [...new Set(arr_category)];
-                    //console.log(arr_category);
-
                     var filteredCategoryArr = [];
                     var filteredChildOfArr = [];
                     var filteredYearArr = [];
+                    var filteredStateArr = [];
                     var lastLevelChildrenLabelValue = "";
-                    //var filteredSubCategoryArr = [];
+
+                    setTimeout(function() {
+                        $(".filter-box ul li label[data-value='all']").click();
+                        $(".filter-box input[type=checkbox]").prop("checked", true);
+                    }, 100);
+                    
+                    
+                    /* check all the checkboxes in LHS filter starts */
+                    //$(".filter-box .category-filter li > label[data-value='all']").
+                    /* check all the checkboxes in LHS filter ends */
+
+                    $(document).on("click", ".filter-wrapper .cta-clear-filter", function() {
+                        $(".display-grid .box").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
+                        $(".pagination-pages").html('');
+                        $(".pagination-wrapper").hide();
+                        $(".no-records-to-display-wrapper").show();
+                        $(".filter-box ul li label").siblings("input[type=checkbox]").prop("checked", false);
+                    });
 
                     $(document).on("click", ".filter-box ul li label", function() {
-                        $(".display-grid .box").removeClass("hide-box");
-                        $(".display-grid .box").hide();
+                        //console.log($(".display-grid .box[data-page]").length);
+                        //$(".display-grid .box").removeClass("hide-box");
+                        
+
+                        if($(".filtered-value-wrapper > ul > li").length) {
+                            $(".display-grid .box").hide();
+                            $(".filtered-value-wrapper").show();
+                        }
+                        
                         $(".pagination-pages").html('');
                         
                         //console.log($(this).attr("data-value"));
 
+                        $(this).siblings("span").click();
+
                         if($(this).attr("data-value") == "all") {
                             if(!$(this).siblings("input[type='checkbox']").is(":checked")) {
+                                
                                 $(".display-grid .box").show();
+
+                                
+                                // for(var i=0; i<$(".filter-box .main-filter li").length; i++) {
+                                //     if($(".filter-box .main-filter li").eq(i).hasClass("has-child")) {
+                                //         for(var j=0; j<$(".filter-box .main-filter li").eq(i).children("ul").children("li").length; j++) {
+                                //             if($(".filter-box .main-filter li").eq(i).parents(".main-filter").hasClass("category-filter")) {
+                                //                 if(filteredCategoryArr.indexOf($(".filter-box .main-filter li").eq(i).children("ul").children("li").eq(j).children("label").attr("data-value")) == -1) {
+                                //                     filteredCategoryArr.push($(".filter-box .main-filter li").eq(i).children("ul").children("li").eq(j).children("label").attr("data-value"));
+                                //                 }
+                                //             }
+                                //             else if($(".filter-box .main-filter li").eq(i).parents(".main-filter").hasClass("state-filter")) {
+                                //                 if(filteredStateArr.indexOf($(".filter-box .main-filter li").eq(i).children("ul").children("li").eq(j).children("label").attr("data-value")) == -1) {
+                                //                     filteredStateArr.push($(".filter-box .main-filter li").eq(i).children("ul").children("li").eq(j).children("label").attr("data-value"));
+                                //                 }
+                                //             }
+                                //             else if($(".filter-box .main-filter li").eq(i).parents(".main-filter").hasClass("date-filter")) {
+                                //                 if(filteredYearArr.indexOf($(".filter-box .main-filter li").eq(i).children("ul").children("li").eq(j).children("label").attr("data-value")) == -1) {
+                                //                     filteredYearArr.push($(".filter-box .main-filter li").eq(i).children("ul").children("li").eq(j).children("label").attr("data-value"));
+                                //                 }
+                                //             }
+                                            
+                                //         }
+                                //     }
+                                //     else {
+                                //         if($(".filter-box .main-filter li").eq(i).text().trim() != "All") {
+                                //             if($(".filter-box .main-filter li").eq(i).parents(".main-filter").hasClass("category-filter")) {
+                                //                 if(filteredCategoryArr.indexOf($(".filter-box .main-filter li").eq(i).children("label").attr("data-value")) == -1) {
+                                //                     filteredCategoryArr.push($(".filter-box .main-filter li").eq(i).children("label").attr("data-value"));
+                                //                 }
+                                //             }
+                                //             else if($(".filter-box .main-filter li").eq(i).parents(".main-filter").hasClass("state-filter")) {
+                                //                 if(filteredStateArr.indexOf($(".filter-box .main-filter li").eq(i).children("label").attr("data-value")) == -1) {
+                                //                     filteredStateArr.push($(".filter-box .main-filter li").eq(i).children("label").attr("data-value"));
+                                //                 }
+                                //             }
+                                //             else if($(".filter-box .main-filter li").eq(i).parents(".main-filter").hasClass("date-filter")) {
+                                //                 if(filteredYearArr.indexOf($(".filter-box .main-filter li").eq(i).children("label").attr("data-value")) == -1) {
+                                //                     filteredYearArr.push($(".filter-box .main-filter li").eq(i).children("label").attr("data-value"));
+                                //                 }
+                                //             }
+                                            
+                                //         }
+                                        
+                                //     }
+                                // }
+
+                                // console.log(filteredCategoryArr);
+                                // console.log(filteredStateArr);
+                                // console.log(filteredYearArr);
+                                
+
+                                /* pagination formation starts */
+                                var initialCouter = 0;
+                                var maxCounter = 9;
+                                var pageNumber = 1;
+                                
+                                for(var i=0; i<$(".display-grid .box").length; i++) {
+                                    $(".display-grid .box").eq(i).attr("data-serialize", i);
+
+                                    if(i < maxCounter) {
+                                        $(".display-grid .box").eq(i).attr("data-page", pageNumber);
+
+                                        if(i == maxCounter-1) {
+                                            maxCounter = maxCounter + 9;
+                                            pageNumber += 1;
+                                        }
+                                    }
+                                }
+                                /* pagination formation ends */
                             }
                             else {
                                 $(".display-grid .box").hide();
                             }
                         }
                         else {
+                            if($(".filter-box").find("label[data-value='all']").parent("li").children("input[type=checkbox]").is(":checked")) {
+                                $(".filter-box").find("label[data-value='all']").parent("li").children("input[type=checkbox]").prop("checked", false);
+                            }
+
                             // when checkbox is checked
                             if(!$(this).siblings("input[type='checkbox']").is(":checked")) {
+                                /* adding of filter values above grid starts */
+                                if($(this).siblings("ul").length) {
+                                    // if($(".filtered-value-wrapper > ul").find("li[data-filter-value='" + $(this).attr("data-value") + "']").length <= 0) {
+                                    //     $(".filtered-value-wrapper > ul").append("<li data-filter-value=" + $(this).attr("data-value") + ">" + $(this).text() + "<span></span></li>");
+                                    // }
+                                    
+                                    $(this).siblings("ul").children("li").each(function() {
+                                        if($(".filtered-value-wrapper > ul").find("li[data-filter-value='" + $(this).children("label").attr("data-value") + "']").length <= 0) {
+                                            $(".filtered-value-wrapper > ul").append("<li data-filter-value=" + $(this).children("label").attr("data-value") + ">" + $(this).children("label").text() + "<span></span></li>");
+                                        }
+                                    }).promise().done(function() {
+                                        $(".filtered-value-wrapper").show();
+                                    });
+                                }
+                                else {
+                                    $(".filtered-value-wrapper > ul").append("<li data-filter-value=" + $(this).attr("data-value") + ">" + $(this).text() + "<span></span></li>");
+                                    $(".filtered-value-wrapper").show();
+                                }
+                                /* adding of filter values above grid ends */
+
+                                //$(".filtered-value-wrapper > ul").append("<li data-filter-value=" + $(this).attr("data-value") + ">" + $(this).attr("data-value") + "</li>");
                                 if(!$(this).attr("data-child-of")) {
-                                    //console.log($(this).parents(".main-filter").attr("class"));
                                     lastLevelChildrenLabelValue = $(this).attr("data-value");
+
+                                    /* when a category is selected func starts */
                                     if($(this).parents(".main-filter").hasClass("category-filter")) {
-                                        if(filteredCategoryArr.indexOf($(this).attr("data-value")) == -1) {
-                                            //console.log($(this).attr("data-value"));
-                                            filteredCategoryArr.push($(this).attr("data-value"));
+                                        if($(this).siblings("ul").length) {
+                                            for(var i=0; i<$(this).siblings("ul").children("li").length; i++) {
+                                                if(filteredCategoryArr.indexOf($(this).siblings("ul").children("li").eq(i).children("label").attr("data-value")) == -1) {
+                                                    filteredCategoryArr.push($(this).siblings("ul").children("li").eq(i).children("label").attr("data-value"));
+                                                }
+                                            }
+                                        }
+                                        else {
+                                            if(filteredCategoryArr.indexOf($(this).attr("data-value")) == -1) {
+                                                filteredCategoryArr.push($(this).attr("data-value"));
+                                            }
+                                        }
+                                        
+
+                                        //console.log(filteredCategoryArr);
+
+                                        if(filteredStateArr.length && filteredYearArr.length) {
+                                            $(".display-grid .box:visible").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
+                                            for(var j=0; j<filteredCategoryArr.length; j++) {
+                                                for(var k=0; k<filteredStateArr.length; k++) {
+                                                    for(var l=0; l<filteredYearArr.length; l++) {
+                                                        if(j==0) {
+                                                            $(".display-grid .box[data-location*='" + filteredStateArr[k] + "'][data-year='" + filteredYearArr[l] + "'][data-value='" + filteredCategoryArr[j] + "']").addClass("display-box filtered");
+                                                        }
+                                                        else {
+                                                            $(".display-grid .box[data-location*='" + filteredStateArr[k] + "'][data-year='" + filteredYearArr[l] + "'][data-value='" + filteredCategoryArr[j] + "']:not('.display-box')").addClass("display-box filtered");
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        else if(filteredStateArr.length) {
+                                            $(".display-grid .box:visible").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
+                                            for(var j=0; j<filteredCategoryArr.length; j++) {
+                                                for(var k=0; k<filteredStateArr.length; k++) {
+                                                    if(j==0) {
+                                                        $(".display-grid .box[data-location*='" + filteredStateArr[k] + "'][data-value='" + filteredCategoryArr[j] + "']").addClass("display-box filtered");
+                                                    }
+                                                    else {
+                                                        $(".display-grid .box[data-location*='" + filteredStateArr[k] + "'][data-value='" + filteredCategoryArr[j] + "']:not('.display-box')").addClass("display-box filtered");
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        else if(filteredYearArr.length) {
+                                            $(".display-grid .box:visible").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
+                                            for(var j=0; j<filteredCategoryArr.length; j++) {
+                                                for(var k=0; k<filteredYearArr.length; k++) {
+                                                    if(j==0) {
+                                                        $(".display-grid .box[data-year='" + filteredYearArr[k] + "'][data-value='" + filteredCategoryArr[j] + "']").addClass("display-box filtered");
+                                                    }
+                                                    else {
+                                                        $(".display-grid .box[data-year='" + filteredYearArr[k] + "'][data-value='" + filteredCategoryArr[j] + "']:not('.display-box')").addClass("display-box filtered");
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        else {
+                                            for(var j=0; j<filteredCategoryArr.length; j++) {
+                                                if(j==0) {
+                                                    $(".display-grid .box[data-value*='" + filteredCategoryArr[j] + "']").addClass("display-box filtered");
+                                                }
+                                                else {
+                                                    $(".display-grid .box[data-value*='" + filteredCategoryArr[j] + "']:not('.display-box')").addClass("display-box filtered");
+                                                }
+                                            }
                                         }
 
-                                        for(var j=0; j<filteredCategoryArr.length; j++) {
-                                            if(j==0) {
-                                                $(".display-grid .box[data-parent='" + filteredCategoryArr[j] + "']").addClass("display-box filtered");
-                                            }
-                                            else {
-                                                $(".display-grid .box[data-parent='" + filteredCategoryArr[j] + "']:not('.display-box')").addClass("display-box filtered");
-                                            }
-                                        }
+                                        // if(filteredYearArr.length) {
+                                        //     $(".display-grid .box:visible").removeClass("display-box filtered").removeAttr("data-serialize");
+                                        //     for(var j=0; j<filteredCategoryArr.length; j++) {
+                                        //         for(var k=0; k<filteredYearArr.length; k++) {
+                                        //             if(j==0) {
+                                        //                 $(".display-grid .box[data-parent='" + filteredCategoryArr[j] + "'][data-year='" + filteredYearArr[k] + "']").addClass("display-box filtered");
+                                        //             }
+                                        //             else {
+                                        //                 $(".display-grid .box[data-parent='" + filteredCategoryArr[j] + "'][data-year='" + filteredYearArr[k] + "']:not('.display-box')").addClass("display-box filtered");
+                                        //             }
+                                        //         }
+                                                
+                                        //     }
+                                        // }
+                                        // else {
+                                        //     for(var j=0; j<filteredCategoryArr.length; j++) {
+                                        //         console.log(filteredCategoryArr[j]);
+                                        //         if(j==0) {
+                                        //             $(".display-grid .box[data-value='" + filteredCategoryArr[j] + "']").addClass("display-box filtered");
+                                        //         }
+                                        //         else {
+                                        //             $(".display-grid .box[data-value='" + filteredCategoryArr[j] + "']:not('.display-box')").addClass("display-box filtered");
+                                        //         }
+                                        //     }
+                                        // }
                                     }
+                                    /* when a category is selected func ends */
                                     
+                                    /* when a date/year is selected func starts */
                                     if($(this).parents(".main-filter").hasClass("date-filter")) {
                                         if(filteredYearArr.indexOf($(this).attr("data-value")) == -1) {
                                             filteredYearArr.push($(this).attr("data-value"));
                                         }
 
-                                        for(var j=0; j<filteredYearArr.length; j++) {
-                                            if(j==0) {
-                                                $(".display-grid .box[data-year='" + filteredYearArr[j] + "']").addClass("display-box filtered");
+                                        if(filteredCategoryArr.length && filteredStateArr.length) {
+                                            $(".display-grid .box:visible").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
+                                            for(var j=0; j<filteredYearArr.length; j++) {
+                                                for(var k=0; k<filteredCategoryArr.length; k++) {
+                                                    for(var l=0; l<filteredStateArr.length; l++) {
+                                                        if(j==0) {
+                                                            $(".display-grid .box[data-location='" + filteredStateArr[l] + "'][data-year='" + filteredYearArr[k] + "'][data-value='" + filteredCategoryArr[k] + "']").addClass("display-box filtered");
+                                                        }
+                                                        else {
+                                                            $(".display-grid .box[data-location='" + filteredStateArr[l] + "'][data-year='" + filteredYearArr[k] + "'][data-value='" + filteredCategoryArr[k] + "']:not('.display-box')").addClass("display-box filtered");
+                                                        }
+                                                    }
+                                                }
                                             }
-                                            else {
-                                                $(".display-grid .box[data-year='" + filteredYearArr[j] + "']:not('.display-box')").addClass("display-box filtered");
+                                        }
+                                        else if(filteredCategoryArr.length) {
+                                            $(".display-grid .box:visible").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
+                                            for(var j=0; j<filteredYearArr.length; j++) {
+                                                for(var k=0; k<filteredCategoryArr.length; k++) {
+                                                    if(j==0) {
+                                                        $(".display-grid .box[data-year='" + filteredYearArr[j] + "'][data-value='" + filteredCategoryArr[k] + "']").addClass("display-box filtered");
+                                                    }
+                                                    else {
+                                                        $(".display-grid .box[data-year='" + filteredYearArr[j] + "'][data-value='" + filteredCategoryArr[k] + "']:not('.display-box')").addClass("display-box filtered");
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        else if(filteredStateArr.length) {
+                                            $(".display-grid .box:visible").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
+                                            for(var j=0; j<filteredYearArr.length; j++) {
+                                                for(var k=0; k<filteredStateArr.length; k++) {
+                                                    if(j==0) {
+                                                        $(".display-grid .box[data-year='" + filteredYearArr[j] + "'][data-location='" + filteredStateArr[k] + "']").addClass("display-box filtered");
+                                                    }
+                                                    else {
+                                                        $(".display-grid .box[data-year='" + filteredYearArr[j] + "'][data-location='" + filteredStateArr[k] + "']:not('.display-box')").addClass("display-box filtered");
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        else {
+                                            for(var j=0; j<filteredYearArr.length; j++) {
+                                                if(j==0) {
+                                                    $(".display-grid .box[data-location='" + filteredYearArr[j] + "']").addClass("display-box filtered");
+                                                }
+                                                else {
+                                                    $(".display-grid .box[data-location='" + filteredYearArr[j] + "']:not('.display-box')").addClass("display-box filtered");
+                                                }
+                                            }
+                                        }
+
+                                        // if(filteredCategoryArr.length) {
+                                        //     $(".display-grid .box:visible").removeClass("display-box filtered").removeAttr("data-serialize");
+                                        //     for(var j=0; j<filteredYearArr.length; j++) {
+                                        //         for(var k=0; k<filteredCategoryArr.length; k++) {
+                                        //             if(j==0) {
+                                        //                 $(".display-grid .box[data-year='" + filteredYearArr[j] + "'][data-value='" + filteredCategoryArr[k] + "']").addClass("display-box filtered");
+                                        //             }
+                                        //             else {
+                                        //                 $(".display-grid .box[data-year='" + filteredYearArr[j] + "'][data-value='" + filteredCategoryArr[k] + "']:not('.display-box')").addClass("display-box filtered");
+                                        //             }
+                                        //         }
+                                        //     }
+                                        // }
+                                        // else {
+                                        //     for(var j=0; j<filteredYearArr.length; j++) {
+                                        //         if(j==0) {
+                                        //             $(".display-grid .box[data-year='" + filteredYearArr[j] + "']").addClass("display-box filtered");
+                                        //         }
+                                        //         else {
+                                        //             $(".display-grid .box[data-year='" + filteredYearArr[j] + "']:not('.display-box')").addClass("display-box filtered");
+                                        //         }
+                                        //     }
+                                        // }
+                                    }
+                                    /* when a date/year is selected func ends */
+
+
+                                    /* when a location/state is selected func starts */
+                                    if($(this).parents(".main-filter").hasClass("state-filter")) {
+                                        if(filteredStateArr.indexOf($(this).attr("data-value")) == -1) {
+                                            filteredStateArr.push($(this).attr("data-value"));
+                                        }
+
+                                        if(filteredCategoryArr.length && filteredYearArr.length) {
+                                            $(".display-grid .box:visible").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
+                                            for(var j=0; j<filteredStateArr.length; j++) {
+                                                for(var k=0; k<filteredCategoryArr.length; k++) {
+                                                    for(var l=0; l<filteredYearArr.length; l++) {
+                                                        if(j==0) {
+                                                            $(".display-grid .box[data-location*='" + filteredStateArr[j] + "'][data-year='" + filteredYearArr[l] + "'][data-value='" + filteredCategoryArr[k] + "']").addClass("display-box filtered");
+                                                        }
+                                                        else {
+                                                            $(".display-grid .box[data-location*='" + filteredStateArr[j] + "'][data-year='" + filteredYearArr[l] + "'][data-value='" + filteredCategoryArr[k] + "']:not('.display-box')").addClass("display-box filtered");
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        else if(filteredCategoryArr.length) {
+                                            $(".display-grid .box:visible").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
+                                            for(var j=0; j<filteredStateArr.length; j++) {
+                                                for(var k=0; k<filteredCategoryArr.length; k++) {
+                                                    if(j==0) {
+                                                        $(".display-grid .box[data-location*='" + filteredStateArr[j] + "'][data-value='" + filteredCategoryArr[k] + "']").addClass("display-box filtered");
+                                                    }
+                                                    else {
+                                                        $(".display-grid .box[data-location*='" + filteredStateArr[j] + "'][data-value='" + filteredCategoryArr[k] + "']:not('.display-box')").addClass("display-box filtered");
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        else if(filteredYearArr.length) {
+                                            $(".display-grid .box:visible").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
+                                            for(var j=0; j<filteredStateArr.length; j++) {
+                                                for(var k=0; k<filteredYearArr.length; k++) {
+                                                    if(j==0) {
+                                                        $(".display-grid .box[data-year='" + filteredStateArr[j] + "'][data-value='" + filteredYearArr[k] + "']").addClass("display-box filtered");
+                                                    }
+                                                    else {
+                                                        $(".display-grid .box[data-year='" + filteredStateArr[j] + "'][data-value='" + filteredYearArr[k] + "']:not('.display-box')").addClass("display-box filtered");
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        else {
+                                            for(var j=0; j<filteredStateArr.length; j++) {
+                                                if(j==0) {
+                                                    $(".display-grid .box[data-location*='" + filteredStateArr[j] + "']").addClass("display-box filtered");
+                                                }
+                                                else {
+                                                    $(".display-grid .box[data-location*='" + filteredStateArr[j] + "']:not('.display-box')").addClass("display-box filtered");
+                                                }
                                             }
                                         }
                                     }
+                                    /* when a location/state is selected func ends */
                                     
 
                                     if($(this).parent("li").hasClass("has-child")) {
@@ -711,28 +1081,85 @@
                                 }
                                 else {
                                     lastLevelChildrenLabelValue = $(this).attr("data-value");
-                                    if(filteredChildOfArr.indexOf($(this).attr("data-child-of")) == -1) {
-                                        filteredChildOfArr.push($(this).attr("data-child-of"));
+                                    // if(filteredChildOfArr.indexOf($(this).attr("data-child-of")) == -1) {
+                                    //     filteredChildOfArr.push($(this).attr("data-child-of"));
+                                    // }
+
+                                    // for(var j=0; j<filteredChildOfArr.length; j++) {
+                                    //     //console.log(filteredChildOfArr[j]);
+                                    //     //console.log(lastLevelChildrenLabelValue);
+                                    //     if(j==0) {
+                                    //         $(".display-grid .box[data-parent='" + filteredChildOfArr[j] + "'][data-filter*='" + lastLevelChildrenLabelValue + "']").addClass("display-box filtered");
+                                    //     }
+                                    //     else {
+                                    //         $(".display-grid .box[data-parent='" + filteredChildOfArr[j] + "'][data-filter*='" + lastLevelChildrenLabelValue + "']:not('.display-box')").addClass("display-box filtered");
+                                    //     }
+                                    // }
+
+                                    if(filteredCategoryArr.indexOf($(this).attr("data-value")) == -1) {
+                                        filteredCategoryArr.push($(this).attr("data-value"));
                                     }
 
-                                    for(var j=0; j<filteredChildOfArr.length; j++) {
-                                        //console.log(filteredChildOfArr[j]);
-                                        //console.log(lastLevelChildrenLabelValue);
+                                    //console.log(filteredCategoryArr);
+
+                                    for(var j=0; j<filteredCategoryArr.length; j++) {
                                         if(j==0) {
-                                            $(".display-grid .box[data-parent='" + filteredChildOfArr[j] + "'][data-filter*='" + lastLevelChildrenLabelValue + "']").addClass("display-box filtered");
+                                            $(".display-grid .box[data-value='" + filteredCategoryArr[j] + "']").addClass("display-box filtered");
                                         }
                                         else {
-                                            $(".display-grid .box[data-parent='" + filteredChildOfArr[j] + "'][data-filter*='" + lastLevelChildrenLabelValue + "']:not('.display-box')").addClass("display-box filtered");
+                                            $(".display-grid .box[data-value='" + filteredCategoryArr[j] + "']:not('.display-box')").addClass("display-box filtered");
                                         }
                                     }
                                 }
+
+                                /* pagination formation starts */
+                                var initialCouter = 0;
+                                var maxCounter = 9;
+                                var pageNumber = 1;
+                                
+                                for(var i=0; i<$(".display-grid .box.display-box").length; i++) {
+                                    $(".display-grid .box.display-box").eq(i).attr("data-serialize", i);
+
+                                    if(i < maxCounter) {
+                                        $(".display-grid .box.display-box").eq(i).attr("data-page", pageNumber);
+
+                                        if(i == maxCounter-1) {
+                                            maxCounter = maxCounter + 9;
+                                            pageNumber += 1;
+                                        }
+                                    }
+                                }
+                                /* pagination formation ends */
 
                                 
                             }
                             // when checkbox is un-checked
                             else {
+                                /* removing of filter values above grid starts */
+                                if($(this).siblings("ul").length) {
+                                    //$(".filtered-value-wrapper > ul").find("li[data-filter-value='" + $(this).attr("data-value") + "']").remove();
+                                    $(this).siblings("ul").children("li").each(function() {
+                                        $(".filtered-value-wrapper > ul").find("li[data-filter-value='" + $(this).find("label").attr("data-value") + "']").remove();
+                                    }).promise().done(function() {
+                                        if($(".filtered-value-wrapper ul").length <= 0) {
+                                            $(".filtered-value-wrapper").hide();
+                                        }
+                                        
+                                    });
+                                }
+                                else {
+                                    $(".filtered-value-wrapper > ul").find("li[data-filter-value='" + $(this).attr("data-value") + "']").remove();
+                                    if($(".filtered-value-wrapper ul").length <= 0) {
+                                        $(".filtered-value-wrapper").hide();
+                                    }
+                                }
+                                /* removing of filter values above grid ends */
+                                
+                                
                                 if(!$(this).attr("data-child-of")) {
                                     lastLevelChildrenLabelValue = $(this).attr("data-value");
+
+
                                     if($(this).parents(".main-filter").hasClass("category-filter")) {
                                         if(filteredCategoryArr.indexOf($(this).attr("data-value")) >= 0) {
                                             var indexIn_filteredCategoryArr = filteredCategoryArr.indexOf($(this).attr("data-value"));
@@ -741,47 +1168,134 @@
 
                                         if($(this).parent("li").hasClass("has-child")) {
                                             $(this).parent("li").children("ul").find("input").prop("checked", false);
+
+                                            for(var i=0; i<$(this).parent("li").children("ul").children("li").length; i++) {
+                                                $(".display-grid .box[data-value='" + $(this).parent("li").children("ul").children("li").eq(i).children("label").attr("data-value") + "']").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
+                                            }
+                                        }
+                                        else {
+                                            $(".display-grid .box[data-value='" + $(this).attr("data-value") + "']").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
                                         }
 
-                                        $(".display-grid .box[data-parent*='" + $(this).attr("data-value") + "']").removeClass("display-box filtered").removeAttr("data-serialize");
+                                        //$(".display-grid .box[data-value='" + $(this).attr("data-value") + "']").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
                                     }
-
-                                    if($(this).parents(".main-filter").hasClass("date-filter")) {
+                                    else if($(this).parents(".main-filter").hasClass("date-filter")) {
                                         if(filteredYearArr.indexOf($(this).attr("data-value")) >= 0) {
                                             var indexIn_filteredYearArr = filteredYearArr.indexOf($(this).attr("data-value"));
                                             filteredYearArr.splice(indexIn_filteredYearArr, 1);
                                         }
 
-                                        $(".display-grid .box[data-year*='" + $(this).attr("data-value") + "']").removeClass("display-box filtered").removeAttr("data-serialize");
+                                        $(".display-grid .box[data-year='" + $(this).attr("data-value") + "']").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
+                                    }
+
+                                    else if($(this).parents(".main-filter").hasClass("state-filter")) {
+                                        if(filteredStateArr.indexOf($(this).attr("data-value")) >= 0) {
+                                            var indexIn_filteredStateArr = filteredStateArr.indexOf($(this).attr("data-value"));
+                                            filteredStateArr.splice(indexIn_filteredStateArr, 1);
+                                        }
+
+                                        $(".display-grid .box[data-location*='" + $(this).attr("data-value") + "']").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
                                     }
                                 }
                                 else {
+                                    /* removing of filter values above grid starts */
+                                    $(this).parents("li.has-child").children("input").prop("checked", false);
+                                    $(".filtered-value-wrapper > ul").find("li[data-filter-value='" + $(this).attr("data-child-of") + "']").remove();
+                                    if($(".filtered-value-wrapper ul").length <= 0) {
+                                        $(".filtered-value-wrapper").hide();
+                                    }
+                                    /* removing of filter values above grid ends */
+
                                     lastLevelChildrenLabelValue = $(this).attr("data-value");
-                                    if(filteredChildOfArr.indexOf($(this).attr("data-child-of")) >= 0) {
-                                        var indexIn_filteredChildOfArr = filteredChildOfArr.indexOf($(this).attr("data-child-of"));
-                                        filteredChildOfArr.splice(indexIn_filteredChildOfArr, 1);
+
+                                    console.log($(this).attr("data-value"));
+
+                                    if($(this).parents(".main-filter").hasClass("category-filter")) {
+                                        if(filteredCategoryArr.indexOf($(this).attr("data-value")) >= 0) {
+                                            var indexIn_filteredCategoryArr = filteredCategoryArr.indexOf($(this).attr("data-value"));
+                                            filteredCategoryArr.splice(indexIn_filteredCategoryArr, 1);
+                                        }
+
+                                        console.log(12);
+
+                                        if($(this).parent("li").hasClass("has-child")) {
+                                            $(this).parent("li").children("ul").find("input").prop("checked", false);
+                                        }
+
+                                        $(".display-grid .box[data-value='" + $(this).attr("data-value") + "']").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
+                                    }
+                                    else if($(this).parents(".main-filter").hasClass("date-filter")) {
+                                        if(filteredYearArr.indexOf($(this).attr("data-value")) >= 0) {
+                                            var indexIn_filteredYearArr = filteredYearArr.indexOf($(this).attr("data-value"));
+                                            filteredYearArr.splice(indexIn_filteredYearArr, 1);
+                                        }
+
+                                        $(".display-grid .box[data-year='" + $(this).attr("data-value") + "']").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
                                     }
 
-                                    $(".display-grid .box[data-parent*='" + $(this).attr("data-child-of") + "'][data-filter*='" + lastLevelChildrenLabelValue + "']").removeClass("display-box filtered").removeAttr("data-serialize");
+                                    else if($(this).parents(".main-filter").hasClass("state-filter")) {
+                                        if(filteredStateArr.indexOf($(this).attr("data-value")) >= 0) {
+                                            var indexIn_filteredStateArr = filteredStateArr.indexOf($(this).attr("data-value"));
+                                            filteredStateArr.splice(indexIn_filteredStateArr, 1);
+                                        }
+
+                                        $(".display-grid .box[data-location*='" + $(this).attr("data-value") + "']").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
+                                    }
+
+
+                                    // if(filteredChildOfArr.indexOf($(this).attr("data-child-of")) >= 0) {
+                                    //     var indexIn_filteredChildOfArr = filteredChildOfArr.indexOf($(this).attr("data-child-of"));
+                                    //     filteredChildOfArr.splice(indexIn_filteredChildOfArr, 1);
+                                    // }
+
+                                    // $(".display-grid .box[data-value='" + $(this).attr("data-value") + "']").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
                                 }
+
+                                if($(".filtered-value-wrapper li").length) {
+                                    $(".filtered-value-wrapper li").each(function(i) {
+                                        $(".display-grid .box[data-filter*='" + $(this).attr('data-filter-value') + "']").addClass("display-box filtered");
+                                    }).promise().done(function() {
+                                        $(".filtered-value-wrapper").show();
+                                    });
+                                }
+                                else {
+                                    $(".pagination-wrapper").hide();
+                                    $(".no-records-to-display-wrapper").show();
+                                }
+
                                 //$(".display-grid .box.display-box").removeAttr("data-serialize");
                                 // console.log($(this).attr("data-value") + "||||" + lastLevelChildrenLabelValue);
                                 // $(".display-grid .box[data-parent*='" + $(this).attr("data-value") + "'][data-filter*='" + lastLevelChildrenLabelValue + "']").removeClass("display-box filtered");
+
+                                
                                 
                             }
 
-                            //console.log($(".display-grid .box.display-box").length);
                             
+                            /* pagination formation starts */
                             var initialCouter = 0;
                             var maxCounter = 9;
                             var pageNumber = 1;
                             
                             
-                            for(var i=0; i<$(".display-grid .box.display-box").length; i++) {
-                                $(".display-grid .box.display-box").eq(i).attr("data-serialize", i);
+                            // for(var i=0; i<$(".display-grid .box.display-box").length; i++) {
+                            //     $(".display-grid .box.display-box").eq(i).attr("data-serialize", i);
+
+                            //     if(i < maxCounter) {
+                            //         $(".display-grid .box.display-box").eq(i).attr("data-page", pageNumber);
+
+                            //         if(i == maxCounter-1) {
+                            //             maxCounter = maxCounter + 9;
+                            //             pageNumber += 1;
+                            //         }
+                            //     }
+                            // }
+
+                            for(var i=0; i<$(".display-grid .box[data-page]").length; i++) {
+                                $(".display-grid .box[data-page]").eq(i).attr("data-serialize", i);
 
                                 if(i < maxCounter) {
-                                    $(".display-grid .box.display-box").eq(i).attr("data-page", pageNumber);
+                                    $(".display-grid .box[data-page]").eq(i).attr("data-page", pageNumber);
 
                                     if(i == maxCounter-1) {
                                         maxCounter = maxCounter + 9;
@@ -789,6 +1303,8 @@
                                     }
                                 }
                             }
+
+                            
 
                             // for (var i=initialCouter; i<maxCounter; i++) {
                             //     if($(".display-grid .box.display-box").eq(i).length) {
@@ -802,58 +1318,116 @@
                             //     }
                             // }
 
-                            
-
-                            
-
+                            /* pagination formation ends */
                         }
 
-                        
-
                         /* pagination functionality starts */
-                        
+                        $(".display-grid .box[data-page]").removeClass("hide-box");
                         var initialRecord = 0;
                         var getVisibleRecordsLen = $(".display-grid .box:visible").length;
+
+                        if($(".pagination-pages").find(".owl-carousel").length <= 0) {
+                            $(".pagination-pages").append("<div class='owl-carousel'></div>");
+                        }
                         
                         if(getVisibleRecordsLen > maxNumberOfRecordsToBeDisplayed) {
                             for(var i=1; i<=Math.ceil(getVisibleRecordsLen/maxNumberOfRecordsToBeDisplayed); i++) {
-                                $(".pagination-pages").append("<div class='page'>" + i + "</div>");
+                                $(".pagination-pages").find(".owl-carousel").append("<div class='page'>" + i + "</div>");
                             }
 
+                            $(".pagination-pages").find(".owl-carousel .page:first-child").click();
+
+                            if ($(".pagination-pages").find(".owl-carousel > div").length > 5) {
+                                $(".pagination-box").show();
+                                var owlPaginationResource = $(".pagination-pages").find(".owl-carousel");
+                                owlPaginationResource.owlCarousel({
+                                    autoWidth: true,
+                                    // margin: 60,
+                                    loop: false,
+                                    nav: true,
+                                    dots: false,
+                                    smartSpeed: 500,
+                                    slideTransition: 'linear',
+                                    mouseDrag: false,
+                                    autoplay: false,
+                                    lazyLoad: true,
+                                    responsive: {
+                                        0: {
+                                            items: 5
+                                        }
+                                    },
+                                });
+                            }
+                            else {
+                                $(".pagination-box").hide();
+                            }
+
+                            $(".pagination-wrapper").show();
+                            $(".no-records-to-display-wrapper").hide();
                             //$(".pagination-pages > .page:first-child").addClass("active");
-                            $(".pagination-pages > .page:first-child").click();
+                            
+                            
                             
                         }
                         /* pagination functionality ends */
-                        // <div class="page">5</div>
-
+                        
+                        //console.log($(".display-grid .box[data-page]").length);
                         
                     });
 
+                    $(".filter-box .category-filter > ul li").each(function() {
+                        if($(this).children("ul").length) {
+                            $(this).addClass("has-child");
+                        }
+                    });
+
                     date_filter = [...new Set(date_filter)];
-                    //console.log(date_filter);
                     date_filter = date_filter.sort();
-                    //console.log(date_filter);
                     $(".filter-box .date-filter").append("<ul></ul>");
+                    
                     $(date_filter).each(function(i) {
                         $(".filter-box .date-filter ul").append("<li><input type='checkbox' name='year' id='date-filter-" + i + "'><label for='date-filter-" + i + "' data-value='" + date_filter[i] + "'>" + date_filter[i] + "<i></i></label><span></span></li>");
+                    }).promise().done(function() {
+                        if($(".filter-box .date-filter ul").length) {
+                            $(".filter-box .date-filter").addClass("has-child");
+                        }
                     });
 
-                    // <ul>
-                    //     <li>
-                    //         <input type="checkbox" name="category" id="category-1">
-                    //         <label for="category-1" data-value="all">All<i></i></label>
-                    //         <span></span>
-                    //     </li>
-                    // </ul>
+                    state_filter = [...new Set(state_filter)];
+                    state_filter = state_filter.sort();
+                    $(".filter-box .state-filter").append("<ul></ul>");
+                    
+                    $(state_filter).each(function(i) {
+                        $(".filter-box .state-filter ul").append("<li><input type='checkbox' name='year' id='state-filter-" + i + "'><label for='state-filter-" + i + "' data-value='" + state_filter[i] + "'>" + state_filter[i] + "<i></i></label><span></span></li>");
+                    }).promise().done(function() {
+                        if($(".filter-box .state-filter ul").length) {
+                            $(".filter-box .state-filter").addClass("has-child");
+                        }
+                    });
 
-
-                    $(document).on("click", ".pagination-pages > .page:not(.active)", function() {
+                    /* get data when a page number is clicked starts */
+                    $(document).on("click", ".pagination-pages .page:not(.active)", function() {
                         //console.log($(this).text());
-                        $(this).addClass("active").siblings().removeClass("active");
+                        //$(this).addClass("active").siblings().removeClass("active");
+                        $(this).parents(".pagination-pages").find(".page.active").removeClass("active");
+                        $(this).addClass("active");
                         $(".display-grid .box[data-page]").addClass("hide-box");
                         $(".display-grid .box[data-page=" + $(this).text() + "]").removeClass("hide-box");
+                        $(".pagination-count-wrapper .start-page").text($(this).text());
+                        $(".pagination-count-wrapper .end-page").text($(".pagination-pages .page").length);
                     });
+                    /* get data when a page number is clicked ends */
+
+
+                    /* filtered value above grid func starts */
+                    $(document).on("click", ".filtered-value-wrapper li", function() {
+                        $(".filter-box").find("label[data-value='" + $(this).attr('data-filter-value') + "']").click();
+                        $(this).remove();
+                        if($(".filtered-value-wrapper ul").length <= 0) {
+                            $(".filtered-value-wrapper").hide();
+                        }
+                    });
+                    /* filtered value above grid func ends */
                 });
             });
             

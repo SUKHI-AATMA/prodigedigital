@@ -72,6 +72,13 @@ section.sec-resources-filter{
                             text-transform: uppercase;
                             color: rgba(0, 0, 0, 0.8);
                             padding-bottom: 30px;
+                            display: flex;
+                            justify-content: space-between;
+                            
+                            .cta-clear-filter {
+                                text-transform: none;
+                                color: #004950;
+                            }
                         }
 
                         .filter-box {
@@ -115,12 +122,12 @@ section.sec-resources-filter{
                                                 content: '';
                                                 position: absolute;
                                                 right: 6px;
-                                                top: 6px;
+                                                top: 3px;
                                                 width: 10px;
                                                 height: 10px;
                                                 border-top: 2px solid #696969;
                                                 border-right: 2px solid #696969;
-                                                transform: rotate(-45deg);
+                                                transform: rotate(135deg);
                                                 transition: 0.5s all ease;
                                                 display: none;
                                             }
@@ -141,8 +148,8 @@ section.sec-resources-filter{
                                         & > label {
                                             & ~ span {
                                                 &:before {
-                                                    top: 3px;
-                                                    transform: rotate(135deg);
+                                                    top: 8px;
+                                                    transform: rotate(-45deg);
                                                 }
                                                 
                                             }
@@ -156,6 +163,12 @@ section.sec-resources-filter{
                                     //         }
                                     //     }
                                     // }
+
+                                    &:not(:first-child) {
+                                        ul {
+                                            display: none;
+                                        }
+                                    }
 
                                     ul {
                                         padding-top: 20px;
@@ -177,8 +190,8 @@ section.sec-resources-filter{
                                                 & > label {
                                                     & ~ span {
                                                         &:before {
-                                                            top: 3px;
-                                                            transform: rotate(135deg);
+                                                            top: 8px;
+                                                            transform: rotate(-45deg);
                                                         }
                                                     }
                                                 }
@@ -192,6 +205,7 @@ section.sec-resources-filter{
                                                 text-transform: none;
                                                 cursor: pointer;
                                                 position: relative;
+                                                word-wrap: break-word;
 
                                                 & > i {
                                                     position: absolute;
@@ -221,7 +235,7 @@ section.sec-resources-filter{
                                                         width: 8px;
                                                         height: 8px;
                                                         top: 8px;
-                                                        transform: rotate(-45deg);
+                                                        transform: rotate(135deg);
                                                     }
                                                 }
                                             }
@@ -252,7 +266,7 @@ section.sec-resources-filter{
                                                 padding-left: 20px;
                                                 padding-bottom: 7px;
                                                 padding-top: 13px;
-                                                // display: none;
+                                                display: none;
                                             }
 
                                             &.has-child {
@@ -276,6 +290,58 @@ section.sec-resources-filter{
                         overflow: hidden;
                         padding-left: 30px;
                         padding-top: 49px;
+
+                        .filtered-value-wrapper {
+                            margin-bottom: 30px;
+                            display: none;
+                            
+                            ul {
+                                display: flex;
+                                flex-wrap: wrap;
+
+                                li {
+                                    border: 1px solid #004950;
+                                    border-radius: 20px;
+                                    font-size: 12px;
+                                    letter-spacing: 0.1px;
+                                    color: #004950;
+                                    padding: 3px 25px 3px 10px;
+                                    position: relative;
+                                    margin-right: 8px;
+                                    margin-bottom: 8px;
+                                    text-transform: capitalize;
+                                    cursor: pointer;
+
+                                    & > span {
+                                        position: absolute;
+                                        right: 2px;
+                                        top: 50%;
+                                        width: 10px;
+                                        height: 10px;
+                                        transform: translateY(-50%);
+
+                                        &:before,
+                                        &:after {
+                                            content: '';
+                                            position: absolute;
+                                            width: 1px;
+                                            height: 100%;
+                                            background-color: #004950;
+                                            top: 0;
+                                            left: 0;
+                                        }
+
+                                        &:before {
+                                            transform: rotate(135deg);
+                                        }
+
+                                        &:after {
+                                            transform: rotate(45deg);
+                                        }
+                                    }
+                                }
+                            }
+                        }
             
                         .display-grid {
                             display: grid;
@@ -418,6 +484,16 @@ section.sec-resources-filter{
                             }
                         }
 
+                        .no-records-to-display-wrapper {
+                            display: none;
+
+                            & > p {
+                                color: #757575;
+                                font-style: italic;
+                                font-size: 25px;
+                            }
+                        }
+
                         .pagination-wrapper {
                             display: flex;
                             justify-content: space-between;
@@ -430,30 +506,92 @@ section.sec-resources-filter{
                                 letter-spacing: 0.1px;
                                 color: #757575;
                             }
-                            
-                            .pagination-pages {
-                                display: flex;
+
+                            .pagination-box {
+                                width: 165px;
+                                margin-right: 35px;
                                 border: 1px solid #E5EAEE;
+                                border-right-color: transparent;
                                 border-radius: 3px;
 
-                                & > div {
-                                    padding: 5px 12px;
-                                    font-size: 12px;
-                                    line-height: 16px;
-                                    color: #757575;
-                                    cursor: pointer;
-
-                                    &:not(:last-child) {
+                                .pagination-pages {
+                                    // display: flex;
+                                    // border: 1px solid #E5EAEE;
+                                    // border-right-color: transparent;
+                                    // border-radius: 3px;
+    
+                                    .page {
+                                        padding: 5px 12px;
+                                        font-size: 12px;
+                                        line-height: 16px;
+                                        color: #757575;
+                                        cursor: pointer;
+                                        float: left;
                                         border-right: 1px solid #E5EAEE;
+    
+                                        &.active {
+                                            color: #000000;
+                                            background-color: #D1EEDF;
+                                        }
+                                        
                                     }
 
-                                    &.active {
-                                        color: #000000;
-                                        background-color: #D1EEDF;
+                                    .owl-nav {
+                                        position: absolute;
+                                        width: 128%;
+                                        top: 0;
+                                        transform: translateX(-13%);
+
+                                        & > button {
+                                            position: absolute;
+                                            top: 0;
+                                            width: 26px;
+                                            height: 26px;
+                                            // border: 1px solid #E5EAEE;
+
+                                            &:before {
+                                                content: '';
+                                                position: absolute;
+                                                top: 30%;
+                                                left: 0;
+                                                width: 15px;
+                                                height: 15px;
+                                                border-top: 1px solid #004950;
+                                                border-right: 1px solid #004950;
+                                            }
+                                            
+                                            &:first-child {
+                                                &:before {
+                                                    transform: rotate(-135deg);
+                                                }
+                                                
+                                                // border: 1px solid #E5EAEE;
+                                                // border-right-color: transparent;
+                                            }
+
+                                            &:last-child {
+                                                right: -15px;
+                                                
+                                                &:before {
+                                                    right: 0;
+                                                    transform: rotate(45deg);
+                                                }
+                                                
+                                                // border: 1px solid #E5EAEE;
+                                                // border-left-color: transparent;
+                                            }
+
+                                            & > span {
+                                                color: #004950;
+                                                font-size: 35px;
+                                                display: none;
+                                            }
+                                        }
                                     }
-                                    
                                 }
                             }
+                            
+                            
                         }
                     }
                 }
