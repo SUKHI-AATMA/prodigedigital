@@ -265,9 +265,11 @@
             <div class="container">
                 <div class="wrapper">
                     <h2>Resources</h2>
+
                     <div class="filter-wrapper">
                         <div class="filter-wrapper-container">
                             <div class="filter-col-1">
+                                <div class="close-filter"><span></span></div>
                                 <h3>Filter by <a href="javascript:;" class="cta-clear-filter">Clear all</a></h3>
                                 <div class="filter-box">
                                     <ul>
@@ -420,9 +422,24 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="main-filter state-filter">
+                                        <li class="main-filter state-filter has-child">
                                             <label>State</label>
                                             <span></span>
+                                            <ul>
+                                                <li><input type="checkbox" name="year" id="state-filter-1"><label for="state-filter-1" data-value="Andhra Pradesh">Andhra Pradesh<i></i></label><span></span></li>
+                                                <li><input type="checkbox" name="year" id="state-filter-2"><label for="state-filter-2" data-value="Bihar">Bihar<i></i></label><span></span></li>
+                                                <li><input type="checkbox" name="year" id="state-filter-3"><label for="state-filter-3" data-value="Chhattisgarh">Chhattisgarh<i></i></label><span></span></li>
+                                                <li><input type="checkbox" name="year" id="state-filter-4"><label for="state-filter-4" data-value="Gujarat">Gujarat<i></i></label><span></span></li>
+                                                <li><input type="checkbox" name="year" id="state-filter-5"><label for="state-filter-5" data-value="Jharkhand">Jharkhand<i></i></label><span></span></li>
+                                                <li><input type="checkbox" name="year" id="state-filter-6"><label for="state-filter-6" data-value="Karnataka">Karnataka<i></i></label><span></span></li>
+                                                <li><input type="checkbox" name="year" id="state-filter-7"><label for="state-filter70" data-value="Kerala">Kerala<i></i></label><span></span></li>
+                                                <li><input type="checkbox" name="year" id="state-filter-8"><label for="state-filter-8" data-value="Madhya Pradesh">Madhya Pradesh<i></i></label><span></span></li>
+                                                <li><input type="checkbox" name="year" id="state-filter-9"><label for="state-filter-9" data-value="Maharashtra">Maharashtra<i></i></label><span></span></li>
+                                                <li><input type="checkbox" name="year" id="state-filter-10"><label for="state-filter-10" data-value="North-East">North-East<i></i></label><span></span></li>
+                                                <li><input type="checkbox" name="year" id="state-filter-11"><label for="state-filter-11" data-value="Odisha">Odisha<i></i></label><span></span></li>
+                                                <li><input type="checkbox" name="year" id="state-filter-12"><label for="state-filter-12" data-value="Rajasthan">Rajasthan<i></i></label><span></span></li>
+                                                <li><input type="checkbox" name="year" id="state-filter-13"><label for="state-filter-13" data-value="Uttarakhand">Uttarakhand<i></i></label><span></span></li>
+                                             </ul>
                                         </li>
                                         <li class="main-filter date-filter">
                                             <label>Date</label>
@@ -619,6 +636,14 @@
         </div>
     </footer>
 
+    <div class="popup-wrapper">
+        <span class="close-popup"></span>
+        <div class="fixed-overlay"></div>
+        <div class="video-wrapper">
+            
+        </div>
+    </div>
+
 </body>
 
 <script src="dist/js/jquery-3.5.1.min.js"></script>
@@ -667,9 +692,15 @@
                         var createImgBox = $("<div class='img-box'><img src='" + jsonData[i].foldername + jsonData[i].imgname + "' alt=''></div>");
                     }
                     
-                    var createDescBox = $("<p class='description'>" + jsonData[i].content + "</p><p class='description'>" + jsonData[i].datafilter + "</p>");
+                    var createDetailBox = $("<div class='detail-box'></div>");
+                    //var createDescBox = $("<p class='description'>" + jsonData[i].content + "</p><p class='description'>" + jsonData[i].datafilter + "</p>");
+                    var createDescBox = $("<p class='description'>" + jsonData[i].content + "</p>");
                     var createLocationYearReadMoreBox = $("<div class='location-year-readmore-wrapper'></div>");
                     var createLocation = $("<ul class='location'></ul>");
+
+                    createDetailBox.append(createDescBox);
+                    createDetailBox.append(createLocationYearReadMoreBox);
+                    createDetailBox.append(createLocation);
 
                     var splitLocation = jsonData[i].location.split(",");
                     for(var j=0; j<splitLocation.length; j++) {
@@ -684,7 +715,7 @@
                         var createLink = $("<a href='" + jsonData[i].foldername + jsonData[i].link + "' class='cta-read-more' target='_blank'>Read more<span></span></a>");
                     }
                     else {
-                        var createLink = $("<a href='" + jsonData[i].foldername + jsonData[i].link + "' class='cta-read-more' data-rel='popup'>Read more<span></span></a>");
+                        var createLink = $("<a href='javascript:;' data-video-link='" + jsonData[i].link + "' class='cta-read-more' data-rel='popup'>Read more<span></span></a>");
                     }
                     
                     createLocationYearReadMoreBox.append(createLink);
@@ -708,6 +739,19 @@
                         $(".filter-box ul li label[data-value='all']").click();
                         $(".filter-box input[type=checkbox]").prop("checked", true);
                     }, 100);
+
+                    $(document).on("click", ".box .cta-read-more", function() {
+                        if($(this).attr("data-video-link")) {
+                            $(".popup-wrapper .video-wrapper").html('');
+                            $(".popup-wrapper .video-wrapper").html("<iframe width='560' height='315' src='https://www.youtube.com/embed/" + $(this).attr("data-video-link").split('/').pop() + "' title='YouTube video player' frameborder='0' allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
+
+                            $("body").addClass("display-popup");
+                        };
+                    });
+
+                    $(document).on("click", ".popup-wrapper .close-popup", function() {
+                        $("body").removeClass("display-popup");
+                    });
                     
                     
                     /* check all the checkboxes in LHS filter starts */
@@ -814,7 +858,10 @@
                                 /* pagination formation ends */
                             }
                             else {
-                                $(".display-grid .box").hide();
+                                $(".filter-wrapper .cta-clear-filter").click();
+                                setTimeout(function() {
+                                    $(".category-filter label[data-value='all']").parent().children("input").prop("checked", false);
+                                }, 100);
                             }
                         }
                         else {
@@ -846,7 +893,8 @@
                                     });
                                 }
                                 else {
-                                    $(".filtered-value-wrapper > ul").append("<li data-filter-value=" + $(this).attr("data-value") + ">" + $(this).text() + "<span></span></li>");
+                                    //console.log($(this).attr("data-value"));
+                                    $(".filtered-value-wrapper > ul").append("<li data-filter-value='" + $(this).attr('data-value') + "'>" + $(this).text() + "<span></span></li>");
                                     $(".filtered-value-wrapper").show();
                                 }
                                 /* adding of filter values above grid ends */
@@ -872,6 +920,7 @@
                                         
 
                                         //console.log(filteredCategoryArr);
+                                        //console.log(filteredStateArr);
 
                                         if(filteredStateArr.length && filteredYearArr.length) {
                                             $(".display-grid .box:visible").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
@@ -965,10 +1014,10 @@
                                                 for(var k=0; k<filteredCategoryArr.length; k++) {
                                                     for(var l=0; l<filteredStateArr.length; l++) {
                                                         if(j==0) {
-                                                            $(".display-grid .box[data-location='" + filteredStateArr[l] + "'][data-year='" + filteredYearArr[k] + "'][data-value='" + filteredCategoryArr[k] + "']").addClass("display-box filtered");
+                                                            $(".display-grid .box[data-location*='" + filteredStateArr[l] + "'][data-year='" + filteredYearArr[k] + "'][data-value='" + filteredCategoryArr[k] + "']").addClass("display-box filtered");
                                                         }
                                                         else {
-                                                            $(".display-grid .box[data-location='" + filteredStateArr[l] + "'][data-year='" + filteredYearArr[k] + "'][data-value='" + filteredCategoryArr[k] + "']:not('.display-box')").addClass("display-box filtered");
+                                                            $(".display-grid .box[data-location*='" + filteredStateArr[l] + "'][data-year='" + filteredYearArr[k] + "'][data-value='" + filteredCategoryArr[k] + "']:not('.display-box')").addClass("display-box filtered");
                                                         }
                                                     }
                                                 }
@@ -992,10 +1041,10 @@
                                             for(var j=0; j<filteredYearArr.length; j++) {
                                                 for(var k=0; k<filteredStateArr.length; k++) {
                                                     if(j==0) {
-                                                        $(".display-grid .box[data-year='" + filteredYearArr[j] + "'][data-location='" + filteredStateArr[k] + "']").addClass("display-box filtered");
+                                                        $(".display-grid .box[data-year='" + filteredYearArr[j] + "'][data-location*='" + filteredStateArr[k] + "']").addClass("display-box filtered");
                                                     }
                                                     else {
-                                                        $(".display-grid .box[data-year='" + filteredYearArr[j] + "'][data-location='" + filteredStateArr[k] + "']:not('.display-box')").addClass("display-box filtered");
+                                                        $(".display-grid .box[data-year='" + filteredYearArr[j] + "'][data-location*='" + filteredStateArr[k] + "']:not('.display-box')").addClass("display-box filtered");
                                                     }
                                                 }
                                             }
@@ -1003,10 +1052,10 @@
                                         else {
                                             for(var j=0; j<filteredYearArr.length; j++) {
                                                 if(j==0) {
-                                                    $(".display-grid .box[data-location='" + filteredYearArr[j] + "']").addClass("display-box filtered");
+                                                    $(".display-grid .box[data-location*='" + filteredYearArr[j] + "']").addClass("display-box filtered");
                                                 }
                                                 else {
-                                                    $(".display-grid .box[data-location='" + filteredYearArr[j] + "']:not('.display-box')").addClass("display-box filtered");
+                                                    $(".display-grid .box[data-location*='" + filteredYearArr[j] + "']:not('.display-box')").addClass("display-box filtered");
                                                 }
                                             }
                                         }
@@ -1040,9 +1089,32 @@
 
                                     /* when a location/state is selected func starts */
                                     if($(this).parents(".main-filter").hasClass("state-filter")) {
-                                        if(filteredStateArr.indexOf($(this).attr("data-value")) == -1) {
+                                        // if(filteredStateArr.indexOf($(this).attr("data-value")) == -1) {
+                                        //     filteredStateArr.push($(this).attr("data-value"));
+                                        // }
+                                        
+                                        // if(($(this).attr("data-value")).indexOf(filteredStateArr) == -1) {
+                                        //     filteredStateArr.push($(this).attr("data-value"));
+                                        // }
+
+                                        //console.log(filteredStateArr);
+                                        
+                                        if(filteredStateArr.length > 0) {
+                                            for(var i=0; i<filteredStateArr.length; i++) {
+                                                if($(this).attr("data-value").indexOf(filteredStateArr[i]) == -1 ) {
+                                                    filteredStateArr.push($(this).attr("data-value"));
+                                                }
+                                                else {
+                                                    
+                                                }
+                                            }
+                                        }
+                                        else {
                                             filteredStateArr.push($(this).attr("data-value"));
                                         }
+                                        
+
+                                        //console.log(filteredStateArr);
 
                                         if(filteredCategoryArr.length && filteredYearArr.length) {
                                             $(".display-grid .box:visible").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
@@ -1200,6 +1272,88 @@
                                         else {
                                             $(".display-grid .box[data-value='" + $(this).attr("data-value") + "']").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
                                         }
+
+                                        if(filteredCategoryArr.length) {
+                                            if(filteredStateArr.length && filteredYearArr.length) {
+                                                $(".display-grid .box:visible").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
+                                                for(var j=0; j<filteredCategoryArr.length; j++) {
+                                                    for(var k=0; k<filteredStateArr.length; k++) {
+                                                        for(var l=0; l<filteredYearArr.length; l++) {
+                                                            if(j==0) {
+                                                                $(".display-grid .box[data-location*='" + filteredStateArr[k] + "'][data-year='" + filteredYearArr[l] + "'][data-value='" + filteredCategoryArr[j] + "']").addClass("display-box filtered").removeClass("hide-box");
+                                                            }
+                                                            else {
+                                                                $(".display-grid .box[data-location*='" + filteredStateArr[k] + "'][data-year='" + filteredYearArr[l] + "'][data-value='" + filteredCategoryArr[j] + "']:not('.display-box')").addClass("display-box filtered").removeClass("hide-box");
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            else if(filteredStateArr.length) {
+                                                $(".display-grid .box:visible").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
+                                                for(var j=0; j<filteredCategoryArr.length; j++) {
+                                                    for(var k=0; k<filteredStateArr.length; k++) {
+                                                        if(j==0) {
+                                                            $(".display-grid .box[data-location*='" + filteredStateArr[k] + "'][data-value='" + filteredCategoryArr[j] + "']").addClass("display-box filtered").removeClass("hide-box");
+                                                        }
+                                                        else {
+                                                            $(".display-grid .box[data-location*='" + filteredStateArr[k] + "'][data-value='" + filteredCategoryArr[j] + "']:not('.display-box')").addClass("display-box filtered").removeClass("hide-box");
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            else if(filteredYearArr.length) {
+                                                $(".display-grid .box:visible").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
+                                                for(var j=0; j<filteredCategoryArr.length; j++) {
+                                                    for(var k=0; k<filteredYearArr.length; k++) {
+                                                        if(j==0) {
+                                                            $(".display-grid .box[data-year='" + filteredYearArr[k] + "'][data-value='" + filteredCategoryArr[j] + "']").addClass("display-box filtered").removeClass("hide-box");
+                                                        }
+                                                        else {
+                                                            $(".display-grid .box[data-year='" + filteredYearArr[k] + "'][data-value='" + filteredCategoryArr[j] + "']:not('.display-box')").addClass("display-box filtered").removeClass("hide-box");
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        else {
+                                            if(filteredStateArr.length && filteredYearArr.length) {
+                                                $(".display-grid .box:visible").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
+                                                for(var k=0; k<filteredStateArr.length; k++) {
+                                                    for(var l=0; l<filteredYearArr.length; l++) {
+                                                        if(k==0) {
+                                                            $(".display-grid .box[data-location*='" + filteredStateArr[k] + "'][data-year='" + filteredYearArr[l] + "']").addClass("display-box filtered").removeClass("hide-box");
+                                                        }
+                                                        else {
+                                                            $(".display-grid .box[data-location*='" + filteredStateArr[k] + "'][data-year='" + filteredYearArr[l] + "']:not('.display-box')").addClass("display-box filtered").removeClass("hide-box");
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            else if(filteredStateArr.length) {
+                                                $(".display-grid .box:visible").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
+                                                for(var k=0; k<filteredStateArr.length; k++) {
+                                                    if(k==0) {
+                                                        $(".display-grid .box[data-location*='" + filteredStateArr[k] + "']").addClass("display-box filtered").removeClass("hide-box");
+                                                    }
+                                                    else {
+                                                        $(".display-grid .box[data-location*='" + filteredStateArr[k] + "']:not('.display-box')").addClass("display-box filtered").removeClass("hide-box");
+                                                    }
+                                                }
+                                            }
+                                            else if(filteredYearArr.length) {
+                                                $(".display-grid .box:visible").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
+                                                for(var k=0; k<filteredYearArr.length; k++) {
+                                                    if(k==0) {
+                                                        $(".display-grid .box[data-year='" + filteredYearArr[k] + "']").addClass("display-box filtered").removeClass("hide-box");
+                                                    }
+                                                    else {
+                                                        $(".display-grid .box[data-year='" + filteredYearArr[k] + "']:not('.display-box')").addClass("display-box filtered").removeClass("hide-box");
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        
 
                                         //$(".display-grid .box[data-value='" + $(this).attr("data-value") + "']").removeClass("display-box filtered").removeAttr("data-serialize").removeAttr("data-page").addClass("hide-box");
                                     }
@@ -1424,17 +1578,17 @@
                         }
                     });
 
-                    state_filter = [...new Set(state_filter)];
-                    state_filter = state_filter.sort();
-                    $(".filter-box .state-filter").append("<ul></ul>");
+                    // state_filter = [...new Set(state_filter)];
+                    // state_filter = state_filter.sort();
+                    // $(".filter-box .state-filter").append("<ul></ul>");
                     
-                    $(state_filter).each(function(i) {
-                        $(".filter-box .state-filter ul").append("<li><input type='checkbox' name='year' id='state-filter-" + i + "'><label for='state-filter-" + i + "' data-value='" + state_filter[i] + "'>" + state_filter[i] + "<i></i></label><span></span></li>");
-                    }).promise().done(function() {
-                        if($(".filter-box .state-filter ul").length) {
-                            $(".filter-box .state-filter").addClass("has-child");
-                        }
-                    });
+                    // $(state_filter).each(function(i) {
+                    //     $(".filter-box .state-filter ul").append("<li><input type='checkbox' name='year' id='state-filter-" + i + "'><label for='state-filter-" + i + "' data-value='" + state_filter[i] + "'>" + state_filter[i] + "<i></i></label><span></span></li>");
+                    // }).promise().done(function() {
+                    //     if($(".filter-box .state-filter ul").length) {
+                    //         $(".filter-box .state-filter").addClass("has-child");
+                    //     }
+                    // });
 
                     /* get data when a page number is clicked starts */
                     $(document).on("click", ".pagination-pages .page:not(.active)", function() {
