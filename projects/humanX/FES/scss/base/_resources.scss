@@ -117,6 +117,7 @@ section.sec-resources-filter{
                                             width: 15%;
                                             height: 20px;
                                             position: relative;
+                                            // border: 1px solid red;
                                             
                                             &:before {
                                                 content: '';
@@ -148,7 +149,6 @@ section.sec-resources-filter{
                                         & > label {
                                             & ~ span {
                                                 &:before {
-                                                    top: 8px;
                                                     transform: rotate(-45deg);
                                                 }
                                                 
@@ -190,7 +190,6 @@ section.sec-resources-filter{
                                                 & > label {
                                                     & ~ span {
                                                         &:before {
-                                                            top: 8px;
                                                             transform: rotate(-45deg);
                                                         }
                                                     }
@@ -234,7 +233,6 @@ section.sec-resources-filter{
                                                     &:before {
                                                         width: 8px;
                                                         height: 8px;
-                                                        top: 8px;
                                                         transform: rotate(135deg);
                                                     }
                                                 }
