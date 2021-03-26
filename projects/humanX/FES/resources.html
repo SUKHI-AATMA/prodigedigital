@@ -402,6 +402,22 @@
                                                         </li>
                                                     </ul>
                                                 </li>
+                                                <li>
+                                                    <input type="checkbox" name="category" id="category-8">
+                                                    <label for="category-8" data-value="movies-&-videos">Movies & Videos<i></i></label>
+                                                    <span></span>
+                                                </li>
+                                                <li>
+                                                    <input type="checkbox" name="category" id="category-9">
+                                                    <label for="category-9" data-value="legal-resources">Legal Resources<i></i></label>
+                                                    <span></span>
+                                                    <ul>
+                                                        <li>
+                                                            <input type="checkbox" name="category" id="category-9_1">
+                                                            <label for="category-9_1" data-child-of="legal-resources" data-value="legal-reviews">Legal Reviews<i></i></label>
+                                                        </li>
+                                                    </ul>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li class="main-filter state-filter">
@@ -727,6 +743,7 @@
                                 
                                 $(".display-grid .box").show();
 
+
                                 
                                 // for(var i=0; i<$(".filter-box .main-filter li").length; i++) {
                                 //     if($(".filter-box .main-filter li").eq(i).hasClass("has-child")) {
@@ -807,6 +824,13 @@
 
                             // when checkbox is checked
                             if(!$(this).siblings("input[type='checkbox']").is(":checked")) {
+                                $(".no-records-to-display-wrapper").hide();
+
+                                if($(".pagination-pages").find(".owl-carousel > div").length) {
+                                    $(".pagination-wrapper").show();
+                                }
+                                
+
                                 /* adding of filter values above grid starts */
                                 if($(this).siblings("ul").length) {
                                     // if($(".filtered-value-wrapper > ul").find("li[data-filter-value='" + $(this).attr("data-value") + "']").length <= 0) {
@@ -1256,7 +1280,11 @@
                                         $(".display-grid .box[data-filter*='" + $(this).attr('data-filter-value') + "']").addClass("display-box filtered");
                                     }).promise().done(function() {
                                         $(".filtered-value-wrapper").show();
+                                        $(".pagination-wrapper").show();
+                                        $(".no-records-to-display-wrapper").hide();
                                     });
+
+                                    
                                 }
                                 else {
                                     $(".pagination-wrapper").hide();
@@ -1336,9 +1364,12 @@
                             }
 
                             $(".pagination-pages").find(".owl-carousel .page:first-child").click();
+                            
+                            $(".pagination-box").show();
+                            $(".pagination-box .owl-carousel").show();
 
                             if ($(".pagination-pages").find(".owl-carousel > div").length > 5) {
-                                $(".pagination-box").show();
+                                $(".pagination-box").removeClass("width-auto");
                                 var owlPaginationResource = $(".pagination-pages").find(".owl-carousel");
                                 owlPaginationResource.owlCarousel({
                                     autoWidth: true,
@@ -1359,7 +1390,7 @@
                                 });
                             }
                             else {
-                                $(".pagination-box").hide();
+                                $(".pagination-box").addClass("width-auto");
                             }
 
                             $(".pagination-wrapper").show();

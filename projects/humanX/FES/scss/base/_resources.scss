@@ -512,6 +512,10 @@ section.sec-resources-filter{
                                 border-right-color: transparent;
                                 border-radius: 3px;
 
+                                &.width-auto {
+                                    width: auto;
+                                }
+
                                 .pagination-pages {
                                     // display: flex;
                                     // border: 1px solid #E5EAEE;
