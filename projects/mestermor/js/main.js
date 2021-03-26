@@ -1,3 +1,7 @@
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    pwgc_bind_redeem_form_custom();    
+});
 $(document).ready(function() {
 
     //====== quiz page - start
@@ -18,7 +22,47 @@ $(document).ready(function() {
     //       $(this).addClass('active')
     //      } 
     // });
+	
+	$('.essentail-box .ess-1 label').click(function () {
+        $('label').removeClass('active');
+        $(".ess-2 input").prop("checked", false);
+        $(".ess-1 input").prop("checked", true);
+        if ($('.ess-1 input').is(':checked')) {
+            $(this).addClass('active');
+            var pid1 = $('.ess-1 input[name=box]').val();
+            var rid1 = $('.ess-2 input[name=box]').val();
+            var cardselect = '.ess-cart-' + pid1 + ' .ajax_add_to_cart';
+            $(cardselect).click();
+            $.ajax({
+                type: "POST",
+                url: '/wp-admin/admin-ajax.php',
+                data: {action: 'remove_item_from_cart', 'product_id': rid1},
+                success: function (res) {
+                }
+            });
+        }
+    });
 
+    $('.essentail-box .ess-2 label').click(function () {
+        $('label').removeClass('active');
+        $(".ess-2 input").prop("checked", true);
+        $(".ess-1 input").prop("checked", false);
+        if ($('.ess-2 input').is(':checked')) {
+            $(this).addClass('active');
+            var pid2 = $('.ess-2 input[name=box]').val();
+            var rid2 = $('.ess-1 input[name=box]').val();
+
+            var cardselect2 = '.ess-cart-' + pid2 + ' .ajax_add_to_cart';
+            $(cardselect2).click();
+            $.ajax({
+                type: "POST",
+                url: '/wp-admin/admin-ajax.php',
+                data: {action: 'remove_item_from_cart', 'product_id': rid2},
+                success: function (res) {
+                }
+            });
+        }
+    });
 
     if ($('#formQuiz').length) {
         // onclick of start
@@ -26,6 +70,7 @@ $(document).ready(function() {
             $('.screen1').hide();
             $('.formCommon').first().show();
             $('.button-group').show();
+            $('.form-style .button-group .previous').addClass('disable');
         });
         
         $('.button-group').hide();
@@ -33,7 +78,7 @@ $(document).ready(function() {
         $("form .formCommon").each(function(e) {
             if (e != 0){
                 $(this).hide();
-            }      
+            }
         });  
 
         // range slider
@@ -55,6 +100,42 @@ $(document).ready(function() {
         dateFormat: 'dd-mm-yy',
         beforeShow: function (input, inst) {
             setTimeout(function() {
+                inst.dpDiv.find('a.ui-state-highlight').removeClass('ui-state-highlight');
+            }, 100);
+        }
+    });
+	
+	$(".skip-from-date-picker").datepicker({
+        changeMonth: true,
+        changeYear: true,
+        showButtonPanel: true,
+        dateFormat: 'MM yy',
+        onClose: function (dateText, inst) {
+            $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
+        }
+    });
+
+    $(".skip-to-date-picker").datepicker({
+        changeMonth: true,
+        changeYear: true,
+        showButtonPanel: true,
+        dateFormat: 'MM yy',
+        onClose: function (dateText, inst) {
+            $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
+        }
+
+    });
+
+    $(".subscription-date-picker").click(function () {
+        $(".ui-datepicker-calendar").css("display", "block");
+    });
+
+    $(".subscription-date-picker").datepicker({
+        changeMonth: true,
+        changeYear: true,
+        dateFormat: 'dd-mm-yy',
+        beforeShow: function (input, inst) {
+            setTimeout(function () {
                 inst.dpDiv.find('a.ui-state-highlight').removeClass('ui-state-highlight');
             }, 100);
         }
@@ -128,6 +209,7 @@ $(document).ready(function() {
         }
     });
 
+  
 
     $(".next").click(function(){
         var form = $("#formQuiz");
@@ -301,6 +383,7 @@ $(document).ready(function() {
 
         if (form.valid() === true){
             if ($('.form1').is(":visible")){
+                $('.form-style .button-group .previous').removeClass('disable');
                 current_fs = $('.form1');
                 next_fs = $('.form2');
             } else if($('.form2').is(":visible")){
@@ -327,8 +410,8 @@ $(document).ready(function() {
                 next_fs = $('.form9');
             }
             
-            next_fs.show();
-            current_fs.hide();
+            next_fs.fadeIn("slow");
+            current_fs.fadeOut();
         }
 
     });
@@ -336,6 +419,7 @@ $(document).ready(function() {
     
     $('.previous').click(function(){
         if($('.form2').is(":visible")){
+            $('.form-style .button-group .previous').addClass('disable');
             current_fs = $('.form2');
             next_fs = $('.form1');
         }else if ($('.form3').is(":visible")){
@@ -365,7 +449,23 @@ $(document).ready(function() {
         next_fs.show();
         current_fs.hide();
     });
+	
+	// Remove header on Quiz page
+    if (window.location.href.indexOf("/quiz/") > -1) {
+        $('#masthead').css('display', 'none');
 
+    }
+    if (window.location.href.indexOf("/user/") > -1) {
+        $('#masthead').css('display', 'none');
+
+    }
+    $(".essential-gift").click(function () {
+      location.href = "/product/essential-card/";
+    });
+    
+     $(".indulgence-gift").click(function () {
+      location.href = "/product/indulgence-card/";
+    });
 
     // redeem page
     if ($('#formGiftRedeem').length) {        
@@ -412,13 +512,12 @@ $(document).ready(function() {
             $('.gifting-start').hide();
             $('.gifting-type').first().show();
         });
-        $("#redeemGift").click(function(){
-            $('.gifting-start').hide();
-            $('.screen2').show();
-        });
     
         $(".giftNext").click(function(){
             var form = $("#formGifting");
+        if ($('.gifttype-container .right .group-radio label.active').length) {
+            location.href = "/checkout";
+            }
             form.validate({
                 errorElement: 'span',
                 errorClass: 'error-msg',
@@ -609,6 +708,8 @@ $(document).ready(function() {
                 alert('form submit');
             }
         });
+		
+	
 
         // login form
         $("#formLogin").validate({
@@ -648,10 +749,62 @@ $(document).ready(function() {
     }
     
 
-    
-
-
-
-
 });
 
+jQuery(document).ready(function ($) {
+    $('.wordpress-ajax-form').on('submit', function (e) {
+        e.preventDefault();
+        jQuery('.ajax-loader.quiz').css("visibility", "visible");
+        var $form = $(this);
+        $.post($form.attr('action'), $form.serialize(), function (data) {
+            jQuery('.ajax-loader.quiz').css("visibility", "hidden");
+            $(location).attr('href', '/checkout');
+        }, 'json');
+    });
+});
+
+
+function pwgc_bind_redeem_form_custom() {
+    jQuery('#formGiftRedeem').off('submit').on('submit', function(e) {
+        var redeemButton = jQuery('#pwgc-redeem-button-custom');
+
+        pwgc_redeem_gift_card_custom(redeemButton);
+
+        e.preventDefault();
+        return false;
+    });
+
+}
+
+function pwgc_redeem_gift_card_custom(redeemButton) {
+    var cardNumber = jQuery('#pwgc-redeem-gift-card-number-custom');
+    var errorContainer = jQuery('#pwgc-redeem-error-custom');
+
+    errorContainer.text('');
+    redeemButton.attr('data-apply-text', redeemButton.attr('value')).attr('value', redeemButton.attr('data-wait-text')).prop('disabled', true);
+
+    jQuery.post('/wp-admin/admin-ajax.php', {'action': 'custom_redeem_gift', 'card_number': cardNumber.val()}, function( result ) {
+        if (result.success) {
+            jQuery( document.body ).trigger( 'wc_update_cart' );
+			redeemButton.attr('value', redeemButton.attr('data-apply-text')).prop('disabled', false);
+			 errorContainer.text("Redeem code Applied successfully");
+			  setTimeout(function () {
+                    window.location.href = '/homepage/';
+                }, 2000)
+
+
+        } else {
+            errorContainer.text(result.data.message);
+            redeemButton.attr('value', redeemButton.attr('data-apply-text')).prop('disabled', false);
+            cardNumber.focus();
+        }
+    }).fail(function(xhr, textStatus, errorThrown) {
+        if (errorThrown) {
+            errorContainer.text(errorThrown);
+        } else {
+            errorContainer.text('Unknown Error');
+        }
+        redeemButton.attr('value', redeemButton.attr('data-apply-text')).prop('disabled', false);
+        cardNumber.focus();
+    });
+}

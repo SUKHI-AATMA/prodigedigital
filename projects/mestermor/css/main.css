@@ -47,7 +47,7 @@ main {
 .form-style {
     position: relative;
     margin-top: 32px;
-    margin-bottom: 132px;
+    margin-bottom: 32px;
 }
 .form-style ::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
@@ -182,6 +182,9 @@ main {
 }
 .form-style .button-group .previous {
     left: 0;
+}
+.form-style .button-group .previous.disable{
+    display: none;
 }
 .form-style .button-group .next {
     right: 0;
@@ -1345,8 +1348,9 @@ main {
     padding-bottom: 38px;
 }
 .redeem-form form .form-group .form-field input{
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 18px !important;
+    line-height: 27px !important;
+    padding: 0 0 6px 0 !important;
 }
 .gift-redeem-container {
     max-width: 954px;
@@ -1663,8 +1667,6 @@ main {
     position: relative;
 } 
 
-
-
 .gifting-type.screen4 .right .details-block .coll .form-btn{
     text-align: left;
     /* margin-top: 72px; */
@@ -1825,6 +1827,12 @@ main {
     color: #FFFFFF;
     margin-top: 50px;
 }
+.form-style.signing-container .wrapper .col form ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+}
 .form-style.signing-container .wrapper .col form .form-group{
     display: flex;
 }
@@ -1851,6 +1859,78 @@ main {
     text-align: center;
     width: 187px;
 }
+/* re-css only for login page */
+.form-style .wppb-user-forms p,
+.form-style #wppb-register-user li{
+    width: 187px;
+    display: inline-block;
+}
+.form-style .wppb-user-forms p:nth-child(odd),
+.form-style #wppb-register-user li:nth-child(odd){
+    margin-right: 24px;
+}
+.form-style #wppb-register-user ul{
+    display: block;
+}
+.form-style .wppb-user-forms form p input,
+.form-style.signing-container .wrapper .col form input{
+    font-size: 24px !important;
+    line-height: 36px !important;
+    padding-bottom: 4px !important;
+    margin-bottom: 20px !important;
+}
+.form-style .wppb-user-forms form p input[type=submit],
+.form-style.signing-container .wrapper .col form input[type=submit]{
+    font-size: 15px !important;
+    line-height: 18px !important;
+    padding: 15px 0 !important;
+    text-align: center !important;
+    width: 187px !important;
+}
+.form-style.signing-container .wrapper .col form .login-remember,
+.form-style.signing-container .wrapper .col form .login-submit{
+    margin-top: 32px !important;
+}
+.login-remember  > label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form-style.signing-container .wrapper .col form .login-remember input{
+    font-size: 18px !important;
+    line-height: 18px !important;
+    width: 32px !important;
+    height: 32px !important;
+    margin-right: 10px;
+    margin-bottom: 0 !important;
+    border: 1px solid #fff !important;
+    cursor: pointer;
+    outline: none;
+}
+
+.login-remember  > label input:checked {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #000 !important;
+    position: relative;
+}
+
+.login-remember  > label input:checked::after {
+    content: "\2713";
+    position: absolute;
+    color: white;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 5px;
+}
+
 
 
 @media screen and (max-width: 1366px) {
@@ -1876,12 +1956,20 @@ main {
     .gifting-start{
         padding: 52px 0 200px;
     }
+    .redeem-form form .form-group{
+        padding-bottom: 72px;
+    }
+    .signing-container .wrapper .col{
+        padding: 72px 82px 48px 82px;
+    }
 }
 
 
 @media screen and (max-width: 1199px) {
     .form-style .content h2,
-    .title-block h2{
+    .title-block h2,
+    .signing-container .wrapper .col .content h2,
+    .signing-container .wrapper .col .content h2{
         font-size: 44px;
         line-height: 56px;
     }
@@ -1970,6 +2058,11 @@ main {
         font-size: 24px;
         line-height: 30px;
     }
+
+    /* login page */
+    .signing-container .wrapper .col {
+        padding: 52px 32px 48px 32px;
+    }
       
 
 }
@@ -1989,7 +2082,8 @@ main {
         right: -60px;
     }
     .form-style .content h2,
-    .title-block h2{
+    .title-block h2,
+    .signing-container .wrapper .col .content h2{
         font-size: 32px;
         line-height: 44px;
     }
@@ -2012,17 +2106,24 @@ main {
         font-size: 18px;
         line-height: 24px;
     }
-    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box {
+    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box,
+    .gift-redeem-container .gift-redeem .img-box{
         width: calc(100% / 3);
     }
-    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box:nth-child(2) {
+    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box:nth-child(2),
+    .gift-redeem-container .gift-redeem .img-box:nth-child(2){
         margin: 0 16px;
     }
-    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box img{
+    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box img,
+    .gift-redeem-container .gift-redeem .img-box img{
         width: 100%;
     }
-    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box.logo {
+    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box.logo,
+    .gift-redeem-container .gift-redeem .img-box.logo{
         max-width: 200px;
+    }
+    form .gift-redeem-container .gift-redeem .img-box.logo{
+        max-width: 160px;
     }
     .form-style .form3 .form-group{
         max-width: 400px;
@@ -2190,7 +2291,7 @@ main {
         padding: 16px 0 !important;
     }
     .gifting-type .right label .text h3{
-
+        margin-bottom: 24px;
     }
     .gifting-type.screen4 .right .details-block .coll p{
         font-size: 20px;
@@ -2201,9 +2302,53 @@ main {
         font-size: 16px !important;
         line-height: 24px !important;
     }
+    .gifting-type.screen4 .right .details-block .coll a{
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    
+
     .form-style .btnSubmit{
-        font-size: 15px;
-        line-height: 20px;
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+
+     /* login page */
+     .signing-container .wrapper{
+         flex-direction: column;
+     }
+     .signing-container .wrapper .col{
+         width: auto;
+     }
+     .signing-container .wrapper .col {
+        padding: 52px 32px;
+    }
+    .form-style.signing-container .wrapper .col form input{
+        padding: 0 0 6px 0 !important;
+        font-size: 20px !important;
+        line-height: 20px !important;
+    }
+    .form-style.signing-container .wrapper .col form .form-btn,
+    .form-style.signing-container .wrapper .col:last-child form .form-btn{
+        margin-top: 24px;
+    }
+    .signing-container .wrapper .col .content p{
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    /* re-css only for login page */
+    .form-style .wppb-user-forms form p input,
+    .form-style.signing-container .wrapper .col form input{
+        padding: 0 0 6px 0 !important;
+        font-size: 20px !important;
+        line-height: 20px !important;
+    }
+    .form-style.signing-container .wrapper .col #wppb-register-user ul,
+    .form-style .wppb-user-forms #wppb-loginform{
+        max-width: 440px;
     }
 
 }
@@ -2227,8 +2372,15 @@ main {
         top: auto;
         bottom: 0;
     }
-    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box.logo {
+    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box.logo,
+    .gift-redeem-container .gift-redeem .img-box.logo{
         max-width: 120px;
+    }
+    form .gift-redeem-container .gift-redeem .img-box.logo {
+        max-width: 100px;
+    }
+    .redeem-form form .form-group {
+        padding-bottom: 52px;
     }
     .group-radio .form-field label{
         padding: 8px 0;
@@ -2307,15 +2459,18 @@ main {
         flex-direction: column;
     }
     .gifting-type .right .form-field:first-child,
-    .gifting-type .right .form-field:last-child{
-        width: 100%;
+    .gifting-type .right .form-field:last-child,
+    .gifting-type.screen3 .right .form-field:first-child,
+    .gifting-type.screen3 .right .form-field:last-child{
+        width: 100% !important;
         margin-bottom: 20px;
     }
     .gifting-type .right label{
         display: flex;
         justify-content: space-between;
     }
-    .gifting-type .right label img {
+    .gifting-type .right label img,
+    .gifting-type.screen3 .right label img{
         padding: 0 12px;
         height: 160px;
     }
@@ -2330,18 +2485,42 @@ main {
         font-size: 24px;
         line-height: 28px;
         text-align: left;
+        margin-bottom: 16px;
     }
     .gifting-type .right label .text p{
         text-align: left;
+        font-size: 14px;
+        line-height: 19px;
     }
-
+    .gifting-type.screen4 .right .details-block{
+        flex-direction: column;
+        position: relative;
+    }
+    .gifting-type.screen4 .right .details-block .coll{
+        max-width: 100%;
+        margin-bottom: 32px;
+    }
+    .gifting-type.screen4 .right .details-block .coll:last-child{
+        max-width: 100%;
+        margin-bottom: 72px;
+    }
+    .gifting-type.screen4 .right .details-block .coll .form-field textarea{
+        width: 100%;
+    }
+    .gifting-type.screen4 .right .details-block .coll .form-btn{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    
 
 }
 
 
 @media screen and (max-width: 480px) {
     .form-style .content h2,
-    .title-block h2{
+    .title-block h2,
+    .signing-container .wrapper .col .content h2{
         font-size: 27px !important;
         line-height: 32px !important;
         margin-bottom: 20px;
@@ -2360,11 +2539,15 @@ main {
     .ui-datepicker td span, .ui-datepicker td a{
         width: 25px !important;
     }
-    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box:nth-child(2) {
+    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box:nth-child(2), .gift-redeem-container .gift-redeem .img-box:nth-child(2){
         margin: 0 8px;
     }
-    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box.logo {
+    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box.logo,
+    .gift-redeem-container .gift-redeem .img-box.logo{
         max-width: 90px;
+    }
+    form .gift-redeem-container .gift-redeem .img-box.logo {
+        max-width: 72px;
     }
     .form-style .form3 .form-group{
         max-width: 100%;
@@ -2425,6 +2608,39 @@ main {
     .gifting-recc h2{
         font-size: 24px;
         line-height: 28px;
+    }
+    .gifting-type .right label img, .gifting-type.screen3 .right label img{
+        height: 90px;
+    }
+    .gifting-type .right label .text h3 {
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 8px;
+    }
+
+
+    /* login page */
+    .signing-container .wrapper .col{
+        padding: 40px 20px;
+    }
+    .form-style.signing-container .wrapper .col form .form-group{
+        flex-direction: column;
+    }
+    .form-style.signing-container .wrapper .col form .form-field{
+        margin-right:0;
+        width: auto;
+    }
+
+    /* re-css only for login page */
+    .form-style .wppb-user-forms p, .form-style #wppb-register-user li{
+        margin-right: 0 !important;
+        width: 100%;
+    }
+    .form-style.signing-container .wrapper .col form .login-remember input{
+        font-size: 14px !important;
+        line-height: 14px !important;
+        width: 24px !important;
+        height: 24px !important;
     }
 
 }

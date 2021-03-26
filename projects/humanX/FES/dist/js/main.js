@@ -472,8 +472,8 @@ $(document).ready(function() {
         var tab_id = $(this).attr('data-tab');
         var tabLink = $(this).attr('data-link');
         //console.log('tabLink', tabLink);
-        //var imgPath = 'https://prodigedigital.com/projects/humanx/FES/images/inner-banner/';
-        var imgPath = '../../images/inner-banner/';
+        var imgPath = 'https://prodigedigital.com/projects/humanx/FES/images/inner-banner/';
+        //var imgPath = '../../images/inner-banner/';
         var imgURL = imgPath + tabLink + "-bn.jpg";
         var circleimgURL = imgPath + tabLink + "-small.png";
         //console.log(imgURL);
@@ -638,12 +638,7 @@ $(document).ready(function() {
         //     }
         // });
 
-        $(document).on("click", ".filter-box ul > li > span", function() {
-            $(this).parent("li").toggleClass("display-children");
-            $(this).parent("li").children("ul").slideToggle();
-        })
-    }
-    /* filter functionality for resources page ends */
+
 });
 
 
@@ -677,10 +672,11 @@ $(window).load(function() {
 
     $(document).on("click", ".leaf", function() {
         var datalink = $(this).attr('data-link');
-        var tabUrl = window.location.href;
-        var tabHref = tabUrl.split("?").shift();
+        // var tabUrl = window.location.href;
+        // var tabHref = tabUrl.split("?").shift();
         //console.log(datalink, 'svg url', tabUrl, 'tabHref', tabHref);
-        window.location = tabHref + '?' + datalink;
+        //window.location = tabHref + '?' + datalink;
+        window.location = datalink + '.html';
     });
     
 
