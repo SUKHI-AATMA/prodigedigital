@@ -34,36 +34,36 @@
     <script type="text/javascript">
     var player;
 
-function onYouTubePlayerAPIReady() {
-  // create the global player from the specific iframe (#video)
-  player = new YT.Player('video', {
-    events: {
-      // call this function when player is ready to use
-      'onReady': onPlayerReady
+    function onYouTubePlayerAPIReady() {
+    // create the global player from the specific iframe (#video)
+    player = new YT.Player('video', {
+        events: {
+        // call this function when player is ready to use
+        'onReady': onPlayerReady
+        }
+    });
     }
-  });
-}
 
-function onPlayerReady(event) {
-  
-  // bind events
-  var playButton = document.getElementById("play-button");
-  playButton.addEventListener("click", function() {
-      console.log(123);
-    player.playVideo();
-  });
-  
-  var pauseButton = document.getElementById("pause-button");
-  pauseButton.addEventListener("click", function() {
-    player.pauseVideo();
-  });
-  
-}
-
-window.onload = function() {
+    function onPlayerReady(event) {
+    
+    // bind events
     var playButton = document.getElementById("play-button");
-    playButton.dispatchEvent(new Event('click'));
-}
+    playButton.addEventListener("click", function() {
+        console.log(123);
+        player.playVideo();
+    });
+    
+    var pauseButton = document.getElementById("pause-button");
+    pauseButton.addEventListener("click", function() {
+        player.pauseVideo();
+    });
+    
+    }
+
+    window.onload = function() {
+        var playButton = document.getElementById("play-button");
+        playButton.dispatchEvent(new Event('click'));
+    }
     </script>
 </body>
 </html>
