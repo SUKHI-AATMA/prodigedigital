@@ -1,0 +1,287 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mestermor</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css" /> -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+    <header class="myheader">
+        <img src="img/Mestermor-Quixx-Logo.svg" alt="">
+    </header>
+
+    <main>
+        <div class="container form-style">
+            <!-- gifting start - screen-1  -->
+            <section class="gifting-start">
+                <div class="gifting-best">
+                    <div class="col left">
+                        <div class="order-detail-block">
+                            <img src="img/gifting-start.png" alt="gifting">
+                        </div>
+                    </div>
+                    <div class="col right title-block">
+                        <h2>The best things <br>come in boxes</h2>
+                        <p>Whether you know someone interested in coffee, books, fitness, cooking, technology or style, our subscription boxes are collections of the most exciting homegrown brands you can find.</p>
+                        <div class="btn-container">
+                            <a href="javascript:;" id="getGift">Get a Gift</a>
+                            <a href="javascript:;" id="redeemGift">Redeem a Gift</a>
+                        </div>
+                    </div>
+                    <p class="scroll-discover">SCROLL TO DISCOVER GIFTING</p>
+                </div>
+                <div class="gifting-recc">
+                    <h2>We’d reccomend these because</h2>
+                    <div class="recc-box">
+                        <div class="recc-item">
+                            <span>1</span>
+                            <div class="content">
+                                <h4>It’s a simplified gifting process</h4>
+                                <p>You don’t have to hustle your way through malls or spend hours scrolling trying to find the right gift, we do it for you.</p>
+                            </div>
+                        </div>
+                        <div class="recc-item">
+                            <span>2</span>
+                            <div class="content">
+                                <h4>It’s a collection put together by stylists</h4>
+                                <p>Our team of stylists have handpicked the contents of these boxes with products and brands which might’ve gone under your radar.</p>
+                            </div>
+                        </div>
+                        <div class="recc-item">
+                            <span>3</span>
+                            <div class="content">
+                                <h4>It’s a variety of products</h4>
+                                <p>We pack these boxes with a collection of products so expect a variety of things waiting in there, just for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <form action="" id="formGifting" class="giftingForm"  autocomplete="off">
+                
+            <!-- select gift type - screen 2 -->
+            <section class="gifting-type screen">
+                <div class="gifttype-container">
+                    <div class="col left title-block">
+                        <h2>Would you rather?</h2>
+                        <p>The man you care about deserves a monthly box of curated designs. Choose whether you’d like to gift him a one-off box, a subscription or a gift card.</p>
+                        <p>We’ll deliver a mix of handpicked designs to the fortunate recipient.</p>
+                        <div class="button-group">
+                            <a href="javascript:;" class="arrow giftPrevious" id="">previous</a>
+                            <a href="javascript:;" class="arrow giftNext" id="">next</a>
+                        </div>
+                    </div>
+                    <div class="col right">
+                        <div class="form-group group-radio">
+                            <div class="form-field radio-field">
+                                <input type="radio" id="sendBox1" name="sendBox" value="Send Box">
+                                <label for="sendBox1">
+                                    <img src="img/send-box.png" alt="Send Box">
+                                    <div class="text">
+                                        <h3>Send a box</h3>
+                                        <p>Tell us about this lucky man, and we’ll make sure he receives a box he’ll love.</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form-field radio-field">
+                                <input type="radio" id="sendBox2" name="sendBox" value="send gift card">
+                                <label for="sendBox2">
+                                    <img src="img/send-gift-card.png" alt="send gift card">
+                                    <div class="text">
+                                        <h3>Send a Gift Card</h3>
+                                        <p>Not too sure about the specifics? Send a gift card instead.</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- select gift type - screen 2 -->
+            <section class="gifting-type screen2 screenCom">
+                <div class="gifttype-container">
+                    <div class="col left title-block">
+                        <h2>Pick a box</h2>
+                        <p>We’ve put together two boxes which will make for more than special gifts. All you need to do now is select which one works best for you.</p>
+                        <div class="button-group">
+                            <a href="javascript:;" class="arrow giftPrevious" id="">previous</a>
+                            <a href="javascript:;" class="arrow giftNext" id="">next</a>
+                        </div>
+                    </div>
+                    <div class="col right">
+                        <div class="form-group group-radio">
+                            <div class="form-field radio-field">
+                                <input type="radio" id="giftBox1" name="giftBox" value="Essentials Box">
+                                <label for="giftBox1">
+                                    <img src="img/gift-box-essentials.png" alt="Essentials Box">
+                                    <div class="text">
+                                        <h3>Essentials Box</h3>
+                                        <p>You’ll receive a monthly package of five hand-picked items that cater to the everyday. </p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form-field radio-field">
+                                <input type="radio" id="giftBox2" name="giftBox" value="Indulgence Box">
+                                <label for="giftBox2">
+                                    <img src="img/gift-box-indulgence.png" alt="Indulgence Box">
+                                    <div class="text">
+                                        <h3>Indulgence Box</h3>
+                                        <p>You’ll receive a monthly package of seven hand-picked items that will elevate your style journey.</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- select gift type - screen 3 -->
+            <section class="gifting-type screen3 screenCom">
+                <div class="gifttype-container">
+                    <div class="col left title-block">
+                        <h2>Pick a box</h2>
+                        <p>We’ve put together two boxes which will make for more than special gifts. All you need to do now is select which one works best for you.</p>
+                        <div class="button-group">
+                            <a href="javascript:;" class="arrow giftPrevious" id="">previous</a>
+                            <a href="javascript:;" class="arrow giftNext" id="">next</a>
+                        </div>
+                    </div>
+                    <div class="col right">
+                        <div class="form-group group-radio">
+                            <div class="form-field radio-field">
+                                <input type="radio" id="giftCard1" name="giftCard" value="Essentials Card">
+                                <label for="giftCard1">
+                                    <img src="img/gift-card-essentials.png" alt="Essentials Card">
+                                    <div class="text">
+                                        <h3>Essentials Card</h3>
+                                        <p>You’ll receive a monthly package of five hand-picked items that cater to the everyday. </p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form-field radio-field">
+                                <input type="radio" id="giftCard2" name="giftCard" value="Indulgence Card">
+                                <label for="giftCard2">
+                                    <img src="img/gift-card-indulgence.png" alt="Indulgence Card">
+                                    <div class="text">
+                                        <h3>Indulgence Card</h3>
+                                        <p>You’ll receive a monthly package of seven hand-picked items that will elevate your style journey.</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- select gift type - screen 4 -->
+            <section class="gifting-type screen4">
+                <div class="gifttype-container">
+                    <div class="col left title-block">
+                        <h2>Enter the reciever’s details</h2>
+                        <p>This gift card can be used anytime within a year from its date of issue. Do make sure to write a little message for your loved one, that’ll stay with them </p>
+                        <div class="button-group">
+                            <a href="javascript:;" class="arrow giftPrevious" id="">previous</a>
+                            <!-- <a href="javascript:;" class="arrow giftNext" id="">next</a> -->
+                        </div>
+                    </div>
+                    <div class="col right">
+                        <div class="details-block">
+                            <div class="coll">
+                                <div class="form-group">
+                                    <p>Delivery</p>
+                                    <div class="form-field">
+                                        <a href="javascript:;">Email</a>
+                                        <a href="javascript:;">Share via link</a>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p>To</p>
+                                    <div class="form-field">
+                                        <input type="text" id="toEmail" name="toEmail" placeholder="johndoe@gmail.com">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p>From</p>
+                                    <div class="form-field">
+                                        <input type="text" id="fromEmail" name="fromEmail" placeholder="John Doe">
+                                    </div>
+                                </div>
+                                <div class="form-btn">
+                                    <input type="submit" value="SUBMIT" class="btnSubmit">
+                                </div>
+                            </div>   
+                            <div class="coll">
+                                <div class="form-group">
+                                    <p>Select Gift Card Amount</p>
+                                    <div class="form-field select-field">
+                                        <div class="custom-select selectAmount">
+                                            <select name="giftCardAmount" id="giftCardAmount">
+                                                <option value="">0</option>
+                                                <option value="3999">3,999</option>
+                                                <option value="4999">4,999</option>
+                                                <option value="2999">2,999</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p>Say something special</p>
+                                    <div class="form-field">
+                                        <textarea name="specailMsg" id="" placeholder="Enter your message here."></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p>Delivery Date</p>
+                                    <div class="form-field">
+                                        <input type="text" id="" name="date"  placeholder="Birth Date" class="datePickerMonthYear" >
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            </form>
+        
+        </div>
+    </main>
+
+</body>
+
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<!-- <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+<!-- <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<script src="js/main.js"></script>
+
+
+</html>

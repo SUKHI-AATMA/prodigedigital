@@ -1,0 +1,2646 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+body {
+    /* font-family: 'Space Mono', monospace;*/
+    font-family: "Montserrat", sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+header.myheader{
+    text-align: center;
+    padding: 40px 0;
+}
+header img{
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+
+
+/* common code */
+.page-id-1210  header,
+.page-id-1211 header,
+.page-id-1218 header{
+    padding: 0;
+}
+
+main {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+.container {
+    display: block;
+    padding: 0 90px;
+}
+.form-style {
+    position: relative;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+.form-style ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-family: "Space Mono", monospace;
+    color: #7c7c7c;
+}
+
+.form-style ::-moz-placeholder {
+    /* Firefox 19+ */
+    font-family: "Space Mono", monospace;
+    color: #7c7c7c;
+}
+
+.form-style :-ms-input-placeholder {
+    /* IE 10+ */
+    font-family: "Space Mono", monospace;
+    color: #7c7c7c;
+}
+
+.form-style :-moz-placeholder {
+    /* Firefox 18- */
+    font-family: "Space Mono", monospace;
+    color: #7c7c7c;
+}
+.form-style input,
+.form-style label,
+.form-style select,
+.form-style textarea{
+    outline: none;
+}
+
+.form-style .form-group .form-field {
+    /* position: relative; */
+    margin-bottom: 30px;
+}
+
+.form-style input {
+    background: transparent;
+    padding: 0 0 15px 0;
+    font-family: "Space Mono", monospace;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 44px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    width: 100%;
+}
+
+.form-style .form-btn {
+    margin-top: 82px;
+    text-align: center;
+    width: 100%;
+}
+.form-style .form-btn > .submit{
+    border:none !important;
+}
+
+.form-style .btnSubmit {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.2em;
+    border: 1px solid #ffffff;
+    padding: 14px 26px;
+    width: auto;
+    cursor: pointer;
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+.form-style .btnSubmit:hover {
+    color: #000 !important;
+    background-color: #fff !important;
+}
+
+.form-style form .error-msg {
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    text-decoration-line: underline;
+    color: #c4c4c4;
+}
+.form-style form .group-radio .error-msg {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    text-align: center;
+}
+/* .form-style form .group-radio #subscription-error{
+    bottom: -50px;
+} */
+.form-style form .num-field .error-msg {
+    position: absolute;
+    bottom: -32px;
+    left: 0;
+}
+.form-style form .shirtSize-group .error-msg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    transform: none;
+}
+.form-style form .fitting-group .error-msg {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    text-align: left;
+    transform: none;
+}
+.form-style .button-group a {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.form-style .button-group .arrow {
+    position: absolute;
+    top: 255px;
+}
+.form-style .button-group .previous {
+    left: 0;
+}
+.form-style .button-group .previous.disable{
+    display: none;
+}
+.form-style .button-group .next {
+    right: 0;
+}
+
+.form-style form{
+    position: relative;
+}
+
+.form-style .formCommon {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    /* padding-top: 72px; */
+    padding-bottom: 72px;
+}
+.form-style .content h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 67px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.form-style .content p {
+    font-family: "Space Mono", monospace;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: #ffffff;
+}
+.scroll-discover{
+    position: absolute;
+    bottom: 0;
+    left: 0;    
+    color: #FFFFFF;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 3.2px;
+    text-align: center;
+    width: 100%;
+}
+
+
+.btn-container {
+    display: flex;
+}
+.btn-container a {
+    font-family: "Montserrat", Sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #ffffff;
+    padding: 12px 0px;
+    text-align: center;
+    width: 187px;
+    border: 1px solid #ffffff;
+}
+.btn-container a:first-child {
+    margin-right: 24px;
+}
+.btn-container a:hover {
+    background-color: #fff;
+    color: #000000 !important;
+}
+
+
+
+/* screen 1 */
+
+.form-style .screen .content {
+    max-width: 646px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 32px;
+}
+
+.form-style .screen .content .cta-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 44px 0 78px;
+}
+
+.form-style .screen .content .cta-box a {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    padding: 9px 30px;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.form-style .screen .content .cta-box a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.form-style .screen .quiz-gallery-container {
+    max-width: 818px;
+    width: 100%;
+    margin: 0 auto;
+    display: none;
+}
+
+.form-style .screen .quiz-gallery-container .quiz-gallery {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* @keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+} */
+
+.form-style .screen .quiz-gallery .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*  form 1 */
+
+.form-style .form1 {
+    display: none;
+}
+
+.form-style .form1 .content {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 52px;
+    margin-bottom: 32px;
+}
+
+.form-style .form1 .content p {
+    padding: 0 40px;
+}
+
+.form-style .form1 .form-group {
+    width: 311px;
+    margin: 0 auto;
+}
+
+.group-radio .form-field {
+    margin-bottom: 20px;
+}
+.group-radio .form-field:last-child {
+    margin-bottom: 0px;
+}
+.group-radio .form-field label {
+    display: inline-block;
+    width: 100%;
+    padding: 8px 36px;
+    border: solid 1px #fff;
+    transition: all 0.3s;
+    font-family: "Space Mono", monospace;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    cursor: pointer;
+    margin: 0;
+}
+.group-radio .form-field label:hover{
+    background: #fff;
+    color: #000;
+}
+.group-radio .form-field input[type="radio"]:checked+label{
+    border: 1px solid #fff;
+    background-color: transparent;
+    transition: all 0.3s;
+    color: #fff;
+} 
+.group-radio .form-field input[type="radio"] {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 1rem;
+    height: 1.25rem;
+    opacity: 0;
+}
+
+.form-style .form3 .form-field [type="radio"]:checked+label,
+.form-style .form3 .form-field [type="radio"]:hover+label,
+.form-style .form8 .form-field [type="radio"]:checked+label,
+.form-style .form8 .form-field [type="radio"]:hover+label {
+    background: #fff;
+    color: #000;
+}
+
+.ui-datepicker .ui-datepicker-title select{
+    appearance: auto;
+}
+
+
+/* form 2 */
+
+.form-style .form2 {
+    display: none;
+}
+
+.form-style .form2 .content {
+    max-width: 574px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 52px;
+}
+
+.form-style .form2 .form-group {
+    width: 186px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+/* form 3 */
+
+.form-style .form3 {
+    display: none;
+}
+
+.form-style .form3 .content {
+    max-width: 574px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-style .form3 .form-group {
+    width: 534px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+/* form 4 */
+
+.form-style .form4 {
+    display: none;
+}
+
+.form-style .form4 .content {
+    max-width: 574px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-style .form4 .form-group {
+    width: 738px;
+    margin: 0 auto;
+    padding-top: 44px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-style .form4 .form-group .col {
+    width: 311px;
+}
+
+.form-style .form4 .form-group .col .form-field label {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #fff;
+}
+
+.form-style .form4 .form-field {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.form-style .form4 .form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-style .form4 .form-row .form-col {
+    width: 142px;
+}
+
+.form-style .form4 input {
+    font-size: 18px !important;
+    line-height: 27px;
+    padding-bottom: 4px !important;
+}
+
+.form-style .form4 .form-row .form-col {
+    margin-bottom: 24px;
+}
+
+.form-style .form4 .form-group .col:last-child .form-field:nth-last-child(2) {
+    margin-bottom: 16px;
+    margin-top: 36px;
+}
+
+.form-style .form4 .col:last-child .form-field:nth-child(2) input {
+    padding-left: 38px !important;
+}
+
+.form-style .form4 .col .form-field .mobplus {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    font-family: "Space Mono", monospace;
+    font-size: 18px;
+    line-height: 27px;
+    color: #7c7c7c;
+}
+
+/* form 5 */
+
+.form-style .form5 {
+    display: none;
+}
+
+.form-style .form5 .content {
+    max-width: 574px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-style .form5 .form-group {
+    width: 847px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 52px;
+}
+
+.form-style .form5 .form-group .flex-wrap {
+    position: relative;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.form-style .form5 .form-group .flex-wrap label {
+    margin-right: 12px;
+    font-family: "Space Mono", monospace;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.form-style .form5 .form-group .flex-wrap input {
+    margin-right: 12px;
+}
+
+.form-style .form5 .form-group .col:first-child {
+    width: 192px;
+    margin-right: 80px;
+}
+
+.form-style .form5 .form-group .col:nth-child(2) {
+    position: relative;
+    width: 224px;
+    margin-right: 114px;
+}
+
+.form-style .form5 .form-group .col:nth-child(3) {
+    position: relative;
+    width: 237px;
+}
+
+.form-style .form5 .form-group .col:nth-child(4) {
+    position: relative;
+    width: 192px;
+    margin-right: 80px;
+    padding-top: 90px;
+}
+
+.form-style .form5 .form-group .col:nth-child(5) {
+    position: relative;
+    width: 250px;
+    padding-top: 90px;
+}
+
+.form-style .form5 .form-group .title {
+    display: flex;
+    align-items: flex-end;
+}
+
+.form-style .form5 .form-group .title p {
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 27px;
+}
+
+.form-style .form5 .form-group .col input {
+    font-family: "Space Mono", monospace;
+    font-size: 18px !important;
+    line-height: 27px !important;
+    padding-bottom: 4px !important;
+}
+
+.form-style .form5 .form-group .col:first-child input,
+.form-style .form5 .form-group .col:nth-child(4) input {
+    width: 24px !important;
+    text-align: center;
+}
+
+.form-style .form5 .form-group .title a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 27px;
+    text-decoration-line: underline;
+    color: #fff;
+    margin-left: 12px;
+    text-transform: uppercase;
+}
+
+.form-style .form5 .radio-field {
+    display: flex;
+    justify-content: space-between;
+    transform: translateX(-10px);
+}
+
+.form-style .form5 .radio-field .radio-box {
+    width: 32px;
+}
+
+.form-style .form5 .col:nth-child(5) .radio-field .radio-box:first-child {
+    width: 62px;
+}
+
+.form-style .form5 .col:nth-child(5) .radio-field .radio-box:nth-child(2) {
+    width: 92px;
+}
+
+.form-style .form5 .col:nth-child(5) .radio-field .radio-box:nth-child(3) {
+    width: 72px;
+}
+
+.form-style .form5 .col:nth-child(5) .radio-field .radio-box label {
+    text-align: left;
+}
+
+.form-style .form5 .col:nth-child(5) .radio-field .radio-box label {
+    padding: 0 2px 0 8px;
+}
+
+.form-style .form5 .radio-field .radio-box > label {
+    display: inline-block;
+    width: 100%;
+    padding: 0 2px;
+    font-family: "Space Mono", monospace;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    cursor: pointer;
+    border: solid 1px #000;
+    transition: all 0.3s;
+}
+
+.form-style .form-group .form-field .waist-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.form-style .form-group .form-field .waist-group p {
+    font-family: "Space Mono", monospace;
+    font-size: 18px;
+    line-height: 26px;
+    color: #fff;
+}
+.form-style .form-group .form-field .waist-group input {
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    height: 0px !important;
+    width: 140px !important;
+    border-radius: 10em !important;
+    background-color: #fff !important;
+    outline: none !important;
+    padding: 0 !important;
+}
+
+.form-style .form-group .form-field .waist-group input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #000;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+
+.form-style .form-group .form-field .waist-group input::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #000;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+
+.form-style .form5 #sliderOutput {
+    color: #fff;
+    font-family: "Space Mono", monospace;
+    font-size: 24px;
+    line-height: 36px;
+    position: absolute;
+    left: 50%;
+    bottom: -16px;
+    margin-left: -11px;
+}
+
+.form-style .chart-popup {
+    position: absolute;
+    display: none;
+}
+
+.form-style #chartPopup1 {
+    top: 120px;
+    left: 220px;
+}
+
+.form-style #chartPopup1.active {
+    display: block;
+}
+
+.form-style #chartPopup2 {
+    top: 120px;
+    right: 0px;
+}
+
+.form-style #chartPopup2.active {
+    display: block;
+}
+
+.form-style .chart-popup table {
+    border-collapse: collapse;
+    background-color: #000;
+}
+
+.form-style .chart-popup table tr th:first-child,
+.form-style .chart-popup table tr td:first-child {
+    width: 112px;
+}
+
+.form-style .chart-popup:last-child table tr th:first-child,
+.form-style .chart-popup:last-child table tr td:first-child {
+    width: 60px;
+}
+
+.form-style .chart-popup table tr th,
+.form-style .chart-popup table tr td {
+    border: 1px solid #fff;
+    width: 55px;
+    padding: 8px 18px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+}
+
+.form-style .chart-popup table tr th {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.form-style .chart-popup table tr th {
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* form 6 */
+
+.form-style .form6 {
+    display: none;
+}
+
+.form-style .form6 .content {
+    max-width: 576px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-style .form6 .form-group {
+    width: 816px;
+    padding-top: 62px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.form-style .form6 .form-field {
+    margin-bottom: 20px;
+}
+
+.form-style .form6 label {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 6px;
+    border: solid 1px #000;
+    transition: all 0.3s;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* .form-style .form6 input[type="radio"] {
+    display: none;
+}
+
+.form-style .form6 input[type="radio"]:checked+label,
+.form-style .form6 input[type="radio"]:hover+label {
+    border: solid 1px #fff;
+} */
+
+/* form 7 */
+
+.form-style .form7 {
+    display: none;
+}
+
+.form-style .form7 .content {
+    max-width: 574px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-style .form7 .form-group {
+    width: 738px;
+    margin: 0 auto;
+    padding-top: 72px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-style .form7 .form-field {
+    margin-bottom: 20px;
+    width: 320px;
+}
+
+.form-style .form7 label {
+    display: inline-block;
+    width: 100%;
+    padding: 28px 0;
+    border: solid 1px #000;
+    transition: all 0.3s;
+    text-align: center;
+    cursor: pointer;
+}
+
+.form-style .form7 label img {
+    padding: 0 18px;
+}
+
+.form-style .form7 label .text {
+    max-width: 320px;
+    width: 100%;
+    padding-top: 24px;
+}
+
+.form-style .form7 label .text h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.form-style .form7 label .text p,
+.form-style .form7 label .text h4 {
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+}
+
+/* .form-style .form7 input[type="radio"] {
+    display: none;
+}
+
+.form-style .form7 input[type="radio"]:checked+label,
+.form-style .form7 input[type="radio"]:hover+label {
+    border: solid 1px #fff;
+} */
+
+/* form 8 */
+
+.form-style .form8 {
+    display: none;
+}
+
+.form-style .form8 .content {
+    max-width: 574px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-style .form8 .form-group {
+    width: 334px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+/* form 9 */
+
+.form-style .form9 {
+    display: none;
+}
+
+.form-style .form9 .row {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.form-style .form9 .row .col:first-child {
+    max-width: 490px;
+    width: 100%;
+    margin-right: 134px;
+}
+
+.form-style .form9 .row .col:last-child {
+    max-width: 400px;
+    width: 100%;
+}
+
+.form-style .form9 .content .col:last-child {
+    margin-top: 16px;
+}
+
+.form-style .form9 .content .col p {
+    text-align: left;
+    padding-bottom: 24px;
+}
+
+.form-style .form9 .content .col p:last-child {
+    padding-bottom: 0px;
+}
+
+.form-style .form9 .form-group {
+    margin-top: 52px;
+}
+
+.form-style .form9 .form-group h3 {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 43px;
+    margin-bottom: 27px;
+}
+
+.form-style .form9 .form-group .field-box p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.form-style .form9 .form-group .field-box {
+    display: flex;
+    margin-bottom: 22px;
+}
+
+.form-style .form9 .form-group .field-box p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.form-style .form9 .form-group .field-box textarea {
+    background: transparent;
+    font-family: "Space Mono", monospace;
+    font-weight: normal;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    height: 88px;
+}
+
+.form-style .form9 .form-group .field-box input,
+.form-style .form9 .form-group .field-box textarea {
+    font-size: 18px !important;
+    line-height: 27px !important;
+    padding-bottom: 12px !important;
+}
+
+.form-style .form9 .form-group .col:first-child .field-box p {
+    width: calc(100% - 278px) !important;
+}
+
+.form-style .form9 .form-group .col:last-child .field-box p {
+    width: calc(100% - 186px) !important;
+}
+
+.form-style .form9 .form-group .col:first-child .field-box input,
+.form-style .form9 .form-group .col:first-child .field-box textarea {
+    width: 278px !important;
+}
+
+.form-style .form9 .form-group .col:last-child .field-box input,
+.form-style .form9 .form-group .col:last-child .field-box textarea {
+    width: 186px !important;
+}
+.form-style .form9 .form-group .col:first-child .field-box textarea {
+    padding: 0;
+}
+
+/* payment gateway */
+.title-wrap h1 {
+    text-align: center;
+}
+
+/* Quiz Page Order Confirmation and Order Details */
+.quiz-order {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    margin-bottom: 72px;
+}
+.quiz-order .left {
+    max-width: 462px;
+    width: 100%;
+}
+.quiz-order .right {
+    max-width: 660px;
+    width: 100%;
+}
+.quiz-order .col h2 {
+    color: #ffffff;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 67px;
+    margin-bottom: 20px;
+}
+.quiz-order .col p {
+    color: #ffffff;
+    font-family: "Space Mono", Sans-serif !important;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 40px;
+}
+.order-detail-block table .coll{
+    display: flex;
+}
+.order-detail-block table .coll p:first-child{
+    width: 136px;
+    margin-right: 12px;
+}
+.quiz-order .col .order-detail-block table p{
+    font-family: "Montserrat", Sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+.quiz-order .col .order-detail-block table h3{
+    font-family: "Montserrat", Sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+
+.quiz-order .col .order-detail-block  .tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+.quiz-order .col .order-detail-block  .tg td {
+    text-align: left;
+    width: 50%;
+    border: 1px solid #fff;
+    overflow: hidden;
+    padding: 20px 16px 20px;
+    word-break: normal;
+}
+.quiz-order .col .order-detail-block  .tg th {
+    text-align: left;
+    width: 50%;
+    border: 1px solid #fff;
+    overflow: hidden;
+    padding: 15px 15px;
+    word-break: normal;
+}
+.quiz-order  .woocommerce-Price-currencySymbol{
+    margin-right: 4px;
+    font-family: initial;
+}
+
+.woocommerce-order .container{
+    padding: 0;
+}
+.woocommerce .woocommerce-MyAccount-content > p{
+    font-family: "Space Mono", Sans-serif !important;
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+}
+.woocommerce-order-details .woocommerce-order-details__title,
+.woocommerce-customer-details .woocommerce-column__title{
+    font-family: "Montserrat", Sans-serif !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px !important;
+    line-height: 43px !important;
+    padding-bottom: 24px !important;
+}
+
+.woocommerce-customer-details address{
+    font-family: "Space Mono", Sans-serif !important;
+    font-size: 16px;
+    line-height: 1.2;
+}
+.woocommerce-customer-details address p{
+    font-family: "Space Mono", Sans-serif !important;
+    font-size: 16px !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    padding-top: 12px;
+}
+.woocommerce-breadcrumb{
+    display: none;
+}
+.actionbutton .return{
+    margin: 12px 0;
+}
+.actionbutton a{
+    font-family: "Montserrat", Sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #ffffff;
+    padding: 12px 0px;
+    text-align: center;
+    width: 187px;
+    border: 1px solid #ffffff;
+    display: block;
+}
+.actionbutton a:hover {
+    background-color: #fff;
+    color: #000000 !important;
+}
+.ajax-loader{
+    width: auto !important;
+}
+.page-id-1218 main{
+    max-width: 1440px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 0 90px;
+}
+.site-main .woocommerce h1{
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 43px;
+    margin-bottom: 27px;
+}
+.site-main .woocommerce h1::after{
+    display: none;
+}
+.site-main .woocommerce hr{
+    display: none;
+}
+
+.tableCommon,
+.shop_table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+.tableCommon td,
+.shop_table  td{
+    text-align: left;
+    width: 70%;
+    border: 1px solid #fff !important;
+    overflow: hidden;
+    padding: 20px 16px 20px;
+    word-break: normal;
+
+    font-family: "Space Mono", Sans-serif !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF !important;
+    background-color: #000 !important;
+}
+.tableCommon th,
+.shop_table th{
+    text-align: left;
+    width: 30%;
+    border: 1px solid #fff !important;
+    overflow: hidden;
+    padding: 15px 15px !important;
+    word-break: normal;
+
+    font-family: "Montserrat", Sans-serif !important;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF !important;
+    background-color: #000 !important;
+}
+
+
+.ced_rnx_product_table td,
+.ced_rnx_total_amount_wrap{
+    background-color: #000 !important;
+}
+.shop_table{
+    margin-bottom: 48px;
+}
+.shop_table  td:first-child{
+    width: 50%;
+}
+.shop_table  td{
+    width: 25%;
+}
+.shop_table th:first-child{
+    width: 50%;
+}
+.shop_table th{
+    width: 25%;
+}
+.shop_table  td.product-quantity  input{
+    background: #000;
+    color: #fff;
+    border: none;
+}
+
+.ced_rnx_note_tag_wrapper{
+    max-width: 600px;
+    width: 100%;
+    margin-top: 52px;
+}
+.ced_rnx_note_tag_wrapper label{
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 27px;
+    margin-bottom: 24px !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+.ced_rnx_note_tag_wrapper input,
+.ced_rnx_note_tag_wrapper textarea{
+    background: transparent !important;
+    padding: 0 0 8px 0 !important;
+    font-family: "Space Mono", monospace;
+    font-weight: normal;
+    font-size: 18px !important;
+    line-height: 22px !important;
+    border: none;
+    outline: none;
+    border: none !important;
+    border-bottom: 1px solid #fff !important;
+    color: #fff !important;
+    width: 100%;
+    box-shadow: none !important;
+    margin-bottom: 32px !important;
+}
+.ced_rnx_note_tag_wrapper textarea{
+    height: 120px !important;
+}
+
+#ced_rnx_return_request_form .ced_rnx_return_request_morefiles{
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px !important;
+    line-height: 22px !important;
+    letter-spacing: 0.2em;
+    border: 1px solid #ffffff !important;
+    padding: 8px 16px !important;
+    width: auto;
+    cursor: pointer;
+}
+#ced_rnx_return_request_form i{
+    font-size: 12px;
+    margin-left: 16px;
+}
+#ced_rnx_return_request_form input[type=file]{
+    border: none !important;
+}
+
+#ced_rnx_return_request_form input[type=submit]{
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px !important;
+    line-height: 22px !important;
+    letter-spacing: 0.2em;
+    border: 1px solid #ffffff !important;
+    padding: 12px 26px !important;
+    width: auto;
+    cursor: pointer;
+    margin-top: 32px !important;
+}
+
+#ced_rnx_return_request_form .ced_rnx_return_request_morefiles:hover,
+#ced_rnx_return_request_form input[type=submit]:hover{
+    color: #000 !important;
+    background: #fff !important;
+}
+
+.ced-rnx_customer_detail{
+    margin-bottom: 52px;
+}
+
+
+/* gifting redeem page */
+.form-style .redeem-screen .content{
+    max-width: 830px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 48px;
+}
+.form-style .redeem-screen .content p span{
+    color: #000;
+    background-color: #fff;
+    padding: 0 1.5px;
+}
+
+.redeem-form form .form-group{
+    max-width: 287px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 38px;
+}
+.redeem-form form .form-group .form-field input{
+    font-size: 18px !important;
+    line-height: 27px !important;
+    padding: 0 0 6px 0 !important;
+}
+.gift-redeem-container {
+    max-width: 954px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.gift-redeem-container .gift-redeem {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.gift-redeem-container .gift-redeem .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* gifting page */
+.gifting-start{
+    padding:90px 0 200px;
+   
+}
+.gifting-start .gifting-best{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 82px;
+    margin-bottom: 215px;
+    position: relative;
+}
+.gifting-start .left {
+    max-width: 564px;
+    width: 100%;
+}
+.gifting-start .right {
+    max-width: 632px;
+    width: 100%;
+}
+.title-block h2 {
+    color: #ffffff;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 67px;
+    margin-bottom: 20px;
+}
+.title-block p {
+    color: #ffffff;
+    font-family: "Space Mono", Sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 40px;
+}
+
+.gifting-recc h2{
+    font-family: "Montserrat", Sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 43px;
+    color: #FFFFFF;
+    margin-bottom: 82px;
+    text-align: center;
+}
+.gifting-recc .recc-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.gifting-recc .recc-box .recc-item{
+    display: flex;
+    max-width: 360px;
+    width: 100%;
+}
+.gifting-recc .recc-box .recc-item span{
+    font-family: "Montserrat", Sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 55px;
+    color: #898989;
+    margin-right: 24px;
+}
+.gifting-recc .recc-box .recc-item .content h4{
+    font-family: "Montserrat", Sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 37px;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+}
+.gifting-recc .recc-box .recc-item .content p{
+    font-family: "Space Mono", Sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+/* gifting type */
+.gifting-type .gifttype-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 32px;
+}
+.gifting-type.screen{
+    display: none;
+}
+.gifting-type .left{
+    max-width: 448px;
+    width: 100%;
+    position: relative;
+}
+.gifting-type .right{
+    max-width: 732px;
+    width: 100%;
+    position: relative;
+}
+
+.gifting-type .right .form-group {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.gifting-type .right .form-field:first-child{
+    width: 373px;
+    margin: 0;
+}
+.gifting-type .right .form-field:last-child{
+    width: 328px;
+    margin: 0;
+}
+.gifting-type .right label {
+    display: inline-block;
+    width: 100%;
+    padding: 28px 0;
+    border: solid 1px #000;
+    transition: all 0.3s;
+    text-align: center;
+    cursor: pointer;
+}
+
+.gifting-type .right input:checked+label,
+.gifting-type .right input:hover+label{
+    border: 1px solid #fff;
+    background: #000;
+    transition: all 0.3s;
+    color: #fff;
+}
+.gifting-type .right label img {
+    padding: 0 18px;
+    height: 294px;
+}
+.gifting-type .right label .text {
+    padding: 0px 8px;
+    max-width: 286px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 24px;
+}
+.gifting-type .right label .text h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+.gifting-type .right label .text p {
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+}
+.gifting-type.screen3 .right .form-field input{
+    border-bottom:none;
+}
+.gifting-type .right  .radio-field > label:hover,
+.gifting-type .right  .radio-field > label.active {
+    border: 1px solid #fff;
+    background: #000;
+    transition: all 0.3s;
+    color: #fff;
+}
+
+.giftingForm .button-group{
+    position: absolute;
+    left: 0;
+    bottom: 52px;
+}
+.giftingForm .button-group .arrow{
+    position: relative;
+    left: auto;
+    top: auto;
+    font-family: "Montserrat", Sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.2em;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+}
+.giftingForm .button-group .arrow:first-child{
+    margin-right: 24px;
+}
+
+
+/* screen screenCom */
+.gifting-type.screenCom .left{
+    max-width: 397px;
+    padding-top: 120px;
+}
+.gifting-type.screenCom .right{
+    max-width: 764px;
+}
+.gifting-type.screenCom .right .form-field:first-child{
+    width: 371px;
+}
+.gifting-type.screenCom .right .form-field:last-child{
+    width: 373px;
+}
+
+/* screen screen 2 */
+.gifting-type.screen2{
+    display: none;
+}
+
+/* screen screen 3 */
+.gifting-type.screen3{
+    display: none;
+}
+.gifting-type.screen3 .right{
+    max-width: 790px;
+}
+.gifting-type.screen3 .right .form-field:first-child{
+    width: 371px;
+}
+.gifting-type.screen3 .right .form-field:last-child{
+    width: 410px;
+}
+.gifting-type.screen3 .right label img{
+    height: auto;
+}
+
+/* screen screen 4 */
+.gifting-type.screen4{
+    display: none;
+    padding-top: 32px;
+}
+.gifting-type.screen4 .left{
+    max-width: 474px;
+}
+.gifting-type.screen4 .left p{
+    max-width: 396px;
+}
+.gifting-type.screen4 .right{
+    max-width: 710px;
+}
+.gifting-type.screen4 .right .details-block{
+    display: flex;
+    justify-content: space-between;
+}
+.gifting-type.screen4 .right .details-block .coll{
+    max-width: 291px;
+    width: 100%;
+    display: block;
+}
+.gifting-type.screen4 .right .details-block .coll:last-child{
+    max-width: 302px;
+}
+.gifting-type.screen4 .right .details-block .coll .form-group:first-child{
+    margin-bottom: 44px;
+}
+.gifting-type.screen4 .right .details-block .coll .form-group{
+    margin-bottom: 22px;
+    display: block;
+}
+.gifting-type.screen4 .right .details-block .coll .form-field{
+    width: 100%;
+}
+.gifting-type.screen4 .right .details-block .coll .form-field input{
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    padding: 0 0 8px 0;
+}
+.gifting-type.screen4 .right .details-block .coll .form-field textarea {
+    background: transparent;
+    font-family: "Space Mono", monospace;
+    font-weight: normal;
+    border: none;
+    outline: none;
+    border: 1px solid #fff;
+    color: #fff;
+    width: 285px;
+    height: 113px;
+    font-size: 15px;
+    line-height: 22px;
+}
+.gifting-type.screen4 .right .details-block .coll .select-field{
+    position: relative;
+} 
+
+.gifting-type.screen4 .right .details-block .coll .form-btn{
+    text-align: left;
+    /* margin-top: 72px; */
+}
+.gifting-type.screen4 .right .details-block .coll a {
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: #ffffff;
+    padding: 0px 12px 2px;
+    text-align: center;
+    border: 1px solid #ffffff;
+    display: inline-block;
+}
+.gifting-type.screen4 .right .details-block .coll a:first-child {
+    margin-right: 24px;
+}
+.gifting-type.screen4 .right .details-block .coll a:hover {
+    background-color: #fff;
+    color: #000000 !important;
+}
+
+.gifting-type.screen4 .right .details-block .coll p{
+    font-family: "Montserrat", Sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.form-style .custom-select {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    background-color: #000; 
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+}
+.form-style .custom-select.selectAmount{
+    width: 100px !important;
+}
+.form-style .custom-select select {
+    padding: 5px 8px;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #fff;
+    font-size: 16px;
+}
+.form-style .custom-select.selectAmount select {
+    width: 74px;
+}
+.form-style .custom-select select option {
+    background-color: #000 !important;
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+.form-style .custom-select select option:hover,
+.form-style .custom-select select option:focus,
+.form-style .custom-select select option:active,
+.form-style .custom-select select option:checked {
+  background: #000;
+}
+.form-style .custom-select:after {
+    content: " ";
+    display: block;
+    right: 12px;
+    top: 16px;
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-top: 5px solid #fff;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    pointer-events: none;
+}
+.form-style .custom-select.selectAmount:after {
+    right: 0;
+    top: 12px;
+}
+
+.gifting-type .right .group-radio .error-msg{
+    bottom:0;
+    left: 0;
+    transform: none;
+}
+.gifting-type .right #giftCardAmount-error{
+    position: absolute;
+    left: 0;
+    bottom: -22px;
+}
+
+
+/* login page */
+.signing-container .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.signing-container .wrapper .col{
+    width: 50%;
+    border: 1px solid #FFFFFF;
+    padding: 82px 100px 48px 110px;
+}
+.signing-container .wrapper .col .content{
+    max-width: 500px;
+    margin-bottom: 32px;
+}
+.signing-container .wrapper .col .content h2{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 67px;
+    color: #ffffff;
+    text-align: left;
+    margin-bottom: 15px;
+}
+.signing-container .wrapper .col .content p {
+    font-family: "Space Mono", monospace;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: left;
+    color: #ffffff;
+}
+.signing-container .wrapper .col p span{
+    padding: 0 2px;
+    background-color: #fff;
+    color: #000;
+}
+.signing-container .wrapper .col .caption{
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+    margin-top: 50px;
+}
+.form-style.signing-container .wrapper .col form ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+}
+.form-style.signing-container .wrapper .col form .form-group{
+    display: flex;
+}
+.form-style.signing-container .wrapper .col form .form-field{
+    width: 187px;
+    margin-right: 24px;
+}
+.form-style.signing-container .wrapper .col form input{
+    font-size: 24px;
+    line-height: 36px;
+    padding-bottom: 4px;
+}
+.form-style.signing-container .wrapper .col form .form-btn{
+    text-align: left;
+    margin-top: 12px;
+}
+.form-style.signing-container .wrapper .col:last-child form .form-btn{
+    margin-top: 60px;
+}
+.form-style.signing-container .wrapper .col form input.btnSubmit{
+    font-size: 15px;
+    line-height: 18px;
+    padding: 15px 0;
+    text-align: center;
+    width: 187px;
+}
+/* re-css only for login page */
+.form-style .wppb-user-forms p,
+.form-style #wppb-register-user li{
+    width: 187px;
+    display: inline-block;
+}
+.form-style .wppb-user-forms p:nth-child(odd),
+.form-style #wppb-register-user li:nth-child(odd){
+    margin-right: 24px;
+}
+.form-style #wppb-register-user ul{
+    display: block;
+}
+.form-style .wppb-user-forms form p input,
+.form-style.signing-container .wrapper .col form input{
+    font-size: 24px !important;
+    line-height: 36px !important;
+    padding-bottom: 4px !important;
+    margin-bottom: 20px !important;
+}
+.form-style .wppb-user-forms form p input[type=submit],
+.form-style.signing-container .wrapper .col form input[type=submit]{
+    font-size: 15px !important;
+    line-height: 18px !important;
+    padding: 15px 0 !important;
+    text-align: center !important;
+    width: 187px !important;
+}
+.form-style.signing-container .wrapper .col form .login-remember,
+.form-style.signing-container .wrapper .col form .login-submit{
+    margin-top: 32px !important;
+}
+.login-remember  > label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form-style.signing-container .wrapper .col form .login-remember input{
+    font-size: 18px !important;
+    line-height: 18px !important;
+    width: 32px !important;
+    height: 32px !important;
+    margin-right: 10px;
+    margin-bottom: 0 !important;
+    border: 1px solid #fff !important;
+    cursor: pointer;
+    outline: none;
+}
+
+.login-remember  > label input:checked {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #000 !important;
+    position: relative;
+}
+
+.login-remember  > label input:checked::after {
+    content: "\2713";
+    position: absolute;
+    color: white;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 5px;
+}
+
+
+
+@media screen and (max-width: 1366px) {
+    /*  gifting start  */
+    .gifting-start .left {
+        max-width: 530px;
+    }
+    .gifting-start .right {
+        max-width: 600px;
+    }
+    .gifting-start .left img{
+        width: 100%;
+    }
+    .gifting-type.screen4 .right{
+        max-width: 660px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .container{
+        padding: 0 40px;
+    }
+    .gifting-start{
+        padding: 52px 0 200px;
+    }
+    .redeem-form form .form-group{
+        padding-bottom: 72px;
+    }
+    .signing-container .wrapper .col{
+        padding: 72px 82px 48px 82px;
+    }
+}
+
+
+@media screen and (max-width: 1199px) {
+    .form-style .content h2,
+    .title-block h2,
+    .signing-container .wrapper .col .content h2,
+    .signing-container .wrapper .col .content h2{
+        font-size: 44px;
+        line-height: 56px;
+    }
+    .form-style .screen .content{
+        max-width: 576px;
+    }
+    .form-style input{
+        padding: 0 0 10px 0;
+        font-size: 24px;
+        line-height: 24px;
+    }
+    .form-style .form-group .form-field{
+        margin-bottom: 20px;
+    }
+    .form-style .form2 .form-group{
+        width: 148px;
+    }
+    .group-radio .form-field label,
+    .form-style .form4 .form-group .col .form-field label,
+    .form-style .form5 .form-group .title p{
+        font-size: 21px;
+        line-height: 32px;
+    }
+
+    .form-style .form4 .form-group,
+    .form-style .form6 .form-group,
+    .form-style .form7 .form-group{
+        max-width: 700px;
+        width: 100%;
+    }
+    .form-style .form4 .form-group .col{
+        overflow: hidden;
+    }
+
+    .form-style .form5 .form-group{
+        max-width: 700px;
+        justify-content: space-between;
+    }
+    .form-style .form5 .form-group .col{
+        margin-bottom: 52px;
+        width: 300px !important;
+        margin-right: 0 !important;
+        padding-top: 0 !important;
+    }
+    .form-style .form-group .form-field .waist-group input{
+        width: 200px !important;
+    }
+
+    .form-style .form6 label img{
+        height: 200px;
+    }
+
+    .form-style .form7 label .text h3{
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 24px;
+    }
+    
+    .form-style .form9 .row .col:first-child h2{
+        text-align: left;
+    }
+    .form-style .form9 .form-group h3{
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .form-style .form9 .form-group .field-box input,
+    .form9 .form-group .col:first-child .field-box textarea {
+        padding-bottom: 6px !important;
+    }
+    .form9 .form-group .col:first-child .field-box textarea {
+        height: 84px;
+    }
+
+
+    /*  gifting start  */
+    .gifting-start .left {
+        max-width: 42%;
+    }
+    .gifting-start .right {
+        width: 50%;
+    }
+    .gifting-recc h2{
+        margin-bottom: 52px;
+    }
+    .gifting-recc .recc-box .recc-item .content h4{
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    /* login page */
+    .signing-container .wrapper .col {
+        padding: 52px 32px 48px 32px;
+    }
+      
+
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .container{
+        padding: 0 20px;
+    }
+    .form-style #chartPopup1 {
+        top: 170px;
+        left: 10%;
+    }
+    .form-style #chartPopup2 {
+        top: 250px;
+        right: -60px;
+    }
+    .form-style .content h2,
+    .title-block h2,
+    .signing-container .wrapper .col .content h2{
+        font-size: 32px;
+        line-height: 44px;
+    }
+    .title-block h2 br{
+        display: none;
+    }
+    .form-style .content p,
+    .title-block p,
+    .gifting-recc .recc-box .recc-item .content p{
+        font-size: 16px;
+        line-height: 21px;
+    }
+    .form-style input{
+        padding: 0 0 6px 0;
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .group-radio .form-field label,
+    .form-style .form4 .form-group .col .form-field label, .form-style .form5 .form-group .title p{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box,
+    .gift-redeem-container .gift-redeem .img-box{
+        width: calc(100% / 3);
+    }
+    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box:nth-child(2),
+    .gift-redeem-container .gift-redeem .img-box:nth-child(2){
+        margin: 0 16px;
+    }
+    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box img,
+    .gift-redeem-container .gift-redeem .img-box img{
+        width: 100%;
+    }
+    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box.logo,
+    .gift-redeem-container .gift-redeem .img-box.logo{
+        max-width: 200px;
+    }
+    form .gift-redeem-container .gift-redeem .img-box.logo{
+        max-width: 160px;
+    }
+    .form-style .form3 .form-group{
+        max-width: 400px;
+    }
+    .group-radio .form-field label{
+        padding: 8px 20px;
+    }
+    .form-style .form4 .form-group{
+        max-width: 600px;
+        width: 100%;
+    }
+    .form-style .form4 .form-group{
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-style .form5 .form-group {
+        max-width: 600px;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-style .form5 .form-group .col{
+        margin-bottom: 32px;
+    }
+    .form-style .form6 .form-group {
+        max-width: 420px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .form-style .form6 .form-group .form-field {
+        margin-bottom: 20px;
+        width: 170px;
+    }
+    .form-style .form6 .form-group .form-field label{
+        width: auto;
+    }
+
+    .form-style .form7 .form-group {
+        max-width: 520px;
+    }
+    .form-style .form7 .form-field{
+        width: 240px;
+    }
+    .form-style .form7 label img{
+        width: 180px;
+    }
+    .form-style .form7 label .text h3{
+        font-size: 20px;
+        line-height: 4px;
+        margin-bottom: 20px;
+    }
+    .form-style .form7 label .text p, .form-style .form7 label .text h4{           
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .form-style .form9 .content .col p{
+        padding-bottom: 16px;
+    }
+    .form-style .form9 .form-group h3{
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .form-style .form9 .row .col:first-child {
+        max-width: 350px;
+        width: 100%;
+        margin-right: 52px;
+    }
+    .form-style .form9 .row .col:last-child {
+        max-width: 350px;
+        width: 100%;
+    }
+    .form-style .form9 .form-group .field-box p{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .form-style .form9 .form-group .col:first-child .field-box p {
+        width: calc(100% - 200px) !important;
+    }
+    .form-style .form9 .form-group .col:first-child .field-box input, .form-style .form9 .form-group .col:first-child .field-box textarea {
+        width: 200px !important;
+    }
+    .form-style .form9 .form-group .col:last-child .field-box p {
+        width: calc(100% - 160px) !important;
+    }
+    .form-style .form9 .form-group .col:last-child .field-box input, .form-style .form9 .form-group .col:last-child .field-box textarea {
+        width: 160px !important;
+    }
+
+    /*  gifting start  */
+    .gifting-start{
+        padding: 52px 0 0px;
+    }
+    .gifting-start .gifting-best{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+    .gifting-start .gifting-best .col{
+        max-width: 80%;
+        width: 100%;
+    }
+    .gifting-start .gifting-best .left .order-detail-block{
+        max-width: 460px;
+        margin: 0 auto;
+    }
+    .gifting-start .right{
+        margin-top: 32px;
+        text-align: center;
+    }
+    .gifting-start .right .btn-container{
+        justify-content: center;
+    }
+    .gifting-recc h2{
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .gifting-recc{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .gifting-recc .recc-box{
+        flex-direction: column;
+    }
+    .gifting-recc .recc-box .recc-item{
+        max-width: 100%;
+        margin-bottom: 32px;
+    }
+    .gifting-recc .recc-box .recc-item span{
+        font-size: 44px;
+        line-height: 40px;
+        width: 26px;
+        margin-right: 16px;
+    }
+    .gifting-recc .recc-box .recc-item .content h4{
+        font-size: 21px;
+        line-height: 24px;
+        margin-bottom: 12px;
+    }
+    .gifting-type .gifttype-container{
+        flex-direction: column;
+    }
+    .gifting-type .left,
+    .gifting-type.screenCom .left,
+    .gifting-type.screen4 .left{
+        max-width: 100%;
+        padding: 0;
+        padding-bottom: 52px;
+    }
+    .gifting-type .right{
+        margin-top: 52px;
+    }
+    .giftingForm .button-group{
+        bottom: 0;
+    }
+    .title-block p,
+    .gifting-type.screen4 .left p{
+        margin-bottom:24px;
+        max-width: 100%;
+    }
+    .gifting-type.screen4 .right {
+        max-width: 700px;
+    }
+    .gifting-type .right label{
+        padding: 16px 0 !important;
+    }
+    .gifting-type .right label .text h3{
+        margin-bottom: 24px;
+    }
+    .gifting-type.screen4 .right .details-block .coll p{
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 16px;
+    }
+    .gifting-type.screen4 .right .details-block .coll .form-field input{
+        font-size: 16px !important;
+        line-height: 24px !important;
+    }
+    .gifting-type.screen4 .right .details-block .coll a{
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    
+
+    .form-style .btnSubmit{
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+
+     /* login page */
+     .signing-container .wrapper{
+         flex-direction: column;
+     }
+     .signing-container .wrapper .col{
+         width: auto;
+     }
+     .signing-container .wrapper .col {
+        padding: 52px 32px;
+    }
+    .form-style.signing-container .wrapper .col form input{
+        padding: 0 0 6px 0 !important;
+        font-size: 20px !important;
+        line-height: 20px !important;
+    }
+    .form-style.signing-container .wrapper .col form .form-btn,
+    .form-style.signing-container .wrapper .col:last-child form .form-btn{
+        margin-top: 24px;
+    }
+    .signing-container .wrapper .col .content p{
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    /* re-css only for login page */
+    .form-style .wppb-user-forms form p input,
+    .form-style.signing-container .wrapper .col form input{
+        padding: 0 0 6px 0 !important;
+        font-size: 20px !important;
+        line-height: 20px !important;
+    }
+    .form-style.signing-container .wrapper .col #wppb-register-user ul,
+    .form-style .wppb-user-forms #wppb-loginform{
+        max-width: 440px;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .form-style .chart-popup table tr th, .form-style .chart-popup table tr td{
+        font-size: 16px;
+        line-height: 20px;
+        padding: 4px 12px;
+    }
+    .form-style #chartPopup1 {
+        top: 170px;
+        left: 0;
+    }
+    .form-style #chartPopup2 {
+        top: 300px;
+        right: 27%;
+    }
+    .form-style .button-group .arrow{
+        top: auto;
+        bottom: 0;
+    }
+    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box.logo,
+    .gift-redeem-container .gift-redeem .img-box.logo{
+        max-width: 120px;
+    }
+    form .gift-redeem-container .gift-redeem .img-box.logo {
+        max-width: 100px;
+    }
+    .redeem-form form .form-group {
+        padding-bottom: 52px;
+    }
+    .group-radio .form-field label{
+        padding: 8px 0;
+    }
+
+    .form-style .form3 .form-group {
+        max-width: 340px;
+    }
+    .form-style .form5 .form-group{
+        max-width: 100%;
+    }
+
+    .form-style .form7 .form-group{
+        max-width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-style .form7 .form-field{
+        width: 360px;
+    }
+    .form-style .form7 label{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 4px;
+    }
+    .form-style .form7 label img {
+        width: auto;
+        height: 120px;
+        padding: 0;
+    }
+    .form-style .form7 label .text{
+        margin-left: 12px;
+        padding-top: 0;
+    }
+    .form-style .form7 label .text h3{
+        font-size: 18px;
+        line-height: 20px;
+        margin-bottom: 12px;
+        text-align: left;
+    }
+    .form-style .form7 label .text p, .form-style .form7 label .text h4 {
+        text-align: left;
+    }
+
+    .form-style .form8 .form-group{
+        max-width: 250px;
+    }
+
+    .form-style .form9 .row{
+        flex-direction: column;
+    }
+    .form-style .form9 .row .col:first-child{
+        max-width: 100%;
+        margin: 0;
+    }
+    .form-style .form9 .row .col:last-child {
+        max-width: 100%;
+        margin-top: 32px;
+    }
+    .form-style .form9 .form-group .col:first-child .field-box p {
+        width: calc(100% - 250px) !important;
+    }
+    .form-style .form9 .form-group .col:first-child .field-box input, .form-style .form9 .form-group .col:first-child .field-box textarea {
+        width: 250px !important;
+    }
+    .form-style .form9 .form-group .col:last-child .field-box p {
+        width: calc(100% - 250px) !important;
+    }
+    .form-style .form9 .form-group .col:last-child .field-box input, .form-style .form9 .form-group .col:last-child .field-box textarea {
+        width: 250px !important;
+    }
+    
+    /* gifting start */
+    .gifting-type .right .form-group{
+        flex-direction: column;
+    }
+    .gifting-type .right .form-field:first-child,
+    .gifting-type .right .form-field:last-child,
+    .gifting-type.screen3 .right .form-field:first-child,
+    .gifting-type.screen3 .right .form-field:last-child{
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+    .gifting-type .right label{
+        display: flex;
+        justify-content: space-between;
+    }
+    .gifting-type .right label img,
+    .gifting-type.screen3 .right label img{
+        padding: 0 12px;
+        height: 160px;
+    }
+    .gifting-type .right label .text{
+        padding: 0 12px 0 8px;
+        max-width: 286px;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 0;
+    }
+    .gifting-type .right label .text h3{
+        font-size: 24px;
+        line-height: 28px;
+        text-align: left;
+        margin-bottom: 16px;
+    }
+    .gifting-type .right label .text p{
+        text-align: left;
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .gifting-type.screen4 .right .details-block{
+        flex-direction: column;
+        position: relative;
+    }
+    .gifting-type.screen4 .right .details-block .coll{
+        max-width: 100%;
+        margin-bottom: 32px;
+    }
+    .gifting-type.screen4 .right .details-block .coll:last-child{
+        max-width: 100%;
+        margin-bottom: 72px;
+    }
+    .gifting-type.screen4 .right .details-block .coll .form-field textarea{
+        width: 100%;
+    }
+    .gifting-type.screen4 .right .details-block .coll .form-btn{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    
+
+}
+
+
+@media screen and (max-width: 480px) {
+    .form-style .content h2,
+    .title-block h2,
+    .signing-container .wrapper .col .content h2{
+        font-size: 27px !important;
+        line-height: 32px !important;
+        margin-bottom: 20px;
+    }
+    .form-style input{
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .form-style .form1 .content p{
+        padding: 0;
+    }
+    .ui-datepicker{
+        width: 300px !important;
+        margin-left: -5% !important;
+    }
+    .ui-datepicker td span, .ui-datepicker td a{
+        width: 25px !important;
+    }
+    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box:nth-child(2), .gift-redeem-container .gift-redeem .img-box:nth-child(2){
+        margin: 0 8px;
+    }
+    .form-style .screen .quiz-gallery-container .quiz-gallery .img-box.logo,
+    .gift-redeem-container .gift-redeem .img-box.logo{
+        max-width: 90px;
+    }
+    form .gift-redeem-container .gift-redeem .img-box.logo {
+        max-width: 72px;
+    }
+    .form-style .form3 .form-group{
+        max-width: 100%;
+    }
+    .form-style .form6 .form-group{
+        max-width: 300px;
+    }
+    .form-style .form6 .form-group .form-field {
+        margin: 0 auto 20px;
+        width: 120px;
+    }
+    .form-style .form6 .form-group .form-field label{
+        padding: 8px 4px;
+    }
+    .form-style .form6 label img {
+        height: 160px;
+    }
+
+    .form-style .form7 .form-field{
+        width: 100%;
+    }
+    .form-style .form7 label img{
+        height: 90px;
+    }
+    .form-style .form7 label .text h3{
+        font-size: 16px;
+        line-height: 18px;
+        margin-bottom: 8px;    
+    }
+    .form-style .form9 .form-group .field-box{
+        flex-direction: column;
+        margin-bottom: 24px;
+    }
+    .form-style .form9 .form-group .field-box p{
+        margin-bottom: 8px;
+    }
+    .form-style .form9 .form-group .col:first-child .field-box p {
+        width: 100% !important;
+    }
+    .form-style .form9 .form-group .col:first-child .field-box input, .form-style .form9 .form-group .col:first-child .field-box textarea {
+        width: 100% !important;
+    }
+    .form-style .form9 .form-group .col:last-child .field-box p {
+        width: 100% !important;
+    }
+    .form-style .form9 .form-group .col:last-child .field-box input, .form-style .form9 .form-group .col:last-child .field-box textarea {
+        width: 100% !important;
+    }
+
+    /* gifting start */
+    .gifting-start .gifting-best .col{
+        max-width: 100%;
+    }
+
+    .gifting-recc{
+        width: 100%;
+    }
+    .gifting-recc h2{
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .gifting-type .right label img, .gifting-type.screen3 .right label img{
+        height: 90px;
+    }
+    .gifting-type .right label .text h3 {
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 8px;
+    }
+
+
+    /* login page */
+    .signing-container .wrapper .col{
+        padding: 40px 20px;
+    }
+    .form-style.signing-container .wrapper .col form .form-group{
+        flex-direction: column;
+    }
+    .form-style.signing-container .wrapper .col form .form-field{
+        margin-right:0;
+        width: auto;
+    }
+
+    /* re-css only for login page */
+    .form-style .wppb-user-forms p, .form-style #wppb-register-user li{
+        margin-right: 0 !important;
+        width: 100%;
+    }
+    .form-style.signing-container .wrapper .col form .login-remember input{
+        font-size: 14px !important;
+        line-height: 14px !important;
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+}

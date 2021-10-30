@@ -1,0 +1,207 @@
+{
+	"brand": "Magnite",
+	"car_name": "Turbo CVT XV Pre",
+	"email": "NO.MAIL",
+	"data": {
+		"scene": {
+			"compressTexture": true,
+			"Load": "All",
+			"showInterior": true,
+			"LoadPng": false,
+			"tss": true,
+			"camera": {
+				"type": "orbit",
+				"AutoStop": true,
+				"camKeyEvent": false,
+				"exterior": {
+					"position": [
+                        0.5,
+                        1.463,
+                        5.996
+                    ],
+                    "positionMob": [
+						2.107,
+                        1.466,
+                        7.387
+                    ],
+                    "target": [
+                        -1.17,
+                        0.4,
+                        0
+                    ],
+					"camBetaLimit": 1.5,
+					"camMinZ": 0.0,
+					"camEnablePanning": false,
+					"camZoomSpeed": 0.01,
+					"camZoomMin": 4.0,
+					"camZoomMax": 8,
+					"fov": 0.5,
+					"mobFov": 0.4,
+					"autoRotate": false,
+					"inertia": 0.8,
+					"portraidRadius": 5.5,
+					"portraidAdditionalFov": 0.5
+				},
+				"interior": {
+					"position": [
+						3.138,
+                        1.15,
+                        0.01
+					],
+					"target": [
+						-1.4,
+                        0.96,
+                        0
+					],
+					"camBetaLimit": 3.4,
+					"camMinZ": 0.01,
+					"camEnablePanning": false,
+					"camZoomSpeed": 0.01,
+					"camZoomMin": 0.01,
+					"camZoomMax": 0.01,
+					"fov": 1.2,
+					"mobFov": 1.6,
+					"minfov": 0.65
+				},
+				"backSeat": {
+					"position": [
+                        -3.148553065674032,
+                        1.363186263566295,
+                        0.01
+                    ],
+                    "target": [
+                        -2.1,
+                        0.9,
+                        0
+                    ],
+                    "camBetaLimit": 3.4,
+                    "camMinZ": 0.01,
+                    "camEnablePanning": false,
+                    "camZoomSpeed": 0.01,
+                    "camZoomMin": 0.01,
+                    "camZoomMax": 0.01,
+                    "fov": "1.10",
+                    "mobFov": 1.4
+				}
+			},
+			"skyBox": {
+				"dayExterior": {
+					"enable": true,
+					"reflectionMap": "parking",
+					"reflectionMapRotationY": 0,
+					"exposure": 0.85,
+                    "contrast": 1.8,
+					"hue": 30,
+					"density": 0,
+					"saturation": 0,
+					"toneMapping": false
+				},
+				"interior": {
+					"enable": true,
+					"reflectionMap": "parking",
+					"reflectionMapRotationY": 75.31784005799359,
+                    "exposure": 1.1,
+                    "contrast": 1.75,
+					"hue": 0,
+					"density": 0,
+					"saturation": 0,
+					"toneMapping": false
+				},
+				"mainSkyBox": "parking",
+				"main_Rotation": 0,
+				"exposure": 18.6,
+				"contrast": 1.15
+			},
+			"Effects": {
+				"EffectsEnable": true,
+				"MultiSampleAntiAliasing": true,
+				"FXAA": true,
+				"toneMappingEnabled": false,
+				"Vignette": false,
+				"VignetteWeight": 10,
+				"glowkernel" : 16,
+				"glowTextureFixedSize": 1024,
+                "sceneClearColor": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0,
+                    "a": 1
+                }
+			},
+			"AutoStop": true
+		},
+		"hotspot": {
+			"exterior": {
+				"visible": true,
+				"position": [
+					-1.244,
+					0.7,
+					0.944
+				],
+				"size": 0.1
+			},
+			"interior": {
+				"visible": true,
+				"position": [
+					-0.760,
+					0.726,
+					0.588
+				],
+				"size": 0.05
+			},
+			"interiorbackseat": {
+				"visible": true,
+				"position": [
+					-2.296,
+					0.828,
+					0.159
+				],
+				"size": 0.05
+			},
+			"interiorfrontseat": {
+				"visible": true,
+				"position": [
+					-1.277,
+					0.809,
+					0.123
+				],
+				"size": 0.075
+			},
+			"lastSeat": {
+			  "visible": true,
+			  "position": [-5.1, 1.3, 0],
+			  "size": 0.07
+			},
+			"AccSize":0.1
+		},
+		"other": {
+			"nightMat": [],
+			"hdrMat": [
+			
+			],
+			"alphaIndex": [],
+			"WindShield": [
+				"MAGNITE_TURBO_CVT_XV_PRE_EX_WINDSHEILD_MAT"
+			],
+			"defaultSeatTag": "IN_DEFAULT_SEAT",
+			"changeColorMat": {
+				"body": [
+					"MAGNITE_TURBO_CVT_XV_PRE_EX_CARPAINT_MAT"
+				],
+				"roof": [
+					"MAGNITE_TURBO_CVT_XV_PRE_EX_CARPAINT_TWO_MAT"
+				]
+			}
+		},
+		"fog":{
+            "enable":true,
+            "fogStart" : 10,
+            "fogEnd" : 20,
+            "fogDensity":1.0,
+			"fogColor":"#e0ebf1",
+			"MobilefogStart" : 20,
+            "MobilefogEnd" : 30
+
+        }
+	}
+}

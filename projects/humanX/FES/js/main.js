@@ -1,26 +1,6 @@
 $(document).ready(function() {
-
+     
     
-    $('.inner-li-link').click(function(j) {
-        //console.log('header inner-link');
-         
-        var dropDown = $(this).find('.inner-dropdown');
-        $(this).closest('.dropdown').find('.inner-dropdown').not(dropDown).slideUp();
-        
-        if ($(this).hasClass('active')) {
-            //console.log('if');
-            $(this).removeClass('active');
-        } else {
-            //console.log('else');
-            $(this).closest('.dropdown').find('.inner-li-link.active').removeClass('active');
-            $(this).addClass('active');
-        }
-        
-        dropDown.stop(false, true).slideToggle();
-        //j.preventDefault();
-        
-      });
-
     // disable Scroll
     function disableScroll() {
         // Get the current page scroll position 
@@ -76,26 +56,66 @@ $(document).ready(function() {
 
 
     if ($(window).width() < 1025) {
-        
-        $('header ul.menu > .li-link').click(function(e) {
+        $('header ul.menu > .li-link').removeClass('active');
+        $('header ul.menu > .li-link > a, .plus').on("click", function(e) {
             //console.log('header link');
-            e.preventDefault();
-            $(this).siblings().removeClass('active');
-            $(this).toggleClass('active')
+            //e.preventDefault();
+            $(this).parents("li").siblings().removeClass('active');
+            $(this).parents("li").toggleClass('active')
 
-            if (!$(this).find('.dropdown').hasClass('active')) {
+            if (!$(this).parents("li").find('.dropdown').hasClass('active')) {
                 $('.dropdown').slideUp();
                 $('.link').removeClass('active');
                 // console.log('hi ====');   
             }
             // console.log('hello ====');
-            $(this).find('.link').toggleClass('active');
+            $(this).parents("li").find('.link').toggleClass('active');
             $('.dropdown').removeClass('active');
-            $(this).find('.dropdown').slideToggle();
-            $(this).find('.dropdown').toggleClass('active');
-            // console.log('exit ====');
+            $(this).parents("li").find('.dropdown').slideToggle();
+            $(this).parents("li").find('.dropdown').toggleClass('active');
+            //console.log('exit ====');
+
+
         });
     }
+
+    $('header ul.menu .inner-li-link').on("click", function(j) {
+        //alert('inner li');    
+        var dropDown = $(this).find('.inner-dropdown');
+        $(this).closest('.dropdown').find('.inner-dropdown').not(dropDown).slideUp();
+
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        } else {
+            $(this).closest('.dropdown').find('.inner-li-link.active').removeClass('active');
+            $(this).addClass('active');
+        }
+
+        dropDown.stop(false, true).slideToggle();
+        //j.preventDefault();
+
+    });
+
+
+    // map counter dropdown
+    if ($(window).width() < 1025) {
+        // var allPanels = $('.content-wrap .col .stats-container').hide();
+        $('.content-wrap .col .bigCounter').on("click", function() {
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+                $(this).siblings('.arrow').removeClass('active');
+                $(this).siblings('.stats-container').slideUp();
+            } else {
+                $(this).siblings('.arrow').addClass('active');
+                $(this).siblings('.stats-container').slideDown();
+                $(this).addClass('active');
+            }
+            return false;
+        });
+    }
+
+
+
 
     if ($('.sec-slider').length) {
         var owlHomeBanner = $('#homeBanner.owl-carousel');
@@ -171,19 +191,18 @@ $(document).ready(function() {
             }
         }
         $('.owl-dot').on('click', function() {
-            if(!$(this).hasClass('active'))
-            {
-                vid.pause();
-                vid.currentTime = 0;
-                clearInterval(playTimerInterval);
-                clearInterval(clearTO);
-                clearTO = setInterval(function() {
-                    owlHomeBanner.trigger('next.owl.carousel');
-                    //console.log('index if - ' + $('button.owl-dot.active').index());
-                }, 10000);
-            }
-        })
-        // videoTimer();
+                if (!$(this).hasClass('active')) {
+                    vid.pause();
+                    vid.currentTime = 0;
+                    clearInterval(playTimerInterval);
+                    clearInterval(clearTO);
+                    clearTO = setInterval(function() {
+                        owlHomeBanner.trigger('next.owl.carousel');
+                        //console.log('index if - ' + $('button.owl-dot.active').index());
+                    }, 10000);
+                }
+            })
+            // videoTimer();
 
         owlHomeBanner.on('changed.owl.carousel', function(e) {
             if (e.item.index == 3) {
@@ -402,7 +421,7 @@ $(document).ready(function() {
             mouseDrag: true,
 
             onInitialized: function() {
-                
+
                 // listen for keyboard input
                 $(document).on('keydown', function(event) {
                     //attach event listener
@@ -431,15 +450,23 @@ $(document).ready(function() {
         if (index != 1) {
             $('.sec-abt-bn .content').hide();
         }
-        
+
+        if ($(window).width() > 1024) {
+            $('#tab-1.active .svg-desktop').load('https://prodigedigital.com/projects/humanx/FES/images/work/our-approach/overview-infographic.svg');
+        } else {
+            $(".tab-drop-wrap ul.tabs span.line").remove();
+
+            $('#tab-1.active .svg-mobile').load('https://prodigedigital.com/projects/humanx/FES/images/work/our-approach/overview-infographic-mob.svg');
+        }
+
         var tabName = $(this).attr('data-name');
-        console.log('tabName', tabName);
+        //console.log('tabName', tabName);
         $('.bgImg .tab1').removeClass('active');
-        if(index = 1 && tabName === 'our-approach'){
-            console.log('hi, our-approach');
+        if (index = 1 && tabName === 'our-approach') {
+            //console.log('hi, our-approach');
             $('.bgImg .tab1').addClass('active');
         }
-        
+
 
         //tabLink();
         var tab_id = $(this).attr('data-tab');
@@ -448,6 +475,7 @@ $(document).ready(function() {
         var imgPath = 'https://prodigedigital.com/projects/humanx/FES/images/inner-banner/';
         //var imgPath = '../../images/inner-banner/';
         var imgURL = imgPath + tabLink + "-bn.jpg";
+        var circleimgURL = imgPath + tabLink + "-small.png";
         //console.log(imgURL);
 
         $('ul.tabs li').removeClass('active');
@@ -455,6 +483,7 @@ $(document).ready(function() {
         $('.dots-line-wrap ul.ul-line li').removeClass('active');
         $('.bgImg .container .content #bn-' + tab_id).removeClass('active');
         $(".bgImg").css("background-image", "url(" + imgURL + ")");
+        $(".smallImg").css("background-image", "url(" + circleimgURL + ")");
 
         $(this).addClass('active');
         $('.dots-line-wrap ul.ul-line #line-' + tab_id).addClass('active');
@@ -463,17 +492,16 @@ $(document).ready(function() {
 
         // var atag = $(this).find("a").text();
         // console.log(atag);
-        
+
     });
 
     if ($(window).width() < 1025) {
-
         $("ul.tabs").on("click", ".init", function() {
             $(this).closest("ul").children('li:not(.init)').toggle();
             $("ul.tabs").toggleClass('active');
             $('span.arrow').toggleClass('active');
         });
-        
+
         var allOptions = $("ul.tabs").children('li:not(.init)');
 
         $("ul.tabs").on("click", "li:not(.init)", function() {
@@ -484,19 +512,19 @@ $(document).ready(function() {
             $("ul.tabs").removeClass('active');
             allOptions.toggle();
 
-            if(!$(this).find('.tab-content').hasClass('active')) {
+            if (!$(this).find('.tab-content').hasClass('active')) {
                 $("ul.tabs li").removeClass('active').removeAttr("style");
                 //$('.tab-content').removeClass('active');
                 //console.log('hi ====');
             }
             //$('.tab-content').removeClass('active');
-            var tab_id = $(this).attr('data-list');     
-            console.log(tab_id);
+            var tab_id = $(this).attr('data-list');
+            //console.log(tab_id);
             $(this).removeClass('active').removeAttr("style");
             //$('.tab-content').removeClass('active').removeAttr("style");
             $(this).addClass('active');
-            $("#" + tab_id).fadeIn(500).addClass('active').removeAttr("style");      
-            
+            $("#" + tab_id).fadeIn(500).addClass('active').removeAttr("style");
+
         });
 
     }
@@ -602,119 +630,20 @@ $(document).ready(function() {
 
     }
 
-    // Funders Block
-    if ($('.funders-block').length) {
+    /* filter functionality for resources page starts */
+    if($(".filter-box").length) {
+        // $(".filter-box ul > li").each(function() {
+        //     if($(this).children("ul").length) {
+        //         $(this).addClass("has-child");
+        //     }
+        // });
 
-        $('.funders-block ul.itemList li ').on('click', function(e) {
-            e.preventDefault();
-            disableScroll();
+        $(document).on("click", ".filter-box .has-child > span" ,function() {
+            $(this).siblings("ul").slideToggle();
+            $(this).parent(".has-child").toggleClass("display-children");
+        })
 
-            if (!$(this).find('ul .funder-details').hasClass('active')) {
-                $(this).removeClass('active');
-                $('.funder-details').removeClass('active');
-                //  console.log('hi ====');
-            }
-            var index = 0;
-            index = $(this).index();
-            //console.log(index);
-
-
-            //$('body').toggleClass('active');
-            $('header').toggleClass('active');
-            $('.tab-drop-wrap').toggleClass('zindex');
-            $('.funders-container').toggleClass('is-visible');
-
-            var tab_id = $(this).attr('data-funder');
-            //console.log(tab_id);
-
-            $(this).removeClass('active');
-            $('.funder-details').removeClass('active').removeAttr("style");
-
-            $(this).addClass('active');
-            $("#" + tab_id).fadeIn(500).addClass('active').removeAttr("style");
-
-            // prev next 
-            var divs = $('ul .funder-details');
-            var now = index;
-            //console.log('now ---', now);            
-            //console.log(divs.length, now);
-
-
-            // $(document).on('keydown', function( event ) { 
-            //     if(event.keyCode == 37) {
-            //         btnPrev();
-            //     }
-            //     if(event.keyCode == 39) {
-            //         btnNext();
-            //     }
-            // });
-
-            $(".btn-popup-group .btn-next").on('click', function() {
-                btnNext();
-            });
-            $(".btn-popup-group .btn-prev").on('click', function() {
-                btnPrev();
-            });
-
-            function btnNext() {
-                divs.eq(now).removeClass('active').removeAttr("style");
-                //console.log('now ---', now);
-                now = (now + 1 < divs.length) ? now + 1 : 0;
-                divs.eq(now).addClass('active');
-                //console.log('next - ', now);
-            }
-
-            function btnPrev() {
-                divs.eq(now).removeClass('active').removeAttr("style");
-                now = (now > 0) ? now - 1 : divs.length - 1;
-                divs.eq(now).addClass('active');
-                //console.log('prev - ', now);
-            }
-
-        });
-
-        $('ul.funders-content .close').on('click', function(e) {
-            e.preventDefault();
-            liClick($(this));
-        });
-
-        $(document).bind('keydown', function(e) {
-            if (e.which == 27) {
-                liClick($(this));
-            }
-        });
-
-        function liClick() {
-            enableScroll();
-            //$('body').toggleClass('active');
-            $('header').removeClass('active');
-            $('.tab-drop-wrap').removeClass('zindex');
-            $('.funders-container').removeClass('is-visible');
-
-            $('ul.itemList li').removeClass('active').removeAttr("style");
-            $('.funder-details').removeAttr("style").removeClass('active');
-        }
-
-
-    }
-
-    // funder search
-    if ($('.sec-funders-tab').length) {
-        $('[data-search]').on('keyup', function() {
-            var searchVal = $(this).val();
-            var filterItems = $('[data-filter-item]');
-
-            if (searchVal != '') {
-                filterItems.addClass('hidden');
-                $('[data-filter-item][data-filter-name*="' + searchVal.toLowerCase() + '"]').removeClass('hidden');
-            } else {
-                filterItems.removeClass('hidden');
-            }
-        });
-    }
-
-
-
+    };
 
 
 });
@@ -740,6 +669,28 @@ $(window).load(function() {
         }
 
     });
+
+    if ($(window).width() > 1024) {
+        $('#tab-1.active .svg-desktop').load('https://prodigedigital.com/projects/humanx/FES/images/work/our-approach/overview-infographic.svg');
+    } else {
+        $('#tab-1.active .svg-mobile').load('https://prodigedigital.com/projects/humanx/FES/images/work/our-approach/overview-infographic-mob.svg');
+    }
+    
+
+    $(document).on("click", ".leaf", function() {
+        var datalink = $(this).attr('data-link');
+        // var tabUrl = window.location.href;
+        // var tabHref = tabUrl.split("?").shift();
+        //console.log(datalink, 'svg url', tabUrl, 'tabHref', tabHref);
+        //window.location = tabHref + '?' + datalink;
+        window.location = datalink + '.html';
+    });
+    
+
+    
+
+    
+
 
 
 
@@ -799,6 +750,8 @@ if ($('#counter').length) {
         }
 
     });
+    
+
 }
 
 // Map 
@@ -806,157 +759,172 @@ if ($('.sec-map').length) {
     var jsonData = [{
             //'id': 'Path-2',
             'id': 'Group-19',
-            'firstBlockFigure': '10,25,188',
-            'firstBlockText': 'Million acres restored',
-            'secondBlockFigure': '36,59,338',
-            'secondBlockText': 'Million lives impacted',
-            'thirdBlockFigure': '4,474',
+            'firstBlockFigure': '1,333',
+            'firstBlockText': 'Thousand acres restored',
+            'secondBlockFigure': '4,747',
+            'secondBlockText': 'Thousand lives impacted',
+            'thirdBlockFigure': '4,927',
             'thirdBlockText': 'Villages strengthened',
             'fourthBlockFigure': 'Go to Rajasthan',
-            'fourthBlockText': 'https://www.google.com/',
+            'fourthBlockText': 'javascript:;',
         },
         {
             //'id': 'Path-5',
             'id': 'Group-20',
-            'firstBlockFigure': '75,489',
-            'firstBlockText': 'Million acres restored',
-            'secondBlockFigure': '5,44,803',
-            'secondBlockText': 'Million lives impacted',
-            'thirdBlockFigure': '919',
+            'firstBlockFigure': '79',
+            'firstBlockText': 'Thousand acres restored',
+            'secondBlockFigure': '423',
+            'secondBlockText': 'Thousand lives impacted',
+            'thirdBlockFigure': '712',
             'thirdBlockText': 'Villages strengthened',
             'fourthBlockFigure': 'Go to Gujarat',
-            'fourthBlockText': 'https://www.google.com/',
+            'fourthBlockText': 'javascript:;',
         },
         {
             //'id': 'Path-6',
             'id': 'Group-21',
-            'firstBlockFigure': '65311',
-            'firstBlockText': 'Million acres restored',
-            'secondBlockFigure': '1,59,333',
-            'secondBlockText': 'Million lives impacted',
-            'thirdBlockFigure': '163',
+            'firstBlockFigure': '65',
+            'firstBlockText': 'Thousand acres restored',
+            'secondBlockFigure': '136',
+            'secondBlockText': 'Thousand lives impacted',
+            'thirdBlockFigure': '127',
             'thirdBlockText': 'Villages strengthened',
             'fourthBlockFigure': 'Go to Maharashtra',
-            'fourthBlockText': 'https://www.google.com/',
+            'fourthBlockText': 'javascript:;',
         },
         {
             //'id': 'Path-12',
             'id': 'Group-24',
-            'firstBlockFigure': '1,061,981',
-            'firstBlockText': 'Million acres restored',
-            'secondBlockFigure': '26,44,802',
-            'secondBlockText': 'Million lives impacted',
-            'thirdBlockFigure': '3,636',
+            'firstBlockFigure': '1,194',
+            'firstBlockText': 'Thousand acres restored',
+            'secondBlockFigure': '3,107',
+            'secondBlockText': 'Thousand lives impacted',
+            'thirdBlockFigure': '4,331',
             'thirdBlockText': 'Villages strengthened',
-            'fourthBlockFigure': 'Go to Andra Pradesh',
-            'fourthBlockText': 'https://www.google.com/',
+            'fourthBlockFigure': 'Go to Andhra Pradesh',
+            'fourthBlockText': 'javascript:;',
         },
         {
             //'id': 'Path-15',
             'id': 'Group-25',
-            'firstBlockFigure': '29,50,313',
-            'firstBlockText': 'Million acres restored',
-            'secondBlockFigure': '48,10,237',
-            'secondBlockText': 'Million lives impacted',
-            'thirdBlockFigure': '11,243',
+            'firstBlockFigure': '3,337',
+            'firstBlockText': 'Thousand acres restored',
+            'secondBlockFigure': '5,287',
+            'secondBlockText': 'Thousand lives impacted',
+            'thirdBlockFigure': '12,720',
             'thirdBlockText': 'Villages strengthened',
             'fourthBlockFigure': 'Go to Odisha',
-            'fourthBlockText': 'https://www.google.com/',
+            'fourthBlockText': 'javascript:;',
         },
         {
             //'id': 'Path-16',
             'id': 'Group-42',
-            'firstBlockFigure': '92,236',
-            'firstBlockText': 'Million acres restored',
-            'secondBlockFigure': '1,40,173',
-            'secondBlockText': 'Million lives impacted',
-            'thirdBlockFigure': '110',
+            'firstBlockFigure': '92',
+            'firstBlockText': 'Thousand acres restored',
+            'secondBlockFigure': '105',
+            'secondBlockText': 'Thousand lives impacted',
+            'thirdBlockFigure': '63',
             'thirdBlockText': 'Villages strengthened',
-            'fourthBlockFigure': 'Go to Nagaland',
-            'fourthBlockText': 'https://www.google.com/',
+            'fourthBlockFigure': 'Go to The North East',
+            'fourthBlockText': 'javascript:;',
         },
         {
             'id': 'Stroke-45',
-            'firstBlockFigure': '1,92,468',
-            'firstBlockText': 'Million acres restored',
-            'secondBlockFigure': '7,54,390',
-            'secondBlockText': 'Million lives impacted',
-            'thirdBlockFigure': '1,268',
+            'firstBlockFigure': '210',
+            'firstBlockText': 'Thousand acres restored',
+            'secondBlockFigure': '804',
+            'secondBlockText': 'Thousand lives impacted',
+            'thirdBlockFigure': '1,262',
             'thirdBlockText': 'Villages strengthened',
             'fourthBlockFigure': 'Go to Karnataka',
-            'fourthBlockText': 'https://www.google.com/',
+            'fourthBlockText': 'javascript:;',
         },
+
+        // {
+        //     'id': 'Stroke-7',
+        //     'firstBlockFigure': '29,455',
+        //     'firstBlockText': 'Million acres restored',
+        //     'secondBlockFigure': '25,007',
+        //     'secondBlockText': 'Million lives impacted',
+        //     'thirdBlockFigure': '88',
+        //     'thirdBlockText': 'Villages strengthened',
+        //     'fourthBlockFigure': 'Go to Uttaranchal',
+        //     'fourthBlockText': 'javascript:;',
+        // },
 
         {
             'id': 'Stroke-7',
-            'firstBlockFigure': '29,455',
-            'firstBlockText': 'Million acres restored',
-            'secondBlockFigure': '25,007',
-            'secondBlockText': 'Million lives impacted',
-            'thirdBlockFigure': '88',
+            'firstBlockFigure': '369',
+            'firstBlockText': 'Thousand acres restored',
+            'secondBlockFigure': '564',
+            'secondBlockText': 'Thousand lives impacted',
+            'thirdBlockFigure': '1,255',
             'thirdBlockText': 'Villages strengthened',
-            'fourthBlockFigure': 'Go to Uttaranchal',
-            'fourthBlockText': 'https://www.google.com/',
+            'fourthBlockFigure': 'Go to Jharkhand',
+            'fourthBlockText': 'javascript:;',
         },
 
         {
             'id': 'Group-8',
-            'firstBlockFigure': '13,63,498',
-            'firstBlockText': 'Million acres restored',
-            'secondBlockFigure': '1,23,625',
-            'secondBlockText': 'Million lives impacted',
-            'thirdBlockFigure': '1,761',
+            'firstBlockFigure': '1,883',
+            'firstBlockText': 'Thousand acres restored',
+            'secondBlockFigure': '239',
+            'secondBlockText': 'Thousand lives impacted',
+            'thirdBlockFigure': '3,399',
             'thirdBlockText': 'Villages strengthened',
-            'fourthBlockFigure': 'Go to Himachal',
-            'fourthBlockText': 'https://www.google.com/',
+            'fourthBlockFigure': 'Go to Himachal Pradesh',
+            'fourthBlockText': 'javascript:;',
         },
 
         {
             //'id': 'Stroke-26',
             'id': 'Group-41',
-            'firstBlockFigure': '1,14,382',
-            'firstBlockText': 'Million acres restored',
-            'secondBlockFigure': '1,49,461',
-            'secondBlockText': 'Million lives impacted',
-            'thirdBlockFigure': '424',
+            'firstBlockFigure': '122',
+            'firstBlockText': 'Thousand acres restored',
+            'secondBlockFigure': '137',
+            'secondBlockText': 'Thousand lives impacted',
+            'thirdBlockFigure': '344',
             'thirdBlockText': 'Villages strengthened',
             'fourthBlockFigure': 'Go to Madhya Pradesh',
-            'fourthBlockText': 'https://www.google.com/',
+            'fourthBlockText': 'javascript:;',
         }
     ]
 
     window.onload = function() {
         var svgHotSpotId = "";
-        document.addEventListener("click", function(e) {
-            var getParentNode = e.target.nodeName;
+        // document.addEventListener("click", function(e) {
+        //     var getParentNode = e.target.nodeName;
 
-            if (getParentNode.indexOf("polygon") == -1) {
-                if (e.target.id == "Stroke-26" || e.target.id == "Combined-Shape") {
-                    return false;
-                }
-                document.querySelectorAll(".mapData")[0].style.opacity = 0;
-                document.querySelectorAll(".mapData")[0].style.zIndex = "0";
-            }
-        });
+        //     if (getParentNode.indexOf("polygon") == -1) {
+        //         if (e.target.id == "Stroke-26" || e.target.id == "Combined-Shape") {
+        //             return false;
+        //         }
+        //         document.querySelectorAll(".mapData")[0].style.opacity = 0;
+        //         document.querySelectorAll(".mapData")[0].style.zIndex = "0";
+        //     }
+        // });
+
 
         document.querySelectorAll(".map-wrapper")[0].getElementsByTagName("svg")[0].addEventListener("click", function(e) {
-            console.log(e.target.id + "|||" + e.target.parentNode.id);
+            //console.log(e);
+            //console.log(e.target.id + "|||" + e.target.parentNode.id);
             var targetId = e.target.parentNode.id;
             if (svgHotSpotId != targetId) {
                 svgHotSpotId = targetId;
             } else {
                 return false;
             }
-            // console.log(svgHotSpotId);
+            //console.log(svgHotSpotId);
             //console.log(targetId);
             //console.log(e.clientX);
             var hotspotClickData = "";
             hotspotClickData = jsonData.filter(function(i) {
                 return i.id == targetId;
             });
-            // console.log(hotspotClickData);
+            //console.log(hotspotClickData);
             if (hotspotClickData == "") {
                 document.querySelectorAll(".mapData")[0].style.opacity = 0;
+                $(".map-inner-wrap > svg").find(".mapHighlight").removeClass("mapHighlight");
                 return false;
             }
 
@@ -990,9 +958,10 @@ if ($('.sec-map').length) {
 
             }
 
-            // console.log(e);
+            //console.log(e);
             document.querySelectorAll(".mapData")[0].style.opacity = 1;
-            document.querySelectorAll(".mapData")[0].style.top = e.offsetY - document.querySelectorAll(".mapData")[0].clientHeight - 15 + "px";
+            // document.querySelectorAll(".mapData")[0].style.top = e.offsetY - document.querySelectorAll(".mapData")[0].clientHeight - 15 + "px";
+            document.querySelectorAll(".mapData")[0].style.top = e.layerY - document.querySelectorAll(".mapData")[0].clientHeight - 15 + "px";
             // console.log(e);
             // console.log(window.innerWidth + "||||" + e.clientX + "|||" + document.querySelectorAll(".mapData")[0].offsetWidth);
 
@@ -1001,15 +970,17 @@ if ($('.sec-map').length) {
             var mapdataWidth = document.querySelectorAll(".mapData")[0].offsetWidth;
 
             if ((winWidth - clientx) > mapdataWidth) {
-                document.querySelectorAll(".mapData")[0].style.left = e.offsetX - 24 + "px";
+                document.querySelectorAll(".mapData")[0].style.left = e.layerX - 24 + "px";
                 document.querySelectorAll(".mapData")[0].style.zIndex = "2";
                 document.querySelectorAll(".mapData")[0].classList.remove("mystyle");
             } else {
-                document.querySelectorAll(".mapData")[0].style.left = (e.offsetX - mapdataWidth) + 24 + "px";
+                // document.querySelectorAll(".mapData")[0].style.left = (e.offsetX - mapdataWidth) + 24 + "px";
+                document.querySelectorAll(".mapData")[0].style.left = (e.layerX - mapdataWidth) + 24 + "px";
                 document.querySelectorAll(".mapData")[0].style.zIndex = "2";
                 document.querySelectorAll(".mapData")[0].classList.add("mystyle");
             }
 
+            $(".map-inner-wrap > svg").find("#" + e.target.parentNode.id).addClass("mapHighlight").siblings("g").removeClass("mapHighlight");
         });
     }
 }

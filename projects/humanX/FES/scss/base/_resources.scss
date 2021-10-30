@@ -1,0 +1,848 @@
+section.sec-resources-bn{
+    background: url('../../images/inner-banner/impact-bn.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+    &.banner-circle{
+        .inner-wrap{        
+            .circle-img{
+                background: url(../../images/inner-banner/impact-small.png);
+                background-size: cover;
+                background-position: center center;
+            }
+        }
+    }
+    
+}
+
+// filter section 
+
+section.sec-resources-filter{
+    padding: 30px 0 0 0;
+    z-index: 55;
+    margin-bottom: 50px;
+    
+    .container{
+        max-width: 1030px;
+
+        .wrapper{
+            padding: 0;
+            position: relative;
+
+            & > h2 {
+                font-family: 'Noto Serif JP', serif;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 34px;
+                color: #004950;
+            }
+
+            .filter-wrapper {
+                display: flex;
+                padding-top: 35px;
+            
+                .filter-wrapper-container {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+            
+                    .filter-col-1 {
+                        width: 230px;
+
+                        & > h3 {
+                            font-size: 14px;
+                            line-height: 19px;
+                            text-transform: uppercase;
+                            color: rgba(0, 0, 0, 0.8);
+                            padding-bottom: 30px;
+                            display: flex;
+                            justify-content: space-between;
+                            
+                            .cta-clear-filter {
+                                text-transform: none;
+                                color: #004950;
+                            }
+                        }
+
+                        .filter-box {
+                            background-color: rgba(219,169,96,0.1);
+                            padding: 20px 0;
+
+                            & > ul {
+                                & > li {
+                                    border-top: 1px solid rgba(0, 0, 0, 0.1);
+                                    padding: 20px;
+                                    position: relative;
+                                    display: flex;
+                                    flex-wrap: wrap;
+
+                                    &:first-child {
+                                        padding-top: 0;
+                                        border-top: none
+                                    }
+
+                                    &:last-child {
+                                        padding-bottom: 0;
+                                    }
+
+                                    label {
+                                        font-size: 14px;
+                                        line-height: 19px;
+                                        text-transform: uppercase;
+                                        color: rgba(0, 0, 0, 0.8);
+                                        display: inline-block;
+                                        width: 85%;
+                                        // padding-right: 18px;
+                                        
+                                        & ~ span {
+                                            display: block;
+                                            cursor: pointer;
+                                            width: 15%;
+                                            height: 20px;
+                                            position: relative;
+                                            // border: 1px solid red;
+                                            
+                                            &:before {
+                                                content: '';
+                                                position: absolute;
+                                                right: 6px;
+                                                top: 3px;
+                                                width: 10px;
+                                                height: 10px;
+                                                border-top: 2px solid #696969;
+                                                border-right: 2px solid #696969;
+                                                transform: rotate(135deg);
+                                                transition: 0.5s all ease;
+                                                display: none;
+                                            }
+                                        }
+                                    }
+
+                                    &.has-child {
+                                        & > label {
+                                            & ~ span {
+                                                &:before {
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &.display-children {
+                                        & > label {
+                                            & ~ span {
+                                                &:before {
+                                                    transform: rotate(-45deg);
+                                                }
+                                                
+                                            }
+                                        }
+                                    }
+
+                                    // &.selected {
+                                    //     label {
+                                    //         & ~ span {
+                                    //             transform: translateY(-55%) rotate(135deg);
+                                    //         }
+                                    //     }
+                                    // }
+
+                                    &:not(:first-child) {
+                                        ul {
+                                            display: none;
+                                        }
+                                    }
+
+                                    ul {
+                                        padding-top: 20px;
+                                        width: 100%;
+                                        // display: none;
+
+                                        & > li {
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            align-items: center;
+                                            position: relative;
+                                            cursor: pointer;
+
+                                            &:not(:first-child) {
+                                                margin-top: 13px;
+                                            }
+
+                                            &.display-children {
+                                                & > label {
+                                                    & ~ span {
+                                                        &:before {
+                                                            transform: rotate(-45deg);
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            label {
+                                                font-size: 13px;
+                                                line-height: 16px;
+                                                color: rgba(0, 0, 0, 0.8);
+                                                padding-left: 23px;
+                                                text-transform: none;
+                                                cursor: pointer;
+                                                position: relative;
+                                                word-wrap: break-word;
+
+                                                & > i {
+                                                    position: absolute;
+                                                    top: 50%;
+                                                    left: 0;
+                                                    width: 14px;
+                                                    height: 14px;
+                                                    border: 1px solid #6A7070;
+                                                    border-radius: 3px;
+                                                    background-color: #fff;
+                                                    transform: translateY(-50%);
+                                                    transition: 0.5s all ease;
+    
+                                                    &:before {
+                                                        content: '';
+                                                        position: absolute;
+                                                        left: 1px;
+                                                        bottom: -2px;
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        background: url('../../images/icon-tick.svg') no-repeat 0 0;
+                                                    }
+                                                }
+
+                                                & ~ span {
+                                                    &:before {
+                                                        width: 8px;
+                                                        height: 8px;
+                                                        transform: rotate(135deg);
+                                                    }
+                                                }
+                                            }
+
+                                            input[type=checkbox] {
+                                                width: 14px;
+                                                height: 14px;
+                                                border: 1px solid #6A7070;
+                                                border-radius: 3px;
+                                                appearance: auto;
+                                                visibility: hidden;
+                                                position: absolute;
+                                                top: 0;
+                                                left: 0;
+
+                                                &:checked {
+                                                    & ~ label {
+                                                        // font-weight: 600;
+
+                                                        & > i {
+                                                            background-color: #004950;
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            & > ul {
+                                                padding-left: 20px;
+                                                padding-bottom: 7px;
+                                                padding-top: 13px;
+                                                display: none;
+                                            }
+
+                                            &.has-child {
+                                                & > label {
+                                                    & ~ span {
+                                                        &:before {
+                                                            display: block;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+            
+                    .filter-col-2 {
+                        width: 800px;
+                        overflow: hidden;
+                        padding-left: 30px;
+                        padding-top: 49px;
+
+                        .filtered-value-wrapper {
+                            margin-bottom: 30px;
+                            display: none;
+                            
+                            ul {
+                                display: flex;
+                                flex-wrap: wrap;
+
+                                li {
+                                    border: 1px solid #004950;
+                                    border-radius: 20px;
+                                    font-size: 12px;
+                                    letter-spacing: 0.1px;
+                                    color: #004950;
+                                    padding: 3px 25px 3px 10px;
+                                    position: relative;
+                                    margin-right: 8px;
+                                    margin-bottom: 8px;
+                                    text-transform: capitalize;
+                                    cursor: pointer;
+
+                                    & > span {
+                                        position: absolute;
+                                        right: 2px;
+                                        top: 50%;
+                                        width: 10px;
+                                        height: 10px;
+                                        transform: translateY(-50%);
+
+                                        &:before,
+                                        &:after {
+                                            content: '';
+                                            position: absolute;
+                                            width: 1px;
+                                            height: 100%;
+                                            background-color: #004950;
+                                            top: 0;
+                                            left: 0;
+                                        }
+
+                                        &:before {
+                                            transform: rotate(135deg);
+                                        }
+
+                                        &:after {
+                                            transform: rotate(45deg);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+            
+                        .display-grid {
+                            display: grid;
+                            grid-template-columns: auto auto auto;
+                            grid-row-gap: 30px;
+            
+                            .box {
+                                width: 265px;
+                                padding-right: 25px;
+                                padding-bottom: 85px;
+                                position: relative;
+                                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+                                &.display-box {
+                                    display: block !important;
+                                }
+
+                                &:last-child {
+                                    border-bottom: none;
+                                }
+
+                                &.hide-box {
+                                    display: none !important;
+                                }
+
+                                .img-box {
+                                    margin-bottom: 20px;
+                                }
+
+                                .description {
+                                    margin-bottom: 29px;
+                                }
+
+                                .description,
+                                .cta-read-more {
+                                    font-size: 14px;
+                                    line-height: 19px;
+                                    letter-spacing: 0.1px;
+                                    color: rgba(0, 0, 0, 0.8);
+                                }
+
+                                .location-year-readmore-wrapper {
+                                    position: absolute;
+                                    bottom: 35px;
+                                    left: 0;
+                                    display: flex;
+                                    flex-wrap: wrap;
+
+                                    li {
+                                        font-size: 13px;
+                                        line-height: 18px;
+                                        letter-spacing: 0.1px;
+                                        color: #757575;
+                                        position: relative;
+                                        margin-left: 8px;
+                                        padding-left: 11px;
+
+                                        &:before {
+                                            content: '';
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 0;
+                                            width: 3px;
+                                            height: 3px;
+                                            border-radius: 50%;
+                                            background-color: #808080;
+                                            transform: translateY(-50%);
+                                        }
+                                    }
+
+                                    .location {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        
+                                        li:first-child {
+                                            margin-left: 0;
+                                            padding-left: 0;
+
+                                            &:before {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+
+                                    .cta-read-more {
+                                        width: 100%;
+                                        color: #004950;
+                                        margin-top: 10px;
+                                        display: flex;
+                                        align-items: center;
+
+                                        & > span {
+                                            display: inline-block;
+                                            width: 21px;
+                                            height: 21px;
+                                            border: 1px solid #004950;
+                                            border-radius: 50%;
+                                            position: relative;
+                                            margin-left: 10px;
+                                            transition: 0.5s all ease;
+
+                                            &:before,
+                                            &:after {
+                                                content: '';
+                                                position: absolute;
+                                                top: 50%;
+                                                right: 4px;
+                                            }
+                                            
+                                            &:before {
+                                                transform: translateY(-50%) rotate(45deg);
+                                                width: 8px;
+                                                height: 8px;
+                                                border-top: 1px solid #004950;
+                                                border-right: 1px solid #004950;
+                                                transition: 0.5s all ease;
+                                            }
+
+                                            &:after {
+                                                width: 60%;
+                                                height: 1px;
+                                                background-color: #004950;
+                                                transition: 0.5s all ease;
+                                            }
+
+                                            &:hover {
+                                                background-color: #004950;
+
+                                                &:before {
+                                                    border-color: #fff;
+                                                }
+
+                                                &:after {
+                                                    background-color: #fff;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .no-records-to-display-wrapper {
+                            display: none;
+
+                            & > p {
+                                color: #757575;
+                                font-style: italic;
+                                font-size: 25px;
+                            }
+                        }
+
+                        .pagination-wrapper {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            border-top: 1px solid rgba(0, 0, 0, 0.1);
+                            padding-top: 20px;
+
+                            .pagination-count-wrapper {
+                                font-size: 13px;
+                                line-height: 18px;
+                                letter-spacing: 0.1px;
+                                color: #757575;
+                            }
+
+                            .pagination-box {
+                                width: 165px;
+                                margin-right: 35px;
+                                border: 1px solid #E5EAEE;
+                                border-right-color: transparent;
+                                border-radius: 3px;
+
+                                &.width-auto {
+                                    width: auto;
+                                }
+
+                                .pagination-pages {
+                                    // display: flex;
+                                    // border: 1px solid #E5EAEE;
+                                    // border-right-color: transparent;
+                                    // border-radius: 3px;
+    
+                                    .page {
+                                        padding: 5px 12px;
+                                        font-size: 12px;
+                                        line-height: 16px;
+                                        color: #757575;
+                                        cursor: pointer;
+                                        float: left;
+                                        border-right: 1px solid #E5EAEE;
+    
+                                        &.active {
+                                            color: #000000;
+                                            background-color: #D1EEDF;
+                                        }
+                                        
+                                    }
+
+                                    .owl-nav {
+                                        position: absolute;
+                                        width: 128%;
+                                        top: 0;
+                                        transform: translateX(-13%);
+
+                                        & > button {
+                                            position: absolute;
+                                            top: 0;
+                                            width: 26px;
+                                            height: 26px;
+                                            // border: 1px solid #E5EAEE;
+
+                                            &:before {
+                                                content: '';
+                                                position: absolute;
+                                                top: 30%;
+                                                left: 0;
+                                                width: 15px;
+                                                height: 15px;
+                                                border-top: 1px solid #004950;
+                                                border-right: 1px solid #004950;
+                                            }
+                                            
+                                            &:first-child {
+                                                &:before {
+                                                    transform: rotate(-135deg);
+                                                }
+                                                
+                                                // border: 1px solid #E5EAEE;
+                                                // border-right-color: transparent;
+                                            }
+
+                                            &:last-child {
+                                                right: -15px;
+                                                
+                                                &:before {
+                                                    right: 0;
+                                                    transform: rotate(45deg);
+                                                }
+                                                
+                                                // border: 1px solid #E5EAEE;
+                                                // border-left-color: transparent;
+                                            }
+
+                                            & > span {
+                                                color: #004950;
+                                                font-size: 35px;
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+body.display-popup {
+    .popup-wrapper {
+        display: block;
+
+        .close-popup {
+            transform: translateY(0);
+        }
+
+        .fixed-overlay {
+            top: 0;
+        }
+    }
+}
+
+.popup-wrapper {
+    display: none;
+
+    .close-popup {
+        position: fixed;
+        top: 40px;
+        right: 40px;
+        background-color: #fff;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        z-index: 1000;
+        cursor: pointer;
+        transform: translateY(-100px);
+
+        &:hover {
+            &:before,
+            &:after {
+                background-color: rgba(0, 0, 0, 1);
+            }
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 20%;
+            width: 2px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: 0.5s all ease;
+        }
+
+        &:before {
+            left: 48%;
+            transform: rotate(-45deg);
+        }
+
+        &:after {
+            right: 48%;
+            transform: rotate(45deg);
+        }
+    }
+
+    .fixed-overlay {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 100%;
+        z-index: 999;
+        transition: 0.5s all ease;
+    }
+
+    .video-wrapper {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 1000;
+    }
+}
+    
+@media screen and (max-width : 768px){
+    section.sec-resources-bn.banner-circle .circle-container {
+        bottom: 50%;
+        transform: translate(0px, 50%);
+    }
+}
+
+@media screen and (max-width : 480px){
+    section.sec-resources-bn.banner-circle {
+        height: 435px;
+    }
+    section.sec-resources-bn.banner-circle .inner-wrap .circle-img{
+        width: 307px;
+        height: 307px;
+    }
+    section.sec-resources-bn.banner-circle .circle-container .circle-line-wrap{
+        height: 344px;
+        width: 344px;
+        bottom: -16px;
+    }
+    
+}
+    
+
+
+
+@media screen and (max-width : 640px){
+    section.sec-resources-filter {
+        .container {
+            .wrapper {
+                .filter-wrapper {
+                    .filter-wrapper-container {
+                        .filter-col-1 {
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #fff;
+                            z-index: 1000;
+                            overflow: auto;
+
+                            .close-filter {
+                                display: block;
+                                padding: 30px 0;
+                                position: relative;
+
+                                span {
+                                    position: absolute;
+                                    right: 15px;
+                                    top: 15px;
+                                    width: 30px;
+                                    height: 30px;
+                                    background-color: #fff;
+                                    box-shadow: 0px 4px 8px rgba(206, 206, 206, 0.3);
+                                    border-radius: 50%;
+
+                                    &:before,
+                                    &:after {
+                                        content: '';
+                                        position: absolute;
+                                        top: 20%;
+                                        width: 2px;
+                                        height: 20px;
+                                        background-color: rgba(0, 0, 0, 0.5);
+                                        transition: 0.5s all ease;
+                                    }
+
+                                    &:before {
+                                        left: 48%;
+                                        transform: rotate(-45deg);
+                                    }
+
+                                    &:after {
+                                        right: 48%;
+                                        transform: rotate(45deg);
+                                    }
+                                }
+                            }
+
+                            h3 {
+                                padding: 0 20px 15px 20px;
+                            }
+
+                            .filter-box {
+                                height: 100%;
+                                background-color: #D1EEDF;
+
+                                & > ul {
+                                    position: relative;
+
+                                    & > li {
+                                        border-top-color: transparent;
+                                        position: static;
+
+                                        &.display-children {
+                                            ul {
+                                                z-index: 1;
+                                            }
+                                        }
+
+                                        ul {
+                                            position: absolute;
+                                            width: 65%;
+                                            right: 0;
+                                            top: -20px;
+                                            padding: 20px;
+                                            background-color: #fff;
+                                            height: 100vh;
+                                            z-index: -1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        /* Filter Column 2 starts */
+                        .filter-col-2 {
+                            width: 100%;
+                            padding: 0;
+                    
+                            .filtered-value-wrapper {
+                                display: none !important;
+                            }
+
+                            .display-grid {
+                                grid-template-columns: auto;
+                                grid-row-gap: 0;
+
+                                .box {
+                                    width: 90%;
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    padding-right: 0;
+                                    padding-bottom: 60px;
+                                    margin: 0 auto 25px auto;
+
+                                    &.display-box {
+                                        display: flex !important;
+                                    }
+
+                                    .img-box {
+                                        overflow: hidden;
+                                        margin-bottom: 10px;
+
+                                        & > img {
+                                            width: fit-content;
+                                            width: -moz-fit-content;
+                                            max-width: 100%;
+                                        }
+                                    }
+
+                                    .description {
+                                        margin-bottom: 15px;
+                                    }
+
+                                    .location-year-readmore-wrapper {
+                                        bottom: 10px;
+                                    }
+                                }
+                            }
+
+                            .pagination-wrapper {
+                                border-top-color: transparent;
+                                padding-top: 0;
+                            }
+                        }
+                        /* Filter Column 2 ends */
+                    }
+                }
+            }
+        }
+    }
+
+
+    
+}
