@@ -1273,7 +1273,7 @@ secFiveGetStarted = {
 
 function scrollAnimStart() {
     
-    .to('.scrollDownHolder', 1.5, {
+    homeScreenAnimation.to('.scrollDownHolder', 1.5, {
         // width: '15px',
         ease: Power4.easeIn,
         onComplete: function() {
