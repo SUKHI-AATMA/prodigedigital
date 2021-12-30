@@ -2578,7 +2578,20 @@ section.thankyou .coll img .desc p.link a {
 .footer_copyright .float-sm-right ul li:hover a {
   color: #fff;
 }
+.footer_copyright .container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
 
+.footer_copyright .container a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+.footer_copyright .container {flex-direction: column;justify-content: center;align-items: center;}
+}
 /* End Footer Area css
 ============================================================================================ */
 /*---------------------------------------------------- */

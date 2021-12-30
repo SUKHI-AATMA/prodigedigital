@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +25,10 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155738782-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-155738782-1');
@@ -34,22 +36,22 @@
     <script>
         window.addEventListener('load', e => {
             if ("serviceWorker" in navigator) {
-              if (navigator.serviceWorker.controller) {
-                console.log("[PWA Builder] active service worker found, no need to register");
-              } else {
-                // Register the service worker
-                navigator.serviceWorker
-                  .register("pwabuilder-sw.js", {
-                    scope: "./"
-                  })
-                  .then(function (reg) {
-                    console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
-                  });
-              }
+                if (navigator.serviceWorker.controller) {
+                    console.log("[PWA Builder] active service worker found, no need to register");
+                } else {
+                    // Register the service worker
+                    navigator.serviceWorker
+                        .register("pwabuilder-sw.js", {
+                            scope: "./"
+                        })
+                        .then(function(reg) {
+                            console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+                        });
+                }
             }
         });
     </script>
-    
+
     <link rel='manifest' href='/manifest.json'>
 </head>
 
@@ -89,33 +91,48 @@ Blog
     <section class="main_slider_area">
         <div id="main_slider" class="rev_slider" data-version="5.3.1.6">
             <ul>
-                <li data-index="rs-1587" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                <li data-index="rs-1587" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Creative"
+                    data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                     <!-- LAYER NR. 1 -->
                     <div class="slider_text_box">
-                        <div class="tp-caption tp-resizeme first_text" data-x="['left','left','left','left','30','center']" data-hoffset="['0','80','80','0']" data-y="['top','top','top','top']" data-voffset="['350','350','350','250','180','180']" data-fontsize="['50','50','50','42','42','32']" data-lineheight="['62','62','62','52','52','42']" data-width="['none']" data-height="none" data-whitespace="nowrape" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]" data-textAlign="['left','left','left','left','left','center']">We help businesses <br>create unique online <br>experiences</div>
-                        <div class="tp-caption tp-resizeme single_img" data-x="['right','right','right','right','right','right']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['180','180','180','180','0']" data-fontsize="['65','65','60','40','25']" data-lineheight="['75','75','75','50','35']" data-width="[none]" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]" data-textAlign="['left','left','left','left','left','center']">
+                        <div class="tp-caption tp-resizeme first_text" data-x="['left','left','left','left','30','center']" data-hoffset="['0','80','80','0']" data-y="['top','top','top','top']" data-voffset="['350','350','350','250','180','180']" data-fontsize="['50','50','50','42','42','32']"
+                            data-lineheight="['62','62','62','52','52','42']" data-width="['none']" data-height="none" data-whitespace="nowrape" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
+                            data-textAlign="['left','left','left','left','left','center']">We help businesses <br>create unique online <br>experiences</div>
+                        <div class="tp-caption tp-resizeme single_img" data-x="['right','right','right','right','right','right']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['180','180','180','180','0']" data-fontsize="['65','65','60','40','25']"
+                            data-lineheight="['75','75','75','50','35']" data-width="[none]" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
+                            data-textAlign="['left','left','left','left','left','center']">
                             <img src="img/home-slider/slider-1.svg" alt="">
                         </div>
                     </div>
                 </li>
-                <li data-index="rs-1588" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                <li data-index="rs-1588" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Creative"
+                    data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                     <!-- LAYERS -->
                     <!-- LAYERS -->
                     <!-- LAYER NR. 1 -->
                     <div class="slider_text_box">
-                        <div class="tp-caption tp-resizeme first_text" data-x="['left','left','left','left','30','center']" data-hoffset="['0','80','80','0']" data-y="['top','top','top','top']" data-voffset="['350','350','350','250','180','180']" data-fontsize="['50','50','50','42','42','32']" data-lineheight="['62','62','62','52','52','42']" data-width="['none']" data-height="none" data-whitespace="nowrape" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]" data-textAlign="['left','left','left','left','left','center']">Crafting beautiful <br>brands & engaging <br>websites</div>
-                        <div class="tp-caption tp-resizeme single_img" data-x="['right','right','right','right','right','right']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['180','180','180','180','0']" data-fontsize="['65','65','60','40','25']" data-lineheight="['75','75','75','50','35']" data-width="['none']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]" data-textAlign="['left','left','left','left','left','center']">
+                        <div class="tp-caption tp-resizeme first_text" data-x="['left','left','left','left','30','center']" data-hoffset="['0','80','80','0']" data-y="['top','top','top','top']" data-voffset="['350','350','350','250','180','180']" data-fontsize="['50','50','50','42','42','32']"
+                            data-lineheight="['62','62','62','52','52','42']" data-width="['none']" data-height="none" data-whitespace="nowrape" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
+                            data-textAlign="['left','left','left','left','left','center']">Crafting beautiful <br>brands & engaging <br>websites</div>
+                        <div class="tp-caption tp-resizeme single_img" data-x="['right','right','right','right','right','right']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['180','180','180','180','0']" data-fontsize="['65','65','60','40','25']"
+                            data-lineheight="['75','75','75','50','35']" data-width="['none']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
+                            data-textAlign="['left','left','left','left','left','center']">
                             <img src="img/home-slider/slider-2.svg" alt="">
                         </div>
                     </div>
                 </li>
-                <li data-index="rs-1589" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                <li data-index="rs-1589" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Creative"
+                    data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                     <!-- LAYERS -->
                     <!-- LAYERS -->
                     <!-- LAYER NR. 1 -->
                     <div class="slider_text_box">
-                        <div class="tp-caption tp-resizeme first_text" data-x="['left','left','left','left','30','center']" data-hoffset="['0','80','80','0']" data-y="['top','top','top','top']" data-voffset="['350','350','350','250','180','180']" data-fontsize="['50','50','50','42','42','32']" data-lineheight="['62','62','62','52','52','42']" data-width="['none']" data-height="none" data-whitespace="nowrape" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]" data-textAlign="['left','left','left','left','left','center']">Bringing brands <br>to life digitally</div>
-                        <div class="tp-caption tp-resizeme single_img" data-x="['right','right','right','right','right','right']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['180','180','180','180','0']" data-fontsize="['65','65','60','40','25']" data-lineheight="['75','75','75','50','35']" data-width="['none']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]" data-textAlign="['left','left','left','left','left','center']">
+                        <div class="tp-caption tp-resizeme first_text" data-x="['left','left','left','left','30','center']" data-hoffset="['0','80','80','0']" data-y="['top','top','top','top']" data-voffset="['350','350','350','250','180','180']" data-fontsize="['50','50','50','42','42','32']"
+                            data-lineheight="['62','62','62','52','52','42']" data-width="['none']" data-height="none" data-whitespace="nowrape" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
+                            data-textAlign="['left','left','left','left','left','center']">Bringing brands <br>to life digitally</div>
+                        <div class="tp-caption tp-resizeme single_img" data-x="['right','right','right','right','right','right']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['180','180','180','180','0']" data-fontsize="['65','65','60','40','25']"
+                            data-lineheight="['75','75','75','50','35']" data-width="['none']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
+                            data-textAlign="['left','left','left','left','left','center']">
                             <img src="img/home-slider/slider-3.svg" alt="">
                         </div>
                     </div>
@@ -369,7 +386,8 @@ c16.131,0,30.771-10.164,36.399-25.313l45.11-121.396C494.059,124.523,492.374,111.
             <div class="shap_slider_inner owl-carousel">
                 <div class="item">
                     <h4>“Consider it Done”</h4>
-                    <p>I have collaborated with the Prodige team on various projects. They possess strong coding skills and always have a positive attitude when working on our projects. They are hard working, proactive, and ensure that they deliver good quality on all projects they have managed for us. Prodige continues to be a pleasure to work with. </p>
+                    <p>I have collaborated with the Prodige team on various projects. They possess strong coding skills and always have a positive attitude when working on our projects. They are hard working, proactive, and ensure that they deliver good
+                        quality on all projects they have managed for us. Prodige continues to be a pleasure to work with. </p>
                     <div class="media">
                         <!-- <img src="img/team/people/people-5.jpg" alt=""> -->
                         <div class="media-body">
@@ -380,7 +398,9 @@ c16.131,0,30.771-10.164,36.399-25.313l45.11-121.396C494.059,124.523,492.374,111.
                 </div>
                 <div class="item">
                     <h4>“Innovative”</h4>
-                    <p>In the business of brand design and consumer experience solutions across media, it really helps to have a nimble and versatile digital partner like Prodige. They have proven competencies across web, social, app, mobile, product... and their customer focus is great. They dig deep, listen hard and come back fast with ideas and solutions that really elevate the project deliverables. As a partner, they are open, always positive and amazingly collaborative. And they are very mindful about timeline and budget.</p>
+                    <p>In the business of brand design and consumer experience solutions across media, it really helps to have a nimble and versatile digital partner like Prodige. They have proven competencies across web, social, app, mobile, product...
+                        and their customer focus is great. They dig deep, listen hard and come back fast with ideas and solutions that really elevate the project deliverables. As a partner, they are open, always positive and amazingly collaborative. And
+                        they are very mindful about timeline and budget.</p>
                     <div class="media">
                         <!-- <img src="img/team/people/people-5.jpg" alt=""> -->
                         <div class="media-body">
@@ -399,7 +419,8 @@ c16.131,0,30.771-10.164,36.399-25.313l45.11-121.396C494.059,124.523,492.374,111.
                         <!-- <h6>Discover the features</h6> -->
                         <h2>We don’t hide, we stand tall in front of challenge</h2>
                     </div>
-                    <p>Prodige is a progressive and insightful design agency, technically and creatively skilled to translate your brand into its best digital self. Our design and development approach creates impactful, engaging brands and immersive digital experiences that bring you a return on creativity.</p>
+                    <p>Prodige is a progressive and insightful design agency, technically and creatively skilled to translate your brand into its best digital self. Our design and development approach creates impactful, engaging brands and immersive digital
+                        experiences that bring you a return on creativity.</p>
                 </div>
                 <!-- <div class="shap_mobile">
 <img src="img/iphone4.png" alt="">
@@ -569,12 +590,14 @@ c16.131,0,30.771-10.164,36.399-25.313l45.11-121.396C494.059,124.523,492.374,111.
                 <div class="float-sm-left">
                     <h5>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;<script>
-                        document.write(new Date().getFullYear());
+                        Copyright &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
                         </script> All rights reserved <span>| This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></span>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </h5>
                 </div>
+                <div class="centerContent"><a href="/pdf/compliance.pdf">Compliance</a></div>
                 <div class="float-sm-right">
                     <ul>
                         <li><a href="https://www.facebook.com/prodigedigital
@@ -590,56 +613,53 @@ c16.131,0,30.771-10.164,36.399-25.313l45.11-121.396C494.059,124.523,492.374,111.
 
 
     <script>
-
         // This is the "Offline page" service worker
 
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.0.0/workbox-sw.js');
+        importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.0.0/workbox-sw.js');
 
-const CACHE = "pwabuilder-page";
+        const CACHE = "pwabuilder-page";
 
-// TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
-const offlineFallbackPage = "ToDo-replace-this-name.html";
+        // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
+        const offlineFallbackPage = "ToDo-replace-this-name.html";
 
-self.addEventListener("message", (event) => {
-  if (event.data && event.data.type === "SKIP_WAITING") {
-    self.skipWaiting();
-  }
-});
+        self.addEventListener("message", (event) => {
+            if (event.data && event.data.type === "SKIP_WAITING") {
+                self.skipWaiting();
+            }
+        });
 
-self.addEventListener('install', async (event) => {
-  event.waitUntil(
-    caches.open(CACHE)
-      .then((cache) => cache.add(offlineFallbackPage))
-  );
-});
+        self.addEventListener('install', async(event) => {
+            event.waitUntil(
+                caches.open(CACHE)
+                .then((cache) => cache.add(offlineFallbackPage))
+            );
+        });
 
-if (workbox.navigationPreload.isSupported()) {
-  workbox.navigationPreload.enable();
-}
-
-self.addEventListener('fetch', (event) => {
-  if (event.request.mode === 'navigate') {
-    event.respondWith((async () => {
-      try {
-        const preloadResp = await event.preloadResponse;
-
-        if (preloadResp) {
-          return preloadResp;
+        if (workbox.navigationPreload.isSupported()) {
+            workbox.navigationPreload.enable();
         }
 
-        const networkResp = await fetch(event.request);
-        return networkResp;
-      } catch (error) {
+        self.addEventListener('fetch', (event) => {
+            if (event.request.mode === 'navigate') {
+                event.respondWith((async() => {
+                    try {
+                        const preloadResp = await event.preloadResponse;
 
-        const cache = await caches.open(CACHE);
-        const cachedResp = await cache.match(offlineFallbackPage);
-        return cachedResp;
-      }
-    })());
-  }
-});
+                        if (preloadResp) {
+                            return preloadResp;
+                        }
 
+                        const networkResp = await fetch(event.request);
+                        return networkResp;
+                    } catch (error) {
 
+                        const cache = await caches.open(CACHE);
+                        const cachedResp = await cache.match(offlineFallbackPage);
+                        return cachedResp;
+                    }
+                })());
+            }
+        });
     </script>
 
     <!--================End Footer Area =================-->
@@ -666,7 +686,7 @@ self.addEventListener('fetch', (event) => {
     <script src="vendors/magnify-popup/jquery.magnific-popup.min.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/theme.js"></script>
-    
+
 </body>
 
 </html>
