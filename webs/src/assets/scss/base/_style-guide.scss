@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+}
+body {
+    font-family: var(--brand-secondary-font);
+    background: var(--site-bg-color);
+    color: var(--site-text-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--brand-heading);
+    margin: 0;
+}
+h1 {
+    font-size: 50px;
+}
+h2 {
+    font-size: 40px;
+}
+h3 {
+    font-size: 30px;
+    @media only screen and (max-width: 1200px) {
+        font-size: 25px;    
+    }
+}
+h4 {
+    font-size: 25px;
+}
+h5 {
+    font-size: 20px;
+}
+h6 {
+    font-size: 16px;
+}
+p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+ul,
+ol {
+    margin: 0 0 0 18px;
+}
+ul {
+    list-style: disc;
+    ul {
+        list-style: circle;
+    }
+}
+ol {
+    list-style: decimal-leading-zero;
+    ol {
+        list-style: decimal-leading-zero;
+    }
+}
+
+input[type="button"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="file"],
+input[type="hidden"],
+input[type="image"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="reset"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea {
+    padding: 10px;
+    border: 1px solid rgb(52, 52, 52);
+    width: 100%;
+    max-width: 350px;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 12px 10px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: rgb(52, 52, 52);
+    &::placeholder {
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--brand-primary);
+    }
+    &:hover,
+    &:focus,
+    &:focus-within,
+    &:active {
+        border: 1px solid #fe413f;
+    }
+}
+textarea {
+    height: 100px;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    // padding: 10px;
+    border: 1px solid var(--brand-grey);
+    width: 20px;
+    height: 20px;
+}
+.btn {
+    &-primary {
+        margin-top: 20px;
+        background: var(--brand-primary);
+        color: #fff;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 15px 40px;
+        border-radius: 5px;
+        letter-spacing: 3px;
+        font-family: var(--brand-heading);
+        line-height: 1;
+        font-size: 20px;
+        cursor: pointer;
+        &:hover {
+            background: #fff;
+            color: var(--brand-primary);
+        }
+    }
+    &-secondary {
+    }
+}
+.hidden {
+    display: none;
+}
+a {
+    color: var(--site-link-color);
+
+    text-underline-offset: 5px;
+    text-decoration-thickness: 1px;
+    &:hover {
+        color: var(--site-link-hover-color);
+    }
+}
+
+.CookieBar {
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    width: 363px;
+    z-index: 80;
+    background-color: #232323;
+    padding: 21px 17px;
+    padding-right: 100px;
+    -webkit-transition: visibility 0.6s linear, -webkit-transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: visibility 0.6s linear, -webkit-transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.6s linear;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.6s linear,
+        -webkit-transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+@media screen and (max-width: 47.9375rem) {
+    .CookieBar {
+        top: auto;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+    }
+}
+
+.CookieBar-title {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-variation-settings: "wght" 700, "wdth" 60;
+    letter-spacing: 1px;
+    line-height: 2;
+}
+
+.CookieBar-text {
+    display: block;
+    font-size: 0.75rem;
+    line-height: 16px;
+    font-variation-settings: "wght" 450, "wdth" 60;
+}
+
+.CookieBar-btn {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    display: block;
+    font-size: 0.75rem;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px;
+    font-variation-settings: "wght" 750, "wdth" 80;
+    cursor: pointer;
+    background: none;
+}
+
+.cookie-enter,
+.cookie-leave-to {
+    -webkit-transform: translateX(421px) translateZ(0);
+    transform: translateX(421px) translateZ(0);
+    visibility: hidden;
+}
