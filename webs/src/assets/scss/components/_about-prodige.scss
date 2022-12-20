@@ -104,6 +104,9 @@
         .testimonial {
             max-width: 1000px;
             padding: 0 50px;
+            @media only screen and (max-width: 991px) {
+                padding: 0 10px;
+            }
             h5 {
                 span {
                     display: block;

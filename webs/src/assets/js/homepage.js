@@ -21,26 +21,26 @@ function animateClass() {
 animateClass();
 
 $(document).ready(function () {
-    setTimeout(function () { $('.logo').addClass('animate') }, 1000);
-    var cookieSetL = document.cookie.match('(^|;)\\s*Loader\\s*=\\s*([^;]+)')?.pop() || '';
-    if (cookieSetL == false) {
-        var date = new Date();
-        
-        // Default at 365 days.
-        var days = days || 365;
-        
-        // Get unix milliseconds at current time plus number of days
-        date.setTime(+ date + (days * 86400000)); //24 * 60 * 60 * 1000
-        
-        window.document.cookie = "Loader=true; expires=" + date.toGMTString() + "; path=/";
-        
-        $('.CookieBar').addClass('cookie-leave-to');
-        setTimeout(function(){$('.loader').addClass('hide');},3000);
+    if( localStorage.getItem("loader") == null )
+    {
+        localStorage.setItem("loader", true);
+        setTimeout(function () { $('.loader').addClass('animate') }, 1000);
+        setTimeout(function () { $('.loader').addClass('hide'), $('body').addClass('loaderFinished') }, 3000);
     }
-    else
+    else 
     {
         $('.loader').remove();
+        $('body').addClass('loaderFinished')
     }
+    // var cookieSet = document.cookie.match('(^|;)\\s*Loader\\s*=\\s*([^;]+)')?.pop() || '';
+    // if (cookieSet == 'true') {
+    //     $('.loader').remove();
+    // }
+    // else 
+    // {
+    //     $('.loader').removeClass('hide');
+    //     window.document.cookie = "Opened=true; expires=" + date.toGMTString() + "; path=/";
+    // }
 
     $('body').removeClass('active');
     // $('main:not(.home)').css({marginTop: $('header').outerHeight(true) + 20})
@@ -54,8 +54,12 @@ $(document).ready(function () {
         $(this).addClass('active').siblings().removeClass('active');
         var slideno = $(this).attr('data-slide');
         $('.projects-carousel').slick('slickGoTo', slideno - 1);
-    }).on('click', function () {
+    }).on('click', function (e) {
+        e.preventDefault();
         $(this).addClass('active').siblings().removeClass('active').parents('.project-titles').addClass('select');
+        setTimeout(function(){
+            window.open($(this).attr('href'),'_blank');
+        },2000)
     });
 
     $('#carousel').slick({
