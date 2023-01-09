@@ -205,26 +205,39 @@
             margin-left: 15px;
             margin-bottom: 0;
         }
+
         @media only screen and (max-width: 1279px) {
-            .ourService, .reachOut{
+
+            .ourService,
+            .reachOut {
                 width: 980px;
             }
-            .reachOut .leftSection{
+
+            .reachOut .leftSection {
                 width: 40%;
             }
-            .reachOut .rightSection{
+
+            .reachOut .rightSection {
                 width: 60%;
             }
         }
+
         @media only screen and (max-width: 1023px) {
-            .ourService, .ourService .leftSection, .ourService .rightSection, .reachOut .leftSection, .reachOut .rightSection{
+
+            .ourService,
+            .ourService .leftSection,
+            .ourService .rightSection,
+            .reachOut .leftSection,
+            .reachOut .rightSection {
                 width: 100%;
             }
-            .reachOut{ 
+
+            .reachOut {
                 flex-direction: column;
                 width: 92%;
             }
-            .reachOut .leftSection{
+
+            .reachOut .leftSection {
                 border-bottom: 1px solid #fff;
                 border-right: none;
                 padding-bottom: 20px;
@@ -232,28 +245,35 @@
                 justify-content: center;
                 padding-right: 0;
             }
-            .reachOut .rightSection{
+
+            .reachOut .rightSection {
                 padding: 0 50px;
             }
-            .reachOut .rightSection p{
+
+            .reachOut .rightSection p {
                 padding-right: 25px;
                 margin-bottom: 0;
             }
-            .ourService{
+
+            .ourService {
                 flex-direction: column;
                 padding: 0 30px;
             }
+
             .ourService .leftSection {
                 margin-bottom: 30px;
             }
-            .about-prodige .teams .team{
+
+            .about-prodige .teams .team {
                 margin-bottom: 25px;
                 width: 40%;
             }
-            .siteFooter{
+
+            .siteFooter {
                 justify-content: center;
             }
-            footer .copyright{
+
+            footer .copyright {
                 padding: 0px;
             }
         }
@@ -263,6 +283,7 @@
                 padding: 0 15px;
                 flex-direction: column;
             }
+
             .reachOut .rightSection p {
                 padding-right: 0;
                 margin-bottom: 15px;
@@ -270,50 +291,87 @@
         }
 
         @media only screen and (max-width: 639px) {
-            .ourService .rightSection .boxSection{
+            .ourService .rightSection .boxSection {
                 max-width: 400px;
                 flex-basis: 100%;
             }
-            .about-prodige .teams .team{
+
+            .about-prodige .teams .team {
                 width: 70%;
             }
         }
+
         header.scrolled .brand-identity .brand-image {
             width: 50px;
         }
-        header.scrolled .brand-identity .brand-text{
+
+        header.scrolled .brand-identity .brand-text {
             font-size: 35px;
             margin-left: 10px;
         }
-        header.scrolled .brand-identity .brand-text span{
+
+        header.scrolled .brand-identity .brand-text span {
             font-size: 10px;
         }
-        #downArrow{
+
+        #downArrow {
             bottom: 5%;
             text-align: center;
             position: fixed;
             width: 100%;
             z-index: 999;
             -webkit-animation: ca3_fade_move_down 2s ease-in-out 3;
-            -moz-animation:    ca3_fade_move_down 2s ease-in-out 3;
-            animation:         ca3_fade_move_down 2s ease-in-out 3;
+            -moz-animation: ca3_fade_move_down 2s ease-in-out 3;
+            animation: ca3_fade_move_down 2s ease-in-out 3;
         }
 
         /*animated scroll arrow animation*/
         @-webkit-keyframes ca3_fade_move_down {
-        0%   { -webkit-transform:translate(0,-15px); opacity: 0;  }
-        50%  { opacity: 1;  }
-        100% { -webkit-transform:translate(0,15px); opacity: 0; }
+            0% {
+                -webkit-transform: translate(0, -15px);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: translate(0, 15px);
+                opacity: 0;
+            }
         }
+
         @-moz-keyframes ca3_fade_move_down {
-        0%   { -moz-transform:translate(0,-15px); opacity: 0;  }
-        50%  { opacity: 1;  }
-        100% { -moz-transform:translate(0,15px); opacity: 0; }
+            0% {
+                -moz-transform: translate(0, -15px);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                -moz-transform: translate(0, 15px);
+                opacity: 0;
+            }
         }
+
         @keyframes ca3_fade_move_down {
-        0%   { transform:translate(0,-15px); opacity: 0;  }
-        50%  { opacity: 1;  }
-        100% { transform:translate(0,15px); opacity: 0; }
+            0% {
+                transform: translate(0, -15px);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(0, 15px);
+                opacity: 0;
+            }
         }
     </style>
 </head>
