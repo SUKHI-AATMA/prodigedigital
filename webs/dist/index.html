@@ -25,415 +25,6 @@
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Urbanist:wght@100;200;300;400;500;600;700;800;900&family=Yantramanav:wght@100;300;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/homepage.css">
-    <style>
-        body {
-            background-color: rgb(41, 41, 41);
-        }
-
-        .ourService {
-            display: flex;
-            margin: 100px auto;
-            font-family: var(--brand-secondary-font);
-            color: var(--site-text-color);
-            width: 1200px;
-        }
-
-        .reachOut {
-            display: flex;
-            margin: 0 auto;
-            font-family: var(--brand-secondary-font);
-            position: relative;
-            width: 1200px;
-        }
-
-        .ourService *,
-        .reachOut * {
-            box-sizing: border-box;
-        }
-
-        .ourService h2,
-        .ourService h3 {
-            font-family: var(--brand-heading);
-        }
-
-        .ourService .leftSection {
-            margin-right: 5%;
-            width: 40%;
-        }
-
-        .ourService .leftSection h2 {
-            margin-bottom: 20px;
-        }
-
-        .ourService .leftSection h2 span {
-            color: var(--brand-primary);
-        }
-
-        .ourService .rightSection {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            width: 55%;
-        }
-
-        .ourService .rightSection .boxSection {
-            border-radius: 20px;
-            background-color: #000;
-            text-align: center;
-            flex-basis: 40%;
-            margin-bottom: 20px;
-            height: 200px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 30px;
-        }
-
-        .ourService .rightSection .boxSection h3 {
-            font-size: 1.2rem;
-            padding-top: 15px;
-            letter-spacing: 1px;
-        }
-
-        .reachOut {
-            align-items: center;
-            border-radius: 20px;
-            background-color: var(--brand-primary);
-            display: flex;
-            padding: 30px;
-        }
-
-        .reachOut .leftSection {
-            border-right: 1px solid #fff;
-            padding-right: 50px;
-            display: flex;
-            width: 30%;
-        }
-
-        .reachOut .leftSection a:hover {
-            color: #fff;
-        }
-
-        .reachOut .callIcon {
-            border: 1px solid #fff;
-            border-radius: 50px;
-            display: flex;
-            justify-content: center;
-            margin-right: 12px;
-            height: 70px;
-            width: 70px;
-        }
-
-        .reachOut .leftSection .contactNo p {
-            margin: 0;
-        }
-
-        .reachOut .leftSection .contactNo h3 {
-            letter-spacing: 2px;
-        }
-
-        .reachOut .rightSection {
-            align-items: center;
-            display: flex;
-            padding-left: 50px;
-            width: 70%;
-        }
-
-        .reachOut .rightSection p {
-            font-size: 17px;
-            flex-basis: 65%;
-        }
-
-        .reachOut .rightSection .btnWrapper {
-            display: flex;
-            flex-basis: 35%;
-            justify-content: center;
-        }
-
-        .reachOut .rightSection .btnWrapper .btn {
-            align-items: center;
-            background: rgba(255, 255, 255, 1);
-            border-radius: 30px;
-            color: #000;
-            display: flex;
-            height: 50px;
-            justify-content: center;
-            font-size: 20px;
-            text-decoration: none;
-            text-transform: uppercase;
-            width: 200px;
-        }
-
-        .reachOut .rightSection .btnWrapper .btn:hover {
-            background: rgba(255, 255, 255, 0.8);
-        }
-
-        .teamMember {
-            background: #F8F8F8;
-            color: #000;
-            margin-top: -70px;
-            padding: 100px 50px;
-        }
-        .teamMember h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            width: 100%;
-        }
-        .teamMember h2 span{
-            color: var(--brand-primary);
-        }
-
-        .teamMember .teamWrapper{
-            display: flex;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-        }
-
-        .teamMember .teamWrapper .team{
-            background: #fff;
-            border-radius: 30px;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            padding-bottom: 20px;
-            max-width: 300px;
-            width: 30%;
-        }
-        .teamMember .teamWrapper .team .title{
-            background-color: var(--brand-primary);
-            border-radius: 30px;
-            color: #fff;
-            position: relative;
-            padding: 10px 20px;
-            text-align: center;
-            width: 85%;
-        }
-        .teamMember .teamWrapper .team .title h3{
-            font-size: 22px;
-        }
-        .teamMember .teamWrapper .team .title p{
-            margin: 0px;
-        }
-        .teamMember .teamWrapper .team img{
-            border-radius: 30px 30px 0 0;
-            width: 100%;
-        }
-        .teamMember .teamWrapper .team .social-icons{
-            margin: 15px 0 10px;
-        }
-        .teamMember .teamWrapper .team .social-icons img {
-            height: 40px;
-            margin: 0 10px;
-            width: 40px;
-            -webkit-filter: invert(0);
-            filter: invert(0);
-        }
-
-        .siteFooter {
-            position: relative;
-            display: flex;
-            bottom: inherit;
-            left: inherit;
-            align-items: center;
-            flex-direction: row-reverse;
-            padding: 10px 30px;
-            justify-content: flex-end;
-        }
-
-        footer.siteFooter .social {
-            display: flex;
-            flex-direction: row;
-            width: 130px
-        }
-
-        footer.siteFooter .social a {
-            margin-left: 15px;
-            margin-bottom: 0;
-        }
-
-        @media only screen and (max-width: 1279px) {
-
-            .ourService,
-            .reachOut {
-                width: 980px;
-            }
-
-            .reachOut .leftSection {
-                width: 40%;
-            }
-
-            .reachOut .rightSection {
-                width: 60%;
-            }
-        }
-
-        @media only screen and (max-width: 1023px) {
-
-            .ourService,
-            .ourService .leftSection,
-            .ourService .rightSection,
-            .reachOut .leftSection,
-            .reachOut .rightSection {
-                width: 100%;
-            }
-
-            .reachOut {
-                flex-direction: column;
-                width: 92%;
-            }
-
-            .reachOut .leftSection {
-                border-bottom: 1px solid #fff;
-                border-right: none;
-                padding-bottom: 20px;
-                margin-bottom: 20px;
-                justify-content: center;
-                padding-right: 0;
-            }
-
-            .reachOut .rightSection {
-                padding: 0 50px;
-            }
-
-            .reachOut .rightSection p {
-                padding-right: 25px;
-                margin-bottom: 0;
-            }
-
-            .ourService {
-                flex-direction: column;
-                padding: 0 30px;
-            }
-
-            .ourService .leftSection {
-                margin-bottom: 30px;
-            }
-
-            .siteFooter {
-                justify-content: center;
-            }
-
-            footer .copyright {
-                padding: 0px;
-            }
-            .about-prodige .teams .team {
-                margin-bottom: 35px;
-                width: 40%;
-            }
-        }
-
-        @media only screen and (max-width: 979px) {
-            .teamMember .teamWrapper .team {
-                margin-bottom: 35px;
-                width: 40%;
-            }
-        }
-
-        @media only screen and (max-width: 767px) {
-            .reachOut .rightSection {
-                padding: 0 15px;
-                flex-direction: column;
-            }
-
-            .reachOut .rightSection p {
-                padding-right: 0;
-                margin-bottom: 15px;
-            }
-        }
-
-        @media only screen and (max-width: 639px) {
-            .ourService .rightSection .boxSection {
-                max-width: 400px;
-                flex-basis: 100%;
-            }
-            .about-prodige .teams .team {
-                width: 70%;
-            }
-            .teamMember .teamWrapper .team {
-                width: 80%;
-                max-width: 100%;
-            }
-        }
-
-        header.scrolled .brand-identity .brand-image {
-            width: 50px;
-        }
-
-        header.scrolled .brand-identity .brand-text {
-            font-size: 35px;
-            margin-left: 10px;
-        }
-
-        header.scrolled .brand-identity .brand-text span {
-            font-size: 10px;
-        }
-
-        #downArrow {
-            bottom: 5%;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            z-index: 999;
-            -webkit-animation: ca3_fade_move_down 2s ease-in-out 3;
-            -moz-animation: ca3_fade_move_down 2s ease-in-out 3;
-            animation: ca3_fade_move_down 2s ease-in-out 3;
-        }
-
-        /*animated scroll arrow animation*/
-        @-webkit-keyframes ca3_fade_move_down {
-            0% {
-                -webkit-transform: translate(0, -15px);
-                opacity: 0;
-            }
-
-            50% {
-                opacity: 1;
-            }
-
-            100% {
-                -webkit-transform: translate(0, 15px);
-                opacity: 0;
-            }
-        }
-
-        @-moz-keyframes ca3_fade_move_down {
-            0% {
-                -moz-transform: translate(0, -15px);
-                opacity: 0;
-            }
-
-            50% {
-                opacity: 1;
-            }
-
-            100% {
-                -moz-transform: translate(0, 15px);
-                opacity: 0;
-            }
-        }
-
-        @keyframes ca3_fade_move_down {
-            0% {
-                transform: translate(0, -15px);
-                opacity: 0;
-            }
-
-            50% {
-                opacity: 1;
-            }
-
-            100% {
-                transform: translate(0, 15px);
-                opacity: 0;
-            }
-        }
-
-
-        .about-prodige .teams .team>img {
-            border-radius: 200px;
-        }
-    </style>
 </head>
 
 <body class="home">
@@ -466,10 +57,10 @@
         <nav>
             <ul>
                 <li><a href="about-us.html">About Prodige</a></li>
-                <li><a href="index.html">Our Work</a></li>
+                <li><a href="projects.html">Our Work</a></li>
                 <li><a href="service.html">Services</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="/pdf/compliance.pdf">Compliance</a></li>
+                <li><a href="./pdf/compliance.pdf" target="_blank">Compliance</a></li>
             </ul>
         </nav>
     </header>
@@ -819,44 +410,34 @@ c0-1.676,1.342-3.046,2.98-3.046h109.139c1.639,0,2.98,1.371,2.98,3.046V322.2z"></
                 </div>
             </div>
         </section>
-        <section class="reachOut">
-            <div class="leftSection">
-                <div class="callIcon">
-                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 122.88 122.31"
-                        style="width: 2.2rem;">
-                        <title>mobile-outline</title>
-                        <g fill="#fff">
-                            <path xmlns="http://www.w3.org/2000/svg"
-                                d="M52.07,68.5A72.28,72.28,0,0,0,61.58,77a83.47,83.47,0,0,0,11.7,7.28l.17-.12c.3-.24.64-.55,1-.9s.6-.65.92-1l1.13-1.47a2.93,2.93,0,0,1,.34-.43c4.31-5.68,9.68-12.51,18.32-8.51a4.1,4.1,0,0,1,.52.26c7,4.14,14.18,8.15,21.24,12.21a3.39,3.39,0,0,1,.5.32l0,0a12,12,0,0,1,4.07,4.72,14.73,14.73,0,0,1,1.36,6.26v0a21.71,21.71,0,0,1-.94,6.1,29.07,29.07,0,0,1-2.6,6.06,23.51,23.51,0,0,1-5.19,6.3,26.81,26.81,0,0,1-6.53,4.11l-.05,0a39.78,39.78,0,0,1-6.66,2.32,64.53,64.53,0,0,1-6.73,1.34,44.49,44.49,0,0,1-10.47.32,49.29,49.29,0,0,1-10.17-2,68.93,68.93,0,0,1-9.89-4,114.94,114.94,0,0,1-10.16-5.67l-.84-.52c-3.07-1.91-6.38-4-9.73-6.47l0,0a129.47,129.47,0,0,1-19-17.67A116.79,116.79,0,0,1,9.39,65.39a77.53,77.53,0,0,1-8-20.6A52.13,52.13,0,0,1,.59,25.22,35.51,35.51,0,0,1,4.21,14.16a26.75,26.75,0,0,1,6.84-8.37A25.64,25.64,0,0,1,20.56,1,32.45,32.45,0,0,1,31.8.15a5.9,5.9,0,0,1,2.82.93,6.07,6.07,0,0,1,2,2.13L50.08,26a11.34,11.34,0,0,1,2.25,5.25,10.56,10.56,0,0,1-.82,5.59v0a14.27,14.27,0,0,1-2.6,3.95,24.06,24.06,0,0,1-3.52,3.12c-.73.63-1.65,1.3-2.61,2l-.09.07a27.86,27.86,0,0,0-3.23,2.59,3.06,3.06,0,0,0-.9,1.2c0,.11.09,0,.19.17l.34.53c1.13,1.77,3.31,5.15,5.8,8.74a91.46,91.46,0,0,0,7.18,9.31Zm5.45,13.9a80.64,80.64,0,0,1-10.38-9.25,94.48,94.48,0,0,1-7.82-10.1c-2.48-3.58-4.76-7.11-5.94-9l-.29-.43a6,6,0,0,1-1.31-4.44,8.81,8.81,0,0,1,2.87-5.47,33.42,33.42,0,0,1,4.05-3.28l0,0c.8-.58,1.56-1.14,2.25-1.73l.21-.16a16.57,16.57,0,0,0,2.67-2.33,7.81,7.81,0,0,0,1.4-2.09,3.81,3.81,0,0,0,.33-2,4.67,4.67,0,0,0-1-2.11,2.51,2.51,0,0,1-.32-.46L30.92,6.86a25.43,25.43,0,0,0-8.61.69,18.67,18.67,0,0,0-7,3.53,20.16,20.16,0,0,0-5.11,6.26,28.8,28.8,0,0,0-2.9,8.94,45.29,45.29,0,0,0,.7,17,71.09,71.09,0,0,0,7.36,18.8A108.83,108.83,0,0,0,29,81.27,122.72,122.72,0,0,0,47,98c3,2.27,6.26,4.28,9.26,6.14l.85.54A108.32,108.32,0,0,0,66.62,110a60.6,60.6,0,0,0,8.91,3.59,42.22,42.22,0,0,0,8.77,1.76,38.12,38.12,0,0,0,8.9-.28,56,56,0,0,0,6-1.18,32.87,32.87,0,0,0,5.53-1.92l.09,0a20.48,20.48,0,0,0,4.92-3.08,16.86,16.86,0,0,0,3.7-4.49,22.54,22.54,0,0,0,2-4.63,15.34,15.34,0,0,0,.66-4.19,7.62,7.62,0,0,0-.69-3.34,5.25,5.25,0,0,0-1.81-2.1c-5.41-3.87-14.91-8.59-21-12.11l-.29-.15.12.06-.12-.06c-3.75-1.67-7.23,2.75-10.06,6.48l-.17.24c-.49.65-1,1.28-1.4,1.82s-1,1.2-1.4,1.6a18.66,18.66,0,0,1-1.71,1.51,9.39,9.39,0,0,1-2.21,1.24,5.59,5.59,0,0,1-2.35.38,6,6,0,0,1-2-.49l-.32-.14A91.42,91.42,0,0,1,57.52,82.4Z" />
-                        </g>
-                    </svg>
+        <section class="ourProgress">
+            <div class="progressBand">
+                <div class="col">
+                    <h3>300+</h3>
+                    <p>Projects</p>
                 </div>
-                <div class="contactNo">
-                    <p>Get in touch</p>
-                    <h3><a href="tel:+919987590572">
-                            <h4>+91 99875 90572</h4>
-                        </a></h3>
+                <div class="col">
+                    <h3>60+</h3>
+                    <p>Clients</p>
                 </div>
-            </div>
-            <div class="rightSection">
-                <p>Prodige aims to be a digital partner to companies from inception through evolution, with quality,
-                    innovation and proven solutions as cornerstones of its reputation.</p>
-                <div class="btnWrapper">
-                    <a class="btn" href="./contact.html">Contact Us</a>
+                <div class="col">
+                    <h3>15+</h3>
+                    <p>Years of Experience</p>
+                </div>
+                <div class="col">
+                    <h3>99%</h3>
+                    <p>Satisfaction Rate</p>
                 </div>
             </div>
         </section>
         <section class="teamMember">
-            <h2><span>TEAM</span> MEMBER</h2>
+            <h2><span>Captain</span> of House</h2>
             <div class="teamWrapper">
                 <div class="team">
                     <img src="./images/profile/rajesh.jpeg" alt="Rajesh Sawant" title="Rajesh Sawant" />
                     <div class="social-icons">
                         <a href="https://linkedin.com" target="_blank">
                             <img src="images/linkedin.png" alt="linkedin" />
-                        </a>
-                        <a href="https://facebook.com" target="_blank">
-                            <img src="images/facebook.png" alt="facebook" />
                         </a>
                     </div>
                     <div class="title">
@@ -870,9 +451,6 @@ c0-1.676,1.342-3.046,2.98-3.046h109.139c1.639,0,2.98,1.371,2.98,3.046V322.2z"></
                         <a href="https://linkedin.com" target="_blank">
                             <img src="images/linkedin.png" alt="linkedin" />
                         </a>
-                        <a href="https://facebook.com" target="_blank">
-                            <img src="images/facebook.png" alt="facebook" />
-                        </a>
                     </div>
                     <div class="title">
                         <h3>Murtaza Patanwala</h3>
@@ -885,9 +463,6 @@ c0-1.676,1.342-3.046,2.98-3.046h109.139c1.639,0,2.98,1.371,2.98,3.046V322.2z"></
                         <a href="https://linkedin.com" target="_blank">
                             <img src="images/linkedin.png" alt="linkedin" />
                         </a>
-                        <a href="https://facebook.com" target="_blank">
-                            <img src="images/facebook.png" alt="facebook" />
-                        </a>
                     </div>
                     <div class="title">
                         <h3>Shivkumar Gupta</h3>
@@ -896,7 +471,7 @@ c0-1.676,1.342-3.046,2.98-3.046h109.139c1.639,0,2.98,1.371,2.98,3.046V322.2z"></
                 </div>
             </div>
         </section>
-        <section class="ourTeam about-prodige">
+        <section class="ourTeam about-prodige" style="display: none;">
             <div class="teams">
                 <h2>OUR TEAM</h2>
                 <div class="team"><img src="./images/profile/rajesh.jpeg" alt="Rajesh Sawant">
@@ -916,6 +491,54 @@ c0-1.676,1.342-3.046,2.98-3.046h109.139c1.639,0,2.98,1.371,2.98,3.046V322.2z"></
                     <div class="social-icons"><a href="https://linkedin.com" target="_blank"><img
                                 src="images/linkedin.png" alt=""></a><a href="https://facebook.com" target="_blank"><img
                                 src="images/facebook.png" alt=""></a></div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonialWrapper">
+            <h2>What Our <span>Clients</span> Say ?</h2>
+            <div class="testimonial">
+                <h3>Consider it Done</h3>
+                <p>They are hard working, proactive, and ensure that they deliver good quality on all projects they have managed for us. Prodige continues to be a pleasure to work with.</p>
+                <div class="author">
+                    <h4>Raghavan Giriraj</h4>
+                    <p>Program Manager, Mirum</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <h3>Innovative</h3>
+                <p>In the business of brand design and consumer experience solutions across media, it really helps to have a nimble and versatile digital partner like Prodige.</p>
+                <div class="author">
+                    <h4>Rahul Gaikwad</h4>
+                    <p>Director, Tattva Design</p>
+                </div>
+            </div>
+        </section>
+        <section class="reachOutWrapper">
+            <div class="reachOut">
+                <div class="leftSection">
+                    <div class="callIcon">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 122.88 122.31"
+                            style="width: 2.2rem;">
+                            <title>mobile-outline</title>
+                            <g fill="#fff">
+                                <path xmlns="http://www.w3.org/2000/svg"
+                                    d="M52.07,68.5A72.28,72.28,0,0,0,61.58,77a83.47,83.47,0,0,0,11.7,7.28l.17-.12c.3-.24.64-.55,1-.9s.6-.65.92-1l1.13-1.47a2.93,2.93,0,0,1,.34-.43c4.31-5.68,9.68-12.51,18.32-8.51a4.1,4.1,0,0,1,.52.26c7,4.14,14.18,8.15,21.24,12.21a3.39,3.39,0,0,1,.5.32l0,0a12,12,0,0,1,4.07,4.72,14.73,14.73,0,0,1,1.36,6.26v0a21.71,21.71,0,0,1-.94,6.1,29.07,29.07,0,0,1-2.6,6.06,23.51,23.51,0,0,1-5.19,6.3,26.81,26.81,0,0,1-6.53,4.11l-.05,0a39.78,39.78,0,0,1-6.66,2.32,64.53,64.53,0,0,1-6.73,1.34,44.49,44.49,0,0,1-10.47.32,49.29,49.29,0,0,1-10.17-2,68.93,68.93,0,0,1-9.89-4,114.94,114.94,0,0,1-10.16-5.67l-.84-.52c-3.07-1.91-6.38-4-9.73-6.47l0,0a129.47,129.47,0,0,1-19-17.67A116.79,116.79,0,0,1,9.39,65.39a77.53,77.53,0,0,1-8-20.6A52.13,52.13,0,0,1,.59,25.22,35.51,35.51,0,0,1,4.21,14.16a26.75,26.75,0,0,1,6.84-8.37A25.64,25.64,0,0,1,20.56,1,32.45,32.45,0,0,1,31.8.15a5.9,5.9,0,0,1,2.82.93,6.07,6.07,0,0,1,2,2.13L50.08,26a11.34,11.34,0,0,1,2.25,5.25,10.56,10.56,0,0,1-.82,5.59v0a14.27,14.27,0,0,1-2.6,3.95,24.06,24.06,0,0,1-3.52,3.12c-.73.63-1.65,1.3-2.61,2l-.09.07a27.86,27.86,0,0,0-3.23,2.59,3.06,3.06,0,0,0-.9,1.2c0,.11.09,0,.19.17l.34.53c1.13,1.77,3.31,5.15,5.8,8.74a91.46,91.46,0,0,0,7.18,9.31Zm5.45,13.9a80.64,80.64,0,0,1-10.38-9.25,94.48,94.48,0,0,1-7.82-10.1c-2.48-3.58-4.76-7.11-5.94-9l-.29-.43a6,6,0,0,1-1.31-4.44,8.81,8.81,0,0,1,2.87-5.47,33.42,33.42,0,0,1,4.05-3.28l0,0c.8-.58,1.56-1.14,2.25-1.73l.21-.16a16.57,16.57,0,0,0,2.67-2.33,7.81,7.81,0,0,0,1.4-2.09,3.81,3.81,0,0,0,.33-2,4.67,4.67,0,0,0-1-2.11,2.51,2.51,0,0,1-.32-.46L30.92,6.86a25.43,25.43,0,0,0-8.61.69,18.67,18.67,0,0,0-7,3.53,20.16,20.16,0,0,0-5.11,6.26,28.8,28.8,0,0,0-2.9,8.94,45.29,45.29,0,0,0,.7,17,71.09,71.09,0,0,0,7.36,18.8A108.83,108.83,0,0,0,29,81.27,122.72,122.72,0,0,0,47,98c3,2.27,6.26,4.28,9.26,6.14l.85.54A108.32,108.32,0,0,0,66.62,110a60.6,60.6,0,0,0,8.91,3.59,42.22,42.22,0,0,0,8.77,1.76,38.12,38.12,0,0,0,8.9-.28,56,56,0,0,0,6-1.18,32.87,32.87,0,0,0,5.53-1.92l.09,0a20.48,20.48,0,0,0,4.92-3.08,16.86,16.86,0,0,0,3.7-4.49,22.54,22.54,0,0,0,2-4.63,15.34,15.34,0,0,0,.66-4.19,7.62,7.62,0,0,0-.69-3.34,5.25,5.25,0,0,0-1.81-2.1c-5.41-3.87-14.91-8.59-21-12.11l-.29-.15.12.06-.12-.06c-3.75-1.67-7.23,2.75-10.06,6.48l-.17.24c-.49.65-1,1.28-1.4,1.82s-1,1.2-1.4,1.6a18.66,18.66,0,0,1-1.71,1.51,9.39,9.39,0,0,1-2.21,1.24,5.59,5.59,0,0,1-2.35.38,6,6,0,0,1-2-.49l-.32-.14A91.42,91.42,0,0,1,57.52,82.4Z" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="contactNo">
+                        <p>Get in touch</p>
+                        <h3><a href="tel:+919987590572">
+                                <h4>+91 99875 90572</h4>
+                            </a></h3>
+                    </div>
+                </div>
+                <div class="rightSection">
+                    <p>Prodige aims to be a digital partner to companies from inception through evolution, with quality,
+                        innovation and proven solutions as cornerstones of its reputation.</p>
+                    <div class="btnWrapper">
+                        <a class="btn" href="./contact.html">Contact Us</a>
+                    </div>
                 </div>
             </div>
         </section>
