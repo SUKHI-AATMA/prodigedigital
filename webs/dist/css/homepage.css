@@ -78,7 +78,7 @@ header.scrolled .brand-identity .brand-text span {
     }
 }
 
-
+.CookieBar{display: none;}
 .about-prodige .teams .team>img {
     border-radius: 200px;
 }
@@ -165,7 +165,7 @@ body {
 
 .reachOut .leftSection {
     border-right: 1px solid #fff;
-    padding-right: 50px;
+    padding-right: 44px;
     display: flex;
     width: 30%;
 }
