@@ -86,6 +86,9 @@ header.scrolled .brand-identity .brand-text span {
 body {
     background-color: rgb(41, 41, 41);
 }
+header nav ul li a.active {
+    color: var(--brand-primary);
+}
 
 .ourService {
     display: flex;
