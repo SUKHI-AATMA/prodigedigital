@@ -121,11 +121,13 @@ $(document).ready(function () {
 });
 
 $(window).on('scroll', function () {
-    if ($(document).scrollTop() > 100) {
+    if ($(document).scrollTop() > 80) {
         $('header').addClass('scrolled');
+        $('#downArrow').hide();
     }
     else {
         $('header').removeClass('scrolled');
+        $('#downArrow').show();
     }
 });
 
