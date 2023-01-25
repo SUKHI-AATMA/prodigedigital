@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="104" height="106" viewBox="0 0 104 106">
+    <g fill="none" fill-rule="evenodd" opacity=".7">
+        <path stroke="#FCC14A" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M26.415 24.911V8.587A5.587 5.587 0 0 1 32.002 3h63.4a5.587 5.587 0 0 1 5.587 5.587v61.275a5.587 5.587 0 0 1-5.588 5.587H79.077"/>
+        <path stroke="#FCC14A" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M85.173 10.597h3.58a4.415 4.415 0 0 1 4.416 4.415v3.096M65.83 40.638H52.03a3.969 3.969 0 0 1-3.969-3.969V22.872a3.969 3.969 0 0 1 3.969-3.969H65.83a3.969 3.969 0 0 1 3.968 3.97v13.796a3.969 3.969 0 0 1-3.968 3.969z"/>
+        <path stroke="#FCC14A" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M65.83 40.638H52.03a3.969 3.969 0 0 1-3.969-3.969V22.872a3.969 3.969 0 0 1 3.969-3.969H65.83a3.969 3.969 0 0 1 3.968 3.97v13.796a3.969 3.969 0 0 1-3.968 3.969z"/>
+        <path stroke="#FCC14A" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M58.93 43.023c0-7.026 5.697-12.722 12.724-12.722s12.723 5.696 12.723 12.722c0 7.027-5.696 12.723-12.723 12.723-7.027 0-12.724-5.696-12.724-12.723zM13.231 58.132a3.18 3.18 0 1 1 0-6.362M37.764 57.8a3.18 3.18 0 1 0 0-6.361M90.65 75.89v16.434M85.614 97.89a5.036 5.036 0 1 1 10.073 0 5.036 5.036 0 0 1-10.073 0z"/>
+        <path stroke="#FCC14A" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M85.614 97.89a5.036 5.036 0 1 1 10.073 0 5.036 5.036 0 0 1-10.073 0zM25.853 65.2h-.001c-6.472 0-11.719-5.246-11.719-11.718v-8.547c0-6.472 5.247-11.719 11.719-11.719 6.473 0 11.72 5.247 11.72 11.72v8.546c0 6.472-5.247 11.719-11.72 11.719z"/>
+        <path stroke="#FCC14A" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M13.868 50.975s4.771.265 7.952-7.952c0 0 3.976 9.543 15.11 7.157M32.158 68.601a6.494 6.494 0 0 1-12.989 0"/>
+        <path stroke="#FCC14A" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M14.79 68.204h43.08l.265 14.578h-15.64v19.349H3V79.993c0-6.511 5.278-11.79 11.79-11.79zM12.808 89.938v12.193M58.135 68.734h3.976a6.892 6.892 0 1 1 0 13.783h-3.18"/>
+        <path fill="#FCC14A" d="M75.696 10.952a2.253 2.253 0 1 1 4.506 0 2.253 2.253 0 0 1-4.506 0"/>
+    </g>
+</svg>

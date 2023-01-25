@@ -1,0 +1,29 @@
+<div id="container" style="background: #000; float: left; width: 200px; height: 200px;"></div>
+<style type="text/css">
+	svg { float: left; width: 100%; } 
+</style>
+<script type="text/javascript" src="../dist/js/lottie.min.js"></script>
+
+<script>
+var circleMeshAnimData = {
+    container: document.getElementById('container'), // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: 'json/f.json', // the path to the animation json
+};
+var circleMeshAnim = bodymovin.loadAnimation(circleMeshAnimData);
+// circleMeshAnim.playSegments([[0,2]],true);
+// circleMeshAnim.play();
+
+circleMeshAnim.addEventListener('DOMLoaded', function() {
+	console.log(circleMeshAnim.getDuration(true));
+	circleMeshAnim.playSegments([[0,180]],true);
+});
+document.getElementById('container').addEventListener("mouseenter", function() {
+    circleMeshAnim.playSegments([[171,250]],true);
+});
+document.getElementById('container').addEventListener("mouseleave", function() {
+    circleMeshAnim.playSegments([[250,171]],true);
+});
+</script>
