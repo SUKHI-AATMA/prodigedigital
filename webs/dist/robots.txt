@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /projects/
+Sitemap: https://prodigedigital.com/sitemap.xml
