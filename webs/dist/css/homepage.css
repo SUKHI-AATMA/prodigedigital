@@ -577,7 +577,9 @@ footer.siteFooter .social a {
 @media only screen and (max-width: 639px) {
     .ourService .rightSection .boxSection {
         max-width: 400px;
-        flex-basis: 100%;
+        /* flex-basis: 100%; */
+        flex-basis: 45%;
+        padding: 15px;
     }
     .about-prodige .teams .team {
         width: 70%;
