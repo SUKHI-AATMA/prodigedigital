@@ -242,7 +242,7 @@ header nav ul li a.active {
     flex-basis: 100%;
     width: 100%;
 }
-.teamMember h2 span, .testimonialWrapper h2 span{
+.teamMember h2 span, .testimonialWrapper h2 span, .stackWrapper h2 span {
     color: var(--brand-primary);
 }
 
@@ -387,6 +387,9 @@ footer.siteFooter .social a {
     justify-content: center;
     padding: 25px 0 0;
 }
+.stackWrapper {
+    flex-wrap: wrap;
+}
 .stackWrapper ul {
     display: flex;
     flex-wrap: wrap;
@@ -407,7 +410,7 @@ footer.siteFooter .social a {
     padding: 50px 20px 30px;
     flex-wrap: wrap;
 }
-.processWrapper h2{
+.processWrapper h2, .stackWrapper h2 {
     color: #232323;
     text-align: center;
     margin-bottom: 50px;
@@ -458,6 +461,15 @@ footer.siteFooter .social a {
     .progressBand {
         width: 90%;
     }
+
+    .teamMember .teamWrapper, .testimonialWrapper {
+        column-gap: 15px;
+    }
+
+    .teamMember .teamWrapper .team {
+        width: 30%;
+        max-width: 100%;
+    }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -485,7 +497,7 @@ footer.siteFooter .social a {
     }
 
     .reachOut .rightSection {
-        padding: 0 50px;
+        padding: 0;
     }
 
     .reachOut .rightSection p {
@@ -496,6 +508,7 @@ footer.siteFooter .social a {
     .ourService {
         flex-direction: column;
         padding: 0 30px;
+        text-align: center;
     }
 
     .ourService .leftSection {
@@ -526,9 +539,6 @@ footer.siteFooter .social a {
 }
 
 @media only screen and (max-width: 979px) {
-    .teamMember .teamWrapper .team {
-        width: 40%;
-    }
     .processWrapper ul{
         flex-direction: column;
         align-items: center;
@@ -587,14 +597,8 @@ footer.siteFooter .social a {
     .about-prodige .teams .team {
         width: 70%;
     }
-    .teamMember .teamWrapper, .testimonialWrapper {
-        column-gap: 15px;
-    }
-    .teamMember .teamWrapper .team {
-        /* width: 80%; */
-        width: 30%;
-        max-width: 100%;
-    }
+    
+    
     .teamMember .teamWrapper .team .title{
         padding: 10px 12px;
         border-radius: 9px;
@@ -633,7 +637,9 @@ footer.siteFooter .social a {
         font-size: 10px;
     }
 
-    
+    footer.siteFooter .social a {
+        margin-left: 10px;
+    }
 }
 
 @media only screen and (max-width: 575px) {
