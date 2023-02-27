@@ -579,14 +579,31 @@ footer.siteFooter .social a {
         max-width: 400px;
         /* flex-basis: 100%; */
         flex-basis: 45%;
-        padding: 15px;
+        padding: 10px;
+    }
+    .ourService .rightSection .boxSection h3 {
+        font-size: 1.1rem;
     }
     .about-prodige .teams .team {
         width: 70%;
     }
+    .teamMember .teamWrapper, .testimonialWrapper {
+        column-gap: 15px;
+    }
     .teamMember .teamWrapper .team {
-        width: 80%;
+        /* width: 80%; */
+        width: 30%;
         max-width: 100%;
+    }
+    .teamMember .teamWrapper .team .title{
+        padding: 10px 12px;
+        border-radius: 9px;
+    }
+    .teamMember .teamWrapper .team .title h3 {
+        font-size: 12px;
+    }
+    .teamMember .teamWrapper .team .title p {
+        font-size: 11px;
     }
     .progressBand .col h3 {
         font-size: 40px;
@@ -596,5 +613,38 @@ footer.siteFooter .social a {
     }
     .processWrapper ul li {
         width: 90%;
+    }
+
+    .reachOut .callIcon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .reachOut .callIcon > svg {
+        width: 1.6rem;
+    }
+
+    .siteFooter {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    footer .copyright {
+        font-size: 10px;
+    }
+
+    
+}
+
+@media only screen and (max-width: 575px) {
+    .teamMember .teamWrapper .team {
+        width: 100%;
+    }
+
+    .teamMember .teamWrapper .team .title h3 {
+        font-size: 14px;
+    }
+    .teamMember .teamWrapper .team .title p {
+        font-size: 12px;
     }
 }
