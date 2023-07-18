@@ -1894,6 +1894,9 @@ header nav ul li a.active {
 .ourService .rightSection .boxSection .grpahicImg {
   height: 100%;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ourService .rightSection .boxSection .grpahicImg svg {
@@ -2289,6 +2292,12 @@ footer.siteFooter .social a {
     margin-bottom: 35px;
     width: 40%;
   }
+
+  .teamMember,
+  .testimonialWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 @media only screen and (max-width: 979px) {
@@ -2411,5 +2420,19 @@ footer.siteFooter .social a {
   .about-prodige .intro p {
     max-width: 800px;
     width: 100%;
+  }
+
+  header nav ul li a:hover {
+    color: var(--site-link-hover-color);
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .ourService .rightSection .boxSection .grpahicImg {
+    height: 70%;
+  }
+
+  .ourService .rightSection .boxSection h3 {
+    padding-top: 0;
   }
 }
