@@ -2021,15 +2021,16 @@ header nav ul li a.active {
 }
 .teamMember .teamWrapper .team .title {
   background-color: var(--brand-primary);
-  border-radius: 30px;
+  border-radius: 15px;
   color: #fff;
   position: relative;
   padding: 10px 20px;
   text-align: center;
-  width: 85%;
+  width: 90%;
 }
 .teamMember .teamWrapper .team .title h3 {
   font-size: 22px;
+  font-weight: normal;
 }
 .teamMember .teamWrapper .team .title p {
   margin: 0px;
