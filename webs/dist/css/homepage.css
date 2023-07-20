@@ -2049,6 +2049,44 @@ header nav ul li a.active {
   -webkit-filter: invert(0);
   filter: invert(0);
 }
+.teamMemberWrapper ul {
+  list-style: none;
+  margin-left: 0;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.teamMemberWrapper ul li {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+}
+
+.teamMemberWrapper ul li > div {
+  display: flex;
+}
+
+.teamMemberWrapper .member-name {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.teamMemberWrapper .member-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.teamMemberWrapper .member-skills > span {
+  border: 1px solid #eee;
+  padding: 8px 15px;
+  background-color: var(--brand-primary);
+  color: #fff;
+}
+
 .ourProgress {
   position: relative;
 }
