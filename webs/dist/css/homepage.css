@@ -585,6 +585,8 @@ header {
 }
 header.scrolled {
   background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 8px 30px;
 }
 @media only screen and (max-width: 991px) {
   header {
