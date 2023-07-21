@@ -1892,6 +1892,7 @@ header nav ul li a.active {
   flex-direction: column;
   justify-content: center;
   padding: 30px;
+  box-shadow: 5px 5px 10px var(--site-bg-color);
 }
 
 .ourService .rightSection .boxSection .grpahicImg {
