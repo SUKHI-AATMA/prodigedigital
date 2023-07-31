@@ -584,8 +584,8 @@ header {
   z-index: 5;
 }
 header.scrolled {
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(15px);
   padding: 8px 30px;
 }
 @media only screen and (max-width: 991px) {
@@ -2066,7 +2066,7 @@ header nav ul li a.active {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 15px;
+  gap: 5px;
 }
 
 .teamMemberWrapper ul li > div {
@@ -2086,9 +2086,10 @@ header nav ul li a.active {
 
 .teamMemberWrapper .member-skills > span {
   border: 1px solid #eee;
-  padding: 8px 15px;
+  padding: 6px 15px;
   background-color: var(--brand-primary);
   color: #fff;
+  line-height: normal;
 }
 
 .ourProgress {
