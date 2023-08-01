@@ -633,11 +633,6 @@ header .brand-identity .brand-text {
   line-height: 1;
   margin-left: 20px;
 }
-@media only screen and (max-width: 991px) {
-  header .brand-identity .brand-text {
-    display: none;
-  }
-}
 header .brand-identity .brand-text span {
   font-weight: 300;
   font-size: 15px;
@@ -715,6 +710,9 @@ header nav ul li a:hover {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+  }
+  header.scrolled .nav-toggler span {
+    transform: translate(-50%, -50%) rotate(-45deg) scale(0.8);
   }
   header nav {
     width: 100%;
@@ -1239,7 +1237,8 @@ footer a {
 .about-prodige .intro h2 {
   margin-bottom: 30px;
 }
-.about-prodige .intro h2 span {
+.about-prodige .intro h2 span,
+.about-prodige .intro p span {
   color: var(--brand-primary);
 }
 
@@ -1737,7 +1736,7 @@ main {
   width: 100%;
 }
 main.about {
-  margin-top: 120px;
+  margin-top: 80px;
 }
 .home header,
 .home main {
@@ -2361,6 +2360,10 @@ footer.siteFooter .social a {
   .testimonialWrapper {
     padding: 40px 30px;
   }
+
+  .reachOutWrapper {
+    padding: 40px 0;
+  }
 }
 
 @media only screen and (max-width: 979px) {
@@ -2406,6 +2409,9 @@ footer.siteFooter .social a {
   }
   .progressBand .col:nth-child(3) {
     border-left: none;
+  }
+  header .brand-identity .brand-text {
+    display: none;
   }
 }
 
@@ -2493,5 +2499,19 @@ footer.siteFooter .social a {
 
   .ourService .rightSection .boxSection h3 {
     padding-top: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .teamMember .teamWrapper {
+    width: 100%;
+  }
+
+  .teamMember .teamWrapper .team .title h3 {
+    font-size: 21px;
+  }
+
+  .teamMember .teamWrapper .team .title h3 span {
+    font-size: 15px;
   }
 }
