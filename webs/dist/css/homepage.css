@@ -584,8 +584,8 @@ header {
   z-index: 5;
 }
 header.scrolled {
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(15px);
   padding: 8px 30px;
 }
 @media only screen and (max-width: 991px) {
@@ -1630,7 +1630,7 @@ footer a {
   top: 50%;
   left: 50%;
   z-index: 11;
-  background: #000;
+  background: var(--site-bg-color);
   overflow: hidden;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -1694,7 +1694,7 @@ footer a {
   height: 0;
   display: block;
   background: var(--brand-primary);
-  background: #000;
+  background: var(--site-bg-color);
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -1883,7 +1883,7 @@ header nav ul li a.active {
 
 .ourService .rightSection .boxSection {
   border-radius: 20px;
-  background-color: #000;
+  background-color: var(--site-bg-color);
   text-align: center;
   flex-basis: 40%;
   margin-bottom: 20px;
@@ -1970,7 +1970,7 @@ header nav ul li a.active {
   align-items: center;
   background: rgba(255, 255, 255, 1);
   border-radius: 30px;
-  color: #000;
+  color: var(--site-bg-color);
   display: flex;
   height: 50px;
   justify-content: center;
@@ -1987,7 +1987,7 @@ header nav ul li a.active {
 .teamMember,
 .testimonialWrapper {
   background: #f8f8f8;
-  color: #000;
+  color: var(--site-bg-color);
   padding: 80px 50px 0;
 }
 .teamMember h2,
@@ -2034,6 +2034,7 @@ header nav ul li a.active {
 }
 .teamMember .teamWrapper .team .title h3 {
   font-size: 22px;
+  font-weight: normal;
 }
 .teamMember .teamWrapper .team .title p {
   margin: 0px;
@@ -2052,6 +2053,45 @@ header nav ul li a.active {
   -webkit-filter: invert(0);
   filter: invert(0);
 }
+.teamMemberWrapper ul {
+  list-style: none;
+  margin-left: 0;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.teamMemberWrapper ul li {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+}
+
+.teamMemberWrapper ul li > div {
+  display: flex;
+}
+
+.teamMemberWrapper .member-name {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.teamMemberWrapper .member-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.teamMemberWrapper .member-skills > span {
+  border: 1px solid #eee;
+  padding: 6px 15px;
+  background-color: var(--brand-primary);
+  color: #fff;
+  line-height: normal;
+}
+
 .ourProgress {
   position: relative;
 }
