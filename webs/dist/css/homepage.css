@@ -2020,24 +2020,26 @@ header nav ul li a.active {
   flex-direction: column;
   padding-bottom: 20px;
   max-width: 300px;
-  margin-bottom: 25px;
   width: 30%;
+  gap: 20px;
 }
 .teamMember .teamWrapper .team .title {
-  background-color: var(--brand-primary);
-  border-radius: 30px;
-  color: #fff;
-  position: relative;
-  padding: 10px 20px;
   text-align: center;
-  width: 85%;
+  padding: 0 10px;
+  width: 100%;
 }
 .teamMember .teamWrapper .team .title h3 {
-  font-size: 22px;
+  font-size: 21px;
   font-weight: normal;
+}
+.teamMember .teamWrapper .team .title span {
+  font-size: 16px;
+  color: var(--brand-primary);
+  font-weight: 600;
 }
 .teamMember .teamWrapper .team .title p {
   margin: 0px;
+  font-size: 18px;
 }
 .teamMember .teamWrapper .team img {
   border-radius: 30px 30px 0 0;
