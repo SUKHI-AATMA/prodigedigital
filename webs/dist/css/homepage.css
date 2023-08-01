@@ -98,6 +98,7 @@ select {
 [type="submit"],
 button {
   -webkit-appearance: button;
+  border: none;
 }
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
