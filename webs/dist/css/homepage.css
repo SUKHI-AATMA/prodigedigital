@@ -5,11 +5,13 @@
   --brand-heading: "DM Serif Text", serif;
   --brand-primary-font: "Urbanist", sans-serif;
   --brand-secondary-font: "Yantramanav", sans-serif;
-  --site-bg-color: #000;
+  --site-bg-color: #292929;
   --site-link-color: #fff;
   --site-link-hover-color: #fe413f;
   --site-text-color: #fff;
   --brand-grey: #ebebeb;
+  --color-black: #000;
+  --color-off-white: #f8f8f8;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -461,7 +463,7 @@ textarea:active,
 textarea:focus,
 textarea:focus-within,
 textarea:hover {
-  border: 1px solid #fe413f;
+  border: 1px solid var(--brand-primary);
 }
 textarea {
   height: 100px;
@@ -1857,6 +1859,7 @@ header nav ul li a.active {
   background-color: var(--brand-primary);
   display: flex;
   padding: 30px;
+  color: var(--site-link-color);
 }
 
 .ourService *,
@@ -1921,13 +1924,14 @@ header nav ul li a.active {
 
 .ourService .rightSection .boxSection h3 {
   font-size: 1.2rem;
+  font-weight: normal;
   padding-top: 15px;
   letter-spacing: 1px;
   font-weight: normal;
 }
 
 .reachOutWrapper {
-  background: #f8f8f8;
+  background: var(--color-off-white);
   padding: 80px 0;
 }
 
@@ -1979,6 +1983,15 @@ header nav ul li a.active {
   justify-content: center;
 }
 
+.ourService,
+.teamMember,
+.testimonialWrapper,
+.clientsWrapper,
+.reachOutWrapper,
+.siteFooter {
+  padding: 50px 30px;
+}
+
 .reachOut .rightSection .btnWrapper .btn {
   align-items: center;
   background: rgba(255, 255, 255, 1);
@@ -1999,7 +2012,7 @@ header nav ul li a.active {
 
 .teamMember,
 .testimonialWrapper {
-  background: #f8f8f8;
+  background: var(--color-off-white);
   color: var(--site-bg-color);
   padding: 80px 50px 0;
 }
@@ -2118,7 +2131,7 @@ header nav ul li a.active {
 }
 .ourProgress:before {
   content: "";
-  background-color: #f8f8f8;
+  background-color: var(--color-off-white);
   height: 50%;
   width: 100%;
   position: absolute;
@@ -2144,7 +2157,7 @@ header nav ul li a.active {
 }
 
 .testimonialWrapper .testimonial {
-  background: #fff;
+  background: var(--site-text-color);
   border-radius: 30px;
   box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 5%);
   display: flex;
@@ -2202,7 +2215,7 @@ footer.siteFooter .social a {
 
 .stackWrapper,
 .processWrapper {
-  background: #f8f8f8;
+  background: var(--color-off-white);
   display: flex;
   justify-content: center;
   padding: 25px 0 0;
@@ -2309,7 +2322,7 @@ footer.siteFooter .social a {
   }
 
   .reachOut .leftSection {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid var(--site-text-color);
     border-right: none;
     padding-bottom: 20px;
     margin-bottom: 20px;
@@ -2402,7 +2415,7 @@ footer.siteFooter .social a {
     font-size: 35px;
   }
   .progressBand .col {
-    border-top: 1px solid #fff;
+    border-top: 1px solid var(--site-text-color);
     padding: 20px 10px;
     width: 50%;
   }
@@ -2516,4 +2529,129 @@ footer.siteFooter .social a {
   .teamMember .teamWrapper .team .title h3 span {
     font-size: 15px;
   }
+}
+
+/* Code Lab CSS starts */
+.code-lab {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.code-lab .tab-wrapper {
+  overflow: hidden;
+}
+
+.code-lab .tab-wrapper ul {
+  width: fit-content;
+  margin: 0;
+  position: relative;
+  font-size: 0;
+}
+
+.code-lab .tab-wrapper li {
+  display: inline-block;
+  padding: 8px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.code-lab .tab-wrapper li:not(:first-child) {
+  border-left: 1px solid #fff;
+}
+
+.code-lab .tab-wrapper li.active {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.code-lab .tab-content-wrapper .tab-content:not(.active) {
+  display: none;
+}
+
+/* Code Lab CSS ends */
+
+/* common CSS starts */
+.wrapper-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.display-grid {
+  display: grid;
+}
+
+.grid-three-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+img {
+  width: fit-content;
+  max-width: 100%;
+}
+
+.btnWrapper .btn {
+  align-items: center;
+  background: var(--site-link-color);
+  border-radius: 30px;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s all ease;
+  padding: 10px 25px;
+}
+
+.btnWrapper .btn:hover {
+  background: transparent;
+  border: 1px solid var(--site-link-color);
+  color: var(--site-link-color);
+}
+/* common CSS ends */
+
+.wrapper-container > h2 {
+  padding-bottom: 50px;
+}
+
+.wrapper-container > h2 > span {
+  color: var(--brand-primary);
+}
+
+.clientLogos {
+  margin: 0;
+  list-style: none;
+  gap: 40px;
+}
+
+.clientLogos li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.clientLogos li .img-box {
+  max-width: 60%;
 }
