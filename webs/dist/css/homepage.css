@@ -662,7 +662,9 @@ header nav ul {
 header nav ul li a {
   margin: 0 20px;
 }
-header nav ul li a:hover {
+header nav ul li a:hover,
+header nav ul li a:active,
+header nav ul li a:focus {
   color: inherit;
   text-decoration-color: var(--brand-primary);
 }
@@ -1841,10 +1843,11 @@ header nav ul li a.active {
 
 .ourService {
   display: flex;
-  margin: 80px auto 60px;
+  margin: 0 auto;
   font-family: var(--brand-secondary-font);
   color: var(--site-text-color);
   width: 1200px;
+  padding-top: 130px !important;
 }
 
 .reachOut,
@@ -1898,7 +1901,7 @@ header nav ul li a.active {
 
 .ourService .rightSection .boxSection {
   border-radius: 20px;
-  background-color: var(--site-bg-color);
+  background-color: var(--color-black);
   text-align: center;
   flex-basis: 40%;
   margin-bottom: 20px;
@@ -1907,7 +1910,7 @@ header nav ul li a.active {
   flex-direction: column;
   justify-content: center;
   padding: 30px;
-  box-shadow: 5px 5px 10px var(--site-bg-color);
+  box-shadow: 5px 5px 10px var(--color-black);
 }
 
 .ourService .rightSection .boxSection .grpahicImg {
@@ -2014,7 +2017,6 @@ header nav ul li a.active {
 .testimonialWrapper {
   background: var(--color-off-white);
   color: var(--site-bg-color);
-  padding: 80px 50px 0;
 }
 .teamMember h2,
 .testimonialWrapper h2 {
@@ -2637,6 +2639,14 @@ img {
 
 .wrapper-container > h2 > span {
   color: var(--brand-primary);
+}
+
+.clientsWrapper {
+  background-color: var(--color-off-white);
+}
+
+.clientsWrapper h2 {
+  color: var(--site-bg-color);
 }
 
 .clientLogos {
