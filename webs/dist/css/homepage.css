@@ -1970,6 +1970,7 @@ header nav ul li a.active {
 .reachOut .rightSection p {
   font-size: 17px;
   flex-basis: 65%;
+  margin-bottom: 0;
 }
 
 .reachOut .rightSection .btnWrapper {
