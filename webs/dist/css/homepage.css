@@ -968,8 +968,8 @@ footer a {
   .slick-track
   .slick-slide
   img {
-  -webkit-filter: blur(10px);
-  filter: blur(10px);
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
   opacity: 0.8;
 }
 @media only screen and (max-width: 1200px) {
@@ -1230,6 +1230,15 @@ footer a {
   -ms-transform: translate(-50%, 100%);
   transform: translate(-50%, 100%);
   opacity: 1;
+}
+.project-titles .view-more-link {
+  font-size: 1.8vw;
+  width: 100%;
+  text-align: center;
+  text-decoration: underline;
+}
+.project-titles .view-more-link:after {
+  display: none;
 }
 .about-prodige {
   text-align: center;
@@ -1743,6 +1752,7 @@ main {
 main.about {
   margin-top: 80px;
 }
+
 .home header,
 .home main {
   opacity: 0;
@@ -2587,12 +2597,20 @@ footer.siteFooter .social a {
   display: flex;
 }
 
+.row-rerverse {
+  flex-direction: row-reverse;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
 
 .display-grid {
   display: grid;
+}
+
+.grid-two-columns {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .grid-three-columns {
@@ -2664,4 +2682,162 @@ img {
 
 .clientLogos li .img-box {
   max-width: 60%;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.wave {
+  --size: 12px;
+  --R: calc(var(--size)*1.28);
+
+  -webkit-mask:
+    radial-gradient(var(--R) at 50% calc(1.8*var(--size)),#000 99%,#0000 101%) 
+      calc(50% - 2*var(--size)) 0/calc(4*var(--size)) 100%,
+    radial-gradient(var(--R) at 50% calc(-.8*var(--size)),#0000 99%,#000 101%) 
+      50% var(--size)/calc(4*var(--size)) 100% repeat-x;
+  /* background: linear-gradient(90deg,red,blue); */
+  background: var(--brand-primary);
+  padding: 20px 0 10px 0;
+}
+
+.page-our-work main {
+  margin-top: 80px;
+}
+
+.page-our-work main .intro {
+  padding: 80px 0;
+  min-height: 40vh;
+}
+
+.our-projects {
+  background-color: var(--color-off-white);
+  padding: 80px 0;
+  position: relative;
+}
+
+.our-projects .wrapper-container {
+  gap: 40px;
+}
+
+.our-projects .box-wrapper {
+  border: 1px solid var(--brand-grey);
+  gap: 5%;
+  /* filter: drop-shadow(1px 2px 8px #000); */
+  box-shadow: 2px 2px 15px var(--brand-grey);
+  padding: 50px;
+}
+
+.our-projects .project-details {
+  color: var(--color-black);
+  gap: 10px;
+}
+
+.our-projects .project-details p {
+  margin-bottom: 0;
+}
+
+.our-projects .project-details p.desc {
+  font-size: 25px;
+  line-height: normal;
+}
+
+.our-projects .project-details p.desc > a,
+.our-projects .project-details p.desc > span {
+  color: var(--brand-primary);
+  font-size: 35px;
+  text-decoration: none;
+  position: relative;
+}
+
+.our-projects .project-details p.desc > a:before,
+.our-projects .project-details p.desc > a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  transition: 0.5s all ease;
+}
+
+.our-projects .project-details p.desc > a:before {
+  background-color: var(--color-off-white);
+  z-index: 1;
+  width: 0;
+}
+
+.our-projects .project-details p.desc > a:after {
+  width: 100%;
+  background-color: var(--brand-primary);
+}
+
+.our-projects .project-details p.desc > a:hover:before {
+  width: 100%;
+}
+
+.our-projects .project-details p.stacks {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.thankyou h1 {
+  color: var(--brand-primary);
+}
+
+.thankyou ~ .siteFooter {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .our-projects .box-wrapper:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .our-projects .box-wrapper .image-wrapper {
+    width: 35%;
+  }
+
+  .our-projects .project-details {
+    width: 60%;
+  }
+
+  .our-projects .box-wrapper:nth-child(even) .project-details {
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .our-projects .box-wrapper {
+    gap: 20px;
+    max-width: 90vw;
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 20px 8px;
+  }
+
+  .our-projects .box-wrapper .image-wrapper img {
+    filter: drop-shadow(2px 4px 6px var(--color-black));
+  }
+
+  .our-projects .project-details {
+    text-align: center;
+    gap: 10px;
+  }
+
+  .our-projects .project-details p.desc {
+    font-size: 20px;
+    line-height: normal;
+  }
+
+  .our-projects .project-details p.desc > span {
+    font-size: 25px;
+  }
+
+  .our-projects .project-details p.stacks {
+    font-size: 15px;
+  }
+
 }
