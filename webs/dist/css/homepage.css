@@ -2706,7 +2706,8 @@ img {
   padding: 20px 0 10px 0;
 }
 
-.page-our-work main {
+.page-our-work main,
+.page-our-services main {
   margin-top: 80px;
 }
 
