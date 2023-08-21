@@ -1722,13 +1722,10 @@ header nav ul li a.active {
 .reachOut .rightSection {
   align-items: center;
   display: flex;
-  padding-left: 50px;
-  width: 70%;
 }
 
 .reachOut .rightSection p {
   font-size: 17px;
-  flex-basis: 65%;
   margin-bottom: 0;
 }
 
