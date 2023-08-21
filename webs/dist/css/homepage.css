@@ -1892,7 +1892,7 @@ header nav ul li a.active {
 .progressBand .col {
   border-left: 1px solid var(--site-text-color);
   text-align: center;
-  width: 25%;
+  width: 33%;
 }
 .progressBand .col:first-child {
   border: none;
@@ -2844,6 +2844,10 @@ img {
 
   .testimonialWrapper .testimonial {
     width: 100%;
+  }
+
+  .progressBand {
+    justify-content: center;
   }
 
   .progressBand .col h3 {
