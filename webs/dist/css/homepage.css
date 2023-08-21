@@ -1856,6 +1856,8 @@ header nav ul li a.active {
   margin: 0 auto;
   font-family: var(--brand-secondary-font);
   color: var(--site-text-color);
+  width: 1200px;
+  padding-top: 130px !important;
 }
 
 .reachOut,
@@ -1994,13 +1996,13 @@ header nav ul li a.active {
   justify-content: center;
 }
 
-.ourService .wrapper-container,
+.ourService,
 .teamMember,
 .testimonialWrapper,
 .clientsWrapper,
 .reachOutWrapper,
 .siteFooter {
-  padding: 50px 0;
+  padding: 50px 30px;
 }
 
 .reachOut .rightSection .btnWrapper .btn {
@@ -2029,6 +2031,7 @@ header nav ul li a.active {
 .teamMember h2,
 .testimonialWrapper h2 {
   text-align: center;
+  margin-bottom: 30px;
   flex-basis: 100%;
   width: 100%;
 }
@@ -2048,7 +2051,9 @@ header nav ul li a.active {
 
 .teamMember .teamWrapper {
   row-gap: 30px;
-  align-items: center;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .teamMember .teamWrapper .team {
@@ -2163,10 +2168,6 @@ header nav ul li a.active {
   margin: 0px;
 }
 
-.testimonialWrapper .testimonial-details {
-  gap: 4%;
-}
-
 .testimonialWrapper .testimonial {
   background: var(--site-text-color);
   border-radius: 30px;
@@ -2177,13 +2178,8 @@ header nav ul li a.active {
   padding: 20px 30px;
   margin-bottom: 25px;
   max-width: 600px;
-  width: 50%;
+  width: 44%;
 }
-
-.testimonialWrapper .testimonial .testimonial-content {
-  flex: 1;
-}
-
 .testimonialWrapper .testimonial h3 {
   font-size: 20px;
   padding-bottom: 15px;
