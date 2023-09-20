@@ -2836,6 +2836,7 @@ img {
   .reachOut .rightSection p {
     padding-right: 0;
     margin-bottom: 15px;
+    text-align: left;
   }
 
   .testimonialWrapper .testimonial-details {
