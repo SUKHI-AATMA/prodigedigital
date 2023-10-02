@@ -1,8 +1,0 @@
-purple color : #ef0bfd
-dark purple color : #7377ed
-turquoise color :#01dade
-orange color : #fe413f 
-gray color : #545454
-
-
-font name : Berlin Sans FB / BankGothic Bold
