@@ -2796,6 +2796,7 @@ img {
 
   .our-projects .box-wrapper .image-wrapper {
     width: 35%;
+    text-align: center;
   }
 
   .our-projects .project-details {
