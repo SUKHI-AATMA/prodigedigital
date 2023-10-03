@@ -1892,7 +1892,7 @@ header nav ul li a.active {
 .progressBand .col {
   border-left: 1px solid var(--site-text-color);
   text-align: center;
-  width: 33%;
+  width: 25%;
 }
 .progressBand .col:first-child {
   border: none;
