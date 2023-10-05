@@ -1728,6 +1728,7 @@ header nav ul li a.active {
 .reachOut .rightSection p {
   font-size: 17px;
   margin-bottom: 0;
+  text-align: left;
 }
 
 .reachOut .rightSection .btnWrapper {
@@ -2885,7 +2886,6 @@ img {
   .reachOut .rightSection p {
     padding-right: 0;
     margin-bottom: 15px;
-    text-align: left;
   }
 
   .testimonialWrapper .testimonial-details {
