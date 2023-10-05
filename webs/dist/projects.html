@@ -89,20 +89,27 @@
             </div>
             <div class="lottie-animation-banner-bg"><lottie-player src="https://lottie.host/377e24e9-4c7e-4023-b208-b0991108a24f/EpE1v4Tbkh.json" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></lottie-player></div>
         </section>
-        <!-- <section class="filter-wrapper">
-            <div class="wrapper-container display-flex flex-direction-column">
-                <div class="heading">Filter by:</div>
-                <ul class="filter-elements">
-                    <li>Websites</li>
-                    <li>Android/iOS Apps</li>
-                    <li>Landing pages</li>
-                    <li>Emailers</li>
+        <section class="filter-wrapper">
+            <div class="wrapper-container display-flex align-center">
+                <div class="heading">Browse by:</div>
+                <ul class="filter-elements display-flex flex-wrap">
+                    <li data-filter-prop="website">Websites <span class="count"></span></li>
+                    <li data-filter-prop="apps">Android/iOS Apps <span class="count"></span></li>
+                    <li data-filter-prop="editable-pdf">Editable PDF <span class="count"></span></li>
+                    <li data-filter-prop="landing-pages">Landing pages <span class="count"></span></li>
+                    <!-- <li data-filter-prop="emailers">Emailers <span class="count"></span></li>
+                    <li data-filter-prop="animation">Animations <span class="count"></span></li> -->
                 </ul>
+                <div class="browse-select-dropdown">
+                    <select name="browse-work">
+                        <option value="none">Browse by:</option>
+                    </select>
+                </div>
             </div>
-        </section> -->
+        </section>
         <section class="our-projects">
             <div class="wrapper-container display-flex flex-direction-column">
-                <div class="box-wrapper display-flex align-center">
+                <div class="box-wrapper display-flex align-center" data-filter-prop="apps">
                     <div class="image-wrapper">
                         <img src="./images/projects/internet-banking-app.webp" alt="Android/iOS Application for a Bank">
                     </div>
@@ -112,7 +119,16 @@
                         <p class="stacks">React Native, .Net Core</p>
                     </div>
                 </div>
-                <div class="box-wrapper display-flex align-center">
+                <div class="box-wrapper display-flex align-center" data-filter-prop="landing-pages">
+                    <div class="image-wrapper">
+                        <img src="./images/projects/landing-page-aspire-for-her.gif" alt="Landing Page for a Foundation">
+                    </div>
+                    <div class="project-details display-flex flex-direction-column">
+                        <p class="desc">Landing Page for one of the <span>Foundation</span></p>
+                        <p class="stacks">HTML5, CSS3, jQuery</p>
+                    </div>
+                </div>
+                <div class="box-wrapper display-flex align-center" data-filter-prop="apps">
                     <div class="image-wrapper">
                         <img src="./images/projects/healthcare-hospital-app.webp" alt="Android/iOS Application for a Healthcare Hospital">
                     </div>
@@ -122,7 +138,7 @@
                         <p class="stacks">React Native, NodeJS, MongoDB</p>
                     </div>
                 </div>
-                <div class="box-wrapper display-flex align-center">
+                <div class="box-wrapper display-flex align-center" data-filter-prop="editable-pdf">
                     <div class="image-wrapper">
                         <img src="./images/projects/editable-pdf-mockup.webp" alt="Convert Printed forms to Editable PDF forms">
                     </div>
@@ -131,7 +147,7 @@
                         <p class="stacks">Convert Offline Printed forms to Online Editable PDF forms</p>
                     </div>
                 </div>
-                <div class="box-wrapper display-flex align-center">
+                <div class="box-wrapper display-flex align-center" data-filter-prop="website">
                     <div class="image-wrapper">
                         <img src="./images/projects/lending-application-mockup.webp" alt="Platform for applicants who can borrow easily and safely">
                     </div>
@@ -140,7 +156,7 @@
                         <p class="stacks">Headless Drupal, Node+ExpressJS, EJS</p>
                     </div>
                 </div>
-                <div class="box-wrapper display-flex align-center">
+                <div class="box-wrapper display-flex align-center" data-filter-prop="website">
                     <div class="image-wrapper">
                         <img src="./images/projects/stock-exchange-mockup.webp" alt="Website revamp for one of the leading Stock Exchange">
                     </div>
@@ -149,7 +165,7 @@
                         <p class="stacks">Headless Drupal, Node, ReactJS</p>
                     </div>
                 </div>
-                <div class="box-wrapper display-flex align-center">
+                <div class="box-wrapper display-flex align-center" data-filter-prop="website">
                     <div class="image-wrapper">
                         <img src="./images/projects/wipro-mockup.webp" alt="Wipro Sustainability">
                     </div>
@@ -158,7 +174,7 @@
                         <p class="stacks">HTML5, CSS3, jQuery, Parallax animation, AEM</p>
                     </div>
                 </div>
-                <div class="box-wrapper display-flex align-center">
+                <div class="box-wrapper display-flex align-center" data-filter-prop="website">
                     <div class="image-wrapper">
                         <img src="./images/projects/law-firm-mockup.webp" alt="Website revamp for one of the leading Law firm">
                     </div>
@@ -167,7 +183,7 @@
                         <p class="stacks">Headless Drupal, Node+ExpressJS, EJS</p>
                     </div>
                 </div>
-                <div class="box-wrapper display-flex align-center">
+                <div class="box-wrapper display-flex align-center" data-filter-prop="website">
                     <div class="image-wrapper">
                         <img src="./images/projects/nissan-mockup.webp" alt="Nissan">
                     </div>
@@ -176,7 +192,7 @@
                         <p class="stacks">HTML5, CSS3, jQuery, Parallax animation</p>
                     </div>
                 </div>
-                <div class="box-wrapper display-flex align-center">
+                <div class="box-wrapper display-flex align-center" data-filter-prop="website">
                     <div class="image-wrapper">
                         <img src="./images/projects/online-trading-mockup.webp" alt="Sign up journey for an Omnichannel trading and investment platform">
                     </div>
@@ -185,7 +201,7 @@
                         <p class="stacks">NextJS, REST API</p>
                     </div>
                 </div>
-                <div class="box-wrapper display-flex align-center">
+                <div class="box-wrapper display-flex align-center" data-filter-prop="website">
                     <div class="image-wrapper">
                         <img src="./images/projects/little-giant-mockup.webp" alt="A Little Giant">
                     </div>
@@ -195,7 +211,7 @@
                     </div>
                 </div>
                 
-                <div class="box-wrapper display-flex align-center">
+                <div class="box-wrapper display-flex align-center" data-filter-prop="website">
                     <div class="image-wrapper">
                         <img src="./images/projects/bacon-mockup.webp" alt="Bacon Buttie Station">
                     </div>
@@ -204,7 +220,7 @@
                         <p class="stacks">HTML5, CSS3, jQuery, Stop motion photography and animation</p>
                     </div>
                 </div>
-                <div class="box-wrapper display-flex align-center">
+                <div class="box-wrapper display-flex align-center" data-filter-prop="website">
                     <div class="image-wrapper">
                         <img src="./images/projects/centuro-mockup.webp" alt="Centuro Global">
                     </div>
@@ -213,7 +229,7 @@
                         <p class="stacks">HTML5, CSS3, jQuery, Lottie animation</p>
                     </div>
                 </div>
-                <div class="box-wrapper display-flex align-center">
+                <div class="box-wrapper display-flex align-center" data-filter-prop="website">
                     <div class="image-wrapper">
                         <img src="./images/projects/nzmp-mockup.webp" alt="New Zealand Motion Pictures">
                     </div>
@@ -222,7 +238,7 @@
                         <p class="stacks">HTML5, CSS3, jQuery, Parallax animation, Webflow</p>
                     </div>
                 </div>
-                <div class="box-wrapper display-flex align-center">
+                <div class="box-wrapper display-flex align-center" data-filter-prop="website">
                     <div class="image-wrapper">
                         <img src="./images/projects/jbs-mockup.webp" alt="Jordan Business Systems">
                     </div>
@@ -231,7 +247,7 @@
                         <p class="stacks">HTML5, CSS3, jQuery, WordPress</p>
                     </div>
                 </div>
-                <div class="box-wrapper display-flex align-center">
+                <div class="box-wrapper display-flex align-center" data-filter-prop="website">
                     <div class="image-wrapper">
                         <img src="./images/projects/tfc-mockup.webp" alt="Thane Football Club">
                     </div>
@@ -240,7 +256,7 @@
                         <p class="stacks">HTML5, CSS3, jQuery, WordPress</p>
                     </div>
                 </div>
-                <div class="box-wrapper display-flex align-center">
+                <div class="box-wrapper display-flex align-center" data-filter-prop="website">
                     <div class="image-wrapper">
                         <img src="./images/projects/thewomb-mockup.webp" alt="The Womb">
                     </div>
@@ -249,7 +265,7 @@
                         <p class="stacks">HTML5, CSS3, jQuery</p>
                     </div>
                 </div>
-                <div class="box-wrapper display-flex align-center">
+                <div class="box-wrapper display-flex align-center" data-filter-prop="website">
                     <div class="image-wrapper">
                         <img src="./images/projects/ttp-mockup.webp" alt="The Womb">
                     </div>
@@ -258,7 +274,7 @@
                         <p class="stacks">HTML5, CSS3, jQuery, WordPress</p>
                     </div>
                 </div>
-                <div class="box-wrapper display-flex align-center">
+                <div class="box-wrapper display-flex align-center" data-filter-prop="website">
                     <div class="image-wrapper">
                         <img src="./images/projects/pacc-mockup.webp" alt="PACC">
                     </div>
