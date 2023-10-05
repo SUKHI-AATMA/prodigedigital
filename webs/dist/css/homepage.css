@@ -956,6 +956,14 @@ footer a {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+
+.project-titles .project-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .project-titles a {
   font-family: var(--brand-heading);
   font-size: 4vw;
@@ -1003,9 +1011,9 @@ footer a {
 }
 .project-titles .view-more-link {
   font-size: 1.8vw;
-  width: 100%;
   text-align: center;
   text-decoration: underline;
+  margin-bottom: 0;
 }
 .project-titles .view-more-link:after {
   display: none;
