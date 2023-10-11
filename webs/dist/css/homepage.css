@@ -1750,7 +1750,8 @@ header nav ul li a.active {
 .testimonialWrapper,
 .clientsWrapper,
 .reachOutWrapper,
-.siteFooter {
+.siteFooter,
+.glimpseOfOurWork {
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -1774,12 +1775,14 @@ header nav ul li a.active {
 }
 
 .teamMember,
-.testimonialWrapper {
+.testimonialWrapper,
+.glimpseOfOurWork {
   background: var(--color-off-white);
   color: var(--site-bg-color);
 }
 .teamMember h2,
-.testimonialWrapper h2 {
+.testimonialWrapper h2,
+.glimpseOfOurWork h2 {
   text-align: center;
   flex-basis: 100%;
   width: 100%;
@@ -2294,11 +2297,18 @@ img {
   line-height: normal;
 }
 
-.our-projects .project-details p.desc > a,
-.our-projects .project-details p.desc > span {
+.our-projects .project-details p > a,
+.our-projects .project-details p > span {
   color: var(--brand-primary);
-  font-size: 35px;
   position: relative;
+}
+
+.our-projects .project-details p > span {
+  font-size: 35px;
+}
+
+.our-projects .project-details p > a {
+  font-style: italic;
 }
 
 .our-projects .project-details p.stacks {
@@ -2815,33 +2825,33 @@ img {
 
 
 @media screen and (min-width: 1200px) {
-  .our-projects .project-details p.desc > a,
+  .our-projects .project-details p > a,
   .our-projects .project-details p.desc > span {
     text-decoration: none;
   }
 
-  .our-projects .project-details p.desc > a:before,
-  .our-projects .project-details p.desc > a:after {
+  .our-projects .project-details p > a:before,
+  .our-projects .project-details p > a:after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 2px;
+    height: 1px;
     transition: 0.5s all ease;
   }
 
-  .our-projects .project-details p.desc > a:before {
+  .our-projects .project-details p > a:before {
     background-color: var(--color-off-white);
     z-index: 1;
     width: 0;
   }
 
-  .our-projects .project-details p.desc > a:after {
+  .our-projects .project-details p > a:after {
     width: 100%;
     background-color: var(--brand-primary);
   }
 
-  .our-projects .project-details p.desc > a:hover:before {
+  .our-projects .project-details p > a:hover:before {
     width: 100%;
   }
 }
