@@ -3020,4 +3020,12 @@ img {
     display: block;
   }
 
+  .project-titles a:after {
+    font-size: 4vw;
+  }
+
+  .our-projects .project-details p > a {
+    word-break: break-word;
+  }
+
 }
