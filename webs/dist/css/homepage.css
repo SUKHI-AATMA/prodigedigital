@@ -2857,8 +2857,13 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .our-projects .box-wrapper:nth-child(even) {
+  .our-projects .box-wrapper:nth-child(even),
+  .our-projects .box-wrapper.odd {
     flex-direction: row-reverse;
+  }
+
+  .our-projects .box-wrapper.even {
+    flex-direction: initial;
   }
 
   .our-projects .box-wrapper .image-wrapper {
