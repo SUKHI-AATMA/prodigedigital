@@ -9,52 +9,65 @@ $(document).ready(function(){
         let arrOfVisibleProjectIndex = [];
 
         if(!$this.hasClass("active")) {
-            $this.addClass("active");
-            selectedWorkType.push(getValueOfTab);
-            // $(".our-projects").find(".box-wrapper[data-filter-prop='"+ getValueOfTab +"']").show().siblings(".box-wrapper:not([data-filter-prop='"+ getValueOfTab +"'])").slideUp();
+            $this.addClass("active").siblings("li").removeClass("active");
+            // selectedWorkType.push(getValueOfTab);
+            $(".our-projects").find(".box-wrapper.even").removeClass("even");
+            $(".our-projects").find(".box-wrapper.odd").removeClass("odd");
+            $(".our-projects").find(".box-wrapper[data-filter-prop*='"+ getValueOfTab +"']").each(function(i) {
+                arrOfVisibleProjectIndex.push($(this).index());
+                
+                if(i % 2 == 0) {
+                    $(".our-projects").find(".box-wrapper").eq(arrOfVisibleProjectIndex[i]).addClass("even");
+                }
+                else {
+                    $(".our-projects").find(".box-wrapper").eq(arrOfVisibleProjectIndex[i]).addClass("odd");
+                }
+            });
+            console.log(arrOfVisibleProjectIndex);
+            $(".our-projects").find(".box-wrapper[data-filter-prop*='"+ getValueOfTab +"']").show().siblings(".box-wrapper:not([data-filter-prop*='"+ getValueOfTab +"'])").slideUp();
         }
         else {
             $this.removeClass("active");
-            const index = selectedWorkType.indexOf(getValueOfTab);
-            selectedWorkType.splice(index, 1);
+            // const index = selectedWorkType.indexOf(getValueOfTab);
+            // selectedWorkType.splice(index, 1);
             $(".our-projects").find(".box-wrapper.even").removeClass("even");
             $(".our-projects").find(".box-wrapper.odd").removeClass("odd");
-            // $(".our-projects").find(".box-wrapper").show();
-        }
-
-        if(selectedWorkType.length >= 1) {
-            $(".our-projects").find(".box-wrapper").hide();
-
-            for(let i=0; i<selectedWorkType.length; i++) {
-                $(".our-projects").find(".box-wrapper[data-filter-prop*='"+ selectedWorkType[i] +"']").show();
-            }
-
-            $(".our-projects").find(".box-wrapper").each(function(i) {
-                let $this = $(this);
-    
-                if($this.is(":visible")) {
-                    arrOfVisibleProjectIndex.push($this.index());
-                }
-            }).promise().done(function() {
-                $(".our-projects").find(".box-wrapper.even").removeClass("even");
-                $(".our-projects").find(".box-wrapper.odd").removeClass("odd");
-    
-                $(arrOfVisibleProjectIndex).each(function(i) {
-                    if(i % 2 == 0) {
-                        $(".our-projects").find(".box-wrapper").eq(arrOfVisibleProjectIndex[i]).addClass("even");
-                    }
-                    else {
-                        $(".our-projects").find(".box-wrapper").eq(arrOfVisibleProjectIndex[i]).addClass("odd");
-                    }
-                });
-            });
-        }
-        else {
             $(".our-projects").find(".box-wrapper").show();
-            $(".our-projects").find(".box-wrapper.even").removeClass("even");
-            $(".our-projects").find(".box-wrapper.odd").removeClass("odd");
-            arrOfVisibleProjectIndex = [];
         }
+
+        // if(selectedWorkType.length >= 1) {
+        //     $(".our-projects").find(".box-wrapper").hide();
+
+        //     for(let i=0; i<selectedWorkType.length; i++) {
+        //         $(".our-projects").find(".box-wrapper[data-filter-prop*='"+ selectedWorkType[i] +"']").show();
+        //     }
+
+        //     $(".our-projects").find(".box-wrapper").each(function(i) {
+        //         let $this = $(this);
+    
+        //         if($this.is(":visible")) {
+        //             arrOfVisibleProjectIndex.push($this.index());
+        //         }
+        //     }).promise().done(function() {
+        //         $(".our-projects").find(".box-wrapper.even").removeClass("even");
+        //         $(".our-projects").find(".box-wrapper.odd").removeClass("odd");
+    
+        //         $(arrOfVisibleProjectIndex).each(function(i) {
+        //             if(i % 2 == 0) {
+        //                 $(".our-projects").find(".box-wrapper").eq(arrOfVisibleProjectIndex[i]).addClass("even");
+        //             }
+        //             else {
+        //                 $(".our-projects").find(".box-wrapper").eq(arrOfVisibleProjectIndex[i]).addClass("odd");
+        //             }
+        //         });
+        //     });
+        // }
+        // else {
+        //     $(".our-projects").find(".box-wrapper").show();
+        //     $(".our-projects").find(".box-wrapper.even").removeClass("even");
+        //     $(".our-projects").find(".box-wrapper.odd").removeClass("odd");
+        //     arrOfVisibleProjectIndex = [];
+        // }
 
         $("html, body").animate({
             scrollTop: $(".filter-wrapper").position().top - 80 + "px"
