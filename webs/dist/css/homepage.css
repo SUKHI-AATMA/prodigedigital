@@ -2369,6 +2369,10 @@ img {
   filter: opacity(0.5);
 }
 
+.home .stackWrapper {
+  padding-top: 50px;
+}
+
 @media only screen and (max-width: 1279px) {
   .ourService,
   .reachOut {
