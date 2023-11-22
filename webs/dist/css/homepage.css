@@ -722,6 +722,37 @@ footer a {
     padding: 0 0 10px;
   }
 }
+
+.link-text {
+  color: var(--brand-primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.link-text::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 1px;
+  width: 0;
+  background-color: var(--brand-primary);
+  transform: translateX(-50%);
+  transform-origin: center;
+  transition: 0.2s all ease;
+}
+
+.link-text:hover {
+  text-decoration: none;
+}
+
+.link-text:hover::after {
+  width: 100%;
+}
+
+
 .projects-carousel.slick-initialized.slick-slider {
   height: 100vh;
 }
