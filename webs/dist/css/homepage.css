@@ -1999,6 +1999,8 @@ footer.siteFooter .social a {
   flex-wrap: wrap;
   justify-content: center;
   max-width: 1400px;
+  column-gap: 50px;
+  row-gap: 20px;
 }
 .stackWrapper li,
 .processWrapper li {
