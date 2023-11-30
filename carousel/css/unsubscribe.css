@@ -1,0 +1,402 @@
+/*/// Adds a browser prefix to the property*/
+/*/// @param {*} $property Property*/
+/*/// @param {*} $value Value*/
+/*/// Background Gradient*/
+/*/// @param {Color} $startColor [#3C3C3C] - Start Color*/
+/*/// @param {Color} $endColor [#999999] - End Color*/
+/*/// Background Horizontal*/
+/*/// @param {Color} $startColor [#3C3C3C] - Start Color*/
+/*/// @param {Color} $endColor [#999999] - End Color*/
+/*/// Background Horizontal - inverse direction*/
+/*/// @param {Color} $startColor [#999999] - Start Color*/
+/*/// @param {Color} $endColor [#3C3C3C] - End Color*/
+/*/// Background Radial*/
+/*/// @param {Color} $startColor [#3C3C3C] - Start Color*/
+/*/// @param {Percentage} $startPos [0%] - Start position*/
+/*/// @param {Color} $endColor [#999999] - End Color*/
+/*/// @param {Percentage} $endPos [100%] - End position*/
+/*/// Background Size*/
+/*/// @param {Size} $width [100%] - Width*/
+/*/// @param {Size} $width [$width] - Height*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Background Color Opacity*/
+/*/// @param {Color} $color [100%] - Color*/
+/*/// @param {Double} $opacity [0.85] - Opacity*/
+/*/// Border Radius*/
+/*/// @param {Size} $radius [5px] - Radius*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Border Radius Separate*/
+/*/// @param {Size} $topLeftRadius [5px] - Top Left*/
+/*/// @param {Size} $topRightRadius [5px] - Top Right*/
+/*/// @param {Size} $bottomLeftRadius [5px] - Bottom Left*/
+/*/// @param {Size} $bottomRightRadius [5px] - Bottom Right*/
+/*/// Box*/
+/*/// @param {*} $orient [horizontal] - Orientation*/
+/*/// @param {*} $pack [center] - Pack*/
+/*/// @param {*} $align [center] - Align*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Box RGBA*/
+/*/// @param {Integer} $r [60] - Red*/
+/*/// @param {Integer} $g [3] - Green*/
+/*/// @param {Integer} $b [12] - Blue*/
+/*/// @param {Double} $opacity [0.23] - Opacity*/
+/*/// @param {Color} $color [#3C3C3C] - Color*/
+/*/// Box Shadow*/
+/*/// @param {Size} $x [2px] - X*/
+/*/// @param {Size} $y [2px] - Y*/
+/*/// @param {Size} $blur [5px] - Blur*/
+/*/// @param {Color} $color [rgba(0,0,0,.4)] - Color*/
+/*/// @param {Boolean} $inset - Inset*/
+/*/// Box Sizing*/
+/*/// @param {*} $type [border-box] - Type*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Columns*/
+/*/// @param {Integer} $count [3] - Count*/
+/*/// @param {Integer} $gap [10] - Gap*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Double Borders*/
+/*/// @param {Color} $colorOne [#3C3C3C] - Color One*/
+/*/// @param {Color} $colorTwo [#999999] - Color Two*/
+/*/// @param {Size} $radius [0] - Radius*/
+/*/// @require {mixin} css3-prefix*/
+/*/// @require {mixin} border-radius*/
+/*/// Flex*/
+/*/// @param {Integer} $value [1] - Value*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Flip*/
+/*/// @param {Double} $scaleX [-1] - ScaleX*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Font Face*/
+/*/// @param {Font} $fontFamily [myFont] - Font Family*/
+/*/// @param {String} $eotFileSrc ['myFont.eot'] - Eot File Source*/
+/*/// @param {String} $woffFileSrc ['myFont.woff'] - Woff File Source*/
+/*/// @param {String} $ttfFileSrc ['myFont.ttf'] - Ttf File Source*/
+/*/// @param {String} $svgFileSrc ['myFont.svg'] - Svg File Source*/
+/*/// Opacity*/
+/*/// @param {Double} $opacity [0.5] - Opacity*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Outline Radius*/
+/*/// @param {Size} $radius [5px] - Radius*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Resize*/
+/*/// @param {*} $directoin [both] - Direction*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Rotate*/
+/*/// CSS Matrix Rotation Calculator http://www.boogdesign.com/examples/transforms/matrix-calculator.html*/
+/*/// @param {Double} $deg [0] - Degree*/
+/*/// @param {Double} $m11 [0] - M11*/
+/*/// @param {Double} $m12 [0] - M12*/
+/*/// @param {Double} $m21 [0] - M21*/
+/*/// @param {Double} $m22 [0] - M22*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Text Shadow*/
+/*/// @param {Size} $x [2px] - X*/
+/*/// @param {Size} $y [2px] - Y*/
+/*/// @param {Size} $blur [2px] - Blur*/
+/*/// @param {Color} $color [rgba(0,0,0,.4)] - Color*/
+/*/// Transform*/
+/*/// @param {List} $params - Params*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Transform-Origin*/
+/*/// @param {List} $params - Params*/
+/*/// @require {mixin} css3-prefix*/
+/*/// @param {List} $params - Params*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Transition*/
+/*/// @param {List} $properties - Properties*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Triple Borders*/
+/*/// @param {Color} $colorOne [#3C3C3C] - Color One*/
+/*/// @param {Color} $colorTwo [#999999] - Color Two*/
+/*/// @param {Color} $colorThree [#000000] - Color Three*/
+/*/// @param {Size} $radius [0] - Radius*/
+/*/// @require {mixin} border-radius*/
+/*/// @require {mixin} css3-prefix*/
+/*/// Keyframes*/
+/*/// @param {*} $animation-name - Animation name*/
+/*/// @content [Animation css]*/
+/*/// Animation*/
+/*/// @param {*} $str - name duration timing-function delay iteration-count direction fill-mode play-state ([http://www.w3schools.com/cssref/css3_pr_animation.asp](http://www.w3schools.com/cssref/css3_pr_animation.asp))*/
+/*/// @require {mixin} css3-prefix*/
+.signup-section {
+  margin-top: 160px;
+}
+
+.formWrapper {
+  margin-top: 30px;
+  max-width: 450px;
+  width: 80%;
+}
+.formWrapper .col_1 {
+  display: flex;
+}
+.formWrapper .col_1 .row {
+  position: relative;
+  margin: 0 0 10px 0;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.formWrapper .col_1 .row.fieldFocus label {
+  top: 5px;
+  font-size: 12px;
+}
+.formWrapper .col_1 .row.fieldFocus input {
+  border-bottom: 1px solid #898989;
+}
+.formWrapper .col_1 .row.showErrorMsg input[type=text] {
+  border-bottom-color: #f00;
+}
+.formWrapper .col_1 .row.showErrorMsg .errorMsg {
+  visibility: hidden;
+}
+.formWrapper .col_1 .row.autoHeight {
+  height: auto;
+}
+.formWrapper .col_1 label {
+  font-family: "Montserrat-Bold", Helvetica, sans-serif;
+  font-size: 18px;
+  color: #bababa;
+  transition: 0.5s all ease;
+  align-self: flex-start;
+}
+.formWrapper .col_1 .errorMsg {
+  font-size: 13px;
+  color: red;
+  margin-top: 5px;
+  visibility: hidden;
+  margin-bottom: 0;
+}
+.formWrapper .col_1 input[type=text] {
+  border: none;
+  border-bottom: 1px solid #bababa;
+  width: 100%;
+  outline: none;
+  transition: 0.5s all ease;
+  -webkit-appearance: none;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 0 0;
+  font-size: 16px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #572359;
+  position: relative;
+  z-index: 1;
+  border-radius: 0;
+  background: none;
+  /*border: 0px;*/
+}
+.formWrapper .col_1 label {
+  position: absolute;
+  top: 30%;
+}
+.formWrapper .col_1 textarea {
+  border: 1px solid #f5f5f5;
+  width: 100%;
+  background: #f5f5f5;
+  height: 100px;
+  resize: none;
+  padding: 16px 18px;
+  box-sizing: border-box;
+  outline: none;
+  margin: 20px 0 5px 0;
+  transition: 0.5s all ease;
+  color: #000;
+  -webkit-appearance: none;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #572359;
+  position: relative;
+  z-index: 1;
+  border-radius: 0;
+}
+.formWrapper .col_1 textarea::-moz-placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  color: #bababa;
+}
+.formWrapper .col_1 textarea::placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  color: #bababa;
+}
+.formWrapper .col_1 textarea:focus {
+  /*background: #fff;*/
+  border: 1px solid #f5f5f5;
+}
+.formWrapper .col_1 .row {
+  width: 100%;
+}
+.formWrapper .unsubscribe-form-btn {
+  margin-top: 15px;
+}
+.formWrapper .unsubscribe-form-btn.disabled {
+  background: linear-gradient(to right, #bababa 0%, #e6e6e6 100%);
+  cursor: not-allowed;
+}
+.formWrapper .mrgBtm10 {
+  margin-bottom: 10px;
+}
+
+body::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: 12;
+  display: none;
+}
+body.showPopUpSuccess::before, body.showPopUpSuccess .popUpWrapper {
+  display: block;
+}
+body.showPopUpSuccess .popUpWrapper .popUpContent .success {
+  display: block;
+}
+body.showPopUpFail::before, body.showPopUpFail .popUpWrapper {
+  display: block;
+}
+body.showPopUpFail .popUpWrapper .popUpContent .fail {
+  display: block;
+}
+body header .logo {
+  transform: translateY(0);
+}
+body header .logo img {
+  width: 100%;
+}
+
+.popUpWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 13;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15);
+  border: solid 1px #f5f5f5;
+  width: 80%;
+  max-width: 800px;
+  display: none;
+}
+.popUpWrapper .popUpContent {
+  display: flex;
+  padding: 60px 40px;
+}
+.popUpWrapper .popUpContent .lhsSection {
+  padding-right: 50px;
+  box-sizing: border-box;
+}
+.popUpWrapper .popUpContent .lhsSection h2, .popUpWrapper .popUpContent .lhsSection p {
+  color: #222;
+  font-family: "Open Sans", sans-serif;
+}
+.popUpWrapper .popUpContent .lhsSection h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.popUpWrapper .popUpContent .lhsSection p {
+  font-size: 16px;
+}
+.popUpWrapper .popUpContent .lhsSection .backgroundImage {
+  margin-top: 62px;
+}
+.popUpWrapper .popUpContent .rhsSection .closeWrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 55px;
+  display: flex;
+  justify-content: flex-end;
+  transform: translateY(8px);
+}
+.popUpWrapper .popUpContent .rhsSection .closeWrapper .close {
+  width: 22px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
+}
+.popUpWrapper .popUpContent .rhsSection .closeWrapper .close::before, .popUpWrapper .popUpContent .rhsSection .closeWrapper .close::after {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background-color: #572359;
+  position: absolute;
+  right: 0;
+  top: 7px;
+}
+.popUpWrapper .popUpContent .rhsSection .closeWrapper .close::before {
+  transform: rotate(45deg);
+}
+.popUpWrapper .popUpContent .rhsSection .closeWrapper .close:after {
+  transform: rotate(-45deg);
+}
+.popUpWrapper .popUpContent .success, .popUpWrapper .popUpContent .fail {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  body header {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  body header .logo {
+    width: 20% !important;
+    transform: translateY(10px);
+  }
+  .signup-section {
+    margin-top: 120px !important;
+  }
+  .formWrapper .col_1 .row .errorMsg {
+    font-size: 11px;
+  }
+  .popUpWrapper .popUpContent {
+    padding: 30px 20px;
+  }
+  .popUpWrapper .popUpContent .lhsSection {
+    padding-right: 0;
+  }
+  .popUpWrapper .popUpContent .lhsSection h2 {
+    font-size: 25px;
+    line-height: 1.5;
+  }
+  .popUpWrapper .popUpContent .lhsSection p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .popUpWrapper .popUpContent .lhsSection .backgroundImage svg {
+    width: 100%;
+  }
+  .popUpWrapper .popUpContent .rhsSection {
+    position: absolute;
+    top: 0;
+    right: 8px;
+  }
+  .popUpWrapper .popUpContent .rhsSection svg {
+    display: none !important;
+  }
+}
+@media (max-width: 480px) {
+  .popUpWrapper .popUpContent .lhsSection h2 {
+    font-size: 20px;
+  }
+  .popUpWrapper .popUpContent .lhsSection p {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=unsubscribe.css.map */
