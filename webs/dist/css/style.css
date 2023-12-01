@@ -2238,6 +2238,11 @@ img {
   border: 1px solid var(--site-link-color);
   color: var(--site-link-color);
 }
+
+.screen-orientation-wrapper {
+  display: none;
+}
+
 /* common CSS ends */
 
 .wrapper-container > h2 {
@@ -3085,5 +3090,21 @@ img {
 
   footer.siteFooter .social a {
     max-width: 25px;
+  }
+ 
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .screen-orientation-wrapper {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--color-white);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
   }
 }
