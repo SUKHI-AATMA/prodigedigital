@@ -17,110 +17,114 @@ function animateClass() {
   }, 100);
 }
 animateClass(),
-  $(document).ready(function () {
-    null == localStorage.getItem("loader")
-      ? (localStorage.setItem("loader", !0),
-        setTimeout(function () {
-          $(".loader").addClass("animate");
-        }, 1e3),
-        setTimeout(function () {
-          $(".loader").addClass("hide"), $("body").addClass("loaderFinished");
-        }, 3e3))
-      : ($(".loader").remove(), $("body").addClass("loaderFinished")),
-      $("body").removeClass("active"),
-      $(".nav-toggler").on("click", function () {
-        $("header").toggleClass("nav-open");
-      }),
-      $(".projects-carousel").slick({ arrows: !1 }),
-      $(".project-titles a:not(.view-more-link)")
-        .on("mouseover", function () {
-          $(this).addClass("active").siblings().removeClass("active");
-          var e = $(this).attr("data-slide");
-          $(".projects-carousel").slick("slickGoTo", e - 1);
-        })
-        .on("click", function (e) {
-          e.preventDefault(),
-            $(this)
-              .addClass("active")
-              .siblings()
-              .removeClass("active")
-              .parents(".project-titles")
-              .addClass("select"),
-            (linkUrl = $(this).attr("href")),
-            setTimeout(function () {
-              window.open(linkUrl, "_blank");
-            }, 2e3);
-        }),
-      $("#carousel").slick({
-        arrows: !1,
-        dots: !0,
-        centerMode: !0,
-        infinite: !0,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      }),
-      $(".counter").each(function () {
-        var e = $(this),
-          t = e.attr("data-count");
-        e.addClass("start"),
-          $({ countNum: e.text() }).animate(
-            { countNum: t },
-            {
-              duration: 2e3,
-              easing: "linear",
-              step: function () {
-                e.text(Math.floor(this.countNum));
-              },
-              complete: function () {
-                e.text(this.countNum + "+");
-              },
-            }
-          );
-      }),
-      $(".CookieBar-btn").on("click", function () {
-        if (
-          0 ==
-          (document.cookie.match("(^|;)\\s*Opened\\s*=\\s*([^;]+)")?.pop() ||
-            "")
-        ) {
-          var e = new Date(),
-            t = t || 365;
-          e.setTime(+e + 864e5 * t),
-            (window.document.cookie =
-              "Opened=true; expires=" + e.toGMTString() + "; path=/"),
-            $(".CookieBar").addClass("cookie-leave-to");
-        }
-      }),
-      "true" ==
-        (document.cookie.match("(^|;)\\s*Opened\\s*=\\s*([^;]+)")?.pop() ||
-          "") && $(".CookieBar").addClass("cookie-leave-to"),
-      $("header a").on("click", function (e) {
-        console.log($(this).attr("target"));
-        if ($(this).attr("target") != "_blank") {
-          e.preventDefault(), $("body").addClass("active");
-          var t = $(this).attr("href");
+$(document).ready(function () {
+  null == localStorage.getItem("loader")
+    ? (localStorage.setItem("loader", !0),
+      setTimeout(function () {
+        $(".loader").addClass("animate");
+      }, 1e3),
+      setTimeout(function () {
+        $(".loader").addClass("hide"), $("body").addClass("loaderFinished");
+      }, 3e3))
+    : ($(".loader").remove(), $("body").addClass("loaderFinished")),
+    $("body").removeClass("active"),
+    $(".nav-toggler").on("click", function () {
+      $("header").toggleClass("nav-open");
+    }),
+    $(".projects-carousel").slick({ arrows: !1 }),
+    $(".project-titles a:not(.view-more-link)")
+      .on("mouseover", function () {
+        $(this).addClass("active").siblings().removeClass("active");
+        var e = $(this).attr("data-slide");
+        $(".projects-carousel").slick("slickGoTo", e - 1);
+        $(this).parents(".projects").addClass("project-titles-hovered");
+      })
+      .on("mouseleave", function () {
+        $(this).parents(".projects").removeClass("project-titles-hovered");
+      })
+      .on("click", function (e) {
+        e.preventDefault(),
+          $(this)
+            .addClass("active")
+            .siblings()
+            .removeClass("active")
+            .parents(".project-titles")
+            .addClass("select"),
+          (linkUrl = $(this).attr("href")),
           setTimeout(function () {
-            window.location.href = t;
-          }, 500);
-        }
-      });
-    if(!$("body").hasClass("home")) {
-        $(document).scrollTop() > 50 ? ($("header").addClass("scrolled"), $("#downArrow").hide()) : ($("header").removeClass("scrolled"), $("#downArrow").show());
-    }
-    else {
-        $(document).scrollTop() > 50 ? $("#downArrow").hide() : $("#downArrow").show();
-    }
-  }),
+            window.open(linkUrl, "_blank");
+          }, 2e3);
+      }),
+    $("#carousel").slick({
+      arrows: !1,
+      dots: !0,
+      centerMode: !0,
+      infinite: !0,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    }),
+    $(".counter").each(function () {
+      var e = $(this),
+        t = e.attr("data-count");
+      e.addClass("start"),
+        $({ countNum: e.text() }).animate(
+          { countNum: t },
+          {
+            duration: 2e3,
+            easing: "linear",
+            step: function () {
+              e.text(Math.floor(this.countNum));
+            },
+            complete: function () {
+              e.text(this.countNum + "+");
+            },
+          }
+        );
+    }),
+    $(".CookieBar-btn").on("click", function () {
+      if (
+        0 ==
+        (document.cookie.match("(^|;)\\s*Opened\\s*=\\s*([^;]+)")?.pop() ||
+          "")
+      ) {
+        var e = new Date(),
+          t = t || 365;
+        e.setTime(+e + 864e5 * t),
+          (window.document.cookie =
+            "Opened=true; expires=" + e.toGMTString() + "; path=/"),
+          $(".CookieBar").addClass("cookie-leave-to");
+      }
+    }),
+    "true" ==
+      (document.cookie.match("(^|;)\\s*Opened\\s*=\\s*([^;]+)")?.pop() ||
+        "") && $(".CookieBar").addClass("cookie-leave-to"),
+    $("header a").on("click", function (e) {
+      console.log($(this).attr("target"));
+      if ($(this).attr("target") != "_blank") {
+        e.preventDefault(), $("body").addClass("active");
+        var t = $(this).attr("href");
+        setTimeout(function () {
+          window.location.href = t;
+        }, 500);
+      }
+    });
+  if(!$("body").hasClass("home")) {
+      $(document).scrollTop() > 50 ? ($("header").addClass("scrolled"), $("#downArrow").hide()) : ($("header").removeClass("scrolled"), $("#downArrow").show());
+  }
+  else {
+      $(document).scrollTop() > 50 ? $("#downArrow").hide() : $("#downArrow").show();
+  }
+}),
 
-  $(window).on("scroll", function () {
-    if(!$("body").hasClass("home")) {
-        $(document).scrollTop() > 50 ? ($("header").addClass("scrolled"), $("#downArrow").hide()) : ($("header").removeClass("scrolled"), $("#downArrow").show());
-    }
-    else {
-        $(document).scrollTop() > 50 ? $("#downArrow").hide() : $("#downArrow").show();
-    }
+$(window).on("scroll", function () {
+  if(!$("body").hasClass("home")) {
+      $(document).scrollTop() > 50 ? ($("header").addClass("scrolled"), $("#downArrow").hide()) : ($("header").removeClass("scrolled"), $("#downArrow").show());
+  }
+  else {
+      $(document).scrollTop() > 50 ? $("#downArrow").hide() : $("#downArrow").show();
+  }
 
-  });
+});
 
 $(document).ready(function () {
   let selectedWorkType = [];
@@ -210,6 +214,16 @@ $(document).ready(function () {
       200
     );
   });
+
+  // /* START - Hover effect on homepage banner */
+  // let elemProjectTitles = document.querySelectorAll(".project-titles a");
+
+  // for(let i=0; i<elemProjectTitles.length; i++) {
+  //   elemProjectTitles[i].addEventListener("mouseenter", () => {
+  //     elemProjectTitles[i].closest(".projects").classList.add("project-titles-hovered");
+  //   })
+  // }
+  // /* END - Hover effect on homepage banner */
 
   $(".filter-wrapper .filter-elements li").each(function () {
     let $this = $(this);

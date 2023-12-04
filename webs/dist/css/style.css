@@ -1047,6 +1047,16 @@ footer a {
 .project-titles .view-more-link:after {
   display: none;
 }
+
+.project-titles-hovered .projects-carousel .slick-active img {
+  filter: blur(0) !important;
+  transition: 0.5s all ease;
+}
+
+.project-titles-hovered .project-links .active {
+  filter: blur(5px);
+}
+
 .about-prodige {
   text-align: center;
 }
@@ -2382,6 +2392,11 @@ img {
 
 .home .stackWrapper {
   padding-top: 50px;
+}
+
+.pageIsScrolling {
+  transform: translateY(-100%);
+  transition: 0.5s all ease;
 }
 
 @media only screen and (max-width: 1279px) {
