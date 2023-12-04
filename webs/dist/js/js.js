@@ -215,15 +215,18 @@ $(document).ready(function () {
     );
   });
 
-  // /* START - Hover effect on homepage banner */
-  // let elemProjectTitles = document.querySelectorAll(".project-titles a");
+  /* START - click of down arrow on homepage */
+  $("#downArrow").on("click", () => {
+    $("html, body").animate(
+      {
+        scrollTop: $(".ourService").position().top - 60 + "px",
+      },
+      200
+    );
+  });
+  /* END - click of down arrow on homepage */
 
-  // for(let i=0; i<elemProjectTitles.length; i++) {
-  //   elemProjectTitles[i].addEventListener("mouseenter", () => {
-  //     elemProjectTitles[i].closest(".projects").classList.add("project-titles-hovered");
-  //   })
-  // }
-  // /* END - Hover effect on homepage banner */
+  
 
   $(".filter-wrapper .filter-elements li").each(function () {
     let $this = $(this);
