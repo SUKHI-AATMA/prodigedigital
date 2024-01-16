@@ -70,7 +70,7 @@ function notificationBar() {
     console.log(123);
     // if(winWidth > 768)
     // {
-    $('body').prepend('<div class="battleGroundPopup"><a href="jaascript:;" class="closeBtn closePop">close</a><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td height="25"></td></tr><tr><td bgcolor="#efd3db" valign="top" style="border-radius:10px;"><table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td height="15"></td></tr><tr><td align="center" valign="top" style="line-height:0px;"><img src="mailers/CG_battleground/images/logo1.png" width="17%"></td></tr><tr><td align="center" class="title" style="font-family:MontserratExtraBold; padding-top:10px; color:#562359; font-size:1.8em; text-align:center;"><strong>CENTURO GLOBAL BATTLEGROUND</strong></td></tr><tr><td align="center" class="subTitle" style="font-family:Montserrat-Regular; padding-top:3px; color:#562359; font-size:1.4em; text-align:center;">The Ultimate New startup Pitching Competition</td></tr><tr><td height="15"></td></tr></tbody></table></td></tr><tr><td height="25"></td></tr><tr><td valign="top"><table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td bgcolor="#fbeff1" width="48%" valign="top" style="border-radius:10px;"><table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td height="15"></td></tr><tr><td align="center" valign="top" style="line-height:0px;"><img src="mailers/CG_battleground/images/trophy.png" width="50%"></td></tr><tr></tr><tr><td height="10"></td></tr></tbody></table></td><td width="4%"></td><td valign="top" width="48%"><table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td bgcolor="#fbeff1" valign="top" style="padding:12px 10px; border-radius:10px;"><table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td colspan="2" height="5"></td></tr><tr><td width="20%" valign="top" style="line-height:0px;"><img src="mailers/CG_battleground/images/date.png" width="40"></td><td width="80%" class="date" style="font-family:Montserrat-Regular; padding-left:9px; color:#562359; font-size:1.0em;"><strong>Oct 2019</strong></td></tr><tr><td colspan="2" height="5"></td></tr></tbody></table></td></tr><tr><td height="15"></td></tr><tr><td bgcolor="#fbeff1" valign="top" style="padding:12px 10px; border-radius:10px;"><table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td colspan="2" height="5"></td></tr><tr><td width="20%" valign="top" style="line-height:0px; "><img src="mailers/CG_battleground/images/location.png" width="40"></td><td width="80%" class="place" style="font-family:Montserrat-Regular; padding-left:9px; color:#562359; font-size:1.0em;"><strong>London, UK</strong></td></tr><tr><td colspan="2" height="6"></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td height="25"></td></tr><tr><td style="line-height:0px; text-align: center;"><a href="mailers/CG_battleground/cg.htm" target="_blank" class="button learnMore">Learn More</a> </td></tr></table></div><div class="overlay bgp"></div>');
+    $('body').prepend('<div class="battleGroundPopup"><a href="jaascript:;" class="closeBtn closePop">close</a><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td height="25"></td></tr><tr><td bgcolor="#efd3db" valign="top" style="border-radius:10px;"><table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td height="15"></td></tr><tr><td align="center" valign="top" style="line-height:0px;"><img loading="lazy" src="mailers/CG_battleground/images/logo1.png" width="17%"></td></tr><tr><td align="center" class="title" style="font-family:MontserratExtraBold; padding-top:10px; color:#562359; font-size:1.8em; text-align:center;"><strong>CENTURO GLOBAL BATTLEGROUND</strong></td></tr><tr><td align="center" class="subTitle" style="font-family:Montserrat-Regular; padding-top:3px; color:#562359; font-size:1.4em; text-align:center;">The Ultimate New startup Pitching Competition</td></tr><tr><td height="15"></td></tr></tbody></table></td></tr><tr><td height="25"></td></tr><tr><td valign="top"><table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td bgcolor="#fbeff1" width="48%" valign="top" style="border-radius:10px;"><table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td height="15"></td></tr><tr><td align="center" valign="top" style="line-height:0px;"><img loading="lazy" src="mailers/CG_battleground/images/trophy.png" width="50%"></td></tr><tr></tr><tr><td height="10"></td></tr></tbody></table></td><td width="4%"></td><td valign="top" width="48%"><table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td bgcolor="#fbeff1" valign="top" style="padding:12px 10px; border-radius:10px;"><table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td colspan="2" height="5"></td></tr><tr><td width="20%" valign="top" style="line-height:0px;"><img loading="lazy" src="mailers/CG_battleground/images/date.png" width="40"></td><td width="80%" class="date" style="font-family:Montserrat-Regular; padding-left:9px; color:#562359; font-size:1.0em;"><strong>Oct 2019</strong></td></tr><tr><td colspan="2" height="5"></td></tr></tbody></table></td></tr><tr><td height="15"></td></tr><tr><td bgcolor="#fbeff1" valign="top" style="padding:12px 10px; border-radius:10px;"><table width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td colspan="2" height="5"></td></tr><tr><td width="20%" valign="top" style="line-height:0px; "><img loading="lazy" src="mailers/CG_battleground/images/location.png" width="40"></td><td width="80%" class="place" style="font-family:Montserrat-Regular; padding-left:9px; color:#562359; font-size:1.0em;"><strong>London, UK</strong></td></tr><tr><td colspan="2" height="6"></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td height="25"></td></tr><tr><td style="line-height:0px; text-align: center;"><a href="mailers/CG_battleground/cg.htm" target="_blank" class="button learnMore">Learn More</a> </td></tr></table></div><div class="overlay bgp"></div>');
     // }
     // else
     // {
@@ -718,7 +718,7 @@ function headerAnim() {
     homeScreenAnimation.to($(siteSubnavLi[0]), 0.4, { y: 0, ease: Power1.easeInOut }, "+=0.1");
     homeScreenAnimation.to($(siteSubnavLi[1]), 0.4, { y: 0, ease: Power1.easeInOut }, "-=0.05");
     $('.navigation > ul > li .svg').each(function() {
-        $(this).html('<img src="dist/images/navigation/' + $(this).attr('data-letter') + '.png" alt="" /><img src="dist/images/navigation/' + $(this).attr('data-letter') + '_hover.png" alt=""/>')
+        $(this).html('<img loading="lazy" src="dist/images/navigation/' + $(this).attr('data-letter') + '.png" alt="" /><img loading="lazy" src="dist/images/navigation/' + $(this).attr('data-letter') + '_hover.png" alt=""/>')
     });
 }
 
@@ -832,7 +832,7 @@ function setGlobalAnims() {
             }, null, null, 2);
         }
         if (mobile && !isInnerpage) {
-            $('#circleMove').html('<img src="dist/images/orange-circle.png" alt="" />')
+            $('#circleMove').html('<img loading="lazy" src="dist/images/orange-circle.png" alt="" />')
         }
     }
     if (!isInnerpage) {
@@ -2325,11 +2325,11 @@ if ($('#fullpage').length) {
         // fullpage_api.fitToSection(false);
         // fullpage_api.destroy('all');
         $('.section').addClass('fp-auto-height');
-        $('#illustration').html('<img src="dist/images/red-line.png" alt="" />')
+        $('#illustration').html('<img loading="lazy" src="dist/images/red-line.png" alt="" />')
         // fold2IllustrationInit = bodymovin.loadAnimation(fold2Illustration);
         // secThreeDotMeshInit = bodymovin.loadAnimation(secThreeDotMesh);
         // secThreeDotMeshInit.play();
-        $('#getStarted').html('<img src="dist/images/get-started.png" style="margin: 20px 0; width: 80%" alt="" />')
+        $('#getStarted').html('<img loading="lazy" src="dist/images/get-started.png" style="margin: 20px 0; width: 80%" alt="" />')
         secOnePlaneInit = bodymovin.loadAnimation(secOnePlane);
         secOnePlaneInit.play();
         secOnePlaneInit.addEventListener('complete', function() {

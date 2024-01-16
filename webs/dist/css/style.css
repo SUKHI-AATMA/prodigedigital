@@ -2,7 +2,7 @@
 :root {
   --brand-primary: #fe413f;
   --brand-secondary: gray;
-  --brand-heading: "DM Serif Text", serif;
+  --brand-heading: 'Poppins', sans-serif;
   --brand-primary-font: "Urbanist", sans-serif;
   --brand-secondary-font: "Yantramanav", sans-serif;
   --site-bg-color: #292929;
@@ -1730,7 +1730,8 @@ header nav ul li a.active {
 }
 
 .ourService .rightSection .boxSection .grpahicImg svg {
-  height: inherit;
+  height: 80px;
+  width: 80px;
 }
 
 .ourService .rightSection .boxSection h3 {
@@ -2047,20 +2048,22 @@ footer.siteFooter .social a {
   flex-wrap: wrap;
   justify-content: center;
   max-width: 1400px;
-  column-gap: 90px;
-  row-gap: 20px;
+  column-gap: 30px;
+  row-gap: 0px;
   margin-left: 0;
 }
 .stackWrapper li,
 .processWrapper li {
   list-style-type: none;
   transition: all 0.2s ease-in-out;
+  width: 150px;
 }
 .stackWrapper li:hover {
   transform: scale(1.2);
 }
 .stackWrapper li img {
   max-width: 160px;
+  filter: grayscale(1);
 }
 .processWrapper {
   padding: 50px 20px 30px;
@@ -2516,6 +2519,12 @@ img {
     min-height: 120px;
     width: 80px;
   }
+  .stackWrapper li {
+    width: auto;
+  }
+  .stackWrapper li img {
+    max-width: 100px;
+  }
 }
 
 @media only screen and (max-width: 639px) {
@@ -2853,8 +2862,9 @@ img {
 }
 
 @media only screen and (max-width: 640px) {
-  .ourService .rightSection .boxSection .grpahicImg {
-    height: 70%;
+  .ourService .rightSection .boxSection .grpahicImg svg{
+    height: 40px;
+    width: 80px;
   }
 
   .ourService .rightSection .boxSection h3 {

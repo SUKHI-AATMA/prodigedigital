@@ -231,7 +231,7 @@ $(function() {
                             if (imagesArray[j].split(".").indexOf("mp4") != (-1)) {
                                 cont += '<video height="100%" controls><source src="' + imagesArray[i] + '" type="video/mp4"><source src="' + imagesArray[i] + '" type="video/ogg">Your browser does not support HTML5 video.</video>'
                             } else {
-                                cont += '<img src="' + imagesArray[j] + '" alt="">'
+                                cont += '<img loading="lazy" src="' + imagesArray[j] + '" alt="">'
                             }
                         }
                     } else {
@@ -239,7 +239,7 @@ $(function() {
                         if (imagesArray[0].split(".").indexOf("mp4") != (-1)) {
                             cont += '<video height="100%" controls><source src="' + imagesArray[i] + '" type="video/mp4"><source src="' + imagesArray[i] + '" type="video/ogg">Your browser does not support HTML5 video.</video>'
                         } else {
-                            cont += '<img src="' + imagesArray[0] + '" alt="">'
+                            cont += '<img loading="lazy" src="' + imagesArray[0] + '" alt="">'
                         }
                     }
 
@@ -319,7 +319,7 @@ $(function() {
                         relatedCont += '<span class="title ' + category.toLowerCase().replace(" ", "-") + '">' + category + 's</span>'
                         if (galleryMediaLength != 0) {
                             relatedCont += '<div class="imgWrapper">'
-                            relatedCont += '<img src="' + jsonData[i].imageList[0] + '" alt="">'
+                            relatedCont += '<img loading="lazy" src="' + jsonData[i].imageList[0] + '" alt="">'
                             relatedCont += '</div>'
                         }
                         relatedCont += '<div class="contentWrapper">'
@@ -547,7 +547,7 @@ $(function() {
                 $('.imgContainer').append('<video height="100%" controls><source src="' + imagesArray[i] + '" type="video/mp4"><source src="' + imagesArray[i] + '" type="video/ogg">Your browser does not support HTML5 video.</video>')
 
             } else {
-                $('.imgContainer').append('<img src="' + imagesArray[i] + '" alt="wbaf" />');
+                $('.imgContainer').append('<img loading="lazy" src="' + imagesArray[i] + '" alt="wbaf" />');
             }
 
         }
@@ -633,7 +633,7 @@ $(function() {
             relatedCont += '<span class="title ' + category.toLowerCase().replace(" ", "-") + '">' + category + 's</span>'
             if (galleryMediaLength != 0) {
                 relatedCont += '<div class="imgWrapper">'
-                relatedCont += '<img src="' + jsonData[i].imageList[0] + '" alt="">'
+                relatedCont += '<img loading="lazy" src="' + jsonData[i].imageList[0] + '" alt="">'
                 relatedCont += '</div>'
             }
             relatedCont += '<div class="contentWrapper">'

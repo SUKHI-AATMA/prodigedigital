@@ -436,7 +436,7 @@ function headerAnim() {
     TweenMax.to($(siteSubnavLi[0]), 0.4, { y: 0, ease: Power1.easeInOut }, "+=0.1");
     TweenMax.to($(siteSubnavLi[1]), 0.4, { y: 0, ease: Power1.easeInOut }, "-=0.05");
     $('.navigation > ul > li .svg').each(function() {
-        $(this).html('<img src="dist/images/navigation/' + $(this).attr('data-letter') + '.png" alt="" /><img src="dist/images/navigation/' + $(this).attr('data-letter') + '_hover.png" alt=""/>')
+        $(this).html('<img loading="lazy" src="dist/images/navigation/' + $(this).attr('data-letter') + '.png" alt="" /><img loading="lazy" src="dist/images/navigation/' + $(this).attr('data-letter') + '_hover.png" alt=""/>')
     });
 }
 
@@ -477,11 +477,11 @@ function frameLooper(sect) {
 }
 if(mobile)
 {
-    $('#abt_o').html('<img src="dist/images/about/o.png" style="width: 100%;float: left;" alt="" />');
-    $('#abt_c').html('<img src="dist/images/about/c.png" style="width: 100%;float: left;" alt="" />');
-    $('#abt_j').html('<img src="dist/images/about/j.png" style="width: 82%;float: left;" alt="" />');
-    $('#abt_m').html('<img src="dist/images/about/m.png" style="width: 100%;float: left;" alt="" />');
-    $('#abt_t').html('<img src="dist/images/about/t.png" style="width: 100%;float: left;" alt="" />');
+    $('#abt_o').html('<img loading="lazy" src="dist/images/about/o.png" style="width: 100%;float: left;" alt="" />');
+    $('#abt_c').html('<img loading="lazy" src="dist/images/about/c.png" style="width: 100%;float: left;" alt="" />');
+    $('#abt_j').html('<img loading="lazy" src="dist/images/about/j.png" style="width: 82%;float: left;" alt="" />');
+    $('#abt_m').html('<img loading="lazy" src="dist/images/about/m.png" style="width: 100%;float: left;" alt="" />');
+    $('#abt_t').html('<img loading="lazy" src="dist/images/about/t.png" style="width: 100%;float: left;" alt="" />');
 }
 // Website Social Icons Starts Here
 var socialIcons = $('.socialIcons');
@@ -629,7 +629,7 @@ if ($('#fullpage')) {
                 };
                 if(mobile)
                 {
-                    $('#missionArt').html('<img src="dist/images/mission.png" alt="" />')
+                    $('#missionArt').html('<img loading="lazy" src="dist/images/mission.png" alt="" />')
                 }
                 if(!mobile)
                 {
@@ -1267,10 +1267,10 @@ $(document).on('mouseenter', '#social a', function() {
     if(mobile)
     {
             
-        // $('#foundersGraph').html('<img src="dist/images/founder-graph.png" style="width: 60%; float: left; margin: 5% 20% 15px;" alt="" />');
-        // $('#dotcomGraph').html('<img src="dist/images/dotcom.png" style="width: 60%; float: left; margin: 5% 20% 15px;" alt="" />');
-        // $('#scaleupGraph').html('<img src="dist/images/scale-up.png" style="width: 60%; float: left; margin: 5% 20% 15px;" alt="" />');
-        // $('#inceptionYear').html('<img src="dist/images/inpection.png" style="width: 60%; float: left; margin: 5% 20% 15px;" alt="" />');
+        // $('#foundersGraph').html('<img loading="lazy" src="dist/images/founder-graph.png" style="width: 60%; float: left; margin: 5% 20% 15px;" alt="" />');
+        // $('#dotcomGraph').html('<img loading="lazy" src="dist/images/dotcom.png" style="width: 60%; float: left; margin: 5% 20% 15px;" alt="" />');
+        // $('#scaleupGraph').html('<img loading="lazy" src="dist/images/scale-up.png" style="width: 60%; float: left; margin: 5% 20% 15px;" alt="" />');
+        // $('#inceptionYear').html('<img loading="lazy" src="dist/images/inpection.png" style="width: 60%; float: left; margin: 5% 20% 15px;" alt="" />');
         $('.sec4 .tab_wrapper .content_wrapper .tab_content').find('.fadeIn').removeClass('fadeIn');
         $('.sec4 .tab_wrapper .content_wrapper .tab_content').eq(1).addClass('active').siblings().removeClass('active')
         $('.sec4 .mob-show .tab_list li').on('click',function(){
