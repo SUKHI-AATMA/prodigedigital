@@ -18,15 +18,18 @@ function animateClass() {
 }
 animateClass(),
 $(document).ready(function () {
-  null == localStorage.getItem("loader")
-    ? (localStorage.setItem("loader", !0),
-      setTimeout(function () {
+  // null == localStorage.getItem("loader")
+  //   ? (localStorage.setItem("loader", !0),
+  //     setTimeout(function () {
         $(".loader").addClass("animate");
-      }, 1e3),
-      setTimeout(function () {
-        $(".loader").addClass("hide"), $("body").addClass("loaderFinished");
-      }, 3e3))
-    : ($(".loader").remove(), $("body").addClass("loaderFinished")),
+      // }, 1e3),
+    //   setTimeout(function () {
+    //     $(".loader").addClass("hide"), $("body").addClass("loaderFinished");
+    //   }, 3e3))
+    setTimeout(function(){
+      $(".loader").remove();
+      $("body").addClass("loaderFinished");
+    },1000);
     $("body").removeClass("active"),
     $(".nav-toggler").on("click", function () {
       $("header").toggleClass("nav-open");
