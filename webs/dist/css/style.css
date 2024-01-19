@@ -1719,6 +1719,7 @@ header nav ul li a.active {
   justify-content: center;
   padding: 30px;
   box-shadow: 5px 5px 10px var(--color-black);
+  align-items: center;
 }
 
 .ourService .rightSection .boxSection .grpahicImg {
@@ -1729,7 +1730,7 @@ header nav ul li a.active {
   justify-content: center;
 }
 
-.ourService .rightSection .boxSection .grpahicImg svg {
+.ourService .rightSection .boxSection .grpahicImg {
   height: 80px;
   width: 80px;
 }
@@ -2544,6 +2545,8 @@ img {
     /* flex-basis: 100%; */
     flex-basis: 45%;
     padding: 10px;
+    padding-left: 30px;
+    gap: 20px;
   }
   .ourService .rightSection .boxSection h3 {
     font-size: 1.1rem;
@@ -2873,9 +2876,9 @@ img {
 }
 
 @media only screen and (max-width: 640px) {
-  .ourService .rightSection .boxSection .grpahicImg svg{
+  .ourService .rightSection .boxSection .grpahicImg {
     height: 40px;
-    width: 80px;
+    width: 40px;
   }
 
   .ourService .rightSection .boxSection h3 {
