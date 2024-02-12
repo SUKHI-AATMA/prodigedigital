@@ -2116,7 +2116,7 @@ footer.siteFooter .social a {
 }
 
 .filter-wrapper .heading {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   width: 10%;
 }
@@ -2353,7 +2353,7 @@ img {
 }
 
 .our-projects .project-details p.desc {
-  font-size: 25px;
+  font-size: 20px;
   line-height: normal;
 }
 
@@ -2364,7 +2364,7 @@ img {
 }
 
 .our-projects .project-details p > span {
-  font-size: 35px;
+  font-size: 30px;
 }
 
 .our-projects .project-details p > a {
@@ -2372,7 +2372,7 @@ img {
 }
 
 .our-projects .project-details p.stacks {
-  font-size: 20px;
+  font-size: 16px;
   font-style: italic;
 }
 
