@@ -31,6 +31,6 @@ document.querySelectorAll('.colorsTab').forEach(function(ele){
         var eBg = "url("+ele.children[0].getAttribute('src')+") no-repeat center center / cover"
         displayImage.style.background = eBg;
         var canva = document.getElementById('canvass');
-        canva.getContext('2d').drawImage(objectURL, 0, 0, canva.width, canva.height);
+        canva.getContext('2d').drawImage(imageBlobss, 0, 0, canva.width, canva.height);
     });
 })
