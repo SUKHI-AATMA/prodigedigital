@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Upload Test</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<input type="file" id="fileInput">
-<img id="displayImage" alt="Returned image">
+    <input type="file" id="fileInput">
+    <div class="displayImg">
+        <img id="displayImage" alt="Returned image">
+        <div class="colors">
+            <div class="grey" style="--bgColor: grey"></div>
+            <div class="red" style="--bgColor: red"></div>
+            <div class="blue" style="--bgColor: blue"></div>
+        </div>
+    </div>
 
-<!-- Include the JavaScript -->
-<script type="module" src="./dist/main.js"></script>
+    <!-- Include the JavaScript -->
+    <script type="module" src="./dist/main.js"></script>
 
 </body>
+
 </html>

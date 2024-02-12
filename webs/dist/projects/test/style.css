@@ -29,3 +29,22 @@ img {
 img:not([src]) {
     display: none;
 }
+.displayImg {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+.colors {
+    display: none;
+    gap: 20px;
+}
+.colors div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid black;
+    background-color: var(--bgColor);
+}
+.colors.generated div{
+    display: flex;
+}

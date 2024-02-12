@@ -17,6 +17,7 @@ fileInput.addEventListener('change', () => __awaiter(void 0, void 0, void 0, fun
             const imageBlob = yield removeBackground(files[0]);
             const objectURL = URL.createObjectURL(imageBlob);
             displayImage.src = objectURL;
+            displayImage.classList.add('generated');
         }
         catch (error) {
             console.error('Error:', error);
