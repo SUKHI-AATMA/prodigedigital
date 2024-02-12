@@ -34,8 +34,10 @@ img:not([src]) {
 .displayImg {
     display: flex;
     flex-direction: column;
-    width: 600px;
+    width: 90%;
     /* height: 338px; */
+    max-width: 600px;
+    padding: 0 20px;
 }
 canvas {
     width: 600px;
@@ -55,7 +57,8 @@ canvas {
     display: flex;
     justify-content: center;
     align-items: center;
-}.colors div:last-child {
+}
+.colors div:last-child {
     justify-content: center;
     align-items: center;
     display: flex;
