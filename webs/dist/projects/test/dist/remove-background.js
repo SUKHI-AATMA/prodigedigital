@@ -12,7 +12,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 const url = 'https://sdk.photoroom.com/v1/segment';
 // console.error('Please replace with your own apiKey');
-const apiKey = "1aae42e4ea7bb3cda9c6696e6408523105e6a1b1";
+const apiKey = "c2481427d5a678ff320779efd970d0b10907cb9b";
 export function removeBackground(imageFile) {
     return __awaiter(this, void 0, void 0, function* () {
         const formData = new FormData();
