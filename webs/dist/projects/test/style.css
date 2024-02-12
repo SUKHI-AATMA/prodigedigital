@@ -44,7 +44,18 @@ img:not([src]) {
     border-radius: 50px;
     border: 2px solid black;
     background-color: var(--bgColor);
+    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .generated + .colors{
     display: flex;
 }
+
+.colors div img {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

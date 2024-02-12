@@ -26,6 +26,7 @@ fileInput.addEventListener('change', () => __awaiter(void 0, void 0, void 0, fun
 }));
 document.querySelectorAll('.colorsTab').forEach(function(ele){
     ele.addEventListener('click',function(eles){
-        displayImage.style.background = eles.getAttribute('data-bg');
+        var eBg = "url("+ele.children[0].getAttribute('src')+") no-repeat center center / cover"
+        displayImage.style.background = eBg;
     });
 })
