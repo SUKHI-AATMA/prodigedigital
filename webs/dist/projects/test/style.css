@@ -45,6 +45,6 @@ img:not([src]) {
     border: 2px solid black;
     background-color: var(--bgColor);
 }
-.colors.generated div{
+.generated .colors{
     display: flex;
 }
