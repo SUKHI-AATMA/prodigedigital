@@ -9,12 +9,14 @@ body {
     justify-content: center;
     height: 100vh;
 }
-
 input[type="file"] {
     margin: 20px 0;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
+}
+body.generated input[type="file"] {
+    display: none;
 }
 
 img {
@@ -33,7 +35,7 @@ img:not([src]) {
     display: flex;
     flex-direction: column;
     width: 600px;
-    height: 338px;
+    /* height: 338px; */
 }
 canvas {
     width: 600px;
@@ -43,7 +45,7 @@ canvas {
     display: none;
     gap: 20px;
 }
-.colors div {
+.colors div:not(:last-child) {
     width: 40px;
     height: 40px;
     border-radius: 50px;
@@ -53,8 +55,12 @@ canvas {
     display: flex;
     justify-content: center;
     align-items: center;
+}.colors div:last-child {
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
-.generated + .colors {
+.generated .colors {
     display: flex;
 }
 

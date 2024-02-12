@@ -13,12 +13,13 @@
     <input type="file" id="fileInput" capture="user"
     accept="image/*">
     <div class="displayImg">
+        <canvas id="canvass" style="position: absolute; top -999px"></canvas>
         <img id="displayImage" alt="Returned image">
-        <canvas id="canvass"></canvas>
         <div class="colors">
             <div class="grey colorsTab" style="--bgColor: grey"><img src="https://source.unsplash.com/random/900×700?nature" alt=""></div>
             <div class="red colorsTab" style="--bgColor: red"><img src="https://source.unsplash.com/random/900×700?hiking" alt=""></div>
             <div class="blue colorsTab" style="--bgColor: blue"><img src="https://source.unsplash.com/random/900×700?city" alt=""></div>
+            <div class="share">Share this image</div>
         </div>
     </div>
 
