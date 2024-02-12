@@ -13,7 +13,7 @@ const fileInput = document.getElementById('fileInput');
 const displayImage = document.getElementById('displayImage');
 var imageBlobss;
 fileInput.addEventListener('change', () => __awaiter(void 0, void 0, void 0, function* () {
-    alert(1);
+    // alert(1);
     displayImage.src = '../t/result.png';
     bd.classList.add('generated');
 
