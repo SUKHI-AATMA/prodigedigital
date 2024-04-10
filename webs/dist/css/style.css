@@ -3166,6 +3166,10 @@ img {
   .project-titles .project-links {
     text-align: center;
   }
+
+  #downArrow img {
+    width: 32px;
+  }
  
 }
 
