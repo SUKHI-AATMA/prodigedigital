@@ -336,7 +336,7 @@ var GL = {
           thisEle.css({ padding: ($('.inner').outerHeight(true) - thisEle.outerHeight(true)) / 2 + 'px 0' });
         });
         var scrolledSec ='scrolled to section' + window.location.hash.substr(1);
-        ga('send', 'event', scrolledSec, '', '', 0);
+        // ga('send', 'event', scrolledSec, '', '', 0);
         // var d1 = [1 , 4 , 6 , 7 , 8 , 9 , 10 , 11 , 12 , 13 , 16.0 , 18 , 19 , 21 , 23 , 25], 
         //     d2 = [2 , 3 , 5 , 14 , 15 , 16 , 17 , 20 , 22 , 24 , 26];
         var trans, transT;
@@ -458,7 +458,7 @@ var GL = {
     }
     var clickEvent =  eve + ' -- Clicked on ' + btnType + ' btn in section ' + section+ ' is ' + xtraInfo; 
     console.log(clickEvent);
-    ga('send', 'event', clickEvent, btnType, xtraInfo, section);
+    // ga('send', 'event', clickEvent, btnType, xtraInfo, section);
   }
 };
 
