@@ -601,6 +601,7 @@ header .brand-identity {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /* width: 180px; */
 }
 header .brand-identity:hover,
 header .brand-identity:active,
@@ -609,11 +610,11 @@ header .brand-identity:focus {
   text-decoration: none;
 }
 header .brand-identity .brand-image {
-  width: 70px;
+  width: 180px;
 }
 @media only screen and (max-width: 991px) {
   header .brand-identity .brand-image {
-    width: 65px;
+    width: 140px;
   }
 }
 header .brand-identity .brand-text {
@@ -1564,9 +1565,9 @@ main.about {
 }
 /*# sourceMappingURL=homepage.css.map */
 
-header.scrolled .brand-identity .brand-image {
-  width: 50px;
-}
+/* header.scrolled .brand-identity .brand-image {
+  width: 150px;
+} */
 
 header.scrolled .brand-identity .brand-text {
   font-size: 30px;
