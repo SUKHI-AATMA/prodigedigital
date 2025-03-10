@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/sitemap-style.css"/>
 </head>
 <body>
-  <h1>Sitemap - Oasis India</h1>
+  <h1>Sitemap - Prodige Digital Pvt. Ltd.</h1>
   <div id="information">
       <p>Number of URLs in this sitemap:
         <xsl:value-of select="count(urlset/url)"/>
