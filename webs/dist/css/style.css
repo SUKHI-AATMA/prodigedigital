@@ -1856,7 +1856,7 @@ header nav ul li a.active {
   margin: 0px;
 }
 .testimonialWrapper .testimonial-details {
-  gap: 4%;
+  gap: 30px;
 }
 .testimonialWrapper .testimonial {
   background: var(--site-text-color);
