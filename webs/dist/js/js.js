@@ -130,4 +130,5 @@ $(document).ready(function() {
             scrollTop: $(".browse-select-dropdown").position().top - 80 + "px",
         }, 200);
     });
+    $(".testimonial-details .testimonial").length % 2 === 0 ? $(".testimonial-details").addClass("evenCount") : $(".testimonial-details").addClass("oddCount");
 });

@@ -2865,6 +2865,11 @@ img {
   .our-projects .box-wrapper:nth-child(even) .project-details {
     text-align: right;
   }
+  .testimonialWrapper .testimonial-details.oddCount .testimonial:last-child {
+    grid-column-end: span 2;
+    max-width: 50%;
+    margin: 0 auto;
+  }
 }
 @media screen and (max-width: 768px) {
   .teamMember .teamWrapper .team .title p {
