@@ -1770,6 +1770,7 @@ header nav ul li a.active {
 .teamMember .teamWrapper .team .title p {
   margin: 0px; /* font-size: 17px; */
   font-size: 14px;
+  padding-bottom: 0;
 }
 .teamMember .teamWrapper .team .profile-image {
   width: 200px;
