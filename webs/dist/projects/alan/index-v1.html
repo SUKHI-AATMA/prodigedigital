@@ -198,8 +198,8 @@
                                         <div class="featuresLeftIn">
                                             <div class="featuresHead">Camera Head</div>
                                             <p>4K3-AF (Auto Focus Camera Head):
-4 buttons with 6 customisable functions,
-1 button fixed for Auto Focus
+                                                4 buttons with 6 customisable functions,
+                                                1 button fixed for Auto Focus
                                             </p>
                                         </div>
                                     </div>
@@ -215,7 +215,9 @@
                                     <div class="featuresLeft">
                                         <div class="featuresLeftIn">
                                             <div class="featuresHead">Alsight4K </br>Laparoscopes</div>
-                                            <p>Top quality optics in Alsight4K laparoscopes offer high image quality, contrast and light transfer ensuring unparalleled vision and clarity for optimal surgical outcomes.
+                                            <p>Top quality optics in Alsight4K laparoscopes offer high image quality,
+                                                contrast and light transfer ensuring unparalleled vision and clarity for
+                                                optimal surgical outcomes.
                                             </p>
                                         </div>
                                     </div>
@@ -269,35 +271,40 @@
 
         <div class="enquiryPupIn">
             <a href="javascript:void(0)" class="pupClose">X</a>
-            <h2>Contact Us</h2>
-            <form id="contactForm">
-                <div class="formRow">
-                    <input type="text" id="name" name="name" placeholder="Name" required />
-                </div>
-                <div class="formRow">
-                    <input type="email" id="email" name="email" placeholder="Email"
-                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                        oninput="this.value = this.value.replace(/\s/g, '')" required />
-                </div>
-                <div class="formRow">
-                    <input type="tel" id="phone" name="phone" placeholder="Phone" pattern="[0-9]*" maxlength="10"
-                        inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '');" required />
-                </div>
-                <div class="formRow">
-                    <input type="text" id="cityName" name="cityName" placeholder="City Name"
-                        oninput="this.value = this.value.replace(/[^a-zA-Z]/g, '');" required />
-                </div>
-                <div class="formRow">
-                    <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
-                </div>
-                <div class="formRow">
-                    <input id="userConsent" type="checkbox" name="userConsent"><label for="userConsent">Mail me the
-                        details of this form post submission</label>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
+            <div class="enquiryHeadTxt">
+                <h2>Say Hello!</h2>
+                <p>We’d love to hear from you.</p>
+            </div>
+            <div class="enquiryForm">
+                <form id="contactForm">
+                    <div class="formRow">
+                        <input type="text" id="name" name="name" placeholder="Name" required />
+                    </div>
+                    <div class="formRow">
+                        <input type="email" id="email" name="email" placeholder="Email"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            oninput="this.value = this.value.replace(/\s/g, '')" required />
+                    </div>
+                    <div class="formRow">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone" pattern="[0-9]*" maxlength="10"
+                            inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '');" required />
+                    </div>
+                    <div class="formRow">
+                        <input type="text" id="cityName" name="cityName" placeholder="City Name"
+                            oninput="this.value = this.value.replace(/[^a-zA-Z]/g, '');" required />
+                    </div>
+                    <div class="formRow">
+                        <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
+                    </div>
+                    <div class="formRow">
+                        <input id="userConsent" type="checkbox" name="userConsent"><label for="userConsent">Mail me the
+                            details of this form post submission</label>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
 
-            <div id="status"></div>
+                <div id="status"></div>
+            </div>
         </div>
 
     </div>
@@ -322,12 +329,10 @@
         <div class="menuBoxInner">
             <a href="javascript:void(0)" class="closeMenu">X</a>
             <div class="menuBoxLinks">
-                <a href="javascript:void(0)">Home</a>
-                <a href="javascript:void(0)">Products</a>
-                <a href="javascript:void(0)">About Us</a>
-                <a href="javascript:void(0)">Blogs</a>
-                <a href="javascript:void(0)">Contact Us</a>
-                <a href="javascript:void(0)">Carrers</a>
+                <a href="javascript:void(0)">KEY FEATURES</a>
+                <a href="javascript:void(0)">STANDARD ACCESSORIES SET</a>
+                <a href="javascript:void(0)">EXPLORE OUR LAPROSCOPIC </br>SURGERY SYSTEM</a>
+                <a href="javascript:void(0)">CONTACT US</a>
             </div>
         </div>
     </div>
@@ -391,7 +396,9 @@
 
     <script>
         $(document).ready(function () {
-
+            if(window.outerWidth < 769) {
+                $('.stepsSlider').html('<div class="slide"><div class="slidesContainer"><div class="slideBox"><div class="slideBoxCont"><strong>7-INCH LCD TOUCH SCREEN INTERFACE:</strong><span>Intuitive, smooth, and user-friendly operation</span></div><div class="slideNum">01</div></div></div></div><div class="slide"><div class="slideBox"><div class="slideBoxCont"><strong>TRUE-TO-LIFE 4K CLARITY:</strong><span>3-Chip BSI-CMOS sensor delivers crystal-clear surgical visuals at 3840×2160resolution</span></div><div class="slideNum">02</div></div></div><div class="slide"><div class="slideBox"><div class="slideBoxCont"><strong>INTEGRATED STORAGE SYSTEM:</strong><span>200GB storage with Patient Information Management capabilities </span></div><div class="slideNum">03</div></div></div><div class="slide"><div class="slidesContainer"><div class="slideBox"><div class="slideBoxCont"><strong>ADVANCED IMAGING SUITE:</strong><span>HyperRange, AdaptView, & OptiFog ensure clarity even in smoke or glare </span></div><div class="slideNum">04</div></div></div></div><div class="slide"><div class="slideBox"><div class="slideBoxCont"><strong>CUSTOMISABLE SURGICAL MODES:</strong><span>18 total modes with 6-level adjustments for personalised surgicalpreferences</span></div><div class="slideNum">05</div></div></div><div class="slide"><div class="slideBox"><div class="slideBoxCont"><strong>DUAL CAMERA HEAD OPTIONS:</strong><span>Choose Manual Focus or Auto Focus with IPX8 water resistance rating</span></div><div class="slideNum">06</div></div></div><div class="slide"><div class="slidesContainer"><div class="slideBox"><div class="slideBoxCont"><strong>DIGITAL ZOOM & PIP:</strong><span>2X zoom with 4-layout Picture-in-Picture functionality</span></div><div class="slideNum">07</div></div></div></div><div class="slide"><div class="slideBox"><div class="slideBoxCont"><strong>MANUAL FOCUS CAMERA HEAD:</strong><span>Integrated Zoom Coupler for seamless adjustment </span></div><div class="slideNum">08</div></div></div><div class="slide"><div class="slideBox"><div class="slideBoxCont"><strong>ROBUST CONNECTIVITY:</strong><span>Dual HDMI 2.0b, dual 3G-SDI, and 5 USB ports for seamless integration</span></div><div class="slideNum">09</div></div></div>')
+            }
             gsap.registerPlugin(ScrollTrigger);
 
             $('.slider').each(function (i, slider) {

@@ -199,7 +199,8 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -217,7 +218,9 @@ main {
   position: relative;
   z-index: 1;
 }
-.banner {background: url(../images/bg.png) no-repeat center top / cover;}
+.banner {
+  background: url(../images/bg.png) no-repeat center top / cover;
+}
 header {
   padding: 30px;
   display: flex;
@@ -421,7 +424,7 @@ h1 span {
 .slideBoxCont span {
   font-weight: 100;
   line-height: 1.2;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
   display: block;
 }
 .slideNum {
@@ -610,25 +613,43 @@ footer a {
   justify-content: center;
 }
 .enquiryPupIn {
-  max-width: 500px;
+  max-width: 990px;
   width: 95%;
   border-radius: 10px;
-  padding: 20px;
+  padding: 30px;
   background: #fff;
   color: #1f1e1f;
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 .enquiryPupIn h2 {
-  font-size: 20px;
+  font-size: 90px;
   padding-bottom: 10px;
+  color: #e1248f;
+}
+.enquiryHeadTxt {
+  width: 43%;
+}
+.enquiryHeadTxt p {
+  font-size: 30px;
+  font-weight: 100;
+}
+.formRow label {
+  font-weight: 100;
+}
+
+.enquiryForm {
+  width: calc(100% - 43%);
 }
 .formRow label {
   font-weight: 100;
 }
 
 .pupClose {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   color: #fff;
   position: absolute;
   right: 10px;
@@ -652,6 +673,9 @@ button {
   padding: 0.7rem;
   font-size: 1rem;
   border: 1px solid #ccc;
+  border-radius: 16px;
+}
+button {
   border-radius: 6px;
 }
 input[type="checkbox"],
@@ -732,16 +756,18 @@ button:hover {
   background: rgba(0, 0, 0, 0.8);
   position: fixed;
   z-index: 1001;
-  left: 0;
+  right: 0;
   top: 0;
   display: none;
 }
 .menuBoxInner {
-  width: 300px;
+  background: url(../images/menubg.svg) no-repeat;
+  width: 330px;
   height: 100vh;
-  background: #fff;
   position: absolute;
-  right: 0;
+  right: 20px;
+  padding: 40px;
+  top: 20px;
 }
 
 .closeMenu {
@@ -756,8 +782,8 @@ button:hover {
   color: #fff;
   text-decoration: none;
   position: absolute;
-  right: 15px;
-  top: 15px;
+  right: 25px;
+  top: 25px;
 }
 .menuBoxLinks {
   display: flex;
@@ -765,10 +791,33 @@ button:hover {
   padding-top: 30px;
 }
 .menuBoxLinks a {
-  color: #323232;
+  color: #fff;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 20px 0;
   font-size: 20px;
+  line-height: 1.3;
+  font-weight: 100;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+.menuBoxLinks a:hover {
+  color: #e1248f;
+}
+
+.menuBoxLinks a:last-child {
+  border-bottom: 0;
+}
+
+.menuBoxLinks a:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../images/menuArrow.svg) no-repeat center center;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -10px;
 }
 .menuBoxLinks a:hover {
   color: #e1248f;
@@ -777,6 +826,31 @@ button:hover {
 .titleDiv {
   display: flex;
   text-align: center;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #111; */
+  color: #fff;
+  font-size: 3rem;
+  /* height: 100vh; */
+}
+.slidesContainer {
+  display: flex;
+}
+/* .slidesContainer > div {
+  padding-bottom: 10px;
+} */
+.slidesContainer > div:nth-child(2) {
+  margin-top: -14px;
+  transform: translateY(100%);
 }
 
 @media (max-width: 1200px) {
@@ -795,6 +869,10 @@ button:hover {
   }
   .stepsSlider .slideBox {
     padding: 0 20px;
+  }
+
+  .enquiryPupIn h2 {
+    font-size: 80px;
   }
 }
 
@@ -873,16 +951,20 @@ button:hover {
   }
   .slideBoxCont {
     font-size: 18px;
+    padding-top: 10px;
   }
   .stepsSlider .slideBox {
+    height: 223px;
     width: 400px;
+  }
+  .stepsSlider .slide:nth-child(even) .slideBox {
+    flex-direction: column-reverse;
+    margin-top: -5px;
+    transform: translateY(100%);
   }
 
   .stepsSlider .slick-track {
-    height: 300px;
-  }
-  .stepsSlider .slideBox {
-    height: 152px;
+    height: 450px;
   }
   .stepsSlider .slideBox:nth-child(even) {
     top: calc(50% - 6px);
@@ -906,6 +988,31 @@ button:hover {
     left: auto;
     margin: auto;
     text-align: center;
+  }
+  .enquiryPupIn h2 {
+    font-size: 50px;
+  }
+  .enquiryHeadTxt p {
+    font-size: 20px;
+  }
+  .enquiryPupIn {
+    flex-direction: column;
+  }
+  .enquiryForm {
+    width: 100%;
+  }
+  .enquiryHeadTxt {
+    width: 100%;
+    text-align: center;
+  }
+
+  .enquiryPup {
+    height: 90vh;
+    top: 5%;
+  }
+  .enquiryForm {
+    height: 60vh;
+    overflow: auto;
   }
 }
 
@@ -958,26 +1065,34 @@ button:hover {
   .bannerTxt1 {
     left: 0;
   }
+
+  .enquiryPupIn {
+    padding: 20px;
+  }
+  .enquiryPupIn h2 {
+    font-size: 30px;
+  }
+  .enquiryPup {
+    height: 90vh;
+    top: 5%;
+  }
+  .enquiryForm {
+    /* height: 70vh; */
+    overflow: auto;
+  }
 }
 
-.slider {
-  width: 100%;
-  height: 100%;
-}
-
-.slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* background: #111; */
-  color: #fff;
-  font-size: 3rem;
-  /* height: 100vh; */
-}
-.slidesContainer {
+.desktop {
   display: flex;
 }
-.slidesContainer > div { padding-bottom: 10px;}
-.slidesContainer > div:nth-child(2) {
-    transform: translateY(100%);
+.mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+  }
 }
