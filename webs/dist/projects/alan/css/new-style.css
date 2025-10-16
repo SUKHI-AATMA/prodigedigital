@@ -222,7 +222,7 @@ header {
   width: 100px;
 }
 .menuLink {
-  width: 50px;
+  width: 25px;
   display: block;
 }
 .menuLink img {
@@ -252,9 +252,10 @@ section {
 
 .bannerTxt1 {
   position: absolute;
-  left: 15%;
+  left: 12%;
   top: 0;
   width: 100%;
+ 
 }
 .bannerTxt1 .container {
   max-width: 1400px;
@@ -264,7 +265,7 @@ section {
 }
 .bannerSlider {
   position: absolute;
-  right: 70px;
+  right: 0;
   top: 300px;
   width: 400px;
 }
@@ -302,12 +303,13 @@ section {
 
 h1 {
   text-align: center;
-  font-size: 91px;
+  font-size: 70px;
   color: #e1248f;
   padding-bottom: 10px;
 }
 h1 span {
   font-weight: 100;
+  text-transform: uppercase;
 }
 
 .headerSubText {
@@ -323,6 +325,8 @@ h1 span {
 .headerSubText strong {
   font-weight: 400;
 }
+
+.headerSubText span{ font-weight: 400;color: #e1248f; }
 
 .btnKey {
   max-width: 300px;
@@ -351,7 +355,7 @@ h1 span {
   width: 100%;
 }
 .sectionTitle {
-  font-size: 30px;
+  font-size: 20px;
   border: 4px solid #fff;
   background: none;
   display: inline;
@@ -386,20 +390,21 @@ h1 span {
 }
 .stepsSlider:before {
   width: 100%;
-  height: 2px;
+  height: 4px;
   background: #e1248f;
   content: "";
   display: block;
   position: absolute;
   left: 0;
   top: 50%;
+  margin-top: -1px;
 }
 
 .stepsSlider {
 }
 
 .slideBoxCont {
-  font-size: 24px;
+  font-size: 20px;
 }
 .slideBoxCont strong {
   display: block;
@@ -419,7 +424,7 @@ h1 span {
 }
 
 .stepsSlider .slideBox {
-  width: 500px;
+  width: 450px;
   margin: 0;
   padding-left: 50px;
   padding-right: 50px;
@@ -473,6 +478,7 @@ footer a {
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
 .fotLeft {
   max-width: 450px;
@@ -485,11 +491,11 @@ footer a {
 .fotLeft p {
   font-weight: 100;
   padding-bottom: 10px;
-  font-size: 24px;
+  font-size: 20px;
 }
 .socLinks {
   display: flex;
-  gap: 10px;
+  gap: 0;
   align-items: center;
 }
 .socLinks a {
@@ -498,7 +504,7 @@ footer a {
   height: 50px;
 }
 .socLinks a img {
-  width: 70%;
+  width: 50%;
 }
 
 .fotRight {
@@ -512,7 +518,7 @@ footer a {
   font-weight: 100;
   position: relative;
   line-height: 1.3;
-  font-size: 20px;
+  font-size: 18px;
   padding-left: 30px;
 }
 .fotRight p img {
@@ -568,13 +574,13 @@ footer a {
 }
 
 .featuresHead {
-  font-size: 70px;
+  font-size: 60px;
   color: #e1248f;
-  padding-bottom: 10px;
+  padding-bottom: 50px;
 }
 
 .featuresBox p {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 100;
   line-height: 1.3;
 }
@@ -609,10 +615,10 @@ footer a {
 }
 .enquiryPupIn h2 {
   font-size: 90px;
-  padding-bottom: 10px;
-  color: #e1248f;
+  padding-bottom: 15px;
+  color: #6B2153;
 }
-.enquiryHeadTxt{ width: 43%; }
+.enquiryHeadTxt{ width: 43%; text-align: center; }
 .enquiryHeadTxt p{ font-size: 30px; font-weight: 100; }
 .formRow label {
   font-weight: 100;
@@ -649,7 +655,8 @@ button {
   border-radius: 16px;
 }
 
-button{ border-radius: 6px; }
+.enquiryForm button{ border-radius: 6px; background: #e1248f url(../images/buttonBg.svg) no-repeat; padding: 10px 35px; transition: all .3s;}
+.enquiryForm button:hover{ background: #e1248f; }
 input[type="checkbox"],
 input[type="radio"],
 button {
@@ -784,7 +791,20 @@ button:hover {
   text-align: center;
 }
 
+
+
+.enquiryForm button{ margin: auto; display: block; }
+
+.accessoriesSection{ background: transparent; padding: 0; }
+.featuresBoxBg1{ background: url(../images/featuresBg.svg) no-repeat left bottom; background-size: 200%; padding:0 0 0 0; overflow: hidden;}
+.featuresBoxBg2{ background: url(../images/featuresBg.svg) no-repeat right bottom; background-size: 200%; padding:0 0 30px 0; overflow: hidden;}
+.featuresBoxBg3{ background: url(../images/featuresBg.svg) no-repeat left bottom; background-size: 200%; padding:0 0 0 0; overflow: hidden;}
+
+
+
 @media (max-width: 1200px) {
+
+  .bannerTxt1{ left: 0; padding-left: 12%; }
   .bannerSlider {
     right: auto;
     left: 0;
@@ -814,6 +834,12 @@ button:hover {
     overflow: auto }
 }
 
+@media (max-width: 990px) {
+
+.featuresBoxBg1 .featuresLeft{ padding-left: 20px; }
+.featuresBoxBg2 .featuresLeft,
+.featuresBoxBg3 .featuresLeft{ padding-right: 20px; }
+}
 @media (max-width: 768px) {
   .menuLink {
     width: 35px;
@@ -861,7 +887,7 @@ button:hover {
   }
 
   .btnStad {
-    width: 100%;
+    width: 80%;
   }
   .featuresHead {
     font-size: 50px;
@@ -910,6 +936,7 @@ button:hover {
   .bannerTxt1 {
     font-size: 60px;
     left: 0;
+    padding-left: 0;
   }
 
   .bannerBox {
@@ -928,6 +955,12 @@ button:hover {
   .enquiryPupIn{ flex-direction: column; }
   .enquiryForm{ width: 100%; }
   .enquiryHeadTxt{ width: 100%; text-align: center; }
+
+  .stepsSlider:before{ height: 3px; }
+
+  .container2 .featuresLeft p{ padding-left: 0; }
+  .featuresHead{ padding-bottom: 25px; }
+
 }
 
 @media (max-width: 480px) {
@@ -988,5 +1021,3 @@ button:hover {
     overflow: auto }
   
 }
-
-
