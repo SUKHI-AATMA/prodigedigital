@@ -252,10 +252,10 @@ section {
 
 .bannerTxt1 {
   position: absolute;
-  left: 12%;
+  left: 0;
   top: 0;
   width: 100%;
- 
+  padding-left: 12%; 
 }
 .bannerTxt1 .container {
   max-width: 1400px;
