@@ -252,10 +252,10 @@ section {
 
 .bannerTxt1 {
   position: absolute;
-  left: 12%;
+  left: 0;
   top: 0;
   width: 100%;
- 
+  padding-left: 12%; 
 }
 .bannerTxt1 .container {
   max-width: 1400px;
@@ -383,6 +383,9 @@ h1 span {
   border-radius: inherit; /* Inherit border-radius from parent */
   padding: 5px; /* Adjust to control thickness of inner glow */
   box-shadow: inset 0 0 4px 4px rgba(255, 0, 255, 0.7);
+}
+.sliderSection {
+  overflow: hidden;
 }
 .stepsSlider {
   position: relative;
@@ -619,12 +622,12 @@ footer a {
   gap: 20px;
 }
 .enquiryPupIn h2 {
-  font-size: 80px;
+  font-size: 90px;
   padding-bottom: 15px;
   color: #6B2153;
 }
 .enquiryHeadTxt{ width: 43%; text-align: center; }
-.enquiryHeadTxt p{ font-size: 26px; font-weight: 100; color: #6B2153; }
+.enquiryHeadTxt p{ font-size: 30px; font-weight: 100; }
 .formRow label {
   font-weight: 100;
 }
@@ -660,7 +663,7 @@ button {
   border-radius: 16px;
 }
 
-.enquiryForm button{font-family: "Oswald", sans-serif; text-transform: uppercase; letter-spacing: 3px; font-size: 20px; border-radius: 6px; background: #e1248f url(../images/buttonBg.svg) no-repeat; padding: 10px 35px; transition: all .3s;}
+.enquiryForm button{ border-radius: 6px; background: #e1248f url(../images/buttonBg.svg) no-repeat; padding: 10px 35px; transition: all .3s;}
 .enquiryForm button:hover{ background: #e1248f; }
 input[type="checkbox"],
 input[type="radio"],
@@ -800,10 +803,10 @@ button:hover {
 
 .enquiryForm button{ margin: auto; display: block; }
 
-.accessoriesSection{ background: transparent; padding-bottom: 0; }
-.featuresBoxBg1{ background: url(../images/feaureBg1.png) no-repeat left bottom; background-size: cover; height: 700px; padding:0 0 0 0; overflow: hidden;}
-.featuresBoxBg2{ background: url(../images/feaureBg2.png) no-repeat right bottom; background-size: cover; height: 700px;padding:0 0 30px 0; overflow: hidden;}
-.featuresBoxBg3{ background: url(../images/feaureBg3.png) no-repeat left bottom; background-size: cover; height: 700px;padding:0 0 0 0; overflow: hidden;}
+.accessoriesSection{ background: transparent; padding: 0; }
+.featuresBoxBg1{ background: url(../images/featuresBg.svg) no-repeat left bottom; background-size: 200%; padding:0 0 0 0; overflow: hidden;}
+.featuresBoxBg2{ background: url(../images/featuresBg.svg) no-repeat right bottom; background-size: 200%; padding:0 0 30px 0; overflow: hidden;}
+.featuresBoxBg3{ background: url(../images/featuresBg.svg) no-repeat left bottom; background-size: 200%; padding:0 0 0 0; overflow: hidden;}
 
 
 

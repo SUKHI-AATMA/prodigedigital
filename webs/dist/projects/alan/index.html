@@ -169,13 +169,13 @@
 
                 <div class="featuresBox">
                     <div class="featuresSlider">
-                        <div>
+                        <div class="featuresBoxBg1">
                             <div class="featureSlide">
                                 <div class="container">
                                     <div class="featuresLeft">
                                         <div class="featuresLeftIn">
                                             <div class="featuresHead">Camera Head</div>
-                                            <p>4K3-MFZ (Manual Focus Camera Head): 3 buttons with 6 customisable
+                                            <p>4K3-MFZ (Manual Focus Camera Head): <br>3 buttons with 6 customisable
                                                 functions
                                             </p>
                                         </div>
@@ -184,17 +184,19 @@
                                         <img src="images/camerahead.png">
                                     </div>
                                 </div>
+                                <a href="https://medical.alanindia.net/" target="_blank" class="btnStad" title="EXPLORE OUR LAPAROSCOPIC SURGERY SYSTEM"><img
+                        src="images/button3.png"></a>
                             </div>
                         </div>
-                        <div>
+                        <div class="featuresBoxBg2">
                             <div class="featureSlide">
                                 <div class="container container2">
 
                                     <div class="featuresLeft">
                                         <div class="featuresLeftIn">
                                             <div class="featuresHead">Camera Head</div>
-                                            <p>4K3-AF (Auto Focus Camera Head): 4 buttons with 6 customisable functions,
-                                                1 button fixed for Auto Focus
+                                            <p>4K3-AF (Auto Focus Camera Head): <br>4 buttons with 6 customisable functions,
+                                                <br>1 button fixed for Auto Focus
 
 
                                             </p>
@@ -204,9 +206,11 @@
                                         <img src="images/camerahead2.png">
                                     </div>
                                 </div>
+                                <a href="https://medical.alanindia.net/" target="_blank" class="btnStad" title="EXPLORE OUR LAPAROSCOPIC SURGERY SYSTEM"><img
+                        src="images/button3.png"></a>
                             </div>
                         </div>
-                        <div>
+                        <div class="featuresBoxBg3">
                             <div class="featureSlide">
                                 <div class="container container2">
 
@@ -223,13 +227,15 @@
                                         <img src="images/Camera3.png">
                                     </div>
                                 </div>
+
+                                <a href="https://medical.alanindia.net/" target="_blank" class="btnStad" title="EXPLORE OUR LAPAROSCOPIC SURGERY SYSTEM"><img
+                        src="images/button3.png"></a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <a href="javascript:void(0)" class="btnStad" title="STANDARD ACCESSORIES SET"><img
-                        src="images/button3.png"></a>
+                
 
 
             </div>
@@ -239,15 +245,15 @@
         <div class="fotinner">
             <div class="fotLeft">
                 <a href="javascript:void(0)" class="logo"><img src="images/logo.svg" class="logo"></a>
-                <p>At ALAN, we believe in prioritizing people at the heart of all we do. We inspire growth,
+                <p>At ALAN, we believe in prioritising people at the heart of all we do. We inspire growth,
                     encourage exploration with empathy, and create solutions that truly enhance lives.</p>
 
                 <div class="socLinks">
-                    <a href="javascript:void(0)"><img src="images/ic_inst.svg"></a>
-                    <a href="javascript:void(0)"><img src="images/ic_fb.svg"></a>
+                    <a href="https://www.instagram.com/alanelectronicsystems_medical" target="_blank"><img src="images/ic_inst.svg"></a>
+                    <a href="https://www.facebook.com/alanelectronicsystemsmedical" target="_blank"><img src="images/ic_fb.svg"></a>
                     <a href="javascript:void(0)"><img src="images/ic_tw.svg"></a>
-                    <a href="javascript:void(0)"><img src="images/ic_you.svg"></a>
-                    <a href="javascript:void(0)"><img src="images/ic_lin.svg"></a>
+                    <a href="https://www.youtube.com/@ALANElectronicSystems_Medical" target="_blank"><img src="images/ic_you.svg"></a>
+                    <a href="https://in.linkedin.com/company/alan-electronic-systems-medical" target="_blank"><img src="images/ic_lin.svg"></a>
                 </div>
             </div>
             <div class="fotRight">
@@ -294,10 +300,10 @@
                 <div class="formRow">
                     <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
                 </div>
-                <div class="formRow">
+                <!-- <div class="formRow">
                     <input id="userConsent" type="checkbox" name="userConsent"><label for="userConsent">Mail me the
                         details of this form post submission</label>
-                </div>
+                </div> -->
                 <button type="submit">Submit</button>
             </form>
 
@@ -343,6 +349,51 @@
     <script type="text/javascript">
         $(document).ready(function () {
 
+            // Create a new Intersection Observer instance
+            const observer = new IntersectionObserver((entries) => {
+                // Loop over the entries provided to the callback
+                entries.forEach(entry => {
+                    // Check if the entry is intersecting the viewport
+                    if (entry.isIntersecting) {
+                        // Find the carousel container and initialize slick
+                        const carousel = document.querySelector('.stepsSlider');
+                        $(carousel).slick({
+                            dots: false,
+                            infinite: false,
+                            speed: 300,
+                            slidesToShow: 3,
+                            centerMode: false,
+                            variableWidth: true,
+                            arrows: false,
+                            autoplay: true,
+                            autoplaySpeed: 2000,
+                            responsive: [
+                                {
+                                    breakpoint: 1024,
+                                    settings: {
+                                        slidesToShow: 2,
+                                    }
+                                },
+                                {
+                                    breakpoint: 640,
+                                    settings: {
+                                        slidesToShow: 1,
+                                    }
+                                }
+                            ]
+                        });
+                        
+                        // Stop observing the target element after initialization to avoid re-triggering
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+
+            // Select the element to observe and tell the observer to watch it
+            const targetSection = document.querySelector('.sliderSection .titleDiv');
+            observer.observe(targetSection);
+
+
 
             $('.bannerSliderIn').slick({
                 dots: false,
@@ -354,24 +405,44 @@
 
             $('.featuresSlider').slick({
                 dots: false,
-                infinite: false,
-                speed: 300,
-                arrows: false,
+                infinite: true,
+                // speed: 600,
                 slidesToShow: 1,
-                autoplay: false
+                slidesToScroll: 1,
+                // centerMode: false,
+                // variableWidth: true,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 4000,
             });
 
-            $('.stepsSlider').slick({
-                dots: false,
-                infinite: false,
-                speed: 300,
-                slidesToShow: 3,
-                centerMode: false,
-                variableWidth: true,
-                arrows: true,
-                autoplay: false,
-                autoplaySpeed: 2000,
-            });
+            // $('.stepsSlider').slick({
+            //     dots: false,
+            //     infinite: false,
+            //     speed: 300,
+            //     slidesToShow: 3,
+            //     centerMode: false,
+            //     variableWidth: true,
+            //     arrows: false,
+            //     autoplay: true,
+            //     autoplaySpeed: 2000,
+            //     responsive: [
+            //         {
+            //             breakpoint: 1024,
+            //             settings: {
+            //                 slidesToShow: 2,
+            //             }
+            //         },
+            //         {
+            //             breakpoint: 640,
+            //             settings: {
+            //                 slidesToShow: 1,
+            //             }
+            //         }
+            //     ]
+
+
+            // });
             $('.pupClose').click(function () {
                 $('.enquiryPup').addClass('hide');
             });
