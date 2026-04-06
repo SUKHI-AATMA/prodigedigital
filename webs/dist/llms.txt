@@ -1,0 +1,29 @@
+# prodigedigital.com llms.txt
+
+> Promote digital design and development services, including web and app development, UX/UI design, and marketing solutions, to help clients enhance their online presence and create impactful digital experiences.
+
+- [About Prodige Digital](https://prodigedigital.com/about-us): Introduce Prodige Digital's services, team, and client testimonials to showcase digital solutions and expertise.
+- [Compliance Strategies](https://prodigedigital.com/pdf/compliance.pdf): Provides information on compliance strategies and best practices.
+- [Centuro Initiatives and Events](https://prodigedigital.com/projects/cg/initiatives): Promote entrepreneurial initiatives, mentorship, and startup pitch events to support business growth and networking.
+- [Nissan Micra Promotions](https://prodigedigital.com/projects/Nissan-v1): Promote new Nissan Micra, its features, offers, and contest to attract buyers.
+- [Media Center](https://prodigedigital.com/projects/cg/media-center): Provides media updates and news about Centuro Global's activities and events.
+- [Nissan Micra Campaign](https://prodigedigital.com/projects/nissan-v1): Promote Nissan Micra models, features, offers, and prize draw to attract buyers.
+- [Privacy Policy](https://prodigedigital.com/projects/cg/policy): To inform users about data collection, processing, and privacy practices of Centuro Global.
+- [Centuro Global Battleground](https://prodigedigital.com/projects/cg/mailers/cg_battleground/cg): Promote startup competition offering funding and exposure through pitching rounds and live finals.
+- [Contact Us Form](https://prodigedigital.com/projects/cg/contact-us): Enables users to contact the company for support or inquiries.
+- [Centuro Global Introduction](https://prodigedigital.com/projects/cg/about): Introduce Centuro Global's services, team, and mission to support business growth and international expansion.
+- [Cookie Policy](https://prodigedigital.com/projects/cg/cookie): Details about cookie usage and privacy policies for website compliance.
+- [Contact Us](https://prodigedigital.com/contact-us): Encourage contact and collaboration for digital services and project inquiries.
+- [Prodige Digital Services](https://prodigedigital.com): Showcase web development, design, and digital marketing services for businesses in Mumbai and beyond.
+- [User Registration Page](https://prodigedigital.com/projects/cg/signup): Facilitate user registration through social or email sign-up options.
+- [Our Work Showcase](https://prodigedigital.com/our-work): Showcase digital and web development portfolio with project examples and services.
+- [Membership Tiers](https://prodigedigital.com/projects/cg/membership): Promote membership plans and benefits for Centuro Global's international business network.
+- [Terms of Use](https://prodigedigital.com/projects/cg/terms): Provides legal and usage policies for the Centuro Global website.
+- [Web Services Overview](https://prodigedigital.com/our-services): Promote web development, design, and digital marketing services offered by Prodige Digital.
+- [Startup Competition FAQs](https://prodigedigital.com/projects/cg/faq): Provides frequently asked questions about startup competitions and application processes.
+- [Centuro Business Hub](https://prodigedigital.com/projects/cg/businesshub): Promote membership in Centuro Business Hub for funding, networking, and growth opportunities.
+- [Centuro Global Platform](https://prodigedigital.com/projects/cg): Promote international business growth services and networking opportunities for entrepreneurs.
+- [Business Consulting Services](https://prodigedigital.com/projects/cg/services): Offer global business consulting services including strategy, legal, investment, and marketing support.
+- [Signup Page](https://prodigedigital.com/projects/cg/signup-form): Sign up form capturing personal, contact, professional details, and preferences for updates and networking.
+
+<!-- Unlock the full power of AI on your site by creating a free AI customer service agent at https://sitespeak.ai -->
